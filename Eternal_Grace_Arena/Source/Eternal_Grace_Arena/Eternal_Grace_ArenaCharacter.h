@@ -53,6 +53,16 @@ class AEternal_Grace_ArenaCharacter : public ACharacter
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess))
 	UInputAction* GuardAction;
 
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animations, meta = (AllowPrivateAccess))
+	UAnimMontage* LightAttack01;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animations, meta = (AllowPrivateAccess))
+	UAnimMontage* LightAttack02;
+
+
+
+	UPROPERTY()
+	class UCharacterAnimInstance* CharacterAnimationInstance;
+
 public:
 	AEternal_Grace_ArenaCharacter();
 	
@@ -84,6 +94,10 @@ protected:
 	virtual void NotifyControllerChanged() override;
 
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
+
+	virtual void BeginPlay()override;
+
+	void InitializeAnimationInstance();
 
 public:
 	/** Returns CameraBoom subobject **/

@@ -19,5 +19,9 @@ public:
 	bool isRunning;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = States, meta = (AllowPrivateAccess))
 	bool isGuarding;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = States, meta = (AllowPrivateAccess))
+	bool isWeaponSeathed;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = States, meta = (AllowPrivateAccess))
+	bool isLockedOn;
 	
 };

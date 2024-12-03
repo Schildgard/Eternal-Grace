@@ -10,6 +10,7 @@
 #include "EnhancedInputComponent.h"
 #include "EnhancedInputSubsystems.h"
 #include "InputActionValue.h"
+#include "CharacterAnimInstance.h"
 
 DEFINE_LOG_CATEGORY(LogTemplateCharacter);
 
@@ -20,7 +21,7 @@ AEternal_Grace_ArenaCharacter::AEternal_Grace_ArenaCharacter()
 {
 	// Set size for collision capsule
 	GetCapsuleComponent()->InitCapsuleSize(42.f, 96.0f);
-		
+
 	// Don't rotate when the controller rotates. Let that just affect the camera.
 	bUseControllerRotationPitch = false;
 	bUseControllerRotationYaw = false;
@@ -75,7 +76,7 @@ void AEternal_Grace_ArenaCharacter::SetupPlayerInputComponent(UInputComponent* P
 {
 	// Set up action bindings
 	if (UEnhancedInputComponent* EnhancedInputComponent = Cast<UEnhancedInputComponent>(PlayerInputComponent)) {
-		
+
 		// Jumping
 		EnhancedInputComponent->BindAction(JumpAction, ETriggerEvent::Started, this, &ACharacter::Jump);
 		EnhancedInputComponent->BindAction(JumpAction, ETriggerEvent::Completed, this, &ACharacter::StopJumping);
@@ -108,6 +109,27 @@ void AEternal_Grace_ArenaCharacter::SetupPlayerInputComponent(UInputComponent* P
 	}
 }
 
+void AEternal_Grace_ArenaCharacter::BeginPlay()
+{
+	Super::BeginPlay();
+	InitializeAnimationInstance();
+
+}
+
+void AEternal_Grace_ArenaCharacter::InitializeAnimationInstance()
+{
+
+	//CHECK IF CHARACTER HAS A VIABLE ANIMATION INSTANCE AND GET IT
+	if (UAnimInstance* CurrentAnimInstance = GetMesh()->GetAnimInstance())
+	{
+		//CAST ANIMATION INSTANCE TO SPECIFIC CHARACTER ANIMATION INSTANCE
+		CharacterAnimationInstance = Cast<UCharacterAnimInstance>(CurrentAnimInstance);
+		UE_LOG(LogTemp, Warning, TEXT("Animation Instance set"))
+		return;
+	}
+		UE_LOG(LogTemp, Warning, TEXT("Animation Instance could not be found"))
+}
+
 void AEternal_Grace_ArenaCharacter::Move(const FInputActionValue& Value)
 {
 	// input is a Vector2D
@@ -121,7 +143,7 @@ void AEternal_Grace_ArenaCharacter::Move(const FInputActionValue& Value)
 
 		// get forward vector
 		const FVector ForwardDirection = FRotationMatrix(YawRotation).GetUnitAxis(EAxis::X);
-	
+
 		// get right vector 
 		const FVector RightDirection = FRotationMatrix(YawRotation).GetUnitAxis(EAxis::Y);
 
@@ -146,17 +168,20 @@ void AEternal_Grace_ArenaCharacter::Look(const FInputActionValue& Value)
 
 void AEternal_Grace_ArenaCharacter::Sprint()
 {
-	UE_LOG(LogTemp, Display, TEXT("Player is Sprinting"))
+	CharacterAnimationInstance->isRunning = true;
+
 }
 
 void AEternal_Grace_ArenaCharacter::CancelSprint()
 {
-	UE_LOG(LogTemp, Display, TEXT("Player canceled Sprint"))
+	CharacterAnimationInstance->isRunning = false;
 }
 
 void AEternal_Grace_ArenaCharacter::LightAttack()
 {
 	UE_LOG(LogTemp, Display, TEXT("Player does a Light Attack"))
+
+		PlayAnimMontage(LightAttack01, 1.0f);
 }
 
 void AEternal_Grace_ArenaCharacter::HeavyAttack()
@@ -166,11 +191,11 @@ void AEternal_Grace_ArenaCharacter::HeavyAttack()
 
 void AEternal_Grace_ArenaCharacter::Guard()
 {
-	UE_LOG(LogTemp, Display, TEXT("Player is Guarding"))
+	CharacterAnimationInstance->isGuarding = true;
 }
 
 void AEternal_Grace_ArenaCharacter::CancelGuard()
 {
-	UE_LOG(LogTemp, Display, TEXT("Player canceled Guard"))
+	CharacterAnimationInstance->isGuarding = false;
 }
 
