@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "Eternal_Grace_Arena",
+			"Path": "..\\Source\\Eternal_Grace_Arena.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "Eternal_Grace_ArenaEditor",
+			"Path": "..\\Source\\Eternal_Grace_ArenaEditor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}

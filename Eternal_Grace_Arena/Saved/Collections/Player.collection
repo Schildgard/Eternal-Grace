@@ -1,0 +1,6 @@
+FileVersion:2
+Type:Static
+Guid:35EC0C2E-4ED6-9595-BB72-B4BB67CB27C9
+ParentGuid:00000000-0000-0000-0000-000000000000
+
+/Game/Blueprints/CharacterBlueprints/BP_Player.BP_Player

@@ -1,0 +1,30 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "g:\\repository\\eternal-grace-arena\\eternal_grace_arena\\source\\eternal_grace_arena\\eternal_grace_arenagamemode.cpp",
+        "ProvidedModule": "",
+        "PCH": "g:\\repository\\eternal-grace-arena\\eternal_grace_arena\\intermediate\\build\\win64\\x64\\eternal_grace_arenaeditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.cpp20.h.pch",
+        "Includes": [
+            "g:\\repository\\eternal-grace-arena\\eternal_grace_arena\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\eternal_grace_arena\\definitions.eternal_grace_arena.h",
+            "g:\\repository\\eternal-grace-arena\\eternal_grace_arena\\source\\eternal_grace_arena\\eternal_grace_arenagamemode.h",
+            "g:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\engine\\classes\\gameframework\\gamemodebase.h",
+            "g:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\engine\\classes\\engine\\serverstatreplicator.h",
+            "g:\\program files\\epic games\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\serverstatreplicator.generated.h",
+            "g:\\program files\\epic games\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\gamemodebase.generated.h",
+            "g:\\repository\\eternal-grace-arena\\eternal_grace_arena\\intermediate\\build\\win64\\unrealeditor\\inc\\eternal_grace_arena\\uht\\eternal_grace_arenagamemode.generated.h",
+            "g:\\repository\\eternal-grace-arena\\eternal_grace_arena\\source\\eternal_grace_arena\\eternal_grace_arenacharacter.h",
+            "g:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\engine\\classes\\gameframework\\character.h",
+            "g:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\engine\\classes\\gameframework\\charactermovementreplication.h",
+            "g:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\net\\core\\public\\net\\core\\nettoken\\nettokenexportcontext.h",
+            "g:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\experimental\\iris\\core\\public\\iris\\serialization\\irisobjectreferencepackagemap.h",
+            "g:\\program files\\epic games\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\iriscore\\uht\\irisobjectreferencepackagemap.generated.h",
+            "g:\\program files\\epic games\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\charactermovementreplication.generated.h",
+            "g:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\engine\\classes\\gameframework\\rootmotionsource.h",
+            "g:\\program files\\epic games\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\rootmotionsource.generated.h",
+            "g:\\program files\\epic games\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\character.generated.h",
+            "g:\\repository\\eternal-grace-arena\\eternal_grace_arena\\intermediate\\build\\win64\\unrealeditor\\inc\\eternal_grace_arena\\uht\\eternal_grace_arenacharacter.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}
