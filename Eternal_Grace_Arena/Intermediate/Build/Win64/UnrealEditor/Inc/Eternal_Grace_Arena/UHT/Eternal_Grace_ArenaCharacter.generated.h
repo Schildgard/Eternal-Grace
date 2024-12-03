@@ -15,9 +15,11 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define ETERNAL_GRACE_ARENA_Eternal_Grace_ArenaCharacter_generated_h
 
 #define FID_Repository_Eternal_Grace_Arena_Eternal_Grace_Arena_Source_Eternal_Grace_Arena_Eternal_Grace_ArenaCharacter_h_21_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execCancelGuard); \
 	DECLARE_FUNCTION(execGuard); \
 	DECLARE_FUNCTION(execHeavyAttack); \
 	DECLARE_FUNCTION(execLightAttack); \
+	DECLARE_FUNCTION(execCancelSprint); \
 	DECLARE_FUNCTION(execSprint);
 
 

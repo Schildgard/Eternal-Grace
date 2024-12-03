@@ -20,6 +20,68 @@ ETERNAL_GRACE_ARENA_API UClass* Z_Construct_UClass_AEternal_Grace_ArenaCharacter
 UPackage* Z_Construct_UPackage__Script_Eternal_Grace_Arena();
 // End Cross Module References
 
+// Begin Class AEternal_Grace_ArenaCharacter Function CancelGuard
+struct Z_Construct_UFunction_AEternal_Grace_ArenaCharacter_CancelGuard_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "CallInEditor", "true" },
+		{ "Category", "Actions" },
+		{ "ModuleRelativePath", "Eternal_Grace_ArenaCharacter.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AEternal_Grace_ArenaCharacter_CancelGuard_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AEternal_Grace_ArenaCharacter, nullptr, "CancelGuard", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00080400, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_AEternal_Grace_ArenaCharacter_CancelGuard_Statics::Function_MetaDataParams), Z_Construct_UFunction_AEternal_Grace_ArenaCharacter_CancelGuard_Statics::Function_MetaDataParams) };
+UFunction* Z_Construct_UFunction_AEternal_Grace_ArenaCharacter_CancelGuard()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_AEternal_Grace_ArenaCharacter_CancelGuard_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(AEternal_Grace_ArenaCharacter::execCancelGuard)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->CancelGuard();
+	P_NATIVE_END;
+}
+// End Class AEternal_Grace_ArenaCharacter Function CancelGuard
+
+// Begin Class AEternal_Grace_ArenaCharacter Function CancelSprint
+struct Z_Construct_UFunction_AEternal_Grace_ArenaCharacter_CancelSprint_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "CallInEditor", "true" },
+		{ "Category", "Actions" },
+		{ "ModuleRelativePath", "Eternal_Grace_ArenaCharacter.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AEternal_Grace_ArenaCharacter_CancelSprint_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AEternal_Grace_ArenaCharacter, nullptr, "CancelSprint", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00080400, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_AEternal_Grace_ArenaCharacter_CancelSprint_Statics::Function_MetaDataParams), Z_Construct_UFunction_AEternal_Grace_ArenaCharacter_CancelSprint_Statics::Function_MetaDataParams) };
+UFunction* Z_Construct_UFunction_AEternal_Grace_ArenaCharacter_CancelSprint()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_AEternal_Grace_ArenaCharacter_CancelSprint_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(AEternal_Grace_ArenaCharacter::execCancelSprint)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->CancelSprint();
+	P_NATIVE_END;
+}
+// End Class AEternal_Grace_ArenaCharacter Function CancelSprint
+
 // Begin Class AEternal_Grace_ArenaCharacter Function Guard
 struct Z_Construct_UFunction_AEternal_Grace_ArenaCharacter_Guard_Statics
 {
@@ -149,6 +211,8 @@ void AEternal_Grace_ArenaCharacter::StaticRegisterNativesAEternal_Grace_ArenaCha
 {
 	UClass* Class = AEternal_Grace_ArenaCharacter::StaticClass();
 	static const FNameNativePtrPair Funcs[] = {
+		{ "CancelGuard", &AEternal_Grace_ArenaCharacter::execCancelGuard },
+		{ "CancelSprint", &AEternal_Grace_ArenaCharacter::execCancelSprint },
 		{ "Guard", &AEternal_Grace_ArenaCharacter::execGuard },
 		{ "HeavyAttack", &AEternal_Grace_ArenaCharacter::execHeavyAttack },
 		{ "LightAttack", &AEternal_Grace_ArenaCharacter::execLightAttack },
@@ -271,6 +335,8 @@ struct Z_Construct_UClass_AEternal_Grace_ArenaCharacter_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
+		{ &Z_Construct_UFunction_AEternal_Grace_ArenaCharacter_CancelGuard, "CancelGuard" }, // 3622620775
+		{ &Z_Construct_UFunction_AEternal_Grace_ArenaCharacter_CancelSprint, "CancelSprint" }, // 4152863835
 		{ &Z_Construct_UFunction_AEternal_Grace_ArenaCharacter_Guard, "Guard" }, // 2100019240
 		{ &Z_Construct_UFunction_AEternal_Grace_ArenaCharacter_HeavyAttack, "HeavyAttack" }, // 472057334
 		{ &Z_Construct_UFunction_AEternal_Grace_ArenaCharacter_LightAttack, "LightAttack" }, // 3267650567
@@ -345,10 +411,10 @@ AEternal_Grace_ArenaCharacter::~AEternal_Grace_ArenaCharacter() {}
 struct Z_CompiledInDeferFile_FID_Repository_Eternal_Grace_Arena_Eternal_Grace_Arena_Source_Eternal_Grace_Arena_Eternal_Grace_ArenaCharacter_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AEternal_Grace_ArenaCharacter, AEternal_Grace_ArenaCharacter::StaticClass, TEXT("AEternal_Grace_ArenaCharacter"), &Z_Registration_Info_UClass_AEternal_Grace_ArenaCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AEternal_Grace_ArenaCharacter), 2868349625U) },
+		{ Z_Construct_UClass_AEternal_Grace_ArenaCharacter, AEternal_Grace_ArenaCharacter::StaticClass, TEXT("AEternal_Grace_ArenaCharacter"), &Z_Registration_Info_UClass_AEternal_Grace_ArenaCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AEternal_Grace_ArenaCharacter), 1357976763U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Repository_Eternal_Grace_Arena_Eternal_Grace_Arena_Source_Eternal_Grace_Arena_Eternal_Grace_ArenaCharacter_h_3337558761(TEXT("/Script/Eternal_Grace_Arena"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Repository_Eternal_Grace_Arena_Eternal_Grace_Arena_Source_Eternal_Grace_Arena_Eternal_Grace_ArenaCharacter_h_3199260395(TEXT("/Script/Eternal_Grace_Arena"),
 	Z_CompiledInDeferFile_FID_Repository_Eternal_Grace_Arena_Eternal_Grace_Arena_Source_Eternal_Grace_Arena_Eternal_Grace_ArenaCharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Repository_Eternal_Grace_Arena_Eternal_Grace_Arena_Source_Eternal_Grace_Arena_Eternal_Grace_ArenaCharacter_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

@@ -68,11 +68,15 @@ protected:
 	UFUNCTION(CallInEditor, Category = Actions)
 	virtual void Sprint();
 	UFUNCTION(CallInEditor, Category = Actions)
+	virtual void CancelSprint();
+	UFUNCTION(CallInEditor, Category = Actions)
 	virtual void LightAttack();
 	UFUNCTION(CallInEditor, Category = Actions)
 	virtual void HeavyAttack();
 	UFUNCTION(CallInEditor, Category = Actions)
 	virtual void Guard();
+	UFUNCTION(CallInEditor, Category = Actions)
+	virtual void CancelGuard();
 			
 
 protected:

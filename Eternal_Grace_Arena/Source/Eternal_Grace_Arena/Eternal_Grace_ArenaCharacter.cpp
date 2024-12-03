@@ -88,9 +88,13 @@ void AEternal_Grace_ArenaCharacter::SetupPlayerInputComponent(UInputComponent* P
 
 		//Sprinting
 		EnhancedInputComponent->BindAction(SprintAction, ETriggerEvent::Triggered, this, &AEternal_Grace_ArenaCharacter::Sprint);
+		EnhancedInputComponent->BindAction(SprintAction, ETriggerEvent::Completed, this, &AEternal_Grace_ArenaCharacter::CancelSprint);
+		EnhancedInputComponent->BindAction(SprintAction, ETriggerEvent::Canceled, this, &AEternal_Grace_ArenaCharacter::CancelSprint);
 
 		//Guarding
 		EnhancedInputComponent->BindAction(GuardAction, ETriggerEvent::Triggered, this, &AEternal_Grace_ArenaCharacter::Guard);
+		EnhancedInputComponent->BindAction(GuardAction, ETriggerEvent::Completed, this, &AEternal_Grace_ArenaCharacter::CancelGuard);
+		EnhancedInputComponent->BindAction(GuardAction, ETriggerEvent::Canceled, this, &AEternal_Grace_ArenaCharacter::CancelGuard);
 
 		//Light Attack
 		EnhancedInputComponent->BindAction(LightAttackAction, ETriggerEvent::Triggered, this, &AEternal_Grace_ArenaCharacter::LightAttack);
@@ -145,6 +149,11 @@ void AEternal_Grace_ArenaCharacter::Sprint()
 	UE_LOG(LogTemp, Display, TEXT("Player is Sprinting"))
 }
 
+void AEternal_Grace_ArenaCharacter::CancelSprint()
+{
+	UE_LOG(LogTemp, Display, TEXT("Player canceled Sprint"))
+}
+
 void AEternal_Grace_ArenaCharacter::LightAttack()
 {
 	UE_LOG(LogTemp, Display, TEXT("Player does a Light Attack"))
@@ -158,5 +167,10 @@ void AEternal_Grace_ArenaCharacter::HeavyAttack()
 void AEternal_Grace_ArenaCharacter::Guard()
 {
 	UE_LOG(LogTemp, Display, TEXT("Player is Guarding"))
+}
+
+void AEternal_Grace_ArenaCharacter::CancelGuard()
+{
+	UE_LOG(LogTemp, Display, TEXT("Player canceled Guard"))
 }
 

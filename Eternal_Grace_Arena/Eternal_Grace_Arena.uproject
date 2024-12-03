@@ -7,7 +7,10 @@
 		{
 			"Name": "Eternal_Grace_Arena",
 			"Type": "Runtime",
-			"LoadingPhase": "Default"
+			"LoadingPhase": "Default",
+			"AdditionalDependencies": [
+				"Engine"
+			]
 		}
 	],
 	"Plugins": [
