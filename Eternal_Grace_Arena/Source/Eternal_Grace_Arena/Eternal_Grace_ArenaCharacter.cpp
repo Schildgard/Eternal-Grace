@@ -125,9 +125,9 @@ void AEternal_Grace_ArenaCharacter::InitializeAnimationInstance()
 		//CAST ANIMATION INSTANCE TO SPECIFIC CHARACTER ANIMATION INSTANCE
 		CharacterAnimationInstance = Cast<UCharacterAnimInstance>(CurrentAnimInstance);
 		UE_LOG(LogTemp, Warning, TEXT("Animation Instance set"))
-		return;
+			return;
 	}
-		UE_LOG(LogTemp, Warning, TEXT("Animation Instance could not be found"))
+	UE_LOG(LogTemp, Warning, TEXT("Animation Instance could not be found"))
 }
 
 void AEternal_Grace_ArenaCharacter::Move(const FInputActionValue& Value)
@@ -179,9 +179,24 @@ void AEternal_Grace_ArenaCharacter::CancelSprint()
 
 void AEternal_Grace_ArenaCharacter::LightAttack()
 {
-	UE_LOG(LogTemp, Display, TEXT("Player does a Light Attack"))
-
-		PlayAnimMontage(LightAttack01, 1.0f);
+	if (!CharacterAnimationInstance->isAttacking)
+	{
+		switch (CharacterAnimationInstance->attackCount)
+		{
+		case 0:
+			PlayAnimMontage(LightAttack01, 1.0f);
+			break;
+		case 1:
+			PlayAnimMontage(LightAttack02, 1.0f);
+			break;
+		default:
+			break;
+		}
+	}
+	else
+	{
+		UE_LOG(LogTemp, Warning, TEXT("Character Already is Attacking"))
+	}
 }
 
 void AEternal_Grace_ArenaCharacter::HeavyAttack()

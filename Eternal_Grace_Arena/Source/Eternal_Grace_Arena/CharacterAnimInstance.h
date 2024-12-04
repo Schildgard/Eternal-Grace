@@ -23,5 +23,14 @@ public:
 	bool isWeaponSeathed;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = States, meta = (AllowPrivateAccess))
 	bool isLockedOn;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = States, meta = (AllowPrivateAccess))
+	bool isAttacking;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Animation, meta = (AllowPrivateAccess))
+	int attackCount;
+	
+
+
 	
 };

@@ -44,6 +44,7 @@ class AEternal_Grace_ArenaCharacter : public ACharacter
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
 	UInputAction* LookAction;
 
+	//CUSTOM ACTIONS
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess))
 	UInputAction* SprintAction;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess))
@@ -87,6 +88,11 @@ protected:
 	virtual void Guard();
 	UFUNCTION(CallInEditor, Category = Actions)
 	virtual void CancelGuard();
+
+
+//private:
+//	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Animation, meta = (AllowPrivateAccess))
+//	int attackCount;
 			
 
 protected:
