@@ -11,6 +11,7 @@
 #include "EnhancedInputSubsystems.h"
 #include "InputActionValue.h"
 #include "CharacterAnimInstance.h"
+#include "Kismet/KismetSystemLibrary.h"
 
 DEFINE_LOG_CATEGORY(LogTemplateCharacter);
 
@@ -106,6 +107,11 @@ void AEternal_Grace_ArenaCharacter::SetupPlayerInputComponent(UInputComponent* P
 		EnhancedInputComponent->BindAction(HeavyAttackAction, ETriggerEvent::Started, this, &AEternal_Grace_ArenaCharacter::ChargeHeavyAttack);
 		EnhancedInputComponent->BindAction(HeavyAttackAction, ETriggerEvent::Triggered, this, &AEternal_Grace_ArenaCharacter::IncreaseChargePower);
 		EnhancedInputComponent->BindAction(HeavyAttackAction, ETriggerEvent::Completed, this, &AEternal_Grace_ArenaCharacter::HeavyAttack);
+
+		//Lock On
+		EnhancedInputComponent->BindAction(ToggleLockOnAction, ETriggerEvent::Triggered, this, &AEternal_Grace_ArenaCharacter::ToggleLockOn);
+		EnhancedInputComponent->BindAction(SwitchLockOnTargetAction, ETriggerEvent::Triggered, this, &AEternal_Grace_ArenaCharacter::SwitchLockOnTarget);
+
 	}
 	else
 	{
@@ -270,5 +276,22 @@ void AEternal_Grace_ArenaCharacter::Guard()
 void AEternal_Grace_ArenaCharacter::CancelGuard()
 {
 	CharacterAnimationInstance->isGuarding = false;
+}
+
+void AEternal_Grace_ArenaCharacter::ToggleLockOn()
+{
+	FindNearestTarget();
+	UE_LOG(LogTemp, Warning, TEXT("Toggle"))
+}
+
+void AEternal_Grace_ArenaCharacter::SwitchLockOnTarget()
+{
+}
+
+void AEternal_Grace_ArenaCharacter::FindNearestTarget()
+{
+	FVector PlayerPosition = GetActorLocation();
+	UKismetSystemLibrary::SphereTraceMultiForObjects(world, PlayerPosition, PlayerPosition, 750.0f, ObjectTypes, false, ActorsToIgnore,EDrawDebugTrace::ForDuration,ViableTargets, true, FLinearColor::Red, FLinearColor::Green, 5.0f);
+	UE_LOG(LogTemp, Warning, TEXT("Search"))
 }
 

@@ -53,6 +53,10 @@ class AEternal_Grace_ArenaCharacter : public ACharacter
 	UInputAction* HeavyAttackAction;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess))
 	UInputAction* GuardAction;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess))
+	UInputAction* ToggleLockOnAction;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess))
+	UInputAction* SwitchLockOnTargetAction;
 
 	//LIGHT ATTACKS
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animations, meta = (AllowPrivateAccess))
@@ -73,15 +77,24 @@ class AEternal_Grace_ArenaCharacter : public ACharacter
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animations, meta = (AllowPrivateAccess))
 	UAnimMontage* ChargeAttack;
 
+	//CUSTOM VALUE PROPERTIES
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Combat, meta = (AllowPrivateAccess))
 	float currentChargePower;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Combat, meta = (AllowPrivateAccess))
 	float maxChargePower = 2.5f;
 
-
+	//GENERAL
 	UPROPERTY()
 	UWorld* world;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = LockOn, meta = (AllowPrivateAccess))
+	TArray<TEnumAsByte<EObjectTypeQuery>> ObjectTypes;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = LockOn, meta = (AllowPrivateAccess))
+	TArray<AActor*> ActorsToIgnore;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = LockOn, meta = (AllowPrivateAccess))
+	TArray<FHitResult> ViableTargets;
 
 
 	UPROPERTY()
@@ -115,6 +128,12 @@ protected:
 	virtual void Guard();
 	UFUNCTION(CallInEditor, Category = Actions)
 	virtual void CancelGuard();
+	UFUNCTION(CallInEditor, Category = Actions)
+	virtual void ToggleLockOn();
+	UFUNCTION(CallInEditor, Category = Actions)
+	virtual void SwitchLockOnTarget();
+	UFUNCTION(CallInEditor, Category = Actions)
+	virtual void FindNearestTarget();
 
 
 

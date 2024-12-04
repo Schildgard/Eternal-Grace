@@ -68,7 +68,10 @@
             "g:\\program files\\epic games\\ue_5.5\\engine\\plugins\\enhancedinput\\intermediate\\build\\win64\\unrealeditor\\inc\\enhancedinput\\uht\\enhancedinputsubsysteminterface.generated.h",
             "g:\\program files\\epic games\\ue_5.5\\engine\\plugins\\enhancedinput\\intermediate\\build\\win64\\unrealeditor\\inc\\enhancedinput\\uht\\enhancedinputsubsystems.generated.h",
             "g:\\repository\\eternal-grace-arena\\eternal_grace_arena\\source\\eternal_grace_arena\\characteraniminstance.h",
-            "g:\\repository\\eternal-grace-arena\\eternal_grace_arena\\intermediate\\build\\win64\\unrealeditor\\inc\\eternal_grace_arena\\uht\\characteraniminstance.generated.h"
+            "g:\\repository\\eternal-grace-arena\\eternal_grace_arena\\intermediate\\build\\win64\\unrealeditor\\inc\\eternal_grace_arena\\uht\\characteraniminstance.generated.h",
+            "g:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\engine\\classes\\kismet\\kismetsystemlibrary.h",
+            "g:\\program files\\epic games\\ue_5.5\\engine\\source\\runtime\\coreuobject\\public\\uobject\\propertyaccessutil.h",
+            "g:\\program files\\epic games\\ue_5.5\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\kismetsystemlibrary.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []
