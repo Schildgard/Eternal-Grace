@@ -25,6 +25,8 @@ public:
 	bool isLockedOn;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = States, meta = (AllowPrivateAccess))
 	bool isAttacking;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = States, meta = (AllowPrivateAccess))
+	bool isInHeavyAttack;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = State, meta = (AllowPrivateAccess))
 	bool isCharging;
 

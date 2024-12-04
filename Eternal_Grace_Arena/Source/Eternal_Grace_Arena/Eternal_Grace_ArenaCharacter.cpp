@@ -53,6 +53,8 @@ AEternal_Grace_ArenaCharacter::AEternal_Grace_ArenaCharacter()
 
 	// Note: The skeletal mesh and anim blueprint references on the Mesh component (inherited from Character) 
 	// are set in the derived blueprint asset named ThirdPersonCharacter (to avoid direct content references in C++)
+
+	world = GetWorld();
 }
 
 //////////////////////////////////////////////////////////////////////////
@@ -101,7 +103,8 @@ void AEternal_Grace_ArenaCharacter::SetupPlayerInputComponent(UInputComponent* P
 		EnhancedInputComponent->BindAction(LightAttackAction, ETriggerEvent::Triggered, this, &AEternal_Grace_ArenaCharacter::LightAttack);
 
 		//Heavy Attack
-		EnhancedInputComponent->BindAction(HeavyAttackAction, ETriggerEvent::Triggered, this, &AEternal_Grace_ArenaCharacter::ChargeHeavyAttack);
+		EnhancedInputComponent->BindAction(HeavyAttackAction, ETriggerEvent::Started, this, &AEternal_Grace_ArenaCharacter::ChargeHeavyAttack);
+		EnhancedInputComponent->BindAction(HeavyAttackAction, ETriggerEvent::Triggered, this, &AEternal_Grace_ArenaCharacter::IncreaseChargePower);
 		EnhancedInputComponent->BindAction(HeavyAttackAction, ETriggerEvent::Completed, this, &AEternal_Grace_ArenaCharacter::HeavyAttack);
 	}
 	else
@@ -200,6 +203,7 @@ void AEternal_Grace_ArenaCharacter::LightAttack()
 			break;
 		case 4:
 			PlayAnimMontage(LightAttack05, 1.0f);
+			break;
 		default:
 			break;
 		}
@@ -212,31 +216,20 @@ void AEternal_Grace_ArenaCharacter::LightAttack()
 
 void AEternal_Grace_ArenaCharacter::HeavyAttack()
 {
-	//if (!CharacterAnimationInstance->isAttacking)
-	//{
-	//	CharacterAnimationInstance->isAttacking = true;
-	//
-	//	switch (CharacterAnimationInstance->attackCount)
-	//	{
-	//	case 0:
-	//		PlayAnimMontage(HeavyAttack01, 1.0f);
-	//		break;
-	//	case 1:
-	//		PlayAnimMontage(HeavyAttack02, 1.0f);
-	//		break;
-	//	default:
-	//		break;
-	//	}
-	//}
-	//else
-	//{
-	//	UE_LOG(LogTemp, Warning, TEXT("Character Already is Attacking"))
-	//}
-
-	CharacterAnimationInstance->isCharging = false;
-	CharacterAnimationInstance->isAttacking = true;
-	PlayAnimMontage(HeavyAttack01, 1.0f);
-	UE_LOG(LogTemp, Warning, TEXT("Character Releases Attack"))
+	if (CharacterAnimationInstance->isCharging)
+	{
+		CharacterAnimationInstance->isCharging = false;
+		CharacterAnimationInstance->isAttacking = true;
+		CharacterAnimationInstance->isInHeavyAttack = true;
+		UE_LOG(LogTemp, Warning, TEXT("Character Releases Attack"))
+		PlayAnimMontage(HeavyAttack01, 1.0f);
+		currentChargePower = 0;
+	}
+	else if (CharacterAnimationInstance->isInHeavyAttack)
+	{
+		PlayAnimMontage(HeavyAttack02, 1.0f);
+		UE_LOG(LogTemp, Warning, TEXT("Character Already is not Charging"))
+	}
 }
 
 void AEternal_Grace_ArenaCharacter::ChargeHeavyAttack()
@@ -245,7 +238,21 @@ void AEternal_Grace_ArenaCharacter::ChargeHeavyAttack()
 	{
 		CharacterAnimationInstance->isCharging = true;
 		PlayAnimMontage(ChargeAttack, 1.0f);
-	UE_LOG(LogTemp, Warning, TEXT("Character Charges Attack"))
+		UE_LOG(LogTemp, Warning, TEXT("Character Charges Attack"))
+	}
+
+}
+
+void AEternal_Grace_ArenaCharacter::IncreaseChargePower()
+{
+	if (CharacterAnimationInstance->isCharging)
+	{
+		currentChargePower += world->DeltaTimeSeconds;
+		if (currentChargePower >= maxChargePower)
+		{
+			currentChargePower = maxChargePower;
+			HeavyAttack();
+		}
 	}
 }
 

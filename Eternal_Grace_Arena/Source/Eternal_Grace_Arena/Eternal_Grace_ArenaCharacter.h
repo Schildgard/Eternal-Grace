@@ -74,8 +74,13 @@ class AEternal_Grace_ArenaCharacter : public ACharacter
 	UAnimMontage* ChargeAttack;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Combat, meta = (AllowPrivateAccess))
-	float ChargePower;
+	float currentChargePower;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Combat, meta = (AllowPrivateAccess))
+	float maxChargePower = 2.5f;
 
+
+	UPROPERTY()
+	UWorld* world;
 
 
 
@@ -104,6 +109,8 @@ protected:
 	virtual void HeavyAttack();
 	UFUNCTION(CallInEditor, Category = Actions)
 	virtual void ChargeHeavyAttack();
+	UFUNCTION(CallInEditor, Category = Actions)
+	virtual void IncreaseChargePower();
 	UFUNCTION(CallInEditor, Category = Actions)
 	virtual void Guard();
 	UFUNCTION(CallInEditor, Category = Actions)
