@@ -216,17 +216,21 @@ void AEternal_Grace_ArenaCharacter::LightAttack()
 
 void AEternal_Grace_ArenaCharacter::HeavyAttack()
 {
+	//When Heavy Attack Button is released from charge Position the Player Character unleashes his Heavy Attack 
 	if (CharacterAnimationInstance->isCharging)
 	{
-		CharacterAnimationInstance->isCharging = false;
-		CharacterAnimationInstance->isAttacking = true;
-		CharacterAnimationInstance->isInHeavyAttack = true;
+		CharacterAnimationInstance->isCharging = false; //LEAVE CHARGING STATE
+		CharacterAnimationInstance->isAttacking = true; //SET PLAYER IN ATTACK STATE, SO THE ANIMATION CAN NOT BE INTERUPTED BY A LIGHT ATTACK COMMAND
+		CharacterAnimationInstance->isInHeavyAttack = true; // SET PLAYER IN HEAVY ATTACK STATE, SO ANOTHER HEAVY ATTACK COMMAND TRIGGERS THE SECOND ATTACK ANIM
 		UE_LOG(LogTemp, Warning, TEXT("Character Releases Attack"))
 		PlayAnimMontage(HeavyAttack01, 1.0f);
-		currentChargePower = 0;
+		currentChargePower = 0; //TODO: CHANGE THIS SO THAT A NOTIFY EVENT RESETS THE CHARGE POWER
 	}
 	else if (CharacterAnimationInstance->isInHeavyAttack)
 	{
+		//IF PLAYER IS IN HEAVY ATTACK, A SECOND HEAVY ATTACK COMMAND TRIGGERS THE FOLLOW UP ANIMATION
+		CharacterAnimationInstance->isInHeavyAttack = false;//LEAVE HEAVY ATTACK STATE, SO THE FOLLOW UP ANIMATION ONLY TRIGGERS ONCE
+		CharacterAnimationInstance->isAttacking = true; //SET IS ATTACKING TO TRUE TO MAKE SURE THE FOLLOW UP ANIMATION IS NOT CANCELED BY LIGHT ATTACK COMMAND
 		PlayAnimMontage(HeavyAttack02, 1.0f);
 		UE_LOG(LogTemp, Warning, TEXT("Character Already is not Charging"))
 	}
@@ -234,6 +238,7 @@ void AEternal_Grace_ArenaCharacter::HeavyAttack()
 
 void AEternal_Grace_ArenaCharacter::ChargeHeavyAttack()
 {
+	//When Heavy Attack Button is first pressed, Player goes into Charge Stand
 	if (!CharacterAnimationInstance->isCharging && !CharacterAnimationInstance->isAttacking)
 	{
 		CharacterAnimationInstance->isCharging = true;
@@ -245,6 +250,7 @@ void AEternal_Grace_ArenaCharacter::ChargeHeavyAttack()
 
 void AEternal_Grace_ArenaCharacter::IncreaseChargePower()
 {
+	//When further Hold down, the Player remains in Charge Position and charges Attack power
 	if (CharacterAnimationInstance->isCharging)
 	{
 		currentChargePower += world->DeltaTimeSeconds;
