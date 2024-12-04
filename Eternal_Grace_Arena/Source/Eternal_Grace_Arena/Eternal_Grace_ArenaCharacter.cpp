@@ -101,7 +101,8 @@ void AEternal_Grace_ArenaCharacter::SetupPlayerInputComponent(UInputComponent* P
 		EnhancedInputComponent->BindAction(LightAttackAction, ETriggerEvent::Triggered, this, &AEternal_Grace_ArenaCharacter::LightAttack);
 
 		//Heavy Attack
-		EnhancedInputComponent->BindAction(HeavyAttackAction, ETriggerEvent::Triggered, this, &AEternal_Grace_ArenaCharacter::HeavyAttack);
+		EnhancedInputComponent->BindAction(HeavyAttackAction, ETriggerEvent::Triggered, this, &AEternal_Grace_ArenaCharacter::ChargeHeavyAttack);
+		EnhancedInputComponent->BindAction(HeavyAttackAction, ETriggerEvent::Completed, this, &AEternal_Grace_ArenaCharacter::HeavyAttack);
 	}
 	else
 	{
@@ -181,6 +182,8 @@ void AEternal_Grace_ArenaCharacter::LightAttack()
 {
 	if (!CharacterAnimationInstance->isAttacking)
 	{
+		CharacterAnimationInstance->isAttacking = true;
+
 		switch (CharacterAnimationInstance->attackCount)
 		{
 		case 0:
@@ -189,6 +192,14 @@ void AEternal_Grace_ArenaCharacter::LightAttack()
 		case 1:
 			PlayAnimMontage(LightAttack02, 1.0f);
 			break;
+		case 2:
+			PlayAnimMontage(LightAttack03, 1.0f);
+			break;
+		case 3:
+			PlayAnimMontage(LightAttack04, 1.0f);
+			break;
+		case 4:
+			PlayAnimMontage(LightAttack05, 1.0f);
 		default:
 			break;
 		}
@@ -201,7 +212,41 @@ void AEternal_Grace_ArenaCharacter::LightAttack()
 
 void AEternal_Grace_ArenaCharacter::HeavyAttack()
 {
-	UE_LOG(LogTemp, Display, TEXT("Player does a Heavy Attack"))
+	//if (!CharacterAnimationInstance->isAttacking)
+	//{
+	//	CharacterAnimationInstance->isAttacking = true;
+	//
+	//	switch (CharacterAnimationInstance->attackCount)
+	//	{
+	//	case 0:
+	//		PlayAnimMontage(HeavyAttack01, 1.0f);
+	//		break;
+	//	case 1:
+	//		PlayAnimMontage(HeavyAttack02, 1.0f);
+	//		break;
+	//	default:
+	//		break;
+	//	}
+	//}
+	//else
+	//{
+	//	UE_LOG(LogTemp, Warning, TEXT("Character Already is Attacking"))
+	//}
+
+	CharacterAnimationInstance->isCharging = false;
+	CharacterAnimationInstance->isAttacking = true;
+	PlayAnimMontage(HeavyAttack01, 1.0f);
+	UE_LOG(LogTemp, Warning, TEXT("Character Releases Attack"))
+}
+
+void AEternal_Grace_ArenaCharacter::ChargeHeavyAttack()
+{
+	if (!CharacterAnimationInstance->isCharging && !CharacterAnimationInstance->isAttacking)
+	{
+		CharacterAnimationInstance->isCharging = true;
+		PlayAnimMontage(ChargeAttack, 1.0f);
+	UE_LOG(LogTemp, Warning, TEXT("Character Charges Attack"))
+	}
 }
 
 void AEternal_Grace_ArenaCharacter::Guard()
