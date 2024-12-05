@@ -91,10 +91,7 @@ class AEternal_Grace_ArenaCharacter : public ACharacter
 	TArray<TEnumAsByte<EObjectTypeQuery>> ObjectTypes;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = LockOn, meta = (AllowPrivateAccess))
-	TArray<AActor*> ActorsToIgnore;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = LockOn, meta = (AllowPrivateAccess))
-	TArray<FHitResult> ViableTargets;
+	TArray<AActor*> ViableTargets;
 
 
 	UPROPERTY()

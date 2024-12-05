@@ -12,6 +12,7 @@
 #include "InputActionValue.h"
 #include "CharacterAnimInstance.h"
 #include "Kismet/KismetSystemLibrary.h"
+#include "I_Targetable.h"
 
 DEFINE_LOG_CATEGORY(LogTemplateCharacter);
 
@@ -54,8 +55,6 @@ AEternal_Grace_ArenaCharacter::AEternal_Grace_ArenaCharacter()
 
 	// Note: The skeletal mesh and anim blueprint references on the Mesh component (inherited from Character) 
 	// are set in the derived blueprint asset named ThirdPersonCharacter (to avoid direct content references in C++)
-
-	world = GetWorld();
 }
 
 //////////////////////////////////////////////////////////////////////////
@@ -122,6 +121,7 @@ void AEternal_Grace_ArenaCharacter::SetupPlayerInputComponent(UInputComponent* P
 void AEternal_Grace_ArenaCharacter::BeginPlay()
 {
 	Super::BeginPlay();
+	world = GetWorld();
 	InitializeAnimationInstance();
 
 }
@@ -229,7 +229,7 @@ void AEternal_Grace_ArenaCharacter::HeavyAttack()
 		CharacterAnimationInstance->isAttacking = true; //SET PLAYER IN ATTACK STATE, SO THE ANIMATION CAN NOT BE INTERUPTED BY A LIGHT ATTACK COMMAND
 		CharacterAnimationInstance->isInHeavyAttack = true; // SET PLAYER IN HEAVY ATTACK STATE, SO ANOTHER HEAVY ATTACK COMMAND TRIGGERS THE SECOND ATTACK ANIM
 		UE_LOG(LogTemp, Warning, TEXT("Character Releases Attack"))
-		PlayAnimMontage(HeavyAttack01, 1.0f);
+			PlayAnimMontage(HeavyAttack01, 1.0f);
 		currentChargePower = 0; //TODO: CHANGE THIS SO THAT A NOTIFY EVENT RESETS THE CHARGE POWER
 	}
 	else if (CharacterAnimationInstance->isInHeavyAttack)
@@ -291,7 +291,25 @@ void AEternal_Grace_ArenaCharacter::SwitchLockOnTarget()
 void AEternal_Grace_ArenaCharacter::FindNearestTarget()
 {
 	FVector PlayerPosition = GetActorLocation();
-	UKismetSystemLibrary::SphereTraceMultiForObjects(world, PlayerPosition, PlayerPosition, 750.0f, ObjectTypes, false, ActorsToIgnore,EDrawDebugTrace::ForDuration,ViableTargets, true, FLinearColor::Red, FLinearColor::Green, 5.0f);
-	UE_LOG(LogTemp, Warning, TEXT("Search"))
+	TArray<FHitResult> ScanHits; //SET UP A LIST FOR HITTED OBJECTS
+	TArray<AActor*> ActorsToIgnore; //SET UP A LIST SO ACTORS WONT GET SCANNED MULTIPLE TIMES
+	UKismetSystemLibrary::SphereTraceMultiForObjects(world, PlayerPosition, PlayerPosition, 750.0f, ObjectTypes, true, ActorsToIgnore, EDrawDebugTrace::ForDuration, ScanHits, true, FLinearColor::Red, FLinearColor::Green, 5.0f);
+
+	if (ScanHits.Num() > 0)
+	{
+		//ITERARE THROUGH SCANHITS
+		for (const FHitResult& Hit : ScanHits)
+		{
+			AActor* HitActor = Hit.GetActor();
+			//ADD HITTED ACTOR TO IGNORE AND VIABLE TARGET LIST
+			if (HitActor && !ActorsToIgnore.Contains(HitActor) && HitActor->Implements<UI_Targetable>())
+			{
+				UE_LOG(LogTemp, Warning, TEXT("Hit Actor: %s"), *HitActor->GetName());
+				ViableTargets.Add(HitActor);
+				ActorsToIgnore.Add(HitActor);
+			}
+		}
+	}
+
 }
 

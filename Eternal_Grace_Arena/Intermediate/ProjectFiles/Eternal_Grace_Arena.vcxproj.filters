@@ -61,6 +61,12 @@
     <ClCompile Include="..\..\Source\Eternal_Grace_Arena\Eternal_Grace_ArenaGameMode.h">
       <Filter>Source\Eternal_Grace_Arena</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\Eternal_Grace_Arena\I_Targetable.cpp">
+      <Filter>Source\Eternal_Grace_Arena</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Eternal_Grace_Arena\I_Targetable.h">
+      <Filter>Source\Eternal_Grace_Arena</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\Eternal_Grace_Arena\PlayerCharacter.cpp">
       <Filter>Source\Eternal_Grace_Arena</Filter>
     </ClCompile>
