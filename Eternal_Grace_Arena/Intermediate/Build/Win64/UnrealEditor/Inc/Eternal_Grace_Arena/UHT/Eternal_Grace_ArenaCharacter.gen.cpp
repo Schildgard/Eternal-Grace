@@ -366,6 +366,50 @@ DEFINE_FUNCTION(AEternal_Grace_ArenaCharacter::execLightAttack)
 }
 // End Class AEternal_Grace_ArenaCharacter Function LightAttack
 
+// Begin Class AEternal_Grace_ArenaCharacter Function RotateTowardsTarget
+struct Z_Construct_UFunction_AEternal_Grace_ArenaCharacter_RotateTowardsTarget_Statics
+{
+	struct Eternal_Grace_ArenaCharacter_eventRotateTowardsTarget_Parms
+	{
+		AActor* Target;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "CallInEditor", "true" },
+		{ "Category", "Actions" },
+		{ "ModuleRelativePath", "Eternal_Grace_ArenaCharacter.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_Target;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_AEternal_Grace_ArenaCharacter_RotateTowardsTarget_Statics::NewProp_Target = { "Target", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(Eternal_Grace_ArenaCharacter_eventRotateTowardsTarget_Parms, Target), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AEternal_Grace_ArenaCharacter_RotateTowardsTarget_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AEternal_Grace_ArenaCharacter_RotateTowardsTarget_Statics::NewProp_Target,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_AEternal_Grace_ArenaCharacter_RotateTowardsTarget_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_AEternal_Grace_ArenaCharacter_RotateTowardsTarget_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AEternal_Grace_ArenaCharacter, nullptr, "RotateTowardsTarget", nullptr, nullptr, Z_Construct_UFunction_AEternal_Grace_ArenaCharacter_RotateTowardsTarget_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AEternal_Grace_ArenaCharacter_RotateTowardsTarget_Statics::PropPointers), sizeof(Z_Construct_UFunction_AEternal_Grace_ArenaCharacter_RotateTowardsTarget_Statics::Eternal_Grace_ArenaCharacter_eventRotateTowardsTarget_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00080401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_AEternal_Grace_ArenaCharacter_RotateTowardsTarget_Statics::Function_MetaDataParams), Z_Construct_UFunction_AEternal_Grace_ArenaCharacter_RotateTowardsTarget_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_AEternal_Grace_ArenaCharacter_RotateTowardsTarget_Statics::Eternal_Grace_ArenaCharacter_eventRotateTowardsTarget_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_AEternal_Grace_ArenaCharacter_RotateTowardsTarget()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_AEternal_Grace_ArenaCharacter_RotateTowardsTarget_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(AEternal_Grace_ArenaCharacter::execRotateTowardsTarget)
+{
+	P_GET_OBJECT(AActor,Z_Param_Target);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->RotateTowardsTarget(Z_Param_Target);
+	P_NATIVE_END;
+}
+// End Class AEternal_Grace_ArenaCharacter Function RotateTowardsTarget
+
 // Begin Class AEternal_Grace_ArenaCharacter Function ScanForTargets
 struct Z_Construct_UFunction_AEternal_Grace_ArenaCharacter_ScanForTargets_Statics
 {
@@ -532,6 +576,7 @@ void AEternal_Grace_ArenaCharacter::StaticRegisterNativesAEternal_Grace_ArenaCha
 		{ "HeavyAttack", &AEternal_Grace_ArenaCharacter::execHeavyAttack },
 		{ "IncreaseChargePower", &AEternal_Grace_ArenaCharacter::execIncreaseChargePower },
 		{ "LightAttack", &AEternal_Grace_ArenaCharacter::execLightAttack },
+		{ "RotateTowardsTarget", &AEternal_Grace_ArenaCharacter::execRotateTowardsTarget },
 		{ "ScanForTargets", &AEternal_Grace_ArenaCharacter::execScanForTargets },
 		{ "Sprint", &AEternal_Grace_ArenaCharacter::execSprint },
 		{ "SwitchLockOnTarget", &AEternal_Grace_ArenaCharacter::execSwitchLockOnTarget },
@@ -793,6 +838,7 @@ struct Z_Construct_UClass_AEternal_Grace_ArenaCharacter_Statics
 		{ &Z_Construct_UFunction_AEternal_Grace_ArenaCharacter_HeavyAttack, "HeavyAttack" }, // 472057334
 		{ &Z_Construct_UFunction_AEternal_Grace_ArenaCharacter_IncreaseChargePower, "IncreaseChargePower" }, // 3864020762
 		{ &Z_Construct_UFunction_AEternal_Grace_ArenaCharacter_LightAttack, "LightAttack" }, // 1610073271
+		{ &Z_Construct_UFunction_AEternal_Grace_ArenaCharacter_RotateTowardsTarget, "RotateTowardsTarget" }, // 3862745241
 		{ &Z_Construct_UFunction_AEternal_Grace_ArenaCharacter_ScanForTargets, "ScanForTargets" }, // 4007505696
 		{ &Z_Construct_UFunction_AEternal_Grace_ArenaCharacter_Sprint, "Sprint" }, // 503223636
 		{ &Z_Construct_UFunction_AEternal_Grace_ArenaCharacter_SwitchLockOnTarget, "SwitchLockOnTarget" }, // 1324548519
@@ -901,10 +947,10 @@ AEternal_Grace_ArenaCharacter::~AEternal_Grace_ArenaCharacter() {}
 struct Z_CompiledInDeferFile_FID_Repository_Eternal_Grace_Arena_Eternal_Grace_Arena_Source_Eternal_Grace_Arena_Eternal_Grace_ArenaCharacter_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AEternal_Grace_ArenaCharacter, AEternal_Grace_ArenaCharacter::StaticClass, TEXT("AEternal_Grace_ArenaCharacter"), &Z_Registration_Info_UClass_AEternal_Grace_ArenaCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AEternal_Grace_ArenaCharacter), 2679100897U) },
+		{ Z_Construct_UClass_AEternal_Grace_ArenaCharacter, AEternal_Grace_ArenaCharacter::StaticClass, TEXT("AEternal_Grace_ArenaCharacter"), &Z_Registration_Info_UClass_AEternal_Grace_ArenaCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AEternal_Grace_ArenaCharacter), 281011652U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Repository_Eternal_Grace_Arena_Eternal_Grace_Arena_Source_Eternal_Grace_Arena_Eternal_Grace_ArenaCharacter_h_2515873564(TEXT("/Script/Eternal_Grace_Arena"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Repository_Eternal_Grace_Arena_Eternal_Grace_Arena_Source_Eternal_Grace_Arena_Eternal_Grace_ArenaCharacter_h_578734758(TEXT("/Script/Eternal_Grace_Arena"),
 	Z_CompiledInDeferFile_FID_Repository_Eternal_Grace_Arena_Eternal_Grace_Arena_Source_Eternal_Grace_Arena_Eternal_Grace_ArenaCharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Repository_Eternal_Grace_Arena_Eternal_Grace_Arena_Source_Eternal_Grace_Arena_Eternal_Grace_ArenaCharacter_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

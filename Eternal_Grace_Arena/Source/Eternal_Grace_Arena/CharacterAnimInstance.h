@@ -32,7 +32,9 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Animation, meta = (AllowPrivateAccess))
 	int attackCount;
-
+	//VALUE BETWEEN -180 AND 180 DEGREES, THAT INTERPOLATES BETWEEN STRAFE ANIMATIONS 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Animation, meta = (AllowPrivateAccess))
+	float facingDirection;
 	
 
 

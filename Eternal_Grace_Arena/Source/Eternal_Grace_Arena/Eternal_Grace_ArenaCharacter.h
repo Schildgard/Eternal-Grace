@@ -142,6 +142,8 @@ protected:
 	void EngageLockOn(AActor* Target);
 	UFUNCTION(CallInEditor, Category = Actions)
 	void DisengageLockOn();
+	UFUNCTION(CallInEditor, Category = Actions)
+	void RotateTowardsTarget(AActor* Target);
 
 
 

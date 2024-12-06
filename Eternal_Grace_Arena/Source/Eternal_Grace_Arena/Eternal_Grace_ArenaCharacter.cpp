@@ -135,8 +135,7 @@ void AEternal_Grace_ArenaCharacter::Tick(float DeltaSeconds)
 	
 	if(CharacterAnimationInstance && CharacterAnimationInstance->isLockedOn && LockedOnTarget != nullptr)
 	{
-		FRotator Look = UKismetMathLibrary::FindLookAtRotation(GetActorLocation(), LockedOnTarget->GetActorLocation());
-		SetActorRotation(Look);
+		RotateTowardsTarget(LockedOnTarget);
 	}
 }
 
@@ -358,8 +357,6 @@ TArray<AActor*> AEternal_Grace_ArenaCharacter::ScanForTargets()
 			//ADD HITTED ACTOR TO IGNORE AND VIABLE TARGET LIST
 			if (HitActor && !ActorsToIgnore.Contains(HitActor) && HitActor->Implements<UI_Targetable>())
 			{
-				//UE_LOG(LogTemp, Warning, TEXT("Hit Actor: %s"), *HitActor->GetName());
-				//ViableTargets.Add(HitActor);
 				ScannedActors.Add(HitActor);
 				ActorsToIgnore.Add(HitActor);
 			}
@@ -386,5 +383,14 @@ void AEternal_Grace_ArenaCharacter::DisengageLockOn()
 {
 	CharacterAnimationInstance->isLockedOn = false;
 	LockedOnTarget = nullptr;
+}
+
+void AEternal_Grace_ArenaCharacter::RotateTowardsTarget(AActor* Target)
+{
+	//GET LOOK ROTATION BETWEEN PLAYER AND TARGET
+	FRotator Look = UKismetMathLibrary::FindLookAtRotation(GetActorLocation(), Target->GetActorLocation());
+	//BREAK LOOK ROTATION TO YAW ONLY
+	FRotator DesiredRotation = FRotator(0, Look.Yaw, 0);
+	SetActorRotation(DesiredRotation);
 }
 

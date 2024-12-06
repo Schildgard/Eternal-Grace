@@ -16,6 +16,7 @@ class AActor;
 #define ETERNAL_GRACE_ARENA_Eternal_Grace_ArenaCharacter_generated_h
 
 #define FID_Repository_Eternal_Grace_Arena_Eternal_Grace_Arena_Source_Eternal_Grace_Arena_Eternal_Grace_ArenaCharacter_h_21_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execRotateTowardsTarget); \
 	DECLARE_FUNCTION(execDisengageLockOn); \
 	DECLARE_FUNCTION(execEngageLockOn); \
 	DECLARE_FUNCTION(execScanForTargets); \
