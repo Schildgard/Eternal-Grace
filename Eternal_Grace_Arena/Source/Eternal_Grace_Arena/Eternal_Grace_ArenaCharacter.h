@@ -87,11 +87,13 @@ class AEternal_Grace_ArenaCharacter : public ACharacter
 	UPROPERTY()
 	UWorld* world;
 
+	//LOCK ON SYSTEM
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = LockOn, meta = (AllowPrivateAccess))
 	TArray<TEnumAsByte<EObjectTypeQuery>> ObjectTypes;
-
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = LockOn, meta = (AllowPrivateAccess))
-	TArray<AActor*> ViableTargets;
+	AActor* LockedOnTarget;
+
+
 
 
 	UPROPERTY()
@@ -109,10 +111,12 @@ protected:
 	/** Called for looking input */
 	void Look(const FInputActionValue& Value);
 
+	//MOVEMENT FUNCTIONS
 	UFUNCTION(CallInEditor, Category = Actions)
 	virtual void Sprint();
 	UFUNCTION(CallInEditor, Category = Actions)
 	virtual void CancelSprint();
+	//COMBAT FUNCTIONS
 	UFUNCTION(CallInEditor, Category = Actions)
 	virtual void LightAttack();
 	UFUNCTION(CallInEditor, Category = Actions)
@@ -125,12 +129,19 @@ protected:
 	virtual void Guard();
 	UFUNCTION(CallInEditor, Category = Actions)
 	virtual void CancelGuard();
+	//LOCK ON FUNCTIONS
 	UFUNCTION(CallInEditor, Category = Actions)
 	virtual void ToggleLockOn();
 	UFUNCTION(CallInEditor, Category = Actions)
 	virtual void SwitchLockOnTarget();
 	UFUNCTION(CallInEditor, Category = Actions)
-	virtual void FindNearestTarget();
+	AActor* FindNearestTarget();
+	UFUNCTION(CallInEditor, Category = Actions)
+	virtual TArray<AActor*> ScanForTargets();
+	UFUNCTION(CallInEditor, Category = Actions)
+	void EngageLockOn(AActor* Target);
+	UFUNCTION(CallInEditor, Category = Actions)
+	void DisengageLockOn();
 
 
 
@@ -146,6 +157,8 @@ protected:
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
 	virtual void BeginPlay()override;
+
+	virtual void Tick(float DeltaSeconds) override;
 
 	void InitializeAnimationInstance();
 

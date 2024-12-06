@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Eternal_Grace_ArenaModuleRules")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Development")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+862a997fba8d2ce48272e51f6f57236bde9bf9c1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+42ebd3b88f7b9393f5feca686d998ccc73e95188")]
 [assembly: System.Reflection.AssemblyProductAttribute("Eternal_Grace_ArenaModuleRules")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Eternal_Grace_ArenaModuleRules")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

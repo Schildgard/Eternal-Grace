@@ -9,12 +9,16 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class AActor;
 #ifdef ETERNAL_GRACE_ARENA_Eternal_Grace_ArenaCharacter_generated_h
 #error "Eternal_Grace_ArenaCharacter.generated.h already included, missing '#pragma once' in Eternal_Grace_ArenaCharacter.h"
 #endif
 #define ETERNAL_GRACE_ARENA_Eternal_Grace_ArenaCharacter_generated_h
 
 #define FID_Repository_Eternal_Grace_Arena_Eternal_Grace_Arena_Source_Eternal_Grace_Arena_Eternal_Grace_ArenaCharacter_h_21_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execDisengageLockOn); \
+	DECLARE_FUNCTION(execEngageLockOn); \
+	DECLARE_FUNCTION(execScanForTargets); \
 	DECLARE_FUNCTION(execFindNearestTarget); \
 	DECLARE_FUNCTION(execSwitchLockOnTarget); \
 	DECLARE_FUNCTION(execToggleLockOn); \

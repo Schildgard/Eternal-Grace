@@ -12,6 +12,7 @@
 #include "InputActionValue.h"
 #include "CharacterAnimInstance.h"
 #include "Kismet/KismetSystemLibrary.h"
+#include "Kismet/KismetMathLibrary.h"
 #include "I_Targetable.h"
 
 DEFINE_LOG_CATEGORY(LogTemplateCharacter);
@@ -55,6 +56,8 @@ AEternal_Grace_ArenaCharacter::AEternal_Grace_ArenaCharacter()
 
 	// Note: The skeletal mesh and anim blueprint references on the Mesh component (inherited from Character) 
 	// are set in the derived blueprint asset named ThirdPersonCharacter (to avoid direct content references in C++)
+
+	LockedOnTarget = nullptr;
 }
 
 //////////////////////////////////////////////////////////////////////////
@@ -124,6 +127,17 @@ void AEternal_Grace_ArenaCharacter::BeginPlay()
 	world = GetWorld();
 	InitializeAnimationInstance();
 
+}
+
+void AEternal_Grace_ArenaCharacter::Tick(float DeltaSeconds)
+{
+	Super::Tick(DeltaSeconds);
+	
+	if(CharacterAnimationInstance && CharacterAnimationInstance->isLockedOn && LockedOnTarget != nullptr)
+	{
+		FRotator Look = UKismetMathLibrary::FindLookAtRotation(GetActorLocation(), LockedOnTarget->GetActorLocation());
+		SetActorRotation(Look);
+	}
 }
 
 void AEternal_Grace_ArenaCharacter::InitializeAnimationInstance()
@@ -280,19 +294,59 @@ void AEternal_Grace_ArenaCharacter::CancelGuard()
 
 void AEternal_Grace_ArenaCharacter::ToggleLockOn()
 {
-	FindNearestTarget();
-	UE_LOG(LogTemp, Warning, TEXT("Toggle"))
+	if (CharacterAnimationInstance->isLockedOn == false)
+	{
+		AActor* ClosestTarget = FindNearestTarget();
+		EngageLockOn(ClosestTarget);
+		UE_LOG(LogTemp, Warning, TEXT("Lock On"))
+	}
+	else
+	{
+		DisengageLockOn();
+		UE_LOG(LogTemp, Warning, TEXT("Lock On Off"))
+	}
 }
 
 void AEternal_Grace_ArenaCharacter::SwitchLockOnTarget()
 {
 }
 
-void AEternal_Grace_ArenaCharacter::FindNearestTarget()
+AActor* AEternal_Grace_ArenaCharacter::FindNearestTarget()
+{
+	//GET SCANNED ACTOR ARRAY FROM SCAN FUNCTION
+	TArray<AActor*> ScannedActors = ScanForTargets();
+	if (ScannedActors.Num() <= 0)
+	{
+		UE_LOG(LogTemp, Warning, TEXT("Find Nearest Target: No Actors Scanned"))
+		return nullptr;
+	}
+
+
+	AActor* ClosestTarget = nullptr;
+	float comparison = 0.0f;
+	float distance = 10000.0f;
+
+	//ITERATE THROUGH SCANNED ACTORS TO FIND SMALLEST DISTANCE
+	for (AActor* Actor : ScannedActors)
+	{
+		comparison = GetDistanceTo(Actor);
+		if (comparison <= distance)
+		{
+			distance = comparison; //SAVE SMALLEST DISTANCE
+			ClosestTarget = Actor; //SAVE ACTOR IF DISTANCE IS SMALLEST
+		}
+	}
+
+	UE_LOG(LogTemp, Warning, TEXT("Nearest Actor: %s "), *ClosestTarget->GetName());
+	return ClosestTarget;
+}
+
+TArray<AActor*> AEternal_Grace_ArenaCharacter::ScanForTargets()
 {
 	FVector PlayerPosition = GetActorLocation();
 	TArray<FHitResult> ScanHits; //SET UP A LIST FOR HITTED OBJECTS
 	TArray<AActor*> ActorsToIgnore; //SET UP A LIST SO ACTORS WONT GET SCANNED MULTIPLE TIMES
+	TArray<AActor*> ScannedActors;
 	UKismetSystemLibrary::SphereTraceMultiForObjects(world, PlayerPosition, PlayerPosition, 750.0f, ObjectTypes, true, ActorsToIgnore, EDrawDebugTrace::ForDuration, ScanHits, true, FLinearColor::Red, FLinearColor::Green, 5.0f);
 
 	if (ScanHits.Num() > 0)
@@ -304,12 +358,33 @@ void AEternal_Grace_ArenaCharacter::FindNearestTarget()
 			//ADD HITTED ACTOR TO IGNORE AND VIABLE TARGET LIST
 			if (HitActor && !ActorsToIgnore.Contains(HitActor) && HitActor->Implements<UI_Targetable>())
 			{
-				UE_LOG(LogTemp, Warning, TEXT("Hit Actor: %s"), *HitActor->GetName());
-				ViableTargets.Add(HitActor);
+				//UE_LOG(LogTemp, Warning, TEXT("Hit Actor: %s"), *HitActor->GetName());
+				//ViableTargets.Add(HitActor);
+				ScannedActors.Add(HitActor);
 				ActorsToIgnore.Add(HitActor);
 			}
 		}
 	}
+	return ScannedActors;
+}
 
+void AEternal_Grace_ArenaCharacter::EngageLockOn(AActor* Target)
+{
+	CharacterAnimationInstance->isLockedOn = true;
+	LockedOnTarget = Target;
+
+	//FIX CRASH!!!!
+	if (LockedOnTarget != nullptr)
+	{
+		FRotator Look = UKismetMathLibrary::FindLookAtRotation(GetActorLocation(), LockedOnTarget->GetActorLocation());
+		SetActorRotation(Look);
+	}
+	UE_LOG(LogTemp, Warning, TEXT("No LockedOnTarget"))
+}
+
+void AEternal_Grace_ArenaCharacter::DisengageLockOn()
+{
+	CharacterAnimationInstance->isLockedOn = false;
+	LockedOnTarget = nullptr;
 }
 
