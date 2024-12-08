@@ -34,6 +34,12 @@
     <Filter Include="Source\Eternal_Grace_Arena">
       <UniqueIdentifier>{31A7CE0D-C649-35D4-98CB-3D8F07305A35}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\Eternal_Grace_Arena\AnimNotify_PlayRandomSound.cpp">
+      <Filter>Source\Eternal_Grace_Arena</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Eternal_Grace_Arena\AnimNotify_PlayRandomSound.h">
+      <Filter>Source\Eternal_Grace_Arena</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\Eternal_Grace_Arena\AnimNotify_PlaySound_RandomPitch.cpp">
       <Filter>Source\Eternal_Grace_Arena</Filter>
     </ClCompile>
@@ -79,6 +85,5 @@
     <ClCompile Include="..\..\Source\Eternal_Grace_Arena\PlayerCharacter.h">
       <Filter>Source\Eternal_Grace_Arena</Filter>
     </ClCompile>
-    <None Include="cpp.hint" />
   </ItemGroup>
 </Project>
