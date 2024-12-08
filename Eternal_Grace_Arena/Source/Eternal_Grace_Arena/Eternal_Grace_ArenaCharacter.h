@@ -44,7 +44,7 @@ class AEternal_Grace_ArenaCharacter : public ACharacter
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
 	UInputAction* LookAction;
 
-	//CUSTOM ACTIONS
+	//CUSTOM ACTION STATES
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess))
 	UInputAction* SprintAction;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess))
@@ -76,6 +76,18 @@ class AEternal_Grace_ArenaCharacter : public ACharacter
 	UAnimMontage* HeavyAttack02;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animations, meta = (AllowPrivateAccess))
 	UAnimMontage* ChargeAttack;
+
+	//GUARD
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animations, meta = (AllowPrivateAccess))
+	UAnimMontage* GuardBreakEvent;
+
+	//GUARD
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animations, meta = (AllowPrivateAccess))
+	UAnimMontage* Block;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animations, meta = (AllowPrivateAccess))
+	UAnimMontage* BlockHeavyAttack;
+
 
 	//CUSTOM VALUE PROPERTIES
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Combat, meta = (AllowPrivateAccess))
@@ -129,6 +141,7 @@ protected:
 	virtual void Guard();
 	UFUNCTION(CallInEditor, Category = Actions)
 	virtual void CancelGuard();
+
 	//LOCK ON FUNCTIONS
 	UFUNCTION(CallInEditor, Category = Actions)
 	virtual void ToggleLockOn();
@@ -144,6 +157,10 @@ protected:
 	void DisengageLockOn();
 	UFUNCTION(CallInEditor, Category = Actions)
 	void RotateTowardsTarget(AActor* Target);
+
+	//GUARD
+	UFUNCTION(CallInEditor, Category = Actions)
+	virtual void GuardBreak();
 
 
 

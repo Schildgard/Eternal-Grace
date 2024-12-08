@@ -394,3 +394,8 @@ void AEternal_Grace_ArenaCharacter::RotateTowardsTarget(AActor* Target)
 	SetActorRotation(DesiredRotation);
 }
 
+void AEternal_Grace_ArenaCharacter::GuardBreak()
+{
+	PlayAnimMontage(GuardBreakEvent);
+}
+
