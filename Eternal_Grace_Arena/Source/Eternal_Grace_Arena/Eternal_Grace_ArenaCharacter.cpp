@@ -132,8 +132,8 @@ void AEternal_Grace_ArenaCharacter::BeginPlay()
 void AEternal_Grace_ArenaCharacter::Tick(float DeltaSeconds)
 {
 	Super::Tick(DeltaSeconds);
-	
-	if(CharacterAnimationInstance && CharacterAnimationInstance->isLockedOn && LockedOnTarget != nullptr)
+
+	if (CharacterAnimationInstance && CharacterAnimationInstance->isLockedOn && LockedOnTarget != nullptr)
 	{
 		RotateTowardsTarget(LockedOnTarget);
 	}
@@ -281,6 +281,16 @@ void AEternal_Grace_ArenaCharacter::IncreaseChargePower()
 	}
 }
 
+void AEternal_Grace_ArenaCharacter::SprintAttack()
+{
+	PlayAnimMontage(RunningAttack);
+}
+
+void AEternal_Grace_ArenaCharacter::GuardCounter()
+{
+	PlayAnimMontage(GuardCounterAttack);
+}
+
 void AEternal_Grace_ArenaCharacter::Guard()
 {
 	CharacterAnimationInstance->isGuarding = true;
@@ -316,8 +326,8 @@ AActor* AEternal_Grace_ArenaCharacter::FindNearestTarget()
 	TArray<AActor*> ScannedActors = ScanForTargets();
 	if (ScannedActors.Num() <= 0)
 	{
-		UE_LOG(LogTemp, Warning, TEXT("Find Nearest Target: No Actors Scanned"))
-		return nullptr;
+			UE_LOG(LogTemp, Warning, TEXT("Find Nearest Target: No Actors Scanned"))
+			return nullptr;
 	}
 
 
@@ -397,5 +407,20 @@ void AEternal_Grace_ArenaCharacter::RotateTowardsTarget(AActor* Target)
 void AEternal_Grace_ArenaCharacter::GuardBreak()
 {
 	PlayAnimMontage(GuardBreakEvent);
+}
+
+void AEternal_Grace_ArenaCharacter::Stagger(int StaggerType)
+{
+	PlayAnimMontage(StaggerAnims[StaggerType]);
+}
+
+void AEternal_Grace_ArenaCharacter::Dodge()
+{
+	PlayAnimMontage(DodgeAction);
+}
+
+void AEternal_Grace_ArenaCharacter::Die()
+{
+	PlayAnimMontage(DeathAnimation);
 }
 

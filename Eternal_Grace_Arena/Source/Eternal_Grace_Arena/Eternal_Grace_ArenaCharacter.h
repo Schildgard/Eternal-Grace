@@ -77,16 +77,37 @@ class AEternal_Grace_ArenaCharacter : public ACharacter
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animations, meta = (AllowPrivateAccess))
 	UAnimMontage* ChargeAttack;
 
+	//SPRINT ATTACKS
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animations, meta = (AllowPrivateAccess))
+	UAnimMontage* RunningAttack;
+
+	//GUARD COUNTER ATTACK
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animations, meta = (AllowPrivateAccess))
+	UAnimMontage* GuardCounterAttack;
+
 	//GUARD
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animations, meta = (AllowPrivateAccess))
 	UAnimMontage* GuardBreakEvent;
-
-	//GUARD
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animations, meta = (AllowPrivateAccess))
 	UAnimMontage* Block;
-
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animations, meta = (AllowPrivateAccess))
 	UAnimMontage* BlockHeavyAttack;
+
+	//STAGGER
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animations, meta = (AllowPrivateAccess))
+	TArray<UAnimMontage*> StaggerAnims;
+
+	//Dodge
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animations, meta = (AllowPrivateAccess))
+	UAnimMontage* DodgeAction;
+
+	//Dodge
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animations, meta = (AllowPrivateAccess))
+	UAnimMontage* Interact;
+
+	//Death
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animations, meta = (AllowPrivateAccess))
+	UAnimMontage* DeathAnimation;
 
 
 	//CUSTOM VALUE PROPERTIES
@@ -128,7 +149,8 @@ protected:
 	virtual void Sprint();
 	UFUNCTION(CallInEditor, Category = Actions)
 	virtual void CancelSprint();
-	//COMBAT FUNCTIONS
+
+	//ATTACK FUNCTIONS
 	UFUNCTION(CallInEditor, Category = Actions)
 	virtual void LightAttack();
 	UFUNCTION(CallInEditor, Category = Actions)
@@ -138,9 +160,9 @@ protected:
 	UFUNCTION(CallInEditor, Category = Actions)
 	virtual void IncreaseChargePower();
 	UFUNCTION(CallInEditor, Category = Actions)
-	virtual void Guard();
+	virtual void SprintAttack();
 	UFUNCTION(CallInEditor, Category = Actions)
-	virtual void CancelGuard();
+	virtual void GuardCounter();
 
 	//LOCK ON FUNCTIONS
 	UFUNCTION(CallInEditor, Category = Actions)
@@ -160,7 +182,25 @@ protected:
 
 	//GUARD
 	UFUNCTION(CallInEditor, Category = Actions)
+	virtual void Guard();
+	UFUNCTION(CallInEditor, Category = Actions)
+	virtual void CancelGuard();
+	UFUNCTION(CallInEditor, Category = Actions)
 	virtual void GuardBreak();
+
+	//STAGGER
+	UFUNCTION(CallInEditor, Category = Actions)
+	virtual void Stagger(int StaggerType);
+
+	//DODGE
+	UFUNCTION(CallInEditor, Category = Actions)
+	virtual void Dodge();
+
+
+	//DEATH
+	UFUNCTION(CallInEditor, Category = Actions)
+	virtual void Die();
+
 
 
 

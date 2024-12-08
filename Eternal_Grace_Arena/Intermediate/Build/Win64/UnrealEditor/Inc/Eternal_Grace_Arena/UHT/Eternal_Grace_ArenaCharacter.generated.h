@@ -16,7 +16,12 @@ class AActor;
 #define ETERNAL_GRACE_ARENA_Eternal_Grace_ArenaCharacter_generated_h
 
 #define FID_Repository_Eternal_Grace_Arena_Eternal_Grace_Arena_Source_Eternal_Grace_Arena_Eternal_Grace_ArenaCharacter_h_21_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execDie); \
+	DECLARE_FUNCTION(execDodge); \
+	DECLARE_FUNCTION(execStagger); \
 	DECLARE_FUNCTION(execGuardBreak); \
+	DECLARE_FUNCTION(execCancelGuard); \
+	DECLARE_FUNCTION(execGuard); \
 	DECLARE_FUNCTION(execRotateTowardsTarget); \
 	DECLARE_FUNCTION(execDisengageLockOn); \
 	DECLARE_FUNCTION(execEngageLockOn); \
@@ -24,8 +29,8 @@ class AActor;
 	DECLARE_FUNCTION(execFindNearestTarget); \
 	DECLARE_FUNCTION(execSwitchLockOnTarget); \
 	DECLARE_FUNCTION(execToggleLockOn); \
-	DECLARE_FUNCTION(execCancelGuard); \
-	DECLARE_FUNCTION(execGuard); \
+	DECLARE_FUNCTION(execGuardCounter); \
+	DECLARE_FUNCTION(execSprintAttack); \
 	DECLARE_FUNCTION(execIncreaseChargePower); \
 	DECLARE_FUNCTION(execChargeHeavyAttack); \
 	DECLARE_FUNCTION(execHeavyAttack); \
