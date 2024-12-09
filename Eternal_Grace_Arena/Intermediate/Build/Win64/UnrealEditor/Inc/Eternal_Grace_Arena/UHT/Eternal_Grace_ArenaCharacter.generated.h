@@ -20,6 +20,8 @@ class AActor;
 	DECLARE_FUNCTION(execDodge); \
 	DECLARE_FUNCTION(execStagger); \
 	DECLARE_FUNCTION(execGuardBreak); \
+	DECLARE_FUNCTION(execBlockHeavy); \
+	DECLARE_FUNCTION(execBlockAttack); \
 	DECLARE_FUNCTION(execCancelGuard); \
 	DECLARE_FUNCTION(execGuard); \
 	DECLARE_FUNCTION(execRotateTowardsTarget); \

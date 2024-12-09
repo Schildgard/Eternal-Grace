@@ -80,7 +80,7 @@ UPhysicalMaterial* UAnimNotify_PlayRandomSound::CheckGroundMaterial(USkeletalMes
 {
 	// CONTINUE TO WORK HERE
 	FVector ActorLocation = MeshComp->GetComponentLocation();
-	FVector ScanDirection = FVector(ActorLocation.X, ActorLocation.Y, ActorLocation.Z - 200.0f);
+	FVector ScanDirection = FVector(ActorLocation.X, ActorLocation.Y, ActorLocation.Z - ScanDistance);
 	FHitResult OutHit;
 	UWorld* world = MeshComp->GetWorld();
 
@@ -89,6 +89,7 @@ UPhysicalMaterial* UAnimNotify_PlayRandomSound::CheckGroundMaterial(USkeletalMes
 	if (Hit)
 	{
 		UPhysicalMaterial* HitMaterial = OutHit.PhysMaterial.Get();
+		UE_LOG(LogTemp, Warning, TEXT("Found PhysMaterial"))
 		return HitMaterial;
 	}
 	else

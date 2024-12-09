@@ -16,6 +16,8 @@ class ETERNAL_GRACE_ARENA_API UAnimNotify_PlayRandomSound : public UAnimNotify_P
 public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "AnimNotify", meta = (ExposeOnSpawn = true))
 	TArray<TObjectPtr<USoundBase>> Sounds;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "AnimNotify", meta = (ExposeOnSpawn = true))
+	float ScanDistance = 200.0f;
 public:
 	virtual void Notify(USkeletalMeshComponent* MeshComp, UAnimSequenceBase* Animation, const FAnimNotifyEventReference& EventReference) override;
 public:

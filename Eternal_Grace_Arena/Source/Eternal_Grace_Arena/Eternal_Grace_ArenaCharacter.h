@@ -186,6 +186,10 @@ protected:
 	UFUNCTION(CallInEditor, Category = Actions)
 	virtual void CancelGuard();
 	UFUNCTION(CallInEditor, Category = Actions)
+	virtual void BlockAttack();
+	UFUNCTION(CallInEditor, Category = Actions)
+	virtual void BlockHeavy();
+	UFUNCTION(CallInEditor, Category = Actions)
 	virtual void GuardBreak();
 
 	//STAGGER
@@ -195,6 +199,7 @@ protected:
 	//DODGE
 	UFUNCTION(CallInEditor, Category = Actions)
 	virtual void Dodge();
+
 
 
 	//DEATH

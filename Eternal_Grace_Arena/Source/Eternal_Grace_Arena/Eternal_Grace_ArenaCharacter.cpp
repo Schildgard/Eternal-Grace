@@ -189,6 +189,7 @@ void AEternal_Grace_ArenaCharacter::Look(const FInputActionValue& Value)
 	}
 }
 
+
 void AEternal_Grace_ArenaCharacter::Sprint()
 {
 	CharacterAnimationInstance->isRunning = true;
@@ -299,6 +300,16 @@ void AEternal_Grace_ArenaCharacter::Guard()
 void AEternal_Grace_ArenaCharacter::CancelGuard()
 {
 	CharacterAnimationInstance->isGuarding = false;
+}
+
+void AEternal_Grace_ArenaCharacter::BlockAttack()
+{
+	PlayAnimMontage(Block);
+}
+
+void AEternal_Grace_ArenaCharacter::BlockHeavy()
+{
+	PlayAnimMontage(BlockHeavyAttack);
 }
 
 void AEternal_Grace_ArenaCharacter::ToggleLockOn()
