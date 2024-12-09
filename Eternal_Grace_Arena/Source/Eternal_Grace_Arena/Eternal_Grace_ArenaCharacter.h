@@ -5,6 +5,7 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
 #include "Logging/LogMacros.h"
+#include "AbilitySystemInterface.h"
 #include "Eternal_Grace_ArenaCharacter.generated.h"
 
 class USpringArmComponent;
@@ -16,7 +17,7 @@ struct FInputActionValue;
 DECLARE_LOG_CATEGORY_EXTERN(LogTemplateCharacter, Log, All);
 
 UCLASS(config=Game)
-class AEternal_Grace_ArenaCharacter : public ACharacter
+class AEternal_Grace_ArenaCharacter : public ACharacter, public IAbilitySystemInterface
 {
 	GENERATED_BODY()
 
@@ -43,6 +44,10 @@ class AEternal_Grace_ArenaCharacter : public ACharacter
 	/** Look Input Action */
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
 	UInputAction* LookAction;
+
+	//GAS SYSTEM
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = GAS, meta = (AllowPrivateAccess = "true"))
+	class UAbilitySystemComponent* AbilitySystemComponent;
 
 	//CUSTOM ACTION STATES
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess))
@@ -119,6 +124,10 @@ class AEternal_Grace_ArenaCharacter : public ACharacter
 	//GENERAL
 	UPROPERTY()
 	UWorld* world;
+
+	//GAS
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = GAS, meta = (AllowPrivateAccess))
+	const class UBasicAttributesSet* BasicAttributeSet;
 
 	//LOCK ON SYSTEM
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = LockOn, meta = (AllowPrivateAccess))
@@ -206,7 +215,11 @@ protected:
 	UFUNCTION(CallInEditor, Category = Actions)
 	virtual void Die();
 
-
+	//ABILITY SYSTEM COMPONENT INTERFACE FUNCTIONS
+	virtual class UAbilitySystemComponent* GetAbilitySystemComponent() const override
+	{
+		return AbilitySystemComponent;
+	}
 
 
 //private:
