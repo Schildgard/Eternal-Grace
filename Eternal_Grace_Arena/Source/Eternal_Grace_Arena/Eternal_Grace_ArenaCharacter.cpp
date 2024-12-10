@@ -14,7 +14,6 @@
 #include "Kismet/KismetSystemLibrary.h"
 #include "Kismet/KismetMathLibrary.h"
 #include "I_Targetable.h"
-#include "AbilitySystemComponent.h"
 #include "BasicAttributesSet.h"
 
 DEFINE_LOG_CATEGORY(LogTemplateCharacter);
@@ -62,6 +61,8 @@ AEternal_Grace_ArenaCharacter::AEternal_Grace_ArenaCharacter()
 	LockedOnTarget = nullptr;
 
 	AbilitySystemComponent = CreateDefaultSubobject<UAbilitySystemComponent>(TEXT("AbilitySystemComponent"));
+	BasicAttributeSet = CreateDefaultSubobject<UBasicAttributesSet>(TEXT("BasicAttributeSet"));
+
 }
 
 //////////////////////////////////////////////////////////////////////////
@@ -130,10 +131,18 @@ void AEternal_Grace_ArenaCharacter::BeginPlay()
 	Super::BeginPlay();
 	world = GetWorld();
 	InitializeAnimationInstance();
-
 	if(IsValid(AbilitySystemComponent))
 	{
 		BasicAttributeSet = AbilitySystemComponent->GetSet<UBasicAttributesSet>();
+		if(BasicAttributeSet != nullptr)
+		{
+		UE_LOG(LogTemp, Warning, TEXT("SUCCESS"))
+		}
+		else UE_LOG(LogTemp, Warning, TEXT("is null"))
+	}
+	else
+	{
+		UE_LOG(LogTemp, Warning, TEXT("FAIL"))
 	}
 
 }

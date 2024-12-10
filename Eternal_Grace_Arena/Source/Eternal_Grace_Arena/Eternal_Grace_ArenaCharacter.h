@@ -5,6 +5,7 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
 #include "Logging/LogMacros.h"
+#include "AbilitySystemComponent.h"
 #include "AbilitySystemInterface.h"
 #include "Eternal_Grace_ArenaCharacter.generated.h"
 
@@ -124,7 +125,7 @@ class AEternal_Grace_ArenaCharacter : public ACharacter, public IAbilitySystemIn
 	//GENERAL
 	UPROPERTY()
 	UWorld* world;
-
+	public:
 	//GAS
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = GAS, meta = (AllowPrivateAccess))
 	const class UBasicAttributesSet* BasicAttributeSet;
@@ -215,11 +216,6 @@ protected:
 	UFUNCTION(CallInEditor, Category = Actions)
 	virtual void Die();
 
-	//ABILITY SYSTEM COMPONENT INTERFACE FUNCTIONS
-	virtual class UAbilitySystemComponent* GetAbilitySystemComponent() const override
-	{
-		return AbilitySystemComponent;
-	}
 
 
 //private:
@@ -234,6 +230,12 @@ protected:
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
 	virtual void BeginPlay()override;
+
+	//ABILITY SYSTEM COMPONENT INTERFACE FUNCTIONS
+	virtual class UAbilitySystemComponent* GetAbilitySystemComponent() const override
+	{
+		return AbilitySystemComponent;
+	}
 
 	virtual void Tick(float DeltaSeconds) override;
 
