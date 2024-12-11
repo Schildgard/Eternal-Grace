@@ -15,7 +15,7 @@ class AActor;
 #endif
 #define ETERNAL_GRACE_ARENA_Eternal_Grace_ArenaCharacter_generated_h
 
-#define FID_Eternal_Grace_Arena_Source_Eternal_Grace_Arena_Eternal_Grace_ArenaCharacter_h_23_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_Repository_Eternal_Grace_Arena_Eternal_Grace_Arena_Source_Eternal_Grace_Arena_Eternal_Grace_ArenaCharacter_h_24_RPC_WRAPPERS_NO_PURE_DECLS \
 	DECLARE_FUNCTION(execDie); \
 	DECLARE_FUNCTION(execDodge); \
 	DECLARE_FUNCTION(execStagger); \
@@ -41,7 +41,7 @@ class AActor;
 	DECLARE_FUNCTION(execSprint);
 
 
-#define FID_Eternal_Grace_Arena_Source_Eternal_Grace_Arena_Eternal_Grace_ArenaCharacter_h_23_INCLASS_NO_PURE_DECLS \
+#define FID_Repository_Eternal_Grace_Arena_Eternal_Grace_Arena_Source_Eternal_Grace_Arena_Eternal_Grace_ArenaCharacter_h_24_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAEternal_Grace_ArenaCharacter(); \
 	friend struct Z_Construct_UClass_AEternal_Grace_ArenaCharacter_Statics; \
@@ -51,7 +51,7 @@ public: \
 	virtual UObject* _getUObject() const override { return const_cast<AEternal_Grace_ArenaCharacter*>(this); }
 
 
-#define FID_Eternal_Grace_Arena_Source_Eternal_Grace_Arena_Eternal_Grace_ArenaCharacter_h_23_ENHANCED_CONSTRUCTORS \
+#define FID_Repository_Eternal_Grace_Arena_Eternal_Grace_Arena_Source_Eternal_Grace_Arena_Eternal_Grace_ArenaCharacter_h_24_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	AEternal_Grace_ArenaCharacter(AEternal_Grace_ArenaCharacter&&); \
@@ -63,13 +63,13 @@ public: \
 	NO_API virtual ~AEternal_Grace_ArenaCharacter();
 
 
-#define FID_Eternal_Grace_Arena_Source_Eternal_Grace_Arena_Eternal_Grace_ArenaCharacter_h_20_PROLOG
-#define FID_Eternal_Grace_Arena_Source_Eternal_Grace_Arena_Eternal_Grace_ArenaCharacter_h_23_GENERATED_BODY \
+#define FID_Repository_Eternal_Grace_Arena_Eternal_Grace_Arena_Source_Eternal_Grace_Arena_Eternal_Grace_ArenaCharacter_h_21_PROLOG
+#define FID_Repository_Eternal_Grace_Arena_Eternal_Grace_Arena_Source_Eternal_Grace_Arena_Eternal_Grace_ArenaCharacter_h_24_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Eternal_Grace_Arena_Source_Eternal_Grace_Arena_Eternal_Grace_ArenaCharacter_h_23_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_Eternal_Grace_Arena_Source_Eternal_Grace_Arena_Eternal_Grace_ArenaCharacter_h_23_INCLASS_NO_PURE_DECLS \
-	FID_Eternal_Grace_Arena_Source_Eternal_Grace_Arena_Eternal_Grace_ArenaCharacter_h_23_ENHANCED_CONSTRUCTORS \
+	FID_Repository_Eternal_Grace_Arena_Eternal_Grace_Arena_Source_Eternal_Grace_Arena_Eternal_Grace_ArenaCharacter_h_24_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_Repository_Eternal_Grace_Arena_Eternal_Grace_Arena_Source_Eternal_Grace_Arena_Eternal_Grace_ArenaCharacter_h_24_INCLASS_NO_PURE_DECLS \
+	FID_Repository_Eternal_Grace_Arena_Eternal_Grace_Arena_Source_Eternal_Grace_Arena_Eternal_Grace_ArenaCharacter_h_24_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -77,7 +77,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 template<> ETERNAL_GRACE_ARENA_API UClass* StaticClass<class AEternal_Grace_ArenaCharacter>();
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_Eternal_Grace_Arena_Source_Eternal_Grace_Arena_Eternal_Grace_ArenaCharacter_h
+#define CURRENT_FILE_ID FID_Repository_Eternal_Grace_Arena_Eternal_Grace_Arena_Source_Eternal_Grace_Arena_Eternal_Grace_ArenaCharacter_h
 
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

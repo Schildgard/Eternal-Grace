@@ -10,10 +10,11 @@
  * 
  */
 UCLASS()
-class ETERNAL_GRACE_ARENA_API AWeapon : public AStaticMeshActor
+class ETERNAL_GRACE_ARENA_API AWeapon : public AActor
 {
+	AWeapon();
 	GENERATED_BODY()
-	
+	public:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Property, meta = (AllowPrivateAccess))
-	float DamageMultiplier;
+	UStaticMeshComponent* DamageMultiplier;
 };

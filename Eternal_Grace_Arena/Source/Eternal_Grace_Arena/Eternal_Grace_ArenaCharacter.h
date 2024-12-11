@@ -7,6 +7,7 @@
 #include "Logging/LogMacros.h"
 #include "AbilitySystemComponent.h"
 #include "AbilitySystemInterface.h"
+#include "WeaponComponent.h"
 #include "Eternal_Grace_ArenaCharacter.generated.h"
 
 class USpringArmComponent;
@@ -132,7 +133,7 @@ class AEternal_Grace_ArenaCharacter : public ACharacter, public IAbilitySystemIn
 	public:
 	//WEAPON
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = GAS, meta = (AllowPrivateAccess))
-	UStaticMeshComponent* WeaponComponent;
+	UWeaponComponent* WeaponComponent;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = GAS, meta = (AllowPrivateAccess))
 	FName WeaponSocket;
 

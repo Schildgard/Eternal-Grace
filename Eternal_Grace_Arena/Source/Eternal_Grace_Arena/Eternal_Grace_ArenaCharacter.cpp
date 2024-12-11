@@ -59,7 +59,7 @@ AEternal_Grace_ArenaCharacter::AEternal_Grace_ArenaCharacter()
 	// are set in the derived blueprint asset named ThirdPersonCharacter (to avoid direct content references in C++)
 
 	LockedOnTarget = nullptr;
-	WeaponComponent = CreateDefaultSubobject<UStaticMeshComponent>("WeaponComponent");
+	WeaponComponent = CreateDefaultSubobject<UWeaponComponent>("WeaponComponentTEST");
 	WeaponComponent->SetupAttachment(GetMesh());
 	
 
@@ -145,10 +145,10 @@ void AEternal_Grace_ArenaCharacter::BeginPlay()
 		}
 	}
 
-	if(!WeaponComponent->AttachToComponent(GetMesh(), FAttachmentTransformRules::SnapToTargetIncludingScale, WeaponSocket))
-	{
-		UE_LOG(LogTemp, Warning, TEXT("Weapon could not get attached to named Socket"))
-	}
+//	if(!WeaponComponent->AttachToComponent(GetMesh(), FAttachmentTransformRules::SnapToTargetIncludingScale, WeaponSocket))
+//	{
+//		UE_LOG(LogTemp, Warning, TEXT("Weapon could not get attached to named Socket"))
+//	}
 
 }
 
