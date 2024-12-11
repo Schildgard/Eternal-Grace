@@ -3,15 +3,17 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "Components/StaticMeshComponent.h"
+#include "Engine/StaticMeshActor.h"
 #include "Weapon.generated.h"
 
 /**
  * 
  */
 UCLASS()
-class ETERNAL_GRACE_ARENA_API UWeapon : public UStaticMeshComponent
+class ETERNAL_GRACE_ARENA_API AWeapon : public AStaticMeshActor
 {
 	GENERATED_BODY()
 	
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Property, meta = (AllowPrivateAccess))
+	float DamageMultiplier;
 };
