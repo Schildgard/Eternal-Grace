@@ -14,6 +14,13 @@ class ETERNAL_GRACE_ARENA_API APlayerCharacter : public AEternal_Grace_ArenaChar
 {
 	GENERATED_BODY()
 
+//public:
+//	UFUNCTION()
+//	UStaticMeshComponent* GetWeaponMesh()
+//	{
+//		return Weapon;
+//	}
+
 
 	
 };
