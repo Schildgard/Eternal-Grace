@@ -145,10 +145,10 @@ void AEternal_Grace_ArenaCharacter::BeginPlay()
 		}
 	}
 
-//	if(!WeaponComponent->AttachToComponent(GetMesh(), FAttachmentTransformRules::SnapToTargetIncludingScale, WeaponSocket))
-//	{
-//		UE_LOG(LogTemp, Warning, TEXT("Weapon could not get attached to named Socket"))
-//	}
+	if(!WeaponComponent->AttachToComponent(GetMesh(), FAttachmentTransformRules::SnapToTargetIncludingScale, WeaponSocket))
+	{
+		UE_LOG(LogTemp, Warning, TEXT("Weapon could not get attached to named Socket"))
+	}
 
 }
 

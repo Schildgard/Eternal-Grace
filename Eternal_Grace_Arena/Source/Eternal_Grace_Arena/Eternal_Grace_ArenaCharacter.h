@@ -222,12 +222,6 @@ protected:
 	//DEATH
 	UFUNCTION(CallInEditor, Category = Actions)
 	virtual void Die();
-
-
-
-//private:
-//	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Animation, meta = (AllowPrivateAccess))
-//	int attackCount;
 			
 
 protected:

@@ -34,4 +34,16 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Combat, meta = (AllowPrivateAccess))
 	FCustomValues Values;
 
+	//Hier nochmal Max Fragen
+	UFUNCTION()
+	void OnOverlapBegin(
+		UPrimitiveComponent* OverlappedComponent,
+		AActor* OtherActor,
+		UPrimitiveComponent* OtherComp,
+		int32 OtherBodyIndex,
+		bool bFromSweep,
+		const FHitResult& SweepResult
+	
+	);
+
 };

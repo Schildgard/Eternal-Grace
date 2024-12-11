@@ -5,7 +5,11 @@
 			"guid": "00000000000000000000000000000000",
 			"description": "Default Uncontrolled Changelist",
 			"files": [
-				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/StarterContent/Architecture/Floor_400x400.uasset"
+				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/StarterContent/Architecture/Floor_400x400.uasset",
+				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/ENums/StaggerTypes.uasset",
+				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Blueprints/CharacterBlueprints/BP_Player.uasset",
+				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Animations/PlayerAnimations/Combat/LightAttack/ARPG_Warrior_Anim_UE_Attack_Combo1_RT.uasset",
+				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Items/Weapons/SK_Sword_Skin2.uasset"
 			]
 		}
 	]
