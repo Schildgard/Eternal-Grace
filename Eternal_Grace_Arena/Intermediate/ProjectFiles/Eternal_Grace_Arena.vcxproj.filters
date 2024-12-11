@@ -100,5 +100,11 @@
     <ClCompile Include="..\..\Source\Eternal_Grace_Arena\PlayerCharacter.h">
       <Filter>Source\Eternal_Grace_Arena</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\Eternal_Grace_Arena\Weapon.cpp">
+      <Filter>Source\Eternal_Grace_Arena</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Eternal_Grace_Arena\Weapon.h">
+      <Filter>Source\Eternal_Grace_Arena</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

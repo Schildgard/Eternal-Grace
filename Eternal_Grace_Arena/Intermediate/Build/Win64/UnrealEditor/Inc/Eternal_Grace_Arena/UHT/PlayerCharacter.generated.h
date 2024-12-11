@@ -14,7 +14,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define ETERNAL_GRACE_ARENA_PlayerCharacter_generated_h
 
-#define FID_Repository_Eternal_Grace_Arena_Eternal_Grace_Arena_Source_Eternal_Grace_Arena_PlayerCharacter_h_15_INCLASS_NO_PURE_DECLS \
+#define FID_Eternal_Grace_Arena_Source_Eternal_Grace_Arena_PlayerCharacter_h_15_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAPlayerCharacter(); \
 	friend struct Z_Construct_UClass_APlayerCharacter_Statics; \
@@ -23,7 +23,7 @@ public: \
 	DECLARE_SERIALIZER(APlayerCharacter)
 
 
-#define FID_Repository_Eternal_Grace_Arena_Eternal_Grace_Arena_Source_Eternal_Grace_Arena_PlayerCharacter_h_15_ENHANCED_CONSTRUCTORS \
+#define FID_Eternal_Grace_Arena_Source_Eternal_Grace_Arena_PlayerCharacter_h_15_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API APlayerCharacter(); \
 private: \
@@ -37,12 +37,12 @@ public: \
 	NO_API virtual ~APlayerCharacter();
 
 
-#define FID_Repository_Eternal_Grace_Arena_Eternal_Grace_Arena_Source_Eternal_Grace_Arena_PlayerCharacter_h_12_PROLOG
-#define FID_Repository_Eternal_Grace_Arena_Eternal_Grace_Arena_Source_Eternal_Grace_Arena_PlayerCharacter_h_15_GENERATED_BODY \
+#define FID_Eternal_Grace_Arena_Source_Eternal_Grace_Arena_PlayerCharacter_h_12_PROLOG
+#define FID_Eternal_Grace_Arena_Source_Eternal_Grace_Arena_PlayerCharacter_h_15_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Repository_Eternal_Grace_Arena_Eternal_Grace_Arena_Source_Eternal_Grace_Arena_PlayerCharacter_h_15_INCLASS_NO_PURE_DECLS \
-	FID_Repository_Eternal_Grace_Arena_Eternal_Grace_Arena_Source_Eternal_Grace_Arena_PlayerCharacter_h_15_ENHANCED_CONSTRUCTORS \
+	FID_Eternal_Grace_Arena_Source_Eternal_Grace_Arena_PlayerCharacter_h_15_INCLASS_NO_PURE_DECLS \
+	FID_Eternal_Grace_Arena_Source_Eternal_Grace_Arena_PlayerCharacter_h_15_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -50,7 +50,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 template<> ETERNAL_GRACE_ARENA_API UClass* StaticClass<class APlayerCharacter>();
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_Repository_Eternal_Grace_Arena_Eternal_Grace_Arena_Source_Eternal_Grace_Arena_PlayerCharacter_h
+#define CURRENT_FILE_ID FID_Eternal_Grace_Arena_Source_Eternal_Grace_Arena_PlayerCharacter_h
 
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

@@ -59,6 +59,9 @@ AEternal_Grace_ArenaCharacter::AEternal_Grace_ArenaCharacter()
 	// are set in the derived blueprint asset named ThirdPersonCharacter (to avoid direct content references in C++)
 
 	LockedOnTarget = nullptr;
+	WeaponComponent = CreateDefaultSubobject<UStaticMeshComponent>("WeaponComponent");
+	WeaponComponent->SetupAttachment(GetMesh());
+	
 
 	AbilitySystemComponent = CreateDefaultSubobject<UAbilitySystemComponent>(TEXT("AbilitySystemComponent"));
 	BasicAttributeSet = CreateDefaultSubobject<UBasicAttributesSet>(TEXT("BasicAttributeSet"));
@@ -134,15 +137,17 @@ void AEternal_Grace_ArenaCharacter::BeginPlay()
 	if(IsValid(AbilitySystemComponent))
 	{
 		BasicAttributeSet = AbilitySystemComponent->GetSet<UBasicAttributesSet>();
-		if(BasicAttributeSet != nullptr)
+		if (BasicAttributeSet == nullptr)
 		{
-		UE_LOG(LogTemp, Warning, TEXT("SUCCESS"))
+
+			UE_LOG(LogTemp, Warning, TEXT("AbilitySystemComponent could not be getted"))
+				return;
 		}
-		else UE_LOG(LogTemp, Warning, TEXT("is null"))
 	}
-	else
+
+	if(!WeaponComponent->AttachToComponent(GetMesh(), FAttachmentTransformRules::SnapToTargetIncludingScale, WeaponSocket))
 	{
-		UE_LOG(LogTemp, Warning, TEXT("FAIL"))
+		UE_LOG(LogTemp, Warning, TEXT("Weapon could not get attached to named Socket"))
 	}
 
 }
