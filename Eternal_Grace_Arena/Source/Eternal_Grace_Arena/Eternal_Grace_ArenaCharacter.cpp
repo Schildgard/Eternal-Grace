@@ -16,6 +16,7 @@
 #include "I_Targetable.h"
 #include "BasicAttributesSet.h"
 #include "CharacterWeapon.h"
+#include "GA_GetDamage.h"
 
 DEFINE_LOG_CATEGORY(LogTemplateCharacter);
 
@@ -146,6 +147,7 @@ void AEternal_Grace_ArenaCharacter::BeginPlay()
 			UE_LOG(LogTemp, Warning, TEXT("AbilitySystemComponent could not be getted"))
 				return;
 		}
+		AbilitySystemComponent->GiveAbility(HitReactionAbility);
 	}
 
 	if(Weapon)
@@ -157,6 +159,7 @@ void AEternal_Grace_ArenaCharacter::BeginPlay()
 	{
 		UE_LOG(LogTemp, Warning, TEXT("Failed to setup collision for Weapon"))
 	}
+
 
 }
 

@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "Components/StaticMeshComponent.h"
+#include "GA_GetDamage.h"
 #include "CharacterWeapon.generated.h"
 
 USTRUCT(BlueprintType)
@@ -30,6 +31,8 @@ public:
 	FCustomValues Values;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Combat, meta = (AllowPrivateAccess))
 	AActor* WeaponOwner;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Abilities")
+	TSubclassOf<UGameplayAbility> HitReactionAbility;
 
 	//Hier nochmal Max Fragen
 	UFUNCTION()
