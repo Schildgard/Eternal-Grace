@@ -7,13 +7,13 @@
 #include "Logging/LogMacros.h"
 #include "AbilitySystemComponent.h"
 #include "AbilitySystemInterface.h"
-#include "WeaponComponent.h"
 #include "Eternal_Grace_ArenaCharacter.generated.h"
 
 class USpringArmComponent;
 class UCameraComponent;
 class UInputMappingContext;
 class UInputAction;
+class UCharacterWeapon;
 struct FInputActionValue;
 
 DECLARE_LOG_CATEGORY_EXTERN(LogTemplateCharacter, Log, All);
@@ -133,7 +133,7 @@ class AEternal_Grace_ArenaCharacter : public ACharacter, public IAbilitySystemIn
 	public:
 	//WEAPON
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Weapon, meta = (AllowPrivateAccess))
-	UWeaponComponent* WeaponComponent;
+	UCharacterWeapon* Weapon;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Weapon, meta = (AllowPrivateAccess))
 	FName WeaponSocket;
 

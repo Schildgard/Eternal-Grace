@@ -15,6 +15,7 @@
 #include "Kismet/KismetMathLibrary.h"
 #include "I_Targetable.h"
 #include "BasicAttributesSet.h"
+#include "CharacterWeapon.h"
 
 DEFINE_LOG_CATEGORY(LogTemplateCharacter);
 
@@ -60,8 +61,9 @@ AEternal_Grace_ArenaCharacter::AEternal_Grace_ArenaCharacter()
 
 	LockedOnTarget = nullptr;
 	WeaponSocket = FName("socket_weaponGrip");
-	WeaponComponent = CreateDefaultSubobject<UWeaponComponent>("WeaponComponentTEST");
-	WeaponComponent->SetupAttachment(GetMesh(), WeaponSocket);
+
+	Weapon = CreateDefaultSubobject<UCharacterWeapon>("Weapon Component");
+	Weapon->SetupAttachment(GetMesh(), WeaponSocket);
 	
 
 	AbilitySystemComponent = CreateDefaultSubobject<UAbilitySystemComponent>(TEXT("AbilitySystemComponent"));
@@ -146,7 +148,15 @@ void AEternal_Grace_ArenaCharacter::BeginPlay()
 		}
 	}
 
-	WeaponComponent->OnComponentBeginOverlap.AddDynamic(WeaponComponent, &UWeaponComponent::OnOverlapBegin);
+	if(Weapon)
+	{
+		Weapon->OnComponentBeginOverlap.AddDynamic(Weapon, &UCharacterWeapon::OnOverlapBegin);
+		UE_LOG(LogTemp, Warning, TEXT("Setup Weapon Collision"))
+	}
+	else
+	{
+		UE_LOG(LogTemp, Warning, TEXT("Failed to setup collision for Weapon"))
+	}
 
 }
 

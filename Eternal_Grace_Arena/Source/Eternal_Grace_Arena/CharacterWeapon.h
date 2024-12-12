@@ -4,12 +4,8 @@
 
 #include "CoreMinimal.h"
 #include "Components/StaticMeshComponent.h"
-#include "Weapon.h"
-#include "WeaponComponent.generated.h"
+#include "CharacterWeapon.generated.h"
 
-/**
- * 
- */
 USTRUCT(BlueprintType)
 struct FCustomValues
 {
@@ -22,11 +18,12 @@ struct FCustomValues
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Combat")
 	float PoiseDamage;
 };
+
 UCLASS()
-class ETERNAL_GRACE_ARENA_API UWeaponComponent : public UStaticMeshComponent
+class ETERNAL_GRACE_ARENA_API UCharacterWeapon : public UStaticMeshComponent
 {
 	GENERATED_BODY()
-	UWeaponComponent();
+	UCharacterWeapon();
 
 public:
 	//UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Combat, meta = (AllowPrivateAccess))
@@ -43,7 +40,7 @@ public:
 		int32 OtherBodyIndex,
 		bool bFromSweep,
 		const FHitResult& SweepResult
-	
-	);
 
+	);
+	
 };
