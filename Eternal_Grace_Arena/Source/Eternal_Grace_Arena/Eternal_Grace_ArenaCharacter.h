@@ -132,9 +132,9 @@ class AEternal_Grace_ArenaCharacter : public ACharacter, public IAbilitySystemIn
 	const class UBasicAttributesSet* BasicAttributeSet;
 	public:
 	//WEAPON
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = GAS, meta = (AllowPrivateAccess))
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Weapon, meta = (AllowPrivateAccess))
 	UWeaponComponent* WeaponComponent;
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = GAS, meta = (AllowPrivateAccess))
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Weapon, meta = (AllowPrivateAccess))
 	FName WeaponSocket;
 
 	//LOCK ON SYSTEM

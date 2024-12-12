@@ -59,8 +59,9 @@ AEternal_Grace_ArenaCharacter::AEternal_Grace_ArenaCharacter()
 	// are set in the derived blueprint asset named ThirdPersonCharacter (to avoid direct content references in C++)
 
 	LockedOnTarget = nullptr;
+	WeaponSocket = FName("socket_weaponGrip");
 	WeaponComponent = CreateDefaultSubobject<UWeaponComponent>("WeaponComponentTEST");
-	WeaponComponent->SetupAttachment(GetMesh());
+	WeaponComponent->SetupAttachment(GetMesh(), WeaponSocket);
 	
 
 	AbilitySystemComponent = CreateDefaultSubobject<UAbilitySystemComponent>(TEXT("AbilitySystemComponent"));
@@ -145,10 +146,7 @@ void AEternal_Grace_ArenaCharacter::BeginPlay()
 		}
 	}
 
-	if(!WeaponComponent->AttachToComponent(GetMesh(), FAttachmentTransformRules::SnapToTargetIncludingScale, WeaponSocket))
-	{
-		UE_LOG(LogTemp, Warning, TEXT("Weapon could not get attached to named Socket"))
-	}
+	WeaponComponent->OnComponentBeginOverlap.AddDynamic(WeaponComponent, &UWeaponComponent::OnOverlapBegin);
 
 }
 

@@ -30,14 +30,14 @@ void UNotifyState_WeaponSwing::NotifyBegin(USkeletalMeshComponent* MeshComp, UAn
 
 void UNotifyState_WeaponSwing::NotifyEnd(USkeletalMeshComponent* MeshComp, UAnimSequenceBase* Animation, const FAnimNotifyEventReference& EventReference)
 {
-	if (PerformingActor)
-	{
-		PerformingActor->WeaponComponent->SetCollisionEnabled(ECollisionEnabled::NoCollision);
-		//	UE_LOG(LogTemp, Warning, TEXT("Collsion Deactivated"))
-	}
-	else
-	{
-		UE_LOG(LogTemp, Warning, TEXT("Owner NOT Found"))
-			return;
-	}
+if (PerformingActor)
+{
+	PerformingActor->WeaponComponent->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+	//	UE_LOG(LogTemp, Warning, TEXT("Collsion Deactivated"))
+}
+else
+{
+	UE_LOG(LogTemp, Warning, TEXT("Owner NOT Found"))
+		return;
+}
 }
