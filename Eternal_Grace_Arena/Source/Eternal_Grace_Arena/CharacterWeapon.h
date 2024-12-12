@@ -26,10 +26,10 @@ class ETERNAL_GRACE_ARENA_API UCharacterWeapon : public UStaticMeshComponent
 	UCharacterWeapon();
 
 public:
-	//UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Combat, meta = (AllowPrivateAccess))
-	//AWeapon* WeaponValues;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Combat, meta = (AllowPrivateAccess))
 	FCustomValues Values;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Combat, meta = (AllowPrivateAccess))
+	AActor* WeaponOwner;
 
 	//Hier nochmal Max Fragen
 	UFUNCTION()
