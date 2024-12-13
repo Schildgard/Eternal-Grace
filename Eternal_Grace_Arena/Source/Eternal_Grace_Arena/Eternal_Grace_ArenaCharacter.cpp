@@ -17,6 +17,7 @@
 #include "BasicAttributesSet.h"
 #include "CharacterWeapon.h"
 #include "GA_GetDamage.h"
+#include "HealthComponent.h"
 
 DEFINE_LOG_CATEGORY(LogTemplateCharacter);
 
@@ -68,6 +69,7 @@ AEternal_Grace_ArenaCharacter::AEternal_Grace_ArenaCharacter()
 	
 
 	AbilitySystemComponent = CreateDefaultSubobject<UAbilitySystemComponent>(TEXT("AbilitySystemComponent"));
+	HealthComponent = CreateDefaultSubobject<UHealthComponent>(TEXT("Health"));
 	BasicAttributeSet = CreateDefaultSubobject<UBasicAttributesSet>(TEXT("BasicAttributeSet"));
 
 }
@@ -454,18 +456,7 @@ void AEternal_Grace_ArenaCharacter::GuardBreak()
 	PlayAnimMontage(GuardBreakEvent);
 }
 
-void AEternal_Grace_ArenaCharacter::Stagger(int StaggerType)
-{
-	PlayAnimMontage(StaggerAnims[StaggerType]);
-}
-
 void AEternal_Grace_ArenaCharacter::Dodge()
 {
 	PlayAnimMontage(DodgeAction);
 }
-
-void AEternal_Grace_ArenaCharacter::Die()
-{
-	PlayAnimMontage(DeathAnimation);
-}
-

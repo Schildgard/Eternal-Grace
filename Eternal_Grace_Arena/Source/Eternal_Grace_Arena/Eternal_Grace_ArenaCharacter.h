@@ -14,7 +14,8 @@ class UCameraComponent;
 class UInputMappingContext;
 class UInputAction;
 class UCharacterWeapon;
-class UGA_GetDamage;
+class UGA_GetDamage; //GAMEPLAY ABILITY SYSTEM RELATED
+class UHealthComponent;
 struct FInputActionValue;
 
 DECLARE_LOG_CATEGORY_EXTERN(LogTemplateCharacter, Log, All);
@@ -100,7 +101,7 @@ public:
 	UAnimMontage* Block;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animations, meta = (AllowPrivateAccess))
 	UAnimMontage* BlockHeavyAttack;
-
+public:
 	//STAGGER
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animations, meta = (AllowPrivateAccess))
 	TArray<UAnimMontage*> StaggerAnims;
@@ -118,8 +119,6 @@ public:
 	UAnimMontage* DeathAnimation;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animations, meta = (AllowPrivateAccess))
 	FGameplayAbilitySpec HitAbility;
-
-	//GAS ABILITYS
 
 	//CUSTOM VALUE PROPERTIES
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Combat, meta = (AllowPrivateAccess))
@@ -147,8 +146,9 @@ public:
 	TArray<TEnumAsByte<EObjectTypeQuery>> ObjectTypes;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = LockOn, meta = (AllowPrivateAccess))
 	AActor* LockedOnTarget;
-
-
+public:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = LockOn, meta = (AllowPrivateAccess))
+	UHealthComponent* HealthComponent;
 
 
 	UPROPERTY()
@@ -214,19 +214,9 @@ protected:
 	UFUNCTION(CallInEditor, Category = Actions)
 	virtual void GuardBreak();
 
-	//STAGGER
-	UFUNCTION(CallInEditor, Category = Actions)
-	virtual void Stagger(int StaggerType);
-
 	//DODGE
 	UFUNCTION(CallInEditor, Category = Actions)
 	virtual void Dodge();
-
-
-
-	//DEATH
-	UFUNCTION(CallInEditor, Category = Actions)
-	virtual void Die();
 
 public:
 	//ABILITY SYSTEM COMPONENT INTERFACE FUNCTIONS

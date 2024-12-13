@@ -94,6 +94,12 @@
     <ClCompile Include="..\..\Source\Eternal_Grace_Arena\GA_GetDamage.h">
       <Filter>Source\Eternal_Grace_Arena</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\Eternal_Grace_Arena\HealthComponent.cpp">
+      <Filter>Source\Eternal_Grace_Arena</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Eternal_Grace_Arena\HealthComponent.h">
+      <Filter>Source\Eternal_Grace_Arena</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\Eternal_Grace_Arena\I_Targetable.cpp">
       <Filter>Source\Eternal_Grace_Arena</Filter>
     </ClCompile>

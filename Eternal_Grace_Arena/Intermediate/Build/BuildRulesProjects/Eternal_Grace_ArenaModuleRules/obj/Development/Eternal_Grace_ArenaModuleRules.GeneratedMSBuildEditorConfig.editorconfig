@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Eternal_Grace_ArenaModuleRules
-build_property.ProjectDir = D:\Programming\Leonard\Eternal-Grace-Arena\Eternal_Grace_Arena\Intermediate\Build\BuildRulesProjects\Eternal_Grace_ArenaModuleRules\
+build_property.ProjectDir = G:\Repository\Eternal-Grace-Arena\Eternal_Grace_Arena\Intermediate\Build\BuildRulesProjects\Eternal_Grace_ArenaModuleRules\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

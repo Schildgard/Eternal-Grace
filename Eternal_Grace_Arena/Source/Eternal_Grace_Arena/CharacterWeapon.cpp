@@ -4,7 +4,7 @@
 #include "CharacterWeapon.h"
 #include "Eternal_Grace_ArenaCharacter.h"
 #include "AbilitySystemComponent.h"
-//#include "GA_GetDamage.h"
+#include "HealthComponent.h"
 
 UCharacterWeapon::UCharacterWeapon()
 {
@@ -26,23 +26,29 @@ void UCharacterWeapon::OnOverlapBegin(UPrimitiveComponent* OverlappedComponent, 
 	if (TargetActor != WeaponOwner)
 	{
 		UE_LOG(LogTemp, Warning, TEXT("YOU HITTED A ACTOR: %s"), *OtherActor->GetName());
-
-		if(HitReactionAbility)
+		//ABILITY SYSTEM RELATED
+	if(HitReactionAbility)
+	{
+		UAbilitySystemComponent* AbilitySystemComponent = TargetActor->GetAbilitySystemComponent();
+		if(AbilitySystemComponent)
 		{
-			UAbilitySystemComponent* AbilitySystemComponent = TargetActor->GetAbilitySystemComponent();
-			if(AbilitySystemComponent)
-			{
-				AbilitySystemComponent->TryActivateAbilityByClass(HitReactionAbility);
-				UE_LOG(LogTemp, Warning, TEXT("LOL FAIL NOT"))
-			}
-			else
-			{
-				UE_LOG(LogTemp, Warning, TEXT("LOL FAIL: %s"), *OtherActor->GetName());
-			}
+			AbilitySystemComponent->TryActivateAbilityByClass(HitReactionAbility);
+			UE_LOG(LogTemp, Warning, TEXT("LOL FAIL NOT"))
 		}
 		else
-			UE_LOG(LogTemp, Warning, TEXT("NOOOOOO"))
-		
+		{
+			UE_LOG(LogTemp, Warning, TEXT("LOL FAIL: %s"), *OtherActor->GetName());
+		}
+	}
+	else
+		UE_LOG(LogTemp, Warning, TEXT("NOOOOOO"))
+
+	if(TargetActor->HealthComponent)
+	{
+		TargetActor->HealthComponent->GetDamage(20.0f);
+	}
+
+
 	}
 	else if (OtherActor != WeaponOwner)
 	{
