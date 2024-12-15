@@ -89,7 +89,6 @@ UPhysicalMaterial* UAnimNotify_PlayRandomSound::CheckGroundMaterial(USkeletalMes
 	if (Hit)
 	{
 		UPhysicalMaterial* HitMaterial = OutHit.PhysMaterial.Get();
-		UE_LOG(LogTemp, Warning, TEXT("Found PhysMaterial"))
 		return HitMaterial;
 	}
 	else

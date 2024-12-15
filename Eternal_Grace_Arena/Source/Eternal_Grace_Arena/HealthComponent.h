@@ -4,37 +4,37 @@
 
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
+#include "StaggeringType.h"
 #include "HealthComponent.generated.h"
 
-
-UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
+UCLASS(ClassGroup = (Custom), meta = (BlueprintSpawnableComponent))
 class ETERNAL_GRACE_ARENA_API UHealthComponent : public UActorComponent
 {
 	GENERATED_BODY()
-
-public:	
-	// Sets default values for this component's properties
 	UHealthComponent();
+
+protected:
+	// Sets default values for this component's properties
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = BaseValues, meta = (AllowPrivateAccess))
 	float MaxHealth;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = BaseValues, meta = (AllowPrivateAccess))
 	float CurrentHealth;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = BaseValues, meta = (AllowPrivateAccess))
+	float MaxPoise;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = BaseValues, meta = (AllowPrivateAccess))
+	float CurrentPoise;
 public:
 	UFUNCTION(CallInEditor, Category = Actions)
-	virtual void GetDamage(float Damage);
+	virtual void GetDamage(float Damage, float PoiseDamage, EStaggeringType StaggerType);
 
 protected:
 	// Called when the game starts
 	virtual void BeginPlay() override;
-
+	// Called every frame
+	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
 	UFUNCTION(CallInEditor, Category = Actions)
 	virtual void Die();
 
-public:	
-	// Called every frame
-	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
-
-		
 };

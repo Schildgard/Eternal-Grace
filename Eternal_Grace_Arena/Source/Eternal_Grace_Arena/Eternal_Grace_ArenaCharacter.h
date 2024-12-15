@@ -5,8 +5,6 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
 #include "Logging/LogMacros.h"
-#include "AbilitySystemComponent.h"
-#include "AbilitySystemInterface.h"
 #include "Eternal_Grace_ArenaCharacter.generated.h"
 
 class USpringArmComponent;
@@ -14,14 +12,13 @@ class UCameraComponent;
 class UInputMappingContext;
 class UInputAction;
 class UCharacterWeapon;
-class UGA_GetDamage; //GAMEPLAY ABILITY SYSTEM RELATED
 class UHealthComponent;
 struct FInputActionValue;
 
 DECLARE_LOG_CATEGORY_EXTERN(LogTemplateCharacter, Log, All);
 
 UCLASS(config = Game)
-class AEternal_Grace_ArenaCharacter : public ACharacter, public IAbilitySystemInterface
+class AEternal_Grace_ArenaCharacter : public ACharacter
 {
 	GENERATED_BODY()
 
@@ -48,10 +45,6 @@ class AEternal_Grace_ArenaCharacter : public ACharacter, public IAbilitySystemIn
 	/** Look Input Action */
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
 	UInputAction* LookAction;
-public:
-	//GAS SYSTEM
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = GAS, meta = (AllowPrivateAccess = "true"))
-	class UAbilitySystemComponent* AbilitySystemComponent;
 
 	//CUSTOM ACTION STATES
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess))
@@ -117,8 +110,6 @@ public:
 	//Death
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animations, meta = (AllowPrivateAccess))
 	UAnimMontage* DeathAnimation;
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animations, meta = (AllowPrivateAccess))
-	FGameplayAbilitySpec HitAbility;
 
 	//CUSTOM VALUE PROPERTIES
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Combat, meta = (AllowPrivateAccess))
@@ -130,17 +121,11 @@ public:
 	UPROPERTY()
 	UWorld* world;
 public:
-	//GAS
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = GAS, meta = (AllowPrivateAccess))
-	const class UBasicAttributesSet* BasicAttributeSet;
-public:
 	//WEAPON
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Weapon, meta = (AllowPrivateAccess))
 	UCharacterWeapon* Weapon;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Weapon, meta = (AllowPrivateAccess))
 	FName WeaponSocket;
-	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Abilities")
-	TSubclassOf<UGameplayAbility> HitReactionAbility;
 	//LOCK ON SYSTEM
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = LockOn, meta = (AllowPrivateAccess))
 	TArray<TEnumAsByte<EObjectTypeQuery>> ObjectTypes;
@@ -217,13 +202,6 @@ protected:
 	//DODGE
 	UFUNCTION(CallInEditor, Category = Actions)
 	virtual void Dodge();
-
-public:
-	//ABILITY SYSTEM COMPONENT INTERFACE FUNCTIONS
-	virtual class UAbilitySystemComponent* GetAbilitySystemComponent() const override
-	{
-		return AbilitySystemComponent;
-	}
 
 protected:
 

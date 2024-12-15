@@ -14,7 +14,9 @@ UHealthComponent::UHealthComponent()
 
 	// ...
 	MaxHealth = 1000.0f;
+	MaxPoise = 25.0f;
 	CurrentHealth = MaxHealth;
+	CurrentPoise = MaxPoise;
 }
 
 
@@ -24,7 +26,7 @@ void UHealthComponent::BeginPlay()
 	Super::BeginPlay();
 
 	// ...
-	
+
 }
 
 
@@ -37,16 +39,41 @@ void UHealthComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActo
 }
 
 
-void UHealthComponent::GetDamage(float IncomingDamage)
+void UHealthComponent::GetDamage(float IncomingDamage, float PoiseDamage, EStaggeringType StaggerType)
 {
 	AActor* Owner = GetOwner();
 	AEternal_Grace_ArenaCharacter* Character = Cast<AEternal_Grace_ArenaCharacter>(Owner);
 
 	CurrentHealth -= IncomingDamage;
-	if(Character->StaggerAnims[0])
+	CurrentPoise -= PoiseDamage;
+	UE_LOG(LogTemp, Warning, TEXT("GetDamage"))
+
+
+	if (Character->StaggerAnims[0])
 	{
-	Character->PlayAnimMontage(Character->StaggerAnims[0]);
-	UE_LOG(LogTemp, Warning, TEXT("Hit ANim"))
+		CurrentPoise = MaxPoise;
+		switch (StaggerType)
+		{
+		case EStaggeringType::NormalStagger:
+			Character->PlayAnimMontage(Character->StaggerAnims[0]);
+			break;
+		case EStaggeringType::HeavyStagger:
+			Character->PlayAnimMontage(Character->StaggerAnims[1]);
+			break;
+		case EStaggeringType::KnockbackStagger:
+			Character->PlayAnimMontage(Character->StaggerAnims[2]);
+			break;
+		case EStaggeringType::ThrowupStagger:
+			Character->PlayAnimMontage(Character->StaggerAnims[3]);
+			break;
+		case EStaggeringType::CrushdownStagger:
+			Character->PlayAnimMontage(Character->StaggerAnims[4]);
+			break;
+		case EStaggeringType::NoStagger:
+			Character->PlayAnimMontage(Character->StaggerAnims[0]); //REMOVE THIS
+			break;
+		}
+		UE_LOG(LogTemp, Warning, TEXT("Hit ANim"))
 
 	}
 	else

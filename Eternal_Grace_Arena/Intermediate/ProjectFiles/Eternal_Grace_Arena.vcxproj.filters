@@ -118,5 +118,11 @@
     <ClCompile Include="..\..\Source\Eternal_Grace_Arena\PlayerCharacter.h">
       <Filter>Source\Eternal_Grace_Arena</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\Eternal_Grace_Arena\StaggeringType.cpp">
+      <Filter>Source\Eternal_Grace_Arena</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Eternal_Grace_Arena\StaggeringType.h">
+      <Filter>Source\Eternal_Grace_Arena</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

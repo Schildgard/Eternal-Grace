@@ -14,9 +14,7 @@
 #include "Kismet/KismetSystemLibrary.h"
 #include "Kismet/KismetMathLibrary.h"
 #include "I_Targetable.h"
-#include "BasicAttributesSet.h"
 #include "CharacterWeapon.h"
-#include "GA_GetDamage.h"
 #include "HealthComponent.h"
 
 DEFINE_LOG_CATEGORY(LogTemplateCharacter);
@@ -66,11 +64,7 @@ AEternal_Grace_ArenaCharacter::AEternal_Grace_ArenaCharacter()
 
 	Weapon = CreateDefaultSubobject<UCharacterWeapon>("Weapon Component");
 	Weapon->SetupAttachment(GetMesh(), WeaponSocket);
-	
-
-	AbilitySystemComponent = CreateDefaultSubobject<UAbilitySystemComponent>(TEXT("AbilitySystemComponent"));
 	HealthComponent = CreateDefaultSubobject<UHealthComponent>(TEXT("Health"));
-	BasicAttributeSet = CreateDefaultSubobject<UBasicAttributesSet>(TEXT("BasicAttributeSet"));
 
 }
 
@@ -140,17 +134,6 @@ void AEternal_Grace_ArenaCharacter::BeginPlay()
 	Super::BeginPlay();
 	world = GetWorld();
 	InitializeAnimationInstance();
-	if(IsValid(AbilitySystemComponent))
-	{
-		BasicAttributeSet = AbilitySystemComponent->GetSet<UBasicAttributesSet>();
-		if (BasicAttributeSet == nullptr)
-		{
-
-			UE_LOG(LogTemp, Warning, TEXT("AbilitySystemComponent could not be getted"))
-				return;
-		}
-		AbilitySystemComponent->GiveAbility(HitReactionAbility);
-	}
 
 	if(Weapon)
 	{
