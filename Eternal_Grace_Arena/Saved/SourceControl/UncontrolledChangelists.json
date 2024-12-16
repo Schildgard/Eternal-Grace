@@ -5,7 +5,13 @@
 			"guid": "00000000000000000000000000000000",
 			"description": "Default Uncontrolled Changelist",
 			"files": [
-				"D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/StarterContent/Architecture/Floor_400x400.uasset"
+				"D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/StarterContent/Architecture/Floor_400x400.uasset",
+				"D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/DataTables/DT_HitEffectData.uasset",
+				"D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/DataTables/BP_HitEffectData.uasset",
+				"D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/DataTables/DT_HitEffectTable.uasset",
+				"D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Blueprints/CharacterBlueprints/BP_Player.uasset",
+				"D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/ThirdPerson/Blueprints/BP_ThirdPersonCharacter.uasset",
+				"D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/PhysicMaterials/PM_Body.uasset"
 			]
 		}
 	]

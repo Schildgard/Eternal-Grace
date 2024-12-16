@@ -60,6 +60,7 @@ AEternal_Grace_ArenaCharacter::AEternal_Grace_ArenaCharacter()
 	// are set in the derived blueprint asset named ThirdPersonCharacter (to avoid direct content references in C++)
 
 	LockedOnTarget = nullptr;
+	PhysicalMaterial = nullptr;
 	WeaponSocket = FName("socket_weaponGrip");
 
 	Weapon = CreateDefaultSubobject<UCharacterWeapon>("Weapon Component");
@@ -229,19 +230,19 @@ void AEternal_Grace_ArenaCharacter::LightAttack()
 		switch (CharacterAnimationInstance->attackCount)
 		{
 		case 0:
-			PlayAnimMontage(LightAttack01, 1.0f);
+			PlayAnimMontage(LightAttacks[0], 1.0f);
 			break;
 		case 1:
-			PlayAnimMontage(LightAttack02, 1.0f);
+			PlayAnimMontage(LightAttacks[1], 1.0f);
 			break;
 		case 2:
-			PlayAnimMontage(LightAttack03, 1.0f);
+			PlayAnimMontage(LightAttacks[2], 1.0f);
 			break;
 		case 3:
-			PlayAnimMontage(LightAttack04, 1.0f);
+			PlayAnimMontage(LightAttacks[3], 1.0f);
 			break;
 		case 4:
-			PlayAnimMontage(LightAttack05, 1.0f);
+			PlayAnimMontage(LightAttacks[4], 1.0f);
 			break;
 		default:
 			break;
@@ -262,7 +263,7 @@ void AEternal_Grace_ArenaCharacter::HeavyAttack()
 		CharacterAnimationInstance->isAttacking = true; //SET PLAYER IN ATTACK STATE, SO THE ANIMATION CAN NOT BE INTERUPTED BY A LIGHT ATTACK COMMAND
 		CharacterAnimationInstance->isInHeavyAttack = true; // SET PLAYER IN HEAVY ATTACK STATE, SO ANOTHER HEAVY ATTACK COMMAND TRIGGERS THE SECOND ATTACK ANIM
 		UE_LOG(LogTemp, Warning, TEXT("Character Releases Attack"))
-			PlayAnimMontage(HeavyAttack01, 1.0f);
+			PlayAnimMontage(HeavyAttacks[0], 1.0f);
 		currentChargePower = 0; //TODO: CHANGE THIS SO THAT A NOTIFY EVENT RESETS THE CHARGE POWER
 	}
 	else if (CharacterAnimationInstance->isInHeavyAttack)
@@ -270,7 +271,7 @@ void AEternal_Grace_ArenaCharacter::HeavyAttack()
 		//IF PLAYER IS IN HEAVY ATTACK, A SECOND HEAVY ATTACK COMMAND TRIGGERS THE FOLLOW UP ANIMATION
 		CharacterAnimationInstance->isInHeavyAttack = false;//LEAVE HEAVY ATTACK STATE, SO THE FOLLOW UP ANIMATION ONLY TRIGGERS ONCE
 		CharacterAnimationInstance->isAttacking = true; //SET IS ATTACKING TO TRUE TO MAKE SURE THE FOLLOW UP ANIMATION IS NOT CANCELED BY LIGHT ATTACK COMMAND
-		PlayAnimMontage(HeavyAttack02, 1.0f);
+		PlayAnimMontage(HeavyAttacks[1], 1.0f);
 		UE_LOG(LogTemp, Warning, TEXT("Character Already is not Charging"))
 	}
 }

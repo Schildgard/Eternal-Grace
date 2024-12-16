@@ -1,5 +1,40 @@
 {
 	"RemapUnityFiles": 
 	{
+		"Module.Eternal_Grace_Arena.cpp.obj": [
+			"AnimNotify_PlayRandomSound.gen.cpp.obj",
+			"AnimNotify_PlaySound_RandomPitch.gen.cpp.obj",
+			"BasicAttributesSet.gen.cpp.obj",
+			"CharacterAnimInstance.gen.cpp.obj",
+			"CharacterWeapon.gen.cpp.obj",
+			"EternalGrace_BaseActor.gen.cpp.obj",
+			"Eternal_Grace_Arena.init.gen.cpp.obj",
+			"Eternal_Grace_ArenaCharacter.gen.cpp.obj",
+			"Eternal_Grace_ArenaGameMode.gen.cpp.obj",
+			"GA_GetDamage.gen.cpp.obj",
+			"HealthComponent.gen.cpp.obj",
+			"HitEffectData.gen.cpp.obj",
+			"I_Targetable.gen.cpp.obj",
+			"NS_WeaponSwing.gen.cpp.obj",
+			"PlayerCharacter.gen.cpp.obj",
+			"StaggeringType.gen.cpp.obj",
+			"PerModuleInline.gen.cpp.obj",
+			"AnimNotify_PlayRandomSound.cpp.obj",
+			"AnimNotify_PlaySound_RandomPitch.cpp.obj",
+			"BasicAttributesSet.cpp.obj",
+			"CharacterAnimInstance.cpp.obj",
+			"CharacterWeapon.cpp.obj",
+			"EternalGrace_BaseActor.cpp.obj",
+			"Eternal_Grace_Arena.cpp.obj",
+			"Eternal_Grace_ArenaCharacter.cpp.obj",
+			"Eternal_Grace_ArenaGameMode.cpp.obj",
+			"GA_GetDamage.cpp.obj",
+			"HealthComponent.cpp.obj",
+			"HitEffectData.cpp.obj",
+			"I_Targetable.cpp.obj",
+			"NS_WeaponSwing.cpp.obj",
+			"PlayerCharacter.cpp.obj",
+			"StaggeringType.cpp.obj"
+		]
 	}
 }

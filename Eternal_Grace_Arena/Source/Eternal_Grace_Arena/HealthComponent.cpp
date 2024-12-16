@@ -46,9 +46,6 @@ void UHealthComponent::GetDamage(float IncomingDamage, float PoiseDamage, EStagg
 
 	CurrentHealth -= IncomingDamage;
 	CurrentPoise -= PoiseDamage;
-	UE_LOG(LogTemp, Warning, TEXT("GetDamage"))
-
-
 	if (Character->StaggerAnims[0])
 	{
 		CurrentPoise = MaxPoise;
@@ -73,7 +70,7 @@ void UHealthComponent::GetDamage(float IncomingDamage, float PoiseDamage, EStagg
 			Character->PlayAnimMontage(Character->StaggerAnims[0]); //REMOVE THIS
 			break;
 		}
-		UE_LOG(LogTemp, Warning, TEXT("Hit ANim"))
+		UE_LOG(LogTemp, Warning, TEXT("Hit AnimPlay"))
 
 	}
 	else

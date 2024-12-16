@@ -290,6 +290,12 @@
     <ClCompile Include="..\..\Source\Eternal_Grace_Arena\CharacterWeapon.h">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
+    <ClCompile Include="..\..\Source\Eternal_Grace_Arena\EternalGrace_BaseActor.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Eternal_Grace_Arena\EternalGrace_BaseActor.h">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
     <None Include="..\..\Source\Eternal_Grace_Arena\Eternal_Grace_Arena.Build.cs"/>
     <ClCompile Include="..\..\Source\Eternal_Grace_Arena\Eternal_Grace_Arena.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>

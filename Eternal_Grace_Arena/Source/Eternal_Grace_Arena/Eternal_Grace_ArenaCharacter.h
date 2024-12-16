@@ -62,31 +62,18 @@ class AEternal_Grace_ArenaCharacter : public ACharacter
 
 	//LIGHT ATTACKS
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animations, meta = (AllowPrivateAccess))
-	UAnimMontage* LightAttack01;
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animations, meta = (AllowPrivateAccess))
-	UAnimMontage* LightAttack02;
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animations, meta = (AllowPrivateAccess))
-	UAnimMontage* LightAttack03;
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animations, meta = (AllowPrivateAccess))
-	UAnimMontage* LightAttack04;
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animations, meta = (AllowPrivateAccess))
-	UAnimMontage* LightAttack05;
+	TArray<UAnimMontage*> LightAttacks;
 	//HEAVY ATTACKS
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animations, meta = (AllowPrivateAccess))
-	UAnimMontage* HeavyAttack01;
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animations, meta = (AllowPrivateAccess))
-	UAnimMontage* HeavyAttack02;
+	TArray<UAnimMontage*> HeavyAttacks;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animations, meta = (AllowPrivateAccess))
 	UAnimMontage* ChargeAttack;
-
 	//SPRINT ATTACKS
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animations, meta = (AllowPrivateAccess))
 	UAnimMontage* RunningAttack;
-
 	//GUARD COUNTER ATTACK
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animations, meta = (AllowPrivateAccess))
 	UAnimMontage* GuardCounterAttack;
-
 	//GUARD
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animations, meta = (AllowPrivateAccess))
 	UAnimMontage* GuardBreakEvent;
@@ -94,16 +81,19 @@ class AEternal_Grace_ArenaCharacter : public ACharacter
 	UAnimMontage* Block;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animations, meta = (AllowPrivateAccess))
 	UAnimMontage* BlockHeavyAttack;
+
 public:
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = HitEffect, meta = (AllowPrivateAccess))
+	UPhysicalMaterial* PhysicalMaterial;
 	//STAGGER
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animations, meta = (AllowPrivateAccess))
 	TArray<UAnimMontage*> StaggerAnims;
 
-	//Dodge
+	//DODGE
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animations, meta = (AllowPrivateAccess))
 	UAnimMontage* DodgeAction;
 
-	//Dodge
+	//INTERACT
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animations, meta = (AllowPrivateAccess))
 	UAnimMontage* Interact;
 

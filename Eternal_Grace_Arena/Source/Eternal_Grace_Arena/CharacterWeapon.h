@@ -4,7 +4,6 @@
 
 #include "CoreMinimal.h"
 #include "Components/StaticMeshComponent.h"
-#include "GA_GetDamage.h"
 #include "StaggeringType.h"
 #include "CharacterWeapon.generated.h"
 
@@ -36,6 +35,9 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Collision)
 	TArray<AEternal_Grace_ArenaCharacter*> HittedActors;
 
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = HitEffect, meta = (AllowPrivateAccess))
+	UDataTable* HitEffectDataTable;
+
 
 	UFUNCTION()
 	void OnOverlapBegin(
@@ -53,5 +55,8 @@ public:
 	void DealDamage(AEternal_Grace_ArenaCharacter* Target, float DamageMultiplier, EStaggeringType Staggertype);
 	UFUNCTION()
 	void HitDetect(float DamageMultiplier, EStaggeringType Staggertype);
+
+	UFUNCTION()
+	void ApplyHitEffect(UPhysicalMaterial* PhysicalMaterial);
 	
 };

@@ -4,6 +4,10 @@
 #include "CharacterWeapon.h"
 #include "Eternal_Grace_ArenaCharacter.h"
 #include "HealthComponent.h"
+#include "EternalGrace_BaseActor.h"
+#include "HitEffectData.h"
+#include "NiagaraFunctionLibrary.h"
+#include "Kismet/GameplayStatics.h"
 
 UCharacterWeapon::UCharacterWeapon()
 {
@@ -23,9 +27,10 @@ void UCharacterWeapon::OnOverlapBegin(UPrimitiveComponent* OverlappedComponent, 
 		UE_LOG(LogTemp, Warning, TEXT("GOT WEAPON OWNER"))
 	}
 
+
 	AEternal_Grace_ArenaCharacter* TargetActor = Cast<AEternal_Grace_ArenaCharacter>(OtherActor);
 	// CHECK IF OVERLAPPING ACTOR IS AN CHARACTER
-	if (TargetActor != WeaponOwner)
+	if (TargetActor && TargetActor != WeaponOwner)
 	{
 		UE_LOG(LogTemp, Warning, TEXT("YOU HITTED A CHARACTER: %s"), *OtherActor->GetName());
 
@@ -34,12 +39,23 @@ void UCharacterWeapon::OnOverlapBegin(UPrimitiveComponent* OverlappedComponent, 
 		{
 			HittedActors.AddUnique(TargetActor);
 		}
-
-
+		if (TargetActor->PhysicalMaterial)
+		{
+			ApplyHitEffect(TargetActor->PhysicalMaterial);
+		}
+		HittedActors.AddUnique(TargetActor);
 	}
-	else if (OtherActor != WeaponOwner)
+	else if (TargetActor == nullptr)
 	{
-		UE_LOG(LogTemp, Warning, TEXT("YOU HITTED A NON VIABLE TARGET: %s"), *OtherActor->GetName());
+		AEternalGrace_BaseActor* HittedObject = Cast<AEternalGrace_BaseActor>(OtherActor);
+		if (HittedObject)
+		{
+			if (HittedObject->PhysicalMaterial)
+			{
+				ApplyHitEffect(HittedObject->PhysicalMaterial);
+			}
+			//INSERT HITTED ARRAY ADD HERE
+		}
 	}
 
 }
@@ -59,9 +75,37 @@ void UCharacterWeapon::HitDetect(float DamageMultiplier, EStaggeringType Stagger
 			DealDamage(Target, DamageMultiplier, Staggertype);
 		}
 	}
-	else
-		UE_LOG(LogTemp, Warning, TEXT("HITTED ACTORS ARE ZERO"))
 
+}
+
+void UCharacterWeapon::ApplyHitEffect(UPhysicalMaterial* PhysicalMaterial)
+{
+	if (!PhysicalMaterial || !HitEffectDataTable)
+	{
+		UE_LOG(LogTemp, Warning, TEXT("No PhysicalMaterial or DataTable assigned!"));
+		return;
+	}
+	//CREATE A CONTEXT STRING
+	static const FString ContextString(TEXT("Hit Effect Context"));
+	FName MaterialName = FName(*PhysicalMaterial->GetName());
+	//GONNA CHECK WHAT CONTEXT STRING PARAMETER DOES
+	FHitEffectData* EffectData = HitEffectDataTable->FindRow<FHitEffectData>(MaterialName, ContextString);
+
+	if (EffectData)
+	{
+		if (EffectData->HitSound)
+		{
+			UGameplayStatics::PlaySoundAtLocation(this, EffectData->HitSound, GetOwner()->GetActorLocation());
+		}
+		if (EffectData->NiagaraEffect)
+		{
+			UNiagaraFunctionLibrary::SpawnSystemAtLocation(this, EffectData->NiagaraEffect, GetOwner()->GetActorLocation());
+		}
+	}
+	else
+	{
+		UE_LOG(LogTemp, Warning, TEXT("No effects found for PhysicalMaterial: %s"), *MaterialName.ToString());
+	}
 }
 
 

@@ -24,6 +24,7 @@ ETERNAL_GRACE_ARENA_API UClass* Z_Construct_UClass_AEternal_Grace_ArenaCharacter
 ETERNAL_GRACE_ARENA_API UClass* Z_Construct_UClass_UCharacterAnimInstance_NoRegister();
 ETERNAL_GRACE_ARENA_API UClass* Z_Construct_UClass_UCharacterWeapon_NoRegister();
 ETERNAL_GRACE_ARENA_API UClass* Z_Construct_UClass_UHealthComponent_NoRegister();
+PHYSICSCORE_API UClass* Z_Construct_UClass_UPhysicalMaterial_NoRegister();
 UPackage* Z_Construct_UPackage__Script_Eternal_Grace_Arena();
 // End Cross Module References
 
@@ -907,7 +908,7 @@ struct Z_Construct_UClass_AEternal_Grace_ArenaCharacter_Statics
 		{ "Category", "Input" },
 		{ "ModuleRelativePath", "Eternal_Grace_ArenaCharacter.h" },
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_LightAttack01_MetaData[] = {
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_LightAttacks_MetaData[] = {
 		{ "AllowPrivateAccess", "" },
 		{ "Category", "Animations" },
 #if !UE_BUILD_SHIPPING
@@ -918,27 +919,7 @@ struct Z_Construct_UClass_AEternal_Grace_ArenaCharacter_Statics
 		{ "ToolTip", "LIGHT ATTACKS" },
 #endif
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_LightAttack02_MetaData[] = {
-		{ "AllowPrivateAccess", "" },
-		{ "Category", "Animations" },
-		{ "ModuleRelativePath", "Eternal_Grace_ArenaCharacter.h" },
-	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_LightAttack03_MetaData[] = {
-		{ "AllowPrivateAccess", "" },
-		{ "Category", "Animations" },
-		{ "ModuleRelativePath", "Eternal_Grace_ArenaCharacter.h" },
-	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_LightAttack04_MetaData[] = {
-		{ "AllowPrivateAccess", "" },
-		{ "Category", "Animations" },
-		{ "ModuleRelativePath", "Eternal_Grace_ArenaCharacter.h" },
-	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_LightAttack05_MetaData[] = {
-		{ "AllowPrivateAccess", "" },
-		{ "Category", "Animations" },
-		{ "ModuleRelativePath", "Eternal_Grace_ArenaCharacter.h" },
-	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_HeavyAttack01_MetaData[] = {
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_HeavyAttacks_MetaData[] = {
 		{ "AllowPrivateAccess", "" },
 		{ "Category", "Animations" },
 #if !UE_BUILD_SHIPPING
@@ -948,11 +929,6 @@ struct Z_Construct_UClass_AEternal_Grace_ArenaCharacter_Statics
 #if !UE_BUILD_SHIPPING
 		{ "ToolTip", "HEAVY ATTACKS" },
 #endif
-	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_HeavyAttack02_MetaData[] = {
-		{ "AllowPrivateAccess", "" },
-		{ "Category", "Animations" },
-		{ "ModuleRelativePath", "Eternal_Grace_ArenaCharacter.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ChargeAttack_MetaData[] = {
 		{ "AllowPrivateAccess", "" },
@@ -1002,6 +978,11 @@ struct Z_Construct_UClass_AEternal_Grace_ArenaCharacter_Statics
 		{ "Category", "Animations" },
 		{ "ModuleRelativePath", "Eternal_Grace_ArenaCharacter.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_PhysicalMaterial_MetaData[] = {
+		{ "AllowPrivateAccess", "" },
+		{ "Category", "HitEffect" },
+		{ "ModuleRelativePath", "Eternal_Grace_ArenaCharacter.h" },
+	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_StaggerAnims_MetaData[] = {
 		{ "AllowPrivateAccess", "" },
 		{ "Category", "Animations" },
@@ -1017,22 +998,22 @@ struct Z_Construct_UClass_AEternal_Grace_ArenaCharacter_Statics
 		{ "AllowPrivateAccess", "" },
 		{ "Category", "Animations" },
 #if !UE_BUILD_SHIPPING
-		{ "Comment", "//Dodge\n" },
+		{ "Comment", "//DODGE\n" },
 #endif
 		{ "ModuleRelativePath", "Eternal_Grace_ArenaCharacter.h" },
 #if !UE_BUILD_SHIPPING
-		{ "ToolTip", "Dodge" },
+		{ "ToolTip", "DODGE" },
 #endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Interact_MetaData[] = {
 		{ "AllowPrivateAccess", "" },
 		{ "Category", "Animations" },
 #if !UE_BUILD_SHIPPING
-		{ "Comment", "//Dodge\n" },
+		{ "Comment", "//INTERACT\n" },
 #endif
 		{ "ModuleRelativePath", "Eternal_Grace_ArenaCharacter.h" },
 #if !UE_BUILD_SHIPPING
-		{ "ToolTip", "Dodge" },
+		{ "ToolTip", "INTERACT" },
 #endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_DeathAnimation_MetaData[] = {
@@ -1126,19 +1107,17 @@ struct Z_Construct_UClass_AEternal_Grace_ArenaCharacter_Statics
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_GuardAction;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_ToggleLockOnAction;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_SwitchLockOnTargetAction;
-	static const UECodeGen_Private::FObjectPropertyParams NewProp_LightAttack01;
-	static const UECodeGen_Private::FObjectPropertyParams NewProp_LightAttack02;
-	static const UECodeGen_Private::FObjectPropertyParams NewProp_LightAttack03;
-	static const UECodeGen_Private::FObjectPropertyParams NewProp_LightAttack04;
-	static const UECodeGen_Private::FObjectPropertyParams NewProp_LightAttack05;
-	static const UECodeGen_Private::FObjectPropertyParams NewProp_HeavyAttack01;
-	static const UECodeGen_Private::FObjectPropertyParams NewProp_HeavyAttack02;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_LightAttacks_Inner;
+	static const UECodeGen_Private::FArrayPropertyParams NewProp_LightAttacks;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_HeavyAttacks_Inner;
+	static const UECodeGen_Private::FArrayPropertyParams NewProp_HeavyAttacks;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_ChargeAttack;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_RunningAttack;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_GuardCounterAttack;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_GuardBreakEvent;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_Block;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_BlockHeavyAttack;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_PhysicalMaterial;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_StaggerAnims_Inner;
 	static const UECodeGen_Private::FArrayPropertyParams NewProp_StaggerAnims;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_DodgeAction;
@@ -1197,19 +1176,17 @@ const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AEternal_Grace
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AEternal_Grace_ArenaCharacter_Statics::NewProp_GuardAction = { "GuardAction", nullptr, (EPropertyFlags)0x0040000000000015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AEternal_Grace_ArenaCharacter, GuardAction), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_GuardAction_MetaData), NewProp_GuardAction_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AEternal_Grace_ArenaCharacter_Statics::NewProp_ToggleLockOnAction = { "ToggleLockOnAction", nullptr, (EPropertyFlags)0x0040000000000015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AEternal_Grace_ArenaCharacter, ToggleLockOnAction), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ToggleLockOnAction_MetaData), NewProp_ToggleLockOnAction_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AEternal_Grace_ArenaCharacter_Statics::NewProp_SwitchLockOnTargetAction = { "SwitchLockOnTargetAction", nullptr, (EPropertyFlags)0x0040000000000015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AEternal_Grace_ArenaCharacter, SwitchLockOnTargetAction), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SwitchLockOnTargetAction_MetaData), NewProp_SwitchLockOnTargetAction_MetaData) };
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AEternal_Grace_ArenaCharacter_Statics::NewProp_LightAttack01 = { "LightAttack01", nullptr, (EPropertyFlags)0x0040000000000015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AEternal_Grace_ArenaCharacter, LightAttack01), Z_Construct_UClass_UAnimMontage_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_LightAttack01_MetaData), NewProp_LightAttack01_MetaData) };
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AEternal_Grace_ArenaCharacter_Statics::NewProp_LightAttack02 = { "LightAttack02", nullptr, (EPropertyFlags)0x0040000000000015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AEternal_Grace_ArenaCharacter, LightAttack02), Z_Construct_UClass_UAnimMontage_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_LightAttack02_MetaData), NewProp_LightAttack02_MetaData) };
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AEternal_Grace_ArenaCharacter_Statics::NewProp_LightAttack03 = { "LightAttack03", nullptr, (EPropertyFlags)0x0040000000000015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AEternal_Grace_ArenaCharacter, LightAttack03), Z_Construct_UClass_UAnimMontage_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_LightAttack03_MetaData), NewProp_LightAttack03_MetaData) };
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AEternal_Grace_ArenaCharacter_Statics::NewProp_LightAttack04 = { "LightAttack04", nullptr, (EPropertyFlags)0x0040000000000015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AEternal_Grace_ArenaCharacter, LightAttack04), Z_Construct_UClass_UAnimMontage_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_LightAttack04_MetaData), NewProp_LightAttack04_MetaData) };
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AEternal_Grace_ArenaCharacter_Statics::NewProp_LightAttack05 = { "LightAttack05", nullptr, (EPropertyFlags)0x0040000000000015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AEternal_Grace_ArenaCharacter, LightAttack05), Z_Construct_UClass_UAnimMontage_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_LightAttack05_MetaData), NewProp_LightAttack05_MetaData) };
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AEternal_Grace_ArenaCharacter_Statics::NewProp_HeavyAttack01 = { "HeavyAttack01", nullptr, (EPropertyFlags)0x0040000000000015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AEternal_Grace_ArenaCharacter, HeavyAttack01), Z_Construct_UClass_UAnimMontage_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_HeavyAttack01_MetaData), NewProp_HeavyAttack01_MetaData) };
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AEternal_Grace_ArenaCharacter_Statics::NewProp_HeavyAttack02 = { "HeavyAttack02", nullptr, (EPropertyFlags)0x0040000000000015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AEternal_Grace_ArenaCharacter, HeavyAttack02), Z_Construct_UClass_UAnimMontage_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_HeavyAttack02_MetaData), NewProp_HeavyAttack02_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AEternal_Grace_ArenaCharacter_Statics::NewProp_LightAttacks_Inner = { "LightAttacks", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UClass_UAnimMontage_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FArrayPropertyParams Z_Construct_UClass_AEternal_Grace_ArenaCharacter_Statics::NewProp_LightAttacks = { "LightAttacks", nullptr, (EPropertyFlags)0x0040000000000015, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AEternal_Grace_ArenaCharacter, LightAttacks), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_LightAttacks_MetaData), NewProp_LightAttacks_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AEternal_Grace_ArenaCharacter_Statics::NewProp_HeavyAttacks_Inner = { "HeavyAttacks", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UClass_UAnimMontage_NoRegister, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FArrayPropertyParams Z_Construct_UClass_AEternal_Grace_ArenaCharacter_Statics::NewProp_HeavyAttacks = { "HeavyAttacks", nullptr, (EPropertyFlags)0x0040000000000015, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AEternal_Grace_ArenaCharacter, HeavyAttacks), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_HeavyAttacks_MetaData), NewProp_HeavyAttacks_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AEternal_Grace_ArenaCharacter_Statics::NewProp_ChargeAttack = { "ChargeAttack", nullptr, (EPropertyFlags)0x0040000000000015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AEternal_Grace_ArenaCharacter, ChargeAttack), Z_Construct_UClass_UAnimMontage_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ChargeAttack_MetaData), NewProp_ChargeAttack_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AEternal_Grace_ArenaCharacter_Statics::NewProp_RunningAttack = { "RunningAttack", nullptr, (EPropertyFlags)0x0040000000000015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AEternal_Grace_ArenaCharacter, RunningAttack), Z_Construct_UClass_UAnimMontage_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_RunningAttack_MetaData), NewProp_RunningAttack_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AEternal_Grace_ArenaCharacter_Statics::NewProp_GuardCounterAttack = { "GuardCounterAttack", nullptr, (EPropertyFlags)0x0040000000000015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AEternal_Grace_ArenaCharacter, GuardCounterAttack), Z_Construct_UClass_UAnimMontage_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_GuardCounterAttack_MetaData), NewProp_GuardCounterAttack_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AEternal_Grace_ArenaCharacter_Statics::NewProp_GuardBreakEvent = { "GuardBreakEvent", nullptr, (EPropertyFlags)0x0040000000000015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AEternal_Grace_ArenaCharacter, GuardBreakEvent), Z_Construct_UClass_UAnimMontage_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_GuardBreakEvent_MetaData), NewProp_GuardBreakEvent_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AEternal_Grace_ArenaCharacter_Statics::NewProp_Block = { "Block", nullptr, (EPropertyFlags)0x0040000000000015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AEternal_Grace_ArenaCharacter, Block), Z_Construct_UClass_UAnimMontage_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Block_MetaData), NewProp_Block_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AEternal_Grace_ArenaCharacter_Statics::NewProp_BlockHeavyAttack = { "BlockHeavyAttack", nullptr, (EPropertyFlags)0x0040000000000015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AEternal_Grace_ArenaCharacter, BlockHeavyAttack), Z_Construct_UClass_UAnimMontage_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_BlockHeavyAttack_MetaData), NewProp_BlockHeavyAttack_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AEternal_Grace_ArenaCharacter_Statics::NewProp_PhysicalMaterial = { "PhysicalMaterial", nullptr, (EPropertyFlags)0x0010000000000015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AEternal_Grace_ArenaCharacter, PhysicalMaterial), Z_Construct_UClass_UPhysicalMaterial_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_PhysicalMaterial_MetaData), NewProp_PhysicalMaterial_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AEternal_Grace_ArenaCharacter_Statics::NewProp_StaggerAnims_Inner = { "StaggerAnims", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UClass_UAnimMontage_NoRegister, METADATA_PARAMS(0, nullptr) };
 const UECodeGen_Private::FArrayPropertyParams Z_Construct_UClass_AEternal_Grace_ArenaCharacter_Statics::NewProp_StaggerAnims = { "StaggerAnims", nullptr, (EPropertyFlags)0x0010000000000015, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AEternal_Grace_ArenaCharacter, StaggerAnims), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_StaggerAnims_MetaData), NewProp_StaggerAnims_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AEternal_Grace_ArenaCharacter_Statics::NewProp_DodgeAction = { "DodgeAction", nullptr, (EPropertyFlags)0x0010000000000015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AEternal_Grace_ArenaCharacter, DodgeAction), Z_Construct_UClass_UAnimMontage_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_DodgeAction_MetaData), NewProp_DodgeAction_MetaData) };
@@ -1238,19 +1215,17 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AEternal_
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AEternal_Grace_ArenaCharacter_Statics::NewProp_GuardAction,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AEternal_Grace_ArenaCharacter_Statics::NewProp_ToggleLockOnAction,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AEternal_Grace_ArenaCharacter_Statics::NewProp_SwitchLockOnTargetAction,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AEternal_Grace_ArenaCharacter_Statics::NewProp_LightAttack01,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AEternal_Grace_ArenaCharacter_Statics::NewProp_LightAttack02,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AEternal_Grace_ArenaCharacter_Statics::NewProp_LightAttack03,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AEternal_Grace_ArenaCharacter_Statics::NewProp_LightAttack04,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AEternal_Grace_ArenaCharacter_Statics::NewProp_LightAttack05,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AEternal_Grace_ArenaCharacter_Statics::NewProp_HeavyAttack01,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AEternal_Grace_ArenaCharacter_Statics::NewProp_HeavyAttack02,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AEternal_Grace_ArenaCharacter_Statics::NewProp_LightAttacks_Inner,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AEternal_Grace_ArenaCharacter_Statics::NewProp_LightAttacks,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AEternal_Grace_ArenaCharacter_Statics::NewProp_HeavyAttacks_Inner,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AEternal_Grace_ArenaCharacter_Statics::NewProp_HeavyAttacks,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AEternal_Grace_ArenaCharacter_Statics::NewProp_ChargeAttack,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AEternal_Grace_ArenaCharacter_Statics::NewProp_RunningAttack,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AEternal_Grace_ArenaCharacter_Statics::NewProp_GuardCounterAttack,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AEternal_Grace_ArenaCharacter_Statics::NewProp_GuardBreakEvent,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AEternal_Grace_ArenaCharacter_Statics::NewProp_Block,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AEternal_Grace_ArenaCharacter_Statics::NewProp_BlockHeavyAttack,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AEternal_Grace_ArenaCharacter_Statics::NewProp_PhysicalMaterial,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AEternal_Grace_ArenaCharacter_Statics::NewProp_StaggerAnims_Inner,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AEternal_Grace_ArenaCharacter_Statics::NewProp_StaggerAnims,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AEternal_Grace_ArenaCharacter_Statics::NewProp_DodgeAction,
@@ -1308,10 +1283,10 @@ AEternal_Grace_ArenaCharacter::~AEternal_Grace_ArenaCharacter() {}
 struct Z_CompiledInDeferFile_FID_Eternal_Grace_Arena_Source_Eternal_Grace_Arena_Eternal_Grace_ArenaCharacter_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AEternal_Grace_ArenaCharacter, AEternal_Grace_ArenaCharacter::StaticClass, TEXT("AEternal_Grace_ArenaCharacter"), &Z_Registration_Info_UClass_AEternal_Grace_ArenaCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AEternal_Grace_ArenaCharacter), 2361064246U) },
+		{ Z_Construct_UClass_AEternal_Grace_ArenaCharacter, AEternal_Grace_ArenaCharacter::StaticClass, TEXT("AEternal_Grace_ArenaCharacter"), &Z_Registration_Info_UClass_AEternal_Grace_ArenaCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AEternal_Grace_ArenaCharacter), 3403144600U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Eternal_Grace_Arena_Source_Eternal_Grace_Arena_Eternal_Grace_ArenaCharacter_h_3544472359(TEXT("/Script/Eternal_Grace_Arena"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Eternal_Grace_Arena_Source_Eternal_Grace_Arena_Eternal_Grace_ArenaCharacter_h_205968572(TEXT("/Script/Eternal_Grace_Arena"),
 	Z_CompiledInDeferFile_FID_Eternal_Grace_Arena_Source_Eternal_Grace_Arena_Eternal_Grace_ArenaCharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Eternal_Grace_Arena_Source_Eternal_Grace_Arena_Eternal_Grace_ArenaCharacter_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
