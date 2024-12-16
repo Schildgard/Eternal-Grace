@@ -16,6 +16,10 @@ UCharacterWeapon::UCharacterWeapon()
 	Values.PoiseDamage = 20.0f;
 	Values.StaminaCost = 15.0f;
 	WeaponOwner = nullptr;
+	HitEffectDataTable = nullptr;
+	//DEFAULT CONSTRUCTOR VALUES. WHILE ATTACKING THEY ARE TEMPORARILY OVERWRITTEN BY NOTIFY VALUES
+	StaggerType = EStaggeringType::NormalStagger;
+	DamageMultiplier = 1.0f;
 }
 
 void UCharacterWeapon::OnOverlapBegin(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
@@ -37,13 +41,12 @@ void UCharacterWeapon::OnOverlapBegin(UPrimitiveComponent* OverlappedComponent, 
 		// CHECK IF HITTED ACTOR HAS AN HEALTH COMPONENT
 		if (TargetActor->HealthComponent)
 		{
-			HittedActors.AddUnique(TargetActor);
+			DealDamage(TargetActor);
 		}
 		if (TargetActor->PhysicalMaterial)
 		{
 			ApplyHitEffect(TargetActor->PhysicalMaterial);
 		}
-		HittedActors.AddUnique(TargetActor);
 	}
 	else if (TargetActor == nullptr)
 	{
@@ -54,28 +57,15 @@ void UCharacterWeapon::OnOverlapBegin(UPrimitiveComponent* OverlappedComponent, 
 			{
 				ApplyHitEffect(HittedObject->PhysicalMaterial);
 			}
-			//INSERT HITTED ARRAY ADD HERE
 		}
 	}
 
 }
 
-void UCharacterWeapon::DealDamage(AEternal_Grace_ArenaCharacter* Target, float DamageMultiplier, EStaggeringType Staggertype)
+void UCharacterWeapon::DealDamage(AEternal_Grace_ArenaCharacter* Target)
 {
 	float Damage = Values.BaseDamage * DamageMultiplier;
-	Target->HealthComponent->GetDamage(Damage, Values.PoiseDamage, Staggertype);
-}
-
-void UCharacterWeapon::HitDetect(float DamageMultiplier, EStaggeringType Staggertype)
-{
-	if (HittedActors.Num() > 0)
-	{
-		for (AEternal_Grace_ArenaCharacter* Target : HittedActors)
-		{
-			DealDamage(Target, DamageMultiplier, Staggertype);
-		}
-	}
-
+	Target->HealthComponent->GetDamage(Damage, Values.PoiseDamage, StaggerType);
 }
 
 void UCharacterWeapon::ApplyHitEffect(UPhysicalMaterial* PhysicalMaterial)
@@ -106,6 +96,12 @@ void UCharacterWeapon::ApplyHitEffect(UPhysicalMaterial* PhysicalMaterial)
 	{
 		UE_LOG(LogTemp, Warning, TEXT("No effects found for PhysicalMaterial: %s"), *MaterialName.ToString());
 	}
+}
+
+void UCharacterWeapon::ResetAttackValues()
+{
+	StaggerType = EStaggeringType::NormalStagger;
+	DamageMultiplier = 1.0f;
 }
 
 

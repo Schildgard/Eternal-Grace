@@ -31,13 +31,17 @@ void UNS_WeaponSwing::NotifyBegin(USkeletalMeshComponent* MeshComp, UAnimSequenc
 		}
 	}
 	PerformingActor->Weapon->SetCollisionEnabled(ECollisionEnabled::QueryOnly);
+	PerformingActor->Weapon->DamageMultiplier = DamageMultiplier;
+	PerformingActor->Weapon->StaggerType = StaggerType;
 }
+
 
 void UNS_WeaponSwing::NotifyEnd(USkeletalMeshComponent* MeshComp, UAnimSequenceBase* Animation, const FAnimNotifyEventReference& EventReference)
 {
 	if (PerformingActor)
 	{
 		PerformingActor->Weapon->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+		PerformingActor->Weapon->ResetAttackValues();
 		PerformingActor->Weapon->HittedActors.Empty();
 	}
 	else
@@ -45,9 +49,4 @@ void UNS_WeaponSwing::NotifyEnd(USkeletalMeshComponent* MeshComp, UAnimSequenceB
 		UE_LOG(LogTemp, Warning, TEXT("Owner NOT Found"))
 			return;
 	}
-}
-
-void UNS_WeaponSwing::NotifyTick(USkeletalMeshComponent* MeshComp, UAnimSequenceBase* Animation, float FrameDeltaTime, const FAnimNotifyEventReference& EventReference)
-{
-	PerformingActor->Weapon->HitDetect(DamageMultiplier, StaggerType);
 }
