@@ -5,11 +5,7 @@
 			"guid": "00000000000000000000000000000000",
 			"description": "Default Uncontrolled Changelist",
 			"files": [
-				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/StarterContent/Architecture/Floor_400x400.uasset",
-				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/DataTables/BP_HitEffectData.uasset",
-				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/DataTables/DT_HitEffectData.uasset",
-				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/DataTables/DT_BasicAttributes.uasset",
-				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/DataTables/BP_HitTest.uasset"
+				"D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/StarterContent/Architecture/Floor_400x400.uasset"
 			]
 		}
 	]
