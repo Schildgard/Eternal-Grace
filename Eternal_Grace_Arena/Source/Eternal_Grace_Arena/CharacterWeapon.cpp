@@ -39,9 +39,10 @@ void UCharacterWeapon::OnOverlapBegin(UPrimitiveComponent* OverlappedComponent, 
 		UE_LOG(LogTemp, Warning, TEXT("YOU HITTED A CHARACTER: %s"), *OtherActor->GetName());
 
 		// CHECK IF HITTED ACTOR HAS AN HEALTH COMPONENT
-		if (TargetActor->HealthComponent)
+		if (TargetActor->HealthComponent && HittedActors.Contains(TargetActor) == false)
 		{
 			DealDamage(TargetActor);
+			HittedActors.AddUnique(TargetActor);
 		}
 		if (TargetActor->PhysicalMaterial)
 		{
@@ -102,6 +103,7 @@ void UCharacterWeapon::ResetAttackValues()
 {
 	StaggerType = EStaggeringType::NormalStagger;
 	DamageMultiplier = 1.0f;
+	HittedActors.Empty();
 }
 
 

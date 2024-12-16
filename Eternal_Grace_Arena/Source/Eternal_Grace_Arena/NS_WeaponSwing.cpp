@@ -42,7 +42,6 @@ void UNS_WeaponSwing::NotifyEnd(USkeletalMeshComponent* MeshComp, UAnimSequenceB
 	{
 		PerformingActor->Weapon->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 		PerformingActor->Weapon->ResetAttackValues();
-		PerformingActor->Weapon->HittedActors.Empty();
 	}
 	else
 	{
