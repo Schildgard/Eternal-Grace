@@ -10,6 +10,7 @@
 #include "Kismet/GameplayStatics.h"
 #include "Kismet/KismetMathLibrary.h"
 #include "CharacterAnimInstance.h"
+#include "CharacterShield.h"
 
 UCharacterWeapon::UCharacterWeapon()
 {
@@ -46,10 +47,10 @@ void UCharacterWeapon::OnOverlapBegin(UPrimitiveComponent* OverlappedComponent, 
 			DealDamage(TargetActor);
 			HittedActors.AddUnique(TargetActor);
 		}
-		if (TargetActor->PhysicalMaterial)
-		{
-			ApplyHitEffect(TargetActor->PhysicalMaterial);
-		}
+		//if (TargetActor->PhysicalMaterial)
+		//{
+		//	ApplyHitEffect(TargetActor->PhysicalMaterial);
+		//}
 	}
 	else if (TargetActor == nullptr)
 	{
@@ -67,16 +68,24 @@ void UCharacterWeapon::OnOverlapBegin(UPrimitiveComponent* OverlappedComponent, 
 
 void UCharacterWeapon::DealDamage(AEternal_Grace_ArenaCharacter* Target)
 {
-	if(Target->CharacterAnimationInstance->isGuarding)
+	float Damage = Values.BaseDamage * DamageMultiplier;
+	if (Target->Shield && Target->CharacterAnimationInstance->isGuarding)
 	{
-		if(CheckBlockRadius(Target) == true)
+		if (CheckBlockRadius(Target) == true)
 		{
 			UE_LOG(LogTemp, Warning, TEXT("BLOCK"))
+				//CALCUTE VALUES WITH SHIELD DEFENSES
+				Damage -= (Damage / 100.f) * Target->Shield->PhysicalDamageReduction;
+			Target->HealthComponent->GetDamage(Damage, 0.0f, StaggerType);
+			if (Target->Shield->PhysicalMaterial)
+			{
+				ApplyHitEffect(Target->Shield->PhysicalMaterial);
+			}
 			return;
 		}
 	}
-	float Damage = Values.BaseDamage * DamageMultiplier;
 	Target->HealthComponent->GetDamage(Damage, Values.PoiseDamage, StaggerType);
+	ApplyHitEffect(Target->PhysicalMaterial);
 }
 
 void UCharacterWeapon::ApplyHitEffect(UPhysicalMaterial* PhysicalMaterial)
@@ -129,10 +138,10 @@ bool UCharacterWeapon::CheckBlockRadius(AEternal_Grace_ArenaCharacter* Target)
 	float Degrees = UKismetMathLibrary::DegAcos(DotProduct);
 	if (Degrees <= 90.0f)
 	{
-			return true;
+		return true;
 	}
 	else return false;
-	
+
 }
 
 

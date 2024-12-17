@@ -21,5 +21,7 @@ public:
 	//STABILITY REDUCES THE STAMINA CONSUMPTION PER SUCESSFULL BLOCK
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Combat, meta = (AllowPrivateAccess))
 	float Stability;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Physics, meta = (AllowPrivateAccess))
+	UPhysicalMaterial* PhysicalMaterial;
 	
 };

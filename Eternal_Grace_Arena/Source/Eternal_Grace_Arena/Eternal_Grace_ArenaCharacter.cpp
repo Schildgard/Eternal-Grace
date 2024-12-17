@@ -15,6 +15,7 @@
 #include "Kismet/KismetMathLibrary.h"
 #include "I_Targetable.h"
 #include "CharacterWeapon.h"
+#include "CharacterShield.h"
 #include "HealthComponent.h"
 
 DEFINE_LOG_CATEGORY(LogTemplateCharacter);
@@ -62,9 +63,12 @@ AEternal_Grace_ArenaCharacter::AEternal_Grace_ArenaCharacter()
 	LockedOnTarget = nullptr;
 	PhysicalMaterial = nullptr;
 	WeaponSocket = FName("socket_weaponGrip");
+	ShieldSocket = FName("socket_shieldGrip");
 
 	Weapon = CreateDefaultSubobject<UCharacterWeapon>("Weapon Component");
 	Weapon->SetupAttachment(GetMesh(), WeaponSocket);
+	Shield = CreateDefaultSubobject<UCharacterShield>("Shield Component");
+	Shield->SetupAttachment(GetMesh(), ShieldSocket);
 	HealthComponent = CreateDefaultSubobject<UHealthComponent>(TEXT("Health"));
 
 }

@@ -3,6 +3,7 @@
 
 #include "HealthComponent.h"
 #include "Eternal_Grace_ArenaCharacter.h"
+#include "CharacterAnimInstance.h"
 
 
 // Sets default values for this component's properties
@@ -46,7 +47,11 @@ void UHealthComponent::GetDamage(float IncomingDamage, float PoiseDamage, EStagg
 
 	CurrentHealth -= IncomingDamage;
 	CurrentPoise -= PoiseDamage;
-	if (Character->StaggerAnims[0])
+	if (Character->CharacterAnimationInstance->isGuarding)
+	{
+
+	}
+	else if (Character->StaggerAnims[0])
 	{
 		CurrentPoise = MaxPoise;
 		switch (StaggerType)
@@ -70,12 +75,6 @@ void UHealthComponent::GetDamage(float IncomingDamage, float PoiseDamage, EStagg
 			Character->PlayAnimMontage(Character->StaggerAnims[0]); //REMOVE THIS
 			break;
 		}
-		UE_LOG(LogTemp, Warning, TEXT("Hit AnimPlay"))
-
-	}
-	else
-	{
-		UE_LOG(LogTemp, Warning, TEXT("You Failed to stand my ground"))
 	}
 
 	if (CurrentHealth <= 0)

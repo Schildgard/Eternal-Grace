@@ -12,6 +12,7 @@ class UCameraComponent;
 class UInputMappingContext;
 class UInputAction;
 class UCharacterWeapon;
+class UCharacterShield;
 class UHealthComponent;
 struct FInputActionValue;
 
@@ -116,6 +117,11 @@ public:
 	UCharacterWeapon* Weapon;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Weapon, meta = (AllowPrivateAccess))
 	FName WeaponSocket;
+	//SHIELD
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Weapon, meta = (AllowPrivateAccess))
+	UCharacterShield* Shield;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Weapon, meta = (AllowPrivateAccess))
+	FName ShieldSocket;
 	//LOCK ON SYSTEM
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = LockOn, meta = (AllowPrivateAccess))
 	TArray<TEnumAsByte<EObjectTypeQuery>> ObjectTypes;
