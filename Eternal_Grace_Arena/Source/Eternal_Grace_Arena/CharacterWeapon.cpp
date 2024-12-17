@@ -47,10 +47,6 @@ void UCharacterWeapon::OnOverlapBegin(UPrimitiveComponent* OverlappedComponent, 
 			DealDamage(TargetActor);
 			HittedActors.AddUnique(TargetActor);
 		}
-		//if (TargetActor->PhysicalMaterial)
-		//{
-		//	ApplyHitEffect(TargetActor->PhysicalMaterial);
-		//}
 	}
 	else if (TargetActor == nullptr)
 	{
@@ -84,6 +80,7 @@ void UCharacterWeapon::DealDamage(AEternal_Grace_ArenaCharacter* Target)
 			return;
 		}
 	}
+	Target->CharacterAnimationInstance->isGuarding = false; //When Character is attacked from behind, he loses his guard. It is probably better to give HealthComponent an additional GetChipDamage Function, so the Weapon does not influence the AnimationInstance of a character
 	Target->HealthComponent->GetDamage(Damage, Values.PoiseDamage, StaggerType);
 	ApplyHitEffect(Target->PhysicalMaterial);
 }

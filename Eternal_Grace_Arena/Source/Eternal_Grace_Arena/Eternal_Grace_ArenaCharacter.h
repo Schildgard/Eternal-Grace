@@ -78,12 +78,12 @@ class AEternal_Grace_ArenaCharacter : public ACharacter
 	//GUARD
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animations, meta = (AllowPrivateAccess))
 	UAnimMontage* GuardBreakEvent;
+
+public:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animations, meta = (AllowPrivateAccess))
 	UAnimMontage* Block;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animations, meta = (AllowPrivateAccess))
 	UAnimMontage* BlockHeavyAttack;
-
-public:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = HitEffect, meta = (AllowPrivateAccess))
 	UPhysicalMaterial* PhysicalMaterial;
 	//STAGGER

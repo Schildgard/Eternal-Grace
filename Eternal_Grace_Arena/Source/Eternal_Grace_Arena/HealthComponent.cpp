@@ -49,7 +49,26 @@ void UHealthComponent::GetDamage(float IncomingDamage, float PoiseDamage, EStagg
 	CurrentPoise -= PoiseDamage;
 	if (Character->CharacterAnimationInstance->isGuarding)
 	{
-
+		switch (StaggerType)
+		{
+		case EStaggeringType::NormalStagger:
+			Character->PlayAnimMontage(Character->Block);
+			break;
+		case EStaggeringType::HeavyStagger:
+			Character->PlayAnimMontage(Character->BlockHeavyAttack);
+			break;
+		case EStaggeringType::KnockbackStagger:
+			Character->PlayAnimMontage(Character->BlockHeavyAttack);
+			break;
+		case EStaggeringType::ThrowupStagger:
+			Character->PlayAnimMontage(Character->BlockHeavyAttack);
+			break;
+		case EStaggeringType::CrushdownStagger:
+			Character->PlayAnimMontage(Character->BlockHeavyAttack);
+			break;
+		case EStaggeringType::NoStagger:
+			break;
+		}
 	}
 	else if (Character->StaggerAnims[0])
 	{
