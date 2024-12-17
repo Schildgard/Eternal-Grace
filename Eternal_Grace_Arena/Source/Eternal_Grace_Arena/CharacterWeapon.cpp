@@ -65,23 +65,21 @@ void UCharacterWeapon::OnOverlapBegin(UPrimitiveComponent* OverlappedComponent, 
 void UCharacterWeapon::DealDamage(AEternal_Grace_ArenaCharacter* Target)
 {
 	float Damage = Values.BaseDamage * DamageMultiplier;
-	if (Target->Shield && Target->CharacterAnimationInstance->isGuarding)
+	float DamageDirection = CalculateAttackAngle(Target);
+
+
+	if (Target->Shield && Target->CharacterAnimationInstance->isGuarding && DamageDirection <= 45.0f)
 	{
-		if (CheckBlockRadius(Target) == true)
+		UE_LOG(LogTemp, Warning, TEXT("BLOCK"))
+		Target->HealthComponent->BlockDamage(Damage, 0.0f,DamageDirection, StaggerType, Cast<AEternal_Grace_ArenaCharacter>(WeaponOwner)); //CHANGE THIS CAST LATER TO FIXED VARIABLE
+		if (Target->Shield->PhysicalMaterial)
 		{
-			UE_LOG(LogTemp, Warning, TEXT("BLOCK"))
-				//CALCUTE VALUES WITH SHIELD DEFENSES
-				Damage -= (Damage / 100.f) * Target->Shield->PhysicalDamageReduction;
-			Target->HealthComponent->GetDamage(Damage, 0.0f, StaggerType);
-			if (Target->Shield->PhysicalMaterial)
-			{
-				ApplyHitEffect(Target->Shield->PhysicalMaterial);
-			}
-			return;
+			ApplyHitEffect(Target->Shield->PhysicalMaterial);
 		}
+		return;
 	}
-	Target->CharacterAnimationInstance->isGuarding = false; //When Character is attacked from behind, he loses his guard. It is probably better to give HealthComponent an additional GetChipDamage Function, so the Weapon does not influence the AnimationInstance of a character
-	Target->HealthComponent->GetDamage(Damage, Values.PoiseDamage, StaggerType);
+	//Target->CharacterAnimationInstance->isGuarding = false; //When Character is attacked from behind, he loses his guard. It is probably better to give HealthComponent an additional GetChipDamage Function, so the Weapon does not influence the AnimationInstance of a character
+	Target->HealthComponent->GetDamage(Damage, Values.PoiseDamage, DamageDirection, StaggerType, Cast<AEternal_Grace_ArenaCharacter>(WeaponOwner));
 	ApplyHitEffect(Target->PhysicalMaterial);
 }
 
@@ -122,7 +120,7 @@ void UCharacterWeapon::ResetAttackValues()
 	HittedActors.Empty();
 }
 
-bool UCharacterWeapon::CheckBlockRadius(AEternal_Grace_ArenaCharacter* Target)
+float UCharacterWeapon::CalculateAttackAngle(AEternal_Grace_ArenaCharacter* Target)
 {
 
 	//CHECK DIRECTION
@@ -133,11 +131,7 @@ bool UCharacterWeapon::CheckBlockRadius(AEternal_Grace_ArenaCharacter* Target)
 	FVector ForwardDirectionOfTarget = Target->GetActorForwardVector();
 	float DotProduct = UKismetMathLibrary::Dot_VectorVector(Direction, ForwardDirectionOfTarget);
 	float Degrees = UKismetMathLibrary::DegAcos(DotProduct);
-	if (Degrees <= 90.0f)
-	{
-		return true;
-	}
-	else return false;
+	return Degrees;
 
 }
 

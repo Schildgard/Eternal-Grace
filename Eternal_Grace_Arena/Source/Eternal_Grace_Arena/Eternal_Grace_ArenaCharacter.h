@@ -89,6 +89,8 @@ public:
 	//STAGGER
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animations, meta = (AllowPrivateAccess))
 	TArray<UAnimMontage*> StaggerAnims;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animations, meta = (AllowPrivateAccess))
+	TArray<UAnimMontage*> StaggerAnimsBack;
 
 	//DODGE
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animations, meta = (AllowPrivateAccess))
@@ -180,9 +182,10 @@ protected:
 	void EngageLockOn(AActor* Target);
 	UFUNCTION(CallInEditor, Category = Actions)
 	void DisengageLockOn();
+	public:
 	UFUNCTION(CallInEditor, Category = Actions)
 	void RotateTowardsTarget(AActor* Target);
-
+	protected:
 	//GUARD
 	UFUNCTION(CallInEditor, Category = Actions)
 	virtual void Guard();

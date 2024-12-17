@@ -63,6 +63,6 @@ public:
 	UFUNCTION()
 	void ResetAttackValues();
 	UFUNCTION()
-	bool CheckBlockRadius(AEternal_Grace_ArenaCharacter* Target);
+	float CalculateAttackAngle(AEternal_Grace_ArenaCharacter* Target);
 	
 };

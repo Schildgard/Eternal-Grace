@@ -4,6 +4,8 @@
 #include "HealthComponent.h"
 #include "Eternal_Grace_ArenaCharacter.h"
 #include "CharacterAnimInstance.h"
+#include "CharacterShield.h"
+#include "Kismet/KismetMathLibrary.h"
 
 
 // Sets default values for this component's properties
@@ -40,15 +42,89 @@ void UHealthComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActo
 }
 
 
-void UHealthComponent::GetDamage(float IncomingDamage, float PoiseDamage, EStaggeringType StaggerType)
+void UHealthComponent::GetDamage(float IncomingDamage, float PoiseDamage, float DamageDirection, EStaggeringType StaggerType, AEternal_Grace_ArenaCharacter* DamageSource)
 {
 	AActor* Owner = GetOwner();
 	AEternal_Grace_ArenaCharacter* Character = Cast<AEternal_Grace_ArenaCharacter>(Owner);
 
 	CurrentHealth -= IncomingDamage;
 	CurrentPoise -= PoiseDamage;
-	if (Character->CharacterAnimationInstance->isGuarding)
+
+
+	//ATTACK FROM BEHIND
+	if (DamageDirection >= 135.0f && DamageDirection <= 180.0f)
 	{
+		UE_LOG(LogTemp, Warning, TEXT("Attack From Behind"))
+		CurrentPoise = MaxPoise; //REMOVE???
+		switch (StaggerType)
+		{
+		case EStaggeringType::NormalStagger:
+			Character->PlayAnimMontage(Character->StaggerAnimsBack[0]);
+			break;
+		case EStaggeringType::HeavyStagger:
+			Character->PlayAnimMontage(Character->StaggerAnimsBack[1]);
+			break;
+		case EStaggeringType::KnockbackStagger:
+			Character->PlayAnimMontage(Character->StaggerAnimsBack[2]);
+			break;
+		case EStaggeringType::ThrowupStagger:
+			Character->PlayAnimMontage(Character->StaggerAnimsBack[3]);
+			break;
+		case EStaggeringType::CrushdownStagger:
+			Character->PlayAnimMontage(Character->StaggerAnimsBack[4]);
+			break;
+		case EStaggeringType::NoStagger:
+			Character->PlayAnimMontage(Character->StaggerAnims[0]); //REMOVE THIS
+			break;
+		}
+	}
+	else //FRONTAL ATTACK WITHOUT GUARD OR SIDE ATTACK
+	{
+		UE_LOG(LogTemp, Warning, TEXT("Attack From Front or Side"))
+		CurrentPoise = MaxPoise; //REMOVE???
+		switch (StaggerType)
+		{
+		case EStaggeringType::NormalStagger:
+			Character->PlayAnimMontage(Character->StaggerAnims[0]);
+			break;
+		case EStaggeringType::HeavyStagger:
+			Character->RotateTowardsTarget(DamageSource);
+			Character->PlayAnimMontage(Character->StaggerAnims[1]);
+			break;
+		case EStaggeringType::KnockbackStagger:
+			Character->RotateTowardsTarget(DamageSource);
+			Character->PlayAnimMontage(Character->StaggerAnims[2]);
+			break;
+		case EStaggeringType::ThrowupStagger:
+			Character->RotateTowardsTarget(DamageSource);
+			Character->PlayAnimMontage(Character->StaggerAnims[3]);
+			break;
+		case EStaggeringType::CrushdownStagger:
+			Character->RotateTowardsTarget(DamageSource);
+			Character->PlayAnimMontage(Character->StaggerAnims[4]);
+			break;
+		case EStaggeringType::NoStagger:
+			Character->PlayAnimMontage(Character->StaggerAnims[0]); //REMOVE THIS
+			break;
+		}
+	}
+	if (CurrentHealth <= 0)
+	{
+		CurrentHealth = 0;
+		Die();
+	}
+}
+
+void UHealthComponent::BlockDamage(float Damage, float PoiseDamage, float DamageDirection, EStaggeringType StaggerType, AEternal_Grace_ArenaCharacter* DamageSource)
+{
+
+	AActor* Owner = GetOwner();
+	AEternal_Grace_ArenaCharacter* Character = Cast<AEternal_Grace_ArenaCharacter>(Owner);
+
+	Damage = (Damage / 100) * Character->Shield->PhysicalDamageReduction;
+	CurrentHealth -= Damage;
+	CurrentPoise -= PoiseDamage;
+
 		switch (StaggerType)
 		{
 		case EStaggeringType::NormalStagger:
@@ -69,39 +145,6 @@ void UHealthComponent::GetDamage(float IncomingDamage, float PoiseDamage, EStagg
 		case EStaggeringType::NoStagger:
 			break;
 		}
-	}
-	else if (Character->StaggerAnims[0])
-	{
-		CurrentPoise = MaxPoise;
-		switch (StaggerType)
-		{
-		case EStaggeringType::NormalStagger:
-			Character->PlayAnimMontage(Character->StaggerAnims[0]);
-			break;
-		case EStaggeringType::HeavyStagger:
-			Character->PlayAnimMontage(Character->StaggerAnims[1]);
-			break;
-		case EStaggeringType::KnockbackStagger:
-			Character->PlayAnimMontage(Character->StaggerAnims[2]);
-			break;
-		case EStaggeringType::ThrowupStagger:
-			Character->PlayAnimMontage(Character->StaggerAnims[3]);
-			break;
-		case EStaggeringType::CrushdownStagger:
-			Character->PlayAnimMontage(Character->StaggerAnims[4]);
-			break;
-		case EStaggeringType::NoStagger:
-			Character->PlayAnimMontage(Character->StaggerAnims[0]); //REMOVE THIS
-			break;
-		}
-	}
-
-	if (CurrentHealth <= 0)
-	{
-		CurrentHealth = 0;
-		Die();
-	}
-
 }
 
 void UHealthComponent::Die()

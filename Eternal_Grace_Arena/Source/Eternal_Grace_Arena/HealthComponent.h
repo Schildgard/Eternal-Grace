@@ -7,6 +7,7 @@
 #include "StaggeringType.h"
 #include "HealthComponent.generated.h"
 
+class AEternal_Grace_ArenaCharacter;
 UCLASS(ClassGroup = (Custom), meta = (BlueprintSpawnableComponent))
 class ETERNAL_GRACE_ARENA_API UHealthComponent : public UActorComponent
 {
@@ -26,7 +27,9 @@ protected:
 	float CurrentPoise;
 public:
 	UFUNCTION(CallInEditor, Category = Actions)
-	virtual void GetDamage(float Damage, float PoiseDamage, EStaggeringType StaggerType);
+	virtual void GetDamage(float Damage, float PoiseDamage, float DamageDirection, EStaggeringType StaggerType, AEternal_Grace_ArenaCharacter* DamageSource);
+	UFUNCTION(CallInEditor, Category = Actions)
+	virtual void BlockDamage(float Damage, float PoiseDamage, float DamageDirection, EStaggeringType StaggerType, AEternal_Grace_ArenaCharacter* DamageSource);
 
 protected:
 	// Called when the game starts
