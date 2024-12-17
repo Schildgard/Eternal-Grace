@@ -400,7 +400,7 @@ TArray<AActor*> AEternal_Grace_ArenaCharacter::ScanForTargets()
 		{
 			AActor* HitActor = Hit.GetActor();
 			//ADD HITTED ACTOR TO IGNORE AND VIABLE TARGET LIST
-			if (HitActor && !ActorsToIgnore.Contains(HitActor) && HitActor->Implements<UI_Targetable>())
+			if (HitActor && HitActor != this && !ActorsToIgnore.Contains(HitActor) && HitActor->Implements<UI_Targetable>())
 			{
 				ScannedActors.Add(HitActor);
 				ActorsToIgnore.Add(HitActor);
