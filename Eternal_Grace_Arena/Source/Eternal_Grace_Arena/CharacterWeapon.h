@@ -62,5 +62,7 @@ public:
 	//RESET ATTACK VALUES IS CALLED ON NOTIFY END, TO RESET THE MULTIPLIER AND STAGGERTYPE TO DEFAULTCONSTRUCTOR VALUES
 	UFUNCTION()
 	void ResetAttackValues();
+	UFUNCTION()
+	bool CheckBlockRadius(AEternal_Grace_ArenaCharacter* Target);
 	
 };

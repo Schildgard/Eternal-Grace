@@ -8,6 +8,8 @@
 #include "HitEffectData.h"
 #include "NiagaraFunctionLibrary.h"
 #include "Kismet/GameplayStatics.h"
+#include "Kismet/KismetMathLibrary.h"
+#include "CharacterAnimInstance.h"
 
 UCharacterWeapon::UCharacterWeapon()
 {
@@ -65,6 +67,14 @@ void UCharacterWeapon::OnOverlapBegin(UPrimitiveComponent* OverlappedComponent, 
 
 void UCharacterWeapon::DealDamage(AEternal_Grace_ArenaCharacter* Target)
 {
+	if(Target->CharacterAnimationInstance->isGuarding)
+	{
+		if(CheckBlockRadius(Target) == true)
+		{
+			UE_LOG(LogTemp, Warning, TEXT("BLOCK"))
+			return;
+		}
+	}
 	float Damage = Values.BaseDamage * DamageMultiplier;
 	Target->HealthComponent->GetDamage(Damage, Values.PoiseDamage, StaggerType);
 }
@@ -104,6 +114,25 @@ void UCharacterWeapon::ResetAttackValues()
 	StaggerType = EStaggeringType::NormalStagger;
 	DamageMultiplier = 1.0f;
 	HittedActors.Empty();
+}
+
+bool UCharacterWeapon::CheckBlockRadius(AEternal_Grace_ArenaCharacter* Target)
+{
+
+	//CHECK DIRECTION
+	FVector OwnerPosition = WeaponOwner->GetActorLocation();
+	FVector TargetPosition = Target->GetActorLocation();
+	FVector Direction = OwnerPosition - TargetPosition;
+	Direction.Normalize(0.0001f);
+	FVector ForwardDirectionOfTarget = Target->GetActorForwardVector();
+	float DotProduct = UKismetMathLibrary::Dot_VectorVector(Direction, ForwardDirectionOfTarget);
+	float Degrees = UKismetMathLibrary::DegAcos(DotProduct);
+	if (Degrees <= 90.0f)
+	{
+			return true;
+	}
+	else return false;
+	
 }
 
 
