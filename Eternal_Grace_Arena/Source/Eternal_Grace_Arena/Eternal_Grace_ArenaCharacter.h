@@ -103,6 +103,9 @@ public:
 	//Death
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animations, meta = (AllowPrivateAccess))
 	UAnimMontage* DeathAnimation;
+	//Death
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animations, meta = (AllowPrivateAccess))
+	UAnimMontage* DeathAnimationWithKnockBack;
 
 	//CUSTOM VALUE PROPERTIES
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Combat, meta = (AllowPrivateAccess))

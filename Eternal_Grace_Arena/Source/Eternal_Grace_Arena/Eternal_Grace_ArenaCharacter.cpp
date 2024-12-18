@@ -283,7 +283,7 @@ void AEternal_Grace_ArenaCharacter::HeavyAttack()
 void AEternal_Grace_ArenaCharacter::ChargeHeavyAttack()
 {
 	//When Heavy Attack Button is first pressed, Player goes into Charge Stand
-	if (!CharacterAnimationInstance->isCharging && !CharacterAnimationInstance->isAttacking)
+	if (!CharacterAnimationInstance->isCharging && !CharacterAnimationInstance->isAttacking && !CharacterAnimationInstance->isInHeavyAttack)
 	{
 		CharacterAnimationInstance->isCharging = true;
 		PlayAnimMontage(ChargeAttack, 1.0f);

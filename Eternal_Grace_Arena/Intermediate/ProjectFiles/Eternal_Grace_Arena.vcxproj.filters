@@ -73,6 +73,12 @@
     <ClCompile Include="..\..\Source\Eternal_Grace_Arena\CharacterWeapon.h">
       <Filter>Source\Eternal_Grace_Arena</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\Eternal_Grace_Arena\CustomPlayerController.cpp">
+      <Filter>Source\Eternal_Grace_Arena</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Eternal_Grace_Arena\CustomPlayerController.h">
+      <Filter>Source\Eternal_Grace_Arena</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\Eternal_Grace_Arena\EternalGrace_BaseActor.cpp">
       <Filter>Source\Eternal_Grace_Arena</Filter>
     </ClCompile>

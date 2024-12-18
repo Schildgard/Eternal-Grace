@@ -92,6 +92,12 @@ void UHealthComponent::GetDamage(float IncomingDamage, float PoiseDamage, float 
 			Character->PlayAnimMontage(Character->StaggerAnims[1]);
 			break;
 		case EStaggeringType::KnockbackStagger:
+			if (CurrentHealth <= 0)
+			{
+				Character->RotateTowardsTarget(DamageSource);
+				Character->PlayAnimMontage(Character->DeathAnimationWithKnockBack);
+				return;
+			}
 			Character->RotateTowardsTarget(DamageSource);
 			Character->PlayAnimMontage(Character->StaggerAnims[2]);
 			break;
@@ -155,7 +161,7 @@ void UHealthComponent::Die()
 
 	if (Character)
 	{
-
+		Character->PlayAnimMontage(Character->DeathAnimation);
 	}
 	else return;
 
