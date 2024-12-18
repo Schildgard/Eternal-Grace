@@ -5,6 +5,8 @@
 #include "CoreMinimal.h"
 #include "GameFramework/PlayerController.h"
 #include "Blueprint/UserWidget.h"
+#include "Eternal_Grace_ArenaCharacter.h"
+#include "Eternal_Grace_ProgressBar.h"
 #include "CustomPlayerController.generated.h"
 
 /**
@@ -18,14 +20,18 @@ class ETERNAL_GRACE_ARENA_API ACustomPlayerController : public APlayerController
 
 public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "User Interface", meta = (AllowPrivateAccess))
-	TSubclassOf<UUserWidget> HUDWidgetClass;
+	TSubclassOf<UEternal_Grace_ProgressBar> HUDWidgetClass;
 
 	UPROPERTY()
-	UUserWidget* HUDWidget;
+	UEternal_Grace_ProgressBar* HUDWidget;
 
-protected:
+	UPROPERTY()
+	AEternal_Grace_ArenaCharacter* PlayerCharacter;
+
+ protected:
 
 	virtual void BeginPlay()override;
+	virtual void Tick(float DeltaSeconds)override;
 
 
 };
