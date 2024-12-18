@@ -7,6 +7,7 @@
 #include "Blueprint/UserWidget.h"
 #include "Eternal_Grace_ArenaCharacter.h"
 #include "Eternal_Grace_ProgressBar.h"
+#include "Player_UI_Bars.h"
 #include "CustomPlayerController.generated.h"
 
 /**
@@ -20,10 +21,10 @@ class ETERNAL_GRACE_ARENA_API ACustomPlayerController : public APlayerController
 
 public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "User Interface", meta = (AllowPrivateAccess))
-	TSubclassOf<UEternal_Grace_ProgressBar> HUDWidgetClass;
+	TSubclassOf<UPlayer_UI_Bars> HUDWidgetClass;
 
 	UPROPERTY()
-	UEternal_Grace_ProgressBar* HUDWidget;
+	UPlayer_UI_Bars* HUDWidget;
 
 	UPROPERTY()
 	AEternal_Grace_ArenaCharacter* PlayerCharacter;

@@ -22,7 +22,7 @@ void AEternal_Grace_ArenaEnemy::BeginPlay()
 			UUserWidget* Widget = HPBarComponent->GetWidget();
 			if (Widget)
 			{
-				HealthbarWidget = Cast<UEternal_Grace_ProgressBar>(Widget);
+				HealthbarWidget = Cast<UEnemy_UI_Healthbar>(Widget);
 				if (HealthbarWidget == nullptr)
 				{
 					UE_LOG(LogTemp, Warning, TEXT("Failed Widget to CustomProgressbar"))
@@ -46,7 +46,7 @@ void AEternal_Grace_ArenaEnemy::Tick(float DeltaSeconds)
 	{
 		if(HealthComponent)
 		{
-		HealthbarWidget->UpdateProgressBar(HealthComponent->MaxHealth, HealthComponent->CurrentHealth);
+		HealthbarWidget->UpdateProgressBar(HealthbarWidget->Healthbar,HealthComponent->MaxHealth, HealthComponent->CurrentHealth);
 		}
 		else
 		{

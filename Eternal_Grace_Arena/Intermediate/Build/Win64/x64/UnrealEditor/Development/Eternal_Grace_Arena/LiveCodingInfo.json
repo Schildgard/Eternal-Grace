@@ -8,6 +8,7 @@
 			"CharacterShield.gen.cpp.obj",
 			"CharacterWeapon.gen.cpp.obj",
 			"CustomPlayerController.gen.cpp.obj",
+			"Enemy_UI_Healthbar.gen.cpp.obj",
 			"EternalGrace_BaseActor.gen.cpp.obj",
 			"Eternal_Grace_Arena.init.gen.cpp.obj",
 			"Eternal_Grace_ArenaCharacter.gen.cpp.obj",
@@ -19,6 +20,7 @@
 			"I_Targetable.gen.cpp.obj",
 			"NS_WeaponSwing.gen.cpp.obj",
 			"PlayerCharacter.gen.cpp.obj",
+			"Player_UI_Bars.gen.cpp.obj",
 			"StaggeringType.gen.cpp.obj",
 			"PerModuleInline.gen.cpp.obj",
 			"AnimNotify_PlayRandomSound.cpp.obj",
@@ -27,6 +29,7 @@
 			"CharacterShield.cpp.obj",
 			"CharacterWeapon.cpp.obj",
 			"CustomPlayerController.cpp.obj",
+			"Enemy_UI_Healthbar.cpp.obj",
 			"EternalGrace_BaseActor.cpp.obj",
 			"Eternal_Grace_Arena.cpp.obj",
 			"Eternal_Grace_ArenaCharacter.cpp.obj",
@@ -38,6 +41,7 @@
 			"I_Targetable.cpp.obj",
 			"NS_WeaponSwing.cpp.obj",
 			"PlayerCharacter.cpp.obj",
+			"Player_UI_Bars.cpp.obj",
 			"StaggeringType.cpp.obj"
 		]
 	}

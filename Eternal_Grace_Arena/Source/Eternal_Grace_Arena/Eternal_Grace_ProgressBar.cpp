@@ -5,7 +5,7 @@
 #include "HealthComponent.h"
 
 
-void UEternal_Grace_ProgressBar::UpdateProgressBar(float MaxHealth, float CurrentHealth)
+void UEternal_Grace_ProgressBar::UpdateProgressBar(UProgressBar* Progressbar, float MaxHealth, float CurrentHealth)
 {
 	float Healthpercentage = CurrentHealth / MaxHealth;
 	Progressbar->SetPercent(Healthpercentage);

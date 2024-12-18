@@ -16,13 +16,13 @@ class ETERNAL_GRACE_ARENA_API UEternal_Grace_ProgressBar : public UUserWidget
 	GENERATED_BODY()
 
 
-public:
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = UI, meta = (BindWidget))
-	UProgressBar* Progressbar;
+//public:
+//	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = UI, meta = (BindWidget))
+//	UProgressBar* Progressbar;
 
 public:
 	UFUNCTION()
-	void UpdateProgressBar(float MaxHealth, float CurrentHealth);
+	virtual void UpdateProgressBar(UProgressBar* Progressbar, float MaxHealth, float CurrentHealth);
 	
 	
 };

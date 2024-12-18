@@ -16,7 +16,7 @@ void ACustomPlayerController::BeginPlay()
 
 	if(HUDWidgetClass != nullptr)
 	{
-		HUDWidget = CreateWidget<UEternal_Grace_ProgressBar>(this, HUDWidgetClass);
+		HUDWidget = CreateWidget<UPlayer_UI_Bars>(this, HUDWidgetClass);
 		HUDWidget->AddToViewport();
 	}
 	else
@@ -31,6 +31,5 @@ void ACustomPlayerController::BeginPlay()
 void ACustomPlayerController::Tick(float DeltaSeconds)
 {
 	Super::Tick(DeltaSeconds);
-	//PlayerCharacter->HealthComponent->UpdateProgressbar(PlayerCharacter->HealthComponent->MaxHealth, PlayerCharacter->HealthComponent->CurrentHealth);
-	HUDWidget->UpdateProgressBar(PlayerCharacter->HealthComponent->MaxHealth, PlayerCharacter->HealthComponent->CurrentHealth);
+	HUDWidget->UpdateProgressBar(HUDWidget->Healthbar,PlayerCharacter->HealthComponent->MaxHealth, PlayerCharacter->HealthComponent->CurrentHealth);
 }

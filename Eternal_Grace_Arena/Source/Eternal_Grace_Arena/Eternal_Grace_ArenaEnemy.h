@@ -8,6 +8,7 @@
 #include "HealthComponent.h"
 #include "Components/WidgetComponent.h"
 #include "Eternal_Grace_ProgressBar.h"
+#include "Enemy_UI_Healthbar.h"
 #include "Eternal_Grace_ArenaEnemy.generated.h"
 
 /**
@@ -25,7 +26,7 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = UI, meta = (AllowPrivateAccess))
 	UWidgetComponent* HPBarComponent;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = UI, meta = (AllowPrivateAccess))
-	UEternal_Grace_ProgressBar* HealthbarWidget;
+	UEnemy_UI_Healthbar* HealthbarWidget;
 
 protected:
 	virtual void BeginPlay()override;
