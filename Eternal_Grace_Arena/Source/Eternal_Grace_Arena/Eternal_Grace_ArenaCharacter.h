@@ -14,6 +14,7 @@ class UInputAction;
 class UCharacterWeapon;
 class UCharacterShield;
 class UHealthComponent;
+//class UEternal_Grace_Progressbar;
 struct FInputActionValue;
 
 DECLARE_LOG_CATEGORY_EXTERN(LogTemplateCharacter, Log, All);
@@ -112,6 +113,9 @@ public:
 	float currentChargePower;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Combat, meta = (AllowPrivateAccess))
 	float maxChargePower = 2.5f;
+
+	//UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Combat, meta = (AllowPrivateAccess))
+	//UEternal_Grace_Progressbar* Healthbar;
 
 	//GENERAL
 	UPROPERTY()

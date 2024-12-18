@@ -17,6 +17,7 @@
 #include "CharacterWeapon.h"
 #include "CharacterShield.h"
 #include "HealthComponent.h"
+//#include "Eternal_Grace_ProgressBar.h"
 
 DEFINE_LOG_CATEGORY(LogTemplateCharacter);
 
@@ -148,6 +149,11 @@ void AEternal_Grace_ArenaCharacter::BeginPlay()
 	else
 	{
 		UE_LOG(LogTemp, Warning, TEXT("Failed to setup collision for Weapon"))
+	}
+
+	if(HealthComponent == nullptr)
+	{
+		UE_LOG(LogTemp, Warning, TEXT("HealthComponent is null"))
 	}
 
 

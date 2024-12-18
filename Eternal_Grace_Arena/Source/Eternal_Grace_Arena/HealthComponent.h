@@ -12,18 +12,18 @@ UCLASS(ClassGroup = (Custom), meta = (BlueprintSpawnableComponent))
 class ETERNAL_GRACE_ARENA_API UHealthComponent : public UActorComponent
 {
 	GENERATED_BODY()
-	UHealthComponent();
 
-protected:
+public:
+	UHealthComponent();
 	// Sets default values for this component's properties
 
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = BaseValues, meta = (AllowPrivateAccess))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = BaseValues, meta = (AllowPrivateAccess))
 	float MaxHealth;
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = BaseValues, meta = (AllowPrivateAccess))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = BaseValues, meta = (AllowPrivateAccess))
 	float CurrentHealth;
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = BaseValues, meta = (AllowPrivateAccess))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = BaseValues, meta = (AllowPrivateAccess))
 	float MaxPoise;
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = BaseValues, meta = (AllowPrivateAccess))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = BaseValues, meta = (AllowPrivateAccess))
 	float CurrentPoise;
 public:
 	UFUNCTION(CallInEditor, Category = Actions)

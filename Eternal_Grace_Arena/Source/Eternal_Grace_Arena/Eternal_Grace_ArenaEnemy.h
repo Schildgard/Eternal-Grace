@@ -5,7 +5,9 @@
 #include "CoreMinimal.h"
 #include "Eternal_Grace_ArenaCharacter.h"
 #include "Blueprint/UserWidget.h"
+#include "HealthComponent.h"
 #include "Components/WidgetComponent.h"
+#include "Eternal_Grace_ProgressBar.h"
 #include "Eternal_Grace_ArenaEnemy.generated.h"
 
 /**
@@ -20,12 +22,13 @@ class ETERNAL_GRACE_ARENA_API AEternal_Grace_ArenaEnemy : public AEternal_Grace_
 public:
 //	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = UI, meta = (AllowPrivateAccess))
 //	TSubclassOf<UUserWidget> UIClass;
-//	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = UI, meta = (AllowPrivateAccess))
-//	UUserWidget* HBBar;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = UI, meta = (AllowPrivateAccess))
 	UWidgetComponent* HPBarComponent;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = UI, meta = (AllowPrivateAccess))
+	UEternal_Grace_ProgressBar* HealthbarWidget;
 
 protected:
 	virtual void BeginPlay()override;
+	virtual void Tick(float DeltaSeconds)override;
 	
 };
