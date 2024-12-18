@@ -7,20 +7,16 @@
 #include "PlayerCharacter.generated.h"
 
 /**
- * 
+ *
  */
 UCLASS()
 class ETERNAL_GRACE_ARENA_API APlayerCharacter : public AEternal_Grace_ArenaCharacter
 {
 	GENERATED_BODY()
 
-//public:
-//	UFUNCTION()
-//	UStaticMeshComponent* GetWeaponMesh()
-//	{
-//		return Weapon;
-//	}
+	APlayerCharacter();
+protected:
+	virtual void BeginPlay()override;
+	virtual void Tick(float DeltaSeconds) override;
 
-
-	
 };
