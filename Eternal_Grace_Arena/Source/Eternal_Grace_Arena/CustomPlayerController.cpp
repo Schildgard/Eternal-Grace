@@ -3,6 +3,7 @@
 
 #include "CustomPlayerController.h"
 #include "HealthComponent.h"
+#include "StaminaComponent.h"
 
 ACustomPlayerController::ACustomPlayerController()
 {
@@ -24,7 +25,7 @@ void ACustomPlayerController::BeginPlay()
 		UE_LOG(LogTemp, Warning, TEXT("HUDWidgetClass or HudWidget could not be found"))
 	}
 
-	PlayerCharacter = Cast<AEternal_Grace_ArenaCharacter>(AcknowledgedPawn);
+	PlayerCharacter = Cast<APlayerCharacter>(AcknowledgedPawn);
 
 };
 
@@ -32,4 +33,5 @@ void ACustomPlayerController::Tick(float DeltaSeconds)
 {
 	Super::Tick(DeltaSeconds);
 	HUDWidget->UpdateProgressBar(HUDWidget->Healthbar,PlayerCharacter->HealthComponent->MaxHealth, PlayerCharacter->HealthComponent->CurrentHealth);
+	HUDWidget->UpdateProgressBar(HUDWidget->Staminabar, PlayerCharacter->StaminaComponent->MaxStamina, PlayerCharacter->StaminaComponent->CurrentStamina);
 }

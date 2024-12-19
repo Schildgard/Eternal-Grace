@@ -9,12 +9,17 @@
 /**
  *
  */
+class UStaminaComponent;
 UCLASS()
 class ETERNAL_GRACE_ARENA_API APlayerCharacter : public AEternal_Grace_ArenaCharacter
 {
 	GENERATED_BODY()
 
 	APlayerCharacter();
+public:
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = LockOn, meta = (AllowPrivateAccess))
+	UStaminaComponent* StaminaComponent;
 protected:
 	virtual void BeginPlay()override;
 	virtual void Tick(float DeltaSeconds) override;

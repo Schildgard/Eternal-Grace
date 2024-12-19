@@ -5,7 +5,8 @@
 #include "CoreMinimal.h"
 #include "GameFramework/PlayerController.h"
 #include "Blueprint/UserWidget.h"
-#include "Eternal_Grace_ArenaCharacter.h"
+//#include "Eternal_Grace_ArenaCharacter.h"
+#include "PlayerCharacter.h"
 #include "Eternal_Grace_ProgressBar.h"
 #include "Player_UI_Bars.h"
 #include "CustomPlayerController.generated.h"
@@ -27,7 +28,7 @@ public:
 	UPlayer_UI_Bars* HUDWidget;
 
 	UPROPERTY()
-	AEternal_Grace_ArenaCharacter* PlayerCharacter;
+	APlayerCharacter* PlayerCharacter;
 
  protected:
 

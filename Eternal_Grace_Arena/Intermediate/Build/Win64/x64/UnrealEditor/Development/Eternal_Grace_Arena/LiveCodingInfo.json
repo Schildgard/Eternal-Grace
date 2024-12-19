@@ -22,6 +22,7 @@
 			"PlayerCharacter.gen.cpp.obj",
 			"Player_UI_Bars.gen.cpp.obj",
 			"StaggeringType.gen.cpp.obj",
+			"StaminaComponent.gen.cpp.obj",
 			"PerModuleInline.gen.cpp.obj",
 			"AnimNotify_PlayRandomSound.cpp.obj",
 			"AnimNotify_PlaySound_RandomPitch.cpp.obj",
@@ -42,7 +43,8 @@
 			"NS_WeaponSwing.cpp.obj",
 			"PlayerCharacter.cpp.obj",
 			"Player_UI_Bars.cpp.obj",
-			"StaggeringType.cpp.obj"
+			"StaggeringType.cpp.obj",
+			"StaminaComponent.cpp.obj"
 		]
 	}
 }
