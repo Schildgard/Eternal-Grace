@@ -4,6 +4,7 @@
 #include "PlayerCharacter.h"
 #include "StaminaComponent.h"
 #include "CharacterAnimInstance.h"
+#include "CharacterWeapon.h"
 
 
 APlayerCharacter::APlayerCharacter()
@@ -42,4 +43,12 @@ void APlayerCharacter::Tick(float DeltaSeconds)
 		}
 	}
 
+}
+
+void APlayerCharacter::LightAttack()
+{
+	if(StaminaComponent->CurrentStamina >= 1.0f)
+	{
+		Super::LightAttack();
+	}
 }

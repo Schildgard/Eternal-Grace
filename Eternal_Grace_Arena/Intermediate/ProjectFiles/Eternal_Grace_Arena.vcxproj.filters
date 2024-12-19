@@ -136,6 +136,12 @@
     <ClCompile Include="..\..\Source\Eternal_Grace_Arena\I_Targetable.h">
       <Filter>Source\Eternal_Grace_Arena</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\Eternal_Grace_Arena\NS_DrainStamina.cpp">
+      <Filter>Source\Eternal_Grace_Arena</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Eternal_Grace_Arena\NS_DrainStamina.h">
+      <Filter>Source\Eternal_Grace_Arena</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\Eternal_Grace_Arena\NS_WeaponSwing.cpp">
       <Filter>Source\Eternal_Grace_Arena</Filter>
     </ClCompile>
