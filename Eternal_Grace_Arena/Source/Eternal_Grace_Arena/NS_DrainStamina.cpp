@@ -10,6 +10,7 @@ UNS_DrainStamina::UNS_DrainStamina()
 {
 	PerformingActor = nullptr;
 	OwningActor = nullptr;
+	ConsumptionMultiplier = 1.0f;
 }
 void UNS_DrainStamina::Notify(USkeletalMeshComponent* MeshComp, UAnimSequenceBase* Animation, const FAnimNotifyEventReference& EventReference)
 {
@@ -25,5 +26,5 @@ void UNS_DrainStamina::Notify(USkeletalMeshComponent* MeshComp, UAnimSequenceBas
 		}
 	}
 
-	PerformingActor->StaminaComponent->CurrentStamina -= PerformingActor->Weapon->Values.StaminaCost;
+	PerformingActor->StaminaComponent->CurrentStamina -= (PerformingActor->Weapon->Values.StaminaCost * ConsumptionMultiplier);
 };

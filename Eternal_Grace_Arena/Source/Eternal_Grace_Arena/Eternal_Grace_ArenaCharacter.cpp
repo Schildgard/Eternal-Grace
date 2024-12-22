@@ -141,7 +141,7 @@ void AEternal_Grace_ArenaCharacter::BeginPlay()
 	world = GetWorld();
 	InitializeAnimationInstance();
 
-	if(Weapon)
+	if (Weapon)
 	{
 		Weapon->OnComponentBeginOverlap.AddDynamic(Weapon, &UCharacterWeapon::OnOverlapBegin);
 		UE_LOG(LogTemp, Warning, TEXT("Setup Weapon Collision"))
@@ -151,7 +151,7 @@ void AEternal_Grace_ArenaCharacter::BeginPlay()
 		UE_LOG(LogTemp, Warning, TEXT("Failed to setup collision for Weapon"))
 	}
 
-	if(HealthComponent == nullptr)
+	if (HealthComponent == nullptr)
 	{
 		UE_LOG(LogTemp, Warning, TEXT("HealthComponent is null"))
 	}
@@ -236,7 +236,10 @@ void AEternal_Grace_ArenaCharacter::LightAttack()
 	if (!CharacterAnimationInstance->isAttacking)
 	{
 		CharacterAnimationInstance->isAttacking = true;
-
+		if (CharacterAnimationInstance->isGuarding)
+		{
+			CancelGuard(); // THIS IS NOT GOOD: BETWEEN ATTACK THERE IS A SMALL WINDOW WHERE GUARD IS ACTIVATED. NEED TO CHANGE THIS LATER
+		}
 		switch (CharacterAnimationInstance->attackCount)
 		{
 		case 0:
@@ -324,12 +327,16 @@ void AEternal_Grace_ArenaCharacter::GuardCounter()
 
 void AEternal_Grace_ArenaCharacter::Guard()
 {
-	CharacterAnimationInstance->isGuarding = true;
+	if (!CharacterAnimationInstance->isAttacking)
+	{
+		CharacterAnimationInstance->isGuarding = true;
+	}
 }
 
 void AEternal_Grace_ArenaCharacter::CancelGuard()
 {
 	CharacterAnimationInstance->isGuarding = false;
+	UE_LOG(LogTemp, Warning, TEXT("CancelGuard"))
 }
 
 void AEternal_Grace_ArenaCharacter::BlockAttack()
@@ -367,7 +374,7 @@ AActor* AEternal_Grace_ArenaCharacter::FindNearestTarget()
 	TArray<AActor*> ScannedActors = ScanForTargets();
 	if (ScannedActors.Num() <= 0)
 	{
-			UE_LOG(LogTemp, Warning, TEXT("Find Nearest Target: No Actors Scanned"))
+		UE_LOG(LogTemp, Warning, TEXT("Find Nearest Target: No Actors Scanned"))
 			return nullptr;
 	}
 

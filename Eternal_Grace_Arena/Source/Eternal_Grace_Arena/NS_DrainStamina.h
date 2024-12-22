@@ -21,6 +21,9 @@ protected:
 	AActor* OwningActor;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Weapon, meta = (AllowPrivateAccess))
 	APlayerCharacter* PerformingActor;
+	//DIFFERENT ANIMATIONS CONSUME ADDITIONAL STAMINA, WHICH IS REGULATED BY THIS NOTIFY AS WELL
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (AllowPrivateAccess))
+	float ConsumptionMultiplier;
 	virtual void Notify(USkeletalMeshComponent* MeshComp, UAnimSequenceBase* Animation, const FAnimNotifyEventReference& EventReference) override;
 	
 };
