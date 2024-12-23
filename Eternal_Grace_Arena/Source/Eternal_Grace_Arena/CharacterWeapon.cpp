@@ -115,7 +115,7 @@ void UCharacterWeapon::ApplyHitEffect(UPhysicalMaterial* PhysicalMaterial)
 
 void UCharacterWeapon::ResetAttackValues()
 {
-	StaggerType = EStaggeringType::NormalStagger;
+	StaggerType = EStaggeringType::NormalStagger; //CHANGE THIS TODO
 	DamageMultiplier = 1.0f;
 	HittedActors.Empty();
 }
