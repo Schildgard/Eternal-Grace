@@ -34,6 +34,8 @@ void UCharacterWeapon::OnOverlapBegin(UPrimitiveComponent* OverlappedComponent, 
 		UE_LOG(LogTemp, Warning, TEXT("GOT WEAPON OWNER"))
 	}
 
+	//TEST
+	//UStaticMeshComponent* HittedStaticMesh;
 
 	AEternal_Grace_ArenaCharacter* TargetActor = Cast<AEternal_Grace_ArenaCharacter>(OtherActor);
 	// CHECK IF OVERLAPPING ACTOR IS AN CHARACTER
@@ -48,7 +50,7 @@ void UCharacterWeapon::OnOverlapBegin(UPrimitiveComponent* OverlappedComponent, 
 			HittedActors.AddUnique(TargetActor);
 		}
 	}
-	else if (TargetActor == nullptr)
+	else if (TargetActor == nullptr) //if hitted Actor is no Character, check if it is an BaseActor
 	{
 		AEternalGrace_BaseActor* HittedObject = Cast<AEternalGrace_BaseActor>(OtherActor);
 		if (HittedObject)

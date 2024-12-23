@@ -166,6 +166,7 @@ void UHealthComponent::Die()
 	if (Character)
 	{
 		Character->PlayAnimMontage(Character->DeathAnimation);
+		Character->SetActorEnableCollision(false);
 	}
 	else return;
 
