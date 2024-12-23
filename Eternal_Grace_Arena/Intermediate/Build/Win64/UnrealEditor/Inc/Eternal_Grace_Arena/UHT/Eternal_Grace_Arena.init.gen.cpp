@@ -17,13 +17,13 @@ void EmptyLinkFunctionForGeneratedCodeEternal_Grace_Arena_init() {}
 				nullptr,
 				0,
 				PKG_CompiledIn | 0x00000000,
-				0x6DF38CE4,
-				0xCB9ADBC4,
+				0x3D527359,
+				0x7190C85A,
 				METADATA_PARAMS(0, nullptr)
 			};
 			UECodeGen_Private::ConstructUPackage(Z_Registration_Info_UPackage__Script_Eternal_Grace_Arena.OuterSingleton, PackageParams);
 		}
 		return Z_Registration_Info_UPackage__Script_Eternal_Grace_Arena.OuterSingleton;
 	}
-	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_Eternal_Grace_Arena(Z_Construct_UPackage__Script_Eternal_Grace_Arena, TEXT("/Script/Eternal_Grace_Arena"), Z_Registration_Info_UPackage__Script_Eternal_Grace_Arena, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0x6DF38CE4, 0xCB9ADBC4));
+	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_Eternal_Grace_Arena(Z_Construct_UPackage__Script_Eternal_Grace_Arena, TEXT("/Script/Eternal_Grace_Arena"), Z_Registration_Info_UPackage__Script_Eternal_Grace_Arena, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0x3D527359, 0x7190C85A));
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

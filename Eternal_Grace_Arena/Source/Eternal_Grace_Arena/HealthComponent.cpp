@@ -52,65 +52,70 @@ void UHealthComponent::GetDamage(float IncomingDamage, float PoiseDamage, float 
 
 
 	//ATTACK FROM BEHIND
-	if (DamageDirection >= 135.0f && DamageDirection <= 180.0f)
+	if (DamageDirection >= 135.0f && DamageDirection <= 180.0f && CurrentPoise <= 0.0f)
 	{
-		UE_LOG(LogTemp, Warning, TEXT("Attack From Behind"))
-		CurrentPoise = MaxPoise; //REMOVE???
 		switch (StaggerType)
 		{
 		case EStaggeringType::NormalStagger:
 			Character->PlayAnimMontage(Character->StaggerAnimsBack[0]);
+			CurrentPoise = MaxPoise;
 			break;
 		case EStaggeringType::HeavyStagger:
 			Character->PlayAnimMontage(Character->StaggerAnimsBack[1]);
+			CurrentPoise = MaxPoise;
 			break;
 		case EStaggeringType::KnockbackStagger:
 			Character->PlayAnimMontage(Character->StaggerAnimsBack[2]);
+			CurrentPoise = MaxPoise;
 			break;
 		case EStaggeringType::ThrowupStagger:
 			Character->PlayAnimMontage(Character->StaggerAnimsBack[3]);
+			CurrentPoise = MaxPoise;
 			break;
 		case EStaggeringType::CrushdownStagger:
 			Character->PlayAnimMontage(Character->StaggerAnimsBack[4]);
+			CurrentPoise = MaxPoise;
 			break;
 		case EStaggeringType::NoStagger:
-			Character->PlayAnimMontage(Character->StaggerAnims[0]); //REMOVE THIS
 			break;
 		}
 	}
-	else //FRONTAL ATTACK WITHOUT GUARD OR SIDE ATTACK
+	else if(CurrentPoise <= 0.0f)//FRONTAL ATTACK WITHOUT GUARD OR SIDE ATTACK
 	{
-		UE_LOG(LogTemp, Warning, TEXT("Attack From Front or Side"))
-		CurrentPoise = MaxPoise; //REMOVE???
 		switch (StaggerType)
 		{
 		case EStaggeringType::NormalStagger:
 			Character->PlayAnimMontage(Character->StaggerAnims[0]);
+			CurrentPoise = MaxPoise;
 			break;
 		case EStaggeringType::HeavyStagger:
 			Character->RotateTowardsTarget(DamageSource);
 			Character->PlayAnimMontage(Character->StaggerAnims[1]);
+			CurrentPoise = MaxPoise;
 			break;
 		case EStaggeringType::KnockbackStagger:
 			if (CurrentHealth <= 0)
 			{
 				Character->RotateTowardsTarget(DamageSource);
 				Character->PlayAnimMontage(Character->DeathAnimationWithKnockBack);
+				CurrentPoise = MaxPoise;
 				return;
 			}
 			Character->RotateTowardsTarget(DamageSource);
 			Character->PlayAnimMontage(Character->StaggerAnims[2]);
+			CurrentPoise = MaxPoise;
 			break;
 		case EStaggeringType::ThrowupStagger:
 			Character->RotateTowardsTarget(DamageSource);
 			Character->PlayAnimMontage(Character->StaggerAnims[3]);
+			CurrentPoise = MaxPoise;
 			break;
 		case EStaggeringType::CrushdownStagger:
 			Character->RotateTowardsTarget(DamageSource);
 			Character->PlayAnimMontage(Character->StaggerAnims[4]);
+			CurrentPoise = MaxPoise;
 			break;
 		case EStaggeringType::NoStagger:
-			Character->PlayAnimMontage(Character->StaggerAnims[0]); //REMOVE THIS
 			break;
 		}
 	}
@@ -129,8 +134,7 @@ void UHealthComponent::BlockDamage(float Damage, float PoiseDamage, float Damage
 
 	Damage = (Damage / 100) * Character->Shield->PhysicalDamageReduction;
 	CurrentHealth -= Damage;
-	CurrentPoise -= PoiseDamage;
-
+	//STILL HAVE TO THINK ABOUT WETHER AND HOW TO IMPLEMENT POISE HERE
 		switch (StaggerType)
 		{
 		case EStaggeringType::NormalStagger:

@@ -327,7 +327,7 @@ void AEternal_Grace_ArenaCharacter::GuardCounter()
 
 void AEternal_Grace_ArenaCharacter::Guard()
 {
-	if (!CharacterAnimationInstance->isAttacking)
+	if (!CharacterAnimationInstance->isAttacking && !CharacterAnimationInstance->isStaggered)
 	{
 		CharacterAnimationInstance->isGuarding = true;
 	}
