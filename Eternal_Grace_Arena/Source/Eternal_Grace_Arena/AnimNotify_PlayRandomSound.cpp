@@ -18,6 +18,10 @@ void UAnimNotify_PlayRandomSound::Notify(USkeletalMeshComponent* MeshComp, UAnim
 
 	int SoundsIndex = 0;
 
+	if(UndergroundMaterial == nullptr)
+	{ 
+		return;
+	}
 
 	switch (UndergroundMaterial->SurfaceType)
 	{
@@ -38,11 +42,7 @@ void UAnimNotify_PlayRandomSound::Notify(USkeletalMeshComponent* MeshComp, UAnim
 		break;
 	}
 
-	if (!UndergroundMaterial)
-	{
-		UE_LOG(LogTemp, Warning, TEXT("No UndergroundMaterial"))
-			return;
-	}
+	//MODIFIED BOILERPLATE CODE
 		// Don't call super to avoid call back in to blueprints
 		if (Sounds.Num()>0 && MeshComp)
 		{
