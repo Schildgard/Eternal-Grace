@@ -3,7 +3,6 @@
 	{
 		"Module.Eternal_Grace_Arena.cpp.obj": [
 			"AnimNotify_PlayRandomSound.gen.cpp.obj",
-			"AnimNotify_PlaySound_RandomPitch.gen.cpp.obj",
 			"CharacterAnimInstance.gen.cpp.obj",
 			"CharacterShield.gen.cpp.obj",
 			"CharacterWeapon.gen.cpp.obj",
@@ -28,7 +27,6 @@
 			"StaminaComponent.gen.cpp.obj",
 			"PerModuleInline.gen.cpp.obj",
 			"AnimNotify_PlayRandomSound.cpp.obj",
-			"AnimNotify_PlaySound_RandomPitch.cpp.obj",
 			"CharacterAnimInstance.cpp.obj",
 			"CharacterShield.cpp.obj",
 			"CharacterWeapon.cpp.obj",

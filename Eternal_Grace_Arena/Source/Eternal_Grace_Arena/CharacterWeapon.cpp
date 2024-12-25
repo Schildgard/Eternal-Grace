@@ -11,6 +11,7 @@
 #include "Kismet/KismetMathLibrary.h"
 #include "CharacterAnimInstance.h"
 #include "CharacterShield.h"
+#include "Engine/StaticMeshActor.h"
 
 UCharacterWeapon::UCharacterWeapon()
 {
@@ -35,8 +36,8 @@ void UCharacterWeapon::OnOverlapBegin(UPrimitiveComponent* OverlappedComponent, 
 	}
 
 	//TEST
-	//UStaticMeshComponent* HittedStaticMesh;
 
+	//TRY TO CAST HITTED ACTOR AS CHARACTER
 	AEternal_Grace_ArenaCharacter* TargetActor = Cast<AEternal_Grace_ArenaCharacter>(OtherActor);
 	// CHECK IF OVERLAPPING ACTOR IS AN CHARACTER
 	if (TargetActor && TargetActor != WeaponOwner)
@@ -52,13 +53,26 @@ void UCharacterWeapon::OnOverlapBegin(UPrimitiveComponent* OverlappedComponent, 
 	}
 	else if (TargetActor == nullptr) //if hitted Actor is no Character, check if it is an BaseActor
 	{
-		AEternalGrace_BaseActor* HittedObject = Cast<AEternalGrace_BaseActor>(OtherActor);
-		if (HittedObject)
+		UE_LOG(LogTemp, Warning, TEXT("Go into StaticMeshActorCast"))
+			AStaticMeshActor* HitActor = Cast<AStaticMeshActor>(OtherActor);
+		if (HitActor)
 		{
-			if (HittedObject->PhysicalMaterial)
+			UStaticMeshComponent* MeshComponent = HitActor->GetStaticMeshComponent();
+			if (MeshComponent)
 			{
-				ApplyHitEffect(HittedObject->PhysicalMaterial);
+				UMaterialInterface* Material = MeshComponent->GetMaterial(0);
+				if (Material)
+				{
+					UPhysicalMaterial* PhysMaterial = Material->GetPhysicalMaterial();
+					UE_LOG(LogTemp, Warning, TEXT("Got Phys Material %s"), *PhysMaterial->GetName());
+					ApplyHitEffect(PhysMaterial);
+				}
+				else UE_LOG(LogTemp, Warning, TEXT(" Got no phys"))
+					UE_LOG(LogTemp, Warning, TEXT("Got Mesh Component"))
+
 			}
+			else
+				UE_LOG(LogTemp, Warning, TEXT("Got NO Mesh Component"))
 		}
 	}
 
@@ -73,7 +87,7 @@ void UCharacterWeapon::DealDamage(AEternal_Grace_ArenaCharacter* Target)
 	if (Target->Shield && Target->CharacterAnimationInstance->isGuarding && DamageDirection <= 45.0f)
 	{
 		UE_LOG(LogTemp, Warning, TEXT("BLOCK"))
-		Target->HealthComponent->BlockDamage(Damage, 0.0f,DamageDirection, StaggerType, Cast<AEternal_Grace_ArenaCharacter>(WeaponOwner)); //CHANGE THIS CAST LATER TO FIXED VARIABLE
+			Target->HealthComponent->BlockDamage(Damage, 0.0f, DamageDirection, StaggerType, Cast<AEternal_Grace_ArenaCharacter>(WeaponOwner)); //CHANGE THIS CAST LATER TO FIXED VARIABLE
 		if (Target->Shield->PhysicalMaterial)
 		{
 			ApplyHitEffect(Target->Shield->PhysicalMaterial);
