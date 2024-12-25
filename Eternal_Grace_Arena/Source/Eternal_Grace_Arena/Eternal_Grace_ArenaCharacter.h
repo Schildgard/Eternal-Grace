@@ -57,10 +57,6 @@ class AEternal_Grace_ArenaCharacter : public ACharacter
 	UInputAction* HeavyAttackAction;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess))
 	UInputAction* GuardAction;
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess))
-	UInputAction* ToggleLockOnAction;
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess))
-	UInputAction* SwitchLockOnTargetAction;
 
 	//LIGHT ATTACKS
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animations, meta = (AllowPrivateAccess))
@@ -114,9 +110,6 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Combat, meta = (AllowPrivateAccess))
 	float maxChargePower = 2.5f;
 
-	//UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Combat, meta = (AllowPrivateAccess))
-	//UEternal_Grace_Progressbar* Healthbar;
-
 	//GENERAL
 	UPROPERTY()
 	UWorld* world;
@@ -131,11 +124,6 @@ public:
 	UCharacterShield* Shield;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Weapon, meta = (AllowPrivateAccess))
 	FName ShieldSocket;
-	//LOCK ON SYSTEM
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = LockOn, meta = (AllowPrivateAccess))
-	TArray<TEnumAsByte<EObjectTypeQuery>> ObjectTypes;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = LockOn, meta = (AllowPrivateAccess))
-	AActor* LockedOnTarget;
 public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = LockOn, meta = (AllowPrivateAccess))
 	UHealthComponent* HealthComponent;
@@ -173,37 +161,18 @@ protected:
 	virtual void IncreaseChargePower();
 	UFUNCTION(CallInEditor, Category = Actions)
 	virtual void SprintAttack();
-	UFUNCTION(CallInEditor, Category = Actions)
-	virtual void GuardCounter();
 
-	//LOCK ON FUNCTIONS
-	UFUNCTION(CallInEditor, Category = Actions)
-	virtual void ToggleLockOn();
-	UFUNCTION(CallInEditor, Category = Actions)
-	virtual void SwitchLockOnTarget();
-	UFUNCTION(CallInEditor, Category = Actions)
-	AActor* FindNearestTarget();
-	UFUNCTION(CallInEditor, Category = Actions)
-	virtual TArray<AActor*> ScanForTargets();
-	UFUNCTION(CallInEditor, Category = Actions)
-	void EngageLockOn(AActor* Target);
-	UFUNCTION(CallInEditor, Category = Actions)
-	void DisengageLockOn();
-	public:
-	UFUNCTION(CallInEditor, Category = Actions)
-	void RotateTowardsTarget(AActor* Target);
+
+public:
+UFUNCTION(CallInEditor, Category = Actions)
+void RotateTowardsTarget(AActor* Target);
+
 	protected:
 	//GUARD
 	UFUNCTION(CallInEditor, Category = Actions)
 	virtual void Guard();
 	UFUNCTION(CallInEditor, Category = Actions)
 	virtual void CancelGuard();
-	UFUNCTION(CallInEditor, Category = Actions)
-	virtual void BlockAttack();
-	UFUNCTION(CallInEditor, Category = Actions)
-	virtual void BlockHeavy();
-	UFUNCTION(CallInEditor, Category = Actions)
-	virtual void GuardBreak();
 
 	//DODGE
 	UFUNCTION(CallInEditor, Category = Actions)

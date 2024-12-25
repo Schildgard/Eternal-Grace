@@ -17,16 +17,42 @@ class ETERNAL_GRACE_ARENA_API APlayerCharacter : public AEternal_Grace_ArenaChar
 
 	APlayerCharacter();
 public:
-
+	//STAMINA
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Component, meta = (AllowPrivateAccess))
 	UStaminaComponent* StaminaComponent;
-
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Values, meta = (AllowPrivateAccess))
 	float RunningStaminaConsumption;
+
+	//LOCKON PROPERTIES
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess))
+	UInputAction* ToggleLockOnAction;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess))
+	UInputAction* SwitchLockOnTargetAction;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = LockOn, meta = (AllowPrivateAccess))
+	TArray<TEnumAsByte<EObjectTypeQuery>> ObjectTypes;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = LockOn, meta = (AllowPrivateAccess))
+	AActor* LockedOnTarget;
+
+
+	//LOCK ON FUNCTIONS
+	UFUNCTION(CallInEditor, Category = Actions)
+	virtual void ToggleLockOn();
+	UFUNCTION(CallInEditor, Category = Actions)
+	virtual void SwitchLockOnTarget();
+	UFUNCTION(CallInEditor, Category = Actions)
+	AActor* FindNearestTarget();
+	UFUNCTION(CallInEditor, Category = Actions)
+	virtual TArray<AActor*> ScanForTargets();
+	UFUNCTION(CallInEditor, Category = Actions)
+	void EngageLockOn(AActor* Target);
+	UFUNCTION(CallInEditor, Category = Actions)
+	void DisengageLockOn();
+
 
 protected:
 	virtual void BeginPlay()override;
 	virtual void Tick(float DeltaSeconds) override;
+	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
 	virtual void Sprint()override;
 	virtual void CancelSprint()override;

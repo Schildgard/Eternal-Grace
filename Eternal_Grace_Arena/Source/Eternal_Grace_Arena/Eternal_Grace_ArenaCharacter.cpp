@@ -61,7 +61,7 @@ AEternal_Grace_ArenaCharacter::AEternal_Grace_ArenaCharacter()
 	// Note: The skeletal mesh and anim blueprint references on the Mesh component (inherited from Character) 
 	// are set in the derived blueprint asset named ThirdPersonCharacter (to avoid direct content references in C++)
 
-	LockedOnTarget = nullptr;
+//	LockedOnTarget = nullptr;
 	PhysicalMaterial = nullptr;
 	WeaponSocket = FName("socket_weaponGrip");
 	ShieldSocket = FName("socket_shieldGrip");
@@ -125,8 +125,8 @@ void AEternal_Grace_ArenaCharacter::SetupPlayerInputComponent(UInputComponent* P
 		EnhancedInputComponent->BindAction(HeavyAttackAction, ETriggerEvent::Completed, this, &AEternal_Grace_ArenaCharacter::HeavyAttack);
 
 		//Lock On
-		EnhancedInputComponent->BindAction(ToggleLockOnAction, ETriggerEvent::Triggered, this, &AEternal_Grace_ArenaCharacter::ToggleLockOn);
-		EnhancedInputComponent->BindAction(SwitchLockOnTargetAction, ETriggerEvent::Triggered, this, &AEternal_Grace_ArenaCharacter::SwitchLockOnTarget);
+	//	EnhancedInputComponent->BindAction(ToggleLockOnAction, ETriggerEvent::Triggered, this, &AEternal_Grace_ArenaCharacter::ToggleLockOn);
+	//	EnhancedInputComponent->BindAction(SwitchLockOnTargetAction, ETriggerEvent::Triggered, this, &AEternal_Grace_ArenaCharacter::SwitchLockOnTarget);
 
 	}
 	else
@@ -162,11 +162,6 @@ void AEternal_Grace_ArenaCharacter::BeginPlay()
 void AEternal_Grace_ArenaCharacter::Tick(float DeltaSeconds)
 {
 	Super::Tick(DeltaSeconds);
-
-	if (CharacterAnimationInstance && CharacterAnimationInstance->isLockedOn && LockedOnTarget != nullptr)
-	{
-		RotateTowardsTarget(LockedOnTarget);
-	}
 }
 
 void AEternal_Grace_ArenaCharacter::InitializeAnimationInstance()
@@ -320,10 +315,6 @@ void AEternal_Grace_ArenaCharacter::SprintAttack()
 	PlayAnimMontage(RunningAttack);
 }
 
-void AEternal_Grace_ArenaCharacter::GuardCounter()
-{
-	PlayAnimMontage(GuardCounterAttack);
-}
 
 void AEternal_Grace_ArenaCharacter::Guard()
 {
@@ -339,110 +330,100 @@ void AEternal_Grace_ArenaCharacter::CancelGuard()
 	UE_LOG(LogTemp, Warning, TEXT("CancelGuard"))
 }
 
-void AEternal_Grace_ArenaCharacter::BlockAttack()
-{
-	PlayAnimMontage(Block);
-}
-
-void AEternal_Grace_ArenaCharacter::BlockHeavy()
-{
-	PlayAnimMontage(BlockHeavyAttack);
-}
-
-void AEternal_Grace_ArenaCharacter::ToggleLockOn()
-{
-	if (CharacterAnimationInstance->isLockedOn == false)
-	{
-		AActor* ClosestTarget = FindNearestTarget();
-		EngageLockOn(ClosestTarget);
-		UE_LOG(LogTemp, Warning, TEXT("Lock On"))
-	}
-	else
-	{
-		DisengageLockOn();
-		UE_LOG(LogTemp, Warning, TEXT("Lock On Off"))
-	}
-}
-
-void AEternal_Grace_ArenaCharacter::SwitchLockOnTarget()
-{
-}
-
-AActor* AEternal_Grace_ArenaCharacter::FindNearestTarget()
-{
-	//GET SCANNED ACTOR ARRAY FROM SCAN FUNCTION
-	TArray<AActor*> ScannedActors = ScanForTargets();
-	if (ScannedActors.Num() <= 0)
-	{
-		UE_LOG(LogTemp, Warning, TEXT("Find Nearest Target: No Actors Scanned"))
-			return nullptr;
-	}
-
-
-	AActor* ClosestTarget = nullptr;
-	float comparison = 0.0f;
-	float distance = 10000.0f;
-
-	//ITERATE THROUGH SCANNED ACTORS TO FIND SMALLEST DISTANCE
-	for (AActor* Actor : ScannedActors)
-	{
-		comparison = GetDistanceTo(Actor);
-		if (comparison <= distance)
-		{
-			distance = comparison; //SAVE SMALLEST DISTANCE
-			ClosestTarget = Actor; //SAVE ACTOR IF DISTANCE IS SMALLEST
-		}
-	}
-
-	UE_LOG(LogTemp, Warning, TEXT("Nearest Actor: %s "), *ClosestTarget->GetName());
-	return ClosestTarget;
-}
-
-TArray<AActor*> AEternal_Grace_ArenaCharacter::ScanForTargets()
-{
-	FVector PlayerPosition = GetActorLocation();
-	TArray<FHitResult> ScanHits; //SET UP A LIST FOR HITTED OBJECTS
-	TArray<AActor*> ActorsToIgnore; //SET UP A LIST SO ACTORS WONT GET SCANNED MULTIPLE TIMES
-	TArray<AActor*> ScannedActors;
-	UKismetSystemLibrary::SphereTraceMultiForObjects(world, PlayerPosition, PlayerPosition, 750.0f, ObjectTypes, true, ActorsToIgnore, EDrawDebugTrace::ForDuration, ScanHits, true, FLinearColor::Red, FLinearColor::Green, 5.0f);
-
-	if (ScanHits.Num() > 0)
-	{
-		//ITERARE THROUGH SCANHITS
-		for (const FHitResult& Hit : ScanHits)
-		{
-			AActor* HitActor = Hit.GetActor();
-			//ADD HITTED ACTOR TO IGNORE AND VIABLE TARGET LIST
-			if (HitActor && HitActor != this && !ActorsToIgnore.Contains(HitActor) && HitActor->Implements<UI_Targetable>())
-			{
-				ScannedActors.Add(HitActor);
-				ActorsToIgnore.Add(HitActor);
-			}
-		}
-	}
-	return ScannedActors;
-}
-
-void AEternal_Grace_ArenaCharacter::EngageLockOn(AActor* Target)
-{
-	CharacterAnimationInstance->isLockedOn = true;
-	LockedOnTarget = Target;
-
-	//FIX CRASH!!!!
-	if (LockedOnTarget != nullptr)
-	{
-		FRotator Look = UKismetMathLibrary::FindLookAtRotation(GetActorLocation(), LockedOnTarget->GetActorLocation());
-		SetActorRotation(Look);
-	}
-	UE_LOG(LogTemp, Warning, TEXT("No LockedOnTarget"))
-}
-
-void AEternal_Grace_ArenaCharacter::DisengageLockOn()
-{
-	CharacterAnimationInstance->isLockedOn = false;
-	LockedOnTarget = nullptr;
-}
-
+//void AEternal_Grace_ArenaCharacter::ToggleLockOn()
+//{
+//	if (CharacterAnimationInstance->isLockedOn == false)
+//	{
+//		AActor* ClosestTarget = FindNearestTarget();
+//		EngageLockOn(ClosestTarget);
+//		UE_LOG(LogTemp, Warning, TEXT("Lock On"))
+//	}
+//	else
+//	{
+//		DisengageLockOn();
+//		UE_LOG(LogTemp, Warning, TEXT("Lock On Off"))
+//	}
+//}
+//
+//void AEternal_Grace_ArenaCharacter::SwitchLockOnTarget()
+//{
+//}
+//
+//AActor* AEternal_Grace_ArenaCharacter::FindNearestTarget()
+//{
+//	//GET SCANNED ACTOR ARRAY FROM SCAN FUNCTION
+//	TArray<AActor*> ScannedActors = ScanForTargets();
+//	if (ScannedActors.Num() <= 0)
+//	{
+//		UE_LOG(LogTemp, Warning, TEXT("Find Nearest Target: No Actors Scanned"))
+//			return nullptr;
+//	}
+//
+//
+//	AActor* ClosestTarget = nullptr;
+//	float comparison = 0.0f;
+//	float distance = 10000.0f;
+//
+//	//ITERATE THROUGH SCANNED ACTORS TO FIND SMALLEST DISTANCE
+//	for (AActor* Actor : ScannedActors)
+//	{
+//		comparison = GetDistanceTo(Actor);
+//		if (comparison <= distance)
+//		{
+//			distance = comparison; //SAVE SMALLEST DISTANCE
+//			ClosestTarget = Actor; //SAVE ACTOR IF DISTANCE IS SMALLEST
+//		}
+//	}
+//
+//	UE_LOG(LogTemp, Warning, TEXT("Nearest Actor: %s "), *ClosestTarget->GetName());
+//	return ClosestTarget;
+//}
+//
+//TArray<AActor*> AEternal_Grace_ArenaCharacter::ScanForTargets()
+//{
+//	FVector PlayerPosition = GetActorLocation();
+//	TArray<FHitResult> ScanHits; //SET UP A LIST FOR HITTED OBJECTS
+//	TArray<AActor*> ActorsToIgnore; //SET UP A LIST SO ACTORS WONT GET SCANNED MULTIPLE TIMES
+//	TArray<AActor*> ScannedActors;
+//	UKismetSystemLibrary::SphereTraceMultiForObjects(world, PlayerPosition, PlayerPosition, 750.0f, ObjectTypes, true, ActorsToIgnore, EDrawDebugTrace::ForDuration, ScanHits, true, FLinearColor::Red, FLinearColor::Green, 5.0f);
+//
+//	if (ScanHits.Num() > 0)
+//	{
+//		//ITERARE THROUGH SCANHITS
+//		for (const FHitResult& Hit : ScanHits)
+//		{
+//			AActor* HitActor = Hit.GetActor();
+//			//ADD HITTED ACTOR TO IGNORE AND VIABLE TARGET LIST
+//			if (HitActor && HitActor != this && !ActorsToIgnore.Contains(HitActor) && HitActor->Implements<UI_Targetable>())
+//			{
+//				ScannedActors.Add(HitActor);
+//				ActorsToIgnore.Add(HitActor);
+//			}
+//		}
+//	}
+//	return ScannedActors;
+//}
+//
+//void AEternal_Grace_ArenaCharacter::EngageLockOn(AActor* Target)
+//{
+//	CharacterAnimationInstance->isLockedOn = true;
+//	LockedOnTarget = Target;
+//
+//	//FIX CRASH!!!!
+//	if (LockedOnTarget != nullptr)
+//	{
+//		FRotator Look = UKismetMathLibrary::FindLookAtRotation(GetActorLocation(), LockedOnTarget->GetActorLocation());
+//		SetActorRotation(Look);
+//	}
+//	UE_LOG(LogTemp, Warning, TEXT("No LockedOnTarget"))
+//}
+//
+//void AEternal_Grace_ArenaCharacter::DisengageLockOn()
+//{
+//	CharacterAnimationInstance->isLockedOn = false;
+//	LockedOnTarget = nullptr;
+//}
+//
 void AEternal_Grace_ArenaCharacter::RotateTowardsTarget(AActor* Target)
 {
 	//GET LOOK ROTATION BETWEEN PLAYER AND TARGET
@@ -450,11 +431,6 @@ void AEternal_Grace_ArenaCharacter::RotateTowardsTarget(AActor* Target)
 	//BREAK LOOK ROTATION TO YAW ONLY
 	FRotator DesiredRotation = FRotator(0, Look.Yaw, 0);
 	SetActorRotation(DesiredRotation);
-}
-
-void AEternal_Grace_ArenaCharacter::GuardBreak()
-{
-	PlayAnimMontage(GuardBreakEvent);
 }
 
 void AEternal_Grace_ArenaCharacter::Dodge()

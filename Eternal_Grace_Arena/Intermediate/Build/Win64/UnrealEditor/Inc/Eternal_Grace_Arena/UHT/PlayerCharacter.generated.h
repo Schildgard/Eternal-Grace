@@ -9,10 +9,20 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class AActor;
 #ifdef ETERNAL_GRACE_ARENA_PlayerCharacter_generated_h
 #error "PlayerCharacter.generated.h already included, missing '#pragma once' in PlayerCharacter.h"
 #endif
 #define ETERNAL_GRACE_ARENA_PlayerCharacter_generated_h
+
+#define FID_Repository_Eternal_Grace_Arena_Eternal_Grace_Arena_Source_Eternal_Grace_Arena_PlayerCharacter_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execDisengageLockOn); \
+	DECLARE_FUNCTION(execEngageLockOn); \
+	DECLARE_FUNCTION(execScanForTargets); \
+	DECLARE_FUNCTION(execFindNearestTarget); \
+	DECLARE_FUNCTION(execSwitchLockOnTarget); \
+	DECLARE_FUNCTION(execToggleLockOn);
+
 
 #define FID_Repository_Eternal_Grace_Arena_Eternal_Grace_Arena_Source_Eternal_Grace_Arena_PlayerCharacter_h_16_INCLASS_NO_PURE_DECLS \
 private: \
@@ -39,6 +49,7 @@ public: \
 #define FID_Repository_Eternal_Grace_Arena_Eternal_Grace_Arena_Source_Eternal_Grace_Arena_PlayerCharacter_h_16_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
+	FID_Repository_Eternal_Grace_Arena_Eternal_Grace_Arena_Source_Eternal_Grace_Arena_PlayerCharacter_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
 	FID_Repository_Eternal_Grace_Arena_Eternal_Grace_Arena_Source_Eternal_Grace_Arena_PlayerCharacter_h_16_INCLASS_NO_PURE_DECLS \
 	FID_Repository_Eternal_Grace_Arena_Eternal_Grace_Arena_Source_Eternal_Grace_Arena_PlayerCharacter_h_16_ENHANCED_CONSTRUCTORS \
 private: \
