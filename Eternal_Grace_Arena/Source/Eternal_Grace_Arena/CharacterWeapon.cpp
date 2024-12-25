@@ -32,17 +32,16 @@ void UCharacterWeapon::OnOverlapBegin(UPrimitiveComponent* OverlappedComponent, 
 	if (WeaponOwner == nullptr)
 	{
 		WeaponOwner = GetOwner();
-		UE_LOG(LogTemp, Warning, TEXT("GOT WEAPON OWNER"))
+	//	UE_LOG(LogTemp, Warning, TEXT("GOT WEAPON OWNER"))
 	}
 
-	//TEST
 
 	//TRY TO CAST HITTED ACTOR AS CHARACTER
 	AEternal_Grace_ArenaCharacter* TargetActor = Cast<AEternal_Grace_ArenaCharacter>(OtherActor);
 	// CHECK IF OVERLAPPING ACTOR IS AN CHARACTER
 	if (TargetActor && TargetActor != WeaponOwner)
 	{
-		UE_LOG(LogTemp, Warning, TEXT("YOU HITTED A CHARACTER: %s"), *OtherActor->GetName());
+		//UE_LOG(LogTemp, Warning, TEXT("YOU HITTED A CHARACTER: %s"), *OtherActor->GetName());
 
 		// CHECK IF HITTED ACTOR HAS AN HEALTH COMPONENT
 		if (TargetActor->HealthComponent && HittedActors.Contains(TargetActor) == false)
@@ -53,7 +52,6 @@ void UCharacterWeapon::OnOverlapBegin(UPrimitiveComponent* OverlappedComponent, 
 	}
 	else if (TargetActor == nullptr) //if hitted Actor is no Character, check if it is an BaseActor
 	{
-		UE_LOG(LogTemp, Warning, TEXT("Go into StaticMeshActorCast"))
 			AStaticMeshActor* HitActor = Cast<AStaticMeshActor>(OtherActor);
 		if (HitActor)
 		{
@@ -67,15 +65,10 @@ void UCharacterWeapon::OnOverlapBegin(UPrimitiveComponent* OverlappedComponent, 
 					UE_LOG(LogTemp, Warning, TEXT("Got Phys Material %s"), *PhysMaterial->GetName());
 					ApplyHitEffect(PhysMaterial);
 				}
-				else UE_LOG(LogTemp, Warning, TEXT(" Got no phys"))
-					UE_LOG(LogTemp, Warning, TEXT("Got Mesh Component"))
 
 			}
-			else
-				UE_LOG(LogTemp, Warning, TEXT("Got NO Mesh Component"))
 		}
 	}
-
 }
 
 void UCharacterWeapon::DealDamage(AEternal_Grace_ArenaCharacter* Target)
@@ -86,7 +79,6 @@ void UCharacterWeapon::DealDamage(AEternal_Grace_ArenaCharacter* Target)
 
 	if (Target->Shield && Target->CharacterAnimationInstance->isGuarding && DamageDirection <= 45.0f)
 	{
-		UE_LOG(LogTemp, Warning, TEXT("BLOCK"))
 			Target->HealthComponent->BlockDamage(Damage, 0.0f, DamageDirection, StaggerType, Cast<AEternal_Grace_ArenaCharacter>(WeaponOwner)); //CHANGE THIS CAST LATER TO FIXED VARIABLE
 		if (Target->Shield->PhysicalMaterial)
 		{
@@ -94,7 +86,6 @@ void UCharacterWeapon::DealDamage(AEternal_Grace_ArenaCharacter* Target)
 		}
 		return;
 	}
-	//Target->CharacterAnimationInstance->isGuarding = false; //When Character is attacked from behind, he loses his guard. It is probably better to give HealthComponent an additional GetChipDamage Function, so the Weapon does not influence the AnimationInstance of a character
 	Target->HealthComponent->GetDamage(Damage, Values.PoiseDamage, DamageDirection, StaggerType, Cast<AEternal_Grace_ArenaCharacter>(WeaponOwner));
 	ApplyHitEffect(Target->PhysicalMaterial);
 }

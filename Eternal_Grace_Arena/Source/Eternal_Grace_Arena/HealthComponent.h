@@ -25,6 +25,10 @@ public:
 	float MaxPoise;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = BaseValues, meta = (AllowPrivateAccess))
 	float CurrentPoise;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = BaseValues, meta = (AllowPrivateAccess))
+	float PoiseRegenerationRate;
+
+
 public:
 	UFUNCTION(CallInEditor, Category = Actions)
 	virtual void GetDamage(float Damage, float PoiseDamage, float DamageDirection, EStaggeringType StaggerType, AEternal_Grace_ArenaCharacter* DamageSource);
