@@ -6,8 +6,19 @@
 			"description": "Default Uncontrolled Changelist",
 			"files": [
 				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/StarterContent/Architecture/Floor_400x400.uasset",
-				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Blueprints/CharacterBlueprints/BP_Player.uasset",
-				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/__ExternalActors__/ThirdPerson/Maps/ThirdPersonMap/C/0I/VIQQWOEJKSKV1EK1XGX3EY.uasset"
+				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/ThirdPerson/Maps/ThirdPersonMap.umap",
+				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Blueprints/CharacterBlueprints/BP_Player12TEST.uasset",
+				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Blueprints/CharacterBlueprints/BP_Eternal_Grace_ArenaEnemy.uasset",
+				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Blueprints/AnimationBlueprints/ABP_WeaponMaster.uasset",
+				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/__ExternalActors__/ThirdPerson/Maps/ThirdPersonMap/B/TZ/14L7F5DLOFLH6C4ASB3586.uasset",
+				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Blueprints/CharacterBlueprints/test.uasset",
+				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Blueprints/AnimationBlueprints/ABP_Player.uasset",
+				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/__ExternalActors__/ThirdPerson/Maps/ThirdPersonMap/A/UC/6E5YA0TLNF9ABVO4EWV8PB.uasset",
+				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Blueprints/CharacterBlueprints/BP_Eternal_Grace_ArenaEnemy2TEST.uasset",
+				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/__ExternalActors__/ThirdPerson/Maps/ThirdPersonMap/0/QZ/GFL2L852FVGBJECO9U4IWV.uasset",
+				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/__ExternalActors__/ThirdPerson/Maps/ThirdPersonMap/0/MZ/DAOX0RU0J4JQO9B8K8C27X.uasset",
+				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/__ExternalActors__/ThirdPerson/Maps/ThirdPersonMap/B/YJ/AAR32DJWKI2GL327KU30V0.uasset",
+				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/__ExternalActors__/ThirdPerson/Maps/ThirdPersonMap/C/XA/IMWQFEYJCZ6XK289S8PH8X.uasset"
 			]
 		}
 	]
