@@ -58,6 +58,7 @@ class AEternal_Grace_ArenaCharacter : public ACharacter
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess))
 	UInputAction* GuardAction;
 
+protected:
 	//LIGHT ATTACKS
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animations, meta = (AllowPrivateAccess))
 	TArray<UAnimMontage*> LightAttacks;
@@ -151,9 +152,9 @@ protected:
 	virtual void CancelSprint();
 
 	//ATTACK FUNCTIONS
-	UFUNCTION(CallInEditor, Category = Actions)
+	UFUNCTION(BlueprintCallable, Category = Actions)
 	virtual void LightAttack();
-	UFUNCTION(CallInEditor, Category = Actions)
+	UFUNCTION(BlueprintCallable, Category = Actions)
 	virtual void HeavyAttack();
 	UFUNCTION(CallInEditor, Category = Actions)
 	virtual void ChargeHeavyAttack();

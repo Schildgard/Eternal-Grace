@@ -39,6 +39,9 @@ public:
 	float facingDirection;
 	
 
+	UFUNCTION()
+	void InterruptAttack(UAnimMontage* AttackAnimation, bool Interrupted);
+	void OnAttackEnd(UAnimMontage* AttackAnimation, bool Interrupted);
 
 	
 };

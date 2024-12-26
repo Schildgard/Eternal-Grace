@@ -2,6 +2,7 @@
 
 
 #include "Eternal_Grace_ArenaEnemy.h"
+#include "CharacterAnimInstance.h"
 
 AEternal_Grace_ArenaEnemy::AEternal_Grace_ArenaEnemy()
 {
@@ -44,9 +45,9 @@ void AEternal_Grace_ArenaEnemy::Tick(float DeltaSeconds)
 	Super::Tick(DeltaSeconds);
 	if (HealthbarWidget)
 	{
-		if(HealthComponent)
+		if (HealthComponent)
 		{
-		HealthbarWidget->UpdateProgressBar(HealthbarWidget->Healthbar,HealthComponent->MaxHealth, HealthComponent->CurrentHealth);
+			HealthbarWidget->UpdateProgressBar(HealthbarWidget->Healthbar, HealthComponent->MaxHealth, HealthComponent->CurrentHealth);
 		}
 		else
 		{
@@ -56,5 +57,39 @@ void AEternal_Grace_ArenaEnemy::Tick(float DeltaSeconds)
 	else
 	{
 		UE_LOG(LogTemp, Warning, TEXT("Healthbar widget is null"))
+	}
+}
+
+void AEternal_Grace_ArenaEnemy::LightAttack()
+{
+	if (!CharacterAnimationInstance->isAttacking)
+	{
+		CharacterAnimationInstance->isAttacking = true;
+		if (CharacterAnimationInstance->isGuarding)
+		{
+			CancelGuard();
+		}
+		PlayAnimMontage(LightAttacks[0], 1.0f, "Attack01");
+
+		switch (CharacterAnimationInstance->attackCount)
+		{
+		case 0:
+			break;
+		case 1:
+			CharacterAnimationInstance->Montage_JumpToSection("Attack02", LightAttacks[0]);
+			break;
+		case 2:
+			CharacterAnimationInstance->Montage_JumpToSection("Attack03", LightAttacks[0]);
+			break;
+		default:
+			break;
+		}
+		FOnMontageEnded InterruptDelegate;
+		InterruptDelegate.BindUObject(CharacterAnimationInstance, &UCharacterAnimInstance::InterruptAttack);
+		CharacterAnimationInstance->Montage_SetBlendingOutDelegate(InterruptDelegate, LightAttacks[0]);
+
+		FOnMontageEnded CompletedDelegate;
+		CompletedDelegate.BindUObject(CharacterAnimationInstance, &UCharacterAnimInstance::OnAttackEnd);
+		CharacterAnimationInstance->Montage_SetEndDelegate(CompletedDelegate, LightAttacks[0]);
 	}
 }

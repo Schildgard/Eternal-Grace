@@ -138,7 +138,7 @@ void UHealthComponent::BlockDamage(float Damage, float PoiseDamage, float Damage
 	AActor* Owner = GetOwner();
 	AEternal_Grace_ArenaCharacter* Character = Cast<AEternal_Grace_ArenaCharacter>(Owner);
 
-	Damage = (Damage / 100) * Character->Shield->PhysicalDamageReduction;
+	Damage -= (Damage / 100) * Character->Shield->PhysicalDamageReduction;
 	CurrentHealth -= Damage;
 	//STILL HAVE TO THINK ABOUT WETHER AND HOW TO IMPLEMENT POISE HERE
 		switch (StaggerType)
@@ -158,7 +158,7 @@ void UHealthComponent::BlockDamage(float Damage, float PoiseDamage, float Damage
 		case EStaggeringType::CrushdownStagger:
 			Character->PlayAnimMontage(Character->BlockHeavyAttack);
 			break;
-		case EStaggeringType::NoStagger:
+		default:
 			break;
 		}
 }

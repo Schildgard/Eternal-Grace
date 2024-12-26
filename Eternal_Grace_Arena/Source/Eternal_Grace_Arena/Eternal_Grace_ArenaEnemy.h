@@ -27,9 +27,12 @@ public:
 	UWidgetComponent* HPBarComponent;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = UI, meta = (AllowPrivateAccess))
 	UEnemy_UI_Healthbar* HealthbarWidget;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Actions, meta = (AllowPrivateAccess))
+	TArray<UAnimMontage*> AttackMontages;
 
 protected:
 	virtual void BeginPlay()override;
 	virtual void Tick(float DeltaSeconds)override;
+	virtual void LightAttack()override;
 	
 };
