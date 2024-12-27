@@ -21,8 +21,8 @@ class ETERNAL_GRACE_ARENA_API AEternal_Grace_ArenaEnemy : public AEternal_Grace_
 	
 	AEternal_Grace_ArenaEnemy();
 public:
-//	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = UI, meta = (AllowPrivateAccess))
-//	TSubclassOf<UUserWidget> UIClass;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Attack, meta = (AllowPrivateAccess))
+	float AttackRange;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = UI, meta = (AllowPrivateAccess))
 	UWidgetComponent* HPBarComponent;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = UI, meta = (AllowPrivateAccess))
@@ -30,9 +30,12 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Actions, meta = (AllowPrivateAccess))
 	TArray<UAnimMontage*> AttackMontages;
 
+	UFUNCTION()
+	bool CheckDistancetoPlayer();
+
+	virtual void LightAttack()override;
 protected:
 	virtual void BeginPlay()override;
 	virtual void Tick(float DeltaSeconds)override;
-	virtual void LightAttack()override;
 	
 };
