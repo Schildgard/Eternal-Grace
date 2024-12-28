@@ -82,6 +82,8 @@ public:
 	UAnimMontage* Block;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animations, meta = (AllowPrivateAccess))
 	UAnimMontage* BlockHeavyAttack;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animations, meta = (AllowPrivateAccess))
+	UAnimMontage* BlockThrowbackAttack;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = HitEffect, meta = (AllowPrivateAccess))
 	UPhysicalMaterial* PhysicalMaterial;
 	//STAGGER

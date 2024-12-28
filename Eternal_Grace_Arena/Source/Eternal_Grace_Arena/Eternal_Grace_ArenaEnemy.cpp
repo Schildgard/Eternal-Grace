@@ -84,25 +84,14 @@ void AEternal_Grace_ArenaEnemy::LightAttack()
 		{
 			CancelGuard();
 		}
-			PlayAnimMontage(AttackMontages[0], 1.0f);
+		int RandomAttackIndex = UKismetMathLibrary::RandomInteger(2);
 
-//		switch (CharacterAnimationInstance->attackCount)
-//		{
-//		case 0:
-//			break;
-//		case 1:
-//			CharacterAnimationInstance->Montage_JumpToSection("Attack02", LightAttacks[0]);
-//			break;
-//		case 2:
-//			CharacterAnimationInstance->Montage_JumpToSection("Attack03", LightAttacks[0]);
-//			break;
-//		default:
-//			break;
-//		}
+			PlayAnimMontage(AttackMontages[RandomAttackIndex], 1.0f);
+			
 		FOnMontageEnded InterruptDelegate;
 		InterruptDelegate.BindUObject(CharacterAnimationInstance, &UCharacterAnimInstance::InterruptAttack);
-		CharacterAnimationInstance->Montage_SetBlendingOutDelegate(InterruptDelegate, AttackMontages[0]);
-		CharacterAnimationInstance->Montage_SetEndDelegate(InterruptDelegate, AttackMontages[0]);
+		CharacterAnimationInstance->Montage_SetBlendingOutDelegate(InterruptDelegate, AttackMontages[RandomAttackIndex]);
+		CharacterAnimationInstance->Montage_SetEndDelegate(InterruptDelegate, AttackMontages[RandomAttackIndex]);
 //
 //		FOnMontageEnded CompletedDelegate;
 //		CompletedDelegate.BindUObject(CharacterAnimationInstance, &UCharacterAnimInstance::OnAttackEnd);

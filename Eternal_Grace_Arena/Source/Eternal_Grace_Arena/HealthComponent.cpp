@@ -150,13 +150,13 @@ void UHealthComponent::BlockDamage(float Damage, float PoiseDamage, float Damage
 			Character->PlayAnimMontage(Character->BlockHeavyAttack);
 			break;
 		case EStaggeringType::KnockbackStagger:
-			Character->PlayAnimMontage(Character->BlockHeavyAttack);
+			Character->PlayAnimMontage(Character->BlockThrowbackAttack);
 			break;
 		case EStaggeringType::ThrowupStagger:
-			Character->PlayAnimMontage(Character->BlockHeavyAttack);
+			Character->PlayAnimMontage(Character->BlockThrowbackAttack);
 			break;
 		case EStaggeringType::CrushdownStagger:
-			Character->PlayAnimMontage(Character->BlockHeavyAttack);
+			Character->PlayAnimMontage(Character->BlockThrowbackAttack);
 			break;
 		default:
 			break;
