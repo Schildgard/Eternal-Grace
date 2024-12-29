@@ -32,10 +32,13 @@ public:
 
 	UFUNCTION()
 	bool CheckDistancetoPlayer();
-
+	UFUNCTION(BlueprintCallable)
+	void GetOffMeMove();
 	virtual void LightAttack()override;
+
 protected:
 	virtual void BeginPlay()override;
 	virtual void Tick(float DeltaSeconds)override;
+	
 	
 };

@@ -29,6 +29,26 @@ bool AEternal_Grace_ArenaEnemy::CheckDistancetoPlayer()
 	else return true;
 }
 
+void AEternal_Grace_ArenaEnemy::GetOffMeMove()
+{
+	if (!CharacterAnimationInstance->isAttacking)
+	{
+		CharacterAnimationInstance->isAttacking = true;
+		if (CharacterAnimationInstance->isGuarding)
+		{
+			CancelGuard();
+		}
+		if (AttackMontages[2] != nullptr)
+		{
+			PlayAnimMontage(AttackMontages[2], 1.0f); // TO DO:REPLACE THAT MAGIC NUMBER WITH SOMETHING ELSE LIKE A POINTER TO A SPECIFIC MONTAGE OR SOMETHING
+			FOnMontageEnded InterruptDelegate;
+			InterruptDelegate.BindUObject(CharacterAnimationInstance, &UCharacterAnimInstance::InterruptAttack);
+			CharacterAnimationInstance->Montage_SetBlendingOutDelegate(InterruptDelegate, AttackMontages[2]);
+			CharacterAnimationInstance->Montage_SetEndDelegate(InterruptDelegate, AttackMontages[2]);
+		}
+	}
+}
+
 void AEternal_Grace_ArenaEnemy::BeginPlay()
 {
 	Super::BeginPlay();
@@ -80,24 +100,24 @@ void AEternal_Grace_ArenaEnemy::LightAttack()
 	if (!CharacterAnimationInstance->isAttacking)
 	{
 		CharacterAnimationInstance->isAttacking = true;
-		RotateTowardsTarget(UGameplayStatics::GetPlayerCharacter(world,0));
+		RotateTowardsTarget(UGameplayStatics::GetPlayerCharacter(world, 0));
 		if (CharacterAnimationInstance->isGuarding)
 		{
 			CancelGuard();
 		}
 		int RandomAttackIndex = UKismetMathLibrary::RandomInteger(2);
 
-			PlayAnimMontage(AttackMontages[RandomAttackIndex], 1.0f);
-			
+		PlayAnimMontage(AttackMontages[RandomAttackIndex], 1.0f);
+
 		FOnMontageEnded InterruptDelegate;
 		InterruptDelegate.BindUObject(CharacterAnimationInstance, &UCharacterAnimInstance::InterruptAttack);
 		CharacterAnimationInstance->Montage_SetBlendingOutDelegate(InterruptDelegate, AttackMontages[RandomAttackIndex]);
 		CharacterAnimationInstance->Montage_SetEndDelegate(InterruptDelegate, AttackMontages[RandomAttackIndex]);
-//
-//		FOnMontageEnded CompletedDelegate;
-//		CompletedDelegate.BindUObject(CharacterAnimationInstance, &UCharacterAnimInstance::OnAttackEnd);
-//		CharacterAnimationInstance->Montage_SetEndDelegate(CompletedDelegate, LightAttacks[0]);
-//		UE_LOG(LogTemp, Warning, TEXT("is AGAIN TEST Attacking : %s"), CharacterAnimationInstance->isAttacking ? TEXT("true") : TEXT("false"));
-	//UE_LOG(LogTemp, Warning, TEXT("is Attacking : %s"), CharacterAnimationInstance->isAttacking ? TEXT("true") : TEXT("false"));
+		//
+		//		FOnMontageEnded CompletedDelegate;
+		//		CompletedDelegate.BindUObject(CharacterAnimationInstance, &UCharacterAnimInstance::OnAttackEnd);
+		//		CharacterAnimationInstance->Montage_SetEndDelegate(CompletedDelegate, LightAttacks[0]);
+		//		UE_LOG(LogTemp, Warning, TEXT("is AGAIN TEST Attacking : %s"), CharacterAnimationInstance->isAttacking ? TEXT("true") : TEXT("false"));
+			//UE_LOG(LogTemp, Warning, TEXT("is Attacking : %s"), CharacterAnimationInstance->isAttacking ? TEXT("true") : TEXT("false"));
 	}
 }

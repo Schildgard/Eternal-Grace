@@ -3,6 +3,7 @@
 
 #include "HealthComponent.h"
 #include "Eternal_Grace_ArenaCharacter.h"
+#include "Eternal_Grace_ArenaEnemy.h"
 #include "PlayerCharacter.h"
 #include "StaminaComponent.h"
 #include "CharacterAnimInstance.h"
@@ -199,6 +200,7 @@ void UHealthComponent::Die()
 {
 
 	AActor* Owner = GetOwner();
+
 	AEternal_Grace_ArenaCharacter* Character = Cast<AEternal_Grace_ArenaCharacter>(Owner);
 
 	if (Character)
