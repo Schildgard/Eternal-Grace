@@ -57,6 +57,9 @@ class AEternal_Grace_ArenaCharacter : public ACharacter
 	UInputAction* HeavyAttackAction;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess))
 	UInputAction* GuardAction;
+public:
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animations, meta = (AllowPrivateAccess))
+	UAnimMontage* GuardBreakEvent;
 
 protected:
 	//LIGHT ATTACKS
@@ -73,9 +76,6 @@ protected:
 	//GUARD COUNTER ATTACK
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animations, meta = (AllowPrivateAccess))
 	UAnimMontage* GuardCounterAttack;
-	//GUARD
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animations, meta = (AllowPrivateAccess))
-	UAnimMontage* GuardBreakEvent;
 
 public:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animations, meta = (AllowPrivateAccess))

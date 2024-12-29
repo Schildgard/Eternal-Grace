@@ -218,3 +218,15 @@ void APlayerCharacter::HeavyAttack()
 		Super::HeavyAttack();
 	}
 }
+
+void APlayerCharacter::Guard()
+{
+	if (StaminaComponent->Exhausted == false)
+	{
+		Super::Guard();
+	}
+	else
+	{
+		CancelGuard();
+	}
+}

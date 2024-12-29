@@ -235,26 +235,31 @@ void AEternal_Grace_ArenaCharacter::LightAttack()
 		{
 			CancelGuard(); // THIS IS NOT GOOD: BETWEEN ATTACK THERE IS A SMALL WINDOW WHERE GUARD IS ACTIVATED. NEED TO CHANGE THIS LATER
 		}
-		switch (CharacterAnimationInstance->attackCount)
+		int AttackIndex = CharacterAnimationInstance->attackCount;
+		if (LightAttacks[AttackIndex] != nullptr)
 		{
-		case 0:
-			PlayAnimMontage(LightAttacks[0], 1.0f);
-			break;
-		case 1:
-			PlayAnimMontage(LightAttacks[1], 1.0f);
-			break;
-		case 2:
-			PlayAnimMontage(LightAttacks[2], 1.0f);
-			break;
-		case 3:
-			PlayAnimMontage(LightAttacks[3], 1.0f);
-			break;
-		case 4:
-			PlayAnimMontage(LightAttacks[4], 1.0f);
-			break;
-		default:
-			break;
+			PlayAnimMontage(LightAttacks[AttackIndex], 1.0f);
 		}
+		//switch (CharacterAnimationInstance->attackCount)
+		//{
+		//case 0:
+		//	PlayAnimMontage(LightAttacks[0], 1.0f);
+		//	break;
+		//case 1:
+		//	PlayAnimMontage(LightAttacks[1], 1.0f);
+		//	break;
+		//case 2:
+		//	PlayAnimMontage(LightAttacks[2], 1.0f);
+		//	break;
+		//case 3:
+		//	PlayAnimMontage(LightAttacks[3], 1.0f);
+		//	break;
+		//case 4:
+		//	PlayAnimMontage(LightAttacks[4], 1.0f);
+		//	break;
+		//default:
+		//	break;
+		//}
 	}
 	else
 	{
@@ -321,6 +326,10 @@ void AEternal_Grace_ArenaCharacter::Guard()
 	if (!CharacterAnimationInstance->isAttacking && !CharacterAnimationInstance->isStaggered)
 	{
 		CharacterAnimationInstance->isGuarding = true;
+	}
+	else if (CharacterAnimationInstance->isGuarding == true)
+	{
+		CancelGuard();
 	}
 }
 

@@ -61,4 +61,6 @@ protected:
 	virtual void ChargeHeavyAttack()override;
 	virtual void HeavyAttack()override;
 
+	virtual void Guard()override;
+
 };

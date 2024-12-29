@@ -89,7 +89,7 @@ void UHealthComponent::GetDamage(float IncomingDamage, float PoiseDamage, float 
 			//Character->PlayAnimMontage(Character->StaggerAnimsBack[4]);
 			CurrentPoise = MaxPoise;
 			break;
-		case EStaggeringType::NoStagger:
+		default:
 			break;
 		}
 	}
@@ -160,9 +160,14 @@ void UHealthComponent::BlockDamage(float Damage, float PoiseDamage, float Damage
 	{
 		PoiseDamage -= Character->Shield->Stability;
 		DefendingPlayer->StaminaComponent->CurrentStamina -= PoiseDamage;
+		if(DefendingPlayer->StaminaComponent->CurrentStamina <= 0)
+		{
+			DefendingPlayer->PlayAnimMontage(DefendingPlayer->GuardBreakEvent);
+			return;
+		}
 	}
 
-
+	
 
 	//STILL HAVE TO THINK ABOUT WETHER AND HOW TO IMPLEMENT POISE HERE
 	switch (StaggerType)
