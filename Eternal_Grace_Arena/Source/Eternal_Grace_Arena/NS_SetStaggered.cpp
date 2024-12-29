@@ -12,18 +12,24 @@ void UNS_SetStaggered::NotifyBegin(USkeletalMeshComponent* MeshComp, UAnimSequen
 	if (Owner == nullptr)
 	{
 		Owner = Cast<AEternal_Grace_ArenaCharacter>(MeshComp->GetOwner());
+		if (Owner)
+		{
+			Owner->CharacterAnimationInstance->isStaggered = true;
+			UE_LOG(LogTemp, Warning, TEXT("SetStaggerd Notify set its owner"))
+		}
 	}
-	else if (Owner->CharacterAnimationInstance)
+	else if (Owner->CharacterAnimationInstance != nullptr)
 	{
-		Owner->CharacterAnimationInstance->isStaggered = true;
+		UE_LOG(LogTemp, Warning, TEXT("SetStaggerd Status"))
+		Owner->CharacterAnimationInstance->isStaggered = true; // STRANGE ERROR OOCURS SOMETIMES IN THIS LINE
 	}
 }
 
 void UNS_SetStaggered::NotifyEnd(USkeletalMeshComponent* MeshComp, UAnimSequenceBase* Animation, const FAnimNotifyEventReference& EventReference)
 {
-	if (Owner)
+	if (Owner != nullptr)
 	{
-		if (Owner->CharacterAnimationInstance)
+		if (Owner->CharacterAnimationInstance != nullptr)
 		{
 			Owner->CharacterAnimationInstance->isStaggered = false;
 		}

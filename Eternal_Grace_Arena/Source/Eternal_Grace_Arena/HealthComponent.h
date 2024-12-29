@@ -44,4 +44,7 @@ protected:
 	UFUNCTION(CallInEditor, Category = Actions)
 	virtual void Die();
 
+	UFUNCTION()
+	void CheckActorStaggerAnimation(UAnimMontage* Montage, AEternal_Grace_ArenaCharacter* Character);
+
 };

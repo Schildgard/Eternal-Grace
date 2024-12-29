@@ -32,7 +32,7 @@ void UCharacterWeapon::OnOverlapBegin(UPrimitiveComponent* OverlappedComponent, 
 	if (WeaponOwner == nullptr)
 	{
 		WeaponOwner = GetOwner();
-	//	UE_LOG(LogTemp, Warning, TEXT("GOT WEAPON OWNER"))
+		//	UE_LOG(LogTemp, Warning, TEXT("GOT WEAPON OWNER"))
 	}
 
 
@@ -52,7 +52,7 @@ void UCharacterWeapon::OnOverlapBegin(UPrimitiveComponent* OverlappedComponent, 
 	}
 	else if (TargetActor == nullptr) //if hitted Actor is no Character, check if it is an BaseActor
 	{
-			AStaticMeshActor* HitActor = Cast<AStaticMeshActor>(OtherActor);
+		AStaticMeshActor* HitActor = Cast<AStaticMeshActor>(OtherActor);
 		if (HitActor)
 		{
 			UStaticMeshComponent* MeshComponent = HitActor->GetStaticMeshComponent();
@@ -74,19 +74,20 @@ void UCharacterWeapon::OnOverlapBegin(UPrimitiveComponent* OverlappedComponent, 
 void UCharacterWeapon::DealDamage(AEternal_Grace_ArenaCharacter* Target)
 {
 	float Damage = Values.BaseDamage * DamageMultiplier;
+	float PoiseDamage = Values.PoiseDamage * DamageMultiplier;
 	float DamageDirection = CalculateAttackAngle(Target);
 
 
 	if (Target->Shield && Target->CharacterAnimationInstance->isGuarding && DamageDirection <= 45.0f)
 	{
-			Target->HealthComponent->BlockDamage(Damage, 0.0f, DamageDirection, StaggerType, Cast<AEternal_Grace_ArenaCharacter>(WeaponOwner)); //CHANGE THIS CAST LATER TO FIXED VARIABLE
+		Target->HealthComponent->BlockDamage(Damage, PoiseDamage, DamageDirection, StaggerType, Cast<AEternal_Grace_ArenaCharacter>(WeaponOwner)); //CHANGE THIS CAST LATER TO FIXED VARIABLE
 		if (Target->Shield->PhysicalMaterial)
 		{
 			ApplyHitEffect(Target->Shield->PhysicalMaterial);
 		}
 		return;
 	}
-	Target->HealthComponent->GetDamage(Damage, Values.PoiseDamage, DamageDirection, StaggerType, Cast<AEternal_Grace_ArenaCharacter>(WeaponOwner));
+	Target->HealthComponent->GetDamage(Damage, PoiseDamage, DamageDirection, StaggerType, Cast<AEternal_Grace_ArenaCharacter>(WeaponOwner));
 	ApplyHitEffect(Target->PhysicalMaterial);
 }
 
