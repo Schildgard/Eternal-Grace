@@ -56,6 +56,7 @@ void UHealthComponent::GetDamage(float IncomingDamage, float PoiseDamage, float 
 	AEternal_Grace_ArenaCharacter* Character = Cast<AEternal_Grace_ArenaCharacter>(Owner);
 
 	CurrentHealth -= IncomingDamage;
+		UE_LOG(LogTemp, Warning, TEXT("%s got %f Damage"),*Character->GetName(),IncomingDamage)
 	CurrentPoise -= PoiseDamage;
 
 
@@ -174,9 +175,11 @@ void UHealthComponent::BlockDamage(float Damage, float PoiseDamage, float Damage
 	{
 	case EStaggeringType::NormalStagger:
 		Character->PlayAnimMontage(Character->Block);
+		UE_LOG(LogTemp, Warning, TEXT("Normal Block"))
 		break;
 	case EStaggeringType::HeavyStagger:
 		Character->PlayAnimMontage(Character->BlockHeavyAttack);
+		UE_LOG(LogTemp, Warning, TEXT("Heavy Block"))
 		break;
 	case EStaggeringType::KnockbackStagger:
 		Character->PlayAnimMontage(Character->BlockThrowbackAttack);

@@ -8,15 +8,20 @@
 #include "NS_WeaponSwing.generated.h"
 
 /**
- * 
+ *
  */
 class AEternal_Grace_ArenaCharacter;
 UCLASS()
 class ETERNAL_GRACE_ARENA_API UNS_WeaponSwing : public UAnimNotifyState
 {
 	GENERATED_BODY()
-	UNS_WeaponSwing();
 
+protected:
+	UNS_WeaponSwing();
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Weapon, meta = (AllowPrivateAccess))
+	AActor* OwningActor;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Weapon, meta = (AllowPrivateAccess))
+	AEternal_Grace_ArenaCharacter* PerformingActor;
 	virtual void NotifyBegin(USkeletalMeshComponent* MeshComp, UAnimSequenceBase* Animation, float TotalDuration, const FAnimNotifyEventReference& EventReference)override;
 	virtual void NotifyEnd(USkeletalMeshComponent* MeshComp, UAnimSequenceBase* Animation, const FAnimNotifyEventReference& EventReference)override;
 
@@ -25,10 +30,4 @@ public:
 	EStaggeringType StaggerType;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Weapon, meta = (AllowPrivateAccess))
 	float DamageMultiplier;
-
-protected:
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Weapon, meta = (AllowPrivateAccess))
-	AActor* OwningActor;
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Weapon, meta = (AllowPrivateAccess))
-	AEternal_Grace_ArenaCharacter* PerformingActor;
 };

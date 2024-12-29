@@ -4,7 +4,6 @@
 
 #include "CoreMinimal.h"
 #include "Animation/AnimNotifies/AnimNotifyState.h"
-#include "CharacterAnimInstance.h"
 #include "Eternal_Grace_ArenaCharacter.h"
 #include "NS_SetStaggered.generated.h"
 

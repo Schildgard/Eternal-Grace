@@ -80,6 +80,7 @@ void AEternal_Grace_ArenaEnemy::LightAttack()
 	if (!CharacterAnimationInstance->isAttacking)
 	{
 		CharacterAnimationInstance->isAttacking = true;
+		RotateTowardsTarget(UGameplayStatics::GetPlayerCharacter(world,0));
 		if (CharacterAnimationInstance->isGuarding)
 		{
 			CancelGuard();
