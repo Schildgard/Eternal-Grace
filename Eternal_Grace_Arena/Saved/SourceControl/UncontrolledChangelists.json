@@ -15,6 +15,7 @@
 				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/ThirdPerson/Blueprints/BP_ThirdPersonCharacter.uasset",
 				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Blueprints/CharacterBlueprints/BP_Player.uasset",
 				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Animations/PlayerAnimations/Combat/Guard/AM_GuardBreak.uasset",
+				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Characters/Mannequins/Animations/Manny/BS_Player_WalkRunSprint.uasset",
 				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Animations/PlayerAnimations/Combat/Guard/AM_GuardBreakEvent.uasset"
 			]
 		}

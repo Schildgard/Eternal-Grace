@@ -157,7 +157,7 @@ void APlayerCharacter::Tick(float DeltaSeconds)
 			}
 		}
 	}
-	if (CharacterAnimationInstance && CharacterAnimationInstance->isLockedOn && LockedOnTarget != nullptr)
+	if (CharacterAnimationInstance && CharacterAnimationInstance->isLockedOn && LockedOnTarget != nullptr && CharacterAnimationInstance->isRunning==false)
 	{
 		RotateTowardsTarget(LockedOnTarget);
 	}
@@ -184,8 +184,12 @@ void APlayerCharacter::Sprint()
 {
 	if (StaminaComponent->CurrentStamina >= 0.1f)
 	{
-		CharacterAnimationInstance->isRunning = true;
+	CharacterAnimationInstance->isRunning = true;
 		GetCharacterMovement()->MaxWalkSpeed = 750.f;
+	}
+	else if(CharacterAnimationInstance->isRunning)
+	{
+		CancelSprint();
 	}
 }
 
