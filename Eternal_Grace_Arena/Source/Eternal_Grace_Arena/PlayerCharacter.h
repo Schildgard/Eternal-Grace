@@ -34,6 +34,7 @@ public:
 	AActor* LockedOnTarget;
 
 
+
 	//LOCK ON FUNCTIONS
 	UFUNCTION(CallInEditor, Category = Actions)
 	virtual void ToggleLockOn();
@@ -49,6 +50,17 @@ public:
 	void DisengageLockOn();
 
 
+	//GUARD COUNTER
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess))
+	UInputAction* GuardCounterAction;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Combat, meta = (AllowPrivateAccess))
+	bool GuardCounterPossible;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Combat, meta = (AllowPrivateAccess))
+	UAnimMontage* GuardCounter;
+	UFUNCTION()
+	void GuardCounterAttack();
+
+
 protected:
 	virtual void BeginPlay()override;
 	virtual void Tick(float DeltaSeconds) override;
@@ -56,6 +68,7 @@ protected:
 
 	virtual void Sprint()override;
 	virtual void CancelSprint()override;
+
 
 	virtual void LightAttack()override;
 	virtual void ChargeHeavyAttack()override;

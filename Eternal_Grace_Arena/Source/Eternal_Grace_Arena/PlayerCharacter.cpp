@@ -115,6 +115,16 @@ void APlayerCharacter::DisengageLockOn()
 
 
 
+void APlayerCharacter::GuardCounterAttack()
+{
+	if(GuardCounterPossible && !CharacterAnimationInstance->isAttacking && !CharacterAnimationInstance->isCharging && StaminaComponent->CurrentStamina>= 1.0f && GuardCounter != nullptr && CharacterAnimationInstance->isGuarding)
+	{
+		CharacterAnimationInstance->isAttacking = true;
+		CharacterAnimationInstance->isGuarding = false;
+		PlayAnimMontage(GuardCounter, 1.0f);
+	}
+}
+
 void APlayerCharacter::BeginPlay()
 {
 	Super::BeginPlay();
@@ -172,6 +182,9 @@ void APlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCom
 		//Lock On
 		EnhancedInputComponent->BindAction(ToggleLockOnAction, ETriggerEvent::Triggered, this, &APlayerCharacter::ToggleLockOn);
 		EnhancedInputComponent->BindAction(SwitchLockOnTargetAction, ETriggerEvent::Triggered, this, &APlayerCharacter::SwitchLockOnTarget);
+
+		//GuardCounter
+		EnhancedInputComponent->BindAction(GuardCounterAction, ETriggerEvent::Completed, this, &APlayerCharacter::GuardCounterAttack);
 
 	}
 	else
