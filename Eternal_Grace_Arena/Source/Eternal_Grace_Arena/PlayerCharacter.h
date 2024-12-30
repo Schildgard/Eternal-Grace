@@ -53,10 +53,13 @@ public:
 	//GUARD COUNTER
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess))
 	UInputAction* GuardCounterAction;
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Combat, meta = (AllowPrivateAccess))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Combat, meta = (AllowPrivateAccess))
 	bool GuardCounterPossible;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Combat, meta = (AllowPrivateAccess))
 	UAnimMontage* GuardCounter;
+	float const GuardCounterReactionTimer = 0.5f;
+	UPROPERTY()
+	float GuardCounterReactionCountdown;
 	UFUNCTION()
 	void GuardCounterAttack();
 

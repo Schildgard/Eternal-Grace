@@ -18,6 +18,7 @@ APlayerCharacter::APlayerCharacter()
 {
 	StaminaComponent = CreateDefaultSubobject<UStaminaComponent>("StaminaComponent");
 	RunningStaminaConsumption = 15.0f;
+	GuardCounterReactionCountdown = GuardCounterReactionTimer;
 }
 
 void APlayerCharacter::ToggleLockOn()
@@ -167,9 +168,20 @@ void APlayerCharacter::Tick(float DeltaSeconds)
 			}
 		}
 	}
+	//PLAYER ROTATION WHILE LOCK ON
 	if (CharacterAnimationInstance && CharacterAnimationInstance->isLockedOn && LockedOnTarget != nullptr && CharacterAnimationInstance->isRunning==false)
 	{
 		RotateTowardsTarget(LockedOnTarget);
+	}
+	//RESET GUARDCOUNTER REACTIONTIME
+	if(GuardCounterPossible)
+	{
+		GuardCounterReactionCountdown -= DeltaSeconds;
+		if(GuardCounterReactionCountdown <= 0)
+		{
+			GuardCounterReactionCountdown = GuardCounterReactionTimer;
+			GuardCounterPossible = false;
+		}
 	}
 
 }
