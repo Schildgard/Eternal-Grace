@@ -23,7 +23,7 @@ void UNS_CancelMontage::Notify(USkeletalMeshComponent* MeshComp, UAnimSequenceBa
 				return;
 		}
 	}
-	bool continueAttack = PerformingActor->CheckDistancetoPlayer();
+	bool continueAttack = PerformingActor->CheckDistancetoPlayer(PerformingActor->AttackRange);
 
 	if(!continueAttack)
 	{

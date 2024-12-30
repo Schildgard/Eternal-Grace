@@ -14,6 +14,7 @@
 /**
  * 
  */
+class UPawnSensingComponent;
 UCLASS()
 class ETERNAL_GRACE_ARENA_API AEternal_Grace_ArenaEnemy : public AEternal_Grace_ArenaCharacter
 {
@@ -30,11 +31,30 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Actions, meta = (AllowPrivateAccess))
 	TArray<UAnimMontage*> AttackMontages;
 
+	//PLAYER DETECTION
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = AI, meta = (AllowPrivateAccess))
+	UPawnSensingComponent* SensingComponent;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = AI, meta = (AllowPrivateAccess))
+	bool isAggro;
 	UFUNCTION()
-	bool CheckDistancetoPlayer();
+	bool CheckDistancetoPlayer(float Threshold);
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = AI, meta = (AllowPrivateAccess))
+	float ChasingCountDown;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = AI, meta = (AllowPrivateAccess))
+	float ChasingDistanceThreshold;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = AI, meta = (AllowPrivateAccess))
+	bool ReturningToStartPosition;
+
+	float const ChasingTimer = 2.0f;
+
+
+
 	UFUNCTION(BlueprintCallable)
 	void GetOffMeMove();
 	virtual void LightAttack()override;
+
+	UFUNCTION()
+	void SpotPlayer(APawn* SpottedPawn);
 
 protected:
 	virtual void BeginPlay()override;

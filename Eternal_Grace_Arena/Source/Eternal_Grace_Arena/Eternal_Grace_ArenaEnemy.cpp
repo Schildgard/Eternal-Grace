@@ -5,6 +5,7 @@
 #include "CharacterAnimInstance.h"
 #include "Kismet/KismetMathLibrary.h"
 #include "Kismet//GameplayStatics.h"
+#include "Perception/PawnSensingComponent.h"
 AEternal_Grace_ArenaEnemy::AEternal_Grace_ArenaEnemy()
 {
 	HPBarComponent = CreateDefaultSubobject<UWidgetComponent>(TEXT("HP Bar"));
@@ -13,16 +14,22 @@ AEternal_Grace_ArenaEnemy::AEternal_Grace_ArenaEnemy()
 	HPBarComponent->SetRelativeLocation(FVector(0, 0, 163.0f));
 	AttackRange = 350.f;
 	HealthbarWidget = nullptr;
+
+	ChasingDistanceThreshold = 150.0f;
+	ChasingCountDown = ChasingTimer;
+	ReturningToStartPosition = false;
+
+	SensingComponent = CreateDefaultSubobject<UPawnSensingComponent>("Pawn Sensing");
 }
 
-bool AEternal_Grace_ArenaEnemy::CheckDistancetoPlayer()
+bool AEternal_Grace_ArenaEnemy::CheckDistancetoPlayer(float Threshold)
 {
 	FVector OwnerLocation = GetActorLocation();
 	FVector PlayerLocation = UGameplayStatics::GetPlayerCharacter(world, 0)->GetActorLocation();
 	//insert distance calculation here
 	float Distance = UKismetMathLibrary::Vector_Distance(PlayerLocation, OwnerLocation);
 	UE_LOG(LogTemp, Warning, TEXT("Distance is %lf"), Distance);
-	if (Distance >= AttackRange)
+	if (Distance >= Threshold)
 	{
 		return false;
 	}
@@ -73,6 +80,11 @@ void AEternal_Grace_ArenaEnemy::BeginPlay()
 		{
 			UE_LOG(LogTemp, Warning, TEXT("HP Bar is null"))
 		}
+
+	if (SensingComponent)
+	{
+		SensingComponent->OnSeePawn.AddDynamic(this, &AEternal_Grace_ArenaEnemy::SpotPlayer);
+	}
 }
 
 void AEternal_Grace_ArenaEnemy::Tick(float DeltaSeconds)
@@ -92,6 +104,25 @@ void AEternal_Grace_ArenaEnemy::Tick(float DeltaSeconds)
 	else
 	{
 		UE_LOG(LogTemp, Warning, TEXT("Healthbar widget is null"))
+	}
+
+	if(isAggro)
+	{
+		if(CheckDistancetoPlayer(ChasingDistanceThreshold) == false)
+		{
+			ChasingCountDown -= DeltaSeconds;
+			if(ChasingCountDown <= 0.0f)
+			{
+				ChasingCountDown = ChasingTimer;
+				isAggro = false;
+				ReturningToStartPosition = true;
+				//INSERT RETURN TO START POSITION
+			}
+		}
+		else
+		{
+			ChasingCountDown = ChasingTimer;
+		}
 	}
 }
 
@@ -119,5 +150,15 @@ void AEternal_Grace_ArenaEnemy::LightAttack()
 		//		CharacterAnimationInstance->Montage_SetEndDelegate(CompletedDelegate, LightAttacks[0]);
 		//		UE_LOG(LogTemp, Warning, TEXT("is AGAIN TEST Attacking : %s"), CharacterAnimationInstance->isAttacking ? TEXT("true") : TEXT("false"));
 			//UE_LOG(LogTemp, Warning, TEXT("is Attacking : %s"), CharacterAnimationInstance->isAttacking ? TEXT("true") : TEXT("false"));
+	}
+}
+
+void AEternal_Grace_ArenaEnemy::SpotPlayer(APawn* SpottedPawn)
+{
+	if (!isAggro && !ReturningToStartPosition)
+	{
+		isAggro = true;
+		UE_LOG(LogTemp, Warning, TEXT("Enemy Spotted Player"))
+			//CHECK IF THERE COULD BE A PROBLEM WITH RACE CONDITION IN LINE 118, SINCE THE EVENT CALL ALSO SETS ISAGGRO
 	}
 }
