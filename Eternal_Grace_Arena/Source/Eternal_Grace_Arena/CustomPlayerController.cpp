@@ -5,6 +5,7 @@
 #include "HealthComponent.h"
 #include "StaminaComponent.h"
 #include "BlendingWidget.h"
+#include "Kismet/GameplayStatics.h"
 
 ACustomPlayerController::ACustomPlayerController()
 {
@@ -16,15 +17,24 @@ ACustomPlayerController::ACustomPlayerController()
 }
 void ACustomPlayerController::ShowYouDiedScreen()
 {
+	//CHECK IF YOU DIED SCREEN CLASS WAS ASSIGNED IN EDITOR
 	if(YouDiedScreenClass)
 	{
+		//CREATE OBJECT OF YOU DIED SCREEN CLASS
 		YouDiedWidget = CreateWidget<UBlendingWidget>(this, YouDiedScreenClass);
 		if(YouDiedWidget)
 		{
+			//ACTIVATE YOU DIED SCREEN TO VIEWPORT
 			YouDiedWidget->AddToViewport();
 			if(YouDiedWidget->BlendingAnimation)
 			{
+				//ACTIVATE BLEND IN ANIMATION
 				YouDiedWidget->PlayAnimation(YouDiedWidget->BlendingAnimation);
+				//BIND LEVEL RELOAD TO YOU DIED SCREEN
+				FWidgetAnimationDynamicEvent Reload;
+				Reload.BindDynamic(this, &ACustomPlayerController::ReloadLevel);
+				YouDiedWidget->BindToAnimationFinished(YouDiedWidget->BlendOutAnimation, Reload);
+				//MAKE BLEND OUT ASYNCHRON OR SOMETHING????
 			}
 			//DEACTIVATE INPUT
 			FInputModeUIOnly InputMode;
@@ -34,6 +44,7 @@ void ACustomPlayerController::ShowYouDiedScreen()
 }
 void ACustomPlayerController::HideYouDiedScreen()
 {
+	//PROBABLY UNNECCESSARY
 	if(YouDiedWidget)
 	{
 		YouDiedWidget->RemoveFromViewport();
@@ -76,4 +87,15 @@ void ACustomPlayerController::Tick(float DeltaSeconds)
 	Super::Tick(DeltaSeconds);
 	HUDWidget->UpdateProgressBar(HUDWidget->Healthbar,PlayerCharacter->HealthComponent->MaxHealth, PlayerCharacter->HealthComponent->CurrentHealth);
 	HUDWidget->UpdateProgressBar(HUDWidget->Staminabar, PlayerCharacter->StaminaComponent->MaxStamina, PlayerCharacter->StaminaComponent->CurrentStamina);
+}
+
+void ACustomPlayerController::ReloadLevel()
+{
+	FName CurrentLevelName = FName(*GetWorld()->GetMapName());
+
+	UGameplayStatics::OpenLevel(this, CurrentLevelName);
+
+	//REACTIVATE INPUT
+	FInputModeGameOnly InputMode;
+	SetInputMode(InputMode);
 }
