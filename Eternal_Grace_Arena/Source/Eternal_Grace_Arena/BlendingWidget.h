@@ -15,7 +15,8 @@ class ETERNAL_GRACE_ARENA_API UBlendingWidget : public UUserWidget
 	GENERATED_BODY()
 
 public:
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (AllowPrivateAccess))
+	//TRANSIENT signalizes that the property only exists in runtime and endloads after playing
+	UPROPERTY(meta = (BindWidgetAnim), Transient)
 	UWidgetAnimation* BlendingAnimation;
 	
 };

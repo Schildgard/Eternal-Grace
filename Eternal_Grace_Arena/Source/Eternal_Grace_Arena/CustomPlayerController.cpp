@@ -4,6 +4,7 @@
 #include "CustomPlayerController.h"
 #include "HealthComponent.h"
 #include "StaminaComponent.h"
+#include "BlendingWidget.h"
 
 ACustomPlayerController::ACustomPlayerController()
 {
@@ -17,14 +18,14 @@ void ACustomPlayerController::ShowYouDiedScreen()
 {
 	if(YouDiedScreenClass)
 	{
-		YouDiedWidget = CreateWidget<UUserWidget>(this, YouDiedScreenClass);
+		YouDiedWidget = CreateWidget<UBlendingWidget>(this, YouDiedScreenClass);
 		if(YouDiedWidget)
 		{
 			YouDiedWidget->AddToViewport();
-		//	if(YouDiedWidget->FadeInAnimation)
-		//	{
-		//		YouDiedWidget->PlayAnimation(YouDiedWidget->FadeInAnimation);
-		//	}
+			if(YouDiedWidget->BlendingAnimation)
+			{
+				YouDiedWidget->PlayAnimation(YouDiedWidget->BlendingAnimation);
+			}
 			//DEACTIVATE INPUT
 			FInputModeUIOnly InputMode;
 			SetInputMode(InputMode);

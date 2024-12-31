@@ -14,6 +14,7 @@
 /**
  *
  */
+class UBlendingWidget;
 UCLASS()
 class ETERNAL_GRACE_ARENA_API ACustomPlayerController : public APlayerController
 {
@@ -33,9 +34,7 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "User Interface", meta = (AllowPrivateAccess))
 	TSubclassOf<UUserWidget> YouDiedScreenClass;
 	UPROPERTY()
-	UUserWidget* YouDiedWidget;
-	UPROPERTY()
-	UWidgetAnimation* FadeInAnimation;
+	UBlendingWidget* YouDiedWidget;
 
 	UFUNCTION()
 	void ShowYouDiedScreen();
