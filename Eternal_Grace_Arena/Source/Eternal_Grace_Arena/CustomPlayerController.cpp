@@ -7,9 +7,45 @@
 
 ACustomPlayerController::ACustomPlayerController()
 {
+	PlayerCharacter = nullptr;
 	HUDWidgetClass = nullptr;
 	HUDWidget = nullptr;
-
+	YouDiedScreenClass = nullptr;
+	YouDiedWidget = nullptr;
+}
+void ACustomPlayerController::ShowYouDiedScreen()
+{
+	if(YouDiedScreenClass)
+	{
+		YouDiedWidget = CreateWidget<UUserWidget>(this, YouDiedScreenClass);
+		if(YouDiedWidget)
+		{
+			YouDiedWidget->AddToViewport();
+		//	if(YouDiedWidget->FadeInAnimation)
+		//	{
+		//		YouDiedWidget->PlayAnimation(YouDiedWidget->FadeInAnimation);
+		//	}
+			//DEACTIVATE INPUT
+			FInputModeUIOnly InputMode;
+			SetInputMode(InputMode);
+		}
+	}
+}
+void ACustomPlayerController::HideYouDiedScreen()
+{
+	if(YouDiedWidget)
+	{
+		YouDiedWidget->RemoveFromViewport();
+		//REACTIVATE INPUT
+		FInputModeGameOnly InputMode;
+		SetInputMode(InputMode);
+	}
+	
+}
+void ACustomPlayerController::HandlePlayerDeath()
+{
+	UE_LOG(LogTemp,Warning, TEXT("Player Death"))
+	ShowYouDiedScreen();
 }
 void ACustomPlayerController::BeginPlay()
 {
@@ -26,6 +62,11 @@ void ACustomPlayerController::BeginPlay()
 	}
 
 	PlayerCharacter = Cast<APlayerCharacter>(AcknowledgedPawn);
+
+	if(PlayerCharacter)
+	{
+		PlayerCharacter->HealthComponent->OnPlayerDied.AddDynamic(this, &ACustomPlayerController::HandlePlayerDeath);
+	}
 
 };
 

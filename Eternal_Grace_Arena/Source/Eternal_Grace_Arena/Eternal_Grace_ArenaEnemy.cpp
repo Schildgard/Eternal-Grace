@@ -28,7 +28,6 @@ bool AEternal_Grace_ArenaEnemy::CheckDistancetoPlayer(float Threshold)
 	FVector PlayerLocation = UGameplayStatics::GetPlayerCharacter(world, 0)->GetActorLocation();
 	//insert distance calculation here
 	float Distance = UKismetMathLibrary::Vector_Distance(PlayerLocation, OwnerLocation);
-	UE_LOG(LogTemp, Warning, TEXT("Distance is %lf"), Distance);
 	if (Distance >= Threshold)
 	{
 		return false;
@@ -59,7 +58,6 @@ void AEternal_Grace_ArenaEnemy::GetOffMeMove()
 void AEternal_Grace_ArenaEnemy::BeginPlay()
 {
 	Super::BeginPlay();
-	UE_LOG(LogTemp, Warning, TEXT("Begin"))
 		if (HPBarComponent)
 		{
 			UUserWidget* Widget = HPBarComponent->GetWidget();

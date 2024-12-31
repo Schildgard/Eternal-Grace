@@ -7,7 +7,9 @@
 #include "StaggeringType.h"
 #include "HealthComponent.generated.h"
 
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnPlayerDied);
 class AEternal_Grace_ArenaCharacter;
+
 UCLASS(ClassGroup = (Custom), meta = (BlueprintSpawnableComponent))
 class ETERNAL_GRACE_ARENA_API UHealthComponent : public UActorComponent
 {
@@ -15,6 +17,8 @@ class ETERNAL_GRACE_ARENA_API UHealthComponent : public UActorComponent
 
 public:
 	UHealthComponent();
+	UPROPERTY(BlueprintAssignable, Category ="Events")
+	FOnPlayerDied OnPlayerDied;
 	// Sets default values for this component's properties
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = BaseValues, meta = (AllowPrivateAccess))

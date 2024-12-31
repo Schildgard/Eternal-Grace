@@ -199,12 +199,14 @@ void UHealthComponent::BlockDamage(float Damage, float PoiseDamage, float Damage
 void UHealthComponent::Die()
 {
 
-	AActor* Owner = GetOwner();
-
-	AEternal_Grace_ArenaCharacter* Character = Cast<AEternal_Grace_ArenaCharacter>(Owner);
-
+	AEternal_Grace_ArenaCharacter* Character = Cast<AEternal_Grace_ArenaCharacter>(GetOwner());
 	if (Character)
 	{
+		APlayerController* PlayerController = Cast<APlayerController>(Character->GetController());
+		if(PlayerController)
+		{
+			OnPlayerDied.Broadcast();
+		}
 		Character->PlayAnimMontage(Character->DeathAnimation);
 		Character->SetActorEnableCollision(false);
 	}

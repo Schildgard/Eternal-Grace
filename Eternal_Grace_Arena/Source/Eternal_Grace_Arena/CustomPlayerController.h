@@ -30,10 +30,24 @@ public:
 	UPROPERTY()
 	APlayerCharacter* PlayerCharacter;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "User Interface", meta = (AllowPrivateAccess))
+	TSubclassOf<UUserWidget> YouDiedScreenClass;
+	UPROPERTY()
+	UUserWidget* YouDiedWidget;
+	UPROPERTY()
+	UWidgetAnimation* FadeInAnimation;
+
+	UFUNCTION()
+	void ShowYouDiedScreen();
+	UFUNCTION()
+	void HideYouDiedScreen();
+	UFUNCTION()
+	void HandlePlayerDeath();
  protected:
 
 	virtual void BeginPlay()override;
 	virtual void Tick(float DeltaSeconds)override;
+
 
 
 };
