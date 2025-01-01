@@ -45,7 +45,7 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = AI, meta = (AllowPrivateAccess))
 	bool ReturningToStartPosition;
 
-	float const ChasingTimer = 2.0f;
+	float const ChasingTimer = 10.0f;
 
 
 

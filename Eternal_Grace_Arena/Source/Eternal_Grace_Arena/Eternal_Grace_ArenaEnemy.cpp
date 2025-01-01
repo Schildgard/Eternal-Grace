@@ -15,7 +15,7 @@ AEternal_Grace_ArenaEnemy::AEternal_Grace_ArenaEnemy()
 	AttackRange = 350.f;
 	HealthbarWidget = nullptr;
 
-	ChasingDistanceThreshold = 150.0f;
+	ChasingDistanceThreshold = 300.0f;
 	ChasingCountDown = ChasingTimer;
 	ReturningToStartPosition = false;
 

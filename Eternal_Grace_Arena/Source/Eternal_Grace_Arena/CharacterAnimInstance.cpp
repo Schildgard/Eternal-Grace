@@ -2,7 +2,9 @@
 
 
 #include "CharacterAnimInstance.h"
+#include "Eternal_Grace_ArenaCharacter.h"
 #include "Eternal_Grace_ArenaEnemy.h"
+#include "CharacterWeapon.h"
 
 void UCharacterAnimInstance::InterruptAttack(UAnimMontage* AttackAnimation, bool Interrupted)
 {
@@ -10,25 +12,29 @@ void UCharacterAnimInstance::InterruptAttack(UAnimMontage* AttackAnimation, bool
 	{
 		isAttacking = false;
 		UE_LOG(LogTemp, Error, TEXT("Animation was interrupted"))
+			AEternal_Grace_ArenaCharacter* ThisCharacter = Cast<AEternal_Grace_ArenaCharacter>(GetOwningActor());
+		if (ThisCharacter)
+		{
+			//THIS DOES NOT SEEM TO MAKE A DIFFERENCE
+			ThisCharacter->Weapon->ResetAttackValues();
+		}
+		else
+		{
+			UE_LOG(LogTemp, Warning, TEXT("Cast Not successfull"))
+		}
 	}
 }
 
 void UCharacterAnimInstance::OnAttackEnd(UAnimMontage* AttackAnimation, bool Interrupted)
 {
 	isAttacking = false;
-	UE_LOG(LogTemp, Warning, TEXT("is Attacking : %s"),isAttacking ? TEXT("true") : TEXT("false"));
-//	AEternal_Grace_ArenaEnemy* Owner = Cast<AEternal_Grace_ArenaEnemy>(GetOwningActor());
-//	//check attack count
-//	if (Owner && attackCount <= 2)
-//	{
-//		UE_LOG(LogTemp, Warning, TEXT("Continue Attack"))
-//		//check distance to player
-//		bool PlayerInReach = Owner->CheckDistancetoPlayer();
-//		if (PlayerInReach)
-//		{
-//			UE_LOG(LogTemp, Warning, TEXT("Perform Continous Attack"))
-//			Owner->LightAttack();
-//		}
-//	}
-	UE_LOG(LogTemp, Warning, TEXT("Animation was completed"))
+	AEternal_Grace_ArenaCharacter* ThisCharacter = Cast<AEternal_Grace_ArenaCharacter>(GetOwningActor());
+	if (ThisCharacter)
+	{
+		ThisCharacter->Weapon->ResetAttackValues();
+	}
+	else
+	{
+		UE_LOG(LogTemp, Warning, TEXT("Cast Not successfull"))
+	}
 }

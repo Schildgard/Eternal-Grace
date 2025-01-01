@@ -22,7 +22,7 @@ void UNS_WeaponSwing::NotifyBegin(USkeletalMeshComponent* MeshComp, UAnimSequenc
 		PerformingActor = Cast<AEternal_Grace_ArenaCharacter>(MeshComp->GetOwner());
 		if (PerformingActor)
 		{
-			UE_LOG(LogTemp, Warning, TEXT("Owner Found"))
+		//	UE_LOG(LogTemp, Warning, TEXT("Owner Found"))
 		}
 		else
 		{

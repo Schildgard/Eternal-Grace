@@ -111,14 +111,14 @@ void UHealthComponent::GetDamage(float IncomingDamage, float PoiseDamage, float 
 			CurrentPoise = MaxPoise;
 			break;
 		case EStaggeringType::KnockbackStagger:
-			if (CurrentHealth <= 0)
-			{
-				Character->RotateTowardsTarget(DamageSource);
-				CheckActorStaggerAnimation(Character->DeathAnimationWithKnockBack, Character);
-				//Character->PlayAnimMontage(Character->DeathAnimationWithKnockBack);
-				CurrentPoise = MaxPoise;
-				return;
-			}
+		//	if (CurrentHealth <= 0)
+		//	{
+		//		Character->RotateTowardsTarget(DamageSource);
+		//		CheckActorStaggerAnimation(Character->DeathAnimationWithKnockBack, Character); 
+		//		//Character->PlayAnimMontage(Character->DeathAnimationWithKnockBack);
+		//		CurrentPoise = MaxPoise;
+		//		break;
+		//	}
 			Character->RotateTowardsTarget(DamageSource);
 			CheckActorStaggerAnimation(Character->StaggerAnims[2], Character);
 			//Character->PlayAnimMontage(Character->StaggerAnims[2]);
@@ -184,6 +184,7 @@ void UHealthComponent::BlockDamage(float Damage, float PoiseDamage, float Damage
 		break;
 	case EStaggeringType::KnockbackStagger:
 		Character->PlayAnimMontage(Character->BlockThrowbackAttack);
+		UE_LOG(LogTemp, Warning, TEXT("Knockback Block"))
 		break;
 	case EStaggeringType::ThrowupStagger:
 		Character->PlayAnimMontage(Character->BlockThrowbackAttack);
@@ -208,6 +209,22 @@ void UHealthComponent::Die()
 			OnPlayerDied.Broadcast();
 		}
 		Character->PlayAnimMontage(Character->DeathAnimation);
+		Character->SetActorEnableCollision(false);
+	}
+	else return;
+
+}
+//NOT SURE IF THIS IS A GOOD IDEA, RIGHT NOW ITS JUST A TEST FOR WHEN THE PLAYER IS KILLED WITH A KNOCKBACK ATTACK
+void UHealthComponent::DieWithKnockback()
+{
+	AEternal_Grace_ArenaCharacter* Character = Cast<AEternal_Grace_ArenaCharacter>(GetOwner());
+	if (Character)
+	{
+		APlayerController* PlayerController = Cast<APlayerController>(Character->GetController());
+		if (PlayerController)
+		{
+			OnPlayerDied.Broadcast();
+		}
 		Character->SetActorEnableCollision(false);
 	}
 	else return;
