@@ -17,8 +17,12 @@ class ETERNAL_GRACE_ARENA_API AInteractableActor_SceneLoader : public AInteracta
 public:
 	AInteractableActor_SceneLoader();
 	virtual void Interact_Implementation()override;
+	virtual void BeginPlay()override;
+	UFUNCTION()
+	void OnLevelLoaded();
 
 protected:
+
 	UPROPERTY(EditAnywhere, BlueprintReadWrite,Category = "Scene Loading", meta = (AllowPrivateAccess))
-	UWorld* LevelToLoad;
+	TSoftObjectPtr<UWorld> LevelToLoad;
 };

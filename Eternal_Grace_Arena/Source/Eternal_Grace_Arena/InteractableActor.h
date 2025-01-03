@@ -28,6 +28,15 @@ public:
 		bool bFromSweep,
 		const FHitResult& SweepResult
 	);
+	UFUNCTION()
+	void OnOverlapEnd(
+		UPrimitiveComponent* OverlappedComponent,
+		AActor* OtherActor,
+		UPrimitiveComponent* OtherComponent,
+		int32 OtherBodyIndex,
+		bool bFromSweep,
+		const FHitResult& SweepResult
+	);
 
 protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (AllowPrivateAccess))
@@ -36,6 +45,15 @@ protected:
 	USphereComponent* InteractionRadius;
 	UPROPERTY()
 	float DefaultRadiusSize;
+
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (AllowPrivateAccess))
+	TSubclassOf<UUserWidget> InfoClass;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (AllowPrivateAccess))
+	UUserWidget* InteractInfoWidget;
+
+
+
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 

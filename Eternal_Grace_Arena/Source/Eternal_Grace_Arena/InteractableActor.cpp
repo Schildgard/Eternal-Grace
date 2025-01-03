@@ -2,6 +2,7 @@
 
 
 #include "InteractableActor.h"
+#include "Blueprint/UserWidget.h"
 
 // Sets default values
 AInteractableActor::AInteractableActor()
@@ -9,6 +10,8 @@ AInteractableActor::AInteractableActor()
 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 	DefaultRadiusSize = 200.0f;
+	InfoClass = nullptr;
+	InteractInfoWidget = nullptr;
 
 	InteractionRadius = CreateDefaultSubobject<USphereComponent>("Interaction Radius");
 	InteractionRadius->InitSphereRadius(DefaultRadiusSize); // Default Radius
@@ -25,6 +28,7 @@ AInteractableActor::AInteractableActor()
 
 void AInteractableActor::Interact_Implementation()
 {
+//NOT SURE IF THIS ACTUALLY WORKS OR DOES ANYTHING
 }
 
 void AInteractableActor::OnBeginOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComponent, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
@@ -33,6 +37,11 @@ void AInteractableActor::OnBeginOverlap(UPrimitiveComponent* OverlappedComponent
 	{
 		Execute_Interact(this);
 	}
+}
+
+void AInteractableActor::OnOverlapEnd(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComponent, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
+{
+	//ADD LOGIC TO LEAVE RADIUS HERE
 }
 
 // Called when the game starts or when spawned
