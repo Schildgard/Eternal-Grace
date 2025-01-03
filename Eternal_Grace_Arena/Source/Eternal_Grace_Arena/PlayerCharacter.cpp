@@ -12,6 +12,7 @@
 #include "EnhancedInputComponent.h"
 #include "EnhancedInputSubsystems.h"
 #include "InputActionValue.h"
+#include "InteractableActor.h"
 
 
 APlayerCharacter::APlayerCharacter()
@@ -126,6 +127,31 @@ void APlayerCharacter::GuardCounterAttack()
 	}
 }
 
+void APlayerCharacter::Interact()
+{
+	TSet<AActor*> OverlappingActors;
+	TSubclassOf<AInteractableActor> ViableActorClass;
+	GetOverlappingActors(OverlappingActors, ViableActorClass);
+		//Cant Access Elements of TSets, thats why it is neccessary to iterate through it, even just to get one item
+		if(OverlappingActors.Num()>= 1)
+		{
+			for (AActor* Overlap : OverlappingActors)
+			{
+				
+				AInteractableActor* Interactable = Cast<AInteractableActor>(Overlap);
+				if(Interactable)
+				{
+					Interactable->Interact_Implementation();
+					break;
+				}
+			}
+		}
+		else
+		{
+			UE_LOG(LogTemp, Warning, TEXT("Nothing to Interact"))
+		}
+}
+
 void APlayerCharacter::BeginPlay()
 {
 	Super::BeginPlay();
@@ -194,9 +220,10 @@ void APlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCom
 		//Lock On
 		EnhancedInputComponent->BindAction(ToggleLockOnAction, ETriggerEvent::Triggered, this, &APlayerCharacter::ToggleLockOn);
 		EnhancedInputComponent->BindAction(SwitchLockOnTargetAction, ETriggerEvent::Triggered, this, &APlayerCharacter::SwitchLockOnTarget);
-
 		//GuardCounter
 		EnhancedInputComponent->BindAction(GuardCounterAction, ETriggerEvent::Completed, this, &APlayerCharacter::GuardCounterAttack);
+		//Interactions
+		EnhancedInputComponent->BindAction(InteractAction, ETriggerEvent::Completed, this, &APlayerCharacter::Interact);
 
 	}
 	else

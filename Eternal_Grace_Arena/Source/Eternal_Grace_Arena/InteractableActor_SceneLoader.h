@@ -20,6 +20,8 @@ public:
 	virtual void BeginPlay()override;
 	UFUNCTION()
 	void OnLevelLoaded();
+	virtual void OnBeginOverlap(UPrimitiveComponent* OverlappedComponent,AActor* OtherActor,UPrimitiveComponent* OtherComponent,int32 OtherBodyIndex,bool bFromSweep,const FHitResult& SweepResult)override;
+	virtual void OnOverlapEnd(UPrimitiveComponent* OverlappedComponent,AActor* OtherActor,UPrimitiveComponent* OtherComponent,int32 OtherBodyIndex)override;
 
 protected:
 

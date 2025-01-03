@@ -14,23 +14,17 @@ AInteractableActor_SceneLoader::AInteractableActor_SceneLoader()
 
 void AInteractableActor_SceneLoader::Interact_Implementation()
 {
-	//if (!LevelToLoad.IsValid())
-	//{
-	//	UE_LOG(LogTemp, Warning, TEXT("Failed to load Level. Its probably nullptr"))
-	//		return;
-	//}
-	//else
-	//{
-	//	FStreamableManager& StreamManager = UAssetManager::GetStreamableManager();
-	//	StreamManager.RequestAsyncLoad(LevelToLoad.ToSoftObjectPath(), FStreamableDelegate::CreateUObject(this, &AInteractableActor_SceneLoader::OnLevelLoaded));
-	//}
-	//InteractInfoWidget->AddToViewport();
-
-	if (InteractInfoWidget)
+	if (!LevelToLoad.IsValid())
 	{
-		
-		InteractInfoWidget->AddToViewport();
+		UE_LOG(LogTemp, Warning, TEXT("Failed to load Level. Its probably nullptr"))
+			return;
 	}
+	else
+	{
+		FStreamableManager& StreamManager = UAssetManager::GetStreamableManager();
+		StreamManager.RequestAsyncLoad(LevelToLoad.ToSoftObjectPath(), FStreamableDelegate::CreateUObject(this, &AInteractableActor_SceneLoader::OnLevelLoaded));
+	}
+	InteractInfoWidget->AddToViewport();
 }
 
 void AInteractableActor_SceneLoader::BeginPlay()
@@ -53,5 +47,23 @@ void AInteractableActor_SceneLoader::OnLevelLoaded()
 	else
 	{
 		UE_LOG(LogTemp, Warning, TEXT("Failed to load Level"))
+	}
+}
+
+void AInteractableActor_SceneLoader::OnBeginOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComponent, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
+{
+	if (InteractInfoWidget && !InteractInfoWidget->IsInViewport())
+	{
+
+		InteractInfoWidget->AddToViewport();
+	}
+}
+
+void AInteractableActor_SceneLoader::OnOverlapEnd(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComponent, int32 OtherBodyIndex)
+{
+	if (InteractInfoWidget&& InteractInfoWidget->IsInViewport())
+	{
+
+		InteractInfoWidget->RemoveFromViewport();
 	}
 }

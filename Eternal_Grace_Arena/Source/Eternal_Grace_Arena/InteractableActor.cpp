@@ -39,9 +39,9 @@ void AInteractableActor::OnBeginOverlap(UPrimitiveComponent* OverlappedComponent
 	}
 }
 
-void AInteractableActor::OnOverlapEnd(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComponent, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
+void AInteractableActor::OnOverlapEnd(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComponent, int32 OtherBodyIndex)
 {
-	//ADD LOGIC TO LEAVE RADIUS HERE
+
 }
 
 // Called when the game starts or when spawned
@@ -50,6 +50,7 @@ void AInteractableActor::BeginPlay()
 	Super::BeginPlay();
 
 	InteractionRadius->OnComponentBeginOverlap.AddDynamic(this, &AInteractableActor::OnBeginOverlap);
+	InteractionRadius->OnComponentEndOverlap.AddDynamic(this, &AInteractableActor::OnOverlapEnd);
 
 }
 

@@ -63,6 +63,12 @@ public:
 	UFUNCTION()
 	void GuardCounterAttack();
 
+	//INTERACT
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess))
+	UInputAction* InteractAction;
+	UFUNCTION()
+	void Interact();
+
 
 protected:
 	virtual void BeginPlay()override;
