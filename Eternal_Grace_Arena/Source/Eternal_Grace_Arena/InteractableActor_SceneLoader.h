@@ -20,5 +20,5 @@ public:
 
 protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite,Category = "Scene Loading", meta = (AllowPrivateAccess))
-	TSoftObjectPtr<UWorld> LevelToLoad;
+	UWorld* LevelToLoad;
 };
