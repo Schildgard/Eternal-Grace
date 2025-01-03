@@ -6,9 +6,8 @@
 // Sets default values
 AInteractableActor::AInteractableActor()
 {
- 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
+	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
-	Mesh = CreateDefaultSubobject<UStaticMeshComponent>("Mesh");
 	DefaultRadiusSize = 200.0f;
 
 	InteractionRadius = CreateDefaultSubobject<USphereComponent>("Interaction Radius");
@@ -18,19 +17,21 @@ AInteractableActor::AInteractableActor()
 	InteractionRadius->SetHiddenInGame(false);
 	InteractionRadius->bDrawOnlyIfSelected = true;
 
-	//RootComponent = InteractionRadius;
+	RootComponent = InteractionRadius;
+
+	Mesh = CreateDefaultSubobject<UStaticMeshComponent>("Mesh");
+	Mesh->SetupAttachment(RootComponent);
 }
 
 void AInteractableActor::Interact_Implementation()
 {
-	UE_LOG(LogTemp, Warning, TEXT("Interact called in AMyActor!"));
 }
 
 void AInteractableActor::OnBeginOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComponent, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
-	if(OtherActor && OtherActor!=this)
+	if (OtherActor && OtherActor != this)
 	{
-		Interact();
+		Execute_Interact(this);
 	}
 }
 
@@ -40,7 +41,7 @@ void AInteractableActor::BeginPlay()
 	Super::BeginPlay();
 
 	InteractionRadius->OnComponentBeginOverlap.AddDynamic(this, &AInteractableActor::OnBeginOverlap);
-	
+
 }
 
 // Called every frame

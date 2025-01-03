@@ -19,6 +19,7 @@ public:
 
 	virtual void Interact_Implementation()override;
 	// COSTUM OVERLAP FUNCTION IMPLEMENTATION SINCE AACTOR BASE CLASS HAS NO DECLARATION FOR IT
+	UFUNCTION()
 	void OnBeginOverlap(
 		UPrimitiveComponent* OverlappedComponent,
 		AActor* OtherActor,
