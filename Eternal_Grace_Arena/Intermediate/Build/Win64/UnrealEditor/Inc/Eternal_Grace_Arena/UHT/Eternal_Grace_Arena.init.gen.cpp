@@ -7,6 +7,7 @@
 #include "UObject/GeneratedCppIncludes.h"
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeEternal_Grace_Arena_init() {}
+	ETERNAL_GRACE_ARENA_API UFunction* Z_Construct_UDelegateFunction_Eternal_Grace_Arena_OnInteraction__DelegateSignature();
 	ETERNAL_GRACE_ARENA_API UFunction* Z_Construct_UDelegateFunction_Eternal_Grace_Arena_OnPlayerDied__DelegateSignature();
 	static FPackageRegistrationInfo Z_Registration_Info_UPackage__Script_Eternal_Grace_Arena;
 	FORCENOINLINE UPackage* Z_Construct_UPackage__Script_Eternal_Grace_Arena()
@@ -14,6 +15,7 @@ void EmptyLinkFunctionForGeneratedCodeEternal_Grace_Arena_init() {}
 		if (!Z_Registration_Info_UPackage__Script_Eternal_Grace_Arena.OuterSingleton)
 		{
 			static UObject* (*const SingletonFuncArray[])() = {
+				(UObject* (*)())Z_Construct_UDelegateFunction_Eternal_Grace_Arena_OnInteraction__DelegateSignature,
 				(UObject* (*)())Z_Construct_UDelegateFunction_Eternal_Grace_Arena_OnPlayerDied__DelegateSignature,
 			};
 			static const UECodeGen_Private::FPackageParams PackageParams = {
@@ -21,13 +23,13 @@ void EmptyLinkFunctionForGeneratedCodeEternal_Grace_Arena_init() {}
 				SingletonFuncArray,
 				UE_ARRAY_COUNT(SingletonFuncArray),
 				PKG_CompiledIn | 0x00000000,
-				0x8A27134A,
-				0x9044EE6C,
+				0x83FDB0AE,
+				0xBDE42CC8,
 				METADATA_PARAMS(0, nullptr)
 			};
 			UECodeGen_Private::ConstructUPackage(Z_Registration_Info_UPackage__Script_Eternal_Grace_Arena.OuterSingleton, PackageParams);
 		}
 		return Z_Registration_Info_UPackage__Script_Eternal_Grace_Arena.OuterSingleton;
 	}
-	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_Eternal_Grace_Arena(Z_Construct_UPackage__Script_Eternal_Grace_Arena, TEXT("/Script/Eternal_Grace_Arena"), Z_Registration_Info_UPackage__Script_Eternal_Grace_Arena, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0x8A27134A, 0x9044EE6C));
+	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_Eternal_Grace_Arena(Z_Construct_UPackage__Script_Eternal_Grace_Arena, TEXT("/Script/Eternal_Grace_Arena"), Z_Registration_Info_UPackage__Script_Eternal_Grace_Arena, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0x83FDB0AE, 0xBDE42CC8));
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

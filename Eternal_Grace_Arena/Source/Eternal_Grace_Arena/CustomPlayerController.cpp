@@ -6,6 +6,8 @@
 #include "StaminaComponent.h"
 #include "BlendingWidget.h"
 #include "Kismet/GameplayStatics.h"
+//#include "GameFramework/PlayerState.h"
+#include "EternalGrace_PlayerState.h"
 
 ACustomPlayerController::ACustomPlayerController()
 {
@@ -18,15 +20,15 @@ ACustomPlayerController::ACustomPlayerController()
 void ACustomPlayerController::ShowYouDiedScreen()
 {
 	//CHECK IF YOU DIED SCREEN CLASS WAS ASSIGNED IN EDITOR
-	if(YouDiedScreenClass)
+	if (YouDiedScreenClass)
 	{
 		//CREATE OBJECT OF YOU DIED SCREEN CLASS
 		YouDiedWidget = CreateWidget<UBlendingWidget>(this, YouDiedScreenClass);
-		if(YouDiedWidget)
+		if (YouDiedWidget)
 		{
 			//ACTIVATE YOU DIED SCREEN TO VIEWPORT
 			YouDiedWidget->AddToViewport();
-			if(YouDiedWidget->BlendingAnimation)
+			if (YouDiedWidget->BlendingAnimation)
 			{
 				//ACTIVATE BLEND IN ANIMATION
 				YouDiedWidget->PlayAnimation(YouDiedWidget->BlendingAnimation);
@@ -45,25 +47,25 @@ void ACustomPlayerController::ShowYouDiedScreen()
 void ACustomPlayerController::HideYouDiedScreen()
 {
 	//PROBABLY UNNECCESSARY
-	if(YouDiedWidget)
+	if (YouDiedWidget)
 	{
 		YouDiedWidget->RemoveFromViewport();
 		//REACTIVATE INPUT
 		FInputModeGameOnly InputMode;
 		SetInputMode(InputMode);
 	}
-	
+
 }
 void ACustomPlayerController::HandlePlayerDeath()
 {
-	UE_LOG(LogTemp,Warning, TEXT("Player Death"))
-	ShowYouDiedScreen();
+	UE_LOG(LogTemp, Warning, TEXT("Player Death"))
+		ShowYouDiedScreen();
 }
 void ACustomPlayerController::BeginPlay()
 {
 	Super::BeginPlay();
 
-	if(HUDWidgetClass != nullptr)
+	if (HUDWidgetClass != nullptr)
 	{
 		HUDWidget = CreateWidget<UPlayer_UI_Bars>(this, HUDWidgetClass);
 		HUDWidget->AddToViewport();
@@ -75,20 +77,20 @@ void ACustomPlayerController::BeginPlay()
 
 	PlayerCharacter = Cast<APlayerCharacter>(AcknowledgedPawn);
 
-	if(PlayerCharacter)
+	if (PlayerCharacter)
 	{
 		PlayerCharacter->HealthComponent->OnPlayerDied.AddDynamic(this, &ACustomPlayerController::HandlePlayerDeath);
 	}
-
+	UE_LOG(LogTemp, Error, TEXT("load controller"))
 };
 
 void ACustomPlayerController::Tick(float DeltaSeconds)
 {
 	Super::Tick(DeltaSeconds);
-	if(HUDWidget)
+	if (HUDWidget)
 	{
-	HUDWidget->UpdateProgressBar(HUDWidget->Healthbar,PlayerCharacter->HealthComponent->MaxHealth, PlayerCharacter->HealthComponent->CurrentHealth);
-	HUDWidget->UpdateProgressBar(HUDWidget->Staminabar, PlayerCharacter->StaminaComponent->MaxStamina, PlayerCharacter->StaminaComponent->CurrentStamina);
+		HUDWidget->UpdateProgressBar(HUDWidget->Healthbar, PlayerCharacter->HealthComponent->MaxHealth, PlayerCharacter->HealthComponent->CurrentHealth);
+		HUDWidget->UpdateProgressBar(HUDWidget->Staminabar, PlayerCharacter->StaminaComponent->MaxStamina, PlayerCharacter->StaminaComponent->CurrentStamina);
 	}
 }
 
@@ -101,4 +103,42 @@ void ACustomPlayerController::ReloadLevel()
 	//REACTIVATE INPUT
 	FInputModeGameOnly InputMode;
 	SetInputMode(InputMode);
+}
+
+void ACustomPlayerController::OnMapLeave()
+{
+	//SAVE VALUES TO PLAYER STATE
+	if (PlayerCharacter)
+	{
+		APlayerState* ActivePlayerState = GetPlayerState<APlayerState>();
+				if (ActivePlayerState)
+				{
+					AEternalGrace_PlayerState* CustomPlayerState = Cast<AEternalGrace_PlayerState>(ActivePlayerState);
+					if (CustomPlayerState)
+					{
+						CustomPlayerState->SetPlayerHealth(PlayerCharacter->HealthComponent->CurrentHealth);
+						UE_LOG(LogTemp, Warning, TEXT("Transmitted Player Health to PlayerState. %f"),CustomPlayerState->GetPlayerHealth())
+		
+					}
+				}
+	}
+}
+void ACustomPlayerController::OnMapEnter2()
+{
+	UE_LOG(LogTemp, Warning, TEXT("OnMapEnter"))
+	//LOAD VALUES FROM PLAYER STATE
+	if (PlayerCharacter)
+	{
+		APlayerState* ActivePlayerState = GetPlayerState<APlayerState>();
+		if (ActivePlayerState)
+		{
+			AEternalGrace_PlayerState* CustomPlayerState = Cast<AEternalGrace_PlayerState>(ActivePlayerState);
+			if (CustomPlayerState)
+			{
+				PlayerCharacter->HealthComponent->CurrentHealth = CustomPlayerState->GetPlayerHealth();
+				UE_LOG(LogTemp, Warning, TEXT("Transmitted PlayerState Health to Player. %f"),CustomPlayerState->GetPlayerHealth())
+
+			}
+		}
+	}
 }

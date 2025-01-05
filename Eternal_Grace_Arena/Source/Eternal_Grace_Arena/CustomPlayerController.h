@@ -22,26 +22,32 @@ class ETERNAL_GRACE_ARENA_API ACustomPlayerController : public APlayerController
 	ACustomPlayerController();
 
 public:
+	//PLAYER HUD
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "User Interface", meta = (AllowPrivateAccess))
 	TSubclassOf<UPlayer_UI_Bars> HUDWidgetClass;
-
 	UPROPERTY()
 	UPlayer_UI_Bars* HUDWidget;
-
 	UPROPERTY()
 	APlayerCharacter* PlayerCharacter;
 
+	//DEATH HANDLING
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "User Interface", meta = (AllowPrivateAccess))
 	TSubclassOf<UUserWidget> YouDiedScreenClass;
 	UPROPERTY()
 	UBlendingWidget* YouDiedWidget;
-
 	UFUNCTION()
 	void ShowYouDiedScreen();
 	UFUNCTION()
 	void HideYouDiedScreen();
 	UFUNCTION()
 	void HandlePlayerDeath();
+
+	//SAVE AND LOAD INFO TO PLAYERSTATE ON MAPCHANGE
+	UFUNCTION()
+	void OnMapLeave();
+	UFUNCTION()
+	void OnMapEnter2();
+
  protected:
 
 	virtual void BeginPlay()override;
