@@ -11,24 +11,33 @@
 
 AInteractableActor_SceneLoader::AInteractableActor_SceneLoader()
 {
-	LevelToLoad = nullptr;
+	ActiveGameInstance = nullptr;
+	isActive = true;
 }
 
 void AInteractableActor_SceneLoader::Interact_Implementation()
 {
-	//CHECK IF LEVEL TO LOAD IS ASSIGNED AND VALID
-	if (!LevelToLoad.IsValid())
+	if (isActive)
 	{
-		UE_LOG(LogTemp, Warning, TEXT("%s tried to load into Level to Load but failed miserably. Its probably nullptr"), *GetName())
-			return;
+		//CHECK IF LEVEL TO LOAD IS ASSIGNED AND VALID
+		if (!LevelToLoad.IsValid())
+		{
+			UE_LOG(LogTemp, Warning, TEXT("%s tried to load into Level to Load but failed miserably. Its probably nullptr"), *GetName())
+				return;
+		}
+		else
+		{
+			//LOAD LEVEL ASYNC AND CALL FUNCTION WHEN FINISHED
+			FStreamableManager& StreamManager = UAssetManager::GetStreamableManager();
+			StreamManager.RequestAsyncLoad(LevelToLoad.ToSoftObjectPath(), FStreamableDelegate::CreateUObject(this, &AInteractableActor_SceneLoader::LoadLevel));
+			// BROADCAST THAT A MAPCHANGE IS HAPPENING. LISTENERS ARE FOR EXAMPLE THE GAMEINSTANCE WHICH SAVES PLAYER VALUES AND RETURNS THEM TO NEW PLAYER INSTANCE ON LEVEL LOAD
+			OnInteract.Broadcast();
+		}
 	}
 	else
 	{
-		//LOAD LEVEL ASYNC AND CALL FUNCTION WHEN FINISHED
-		FStreamableManager& StreamManager = UAssetManager::GetStreamableManager();
-		StreamManager.RequestAsyncLoad(LevelToLoad.ToSoftObjectPath(), FStreamableDelegate::CreateUObject(this, &AInteractableActor_SceneLoader::LoadLevel));
-		// BROADCAST THAT A MAPCHANGE IS HAPPENING. LISTENERS ARE FOR EXAMPLE THE GAMEINSTANCE WHICH SAVES PLAYER VALUES AND RETURNS THEM TO NEW PLAYER INSTANCE ON LEVEL LOAD
-		OnInteract.Broadcast();
+		//INSERT NOTIFICATION THAT THE SCENE LOADING OBJECT IS UNACTIVE BECAUSE OF CONDITIONS IN GAMESTATE
+		UE_LOG(LogTemp, Warning, TEXT("%s is not Active "), *GetName())
 	}
 }
 
@@ -39,17 +48,25 @@ void AInteractableActor_SceneLoader::BeginPlay()
 	{
 		LevelToLoad.LoadSynchronous();
 	}
-	else
-	{
-		UE_LOG(LogTemp, Error, TEXT("%s has a LeevlPointer which is not Valid. Interactions with it wont work"), *GetName())
-	}
 
 	UGameInstance* CurrentInstance = UGameplayStatics::GetGameInstance(GetWorld());
-	UEternalGrace_GameInstance* CustomGameInstance = Cast<UEternalGrace_GameInstance>(CurrentInstance);
-	if (CustomGameInstance)
+	ActiveGameInstance = Cast<UEternalGrace_GameInstance>(CurrentInstance);
+	if (ActiveGameInstance)
 	{
-			OnInteract.AddDynamic(CustomGameInstance, &UEternalGrace_GameInstance::OnMapLeave);
-		FCoreUObjectDelegates::PostLoadMapWithWorld.AddUObject(CustomGameInstance, &UEternalGrace_GameInstance::OnMapEnter);
+		ActiveGameInstance = ActiveGameInstance;
+		OnInteract.AddDynamic(ActiveGameInstance, &UEternalGrace_GameInstance::OnMapLeave);
+		ActiveGameInstance->OnObjectStateChange.AddDynamic(this, &AInteractableActor_SceneLoader::UpdateStatus);
+		FCoreUObjectDelegates::PostLoadMapWithWorld.AddUObject(ActiveGameInstance, &UEternalGrace_GameInstance::OnMapEnter);
+		//SET IS ACTIVE DEPENDING ON DICTIONARY OF GAME INSTANCE
+		if(ActiveGameInstance->ObjectStates.Contains(UniqueID))
+		{
+			isActive = ActiveGameInstance->ObjectStates[UniqueID];
+			UE_LOG(LogTemp, Warning, TEXT("%s Got its Value from GameInstance"), *GetName())
+		}
+		else
+		{
+			UE_LOG(LogTemp, Warning, TEXT("GameInstance had the Key of %s yet, so its default active status is true"), *GetName())
+		}
 	}
 	else
 	{
@@ -84,5 +101,18 @@ void AInteractableActor_SceneLoader::OnOverlapEnd(UPrimitiveComponent* Overlappe
 	if (InteractInfoWidget && InteractInfoWidget->IsInViewport())
 	{
 		InteractInfoWidget->RemoveFromViewport();
+	}
+}
+
+void AInteractableActor_SceneLoader::UpdateStatus()
+{
+
+	if(ActiveGameInstance && ActiveGameInstance->ObjectStates.Contains(UniqueID))
+	{
+		isActive = ActiveGameInstance->ObjectStates[UniqueID];
+	}
+	else
+	{
+		UE_LOG(LogTemp, Warning, TEXT("%s Could not Access GameInstance or GameInstance Dictionary did not Contained its key"), *GetName())
 	}
 }

@@ -56,6 +56,14 @@ public:
 	UFUNCTION()
 	void SpotPlayer(APawn* SpottedPawn);
 
+	//THE OBJECTID REFERRS TO THE OBJECT ID WHICH THE DEATH OF THIS ENEMY SHOULD INFLUENCE VIA GAME INSTANCE
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Relation, meta = (AllowPrivateAccess))
+	//TArray<FName> RelatedObjectIDs;
+	TMap<FName, bool> ReferencedObjectIds;
+
+	UFUNCTION()
+	void SendInfoToGameInstance();
+
 protected:
 	virtual void BeginPlay()override;
 	virtual void Tick(float DeltaSeconds)override;

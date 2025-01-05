@@ -6,6 +6,7 @@
 #include "Kismet/KismetMathLibrary.h"
 #include "Kismet//GameplayStatics.h"
 #include "Perception/PawnSensingComponent.h"
+#include "EternalGrace_GameInstance.h"
 AEternal_Grace_ArenaEnemy::AEternal_Grace_ArenaEnemy()
 {
 	HPBarComponent = CreateDefaultSubobject<UWidgetComponent>(TEXT("HP Bar"));
@@ -83,6 +84,16 @@ void AEternal_Grace_ArenaEnemy::BeginPlay()
 	{
 		SensingComponent->OnSeePawn.AddDynamic(this, &AEternal_Grace_ArenaEnemy::SpotPlayer);
 	}
+
+	if(HealthComponent)
+	{
+		//THIS PROBABLY BELONGS TO CHARACTER BASE CLASS SINCE THERE IS NO REASON TO SPLIT BETWEEN ONPLAYER AND ONBOSSDIED DELEGATE
+		UEternalGrace_GameInstance* CurrentInstance = Cast<UEternalGrace_GameInstance>(UGameplayStatics::GetGameInstance(world));
+		if(CurrentInstance)
+		{
+		HealthComponent->OnBossDied.AddDynamic(this, &AEternal_Grace_ArenaEnemy::SendInfoToGameInstance);
+		}
+	}
 }
 
 void AEternal_Grace_ArenaEnemy::Tick(float DeltaSeconds)
@@ -158,5 +169,21 @@ void AEternal_Grace_ArenaEnemy::SpotPlayer(APawn* SpottedPawn)
 		isAggro = true;
 		UE_LOG(LogTemp, Warning, TEXT("Enemy Spotted Player"))
 			//CHECK IF THERE COULD BE A PROBLEM WITH RACE CONDITION IN LINE 118, SINCE THE EVENT CALL ALSO SETS ISAGGRO
+	}
+}
+
+void AEternal_Grace_ArenaEnemy::SendInfoToGameInstance()
+{
+	UE_LOG(LogTemp, Warning, TEXT("Trigger"))
+	//IT ACTUALLY MAKES SENSE TO MOVE THIS TO A BOSS CLASS, SINCE REGULAR ENEMIES DONT AFFECT ANYTHING IN THE WORLD
+	UEternalGrace_GameInstance* CurrentInstance = Cast<UEternalGrace_GameInstance>(UGameplayStatics::GetGameInstance(world));
+	if (CurrentInstance)
+	{
+		for(const TPair<FName, bool>& Pair : ReferencedObjectIds)
+		{
+			CurrentInstance->SetObjectState(Pair.Key, Pair.Value);
+			UE_LOG(LogTemp, Warning, TEXT("Iterated through %s"), *Pair.Key.ToString())
+
+		}
 	}
 }

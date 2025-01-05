@@ -5,12 +5,14 @@
 #include "CoreMinimal.h"
 #include "InteractableActor.h"
 #include "CustomPlayerController.h"
+#include "EternalGrace_GameInstance.h"
 #include "InteractableActor_SceneLoader.generated.h"
 
 /**
  *
  */
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnInteraction);
+class UEternalGrace_GameInstance;
 
 UCLASS()
 class ETERNAL_GRACE_ARENA_API AInteractableActor_SceneLoader : public AInteractableActor
@@ -31,4 +33,16 @@ protected:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Scene Loading", meta = (AllowPrivateAccess))
 	TSoftObjectPtr<UWorld> LevelToLoad;
+
+
+	//COMMUNICATION WITH GAME INSTANCE
+	UPROPERTY()
+	UEternalGrace_GameInstance* ActiveGameInstance;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite,Category = "Scene Loading", meta = (AllowPrivateAccess))
+	bool isActive;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "State")
+	FName UniqueID;
+
+	UFUNCTION()
+	void UpdateStatus();
 };

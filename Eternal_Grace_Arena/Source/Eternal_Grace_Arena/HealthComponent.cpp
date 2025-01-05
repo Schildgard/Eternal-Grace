@@ -57,8 +57,8 @@ void UHealthComponent::GetDamage(float IncomingDamage, float PoiseDamage, float 
 	AEternal_Grace_ArenaCharacter* Character = Cast<AEternal_Grace_ArenaCharacter>(Owner);
 
 	CurrentHealth -= IncomingDamage;
-		UE_LOG(LogTemp, Warning, TEXT("%s got %f Damage"),*Character->GetName(),IncomingDamage)
-	CurrentPoise -= PoiseDamage;
+	UE_LOG(LogTemp, Warning, TEXT("%s got %f Damage"), *Character->GetName(), IncomingDamage)
+		CurrentPoise -= PoiseDamage;
 
 
 	//ATTACK FROM BEHIND
@@ -111,14 +111,14 @@ void UHealthComponent::GetDamage(float IncomingDamage, float PoiseDamage, float 
 			CurrentPoise = MaxPoise;
 			break;
 		case EStaggeringType::KnockbackStagger:
-		//	if (CurrentHealth <= 0)
-		//	{
-		//		Character->RotateTowardsTarget(DamageSource);
-		//		CheckActorStaggerAnimation(Character->DeathAnimationWithKnockBack, Character); 
-		//		//Character->PlayAnimMontage(Character->DeathAnimationWithKnockBack);
-		//		CurrentPoise = MaxPoise;
-		//		break;
-		//	}
+			//	if (CurrentHealth <= 0)
+			//	{
+			//		Character->RotateTowardsTarget(DamageSource);
+			//		CheckActorStaggerAnimation(Character->DeathAnimationWithKnockBack, Character); 
+			//		//Character->PlayAnimMontage(Character->DeathAnimationWithKnockBack);
+			//		CurrentPoise = MaxPoise;
+			//		break;
+			//	}
 			Character->RotateTowardsTarget(DamageSource);
 			CheckActorStaggerAnimation(Character->StaggerAnims[2], Character);
 			//Character->PlayAnimMontage(Character->StaggerAnims[2]);
@@ -162,14 +162,14 @@ void UHealthComponent::BlockDamage(float Damage, float PoiseDamage, float Damage
 	{
 		PoiseDamage -= Character->Shield->Stability;
 		DefendingPlayer->StaminaComponent->CurrentStamina -= PoiseDamage;
-		if(DefendingPlayer->StaminaComponent->CurrentStamina <= 0)
+		if (DefendingPlayer->StaminaComponent->CurrentStamina <= 0)
 		{
 			DefendingPlayer->PlayAnimMontage(DefendingPlayer->GuardBreakEvent);
 			return;
 		}
 	}
 
-	
+
 
 	//STILL HAVE TO THINK ABOUT WETHER AND HOW TO IMPLEMENT POISE HERE
 	switch (StaggerType)
@@ -177,15 +177,15 @@ void UHealthComponent::BlockDamage(float Damage, float PoiseDamage, float Damage
 	case EStaggeringType::NormalStagger:
 		Character->PlayAnimMontage(Character->Block);
 		UE_LOG(LogTemp, Warning, TEXT("Normal Block"))
-		break;
+			break;
 	case EStaggeringType::HeavyStagger:
 		Character->PlayAnimMontage(Character->BlockHeavyAttack);
 		UE_LOG(LogTemp, Warning, TEXT("Heavy Block"))
-		break;
+			break;
 	case EStaggeringType::KnockbackStagger:
 		Character->PlayAnimMontage(Character->BlockThrowbackAttack);
 		UE_LOG(LogTemp, Warning, TEXT("Knockback Block"))
-		break;
+			break;
 	case EStaggeringType::ThrowupStagger:
 		Character->PlayAnimMontage(Character->BlockThrowbackAttack);
 		break;
@@ -204,14 +204,24 @@ void UHealthComponent::Die()
 	if (Character)
 	{
 		APlayerController* PlayerController = Cast<APlayerController>(Character->GetController());
-		if(PlayerController)
+		if (PlayerController)
 		{
 			OnPlayerDied.Broadcast();
+		}
+		else
+		{
+			UE_LOG(LogTemp, Warning, TEXT("BossDye"))
+				OnBossDied.Broadcast();
 		}
 		Character->PlayAnimMontage(Character->DeathAnimation);
 		Character->SetActorEnableCollision(false);
 	}
-	else return;
+	else
+	{
+
+		return;
+	}
+
 
 }
 //NOT SURE IF THIS IS A GOOD IDEA, RIGHT NOW ITS JUST A TEST FOR WHEN THE PLAYER IS KILLED WITH A KNOCKBACK ATTACK

@@ -53,3 +53,18 @@ void UEternalGrace_GameInstance::OnMapLeave()
 	else 
 		UE_LOG(LogTemp, Error, TEXT("GameInstance: Failed to Cast Player On Map Leave Function"))
 }
+
+void UEternalGrace_GameInstance::SetObjectState(FName ObjectID, bool NewValue)
+{
+	//FIND RETURNS A POINTER TO THE VALUE OF THE KEY OR NULLPTR IF KEY NOT EXISTS
+	bool* FoundValue = ObjectStates.Find(ObjectID);
+	if(FoundValue)
+	{
+		*FoundValue = !*FoundValue;
+	}
+	else
+	{
+		ObjectStates.Add(ObjectID, NewValue);
+	}
+	OnObjectStateChange.Broadcast();
+}
