@@ -20,9 +20,11 @@ protected:
 	float CurrentHealth = 1000.0f;
 public:
 	UFUNCTION()
-	void SetPlayerHealth(float HealthFromPlayer);
+	void UploadHealthInfo(float HealthFromPlayer);
 	UFUNCTION()
-	float GetPlayerHealth();
+	float GetHealthInfo();
+	UFUNCTION()
+	void ResetHealthInformation();
 
 
 	UFUNCTION()

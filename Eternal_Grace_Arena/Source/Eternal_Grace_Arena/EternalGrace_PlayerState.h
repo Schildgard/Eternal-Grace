@@ -14,15 +14,4 @@ class ETERNAL_GRACE_ARENA_API AEternalGrace_PlayerState : public APlayerState
 {
 	GENERATED_BODY()
 
-protected:
-	UPROPERTY(BlueprintReadWrite, Category = "Player Stats")
-	float CurrentHealth = 1000.0f;
-
-public:
-	UFUNCTION()
-	void SetPlayerHealth(float HealthFromPlayer);
-	UFUNCTION()
-	float GetPlayerHealth();
-
-
 };

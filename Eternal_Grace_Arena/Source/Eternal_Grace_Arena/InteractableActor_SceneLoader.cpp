@@ -11,7 +11,7 @@
 
 AInteractableActor_SceneLoader::AInteractableActor_SceneLoader()
 {
-	//LevelToLoad = nullptr;
+	LevelToLoad = nullptr;
 }
 
 void AInteractableActor_SceneLoader::Interact_Implementation()
@@ -19,7 +19,7 @@ void AInteractableActor_SceneLoader::Interact_Implementation()
 	//CHECK IF LEVEL TO LOAD IS ASSIGNED AND VALID
 	if (!LevelToLoad.IsValid())
 	{
-		UE_LOG(LogTemp, Warning, TEXT("Failed to load Level. Its probably nullptr"))
+		UE_LOG(LogTemp, Warning, TEXT("%s tried to load into Level to Load but failed miserably. Its probably nullptr"), *GetName())
 			return;
 	}
 	else
@@ -39,57 +39,34 @@ void AInteractableActor_SceneLoader::BeginPlay()
 	{
 		LevelToLoad.LoadSynchronous();
 	}
-
-
-	//GET PLAYER CONTROLLER AND SUSCRIBE ITS FUNCTION TO ON INTERACT
-//	APlayerController* ActiveController = UGameplayStatics::GetPlayerController(GetWorld(), 0);
-//	ACustomPlayerController* CustomController = Cast<ACustomPlayerController>(ActiveController);
-//	if (CustomController)
-//	{
-//		//
-//		OnInteract.AddDynamic(CustomController, &ACustomPlayerController::OnMapLeave);
-//		//FCoreUObjectDelegates::PostLoadMapWithWorld.AddUObject(CustomController, &ACustomPlayerController::OnMapEnter);
-//
-//	}
-//	else UE_LOG(LogTemp, Error, TEXT("No Controller for Interactable Actor"))
-
-
-
-
-
+	else
+	{
+		UE_LOG(LogTemp, Error, TEXT("%s has a LeevlPointer which is not Valid. Interactions with it wont work"), *GetName())
+	}
 
 	UGameInstance* CurrentInstance = UGameplayStatics::GetGameInstance(GetWorld());
 	UEternalGrace_GameInstance* CustomGameInstance = Cast<UEternalGrace_GameInstance>(CurrentInstance);
 	if (CustomGameInstance)
 	{
-		UE_LOG(LogTemp, Error, TEXT("Cast to GameInstance Successfull"))
-
-		OnInteract.AddDynamic(CustomGameInstance, &UEternalGrace_GameInstance::OnMapLeave);
+			OnInteract.AddDynamic(CustomGameInstance, &UEternalGrace_GameInstance::OnMapLeave);
 		FCoreUObjectDelegates::PostLoadMapWithWorld.AddUObject(CustomGameInstance, &UEternalGrace_GameInstance::OnMapEnter);
 	}
-
-}
-
-void AInteractableActor_SceneLoader::OnLevelLoaded(UWorld* LoadedWorld)
-{
-
-
+	else
+	{
+		UE_LOG(LogTemp, Error, TEXT("%s failed to Cast to Custom GameInstance. Thus GameInstance could not Subscribe to its Interact Event"), *GetName())
+	}
 }
 
 void AInteractableActor_SceneLoader::LoadLevel()
 {
-
 	UWorld* LoadedLevel = LevelToLoad.Get();
 	if (LoadedLevel)
 	{
-
-
 		UGameplayStatics::OpenLevel(this, LoadedLevel->GetFName());
-
 	}
 	else
 	{
-		UE_LOG(LogTemp, Warning, TEXT("Failed to load Level"))
+		UE_LOG(LogTemp, Warning, TEXT("%s LoadLevel Function was called but LevelToLoad could not be getted."), *GetName())
 	}
 }
 
@@ -97,7 +74,6 @@ void AInteractableActor_SceneLoader::OnBeginOverlap(UPrimitiveComponent* Overlap
 {
 	if (InteractInfoWidget && !InteractInfoWidget->IsInViewport())
 	{
-
 		InteractInfoWidget->AddToViewport();
 	}
 	//MAYBE LOADING THE LEVEL WHILE IN OVERLAP IS A GOOD IDEA
@@ -107,7 +83,6 @@ void AInteractableActor_SceneLoader::OnOverlapEnd(UPrimitiveComponent* Overlappe
 {
 	if (InteractInfoWidget && InteractInfoWidget->IsInViewport())
 	{
-
 		InteractInfoWidget->RemoveFromViewport();
 	}
 }

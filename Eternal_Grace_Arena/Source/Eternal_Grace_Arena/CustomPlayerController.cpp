@@ -6,8 +6,7 @@
 #include "StaminaComponent.h"
 #include "BlendingWidget.h"
 #include "Kismet/GameplayStatics.h"
-//#include "GameFramework/PlayerState.h"
-#include "EternalGrace_PlayerState.h"
+#include "EternalGrace_GameInstance.h"
 
 ACustomPlayerController::ACustomPlayerController()
 {
@@ -16,6 +15,7 @@ ACustomPlayerController::ACustomPlayerController()
 	HUDWidget = nullptr;
 	YouDiedScreenClass = nullptr;
 	YouDiedWidget = nullptr;
+	ActiveGameInstance = nullptr;
 }
 void ACustomPlayerController::ShowYouDiedScreen()
 {
@@ -58,13 +58,12 @@ void ACustomPlayerController::HideYouDiedScreen()
 }
 void ACustomPlayerController::HandlePlayerDeath()
 {
-	UE_LOG(LogTemp, Warning, TEXT("Player Death"))
 		ShowYouDiedScreen();
 }
 void ACustomPlayerController::BeginPlay()
 {
 	Super::BeginPlay();
-
+	//CREATE AND SHOW PLAYER HUD
 	if (HUDWidgetClass != nullptr)
 	{
 		HUDWidget = CreateWidget<UPlayer_UI_Bars>(this, HUDWidgetClass);
@@ -72,16 +71,24 @@ void ACustomPlayerController::BeginPlay()
 	}
 	else
 	{
-		UE_LOG(LogTemp, Warning, TEXT("HUDWidgetClass or HudWidget could not be found"))
+		UE_LOG(LogTemp, Warning, TEXT("CustomPlayer Controller could not find HUDWidgetClass or HudWidget"))
 	}
-
 	PlayerCharacter = Cast<APlayerCharacter>(AcknowledgedPawn);
-
 	if (PlayerCharacter)
 	{
+	//SUBSCRIBE DEATH HANDLING TO ON DIE EVENT
 		PlayerCharacter->HealthComponent->OnPlayerDied.AddDynamic(this, &ACustomPlayerController::HandlePlayerDeath);
+		//SUBSCRIBE RESET HEALTH INFORMATION TO DIE EVENT 
+		ActiveGameInstance = Cast<UEternalGrace_GameInstance>(UGameplayStatics::GetGameInstance(GetWorld()));
+		if(ActiveGameInstance)
+		{
+			PlayerCharacter->HealthComponent->OnPlayerDied.AddDynamic(ActiveGameInstance, &UEternalGrace_GameInstance::ResetHealthInformation);
+		}
 	}
-	UE_LOG(LogTemp, Error, TEXT("load controller"))
+	else
+	{
+		UE_LOG(LogTemp, Error, TEXT("CustomPlayer Controller could not Cast to Player Class"))
+	}
 };
 
 void ACustomPlayerController::Tick(float DeltaSeconds)
@@ -97,48 +104,9 @@ void ACustomPlayerController::Tick(float DeltaSeconds)
 void ACustomPlayerController::ReloadLevel()
 {
 	FName CurrentLevelName = FName(*GetWorld()->GetMapName());
-
 	UGameplayStatics::OpenLevel(this, CurrentLevelName);
 
 	//REACTIVATE INPUT
 	FInputModeGameOnly InputMode;
 	SetInputMode(InputMode);
-}
-
-void ACustomPlayerController::OnMapLeave()
-{
-	//SAVE VALUES TO PLAYER STATE
-	if (PlayerCharacter)
-	{
-		APlayerState* ActivePlayerState = GetPlayerState<APlayerState>();
-				if (ActivePlayerState)
-				{
-					AEternalGrace_PlayerState* CustomPlayerState = Cast<AEternalGrace_PlayerState>(ActivePlayerState);
-					if (CustomPlayerState)
-					{
-						CustomPlayerState->SetPlayerHealth(PlayerCharacter->HealthComponent->CurrentHealth);
-						UE_LOG(LogTemp, Warning, TEXT("Transmitted Player Health to PlayerState. %f"),CustomPlayerState->GetPlayerHealth())
-		
-					}
-				}
-	}
-}
-void ACustomPlayerController::OnMapEnter2()
-{
-	UE_LOG(LogTemp, Warning, TEXT("OnMapEnter"))
-	//LOAD VALUES FROM PLAYER STATE
-	if (PlayerCharacter)
-	{
-		APlayerState* ActivePlayerState = GetPlayerState<APlayerState>();
-		if (ActivePlayerState)
-		{
-			AEternalGrace_PlayerState* CustomPlayerState = Cast<AEternalGrace_PlayerState>(ActivePlayerState);
-			if (CustomPlayerState)
-			{
-				PlayerCharacter->HealthComponent->CurrentHealth = CustomPlayerState->GetPlayerHealth();
-				UE_LOG(LogTemp, Warning, TEXT("Transmitted PlayerState Health to Player. %f"),CustomPlayerState->GetPlayerHealth())
-
-			}
-		}
-	}
 }

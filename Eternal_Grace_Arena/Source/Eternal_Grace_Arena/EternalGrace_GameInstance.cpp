@@ -8,39 +8,47 @@
 #include "Kismet/GameplayStatics.h"
 #include "HealthComponent.h"
 
-void UEternalGrace_GameInstance::SetPlayerHealth(float HealthFromPlayer)
+void UEternalGrace_GameInstance::UploadHealthInfo(float HealthFromPlayer)
 {
 	CurrentHealth = HealthFromPlayer;
 }
 
-float UEternalGrace_GameInstance::GetPlayerHealth()
+float UEternalGrace_GameInstance::GetHealthInfo()
 {
 	return CurrentHealth;
 }
 
+void UEternalGrace_GameInstance::ResetHealthInformation()
+{
+	APlayerCharacter* PlayerCharacter = Cast<APlayerCharacter>(UGameplayStatics::GetPlayerCharacter(GetWorld(), 0));
+	if(PlayerCharacter)
+	{
+		CurrentHealth = PlayerCharacter->HealthComponent->MaxHealth;
+	}
+	else
+		UE_LOG(LogTemp, Error, TEXT("GameInstance: Failed to Cast Player On HealthInfoReset"))
+}
+
 void UEternalGrace_GameInstance::OnMapEnter(UWorld* LoadedWorld)
 {
-	UE_LOG(LogTemp, Error, TEXT("GameInstance: Enter Map"))
-
 		APlayerCharacter* PlayerCharacter = Cast<APlayerCharacter>(UGameplayStatics::GetPlayerCharacter(GetWorld(), 0));
 	//SAVE VALUES TO PLAYER STATE
 	if (PlayerCharacter)
 	{
-		PlayerCharacter->HealthComponent->CurrentHealth = GetPlayerHealth();
-		UE_LOG(LogTemp, Warning, TEXT("Transmitted Health to Player. %f"), CurrentHealth)
+		PlayerCharacter->HealthComponent->CurrentHealth = GetHealthInfo();
+	//	UE_LOG(LogTemp, Warning, TEXT("Transmitted Health to Player. %f"), CurrentHealth)
 	}
 	else UE_LOG(LogTemp, Error, TEXT("GameInstance: Failed to Cast Player On Map Enter Function"))
 }
 
 void UEternalGrace_GameInstance::OnMapLeave()
 {
-	UE_LOG(LogTemp, Error, TEXT("GameInstance: Leave Map"))
 	APlayerCharacter* PlayerCharacter = Cast<APlayerCharacter>(UGameplayStatics::GetPlayerCharacter(GetWorld(), 0));
 	//SAVE VALUES TO PLAYER STATE
 	if (PlayerCharacter)
 	{
-		SetPlayerHealth(PlayerCharacter->HealthComponent->CurrentHealth);
-		UE_LOG(LogTemp, Warning, TEXT("Transmitted Health to PlayerState. %f"), CurrentHealth)
+		UploadHealthInfo(PlayerCharacter->HealthComponent->CurrentHealth);
+//		UE_LOG(LogTemp, Warning, TEXT("Transmitted Health to PlayerState. %f"), CurrentHealth)
 	}
 	else 
 		UE_LOG(LogTemp, Error, TEXT("GameInstance: Failed to Cast Player On Map Leave Function"))

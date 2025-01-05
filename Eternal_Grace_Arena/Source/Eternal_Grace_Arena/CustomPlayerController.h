@@ -15,6 +15,7 @@
  *
  */
 class UBlendingWidget;
+class UEternalGrace_GameInstance;
 UCLASS()
 class ETERNAL_GRACE_ARENA_API ACustomPlayerController : public APlayerController
 {
@@ -42,13 +43,12 @@ public:
 	UFUNCTION()
 	void HandlePlayerDeath();
 
-	//SAVE AND LOAD INFO TO PLAYERSTATE ON MAPCHANGE
-	UFUNCTION()
-	void OnMapLeave();
-	UFUNCTION()
-	void OnMapEnter2();
+
 
  protected:
+	//REFERENCE TO CURRENT GAMEINSTANCE
+	UPROPERTY()
+	UEternalGrace_GameInstance* ActiveGameInstance;
 
 	virtual void BeginPlay()override;
 	virtual void Tick(float DeltaSeconds)override;
