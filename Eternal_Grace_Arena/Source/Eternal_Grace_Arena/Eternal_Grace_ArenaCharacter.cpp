@@ -24,6 +24,19 @@ DEFINE_LOG_CATEGORY(LogTemplateCharacter);
 //////////////////////////////////////////////////////////////////////////
 // AEternal_Grace_ArenaCharacter
 
+void AEternal_Grace_ArenaCharacter::DeathEvent()
+{
+	if (DeathAnimation)
+	{
+		PlayAnimMontage(DeathAnimation);
+		SetActorEnableCollision(false);
+	}
+	else
+	{
+		UE_LOG(LogTemp, Error, TEXT("No DeathAnimation Assigned to %s"), *GetName())
+	}
+}
+
 AEternal_Grace_ArenaCharacter::AEternal_Grace_ArenaCharacter()
 {
 	// Set size for collision capsule
@@ -154,9 +167,13 @@ void AEternal_Grace_ArenaCharacter::BeginPlay()
 		UE_LOG(LogTemp, Warning, TEXT("Failed to setup collision for Weapon"))
 	}
 
-	if (HealthComponent == nullptr)
+	if (HealthComponent != nullptr)
 	{
-		UE_LOG(LogTemp, Warning, TEXT("HealthComponent is null"))
+		HealthComponent->OnCharacterDeath.AddDynamic(this, &AEternal_Grace_ArenaCharacter::DeathEvent);
+	}
+	else
+	{
+		UE_LOG(LogTemp, Error, TEXT("HealthComponent is null"))
 	}
 
 

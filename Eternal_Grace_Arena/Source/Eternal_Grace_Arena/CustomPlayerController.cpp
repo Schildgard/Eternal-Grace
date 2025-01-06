@@ -71,18 +71,18 @@ void ACustomPlayerController::BeginPlay()
 	}
 	else
 	{
-		UE_LOG(LogTemp, Warning, TEXT("CustomPlayer Controller could not find HUDWidgetClass or HudWidget"))
+		UE_LOG(LogTemp, Error, TEXT("CustomPlayer Controller could not find HUDWidgetClass or HudWidget"))
 	}
 	PlayerCharacter = Cast<APlayerCharacter>(AcknowledgedPawn);
 	if (PlayerCharacter)
 	{
 	//SUBSCRIBE DEATH HANDLING TO ON DIE EVENT
-		PlayerCharacter->HealthComponent->OnPlayerDied.AddDynamic(this, &ACustomPlayerController::HandlePlayerDeath);
+		PlayerCharacter->HealthComponent->OnCharacterDeath.AddDynamic(this, &ACustomPlayerController::HandlePlayerDeath);
 		//SUBSCRIBE RESET HEALTH INFORMATION TO DIE EVENT 
 		ActiveGameInstance = Cast<UEternalGrace_GameInstance>(UGameplayStatics::GetGameInstance(GetWorld()));
 		if(ActiveGameInstance)
 		{
-			PlayerCharacter->HealthComponent->OnPlayerDied.AddDynamic(ActiveGameInstance, &UEternalGrace_GameInstance::ResetHealthInformation);
+			PlayerCharacter->HealthComponent->OnCharacterDeath.AddDynamic(ActiveGameInstance, &UEternalGrace_GameInstance::ResetHealthInformation);
 		}
 	}
 	else
@@ -103,8 +103,11 @@ void ACustomPlayerController::Tick(float DeltaSeconds)
 
 void ACustomPlayerController::ReloadLevel()
 {
-	FName CurrentLevelName = FName(*GetWorld()->GetMapName());
-	UGameplayStatics::OpenLevel(this, CurrentLevelName);
+//	FName CurrentLevelName = FName(*GetWorld()->GetMapName());
+//	UGameplayStatics::OpenLevel(this, CurrentLevelName);
+
+
+	ActiveGameInstance->ReturnToMainLevel();
 
 	//REACTIVATE INPUT
 	FInputModeGameOnly InputMode;

@@ -165,6 +165,8 @@ protected:
 	UFUNCTION(CallInEditor, Category = Actions)
 	virtual void SprintAttack();
 
+	UFUNCTION()
+	virtual void DeathEvent();
 
 public:
 UFUNCTION(CallInEditor, Category = Actions)

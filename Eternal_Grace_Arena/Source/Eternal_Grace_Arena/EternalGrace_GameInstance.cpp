@@ -8,6 +8,11 @@
 #include "Kismet/GameplayStatics.h"
 #include "HealthComponent.h"
 
+UEternalGrace_GameInstance::UEternalGrace_GameInstance()
+{
+	MainWorld = nullptr;
+}
+
 void UEternalGrace_GameInstance::UploadHealthInfo(float HealthFromPlayer)
 {
 	CurrentHealth = HealthFromPlayer;
@@ -67,4 +72,16 @@ void UEternalGrace_GameInstance::SetObjectState(FName ObjectID, bool NewValue)
 		ObjectStates.Add(ObjectID, NewValue);
 	}
 	OnObjectStateChange.Broadcast();
+}
+
+void UEternalGrace_GameInstance::ReturnToMainLevel()
+{
+	if(MainWorld)
+	{
+	UGameplayStatics::OpenLevel(GetWorld(),MainWorld->GetFName());
+	}
+	else
+	{
+		UE_LOG(LogTemp, Error, TEXT("NO Main World Assigned. GameInstance can not load to MainWorld"))
+	}
 }

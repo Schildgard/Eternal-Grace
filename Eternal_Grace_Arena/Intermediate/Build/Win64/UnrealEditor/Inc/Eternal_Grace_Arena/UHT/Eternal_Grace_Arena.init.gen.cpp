@@ -7,9 +7,8 @@
 #include "UObject/GeneratedCppIncludes.h"
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeEternal_Grace_Arena_init() {}
-	ETERNAL_GRACE_ARENA_API UFunction* Z_Construct_UDelegateFunction_Eternal_Grace_Arena_OnBossDied__DelegateSignature();
+	ETERNAL_GRACE_ARENA_API UFunction* Z_Construct_UDelegateFunction_Eternal_Grace_Arena_OnCharacterDeath__DelegateSignature();
 	ETERNAL_GRACE_ARENA_API UFunction* Z_Construct_UDelegateFunction_Eternal_Grace_Arena_OnInteraction__DelegateSignature();
-	ETERNAL_GRACE_ARENA_API UFunction* Z_Construct_UDelegateFunction_Eternal_Grace_Arena_OnPlayerDied__DelegateSignature();
 	ETERNAL_GRACE_ARENA_API UFunction* Z_Construct_UDelegateFunction_Eternal_Grace_Arena_OnWorldUpdate__DelegateSignature();
 	static FPackageRegistrationInfo Z_Registration_Info_UPackage__Script_Eternal_Grace_Arena;
 	FORCENOINLINE UPackage* Z_Construct_UPackage__Script_Eternal_Grace_Arena()
@@ -17,9 +16,8 @@ void EmptyLinkFunctionForGeneratedCodeEternal_Grace_Arena_init() {}
 		if (!Z_Registration_Info_UPackage__Script_Eternal_Grace_Arena.OuterSingleton)
 		{
 			static UObject* (*const SingletonFuncArray[])() = {
-				(UObject* (*)())Z_Construct_UDelegateFunction_Eternal_Grace_Arena_OnBossDied__DelegateSignature,
+				(UObject* (*)())Z_Construct_UDelegateFunction_Eternal_Grace_Arena_OnCharacterDeath__DelegateSignature,
 				(UObject* (*)())Z_Construct_UDelegateFunction_Eternal_Grace_Arena_OnInteraction__DelegateSignature,
-				(UObject* (*)())Z_Construct_UDelegateFunction_Eternal_Grace_Arena_OnPlayerDied__DelegateSignature,
 				(UObject* (*)())Z_Construct_UDelegateFunction_Eternal_Grace_Arena_OnWorldUpdate__DelegateSignature,
 			};
 			static const UECodeGen_Private::FPackageParams PackageParams = {
@@ -27,13 +25,13 @@ void EmptyLinkFunctionForGeneratedCodeEternal_Grace_Arena_init() {}
 				SingletonFuncArray,
 				UE_ARRAY_COUNT(SingletonFuncArray),
 				PKG_CompiledIn | 0x00000000,
-				0xED7FA55B,
-				0xAAA25587,
+				0x0C3B5151,
+				0x97C4A0BE,
 				METADATA_PARAMS(0, nullptr)
 			};
 			UECodeGen_Private::ConstructUPackage(Z_Registration_Info_UPackage__Script_Eternal_Grace_Arena.OuterSingleton, PackageParams);
 		}
 		return Z_Registration_Info_UPackage__Script_Eternal_Grace_Arena.OuterSingleton;
 	}
-	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_Eternal_Grace_Arena(Z_Construct_UPackage__Script_Eternal_Grace_Arena, TEXT("/Script/Eternal_Grace_Arena"), Z_Registration_Info_UPackage__Script_Eternal_Grace_Arena, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0xED7FA55B, 0xAAA25587));
+	static FRegisterCompiledInInfo Z_CompiledInDeferPackage_UPackage__Script_Eternal_Grace_Arena(Z_Construct_UPackage__Script_Eternal_Grace_Arena, TEXT("/Script/Eternal_Grace_Arena"), Z_Registration_Info_UPackage__Script_Eternal_Grace_Arena, CONSTRUCT_RELOAD_VERSION_INFO(FPackageReloadVersionInfo, 0x0C3B5151, 0x97C4A0BE));
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

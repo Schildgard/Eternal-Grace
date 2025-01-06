@@ -200,44 +200,50 @@ void UHealthComponent::BlockDamage(float Damage, float PoiseDamage, float Damage
 void UHealthComponent::Die()
 {
 
-	AEternal_Grace_ArenaCharacter* Character = Cast<AEternal_Grace_ArenaCharacter>(GetOwner());
-	if (Character)
-	{
-		APlayerController* PlayerController = Cast<APlayerController>(Character->GetController());
-		if (PlayerController)
-		{
-			OnPlayerDied.Broadcast();
-		}
-		else
-		{
-			UE_LOG(LogTemp, Warning, TEXT("BossDye"))
-				OnBossDied.Broadcast();
-		}
-		Character->PlayAnimMontage(Character->DeathAnimation);
-		Character->SetActorEnableCollision(false);
-	}
-	else
-	{
 
-		return;
-	}
+
+	OnCharacterDeath.Broadcast();
+
+
+
+//	AEternal_Grace_ArenaCharacter* Character = Cast<AEternal_Grace_ArenaCharacter>(GetOwner());
+//	if (Character)
+//	{
+//		//		APlayerController* PlayerController = Cast<APlayerController>(Character->GetController());
+//		//		if (PlayerController)
+//		//		{
+//		//	//		OnPlayerDied.Broadcast();
+//		//		}
+//		//		else
+//		//		{
+//		//			UE_LOG(LogTemp, Warning, TEXT("BossDye"))
+//		////				OnBossDied.Broadcast();
+//		//		}
+//		Character->PlayAnimMontage(Character->DeathAnimation);
+//		Character->SetActorEnableCollision(false);
+//	}
+//	else
+//	{
+//
+//		return;
+//	}
 
 
 }
 //NOT SURE IF THIS IS A GOOD IDEA, RIGHT NOW ITS JUST A TEST FOR WHEN THE PLAYER IS KILLED WITH A KNOCKBACK ATTACK
 void UHealthComponent::DieWithKnockback()
 {
-	AEternal_Grace_ArenaCharacter* Character = Cast<AEternal_Grace_ArenaCharacter>(GetOwner());
-	if (Character)
-	{
-		APlayerController* PlayerController = Cast<APlayerController>(Character->GetController());
-		if (PlayerController)
-		{
-			OnPlayerDied.Broadcast();
-		}
-		Character->SetActorEnableCollision(false);
-	}
-	else return;
+	//	AEternal_Grace_ArenaCharacter* Character = Cast<AEternal_Grace_ArenaCharacter>(GetOwner());
+	//	if (Character)
+	//	{
+	//		APlayerController* PlayerController = Cast<APlayerController>(Character->GetController());
+	//		if (PlayerController)
+	//		{
+	//			OnCharacterDeath.Broadcast();
+	//		}
+	//		Character->SetActorEnableCollision(false);
+	//	}
+	//	else return;
 
 }
 

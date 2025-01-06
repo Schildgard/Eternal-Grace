@@ -17,10 +17,14 @@ class ETERNAL_GRACE_ARENA_API UEternalGrace_GameInstance : public UGameInstance
 {
 	GENERATED_BODY()
 
+	UEternalGrace_GameInstance();
 	//PLAYER INFORMATIONS THAT ARE TO KEEP THROUGH MAPTRAVEL
 protected:
 	UPROPERTY(BlueprintReadWrite, Category = "Player Stats")
 	float CurrentHealth = 1000.0f;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (AllowPrivateAccess))
+	UWorld* MainWorld;
 public:
 	FOnWorldUpdate OnObjectStateChange;
 	UFUNCTION()
@@ -42,6 +46,9 @@ public:
 
 	UFUNCTION()
 	void SetObjectState(FName ObjectID, bool NewValue);
+
+	UFUNCTION()
+	void ReturnToMainLevel();
 
 
 };

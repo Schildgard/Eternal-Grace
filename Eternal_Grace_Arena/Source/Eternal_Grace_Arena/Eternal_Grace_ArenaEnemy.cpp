@@ -85,15 +85,6 @@ void AEternal_Grace_ArenaEnemy::BeginPlay()
 		SensingComponent->OnSeePawn.AddDynamic(this, &AEternal_Grace_ArenaEnemy::SpotPlayer);
 	}
 
-	if(HealthComponent)
-	{
-		//THIS PROBABLY BELONGS TO CHARACTER BASE CLASS SINCE THERE IS NO REASON TO SPLIT BETWEEN ONPLAYER AND ONBOSSDIED DELEGATE
-		UEternalGrace_GameInstance* CurrentInstance = Cast<UEternalGrace_GameInstance>(UGameplayStatics::GetGameInstance(world));
-		if(CurrentInstance)
-		{
-		HealthComponent->OnBossDied.AddDynamic(this, &AEternal_Grace_ArenaEnemy::SendInfoToGameInstance);
-		}
-	}
 }
 
 void AEternal_Grace_ArenaEnemy::Tick(float DeltaSeconds)
@@ -133,6 +124,12 @@ void AEternal_Grace_ArenaEnemy::Tick(float DeltaSeconds)
 			ChasingCountDown = ChasingTimer;
 		}
 	}
+}
+
+void AEternal_Grace_ArenaEnemy::DeathEvent()
+{
+	Super::DeathEvent();
+	SendInfoToGameInstance();
 }
 
 void AEternal_Grace_ArenaEnemy::LightAttack()
