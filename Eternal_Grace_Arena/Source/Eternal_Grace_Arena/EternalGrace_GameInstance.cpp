@@ -10,7 +10,8 @@
 
 UEternalGrace_GameInstance::UEternalGrace_GameInstance()
 {
-	MainWorld = nullptr;
+	//IT IS CRUCIAL THAT THE MAIN LEVEL IS NAMED EXACTLY THE SAME WAY AS THIS PROPERTY
+	MainWorldName = FName("Level_Main");
 }
 
 void UEternalGrace_GameInstance::UploadHealthInfo(float HealthFromPlayer)
@@ -41,7 +42,6 @@ void UEternalGrace_GameInstance::OnMapEnter(UWorld* LoadedWorld)
 	if (PlayerCharacter)
 	{
 		PlayerCharacter->HealthComponent->CurrentHealth = GetHealthInfo();
-	//	UE_LOG(LogTemp, Warning, TEXT("Transmitted Health to Player. %f"), CurrentHealth)
 	}
 	else UE_LOG(LogTemp, Error, TEXT("GameInstance: Failed to Cast Player On Map Enter Function"))
 }
@@ -53,7 +53,6 @@ void UEternalGrace_GameInstance::OnMapLeave()
 	if (PlayerCharacter)
 	{
 		UploadHealthInfo(PlayerCharacter->HealthComponent->CurrentHealth);
-//		UE_LOG(LogTemp, Warning, TEXT("Transmitted Health to PlayerState. %f"), CurrentHealth)
 	}
 	else 
 		UE_LOG(LogTemp, Error, TEXT("GameInstance: Failed to Cast Player On Map Leave Function"))
@@ -76,26 +75,14 @@ void UEternalGrace_GameInstance::SetObjectState(FName ObjectID, bool NewValue)
 
 void UEternalGrace_GameInstance::ReturnToMainLevel()
 {
-	if(MainWorld)
+	if(!MainWorldName.IsNone())
 	{
-	//UGameplayStatics::OpenLevel(GetWorld(),MainWorld->GetFName());
-	UGameplayStatics::OpenLevelBySoftObjectPtr(GetWorld(), MainWorld);
-	}
-	else
-	{
-		UE_LOG(LogTemp, Error, TEXT("NO Main World Assigned. GameInstance can not load to MainWorld"))
-	}
+		UGameplayStatics::OpenLevel(GetWorld(), MainWorldName);
+	} else UE_LOG(LogTemp, Error, TEXT("Mainworld Name in GameInstance seems to be None, which is invalid"))
+
 }
 
-TSoftObjectPtr<UWorld> UEternalGrace_GameInstance::GetMainWorld()
+FName UEternalGrace_GameInstance::GetMainWorldName()
 {
-	if (!GetWorld())
-	{
-		UE_LOG(LogTemp, Error, TEXT("GetWorld() is nullptr in ReturnToMainLevel"));
-	}
-	else
-	{
-		UE_LOG(LogTemp, Log, TEXT("GetWorld() is valid in ReturnToMainLevel"));
-	}
-	return MainWorld;
+	return MainWorldName;
 }

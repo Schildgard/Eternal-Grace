@@ -24,7 +24,7 @@ protected:
 	float CurrentHealth = 1000.0f;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (AllowPrivateAccess))
-	TSoftObjectPtr<UWorld> MainWorld;
+	FName MainWorldName;
 public:
 	FOnWorldUpdate OnObjectStateChange;
 	UFUNCTION()
@@ -50,7 +50,7 @@ public:
 	UFUNCTION()
 	void ReturnToMainLevel();
 	UFUNCTION()
-	TSoftObjectPtr<UWorld> GetMainWorld();
+	FName GetMainWorldName();
 
 
 };

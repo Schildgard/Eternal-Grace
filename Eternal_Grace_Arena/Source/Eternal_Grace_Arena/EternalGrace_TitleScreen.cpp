@@ -7,30 +7,24 @@
 
 void UEternalGrace_TitleScreen::NativeConstruct()
 {
-	//BackgroundImage->SetDesiredSizeOverride(FVector2D(1920.0f, 1080.0f));
-
 	StartGameButton->OnClicked.AddDynamic(this, &UEternalGrace_TitleScreen::StartGame);
-
 	if(TitleMusic)
 	{
 		UGameplayStatics::PlaySound2D(GetWorld(),TitleMusic);
 	}
-
 }
 
 void UEternalGrace_TitleScreen::StartGame()
 {
 	UGameInstance* CurrentInstance = UGameplayStatics::GetGameInstance(GetWorld());
-
 	if (CurrentInstance)
 	{
 		UEternalGrace_GameInstance* CustomInstance = Cast<UEternalGrace_GameInstance>(CurrentInstance);
 		if (CustomInstance)
 		{
-		UGameplayStatics::OpenLevelBySoftObjectPtr(GetWorld(), CustomInstance->GetMainWorld());
-			//CustomInstance->ReturnToMainLevel();
+			UGameplayStatics::OpenLevel(GetWorld(), CustomInstance->GetMainWorldName());
 		}
 		else UE_LOG(LogTemp, Error, TEXT("TitleScreen Could not Get Custom-GameInstance"))
 	}
-	else UE_LOG(LogTemp, Error, TEXT("TitleScreen Could not Get Custom-GameInstance"))
+	else UE_LOG(LogTemp, Error, TEXT("TitleScreen Could not Get GameInstance"))
 }

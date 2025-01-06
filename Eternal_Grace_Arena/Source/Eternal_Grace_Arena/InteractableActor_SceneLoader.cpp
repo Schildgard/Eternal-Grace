@@ -20,18 +20,23 @@ void AInteractableActor_SceneLoader::Interact_Implementation()
 	if (isActive)
 	{
 		//CHECK IF LEVEL TO LOAD IS ASSIGNED AND VALID
-		if (!LevelToLoad.IsValid())
+		if (LevelNameToLoad.IsNone())
 		{
 			UE_LOG(LogTemp, Warning, TEXT("%s tried to load into Level to Load but failed miserably. Its probably nullptr"), *GetName())
 				return;
 		}
 		else
 		{
-			//LOAD LEVEL ASYNC AND CALL FUNCTION WHEN FINISHED
-			FStreamableManager& StreamManager = UAssetManager::GetStreamableManager();
-			StreamManager.RequestAsyncLoad(LevelToLoad.ToSoftObjectPath(), FStreamableDelegate::CreateUObject(this, &AInteractableActor_SceneLoader::LoadLevel));
-			// BROADCAST THAT A MAPCHANGE IS HAPPENING. LISTENERS ARE FOR EXAMPLE THE GAMEINSTANCE WHICH SAVES PLAYER VALUES AND RETURNS THEM TO NEW PLAYER INSTANCE ON LEVEL LOAD
-			OnInteract.Broadcast();
+			// CREATE SOFT PATH TO LEVEL. THIS IS NECCESSARY DUE TO COMPLICATIONS ON LEVEL LOAD/UNLOAD WHILE USING REGULAR POINTERS
+			FString LevelPath = FString::Printf(TEXT("/Game/Levels"), *LevelNameToLoad.ToString());
+			FSoftObjectPath LevelSoftPath(LevelPath);
+			if (LevelSoftPath.IsValid())
+			{
+				FStreamableManager& StreamManager = UAssetManager::GetStreamableManager();
+				StreamManager.RequestAsyncLoad(LevelSoftPath, FStreamableDelegate::CreateUObject(this, &AInteractableActor_SceneLoader::LoadLevel));
+				// BROADCAST THAT A MAPCHANGE IS HAPPENING. LISTENERS ARE FOR EXAMPLE THE GAMEINSTANCE WHICH SAVES PLAYER VALUES AND RETURNS THEM TO NEW PLAYER INSTANCE ON LEVEL LOAD
+				OnInteract.Broadcast();
+			} else UE_LOG(LogTemp, Warning, TEXT("%s Failed to create Softpath to Level"), *GetName())
 		}
 	}
 	else
@@ -44,21 +49,17 @@ void AInteractableActor_SceneLoader::Interact_Implementation()
 void AInteractableActor_SceneLoader::BeginPlay()
 {
 	Super::BeginPlay();
-	if (!LevelToLoad.IsValid())
-	{
-		LevelToLoad.LoadSynchronous(); // TO LEVEL REPLACE WITH LOADLEVELBYNAME
-	}
 
 	UGameInstance* CurrentInstance = UGameplayStatics::GetGameInstance(GetWorld());
 	ActiveGameInstance = Cast<UEternalGrace_GameInstance>(CurrentInstance);
 	if (ActiveGameInstance)
 	{
-		ActiveGameInstance = ActiveGameInstance;
+		//ActiveGameInstance = ActiveGameInstance;
 		OnInteract.AddDynamic(ActiveGameInstance, &UEternalGrace_GameInstance::OnMapLeave);
 		ActiveGameInstance->OnObjectStateChange.AddDynamic(this, &AInteractableActor_SceneLoader::UpdateStatus);
 		FCoreUObjectDelegates::PostLoadMapWithWorld.AddUObject(ActiveGameInstance, &UEternalGrace_GameInstance::OnMapEnter);
 		//SET IS ACTIVE DEPENDING ON DICTIONARY OF GAME INSTANCE
-		if(ActiveGameInstance->ObjectStates.Contains(UniqueID))
+		if (ActiveGameInstance->ObjectStates.Contains(UniqueID))
 		{
 			isActive = ActiveGameInstance->ObjectStates[UniqueID];
 			UE_LOG(LogTemp, Warning, TEXT("%s Got its Value from GameInstance"), *GetName())
@@ -76,10 +77,10 @@ void AInteractableActor_SceneLoader::BeginPlay()
 
 void AInteractableActor_SceneLoader::LoadLevel()
 {
-	UWorld* LoadedLevel = LevelToLoad.Get();
-	if (LoadedLevel)
+	//UWorld* LoadedLevel = LevelToLoad.Get();
+	if (!LevelNameToLoad.IsNone())
 	{
-		UGameplayStatics::OpenLevel(this, LoadedLevel->GetFName());
+		UGameplayStatics::OpenLevel(this, LevelNameToLoad);
 	}
 	else
 	{
@@ -93,7 +94,6 @@ void AInteractableActor_SceneLoader::OnBeginOverlap(UPrimitiveComponent* Overlap
 	{
 		InteractInfoWidget->AddToViewport();
 	}
-	//MAYBE LOADING THE LEVEL WHILE IN OVERLAP IS A GOOD IDEA
 }
 
 void AInteractableActor_SceneLoader::OnOverlapEnd(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComponent, int32 OtherBodyIndex)
@@ -107,7 +107,7 @@ void AInteractableActor_SceneLoader::OnOverlapEnd(UPrimitiveComponent* Overlappe
 void AInteractableActor_SceneLoader::UpdateStatus()
 {
 
-	if(ActiveGameInstance && ActiveGameInstance->ObjectStates.Contains(UniqueID))
+	if (ActiveGameInstance && ActiveGameInstance->ObjectStates.Contains(UniqueID))
 	{
 		isActive = ActiveGameInstance->ObjectStates[UniqueID];
 	}

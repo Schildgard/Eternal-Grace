@@ -32,7 +32,7 @@ public:
 protected:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Scene Loading", meta = (AllowPrivateAccess))
-	TSoftObjectPtr<UWorld> LevelToLoad;
+	FName LevelNameToLoad;
 
 
 	//COMMUNICATION WITH GAME INSTANCE

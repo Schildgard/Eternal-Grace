@@ -14,6 +14,7 @@ void ATitleScreenGameMode::BeginPlay()
 			TitleScreenObject = CreateWidget<UEternalGrace_TitleScreen>(CurrentController, TitleScreenClass);
 			if (TitleScreenObject)
 			{
+				CurrentController->SetShowMouseCursor(true);
 				TitleScreenObject->AddToViewport();
 			}UE_LOG(LogTemp, Error, TEXT("Failed to Create TitleScreen Object"))
 		}
