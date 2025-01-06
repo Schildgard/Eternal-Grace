@@ -6,6 +6,7 @@
 #include "Blueprint/UserWidget.h"
 #include "Components/Button.h"
 #include "Components/Image.h"
+#include "Components/TextBlock.h"
 #include "EternalGrace_TitleScreen.generated.h"
 
 /**
@@ -25,6 +26,10 @@ protected:
 	UButton* StartGameButton;
 	UPROPERTY(meta = (BindWidget), Transient)
 	UImage* BackgroundImage;
+	UPROPERTY(meta = (BindWidget), Transient)
+	UTextBlock* TitleText;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (AllowPrivateAccess),Transient)
+	USoundBase* TitleMusic;
 
 
 	UFUNCTION()

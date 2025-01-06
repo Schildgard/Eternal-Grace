@@ -78,7 +78,8 @@ void UEternalGrace_GameInstance::ReturnToMainLevel()
 {
 	if(MainWorld)
 	{
-	UGameplayStatics::OpenLevel(GetWorld(),MainWorld->GetFName());
+	//UGameplayStatics::OpenLevel(GetWorld(),MainWorld->GetFName());
+	UGameplayStatics::OpenLevelBySoftObjectPtr(GetWorld(), MainWorld);
 	}
 	else
 	{
@@ -88,5 +89,13 @@ void UEternalGrace_GameInstance::ReturnToMainLevel()
 
 TSoftObjectPtr<UWorld> UEternalGrace_GameInstance::GetMainWorld()
 {
+	if (!GetWorld())
+	{
+		UE_LOG(LogTemp, Error, TEXT("GetWorld() is nullptr in ReturnToMainLevel"));
+	}
+	else
+	{
+		UE_LOG(LogTemp, Log, TEXT("GetWorld() is valid in ReturnToMainLevel"));
+	}
 	return MainWorld;
 }

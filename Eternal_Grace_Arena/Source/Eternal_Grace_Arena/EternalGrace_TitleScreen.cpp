@@ -11,6 +11,11 @@ void UEternalGrace_TitleScreen::NativeConstruct()
 
 	StartGameButton->OnClicked.AddDynamic(this, &UEternalGrace_TitleScreen::StartGame);
 
+	if(TitleMusic)
+	{
+		UGameplayStatics::PlaySound2D(GetWorld(),TitleMusic);
+	}
+
 }
 
 void UEternalGrace_TitleScreen::StartGame()
@@ -22,7 +27,8 @@ void UEternalGrace_TitleScreen::StartGame()
 		UEternalGrace_GameInstance* CustomInstance = Cast<UEternalGrace_GameInstance>(CurrentInstance);
 		if (CustomInstance)
 		{
-			UGameplayStatics::OpenLevelBySoftObjectPtr(GetWorld(), CustomInstance->GetMainWorld());
+		UGameplayStatics::OpenLevelBySoftObjectPtr(GetWorld(), CustomInstance->GetMainWorld());
+			//CustomInstance->ReturnToMainLevel();
 		}
 		else UE_LOG(LogTemp, Error, TEXT("TitleScreen Could not Get Custom-GameInstance"))
 	}
