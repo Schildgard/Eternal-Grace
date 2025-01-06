@@ -13,6 +13,8 @@
 #include "EnhancedInputSubsystems.h"
 #include "InputActionValue.h"
 #include "InteractableActor.h"
+#include "HealthComponent.h"
+#include "EternalGrace_GameInstance.h"
 
 
 APlayerCharacter::APlayerCharacter()

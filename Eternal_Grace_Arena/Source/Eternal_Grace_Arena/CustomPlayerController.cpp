@@ -58,7 +58,7 @@ void ACustomPlayerController::HideYouDiedScreen()
 }
 void ACustomPlayerController::HandlePlayerDeath()
 {
-		ShowYouDiedScreen();
+	ShowYouDiedScreen();
 }
 void ACustomPlayerController::BeginPlay()
 {
@@ -76,11 +76,11 @@ void ACustomPlayerController::BeginPlay()
 	PlayerCharacter = Cast<APlayerCharacter>(AcknowledgedPawn);
 	if (PlayerCharacter)
 	{
-	//SUBSCRIBE DEATH HANDLING TO ON DIE EVENT
+		//SUBSCRIBE DEATH HANDLING TO ON DIE EVENT
 		PlayerCharacter->HealthComponent->OnCharacterDeath.AddDynamic(this, &ACustomPlayerController::HandlePlayerDeath);
 		//SUBSCRIBE RESET HEALTH INFORMATION TO DIE EVENT 
 		ActiveGameInstance = Cast<UEternalGrace_GameInstance>(UGameplayStatics::GetGameInstance(GetWorld()));
-		if(ActiveGameInstance)
+		if (ActiveGameInstance)
 		{
 			PlayerCharacter->HealthComponent->OnCharacterDeath.AddDynamic(ActiveGameInstance, &UEternalGrace_GameInstance::ResetHealthInformation);
 		}
@@ -103,10 +103,6 @@ void ACustomPlayerController::Tick(float DeltaSeconds)
 
 void ACustomPlayerController::ReloadLevel()
 {
-//	FName CurrentLevelName = FName(*GetWorld()->GetMapName());
-//	UGameplayStatics::OpenLevel(this, CurrentLevelName);
-
-
 	ActiveGameInstance->ReturnToMainLevel();
 
 	//REACTIVATE INPUT

@@ -46,7 +46,7 @@ void AInteractableActor_SceneLoader::BeginPlay()
 	Super::BeginPlay();
 	if (!LevelToLoad.IsValid())
 	{
-		LevelToLoad.LoadSynchronous();
+		LevelToLoad.LoadSynchronous(); // TO LEVEL REPLACE WITH LOADLEVELBYNAME
 	}
 
 	UGameInstance* CurrentInstance = UGameplayStatics::GetGameInstance(GetWorld());

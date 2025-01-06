@@ -11,7 +11,14 @@
 				"D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/__ExternalActors__/ThirdPerson/Maps/ThirdPersonMap/A/UC/6E5YA0TLNF9ABVO4EWV8PB.uasset",
 				"D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Blueprints/UI_Blueprints/BP_YouDiedWidget.uasset",
 				"D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/AI/WeaponMaster/BT_WeaponMaster.uasset",
-				"D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Blueprints/GameInstance_Blueprints/BP_EternalGrace_GameInstance.uasset"
+				"D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Blueprints/GameInstance_Blueprints/BP_EternalGrace_GameInstance.uasset",
+				"D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Levels/MainMenu.umap",
+				"D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Blueprints/BP_MainMenu.uasset",
+				"D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Blueprints/UI_Blueprints/BP_EternalGrace_TitleScreen.uasset",
+				"D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Blueprints/GameModes/BP_TitleScreenGameMode.uasset",
+				"D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Blueprints/BP_InteractionStone_WeaponMaster.uasset",
+				"D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Blueprints/GameModes/GM_TitleScreen.uasset",
+				"D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Test_LevelMap.umap"
 			]
 		}
 	]

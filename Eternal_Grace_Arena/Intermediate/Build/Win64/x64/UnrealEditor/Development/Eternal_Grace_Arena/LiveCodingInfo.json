@@ -14,6 +14,7 @@
 			"EternalGrace_GameMode.gen.cpp.obj",
 			"EternalGrace_GameState.gen.cpp.obj",
 			"EternalGrace_PlayerState.gen.cpp.obj",
+			"EternalGrace_TitleScreen.gen.cpp.obj",
 			"Eternal_Grace_Arena.init.gen.cpp.obj",
 			"Eternal_Grace_ArenaCharacter.gen.cpp.obj",
 			"Eternal_Grace_ArenaEnemy.gen.cpp.obj",
@@ -36,6 +37,7 @@
 			"Player_UI_Bars.gen.cpp.obj",
 			"StaggeringType.gen.cpp.obj",
 			"StaminaComponent.gen.cpp.obj",
+			"TitleScreenGameMode.gen.cpp.obj",
 			"PerModuleInline.gen.cpp.obj",
 			"AnimNotify_PlayRandomSound.cpp.obj",
 			"BlendingWidget.cpp.obj",
@@ -49,6 +51,7 @@
 			"EternalGrace_GameMode.cpp.obj",
 			"EternalGrace_GameState.cpp.obj",
 			"EternalGrace_PlayerState.cpp.obj",
+			"EternalGrace_TitleScreen.cpp.obj",
 			"Eternal_Grace_Arena.cpp.obj",
 			"Eternal_Grace_ArenaCharacter.cpp.obj",
 			"Eternal_Grace_ArenaEnemy.cpp.obj",
@@ -70,7 +73,8 @@
 			"PlayerCharacter.cpp.obj",
 			"Player_UI_Bars.cpp.obj",
 			"StaggeringType.cpp.obj",
-			"StaminaComponent.cpp.obj"
+			"StaminaComponent.cpp.obj",
+			"TitleScreenGameMode.cpp.obj"
 		]
 	}
 }

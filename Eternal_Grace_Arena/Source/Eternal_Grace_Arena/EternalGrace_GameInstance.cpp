@@ -85,3 +85,8 @@ void UEternalGrace_GameInstance::ReturnToMainLevel()
 		UE_LOG(LogTemp, Error, TEXT("NO Main World Assigned. GameInstance can not load to MainWorld"))
 	}
 }
+
+TSoftObjectPtr<UWorld> UEternalGrace_GameInstance::GetMainWorld()
+{
+	return MainWorld;
+}
