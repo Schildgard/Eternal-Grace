@@ -64,7 +64,7 @@ void UEternalGrace_GameInstance::SetObjectState(FName ObjectID, bool NewValue)
 	bool* FoundValue = ObjectStates.Find(ObjectID);
 	if(FoundValue)
 	{
-		*FoundValue = !*FoundValue;
+		*FoundValue = NewValue;
 	}
 	else
 	{

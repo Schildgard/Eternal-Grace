@@ -50,24 +50,24 @@ void AInteractableActor_SceneLoader::BeginPlay()
 {
 	Super::BeginPlay();
 
-	UGameInstance* CurrentInstance = UGameplayStatics::GetGameInstance(GetWorld());
-	ActiveGameInstance = Cast<UEternalGrace_GameInstance>(CurrentInstance);
+//	UGameInstance* CurrentInstance = UGameplayStatics::GetGameInstance(GetWorld());
+//	ActiveGameInstance = Cast<UEternalGrace_GameInstance>(CurrentInstance);
 	if (ActiveGameInstance)
 	{
 		//ActiveGameInstance = ActiveGameInstance;
 		OnInteract.AddDynamic(ActiveGameInstance, &UEternalGrace_GameInstance::OnMapLeave);
-		ActiveGameInstance->OnObjectStateChange.AddDynamic(this, &AInteractableActor_SceneLoader::UpdateStatus);
+	//	ActiveGameInstance->OnObjectStateChange.AddDynamic(this, &AInteractableActor_SceneLoader::UpdateStatus);
 		FCoreUObjectDelegates::PostLoadMapWithWorld.AddUObject(ActiveGameInstance, &UEternalGrace_GameInstance::OnMapEnter);
 		//SET IS ACTIVE DEPENDING ON DICTIONARY OF GAME INSTANCE
-		if (ActiveGameInstance->ObjectStates.Contains(UniqueID))
-		{
-			isActive = ActiveGameInstance->ObjectStates[UniqueID];
-			UE_LOG(LogTemp, Warning, TEXT("%s Got its Value from GameInstance"), *GetName())
-		}
-		else
-		{
-			UE_LOG(LogTemp, Warning, TEXT("GameInstance had the Key of %s yet, so its default active status is true"), *GetName())
-		}
+	//	if (ActiveGameInstance->ObjectStates.Contains(UniqueID))
+	//	{
+	//		isActive = ActiveGameInstance->ObjectStates[UniqueID];
+	//		UE_LOG(LogTemp, Warning, TEXT("%s Got its Value from GameInstance"), *GetName())
+	//	}
+	//	else
+	//	{
+	//		UE_LOG(LogTemp, Warning, TEXT("GameInstance had the Key of %s yet, so its default active status is true"), *GetName())
+	//	}
 	}
 	else
 	{
@@ -104,15 +104,15 @@ void AInteractableActor_SceneLoader::OnOverlapEnd(UPrimitiveComponent* Overlappe
 	}
 }
 
-void AInteractableActor_SceneLoader::UpdateStatus()
-{
-
-	if (ActiveGameInstance && ActiveGameInstance->ObjectStates.Contains(UniqueID))
-	{
-		isActive = ActiveGameInstance->ObjectStates[UniqueID];
-	}
-	else
-	{
-		UE_LOG(LogTemp, Warning, TEXT("%s Could not Access GameInstance or GameInstance Dictionary did not Contained its key"), *GetName())
-	}
-}
+//void AInteractableActor_SceneLoader::UpdateStatus()
+//{
+//
+//	if (ActiveGameInstance && ActiveGameInstance->ObjectStates.Contains(UniqueID))
+//	{
+//		isActive = ActiveGameInstance->ObjectStates[UniqueID];
+//	}
+//	else
+//	{
+//		UE_LOG(LogTemp, Warning, TEXT("%s Could not Access GameInstance or GameInstance Dictionary did not Contained its key"), *GetName())
+//	}
+//}

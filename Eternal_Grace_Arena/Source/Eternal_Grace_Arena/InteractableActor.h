@@ -8,6 +8,8 @@
 #include <Components/SphereComponent.h>
 #include "InteractableActor.generated.h"
 
+class UEternalGrace_GameInstance;
+class UNiagaraComponent;
 UCLASS()
 class ETERNAL_GRACE_ARENA_API AInteractableActor : public AActor, public II_Interactable
 {
@@ -49,6 +51,22 @@ protected:
 	TSubclassOf<UUserWidget> InfoClass;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (AllowPrivateAccess))
 	UUserWidget* InteractInfoWidget;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (AllowPrivateAccess))
+	UNiagaraComponent* NiagaraEffect;
+	
+
+
+	//COMMUNICATION WITH GAME INSTANCE
+	UPROPERTY()
+	UEternalGrace_GameInstance* ActiveGameInstance;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Scene Loading", meta = (AllowPrivateAccess))
+	bool isActive;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "State")
+	FName UniqueID;
+
+	UFUNCTION()
+	void UpdateStatus();
 
 
 

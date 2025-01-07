@@ -84,7 +84,7 @@ UPhysicalMaterial* UAnimNotify_PlayRandomSound::CheckGroundMaterial(USkeletalMes
 	FHitResult OutHit;
 	UWorld* world = MeshComp->GetWorld();
 
-	bool Hit = UKismetSystemLibrary::LineTraceSingle(world, ActorLocation, ScanDirection, UEngineTypes::ConvertToTraceType(ECC_Visibility), true, {}, EDrawDebugTrace::ForDuration, OutHit, true, FLinearColor::Red, FLinearColor::Green, 5.0f);
+	bool Hit = UKismetSystemLibrary::LineTraceSingle(world, ActorLocation, ScanDirection, UEngineTypes::ConvertToTraceType(ECC_Visibility), true, {}, EDrawDebugTrace::None, OutHit, true);
 
 	if (Hit)
 	{

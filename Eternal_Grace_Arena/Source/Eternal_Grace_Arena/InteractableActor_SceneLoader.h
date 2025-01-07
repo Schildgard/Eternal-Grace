@@ -5,7 +5,6 @@
 #include "CoreMinimal.h"
 #include "InteractableActor.h"
 #include "CustomPlayerController.h"
-#include "EternalGrace_GameInstance.h"
 #include "InteractableActor_SceneLoader.generated.h"
 
 /**
@@ -36,13 +35,13 @@ protected:
 
 
 	//COMMUNICATION WITH GAME INSTANCE
-	UPROPERTY()
-	UEternalGrace_GameInstance* ActiveGameInstance;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite,Category = "Scene Loading", meta = (AllowPrivateAccess))
-	bool isActive;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "State")
-	FName UniqueID;
-
-	UFUNCTION()
-	void UpdateStatus();
+	//UPROPERTY()
+	//UEternalGrace_GameInstance* ActiveGameInstance;
+	//UPROPERTY(EditAnywhere, BlueprintReadWrite,Category = "Scene Loading", meta = (AllowPrivateAccess))
+	//bool isActive;
+	//UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "State")
+	//FName UniqueID;
+	//
+	//UFUNCTION()
+	//void UpdateStatus();
 };
