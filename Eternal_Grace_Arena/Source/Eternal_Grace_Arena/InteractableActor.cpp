@@ -98,3 +98,8 @@ void AInteractableActor::Tick(float DeltaTime)
 
 }
 
+bool AInteractableActor::GetActiveStatus()
+{
+	return isActive;
+}
+

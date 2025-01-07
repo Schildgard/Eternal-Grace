@@ -25,6 +25,15 @@ protected:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (AllowPrivateAccess))
 	FName MainWorldName;
+
+	UPROPERTY()
+	bool WinCondition;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (AllowPrivateAccess))
+	TMap<FName, bool> WinConditionDependencies;
+
+
+
 public:
 	FOnWorldUpdate OnObjectStateChange;
 	UFUNCTION()

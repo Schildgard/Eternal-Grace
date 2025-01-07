@@ -27,7 +27,7 @@ float UEternalGrace_GameInstance::GetHealthInfo()
 void UEternalGrace_GameInstance::ResetHealthInformation()
 {
 	APlayerCharacter* PlayerCharacter = Cast<APlayerCharacter>(UGameplayStatics::GetPlayerCharacter(GetWorld(), 0));
-	if(PlayerCharacter)
+	if (PlayerCharacter)
 	{
 		CurrentHealth = PlayerCharacter->HealthComponent->MaxHealth;
 	}
@@ -37,7 +37,7 @@ void UEternalGrace_GameInstance::ResetHealthInformation()
 
 void UEternalGrace_GameInstance::OnMapEnter(UWorld* LoadedWorld)
 {
-		APlayerCharacter* PlayerCharacter = Cast<APlayerCharacter>(UGameplayStatics::GetPlayerCharacter(GetWorld(), 0));
+	APlayerCharacter* PlayerCharacter = Cast<APlayerCharacter>(UGameplayStatics::GetPlayerCharacter(GetWorld(), 0));
 	//SAVE VALUES TO PLAYER STATE
 	if (PlayerCharacter)
 	{
@@ -54,7 +54,7 @@ void UEternalGrace_GameInstance::OnMapLeave()
 	{
 		UploadHealthInfo(PlayerCharacter->HealthComponent->CurrentHealth);
 	}
-	else 
+	else
 		UE_LOG(LogTemp, Error, TEXT("GameInstance: Failed to Cast Player On Map Leave Function"))
 }
 
@@ -62,7 +62,7 @@ void UEternalGrace_GameInstance::SetObjectState(FName ObjectID, bool NewValue)
 {
 	//FIND RETURNS A POINTER TO THE VALUE OF THE KEY OR NULLPTR IF KEY NOT EXISTS
 	bool* FoundValue = ObjectStates.Find(ObjectID);
-	if(FoundValue)
+	if (FoundValue)
 	{
 		*FoundValue = NewValue;
 	}
@@ -71,14 +71,32 @@ void UEternalGrace_GameInstance::SetObjectState(FName ObjectID, bool NewValue)
 		ObjectStates.Add(ObjectID, NewValue);
 	}
 	OnObjectStateChange.Broadcast();
+
+	// ON EVERY STATE CHANGE, CHECK OF ALL STATES FOR WIN CONDITION ARE MET
+	if (!WinCondition)
+	{
+		//ITERATE THROUGH DICTIONARY
+		for (const TPair<FName, bool>& Depency : WinConditionDependencies)
+		{
+			//SET ACTIVE STATUS TO TRUE IF THE STATUS OF ALL RELATED OBJECTS MEETS EXPECTED CRITERIA
+			if (Depency.Value != Depency.Value)
+			{
+				return;
+			}
+			WinCondition = true;
+			UE_LOG(LogTemp, Error, TEXT("WIN CONDITION MET"))
+				return;
+		}
+	}
 }
 
 void UEternalGrace_GameInstance::ReturnToMainLevel()
 {
-	if(!MainWorldName.IsNone())
+	if (!MainWorldName.IsNone())
 	{
 		UGameplayStatics::OpenLevel(GetWorld(), MainWorldName);
-	} else UE_LOG(LogTemp, Error, TEXT("Mainworld Name in GameInstance seems to be None, which is invalid"))
+	}
+	else UE_LOG(LogTemp, Error, TEXT("Mainworld Name in GameInstance seems to be None, which is invalid"))
 
 }
 
@@ -86,3 +104,5 @@ FName UEternalGrace_GameInstance::GetMainWorldName()
 {
 	return MainWorldName;
 }
+
+
