@@ -83,7 +83,8 @@ void UEternalGrace_GameInstance::SetObjectState(FName ObjectID, bool NewValue)
 			{
 				return;
 			}
-			WinCondition = true;
+			//WinCondition = true;
+			ObjectStates.Add("Exit", true);
 			UE_LOG(LogTemp, Error, TEXT("WIN CONDITION MET"))
 				return;
 		}
