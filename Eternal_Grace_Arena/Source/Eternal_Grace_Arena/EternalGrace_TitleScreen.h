@@ -22,7 +22,7 @@ class ETERNAL_GRACE_ARENA_API UEternalGrace_TitleScreen : public UUserWidget
 protected:
 	UPROPERTY(meta = (BindWidget), Transient)
 	UPanelWidget* MainPanel;
-	UPROPERTY(meta = (BindWidget), Transient)
+	UPROPERTY(meta = (BindWidgetOptional), Transient)
 	UButton* StartGameButton;
 	UPROPERTY(meta = (BindWidget), Transient)
 	UImage* BackgroundImage;
@@ -30,6 +30,9 @@ protected:
 	UTextBlock* TitleText;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (AllowPrivateAccess),Transient)
 	USoundBase* TitleMusic;
+
+	UPROPERTY(meta=(BindWidgetAnimOptional), Transient)
+	UWidgetAnimation* ScrollAnimation;
 
 
 	UFUNCTION()

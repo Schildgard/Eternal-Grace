@@ -7,10 +7,19 @@
 
 void UEternalGrace_TitleScreen::NativeConstruct()
 {
-	StartGameButton->OnClicked.AddDynamic(this, &UEternalGrace_TitleScreen::StartGame);
-	if(TitleMusic)
+	if (StartGameButton)
 	{
-		UGameplayStatics::PlaySound2D(GetWorld(),TitleMusic);
+		StartGameButton->OnClicked.AddDynamic(this, &UEternalGrace_TitleScreen::StartGame);
+	}
+
+	if (TitleMusic)
+	{
+		UGameplayStatics::PlaySound2D(GetWorld(), TitleMusic);
+	}
+
+	if (ScrollAnimation)
+	{
+		PlayAnimation(ScrollAnimation);
 	}
 }
 
