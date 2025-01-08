@@ -7,6 +7,7 @@
 #include "Kismet//GameplayStatics.h"
 #include "Perception/PawnSensingComponent.h"
 #include "EternalGrace_GameInstance.h"
+#include "DrawDebugHelpers.h"
 AEternal_Grace_ArenaEnemy::AEternal_Grace_ArenaEnemy()
 {
 	HPBarComponent = CreateDefaultSubobject<UWidgetComponent>(TEXT("HP Bar"));
@@ -106,24 +107,26 @@ void AEternal_Grace_ArenaEnemy::Tick(float DeltaSeconds)
 		UE_LOG(LogTemp, Warning, TEXT("Healthbar widget is null"))
 	}
 
-	if(isAggro)
-	{
-		if(CheckDistancetoPlayer(ChasingDistanceThreshold) == false)
-		{
-			ChasingCountDown -= DeltaSeconds;
-			if(ChasingCountDown <= 0.0f)
-			{
-				ChasingCountDown = ChasingTimer;
-				isAggro = false;
-				ReturningToStartPosition = true;
-				//INSERT RETURN TO START POSITION
-			}
-		}
-		else
-		{
-			ChasingCountDown = ChasingTimer;
-		}
-	}
+	ShowDistanceVectorToPlayer();
+
+	//if(isAggro)
+	//{
+	//	if(CheckDistancetoPlayer(ChasingDistanceThreshold) == false)
+	//	{
+	//		ChasingCountDown -= DeltaSeconds;
+	//		if(ChasingCountDown <= 0.0f)
+	//		{
+	//			ChasingCountDown = ChasingTimer;
+	//			isAggro = false;
+	//			ReturningToStartPosition = true;
+	//			//INSERT RETURN TO START POSITION
+	//		}
+	//	}
+	//	else
+	//	{
+	//		ChasingCountDown = ChasingTimer;
+	//	}
+	//}
 }
 
 void AEternal_Grace_ArenaEnemy::DeathEvent()
@@ -183,4 +186,30 @@ void AEternal_Grace_ArenaEnemy::SendInfoToGameInstance()
 
 		}
 	}
+}
+
+void AEternal_Grace_ArenaEnemy::ShowDistanceVectorToPlayer()
+{
+	FColor DebugColor = FColor::Black;
+	FVector OwnerLocation = GetActorLocation();
+	FVector OwnerForwardDirection = GetActorForwardVector();
+	//FVector OwnerFowardPoint = OwnerLocation + OwnerForwardDirection;
+	FVector EndPoint = OwnerLocation + (OwnerForwardDirection * 1000.0f);
+	FVector PlayerLocation = UGameplayStatics::GetPlayerCharacter(world, 0)->GetActorLocation();
+	//insert distance calculation here
+	//float Distance = UKismetMathLibrary::Vector_Distance(PlayerLocation, OwnerLocation);
+
+	FVector OwnerPlayerDistance = PlayerLocation - OwnerLocation;
+	OwnerPlayerDistance.Normalize();
+
+	float dotproduct = UKismetMathLibrary::Dot_VectorVector(OwnerPlayerDistance, OwnerForwardDirection);
+	
+	if(dotproduct < 0)
+	{
+		DebugColor = FColor::Green;
+	}
+	DrawDebugLine(world, OwnerLocation, EndPoint, FColor::Blue, false);
+	DrawDebugLine(world, OwnerLocation, PlayerLocation, DebugColor, false);
+	UE_LOG(LogTemp, Display, TEXT("%f"), dotproduct);
+
 }

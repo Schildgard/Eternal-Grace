@@ -64,6 +64,10 @@ public:
 	UFUNCTION()
 	void SendInfoToGameInstance();
 
+	UFUNCTION()
+	void ShowDistanceVectorToPlayer();
+
+
 protected:
 	virtual void BeginPlay()override;
 	virtual void Tick(float DeltaSeconds)override;

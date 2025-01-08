@@ -5,16 +5,11 @@
 			"guid": "00000000000000000000000000000000",
 			"description": "Default Uncontrolled Changelist",
 			"files": [
-				"D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/StarterContent/Architecture/Floor_400x400.uasset",
-				"D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/StarterContent/Materials/M_Ground_Grass.uasset",
-				"D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/__ExternalActors__/Levels/Level_WeaponMaster/9/LU/NL0QZF5QTU83JSJI5GWEGA.uasset",
-				"D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Levels/Level_Ending.umap",
-				"D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Blueprints/BP_EndLevel.uasset",
-				"D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Levels/Level_Main.umap",
-				"D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Blueprints/UI_Blueprints/BP_EternalGrace_EndScreen.uasset",
-				"D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Blueprints/UI_Blueprints/BP_EternalGrace_TitleScreen.uasset",
-				"D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Blueprints/UI_Blueprints/NewWidgetPreview.uasset",
-				"D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Blueprints/GameModes/BP_EndScreenGameMode.uasset"
+				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/StarterContent/Architecture/Floor_400x400.uasset",
+				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/AI/WeaponMaster/BT_WeaponMaster.uasset",
+				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/__ExternalActors__/Levels/Level_WeaponMaster/9/LU/NL0QZF5QTU83JSJI5GWEGA.uasset",
+				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/AI/WeaponMaster/BTTask_Attack.uasset",
+				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Blueprints/CharacterBlueprints/BP_WeaponMaster_Enemy.uasset"
 			]
 		}
 	]
