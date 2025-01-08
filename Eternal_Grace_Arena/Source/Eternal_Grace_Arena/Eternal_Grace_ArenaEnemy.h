@@ -28,8 +28,12 @@ public:
 	UWidgetComponent* HPBarComponent;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = UI, meta = (AllowPrivateAccess))
 	UEnemy_UI_Healthbar* HealthbarWidget;
+
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Actions, meta = (AllowPrivateAccess))
 	TArray<UAnimMontage*> AttackMontages;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Actions, meta = (AllowPrivateAccess))
+	UAnimMontage* SecondPhaseMontage;
 
 	//PLAYER DETECTION
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = AI, meta = (AllowPrivateAccess))
@@ -48,8 +52,13 @@ public:
 	float const ChasingTimer = 10.0f;
 
 
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, meta =(AllowPrivateAccess))
+	float BackDetection;
 
-	UFUNCTION(BlueprintCallable)
+	UPROPERTY()
+	bool CanPerformGettOffMeMove;
+
+	UFUNCTION(BlueprintCallable, CallInEditor, Category = Actions)
 	void GetOffMeMove();
 	virtual void LightAttack()override;
 
@@ -65,7 +74,10 @@ public:
 	void SendInfoToGameInstance();
 
 	UFUNCTION()
-	void ShowDistanceVectorToPlayer();
+	float ShowDistanceVectorToPlayer();
+
+	UFUNCTION()
+	void TriggerSecondPhase();
 
 
 protected:

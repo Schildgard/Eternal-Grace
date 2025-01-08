@@ -8,6 +8,7 @@
 #include "Perception/PawnSensingComponent.h"
 #include "EternalGrace_GameInstance.h"
 #include "DrawDebugHelpers.h"
+#include "Components/CapsuleComponent.h"
 AEternal_Grace_ArenaEnemy::AEternal_Grace_ArenaEnemy()
 {
 	HPBarComponent = CreateDefaultSubobject<UWidgetComponent>(TEXT("HP Bar"));
@@ -21,6 +22,8 @@ AEternal_Grace_ArenaEnemy::AEternal_Grace_ArenaEnemy()
 	ChasingCountDown = ChasingTimer;
 	ReturningToStartPosition = false;
 
+	BackDetection = -0.35f;
+	CanPerformGettOffMeMove = false;
 	SensingComponent = CreateDefaultSubobject<UPawnSensingComponent>("Pawn Sensing");
 }
 
@@ -28,7 +31,6 @@ bool AEternal_Grace_ArenaEnemy::CheckDistancetoPlayer(float Threshold)
 {
 	FVector OwnerLocation = GetActorLocation();
 	FVector PlayerLocation = UGameplayStatics::GetPlayerCharacter(world, 0)->GetActorLocation();
-	//insert distance calculation here
 	float Distance = UKismetMathLibrary::Vector_Distance(PlayerLocation, OwnerLocation);
 	if (Distance >= Threshold)
 	{
@@ -42,6 +44,13 @@ void AEternal_Grace_ArenaEnemy::GetOffMeMove()
 	if (!CharacterAnimationInstance->isAttacking)
 	{
 		CharacterAnimationInstance->isAttacking = true;
+
+		//TEMPORARY
+		UCapsuleComponent* ActorCollisionCapsule = GetCapsuleComponent();
+		ActorCollisionCapsule->SetCollisionResponseToChannel(ECollisionChannel::ECC_Pawn, ECollisionResponse::ECR_Ignore);
+
+
+			RotateTowardsTarget(UGameplayStatics::GetPlayerCharacter(world, 0));
 		if (CharacterAnimationInstance->isGuarding)
 		{
 			CancelGuard();
@@ -60,26 +69,26 @@ void AEternal_Grace_ArenaEnemy::GetOffMeMove()
 void AEternal_Grace_ArenaEnemy::BeginPlay()
 {
 	Super::BeginPlay();
-		if (HPBarComponent)
+	if (HPBarComponent)
+	{
+		UUserWidget* Widget = HPBarComponent->GetWidget();
+		if (Widget)
 		{
-			UUserWidget* Widget = HPBarComponent->GetWidget();
-			if (Widget)
+			HealthbarWidget = Cast<UEnemy_UI_Healthbar>(Widget);
+			if (HealthbarWidget == nullptr)
 			{
-				HealthbarWidget = Cast<UEnemy_UI_Healthbar>(Widget);
-				if (HealthbarWidget == nullptr)
-				{
-					UE_LOG(LogTemp, Warning, TEXT("Failed Widget to CustomProgressbar"))
-				}
-			}
-			else
-			{
-				UE_LOG(LogTemp, Warning, TEXT("HBBar has no widget"))
+				UE_LOG(LogTemp, Warning, TEXT("Failed Widget to CustomProgressbar"))
 			}
 		}
 		else
 		{
-			UE_LOG(LogTemp, Warning, TEXT("HP Bar is null"))
+			UE_LOG(LogTemp, Warning, TEXT("HBBar has no widget"))
 		}
+	}
+	else
+	{
+		UE_LOG(LogTemp, Warning, TEXT("HP Bar is null"))
+	}
 
 	if (SensingComponent)
 	{
@@ -107,7 +116,15 @@ void AEternal_Grace_ArenaEnemy::Tick(float DeltaSeconds)
 		UE_LOG(LogTemp, Warning, TEXT("Healthbar widget is null"))
 	}
 
-	ShowDistanceVectorToPlayer();
+	if(this->HealthComponent->CurrentHealth <= this->HealthComponent->MaxHealth/2 && !CanPerformGettOffMeMove)
+	{
+		//CanPerformGettOffMeMove = true;
+		TriggerSecondPhase();
+		
+	}
+	
+
+
 
 	//if(isAggro)
 	//{
@@ -137,6 +154,16 @@ void AEternal_Grace_ArenaEnemy::DeathEvent()
 
 void AEternal_Grace_ArenaEnemy::LightAttack()
 {
+
+	if(ShowDistanceVectorToPlayer() < BackDetection && CanPerformGettOffMeMove)
+	{
+		GetOffMeMove();
+		return;
+	}
+
+
+
+
 	if (!CharacterAnimationInstance->isAttacking)
 	{
 		CharacterAnimationInstance->isAttacking = true;
@@ -175,11 +202,11 @@ void AEternal_Grace_ArenaEnemy::SpotPlayer(APawn* SpottedPawn)
 void AEternal_Grace_ArenaEnemy::SendInfoToGameInstance()
 {
 	UE_LOG(LogTemp, Warning, TEXT("Trigger"))
-	//IT ACTUALLY MAKES SENSE TO MOVE THIS TO A BOSS CLASS, SINCE REGULAR ENEMIES DONT AFFECT ANYTHING IN THE WORLD
-	UEternalGrace_GameInstance* CurrentInstance = Cast<UEternalGrace_GameInstance>(UGameplayStatics::GetGameInstance(world));
+		//IT ACTUALLY MAKES SENSE TO MOVE THIS TO A BOSS CLASS, SINCE REGULAR ENEMIES DONT AFFECT ANYTHING IN THE WORLD
+		UEternalGrace_GameInstance* CurrentInstance = Cast<UEternalGrace_GameInstance>(UGameplayStatics::GetGameInstance(world));
 	if (CurrentInstance)
 	{
-		for(const TPair<FName, bool>& Pair : ReferencedObjectIds)
+		for (const TPair<FName, bool>& Pair : ReferencedObjectIds)
 		{
 			CurrentInstance->SetObjectState(Pair.Key, Pair.Value);
 			UE_LOG(LogTemp, Warning, TEXT("Iterated through %s"), *Pair.Key.ToString())
@@ -188,28 +215,35 @@ void AEternal_Grace_ArenaEnemy::SendInfoToGameInstance()
 	}
 }
 
-void AEternal_Grace_ArenaEnemy::ShowDistanceVectorToPlayer()
+float AEternal_Grace_ArenaEnemy::ShowDistanceVectorToPlayer()
 {
 	FColor DebugColor = FColor::Black;
 	FVector OwnerLocation = GetActorLocation();
 	FVector OwnerForwardDirection = GetActorForwardVector();
-	//FVector OwnerFowardPoint = OwnerLocation + OwnerForwardDirection;
-	FVector EndPoint = OwnerLocation + (OwnerForwardDirection * 1000.0f);
+	//FVector EndPoint = OwnerLocation + (OwnerForwardDirection * 1000.0f);
 	FVector PlayerLocation = UGameplayStatics::GetPlayerCharacter(world, 0)->GetActorLocation();
-	//insert distance calculation here
-	//float Distance = UKismetMathLibrary::Vector_Distance(PlayerLocation, OwnerLocation);
 
 	FVector OwnerPlayerDistance = PlayerLocation - OwnerLocation;
 	OwnerPlayerDistance.Normalize();
 
 	float dotproduct = UKismetMathLibrary::Dot_VectorVector(OwnerPlayerDistance, OwnerForwardDirection);
-	
-	if(dotproduct < 0)
+	float distance = UKismetMathLibrary::Vector_Distance(OwnerLocation, PlayerLocation);
+	if (dotproduct < BackDetection)
 	{
 		DebugColor = FColor::Green;
 	}
-	DrawDebugLine(world, OwnerLocation, EndPoint, FColor::Blue, false);
-	DrawDebugLine(world, OwnerLocation, PlayerLocation, DebugColor, false);
-	UE_LOG(LogTemp, Display, TEXT("%f"), dotproduct);
 
+
+	//DrawDebugLine(world, OwnerLocation, EndPoint, FColor::Blue, false);
+	DrawDebugLine(world, OwnerLocation, PlayerLocation, DebugColor, false);
+	//UE_LOG(LogTemp, Display, TEXT("%f"), distance);
+
+	return dotproduct;
+}
+
+void AEternal_Grace_ArenaEnemy::TriggerSecondPhase()
+{
+	PlayAnimMontage(SecondPhaseMontage, 1.0f);
+	CanPerformGettOffMeMove = true;
+	UE_LOG(LogTemp, Error, TEXT("Can now perform GetOffMeMove"))
 }
