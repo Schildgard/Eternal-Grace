@@ -29,7 +29,7 @@ void UNS_CancelMontage::Notify(USkeletalMeshComponent* MeshComp, UAnimSequenceBa
 	{
 	PerformingActor->CharacterAnimationInstance->StopAllMontages(BlendOutTime);
 	PerformingActor->CharacterAnimationInstance->isAttacking = false;
-
+	UE_LOG(LogTemp, Warning, TEXT("Cancle Anim Notify Performed"))
 	}
 
 }

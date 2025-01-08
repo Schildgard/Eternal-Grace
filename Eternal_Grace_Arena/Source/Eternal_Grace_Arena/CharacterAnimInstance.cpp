@@ -10,31 +10,18 @@ void UCharacterAnimInstance::InterruptAttack(UAnimMontage* AttackAnimation, bool
 {
 	if (Interrupted)
 	{
-		isAttacking = false;
-		UE_LOG(LogTemp, Error, TEXT("Animation was interrupted"))
-			AEternal_Grace_ArenaCharacter* ThisCharacter = Cast<AEternal_Grace_ArenaCharacter>(GetOwningActor());
-		if (ThisCharacter)
+		if (isAttacking)
 		{
-			//THIS DOES NOT SEEM TO MAKE A DIFFERENCE
-			ThisCharacter->Weapon->ResetAttackValues();
-		}
-		else
-		{
-			UE_LOG(LogTemp, Warning, TEXT("Cast Not successfull"))
+			isAttacking = false;
 		}
 	}
+		// RESET BOOL ON BLEND OUT LEADS TO WEIRD RETRIGGERING OF ATTACKS SOMETIMES
 }
 
 void UCharacterAnimInstance::OnAttackEnd(UAnimMontage* AttackAnimation, bool Interrupted)
 {
-	isAttacking = false;
-	AEternal_Grace_ArenaCharacter* ThisCharacter = Cast<AEternal_Grace_ArenaCharacter>(GetOwningActor());
-	if (ThisCharacter)
+	if (isAttacking)
 	{
-		ThisCharacter->Weapon->ResetAttackValues();
-	}
-	else
-	{
-		UE_LOG(LogTemp, Warning, TEXT("Cast Not successfull"))
+		isAttacking = false;
 	}
 }

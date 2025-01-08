@@ -17,14 +17,10 @@ UNS_WeaponSwing::UNS_WeaponSwing()
 void UNS_WeaponSwing::NotifyBegin(USkeletalMeshComponent* MeshComp, UAnimSequenceBase* Animation, float TotalDuration, const FAnimNotifyEventReference& EventReference)
 {
 	//THIS SHOULDNT BE DONE ON EVERY NOTIFY BEGIN, BUT ON INITIALIZATION
-	if (PerformingActor == nullptr)
+	if (!PerformingActor)
 	{
 		PerformingActor = Cast<AEternal_Grace_ArenaCharacter>(MeshComp->GetOwner());
-		if (PerformingActor)
-		{
-		//	UE_LOG(LogTemp, Warning, TEXT("Owner Found"))
-		}
-		else
+		if (!PerformingActor)
 		{
 			UE_LOG(LogTemp, Warning, TEXT("Owner NOT Found"))
 				return;
@@ -38,14 +34,16 @@ void UNS_WeaponSwing::NotifyBegin(USkeletalMeshComponent* MeshComp, UAnimSequenc
 
 void UNS_WeaponSwing::NotifyEnd(USkeletalMeshComponent* MeshComp, UAnimSequenceBase* Animation, const FAnimNotifyEventReference& EventReference)
 {
-	if (PerformingActor)
+	if (!PerformingActor)
 	{
-		PerformingActor->Weapon->SetCollisionEnabled(ECollisionEnabled::NoCollision);
-		PerformingActor->Weapon->ResetAttackValues();
+		PerformingActor = Cast<AEternal_Grace_ArenaCharacter>(MeshComp->GetOwner());
+		if (!PerformingActor)
+		{
+			UE_LOG(LogTemp, Warning, TEXT("Owner NOT Found"))
+				return;
+		}
 	}
-	else
-	{
-		UE_LOG(LogTemp, Warning, TEXT("Owner NOT Found"))
-			return;
-	}
+	PerformingActor->Weapon->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+	PerformingActor->Weapon->ResetAttackValues();
+	PerformingActor->Weapon->StaggerType = EStaggeringType::NormalStagger;
 }

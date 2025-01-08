@@ -13,7 +13,10 @@
 				"D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/StarterContent/Materials/M_Ground_Grass.uasset",
 				"D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/AI/WeaponMaster/BTTask_Attack.uasset",
 				"D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/AI/WeaponMaster/BT_WeaponMaster.uasset",
-				"D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Animations/WeaponMaster_Animations/Combat/Hit/AM_WeaponMaster_Buff.uasset"
+				"D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Animations/WeaponMaster_Animations/Combat/Hit/AM_WeaponMaster_Buff.uasset",
+				"D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Blueprints/AnimationBlueprints/ABP_WeaponMaster.uasset",
+				"D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Animations/WeaponMaster_Animations/Combat/Attacks/GreatSword_FocusEnergy_L_Start_1_Root.uasset",
+				"D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Animations/PlayerAnimations/Combat/Guard/AM_GuardBreak.uasset"
 			]
 		}
 	]

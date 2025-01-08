@@ -23,7 +23,7 @@ AEternal_Grace_ArenaEnemy::AEternal_Grace_ArenaEnemy()
 	ReturningToStartPosition = false;
 
 	BackDetection = -0.35f;
-	CanPerformGettOffMeMove = false;
+	SecondPhaseTriggered = false;
 	SensingComponent = CreateDefaultSubobject<UPawnSensingComponent>("Pawn Sensing");
 }
 
@@ -50,7 +50,7 @@ void AEternal_Grace_ArenaEnemy::GetOffMeMove()
 		ActorCollisionCapsule->SetCollisionResponseToChannel(ECollisionChannel::ECC_Pawn, ECollisionResponse::ECR_Ignore);
 
 
-			RotateTowardsTarget(UGameplayStatics::GetPlayerCharacter(world, 0));
+		RotateTowardsTarget(UGameplayStatics::GetPlayerCharacter(world, 0));
 		if (CharacterAnimationInstance->isGuarding)
 		{
 			CancelGuard();
@@ -58,10 +58,18 @@ void AEternal_Grace_ArenaEnemy::GetOffMeMove()
 		if (AttackMontages[2] != nullptr)
 		{
 			PlayAnimMontage(AttackMontages[2], 1.0f); // TO DO:REPLACE THAT MAGIC NUMBER WITH SOMETHING ELSE LIKE A POINTER TO A SPECIFIC MONTAGE OR SOMETHING
+
 			FOnMontageEnded InterruptDelegate;
+			FOnMontageEnded CompleteDelegate;
+
 			InterruptDelegate.BindUObject(CharacterAnimationInstance, &UCharacterAnimInstance::InterruptAttack);
+			InterruptDelegate.BindUObject(this, &AEternal_Grace_ArenaEnemy::ResetCollision);
+
+			CompleteDelegate.BindUObject(this, &AEternal_Grace_ArenaEnemy::ResetCollision);
+			CompleteDelegate.BindUObject(CharacterAnimationInstance, &UCharacterAnimInstance::OnAttackEnd);
+
 			CharacterAnimationInstance->Montage_SetBlendingOutDelegate(InterruptDelegate, AttackMontages[2]);
-			CharacterAnimationInstance->Montage_SetEndDelegate(InterruptDelegate, AttackMontages[2]);
+			CharacterAnimationInstance->Montage_SetEndDelegate(CompleteDelegate, AttackMontages[2]);
 		}
 	}
 }
@@ -77,22 +85,26 @@ void AEternal_Grace_ArenaEnemy::BeginPlay()
 			HealthbarWidget = Cast<UEnemy_UI_Healthbar>(Widget);
 			if (HealthbarWidget == nullptr)
 			{
-				UE_LOG(LogTemp, Warning, TEXT("Failed Widget to CustomProgressbar"))
+				UE_LOG(LogTemp, Error, TEXT("%s Failed to cast WidgetProperty to Enemy_UI_Bar"), *GetName())
 			}
 		}
 		else
 		{
-			UE_LOG(LogTemp, Warning, TEXT("HBBar has no widget"))
+			UE_LOG(LogTemp, Error, TEXT("Get Widget Function of %s HPBarComponent failed"), *GetName())
 		}
 	}
 	else
 	{
-		UE_LOG(LogTemp, Warning, TEXT("HP Bar is null"))
+		UE_LOG(LogTemp, Error, TEXT("HP-Bar Component for %s is nullptr"), *GetName())
 	}
 
 	if (SensingComponent)
 	{
 		SensingComponent->OnSeePawn.AddDynamic(this, &AEternal_Grace_ArenaEnemy::SpotPlayer);
+	}
+	else
+	{
+		UE_LOG(LogTemp, Error, TEXT("Sensing Component of %s could not be getted"), *GetName())
 	}
 
 }
@@ -104,7 +116,13 @@ void AEternal_Grace_ArenaEnemy::Tick(float DeltaSeconds)
 	{
 		if (HealthComponent)
 		{
+			//UPDATE HP-BAR
 			HealthbarWidget->UpdateProgressBar(HealthbarWidget->Healthbar, HealthComponent->MaxHealth, HealthComponent->CurrentHealth);
+			// CHECK FOR STATE CHANGE. TO DO REFACTOR THIS TO AN EVENT MAYBE?
+			if (HealthComponent->CurrentHealth <= (HealthComponent->MaxHealth / 2) && !SecondPhaseTriggered)
+			{
+				TriggerSecondPhase();
+			}
 		}
 		else
 		{
@@ -116,16 +134,9 @@ void AEternal_Grace_ArenaEnemy::Tick(float DeltaSeconds)
 		UE_LOG(LogTemp, Warning, TEXT("Healthbar widget is null"))
 	}
 
-	if(this->HealthComponent->CurrentHealth <= this->HealthComponent->MaxHealth/2 && !CanPerformGettOffMeMove)
-	{
-		//CanPerformGettOffMeMove = true;
-		TriggerSecondPhase();
-		
-	}
-	
 
 
-
+	// TO DO REFACTOR THIS TO AN EVENT MAYBE?
 	//if(isAggro)
 	//{
 	//	if(CheckDistancetoPlayer(ChasingDistanceThreshold) == false)
@@ -155,12 +166,11 @@ void AEternal_Grace_ArenaEnemy::DeathEvent()
 void AEternal_Grace_ArenaEnemy::LightAttack()
 {
 
-	if(ShowDistanceVectorToPlayer() < BackDetection && CanPerformGettOffMeMove)
+	if (CheckIfPlayerIsBehind() && SecondPhaseTriggered)
 	{
 		GetOffMeMove();
 		return;
 	}
-
 
 
 
@@ -177,21 +187,20 @@ void AEternal_Grace_ArenaEnemy::LightAttack()
 		PlayAnimMontage(AttackMontages[RandomAttackIndex], 1.0f);
 
 		FOnMontageEnded InterruptDelegate;
+		FOnMontageEnded CompletedDelegate;
+
 		InterruptDelegate.BindUObject(CharacterAnimationInstance, &UCharacterAnimInstance::InterruptAttack);
+		CompletedDelegate.BindUObject(CharacterAnimationInstance, &UCharacterAnimInstance::OnAttackEnd);
+
 		CharacterAnimationInstance->Montage_SetBlendingOutDelegate(InterruptDelegate, AttackMontages[RandomAttackIndex]);
-		CharacterAnimationInstance->Montage_SetEndDelegate(InterruptDelegate, AttackMontages[RandomAttackIndex]);
-		//
-		//		FOnMontageEnded CompletedDelegate;
-		//		CompletedDelegate.BindUObject(CharacterAnimationInstance, &UCharacterAnimInstance::OnAttackEnd);
-		//		CharacterAnimationInstance->Montage_SetEndDelegate(CompletedDelegate, LightAttacks[0]);
-		//		UE_LOG(LogTemp, Warning, TEXT("is AGAIN TEST Attacking : %s"), CharacterAnimationInstance->isAttacking ? TEXT("true") : TEXT("false"));
-			//UE_LOG(LogTemp, Warning, TEXT("is Attacking : %s"), CharacterAnimationInstance->isAttacking ? TEXT("true") : TEXT("false"));
+		CharacterAnimationInstance->Montage_SetEndDelegate(CompletedDelegate, AttackMontages[RandomAttackIndex]);
+
 	}
 }
 
 void AEternal_Grace_ArenaEnemy::SpotPlayer(APawn* SpottedPawn)
 {
-	if (!isAggro && !ReturningToStartPosition)
+	if (!isAggro)
 	{
 		isAggro = true;
 		UE_LOG(LogTemp, Warning, TEXT("Enemy Spotted Player"))
@@ -215,12 +224,12 @@ void AEternal_Grace_ArenaEnemy::SendInfoToGameInstance()
 	}
 }
 
-float AEternal_Grace_ArenaEnemy::ShowDistanceVectorToPlayer()
+bool AEternal_Grace_ArenaEnemy::CheckIfPlayerIsBehind()
 {
-	FColor DebugColor = FColor::Black;
+	FColor DebugColor = FColor::Red;
+
 	FVector OwnerLocation = GetActorLocation();
 	FVector OwnerForwardDirection = GetActorForwardVector();
-	//FVector EndPoint = OwnerLocation + (OwnerForwardDirection * 1000.0f);
 	FVector PlayerLocation = UGameplayStatics::GetPlayerCharacter(world, 0)->GetActorLocation();
 
 	FVector OwnerPlayerDistance = PlayerLocation - OwnerLocation;
@@ -228,22 +237,29 @@ float AEternal_Grace_ArenaEnemy::ShowDistanceVectorToPlayer()
 
 	float dotproduct = UKismetMathLibrary::Dot_VectorVector(OwnerPlayerDistance, OwnerForwardDirection);
 	float distance = UKismetMathLibrary::Vector_Distance(OwnerLocation, PlayerLocation);
+
+	DrawDebugLine(world, OwnerLocation, PlayerLocation, DebugColor, true, 2.0f);
 	if (dotproduct < BackDetection)
 	{
 		DebugColor = FColor::Green;
+		return true;
 	}
 
-
-	//DrawDebugLine(world, OwnerLocation, EndPoint, FColor::Blue, false);
-	DrawDebugLine(world, OwnerLocation, PlayerLocation, DebugColor, false);
-	//UE_LOG(LogTemp, Display, TEXT("%f"), distance);
-
-	return dotproduct;
+	return false;;
 }
 
 void AEternal_Grace_ArenaEnemy::TriggerSecondPhase()
 {
 	PlayAnimMontage(SecondPhaseMontage, 1.0f);
-	CanPerformGettOffMeMove = true;
+	SecondPhaseTriggered = true;
 	UE_LOG(LogTemp, Error, TEXT("Can now perform GetOffMeMove"))
+}
+
+void AEternal_Grace_ArenaEnemy::ResetCollision(UAnimMontage* AttackAnimation, bool Interrupted)
+{
+	if (Interrupted)
+	{
+		UCapsuleComponent* ActorCollisionCapsule = GetCapsuleComponent();
+		ActorCollisionCapsule->SetCollisionResponseToChannel(ECollisionChannel::ECC_Pawn, ECollisionResponse::ECR_Block);
+	}
 }

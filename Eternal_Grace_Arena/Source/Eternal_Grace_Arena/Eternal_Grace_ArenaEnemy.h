@@ -48,7 +48,7 @@ public:
 	float ChasingDistanceThreshold;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = AI, meta = (AllowPrivateAccess))
 	bool ReturningToStartPosition;
-
+	
 	float const ChasingTimer = 10.0f;
 
 
@@ -56,7 +56,7 @@ public:
 	float BackDetection;
 
 	UPROPERTY()
-	bool CanPerformGettOffMeMove;
+	bool SecondPhaseTriggered;
 
 	UFUNCTION(BlueprintCallable, CallInEditor, Category = Actions)
 	void GetOffMeMove();
@@ -67,17 +67,19 @@ public:
 
 	//THE OBJECTID REFERRS TO THE OBJECT ID WHICH THE DEATH OF THIS ENEMY SHOULD INFLUENCE VIA GAME INSTANCE
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Relation, meta = (AllowPrivateAccess))
-	//TArray<FName> RelatedObjectIDs;
 	TMap<FName, bool> ReferencedObjectIds;
 
 	UFUNCTION()
 	void SendInfoToGameInstance();
 
 	UFUNCTION()
-	float ShowDistanceVectorToPlayer();
+	bool CheckIfPlayerIsBehind();
 
 	UFUNCTION()
 	void TriggerSecondPhase();
+
+	UFUNCTION()
+	void ResetCollision(UAnimMontage* AttackAnimation, bool Interrupted);
 
 
 protected:
