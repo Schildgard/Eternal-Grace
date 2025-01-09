@@ -5,6 +5,8 @@
 			"guid": "00000000000000000000000000000000",
 			"description": "Default Uncontrolled Changelist",
 			"files": [
+				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/AI/WeaponMaster/BTTask_Attack.uasset",
+				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/AI/WeaponMaster/BT_WeaponMaster.uasset",
 				"D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/StarterContent/HDRI/HDRI_Epic_Courtyard_Daylight.uasset",
 				"D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Animations/WeaponMaster_Animations/Combat/Attacks/AM_WeaponMaster_Backslash.uasset",
 				"D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Blueprints/CharacterBlueprints/BP_WeaponMaster_Enemy.uasset",

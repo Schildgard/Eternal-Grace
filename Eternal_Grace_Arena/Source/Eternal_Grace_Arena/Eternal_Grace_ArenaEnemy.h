@@ -14,6 +14,7 @@
 /**
  * 
  */
+
 class UPawnSensingComponent;
 UCLASS()
 class ETERNAL_GRACE_ARENA_API AEternal_Grace_ArenaEnemy : public AEternal_Grace_ArenaCharacter
@@ -80,7 +81,6 @@ public:
 
 	UFUNCTION()
 	void ResetCollision(UAnimMontage* AttackAnimation, bool Interrupted);
-
 
 protected:
 	virtual void BeginPlay()override;

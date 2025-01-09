@@ -195,6 +195,8 @@ void AEternal_Grace_ArenaEnemy::LightAttack()
 		CharacterAnimationInstance->Montage_SetBlendingOutDelegate(InterruptDelegate, AttackMontages[RandomAttackIndex]);
 		CharacterAnimationInstance->Montage_SetEndDelegate(CompletedDelegate, AttackMontages[RandomAttackIndex]);
 
+		
+
 	}
 }
 
