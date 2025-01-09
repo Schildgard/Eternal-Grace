@@ -19,8 +19,6 @@ public:
 	UHealthComponent();
 	UPROPERTY(BlueprintAssignable, Category ="Events")
 	FOnCharacterDeath OnCharacterDeath;
-	//FOnPlayerDied OnBossDied;
-	// Sets default values for this component's properties
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = BaseValues, meta = (AllowPrivateAccess))
 	float MaxHealth;
@@ -35,9 +33,9 @@ public:
 
 
 public:
-	UFUNCTION(CallInEditor, Category = Actions)
+	UFUNCTION()
 	virtual void GetDamage(float Damage, float PoiseDamage, float DamageDirection, EStaggeringType StaggerType, AEternal_Grace_ArenaCharacter* DamageSource);
-	UFUNCTION(CallInEditor, Category = Actions)
+	UFUNCTION()
 	virtual void BlockDamage(float Damage, float PoiseDamage, float DamageDirection, EStaggeringType StaggerType, AEternal_Grace_ArenaCharacter* DamageSource);
 
 protected:
@@ -48,8 +46,6 @@ protected:
 
 	UFUNCTION(CallInEditor, Category = Actions)
 	virtual void Die();
-	UFUNCTION(CallInEditor, Category = Actions)
-	virtual void DieWithKnockback();
 
 	UFUNCTION()
 	void CheckActorStaggerAnimation(UAnimMontage* Montage, AEternal_Grace_ArenaCharacter* Character);

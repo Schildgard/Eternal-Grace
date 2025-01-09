@@ -9,13 +9,17 @@
 /**
  *
  */
-class AEternal_Grace_ArenaCharacter;
+//class AEternal_Grace_ArenaCharacter;
+class APlayerCharacter;
 UCLASS()
 class ETERNAL_GRACE_ARENA_API UNS_ChargedWeaponSwing : public UNS_WeaponSwing
 {
 	GENERATED_BODY()
 
 protected:
+	UPROPERTY()
+	APlayerCharacter* PlayerActor;
+
 	virtual void NotifyBegin(USkeletalMeshComponent* MeshComp, UAnimSequenceBase* Animation, float TotalDuration, const FAnimNotifyEventReference& EventReference)override;
 	virtual void NotifyEnd(USkeletalMeshComponent* MeshComp, UAnimSequenceBase* Animation, const FAnimNotifyEventReference& EventReference)override;
 

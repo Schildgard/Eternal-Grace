@@ -2,41 +2,46 @@
 
 
 #include "NS_ChargedWeaponSwing.h"
-#include "Eternal_Grace_ArenaCharacter.h"
+//#include "Eternal_Grace_ArenaCharacter.h"
+#include "PlayerCharacter.h"
 #include "CharacterWeapon.h"
 
 //THE DIFFERENCE BETWEEN THE CHARGED SWING AND THE NORMAL SWING IS, THAT THE CHARGED ONE ADDS THE PLAYERS CURRENT CHARGE POWER TO ITS DMG MULTIPLIER
 void UNS_ChargedWeaponSwing::NotifyBegin(USkeletalMeshComponent* MeshComp, UAnimSequenceBase* Animation, float TotalDuration, const FAnimNotifyEventReference& EventReference)
 {
-	//THIS SHOULDNT BE DONE ON EVERY NOTIFY BEGIN, BUT ON INITIALIZATION
-	if (PerformingActor == nullptr)
+
+	if (PlayerActor == nullptr)
 	{
-		PerformingActor = Cast<AEternal_Grace_ArenaCharacter>(MeshComp->GetOwner());
-		if (PerformingActor)
+		PlayerActor = Cast<APlayerCharacter>(MeshComp->GetOwner());
+		if (!PlayerActor)
 		{
-			UE_LOG(LogTemp, Warning, TEXT("Owner Found"))
-		}
-		else
-		{
-			UE_LOG(LogTemp, Warning, TEXT("Owner NOT Found"))
+			UE_LOG(LogTemp, Warning, TEXT("Charged WeaponSwing could not Cast into Player character"))
 				return;
 		}
 	}
-	PerformingActor->Weapon->SetCollisionEnabled(ECollisionEnabled::QueryOnly);
-	PerformingActor->Weapon->DamageMultiplier = (DamageMultiplier * PerformingActor->currentChargePower);
-	if (PerformingActor->Weapon->DamageMultiplier <= 1.0f)
+
+	PlayerActor->Weapon->SetCollisionEnabled(ECollisionEnabled::QueryOnly);
+
+	PlayerActor->Weapon->DamageMultiplier = (DamageMultiplier * PlayerActor->currentChargePower);
+	if (PlayerActor->Weapon->DamageMultiplier <= 1.0f)
 	{
-		PerformingActor->Weapon->DamageMultiplier = 1.0f;
+		PlayerActor->Weapon->DamageMultiplier = 1.0f;
 	}
-	PerformingActor->Weapon->StaggerType = StaggerType;
+
+	PlayerActor->Weapon->StaggerType = StaggerType;
 }
 
 void UNS_ChargedWeaponSwing::NotifyEnd(USkeletalMeshComponent* MeshComp, UAnimSequenceBase* Animation, const FAnimNotifyEventReference& EventReference)
 {
-	if (PerformingActor != nullptr)
+	if (PlayerActor == nullptr)
 	{
-		Super::NotifyEnd(MeshComp, Animation, EventReference);
-		PerformingActor->currentChargePower = 1.0f;
-
+		PlayerActor = Cast < APlayerCharacter>(MeshComp->GetOwner());
+		if (!PlayerActor)
+		{
+			UE_LOG(LogTemp, Warning, TEXT("Charged WeaponSwing could not Cast into Player character"))
+				return;
+		}
 	}
+		Super::NotifyEnd(MeshComp, Animation, EventReference);
+		PlayerActor->currentChargePower = 1.0f;
 }

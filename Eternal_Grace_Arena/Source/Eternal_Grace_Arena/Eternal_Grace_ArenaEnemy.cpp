@@ -2,13 +2,14 @@
 
 
 #include "Eternal_Grace_ArenaEnemy.h"
-#include "CharacterAnimInstance.h"
+//#include "CharacterAnimInstance.h"
 #include "Kismet/KismetMathLibrary.h"
 #include "Kismet//GameplayStatics.h"
 #include "Perception/PawnSensingComponent.h"
 #include "EternalGrace_GameInstance.h"
 #include "DrawDebugHelpers.h"
 #include "Components/CapsuleComponent.h"
+#include "HealthComponent.h"
 AEternal_Grace_ArenaEnemy::AEternal_Grace_ArenaEnemy()
 {
 	HPBarComponent = CreateDefaultSubobject<UWidgetComponent>(TEXT("HP Bar"));
@@ -18,12 +19,12 @@ AEternal_Grace_ArenaEnemy::AEternal_Grace_ArenaEnemy()
 	AttackRange = 350.f;
 	HealthbarWidget = nullptr;
 
-	ChasingDistanceThreshold = 300.0f;
-	ChasingCountDown = ChasingTimer;
-	ReturningToStartPosition = false;
+	//ChasingDistanceThreshold = 300.0f;
+	//ChasingCountDown = ChasingTimer;
+	//ReturningToStartPosition = false;
 
 	BackDetection = -0.35f;
-	SecondPhaseTriggered = false;
+	//SecondPhaseTriggered = false;
 	SensingComponent = CreateDefaultSubobject<UPawnSensingComponent>("Pawn Sensing");
 }
 
@@ -39,40 +40,6 @@ bool AEternal_Grace_ArenaEnemy::CheckDistancetoPlayer(float Threshold)
 	else return true;
 }
 
-void AEternal_Grace_ArenaEnemy::GetOffMeMove()
-{
-	if (!CharacterAnimationInstance->isAttacking)
-	{
-		CharacterAnimationInstance->isAttacking = true;
-
-		//TEMPORARY
-		UCapsuleComponent* ActorCollisionCapsule = GetCapsuleComponent();
-		ActorCollisionCapsule->SetCollisionResponseToChannel(ECollisionChannel::ECC_Pawn, ECollisionResponse::ECR_Ignore);
-
-
-		RotateTowardsTarget(UGameplayStatics::GetPlayerCharacter(world, 0));
-		if (CharacterAnimationInstance->isGuarding)
-		{
-			CancelGuard();
-		}
-		if (AttackMontages[2] != nullptr)
-		{
-			PlayAnimMontage(AttackMontages[2], 1.0f); // TO DO:REPLACE THAT MAGIC NUMBER WITH SOMETHING ELSE LIKE A POINTER TO A SPECIFIC MONTAGE OR SOMETHING
-
-			FOnMontageEnded InterruptDelegate;
-			FOnMontageEnded CompleteDelegate;
-
-			InterruptDelegate.BindUObject(CharacterAnimationInstance, &UCharacterAnimInstance::InterruptAttack);
-			InterruptDelegate.BindUObject(this, &AEternal_Grace_ArenaEnemy::ResetCollision);
-
-			CompleteDelegate.BindUObject(this, &AEternal_Grace_ArenaEnemy::ResetCollision);
-			CompleteDelegate.BindUObject(CharacterAnimationInstance, &UCharacterAnimInstance::OnAttackEnd);
-
-			CharacterAnimationInstance->Montage_SetBlendingOutDelegate(InterruptDelegate, AttackMontages[2]);
-			CharacterAnimationInstance->Montage_SetEndDelegate(CompleteDelegate, AttackMontages[2]);
-		}
-	}
-}
 
 void AEternal_Grace_ArenaEnemy::BeginPlay()
 {
@@ -118,11 +85,7 @@ void AEternal_Grace_ArenaEnemy::Tick(float DeltaSeconds)
 		{
 			//UPDATE HP-BAR
 			HealthbarWidget->UpdateProgressBar(HealthbarWidget->Healthbar, HealthComponent->MaxHealth, HealthComponent->CurrentHealth);
-			// CHECK FOR STATE CHANGE. TO DO REFACTOR THIS TO AN EVENT MAYBE?
-			if (HealthComponent->CurrentHealth <= (HealthComponent->MaxHealth / 2) && !SecondPhaseTriggered)
-			{
-				TriggerSecondPhase();
-			}
+
 		}
 		else
 		{
@@ -163,43 +126,6 @@ void AEternal_Grace_ArenaEnemy::DeathEvent()
 	SendInfoToGameInstance();
 }
 
-void AEternal_Grace_ArenaEnemy::LightAttack()
-{
-
-	if (CheckIfPlayerIsBehind() && SecondPhaseTriggered)
-	{
-		GetOffMeMove();
-		return;
-	}
-
-
-
-	if (!CharacterAnimationInstance->isAttacking)
-	{
-		CharacterAnimationInstance->isAttacking = true;
-		RotateTowardsTarget(UGameplayStatics::GetPlayerCharacter(world, 0));
-		if (CharacterAnimationInstance->isGuarding)
-		{
-			CancelGuard();
-		}
-		int RandomAttackIndex = UKismetMathLibrary::RandomInteger(2);
-
-		PlayAnimMontage(AttackMontages[RandomAttackIndex], 1.0f);
-
-		FOnMontageEnded InterruptDelegate;
-		FOnMontageEnded CompletedDelegate;
-
-		InterruptDelegate.BindUObject(CharacterAnimationInstance, &UCharacterAnimInstance::InterruptAttack);
-		CompletedDelegate.BindUObject(CharacterAnimationInstance, &UCharacterAnimInstance::OnAttackEnd);
-
-		CharacterAnimationInstance->Montage_SetBlendingOutDelegate(InterruptDelegate, AttackMontages[RandomAttackIndex]);
-		CharacterAnimationInstance->Montage_SetEndDelegate(CompletedDelegate, AttackMontages[RandomAttackIndex]);
-
-		
-
-	}
-}
-
 void AEternal_Grace_ArenaEnemy::SpotPlayer(APawn* SpottedPawn)
 {
 	if (!isAggro)
@@ -238,7 +164,7 @@ bool AEternal_Grace_ArenaEnemy::CheckIfPlayerIsBehind()
 	OwnerPlayerDistance.Normalize();
 
 	float dotproduct = UKismetMathLibrary::Dot_VectorVector(OwnerPlayerDistance, OwnerForwardDirection);
-	float distance = UKismetMathLibrary::Vector_Distance(OwnerLocation, PlayerLocation);
+	//float distance = UKismetMathLibrary::Vector_Distance(OwnerLocation, PlayerLocation);
 
 	DrawDebugLine(world, OwnerLocation, PlayerLocation, DebugColor, true, 2.0f);
 	if (dotproduct < BackDetection)
@@ -248,13 +174,6 @@ bool AEternal_Grace_ArenaEnemy::CheckIfPlayerIsBehind()
 	}
 
 	return false;;
-}
-
-void AEternal_Grace_ArenaEnemy::TriggerSecondPhase()
-{
-	PlayAnimMontage(SecondPhaseMontage, 1.0f);
-	SecondPhaseTriggered = true;
-	UE_LOG(LogTemp, Error, TEXT("Can now perform GetOffMeMove"))
 }
 
 void AEternal_Grace_ArenaEnemy::ResetCollision(UAnimMontage* AttackAnimation, bool Interrupted)

@@ -4,17 +4,17 @@
 #include "PlayerCharacter.h"
 #include "StaminaComponent.h"
 #include "CharacterAnimInstance.h"
-#include "CharacterWeapon.h"
+//#include "CharacterWeapon.h"
 #include "GameFramework/CharacterMovementComponent.h"
 #include "Kismet/KismetSystemLibrary.h"
 #include "Kismet/KismetMathLibrary.h"
 #include "I_Targetable.h"
 #include "EnhancedInputComponent.h"
 #include "EnhancedInputSubsystems.h"
-#include "InputActionValue.h"
+//#include "InputActionValue.h"
 #include "InteractableActor.h"
-#include "HealthComponent.h"
-#include "EternalGrace_GameInstance.h"
+//#include "HealthComponent.h"
+//#include "EternalGrace_GameInstance.h"
 
 
 APlayerCharacter::APlayerCharacter()
@@ -22,6 +22,9 @@ APlayerCharacter::APlayerCharacter()
 	StaminaComponent = CreateDefaultSubobject<UStaminaComponent>("StaminaComponent");
 	RunningStaminaConsumption = 15.0f;
 	GuardCounterReactionCountdown = GuardCounterReactionTimer;
+
+	currentChargePower = 0.0f;
+	maxChargePower = 2.0f;
 }
 
 void APlayerCharacter::ToggleLockOn()
@@ -29,8 +32,15 @@ void APlayerCharacter::ToggleLockOn()
 	if (CharacterAnimationInstance->isLockedOn == false)
 	{
 		AActor* ClosestTarget = FindNearestTarget();
-		EngageLockOn(ClosestTarget);
-		UE_LOG(LogTemp, Warning, TEXT("Lock On"))
+		if (ClosestTarget)
+		{
+			EngageLockOn(ClosestTarget);
+			UE_LOG(LogTemp, Warning, TEXT("Lock On"))
+		}
+		else
+		{
+			UE_LOG(LogTemp, Warning, TEXT("No Lock on Target in Range"))
+		}
 	}
 	else
 	{
@@ -121,7 +131,7 @@ void APlayerCharacter::DisengageLockOn()
 
 void APlayerCharacter::GuardCounterAttack()
 {
-	if(GuardCounterPossible && !CharacterAnimationInstance->isAttacking && !CharacterAnimationInstance->isCharging && StaminaComponent->CurrentStamina>= 1.0f && GuardCounter != nullptr && CharacterAnimationInstance->isGuarding)
+	if (GuardCounterPossible && !CharacterAnimationInstance->isAttacking && !CharacterAnimationInstance->isCharging && StaminaComponent->CurrentStamina >= 1.0f && GuardCounter != nullptr && CharacterAnimationInstance->isGuarding)
 	{
 		CharacterAnimationInstance->isAttacking = true;
 		CharacterAnimationInstance->isGuarding = false;
@@ -134,24 +144,52 @@ void APlayerCharacter::Interact()
 	TSet<AActor*> OverlappingActors;
 	TSubclassOf<AInteractableActor> ViableActorClass;
 	GetOverlappingActors(OverlappingActors, ViableActorClass);
-		//Cant Access Elements of TSets, thats why it is neccessary to iterate through it, even just to get one item
-		if(OverlappingActors.Num()>= 1)
+	//Cant Access Elements of TSets, thats why it is neccessary to iterate through it, even just to get one item
+	if (OverlappingActors.Num() >= 1)
+	{
+		for (AActor* Overlap : OverlappingActors)
 		{
-			for (AActor* Overlap : OverlappingActors)
+
+			AInteractableActor* Interactable = Cast<AInteractableActor>(Overlap);
+			if (Interactable)
 			{
-				
-				AInteractableActor* Interactable = Cast<AInteractableActor>(Overlap);
-				if(Interactable)
-				{
-					Interactable->Interact_Implementation();
-					break;
-				}
+				Interactable->Interact_Implementation();
+				break;
 			}
 		}
-		else
+	}
+	else
+	{
+		UE_LOG(LogTemp, Warning, TEXT("Nothing to Interact"))
+	}
+}
+
+void APlayerCharacter::IncreaseChargePower()
+{
+
+	//When further Hold down, the Player remains in Charge Position and charges Attack power
+	if (CharacterAnimationInstance->isCharging)
+	{
+		currentChargePower += world->DeltaTimeSeconds;
+		if (currentChargePower >= maxChargePower)
 		{
-			UE_LOG(LogTemp, Warning, TEXT("Nothing to Interact"))
+			currentChargePower = maxChargePower;
+			HeavyAttack();
 		}
+	}
+}
+
+void APlayerCharacter::SprintAttack()
+{
+	PlayAnimMontage(RunningAttack);
+}
+
+void APlayerCharacter::Dodge()
+{
+	if (StaminaComponent->CurrentStamina >= 1.0f)
+	{
+		PlayAnimMontage(DodgeAction);
+	}
 }
 
 void APlayerCharacter::BeginPlay()
@@ -197,15 +235,15 @@ void APlayerCharacter::Tick(float DeltaSeconds)
 		}
 	}
 	//PLAYER ROTATION WHILE LOCK ON
-	if (CharacterAnimationInstance && CharacterAnimationInstance->isLockedOn && LockedOnTarget != nullptr && CharacterAnimationInstance->isRunning==false)
+	if (CharacterAnimationInstance && CharacterAnimationInstance->isLockedOn && LockedOnTarget != nullptr && CharacterAnimationInstance->isRunning == false)
 	{
 		RotateTowardsTarget(LockedOnTarget);
 	}
 	//RESET GUARDCOUNTER REACTIONTIME
-	if(GuardCounterPossible)
+	if (GuardCounterPossible)
 	{
 		GuardCounterReactionCountdown -= DeltaSeconds;
-		if(GuardCounterReactionCountdown <= 0)
+		if (GuardCounterReactionCountdown <= 0)
 		{
 			GuardCounterReactionCountdown = GuardCounterReactionTimer;
 			GuardCounterPossible = false;
@@ -227,6 +265,16 @@ void APlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCom
 		//Interactions
 		EnhancedInputComponent->BindAction(InteractAction, ETriggerEvent::Completed, this, &APlayerCharacter::Interact);
 
+		//Sprinting
+		EnhancedInputComponent->BindAction(SprintAction, ETriggerEvent::Triggered, this, &APlayerCharacter::Sprint);
+		EnhancedInputComponent->BindAction(SprintAction, ETriggerEvent::Completed, this, &APlayerCharacter::CancelSprint);
+		EnhancedInputComponent->BindAction(SprintAction, ETriggerEvent::Canceled, this, &APlayerCharacter::CancelSprint);
+
+		//Heavy Attack
+		EnhancedInputComponent->BindAction(HeavyAttackAction, ETriggerEvent::Started, this, &APlayerCharacter::ChargeHeavyAttack);
+		EnhancedInputComponent->BindAction(HeavyAttackAction, ETriggerEvent::Triggered, this, &APlayerCharacter::IncreaseChargePower);
+		EnhancedInputComponent->BindAction(HeavyAttackAction, ETriggerEvent::Completed, this, &APlayerCharacter::HeavyAttack);
+
 	}
 	else
 	{
@@ -238,10 +286,10 @@ void APlayerCharacter::Sprint()
 {
 	if (StaminaComponent->CurrentStamina >= 0.1f)
 	{
-	CharacterAnimationInstance->isRunning = true;
+		CharacterAnimationInstance->isRunning = true;
 		GetCharacterMovement()->MaxWalkSpeed = 750.f;
 	}
-	else if(CharacterAnimationInstance->isRunning)
+	else if (CharacterAnimationInstance->isRunning)
 	{
 		CancelSprint();
 	}
@@ -265,7 +313,13 @@ void APlayerCharacter::ChargeHeavyAttack()
 {
 	if (StaminaComponent->CurrentStamina >= 1.0f)
 	{
-		Super::ChargeHeavyAttack();
+		//When Heavy Attack Button is first pressed, Player goes into Charge Stand
+		if (!CharacterAnimationInstance->isCharging && !CharacterAnimationInstance->isAttacking && !CharacterAnimationInstance->isInHeavyAttack)
+		{
+			CharacterAnimationInstance->isCharging = true;
+			PlayAnimMontage(ChargeAttack, 1.0f);
+			UE_LOG(LogTemp, Warning, TEXT("Character Charges Attack"))
+		}
 	}
 }
 
@@ -273,7 +327,26 @@ void APlayerCharacter::HeavyAttack()
 {
 	if (StaminaComponent->CurrentStamina >= 1.0f)
 	{
-		Super::HeavyAttack();
+
+		//When Heavy Attack Button is released from charge Position the Player Character unleashes his Heavy Attack 
+		if (CharacterAnimationInstance->isCharging)
+		{
+			CharacterAnimationInstance->isCharging = false; //LEAVE CHARGING STATE
+			CharacterAnimationInstance->isAttacking = true; //SET PLAYER IN ATTACK STATE, SO THE ANIMATION CAN NOT BE INTERUPTED BY A LIGHT ATTACK COMMAND
+			CharacterAnimationInstance->isInHeavyAttack = true; // SET PLAYER IN HEAVY ATTACK STATE, SO ANOTHER HEAVY ATTACK COMMAND TRIGGERS THE SECOND ATTACK ANIM
+			UE_LOG(LogTemp, Warning, TEXT("Character Releases Attack"))
+				PlayAnimMontage(HeavyAttacks[0], 1.0f);
+		}
+		else if (CharacterAnimationInstance->isInHeavyAttack)
+		{
+			//IF PLAYER IS IN HEAVY ATTACK, A SECOND HEAVY ATTACK COMMAND TRIGGERS THE FOLLOW UP ANIMATION
+			CharacterAnimationInstance->isInHeavyAttack = false;//LEAVE HEAVY ATTACK STATE, SO THE FOLLOW UP ANIMATION ONLY TRIGGERS ONCE
+			CharacterAnimationInstance->isAttacking = true; //SET IS ATTACKING TO TRUE TO MAKE SURE THE FOLLOW UP ANIMATION IS NOT CANCELED BY LIGHT ATTACK COMMAND
+			PlayAnimMontage(HeavyAttacks[1], 1.0f);
+			UE_LOG(LogTemp, Warning, TEXT("Character Already is not Charging"))
+		}
+
+
 	}
 }
 

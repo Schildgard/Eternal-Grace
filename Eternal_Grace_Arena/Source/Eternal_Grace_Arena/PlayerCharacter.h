@@ -16,18 +16,29 @@ class ETERNAL_GRACE_ARENA_API APlayerCharacter : public AEternal_Grace_ArenaChar
 	GENERATED_BODY()
 
 	APlayerCharacter();
-public:
-	//STAMINA
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Component, meta = (AllowPrivateAccess))
-	UStaminaComponent* StaminaComponent;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Values, meta = (AllowPrivateAccess))
-	float RunningStaminaConsumption;
 
-	//LOCKON PROPERTIES
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess))
+	UInputAction* HeavyAttackAction;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess))
+	UInputAction* SprintAction;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess))
+	UInputAction* GuardCounterAction;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess))
 	UInputAction* ToggleLockOnAction;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess))
 	UInputAction* SwitchLockOnTargetAction;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess))
+	UInputAction* InteractAction;
+
+
+public:
+	//STAMINA
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Attribtues, meta = (AllowPrivateAccess))
+	UStaminaComponent* StaminaComponent;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Attribtues, meta = (AllowPrivateAccess))
+	float RunningStaminaConsumption;
+
+	//LOCKON PROPERTIES
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = LockOn, meta = (AllowPrivateAccess))
 	TArray<TEnumAsByte<EObjectTypeQuery>> ObjectTypes;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = LockOn, meta = (AllowPrivateAccess))
@@ -36,27 +47,24 @@ public:
 
 
 	//LOCK ON FUNCTIONS
-	UFUNCTION(CallInEditor, Category = Actions)
+	UFUNCTION()
 	virtual void ToggleLockOn();
-	UFUNCTION(CallInEditor, Category = Actions)
+	UFUNCTION()
 	virtual void SwitchLockOnTarget();
-	UFUNCTION(CallInEditor, Category = Actions)
+	UFUNCTION()
 	AActor* FindNearestTarget();
-	UFUNCTION(CallInEditor, Category = Actions)
+	UFUNCTION()
 	virtual TArray<AActor*> ScanForTargets();
-	UFUNCTION(CallInEditor, Category = Actions)
+	UFUNCTION()
 	void EngageLockOn(AActor* Target);
-	UFUNCTION(CallInEditor, Category = Actions)
+	UFUNCTION()
 	void DisengageLockOn();
 
-
 	//GUARD COUNTER
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess))
-	UInputAction* GuardCounterAction;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animation, meta = (AllowPrivateAccess))
+	UAnimMontage* GuardCounter;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Combat, meta = (AllowPrivateAccess))
 	bool GuardCounterPossible;
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Combat, meta = (AllowPrivateAccess))
-	UAnimMontage* GuardCounter;
 	float const GuardCounterReactionTimer = 0.5f;
 	UPROPERTY()
 	float GuardCounterReactionCountdown;
@@ -64,25 +72,60 @@ public:
 	void GuardCounterAttack();
 
 	//INTERACT
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess))
-	UInputAction* InteractAction;
 	UFUNCTION()
 	void Interact();
 
 
+	//HEAVY ATTACK PROPERTIES
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Attributes, meta = (AllowPrivateAccess))
+	float currentChargePower;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Attributes, meta = (AllowPrivateAccess))
+	float maxChargePower = 2.5f;
+
+
 protected:
+	//HEAVY ATTACKS
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animations, meta = (AllowPrivateAccess))
+	TArray<UAnimMontage*> HeavyAttacks;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animations, meta = (AllowPrivateAccess))
+	UAnimMontage* ChargeAttack;
+
+	//SPRINT ATTACKS
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animations, meta = (AllowPrivateAccess))
+	UAnimMontage* RunningAttack;
+
+	//DODGE
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animations, meta = (AllowPrivateAccess))
+	UAnimMontage* DodgeAction;
+
+	//INTERACT
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animations, meta = (AllowPrivateAccess))
+	UAnimMontage* InteractAnimation;
+
+
+	UFUNCTION()
+	void IncreaseChargePower();
+	UFUNCTION()
+	void SprintAttack();
+	UFUNCTION()
+	void Dodge();
+	UFUNCTION()
+	void Sprint();
+	UFUNCTION()
+	void CancelSprint();
+	UFUNCTION()
+	void ChargeHeavyAttack();
+	UFUNCTION()
+	void HeavyAttack();
+
+
+
+
 	virtual void BeginPlay()override;
 	virtual void Tick(float DeltaSeconds) override;
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
-
-	virtual void Sprint()override;
-	virtual void CancelSprint()override;
-
-
 	virtual void LightAttack()override;
-	virtual void ChargeHeavyAttack()override;
-	virtual void HeavyAttack()override;
-
 	virtual void Guard()override;
+
 
 };

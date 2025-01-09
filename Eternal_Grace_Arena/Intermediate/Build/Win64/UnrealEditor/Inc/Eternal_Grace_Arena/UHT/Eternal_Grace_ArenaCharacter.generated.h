@@ -15,22 +15,15 @@ class AActor;
 #endif
 #define ETERNAL_GRACE_ARENA_Eternal_Grace_ArenaCharacter_generated_h
 
-#define FID_Repository_Eternal_Grace_Arena_Eternal_Grace_Arena_Source_Eternal_Grace_Arena_Eternal_Grace_ArenaCharacter_h_25_RPC_WRAPPERS_NO_PURE_DECLS \
-	DECLARE_FUNCTION(execDodge); \
-	DECLARE_FUNCTION(execCancelGuard); \
-	DECLARE_FUNCTION(execGuard); \
+#define FID_Eternal_Grace_Arena_Source_Eternal_Grace_Arena_Eternal_Grace_ArenaCharacter_h_24_RPC_WRAPPERS_NO_PURE_DECLS \
 	DECLARE_FUNCTION(execRotateTowardsTarget); \
 	DECLARE_FUNCTION(execDeathEvent); \
-	DECLARE_FUNCTION(execSprintAttack); \
-	DECLARE_FUNCTION(execIncreaseChargePower); \
-	DECLARE_FUNCTION(execChargeHeavyAttack); \
-	DECLARE_FUNCTION(execHeavyAttack); \
-	DECLARE_FUNCTION(execLightAttack); \
-	DECLARE_FUNCTION(execCancelSprint); \
-	DECLARE_FUNCTION(execSprint);
+	DECLARE_FUNCTION(execCancelGuard); \
+	DECLARE_FUNCTION(execGuard); \
+	DECLARE_FUNCTION(execLightAttack);
 
 
-#define FID_Repository_Eternal_Grace_Arena_Eternal_Grace_Arena_Source_Eternal_Grace_Arena_Eternal_Grace_ArenaCharacter_h_25_INCLASS_NO_PURE_DECLS \
+#define FID_Eternal_Grace_Arena_Source_Eternal_Grace_Arena_Eternal_Grace_ArenaCharacter_h_24_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAEternal_Grace_ArenaCharacter(); \
 	friend struct Z_Construct_UClass_AEternal_Grace_ArenaCharacter_Statics; \
@@ -39,7 +32,7 @@ public: \
 	DECLARE_SERIALIZER(AEternal_Grace_ArenaCharacter)
 
 
-#define FID_Repository_Eternal_Grace_Arena_Eternal_Grace_Arena_Source_Eternal_Grace_Arena_Eternal_Grace_ArenaCharacter_h_25_ENHANCED_CONSTRUCTORS \
+#define FID_Eternal_Grace_Arena_Source_Eternal_Grace_Arena_Eternal_Grace_ArenaCharacter_h_24_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	AEternal_Grace_ArenaCharacter(AEternal_Grace_ArenaCharacter&&); \
@@ -51,13 +44,13 @@ public: \
 	NO_API virtual ~AEternal_Grace_ArenaCharacter();
 
 
-#define FID_Repository_Eternal_Grace_Arena_Eternal_Grace_Arena_Source_Eternal_Grace_Arena_Eternal_Grace_ArenaCharacter_h_22_PROLOG
-#define FID_Repository_Eternal_Grace_Arena_Eternal_Grace_Arena_Source_Eternal_Grace_Arena_Eternal_Grace_ArenaCharacter_h_25_GENERATED_BODY \
+#define FID_Eternal_Grace_Arena_Source_Eternal_Grace_Arena_Eternal_Grace_ArenaCharacter_h_21_PROLOG
+#define FID_Eternal_Grace_Arena_Source_Eternal_Grace_Arena_Eternal_Grace_ArenaCharacter_h_24_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Repository_Eternal_Grace_Arena_Eternal_Grace_Arena_Source_Eternal_Grace_Arena_Eternal_Grace_ArenaCharacter_h_25_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_Repository_Eternal_Grace_Arena_Eternal_Grace_Arena_Source_Eternal_Grace_Arena_Eternal_Grace_ArenaCharacter_h_25_INCLASS_NO_PURE_DECLS \
-	FID_Repository_Eternal_Grace_Arena_Eternal_Grace_Arena_Source_Eternal_Grace_Arena_Eternal_Grace_ArenaCharacter_h_25_ENHANCED_CONSTRUCTORS \
+	FID_Eternal_Grace_Arena_Source_Eternal_Grace_Arena_Eternal_Grace_ArenaCharacter_h_24_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_Eternal_Grace_Arena_Source_Eternal_Grace_Arena_Eternal_Grace_ArenaCharacter_h_24_INCLASS_NO_PURE_DECLS \
+	FID_Eternal_Grace_Arena_Source_Eternal_Grace_Arena_Eternal_Grace_ArenaCharacter_h_24_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -65,7 +58,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 template<> ETERNAL_GRACE_ARENA_API UClass* StaticClass<class AEternal_Grace_ArenaCharacter>();
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_Repository_Eternal_Grace_Arena_Eternal_Grace_Arena_Source_Eternal_Grace_Arena_Eternal_Grace_ArenaCharacter_h
+#define CURRENT_FILE_ID FID_Eternal_Grace_Arena_Source_Eternal_Grace_Arena_Eternal_Grace_ArenaCharacter_h
 
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

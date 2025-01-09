@@ -14,7 +14,6 @@ class UInputAction;
 class UCharacterWeapon;
 class UCharacterShield;
 class UHealthComponent;
-//class UEternal_Grace_Progressbar;
 struct FInputActionValue;
 
 DECLARE_LOG_CATEGORY_EXTERN(LogTemplateCharacter, Log, All);
@@ -48,152 +47,97 @@ class AEternal_Grace_ArenaCharacter : public ACharacter
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
 	UInputAction* LookAction;
 
-	//CUSTOM ACTION STATES
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess))
-	UInputAction* SprintAction;
+	//CUSTOM ACTIONS
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess))
 	UInputAction* LightAttackAction;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess))
-	UInputAction* HeavyAttackAction;
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess))
 	UInputAction* GuardAction;
-public:
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animations, meta = (AllowPrivateAccess))
-	UAnimMontage* GuardBreakEvent;
+
 
 protected:
+	AEternal_Grace_ArenaCharacter();
+
 	//LIGHT ATTACKS
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animations, meta = (AllowPrivateAccess))
 	TArray<UAnimMontage*> LightAttacks;
-	//HEAVY ATTACKS
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animations, meta = (AllowPrivateAccess))
-	TArray<UAnimMontage*> HeavyAttacks;
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animations, meta = (AllowPrivateAccess))
-	UAnimMontage* ChargeAttack;
-	//SPRINT ATTACKS
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animations, meta = (AllowPrivateAccess))
-	UAnimMontage* RunningAttack;
-	//GUARD COUNTER ATTACK
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animations, meta = (AllowPrivateAccess))
-	UAnimMontage* GuardCounterAttack;
 
+	//THIS PROPERTIES ARE PUBLIC BECAUSE THEY ARE CURRENTLY ACCESSED BY HEALTH COMPONENT WHICH IS TO BE CHANGED THROUGH AN INTERFACE SYSTEM
 public:
+	//BLOCK AND GUARD ANIMATIONS
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animations, meta = (AllowPrivateAccess))
 	UAnimMontage* Block;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animations, meta = (AllowPrivateAccess))
 	UAnimMontage* BlockHeavyAttack;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animations, meta = (AllowPrivateAccess))
 	UAnimMontage* BlockThrowbackAttack;
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = HitEffect, meta = (AllowPrivateAccess))
-	UPhysicalMaterial* PhysicalMaterial;
-	//STAGGER
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animations, meta = (AllowPrivateAccess))
+	UAnimMontage* GuardBreakAnimation;
+
+	//STAGGER ANIMATIONS
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animations, meta = (AllowPrivateAccess))
 	TArray<UAnimMontage*> StaggerAnims;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animations, meta = (AllowPrivateAccess))
 	TArray<UAnimMontage*> StaggerAnimsBack;
 
-	//DODGE
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animations, meta = (AllowPrivateAccess))
-	UAnimMontage* DodgeAction;
-
-	//INTERACT
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animations, meta = (AllowPrivateAccess))
-	UAnimMontage* Interact;
-
-	//Death
+	//DEATH ANIMATIONS
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animations, meta = (AllowPrivateAccess))
 	UAnimMontage* DeathAnimation;
-	//Death
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animations, meta = (AllowPrivateAccess))
 	UAnimMontage* DeathAnimationWithKnockBack;
 
-	//CUSTOM VALUE PROPERTIES
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Combat, meta = (AllowPrivateAccess))
-	float currentChargePower;
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Combat, meta = (AllowPrivateAccess))
-	float maxChargePower = 2.5f;
-
-	//GENERAL
+	//GENERAL PROPERTIES
 	UPROPERTY()
 	UWorld* world;
-public:
-	//WEAPON
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Weapon, meta = (AllowPrivateAccess))
-	UCharacterWeapon* Weapon;
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Weapon, meta = (AllowPrivateAccess))
-	FName WeaponSocket;
-	//SHIELD
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Weapon, meta = (AllowPrivateAccess))
-	UCharacterShield* Shield;
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Weapon, meta = (AllowPrivateAccess))
-	FName ShieldSocket;
-public:
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = LockOn, meta = (AllowPrivateAccess))
-	UHealthComponent* HealthComponent;
-
-
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = HitEffect, meta = (AllowPrivateAccess))
+	UPhysicalMaterial* PhysicalMaterial;
 	UPROPERTY()
 	class UCharacterAnimInstance* CharacterAnimationInstance;
 
-public:
-	AEternal_Grace_ArenaCharacter();
+	//WEAPON
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Equipment, meta = (AllowPrivateAccess))
+	UCharacterWeapon* Weapon;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Equipment, meta = (AllowPrivateAccess))
+	FName WeaponSocket;
+
+	//SHIELD
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Equipment, meta = (AllowPrivateAccess))
+	UCharacterShield* Shield;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Equipment, meta = (AllowPrivateAccess))
+	FName ShieldSocket;
+
+	//HEALTH
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Attributes, meta = (AllowPrivateAccess))
+	UHealthComponent* HealthComponent;
 
 
 protected:
 
-	/** Called for movement input */
-	void Move(const FInputActionValue& Value);
 
-	/** Called for looking input */
-	void Look(const FInputActionValue& Value);
-
-	//MOVEMENT FUNCTIONS
-	UFUNCTION(CallInEditor, Category = Actions)
-	virtual void Sprint();
-	UFUNCTION(CallInEditor, Category = Actions)
-	virtual void CancelSprint();
-
-	//ATTACK FUNCTIONS
-	UFUNCTION(BlueprintCallable, Category = Actions)
+	//COMBAT ACTION FUNCTIONS
+	UFUNCTION(BlueprintCallable)
 	virtual void LightAttack();
-	UFUNCTION(BlueprintCallable, Category = Actions)
-	virtual void HeavyAttack();
-	UFUNCTION(CallInEditor, Category = Actions)
-	virtual void ChargeHeavyAttack();
-	UFUNCTION(CallInEditor, Category = Actions)
-	virtual void IncreaseChargePower();
-	UFUNCTION(CallInEditor, Category = Actions)
-	virtual void SprintAttack();
-
+	UFUNCTION()
+	virtual void Guard();
+	UFUNCTION()
+	virtual void CancelGuard();
 	UFUNCTION()
 	virtual void DeathEvent();
 
+
 public:
-UFUNCTION(CallInEditor, Category = Actions)
-void RotateTowardsTarget(AActor* Target);
+	UFUNCTION()
+	void RotateTowardsTarget(AActor* Target);
 
-	protected:
-	//GUARD
-	UFUNCTION(CallInEditor, Category = Actions)
-	virtual void Guard();
-	UFUNCTION(CallInEditor, Category = Actions)
-	virtual void CancelGuard();
 
-	//DODGE
-	UFUNCTION(CallInEditor, Category = Actions)
-	virtual void Dodge();
 
 protected:
+	void Move(const FInputActionValue& Value);
+	void Look(const FInputActionValue& Value);
 
 	virtual void NotifyControllerChanged() override;
-
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
-
 	virtual void BeginPlay()override;
-
-
 	virtual void Tick(float DeltaSeconds) override;
-
 	void InitializeAnimationInstance();
 
 public:

@@ -3,12 +3,12 @@
 
 #include "HealthComponent.h"
 #include "Eternal_Grace_ArenaCharacter.h"
-#include "Eternal_Grace_ArenaEnemy.h"
+//#include "Eternal_Grace_ArenaEnemy.h"
 #include "PlayerCharacter.h"
 #include "StaminaComponent.h"
-#include "CharacterAnimInstance.h"
+//#include "CharacterAnimInstance.h"
 #include "CharacterShield.h"
-#include "Kismet/KismetMathLibrary.h"
+//#include "Kismet/KismetMathLibrary.h"
 
 
 // Sets default values for this component's properties
@@ -68,27 +68,22 @@ void UHealthComponent::GetDamage(float IncomingDamage, float PoiseDamage, float 
 		{
 		case EStaggeringType::NormalStagger:
 			CheckActorStaggerAnimation(Character->StaggerAnimsBack[0], Character);
-			//Character->PlayAnimMontage(Character->StaggerAnimsBack[0]);
 			CurrentPoise = MaxPoise;
 			break;
 		case EStaggeringType::HeavyStagger:
 			CheckActorStaggerAnimation(Character->StaggerAnimsBack[1], Character);
-			//Character->PlayAnimMontage(Character->StaggerAnimsBack[1]);
 			CurrentPoise = MaxPoise;
 			break;
 		case EStaggeringType::KnockbackStagger:
 			CheckActorStaggerAnimation(Character->StaggerAnimsBack[2], Character);
-			//Character->PlayAnimMontage(Character->StaggerAnimsBack[2]);
 			CurrentPoise = MaxPoise;
 			break;
 		case EStaggeringType::ThrowupStagger:
 			CheckActorStaggerAnimation(Character->StaggerAnimsBack[3], Character);
-			//Character->PlayAnimMontage(Character->StaggerAnimsBack[3]);
 			CurrentPoise = MaxPoise;
 			break;
 		case EStaggeringType::CrushdownStagger:
 			CheckActorStaggerAnimation(Character->StaggerAnimsBack[4], Character);
-			//Character->PlayAnimMontage(Character->StaggerAnimsBack[4]);
 			CurrentPoise = MaxPoise;
 			break;
 		default:
@@ -101,39 +96,26 @@ void UHealthComponent::GetDamage(float IncomingDamage, float PoiseDamage, float 
 		{
 		case EStaggeringType::NormalStagger:
 			CheckActorStaggerAnimation(Character->StaggerAnims[0], Character);
-			//Character->PlayAnimMontage(Character->StaggerAnims[0]);
 			CurrentPoise = MaxPoise;
 			break;
 		case EStaggeringType::HeavyStagger:
 			Character->RotateTowardsTarget(DamageSource);
 			CheckActorStaggerAnimation(Character->StaggerAnims[1], Character);
-			//Character->PlayAnimMontage(Character->StaggerAnims[1]);
 			CurrentPoise = MaxPoise;
 			break;
 		case EStaggeringType::KnockbackStagger:
-			//	if (CurrentHealth <= 0)
-			//	{
-			//		Character->RotateTowardsTarget(DamageSource);
-			//		CheckActorStaggerAnimation(Character->DeathAnimationWithKnockBack, Character); 
-			//		//Character->PlayAnimMontage(Character->DeathAnimationWithKnockBack);
-			//		CurrentPoise = MaxPoise;
-			//		break;
-			//	}
 			Character->RotateTowardsTarget(DamageSource);
 			CheckActorStaggerAnimation(Character->StaggerAnims[2], Character);
-			//Character->PlayAnimMontage(Character->StaggerAnims[2]);
 			CurrentPoise = MaxPoise;
 			break;
 		case EStaggeringType::ThrowupStagger:
 			Character->RotateTowardsTarget(DamageSource);
 			CheckActorStaggerAnimation(Character->StaggerAnims[3], Character);
-			//Character->PlayAnimMontage(Character->StaggerAnims[3]);
 			CurrentPoise = MaxPoise;
 			break;
 		case EStaggeringType::CrushdownStagger:
 			Character->RotateTowardsTarget(DamageSource);
 			CheckActorStaggerAnimation(Character->StaggerAnims[4], Character);
-			//Character->PlayAnimMontage(Character->StaggerAnims[4]);
 			CurrentPoise = MaxPoise;
 			break;
 		case EStaggeringType::NoStagger:
@@ -156,7 +138,7 @@ void UHealthComponent::BlockDamage(float Damage, float PoiseDamage, float Damage
 	Damage -= (Damage / 100) * Character->Shield->PhysicalDamageReduction;
 	CurrentHealth -= Damage;
 
-	//CALCULATE STAMINACONSUMPTION if Defending Actor is Playr
+	//CALCULATE STAMINA CONSUMPTION if Defending Actor is Player
 	APlayerCharacter* DefendingPlayer = Cast<APlayerCharacter>(Character);
 	if (DefendingPlayer)
 	{
@@ -164,7 +146,7 @@ void UHealthComponent::BlockDamage(float Damage, float PoiseDamage, float Damage
 		DefendingPlayer->StaminaComponent->CurrentStamina -= PoiseDamage;
 		if (DefendingPlayer->StaminaComponent->CurrentStamina <= 0)
 		{
-			DefendingPlayer->PlayAnimMontage(DefendingPlayer->GuardBreakEvent);
+			DefendingPlayer->PlayAnimMontage(DefendingPlayer->GuardBreakAnimation);
 			return;
 		}
 	}
@@ -199,53 +181,9 @@ void UHealthComponent::BlockDamage(float Damage, float PoiseDamage, float Damage
 
 void UHealthComponent::Die()
 {
-
-
-
 	OnCharacterDeath.Broadcast();
-
-
-
-//	AEternal_Grace_ArenaCharacter* Character = Cast<AEternal_Grace_ArenaCharacter>(GetOwner());
-//	if (Character)
-//	{
-//		//		APlayerController* PlayerController = Cast<APlayerController>(Character->GetController());
-//		//		if (PlayerController)
-//		//		{
-//		//	//		OnPlayerDied.Broadcast();
-//		//		}
-//		//		else
-//		//		{
-//		//			UE_LOG(LogTemp, Warning, TEXT("BossDye"))
-//		////				OnBossDied.Broadcast();
-//		//		}
-//		Character->PlayAnimMontage(Character->DeathAnimation);
-//		Character->SetActorEnableCollision(false);
-//	}
-//	else
-//	{
-//
-//		return;
-//	}
-
-
 }
-//NOT SURE IF THIS IS A GOOD IDEA, RIGHT NOW ITS JUST A TEST FOR WHEN THE PLAYER IS KILLED WITH A KNOCKBACK ATTACK
-void UHealthComponent::DieWithKnockback()
-{
-	//	AEternal_Grace_ArenaCharacter* Character = Cast<AEternal_Grace_ArenaCharacter>(GetOwner());
-	//	if (Character)
-	//	{
-	//		APlayerController* PlayerController = Cast<APlayerController>(Character->GetController());
-	//		if (PlayerController)
-	//		{
-	//			OnCharacterDeath.Broadcast();
-	//		}
-	//		Character->SetActorEnableCollision(false);
-	//	}
-	//	else return;
 
-}
 
 void UHealthComponent::CheckActorStaggerAnimation(UAnimMontage* Montage, AEternal_Grace_ArenaCharacter* Character)
 {

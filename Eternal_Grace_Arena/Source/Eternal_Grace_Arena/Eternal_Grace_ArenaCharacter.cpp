@@ -11,9 +11,9 @@
 #include "EnhancedInputSubsystems.h"
 #include "InputActionValue.h"
 #include "CharacterAnimInstance.h"
-#include "Kismet/KismetSystemLibrary.h"
+//#include "Kismet/KismetSystemLibrary.h"
 #include "Kismet/KismetMathLibrary.h"
-#include "I_Targetable.h"
+//#include "I_Targetable.h"
 #include "CharacterWeapon.h"
 #include "CharacterShield.h"
 #include "HealthComponent.h"
@@ -85,8 +85,6 @@ AEternal_Grace_ArenaCharacter::AEternal_Grace_ArenaCharacter()
 	Shield->SetupAttachment(GetMesh(), ShieldSocket);
 	HealthComponent = CreateDefaultSubobject<UHealthComponent>(TEXT("Health"));
 
-	currentChargePower = 0.0f;
-	maxChargePower = 2.0f;
 
 }
 
@@ -122,10 +120,6 @@ void AEternal_Grace_ArenaCharacter::SetupPlayerInputComponent(UInputComponent* P
 		// Looking
 		EnhancedInputComponent->BindAction(LookAction, ETriggerEvent::Triggered, this, &AEternal_Grace_ArenaCharacter::Look);
 
-		//Sprinting
-		EnhancedInputComponent->BindAction(SprintAction, ETriggerEvent::Triggered, this, &AEternal_Grace_ArenaCharacter::Sprint);
-		EnhancedInputComponent->BindAction(SprintAction, ETriggerEvent::Completed, this, &AEternal_Grace_ArenaCharacter::CancelSprint);
-		EnhancedInputComponent->BindAction(SprintAction, ETriggerEvent::Canceled, this, &AEternal_Grace_ArenaCharacter::CancelSprint);
 
 		//Guarding
 		EnhancedInputComponent->BindAction(GuardAction, ETriggerEvent::Triggered, this, &AEternal_Grace_ArenaCharacter::Guard);
@@ -135,14 +129,6 @@ void AEternal_Grace_ArenaCharacter::SetupPlayerInputComponent(UInputComponent* P
 		//Light Attack
 		EnhancedInputComponent->BindAction(LightAttackAction, ETriggerEvent::Triggered, this, &AEternal_Grace_ArenaCharacter::LightAttack);
 
-		//Heavy Attack
-		EnhancedInputComponent->BindAction(HeavyAttackAction, ETriggerEvent::Started, this, &AEternal_Grace_ArenaCharacter::ChargeHeavyAttack);
-		EnhancedInputComponent->BindAction(HeavyAttackAction, ETriggerEvent::Triggered, this, &AEternal_Grace_ArenaCharacter::IncreaseChargePower);
-		EnhancedInputComponent->BindAction(HeavyAttackAction, ETriggerEvent::Completed, this, &AEternal_Grace_ArenaCharacter::HeavyAttack);
-
-		//Lock On
-	//	EnhancedInputComponent->BindAction(ToggleLockOnAction, ETriggerEvent::Triggered, this, &AEternal_Grace_ArenaCharacter::ToggleLockOn);
-	//	EnhancedInputComponent->BindAction(SwitchLockOnTargetAction, ETriggerEvent::Triggered, this, &AEternal_Grace_ArenaCharacter::SwitchLockOnTarget);
 
 	}
 	else
@@ -235,17 +221,6 @@ void AEternal_Grace_ArenaCharacter::Look(const FInputActionValue& Value)
 }
 
 
-void AEternal_Grace_ArenaCharacter::Sprint()
-{
-	CharacterAnimationInstance->isRunning = true;
-
-}
-
-void AEternal_Grace_ArenaCharacter::CancelSprint()
-{
-	CharacterAnimationInstance->isRunning = false;
-}
-
 void AEternal_Grace_ArenaCharacter::LightAttack()
 {
 	if (!CharacterAnimationInstance->isAttacking)
@@ -267,57 +242,6 @@ void AEternal_Grace_ArenaCharacter::LightAttack()
 	}
 }
 
-void AEternal_Grace_ArenaCharacter::HeavyAttack()
-{
-	//When Heavy Attack Button is released from charge Position the Player Character unleashes his Heavy Attack 
-	if (CharacterAnimationInstance->isCharging)
-	{
-		CharacterAnimationInstance->isCharging = false; //LEAVE CHARGING STATE
-		CharacterAnimationInstance->isAttacking = true; //SET PLAYER IN ATTACK STATE, SO THE ANIMATION CAN NOT BE INTERUPTED BY A LIGHT ATTACK COMMAND
-		CharacterAnimationInstance->isInHeavyAttack = true; // SET PLAYER IN HEAVY ATTACK STATE, SO ANOTHER HEAVY ATTACK COMMAND TRIGGERS THE SECOND ATTACK ANIM
-		UE_LOG(LogTemp, Warning, TEXT("Character Releases Attack"))
-			PlayAnimMontage(HeavyAttacks[0], 1.0f);
-	}
-	else if (CharacterAnimationInstance->isInHeavyAttack)
-	{
-		//IF PLAYER IS IN HEAVY ATTACK, A SECOND HEAVY ATTACK COMMAND TRIGGERS THE FOLLOW UP ANIMATION
-		CharacterAnimationInstance->isInHeavyAttack = false;//LEAVE HEAVY ATTACK STATE, SO THE FOLLOW UP ANIMATION ONLY TRIGGERS ONCE
-		CharacterAnimationInstance->isAttacking = true; //SET IS ATTACKING TO TRUE TO MAKE SURE THE FOLLOW UP ANIMATION IS NOT CANCELED BY LIGHT ATTACK COMMAND
-		PlayAnimMontage(HeavyAttacks[1], 1.0f);
-		UE_LOG(LogTemp, Warning, TEXT("Character Already is not Charging"))
-	}
-}
-
-void AEternal_Grace_ArenaCharacter::ChargeHeavyAttack()
-{
-	//When Heavy Attack Button is first pressed, Player goes into Charge Stand
-	if (!CharacterAnimationInstance->isCharging && !CharacterAnimationInstance->isAttacking && !CharacterAnimationInstance->isInHeavyAttack)
-	{
-		CharacterAnimationInstance->isCharging = true;
-		PlayAnimMontage(ChargeAttack, 1.0f);
-		UE_LOG(LogTemp, Warning, TEXT("Character Charges Attack"))
-	}
-
-}
-
-void AEternal_Grace_ArenaCharacter::IncreaseChargePower()
-{
-	//When further Hold down, the Player remains in Charge Position and charges Attack power
-	if (CharacterAnimationInstance->isCharging)
-	{
-		currentChargePower += world->DeltaTimeSeconds;
-		if (currentChargePower >= maxChargePower)
-		{
-			currentChargePower = maxChargePower;
-			HeavyAttack();
-		}
-	}
-}
-
-void AEternal_Grace_ArenaCharacter::SprintAttack()
-{
-	PlayAnimMontage(RunningAttack);
-}
 
 
 void AEternal_Grace_ArenaCharacter::Guard()
@@ -349,7 +273,3 @@ void AEternal_Grace_ArenaCharacter::RotateTowardsTarget(AActor* Target)
 	SetActorRotation(DesiredRotation);
 }
 
-void AEternal_Grace_ArenaCharacter::Dodge()
-{
-	PlayAnimMontage(DodgeAction);
-}
