@@ -6,6 +6,7 @@
 #include "Kismet/GameplayStatics.h"
 #include "EternalGrace_GameInstance.h"
 #include "NiagaraComponent.h"
+#include <Components/SphereComponent.h>
 
 // Sets default values
 AInteractableActor::AInteractableActor()

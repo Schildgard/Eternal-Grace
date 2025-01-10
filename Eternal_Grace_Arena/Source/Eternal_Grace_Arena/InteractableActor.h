@@ -5,11 +5,11 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
 #include "I_Interactable.h"
-#include <Components/SphereComponent.h>
 #include "InteractableActor.generated.h"
 
 class UEternalGrace_GameInstance;
 class UNiagaraComponent;
+class USphereComponent;
 UCLASS()
 class ETERNAL_GRACE_ARENA_API AInteractableActor : public AActor, public II_Interactable
 {

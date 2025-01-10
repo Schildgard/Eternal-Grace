@@ -76,6 +76,12 @@
     <ClCompile Include="..\..\Source\Eternal_Grace_Arena\CustomPlayerController.h">
       <Filter>Source\Eternal_Grace_Arena</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\Eternal_Grace_Arena\Damage_Spells.cpp">
+      <Filter>Source\Eternal_Grace_Arena</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Eternal_Grace_Arena\Damage_Spells.h">
+      <Filter>Source\Eternal_Grace_Arena</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\Eternal_Grace_Arena\Enemy_UI_Healthbar.cpp">
       <Filter>Source\Eternal_Grace_Arena</Filter>
     </ClCompile>
@@ -149,6 +155,12 @@
       <Filter>Source\Eternal_Grace_Arena</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\Eternal_Grace_Arena\Eternal_Grace_ArenaEnemy.h">
+      <Filter>Source\Eternal_Grace_Arena</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Eternal_Grace_Arena\Eternal_Grace_ArenaEnemy_Caster.cpp">
+      <Filter>Source\Eternal_Grace_Arena</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Eternal_Grace_Arena\Eternal_Grace_ArenaEnemy_Caster.h">
       <Filter>Source\Eternal_Grace_Arena</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\Eternal_Grace_Arena\Eternal_Grace_ArenaGameMode.cpp">
@@ -257,6 +269,30 @@
       <Filter>Source\Eternal_Grace_Arena</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\Eternal_Grace_Arena\Player_UI_Bars.h">
+      <Filter>Source\Eternal_Grace_Arena</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Eternal_Grace_Arena\Spell.cpp">
+      <Filter>Source\Eternal_Grace_Arena</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Eternal_Grace_Arena\Spell.h">
+      <Filter>Source\Eternal_Grace_Arena</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Eternal_Grace_Arena\SpellComponent.cpp">
+      <Filter>Source\Eternal_Grace_Arena</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Eternal_Grace_Arena\SpellComponent.h">
+      <Filter>Source\Eternal_Grace_Arena</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Eternal_Grace_Arena\Spells_HomingProjectile.cpp">
+      <Filter>Source\Eternal_Grace_Arena</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Eternal_Grace_Arena\Spells_HomingProjectile.h">
+      <Filter>Source\Eternal_Grace_Arena</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Eternal_Grace_Arena\Spells_Projectile.cpp">
+      <Filter>Source\Eternal_Grace_Arena</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Eternal_Grace_Arena\Spells_Projectile.h">
       <Filter>Source\Eternal_Grace_Arena</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\Eternal_Grace_Arena\StaggeringType.cpp">
