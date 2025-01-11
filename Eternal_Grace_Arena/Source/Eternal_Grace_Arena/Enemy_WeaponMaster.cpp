@@ -54,19 +54,15 @@ void AEnemy_WeaponMaster::LightAttack()
 
 void AEnemy_WeaponMaster::GetDamage_Implementation(float Damage, float PoiseDamage, float DamageDirection, EStaggeringType StaggerType, AEternal_Grace_ArenaCharacter* DamageSource)
 {
-	//float* CurrentHealth = &HealthComponent->CurrentHealth;
-//float* CurrentPoise = &HealthComponent->CurrentPoise;
-//float* MaxHealth = &HealthComponent->MaxHealth;
-//float* MaxPoise = &HealthComponent->MaxPoise;
 
 	HealthComponent->CurrentHealth -= Damage;
 	UE_LOG(LogTemp, Warning, TEXT("%s got %f Damage"), *GetName(), Damage)
-		HealthComponent->CurrentPoise -= PoiseDamage;
 
 
 	if (StaggerComponent)
 	{
-		StaggerComponent->GetStaggered(StaggerType, DamageDirection, DamageSource);
+		UE_LOG(LogTemp, Warning, TEXT("%s Has a Stagger Component. It is now tried to apply Stagger"), *Owner->GetName())
+		StaggerComponent->GetStaggered(StaggerType, PoiseDamage, DamageDirection, DamageSource);
 	}
 
 

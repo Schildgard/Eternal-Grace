@@ -12,36 +12,42 @@ UStaggerComponent::UStaggerComponent()
 	PrimaryComponentTick.bCanEverTick = true;
 	Owner = nullptr;
 
+	MaxPoise = 25.0f;
+	CurrentPoise = MaxPoise;
+	PoiseRegenerationRate = 0.0f;
+
 	// ...
 }
 
 
-void UStaggerComponent::GetStaggered(EStaggeringType StaggerType, float AttackAngle, AActor* Instigator)
+void UStaggerComponent::GetStaggered(EStaggeringType StaggerType, float PoiseDamage, float AttackAngle, AActor* Instigator)
 {
-	//ATTACK FROM BEHIND
-	if (AttackAngle >= 135.0f && AttackAngle <= 180.0f)
-	{
-		if (BackStaggerAnimationMap.Contains(StaggerType))
+		CurrentPoise -= PoiseDamage;
+		if (CurrentPoise <= 0.0f)
 		{
-			Owner->PlayAnimMontage(BackStaggerAnimationMap[StaggerType]);
-			return;
+			//ATTACK FROM BEHIND
+			if (AttackAngle >= 135.0f && AttackAngle <= 180.0f)
+			{
+				if (BackStaggerAnimationMap.Contains(StaggerType))
+				{
+					Owner->PlayAnimMontage(BackStaggerAnimationMap[StaggerType]);
+				}
+			}
+			// FRONTAL ATTACK
+			else if (FrontalStaggerAnimationMap.Contains(StaggerType))
+			{
+				if (StaggerType != EStaggeringType::NoStagger)
+				{
+					Owner->RotateTowardsTarget(Instigator);
+				}
+				Owner->PlayAnimMontage(FrontalStaggerAnimationMap[StaggerType]);
+			}
+			else
+			{
+				UE_LOG(LogTemp, Warning, TEXT("%s Stagger Animation Map contains no Key for this StaggerType"), *Owner->GetName())
+			}
+			CurrentPoise = MaxPoise;
 		}
-	}
-	// FRONTAL ATTACK
-	if (FrontalStaggerAnimationMap.Contains(StaggerType))
-	{
-		if (StaggerType != EStaggeringType::NoStagger)
-		{
-			Owner->RotateTowardsTarget(Instigator);
-		}
-		Owner->PlayAnimMontage(FrontalStaggerAnimationMap[StaggerType]);
-		return;
-	}
-	else
-	{
-		UE_LOG(LogTemp, Warning, TEXT("%s Stagger Animation Map contains no Key for this StaggerType"), *Owner->GetName())
-	}
-
 }
 
 // Called when the game starts
@@ -74,6 +80,9 @@ void UStaggerComponent::TickComponent(float DeltaTime, ELevelTick TickType, FAct
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 
-	// ...
+	if (CurrentPoise <= MaxPoise)
+	{
+		CurrentPoise += DeltaTime * PoiseRegenerationRate;
+	}
 }
 

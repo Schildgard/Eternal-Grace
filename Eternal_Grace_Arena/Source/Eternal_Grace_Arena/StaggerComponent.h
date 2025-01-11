@@ -18,13 +18,19 @@ public:
 	UStaggerComponent();
 
 	UFUNCTION()
-	void GetStaggered(EStaggeringType StaggerType, float AttackAngle, AActor* Instigator);
+	void GetStaggered(EStaggeringType StaggerType, float PoiseDamage, float AttackAngle, AActor* Instigator);
 protected:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, meta = (AllowPrivateAccess))
 	TMap<EStaggeringType, UAnimMontage*> FrontalStaggerAnimationMap;
-
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, meta = (AllowPrivateAccess))
 	TMap<EStaggeringType, UAnimMontage*> BackStaggerAnimationMap;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = BaseValues, meta = (AllowPrivateAccess))
+	float MaxPoise;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = BaseValues, meta = (AllowPrivateAccess))
+	float CurrentPoise;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = BaseValues, meta = (AllowPrivateAccess))
+	float PoiseRegenerationRate;
 
 	UPROPERTY()
 	AEternal_Grace_ArenaCharacter* Owner;

@@ -203,8 +203,6 @@ void AEternal_Grace_ArenaCharacter::GetDamage_Implementation(float Damage, float
 
 	HealthComponent->CurrentHealth -= Damage;
 	UE_LOG(LogTemp, Warning, TEXT("%s got %f Damage"), *GetName(), Damage)
-	HealthComponent->CurrentPoise -= PoiseDamage;
-
 
 
 

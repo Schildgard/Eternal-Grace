@@ -17,10 +17,10 @@ UHealthComponent::UHealthComponent()
 
 	// ...
 	MaxHealth = 1000.0f;
-	MaxPoise = 25.0f;
+//	MaxPoise = 25.0f;
 	CurrentHealth = MaxHealth;
-	CurrentPoise = MaxPoise;
-	PoiseRegenerationRate = 0.0f;
+//	CurrentPoise = MaxPoise;
+//	PoiseRegenerationRate = 0.0f;
 }
 
 
@@ -39,10 +39,10 @@ void UHealthComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActo
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 
-	if (CurrentPoise <= MaxPoise)
-	{
-		CurrentPoise += DeltaTime * PoiseRegenerationRate;
-	}
+//	if (CurrentPoise <= MaxPoise)
+//	{
+//		CurrentPoise += DeltaTime * PoiseRegenerationRate;
+//	}
 
 
 }
