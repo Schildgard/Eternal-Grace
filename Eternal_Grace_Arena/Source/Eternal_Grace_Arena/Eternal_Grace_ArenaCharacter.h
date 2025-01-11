@@ -5,6 +5,8 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
 #include "Logging/LogMacros.h"
+#include "I_Damageable.h"
+#include "StaggeringType.h"
 #include "Eternal_Grace_ArenaCharacter.generated.h"
 
 class USpringArmComponent;
@@ -16,10 +18,11 @@ class UCharacterShield;
 class UHealthComponent;
 struct FInputActionValue;
 
+DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnCharacterDeath);
 DECLARE_LOG_CATEGORY_EXTERN(LogTemplateCharacter, Log, All);
 
 UCLASS(config = Game)
-class AEternal_Grace_ArenaCharacter : public ACharacter
+class AEternal_Grace_ArenaCharacter : public ACharacter, public II_Damageable
 {
 	GENERATED_BODY()
 
@@ -109,9 +112,18 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Attributes, meta = (AllowPrivateAccess))
 	UHealthComponent* HealthComponent;
 
+	UPROPERTY(BlueprintAssignable, Category = "Events")
+	FOnCharacterDeath OnCharacterDeath;
+
+	virtual void GetDamage_Implementation(float Damage, float PoiseDamage, float DamageDirection, EStaggeringType StaggerType, AEternal_Grace_ArenaCharacter* DamageSource)override;
+	virtual void Die_Implementation()override;
+
+
 
 protected:
 
+	UFUNCTION()
+	void CheckActorStaggerAnimation(UAnimMontage* Montage);
 
 	//COMBAT ACTION FUNCTIONS
 	UFUNCTION(BlueprintCallable)
@@ -120,8 +132,6 @@ protected:
 	virtual void Guard();
 	UFUNCTION()
 	virtual void CancelGuard();
-	UFUNCTION()
-	virtual void DeathEvent();
 
 
 public:

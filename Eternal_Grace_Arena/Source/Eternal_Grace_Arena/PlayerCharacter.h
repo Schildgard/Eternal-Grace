@@ -10,6 +10,7 @@
  *
  */
 class UStaminaComponent;
+class UStaggerComponent;
 UCLASS()
 class ETERNAL_GRACE_ARENA_API APlayerCharacter : public AEternal_Grace_ArenaCharacter
 {
@@ -37,6 +38,11 @@ public:
 	UStaminaComponent* StaminaComponent;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Attribtues, meta = (AllowPrivateAccess))
 	float RunningStaminaConsumption;
+
+	//STAGGERCOMPONENT
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Attribtues, meta = (AllowPrivateAccess))
+	UStaggerComponent* StaggerComponent;
+	
 
 	//LOCKON PROPERTIES
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = LockOn, meta = (AllowPrivateAccess))
@@ -126,6 +132,7 @@ protected:
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 	virtual void LightAttack()override;
 	virtual void Guard()override;
+	virtual void GetDamage_Implementation(float Damage, float PoiseDamage, float DamageDirection, EStaggeringType StaggerType, AEternal_Grace_ArenaCharacter* DamageSource)override;
 
 
 };

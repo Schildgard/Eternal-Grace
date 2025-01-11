@@ -11,31 +11,15 @@
 #include "EnhancedInputSubsystems.h"
 #include "InputActionValue.h"
 #include "CharacterAnimInstance.h"
-//#include "Kismet/KismetSystemLibrary.h"
 #include "Kismet/KismetMathLibrary.h"
-//#include "I_Targetable.h"
 #include "CharacterWeapon.h"
 #include "CharacterShield.h"
 #include "HealthComponent.h"
-//#include "Eternal_Grace_ProgressBar.h"
 
 DEFINE_LOG_CATEGORY(LogTemplateCharacter);
 
 //////////////////////////////////////////////////////////////////////////
 // AEternal_Grace_ArenaCharacter
-
-void AEternal_Grace_ArenaCharacter::DeathEvent()
-{
-	if (DeathAnimation)
-	{
-		PlayAnimMontage(DeathAnimation);
-		SetActorEnableCollision(false);
-	}
-	else
-	{
-		UE_LOG(LogTemp, Error, TEXT("No DeathAnimation Assigned to %s"), *GetName())
-	}
-}
 
 AEternal_Grace_ArenaCharacter::AEternal_Grace_ArenaCharacter()
 {
@@ -152,17 +136,6 @@ void AEternal_Grace_ArenaCharacter::BeginPlay()
 	{
 		UE_LOG(LogTemp, Warning, TEXT("Failed to setup collision for Weapon"))
 	}
-
-	if (HealthComponent != nullptr)
-	{
-		HealthComponent->OnCharacterDeath.AddDynamic(this, &AEternal_Grace_ArenaCharacter::DeathEvent);
-	}
-	else
-	{
-		UE_LOG(LogTemp, Error, TEXT("HealthComponent is null"))
-	}
-
-
 }
 
 void AEternal_Grace_ArenaCharacter::Tick(float DeltaSeconds)
@@ -220,6 +193,56 @@ void AEternal_Grace_ArenaCharacter::Look(const FInputActionValue& Value)
 	}
 }
 
+
+void AEternal_Grace_ArenaCharacter::GetDamage_Implementation(float Damage, float PoiseDamage, float DamageDirection, EStaggeringType StaggerType, AEternal_Grace_ArenaCharacter* DamageSource)
+{
+	//float* CurrentHealth = &HealthComponent->CurrentHealth;
+	//float* CurrentPoise = &HealthComponent->CurrentPoise;
+	//float* MaxHealth = &HealthComponent->MaxHealth;
+	//float* MaxPoise = &HealthComponent->MaxPoise;
+
+	HealthComponent->CurrentHealth -= Damage;
+	UE_LOG(LogTemp, Warning, TEXT("%s got %f Damage"), *GetName(), Damage)
+	HealthComponent->CurrentPoise -= PoiseDamage;
+
+
+
+
+
+	if (HealthComponent->CurrentHealth <= 0)
+	{
+		HealthComponent-> CurrentHealth = 0;
+		Execute_Die(this);
+	}
+
+}
+
+void AEternal_Grace_ArenaCharacter::Die_Implementation()
+{
+	if (DeathAnimation)
+	{
+		PlayAnimMontage(DeathAnimation);
+		SetActorEnableCollision(false);
+	}
+	else
+	{
+		UE_LOG(LogTemp, Error, TEXT("No DeathAnimation Assigned to %s"), *GetName())
+	}
+	OnCharacterDeath.Broadcast();
+}
+
+void AEternal_Grace_ArenaCharacter::CheckActorStaggerAnimation(UAnimMontage* Montage)
+{
+	if (Montage)
+	{
+	PlayAnimMontage(Montage);
+	}
+	else
+	{
+		UE_LOG(LogTemp, Warning, TEXT("Stagger Animation is nullptr"))
+			return;
+	}
+}
 
 void AEternal_Grace_ArenaCharacter::LightAttack()
 {

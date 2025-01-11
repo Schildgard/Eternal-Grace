@@ -40,7 +40,7 @@ void ADamage_Spells::DealDamage(AEternal_Grace_ArenaCharacter* Target)
 	AEternal_Grace_ArenaCharacter* Caster = Cast<AEternal_Grace_ArenaCharacter>(GetInstigator()); //BULLSHIT CODE. NEED TO REFACTOR HEALTH COMPONENT
 	if (Caster)
 	{
-		Target->HealthComponent->GetDamage(DamageValue, PoiseDamage, HitAngle, EStaggeringType::NormalStagger, Caster);
+	//	Target->GetDamage(DamageValue, PoiseDamage, HitAngle, EStaggeringType::NormalStagger, Caster);
 	}
 	else UE_LOG(LogTemp, Warning, TEXT("Caster could not be casted to a Eternal grace Character"))
 

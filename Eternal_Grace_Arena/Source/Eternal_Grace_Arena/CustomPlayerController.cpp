@@ -77,12 +77,12 @@ void ACustomPlayerController::BeginPlay()
 	if (PlayerCharacter)
 	{
 		//SUBSCRIBE DEATH HANDLING TO ON DIE EVENT
-		PlayerCharacter->HealthComponent->OnCharacterDeath.AddDynamic(this, &ACustomPlayerController::HandlePlayerDeath);
+		PlayerCharacter->OnCharacterDeath.AddDynamic(this, &ACustomPlayerController::HandlePlayerDeath);
 		//SUBSCRIBE RESET HEALTH INFORMATION TO DIE EVENT 
 		ActiveGameInstance = Cast<UEternalGrace_GameInstance>(UGameplayStatics::GetGameInstance(GetWorld()));
 		if (ActiveGameInstance)
 		{
-			PlayerCharacter->HealthComponent->OnCharacterDeath.AddDynamic(ActiveGameInstance, &UEternalGrace_GameInstance::ResetHealthInformation);
+			PlayerCharacter->OnCharacterDeath.AddDynamic(ActiveGameInstance, &UEternalGrace_GameInstance::ResetHealthInformation);
 		}
 	}
 	else

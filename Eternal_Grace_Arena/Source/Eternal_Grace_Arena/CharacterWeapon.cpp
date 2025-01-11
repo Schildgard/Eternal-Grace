@@ -12,6 +12,7 @@
 #include "CharacterAnimInstance.h"
 #include "CharacterShield.h"
 #include "Engine/StaticMeshActor.h"
+#include "I_Damageable.h"
 
 UCharacterWeapon::UCharacterWeapon()
 {
@@ -32,26 +33,36 @@ void UCharacterWeapon::OnOverlapBegin(UPrimitiveComponent* OverlappedComponent, 
 	if (WeaponOwner == nullptr)
 	{
 		WeaponOwner = GetOwner();
-		//	UE_LOG(LogTemp, Warning, TEXT("GOT WEAPON OWNER"))
 	}
 
 
-	//TRY TO CAST HITTED ACTOR AS CHARACTER
-	AEternal_Grace_ArenaCharacter* TargetActor = Cast<AEternal_Grace_ArenaCharacter>(OtherActor);
-	// CHECK IF OVERLAPPING ACTOR IS AN CHARACTER
-	if (TargetActor && TargetActor != WeaponOwner)
+	if (OtherActor != WeaponOwner && OtherActor->Implements<UI_Damageable>())
 	{
-		//UE_LOG(LogTemp, Warning, TEXT("YOU HITTED A CHARACTER: %s"), *OtherActor->GetName());
+		UE_LOG(LogTemp, Warning, TEXT("Hitted Actor has I_Damageable Interface"))
 
-		// CHECK IF HITTED ACTOR HAS AN HEALTH COMPONENT
-		if (TargetActor->HealthComponent && HittedActors.Contains(TargetActor) == false)
-		{
-			DealDamage(TargetActor);
-			HittedActors.AddUnique(TargetActor);
-		}
+			float Damage = Values.BaseDamage * DamageMultiplier;
+		float PoiseDamage = Values.PoiseDamage * DamageMultiplier;
+		float DamageDirection = CalculateAttackAngle(OtherActor);
+
+		II_Damageable::Execute_GetDamage(OtherActor, Damage, PoiseDamage, DamageDirection, StaggerType, Cast<AEternal_Grace_ArenaCharacter>(WeaponOwner));
+		AEternal_Grace_ArenaCharacter* TargetActor = Cast<AEternal_Grace_ArenaCharacter>(OtherActor);
+
+		HittedActors.AddUnique(TargetActor);
+		ApplyHitEffect(TargetActor->PhysicalMaterial);
 	}
-	else if (TargetActor == nullptr) //if hitted Actor is no Character, check if it is an BaseActor
-	{
+
+	//if (TargetActor && TargetActor != WeaponOwner)
+	//{
+	//	// CHECK IF HITTED ACTOR HAS AN HEALTH COMPONENT
+	//	if (TargetActor->HealthComponent && HittedActors.Contains(TargetActor) == false)
+	//	{
+	//		DealDamage(TargetActor);
+	//		HittedActors.AddUnique(TargetActor);
+	//	}
+	//}
+	//else if (TargetActor == nullptr) //if hitted Actor is no Character, check if it is an BaseActor
+
+	//{
 		AStaticMeshActor* HitActor = Cast<AStaticMeshActor>(OtherActor);
 		if (HitActor)
 		{
@@ -68,7 +79,13 @@ void UCharacterWeapon::OnOverlapBegin(UPrimitiveComponent* OverlappedComponent, 
 
 			}
 		}
-	}
+	//}
+
+
+
+
+
+
 }
 
 void UCharacterWeapon::DealDamage(AEternal_Grace_ArenaCharacter* Target)
@@ -87,7 +104,7 @@ void UCharacterWeapon::DealDamage(AEternal_Grace_ArenaCharacter* Target)
 		}
 		return;
 	}
-	Target->HealthComponent->GetDamage(Damage, PoiseDamage, DamageDirection, StaggerType, Cast<AEternal_Grace_ArenaCharacter>(WeaponOwner));
+	//Target->GetDamage(Damage, PoiseDamage, DamageDirection, StaggerType, Cast<AEternal_Grace_ArenaCharacter>(WeaponOwner));
 	ApplyHitEffect(Target->PhysicalMaterial);
 }
 
@@ -128,7 +145,7 @@ void UCharacterWeapon::ResetAttackValues()
 	HittedActors.Empty();
 }
 
-float UCharacterWeapon::CalculateAttackAngle(AEternal_Grace_ArenaCharacter* Target)
+float UCharacterWeapon::CalculateAttackAngle(AActor* Target)
 {
 
 	//CHECK DIRECTION
@@ -141,6 +158,12 @@ float UCharacterWeapon::CalculateAttackAngle(AEternal_Grace_ArenaCharacter* Targ
 	float Degrees = UKismetMathLibrary::DegAcos(DotProduct);
 	return Degrees;
 
+}
+
+void UCharacterWeapon::BeginPlay()
+{
+	Super::BeginPlay();
+	SetCollisionEnabled(ECollisionEnabled::NoCollision);
 }
 
 

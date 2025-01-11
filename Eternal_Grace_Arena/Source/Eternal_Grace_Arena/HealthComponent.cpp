@@ -3,12 +3,9 @@
 
 #include "HealthComponent.h"
 #include "Eternal_Grace_ArenaCharacter.h"
-//#include "Eternal_Grace_ArenaEnemy.h"
 #include "PlayerCharacter.h"
 #include "StaminaComponent.h"
-//#include "CharacterAnimInstance.h"
 #include "CharacterShield.h"
-//#include "Kismet/KismetMathLibrary.h"
 
 
 // Sets default values for this component's properties
@@ -51,83 +48,83 @@ void UHealthComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActo
 }
 
 
-void UHealthComponent::GetDamage(float IncomingDamage, float PoiseDamage, float DamageDirection, EStaggeringType StaggerType, AEternal_Grace_ArenaCharacter* DamageSource)
-{
-	AActor* Owner = GetOwner();
-	AEternal_Grace_ArenaCharacter* Character = Cast<AEternal_Grace_ArenaCharacter>(Owner);
-
-	CurrentHealth -= IncomingDamage;
-	UE_LOG(LogTemp, Warning, TEXT("%s got %f Damage"), *Character->GetName(), IncomingDamage)
-		CurrentPoise -= PoiseDamage;
-
-
-	//ATTACK FROM BEHIND
-	if (DamageDirection >= 135.0f && DamageDirection <= 180.0f && CurrentPoise <= 0.0f)
-	{
-		switch (StaggerType)
-		{
-		case EStaggeringType::NormalStagger:
-			CheckActorStaggerAnimation(Character->StaggerAnimsBack[0], Character);
-			CurrentPoise = MaxPoise;
-			break;
-		case EStaggeringType::HeavyStagger:
-			CheckActorStaggerAnimation(Character->StaggerAnimsBack[1], Character);
-			CurrentPoise = MaxPoise;
-			break;
-		case EStaggeringType::KnockbackStagger:
-			CheckActorStaggerAnimation(Character->StaggerAnimsBack[2], Character);
-			CurrentPoise = MaxPoise;
-			break;
-		case EStaggeringType::ThrowupStagger:
-			CheckActorStaggerAnimation(Character->StaggerAnimsBack[3], Character);
-			CurrentPoise = MaxPoise;
-			break;
-		case EStaggeringType::CrushdownStagger:
-			CheckActorStaggerAnimation(Character->StaggerAnimsBack[4], Character);
-			CurrentPoise = MaxPoise;
-			break;
-		default:
-			break;
-		}
-	}
-	else if (CurrentPoise <= 0.0f)//FRONTAL ATTACK WITHOUT GUARD OR SIDE ATTACK
-	{
-		switch (StaggerType)
-		{
-		case EStaggeringType::NormalStagger:
-			CheckActorStaggerAnimation(Character->StaggerAnims[0], Character);
-			CurrentPoise = MaxPoise;
-			break;
-		case EStaggeringType::HeavyStagger:
-			Character->RotateTowardsTarget(DamageSource);
-			CheckActorStaggerAnimation(Character->StaggerAnims[1], Character);
-			CurrentPoise = MaxPoise;
-			break;
-		case EStaggeringType::KnockbackStagger:
-			Character->RotateTowardsTarget(DamageSource);
-			CheckActorStaggerAnimation(Character->StaggerAnims[2], Character);
-			CurrentPoise = MaxPoise;
-			break;
-		case EStaggeringType::ThrowupStagger:
-			Character->RotateTowardsTarget(DamageSource);
-			CheckActorStaggerAnimation(Character->StaggerAnims[3], Character);
-			CurrentPoise = MaxPoise;
-			break;
-		case EStaggeringType::CrushdownStagger:
-			Character->RotateTowardsTarget(DamageSource);
-			CheckActorStaggerAnimation(Character->StaggerAnims[4], Character);
-			CurrentPoise = MaxPoise;
-			break;
-		case EStaggeringType::NoStagger:
-			break;
-		}
-	}
-	if (CurrentHealth <= 0)
-	{
-		CurrentHealth = 0;
-		Die();
-	}
-}
+//void UHealthComponent::GetDamage(float IncomingDamage, float PoiseDamage, float DamageDirection, EStaggeringType StaggerType, AEternal_Grace_ArenaCharacter* DamageSource)
+//{
+//	//AActor* Owner = GetOwner();
+//	//AEternal_Grace_ArenaCharacter* Character = Cast<AEternal_Grace_ArenaCharacter>(Owner);
+//
+////	CurrentHealth -= IncomingDamage;
+////	UE_LOG(LogTemp, Warning, TEXT("%s got %f Damage"), *Character->GetName(), IncomingDamage)
+////		CurrentPoise -= PoiseDamage;
+//
+//
+//	//ATTACK FROM BEHIND
+//	if (DamageDirection >= 135.0f && DamageDirection <= 180.0f && CurrentPoise <= 0.0f)
+//	{
+//		switch (StaggerType)
+//		{
+//		case EStaggeringType::NormalStagger:
+//			CheckActorStaggerAnimation(Character->StaggerAnimsBack[0], Character);
+//			CurrentPoise = MaxPoise;
+//			break;
+//		case EStaggeringType::HeavyStagger:
+//			CheckActorStaggerAnimation(Character->StaggerAnimsBack[1], Character);
+//			CurrentPoise = MaxPoise;
+//			break;
+//		case EStaggeringType::KnockbackStagger:
+//			CheckActorStaggerAnimation(Character->StaggerAnimsBack[2], Character);
+//			CurrentPoise = MaxPoise;
+//			break;
+//		case EStaggeringType::ThrowupStagger:
+//			CheckActorStaggerAnimation(Character->StaggerAnimsBack[3], Character);
+//			CurrentPoise = MaxPoise;
+//			break;
+//		case EStaggeringType::CrushdownStagger:
+//			CheckActorStaggerAnimation(Character->StaggerAnimsBack[4], Character);
+//			CurrentPoise = MaxPoise;
+//			break;
+//		default:
+//			break;
+//		}
+//	}
+//	else if (CurrentPoise <= 0.0f)//FRONTAL ATTACK WITHOUT GUARD OR SIDE ATTACK
+//	{
+//		switch (StaggerType)
+//		{
+//		case EStaggeringType::NormalStagger:
+//			CheckActorStaggerAnimation(Character->StaggerAnims[0], Character);
+//			CurrentPoise = MaxPoise;
+//			break;
+//		case EStaggeringType::HeavyStagger:
+//			Character->RotateTowardsTarget(DamageSource);
+//			CheckActorStaggerAnimation(Character->StaggerAnims[1], Character);
+//			CurrentPoise = MaxPoise;
+//			break;
+//		case EStaggeringType::KnockbackStagger:
+//			Character->RotateTowardsTarget(DamageSource);
+//			CheckActorStaggerAnimation(Character->StaggerAnims[2], Character);
+//			CurrentPoise = MaxPoise;
+//			break;
+//		case EStaggeringType::ThrowupStagger:
+//			Character->RotateTowardsTarget(DamageSource);
+//			CheckActorStaggerAnimation(Character->StaggerAnims[3], Character);
+//			CurrentPoise = MaxPoise;
+//			break;
+//		case EStaggeringType::CrushdownStagger:
+//			Character->RotateTowardsTarget(DamageSource);
+//			CheckActorStaggerAnimation(Character->StaggerAnims[4], Character);
+//			CurrentPoise = MaxPoise;
+//			break;
+//		case EStaggeringType::NoStagger:
+//			break;
+//		}
+//	}
+//	if (CurrentHealth <= 0)
+//	{
+//		CurrentHealth = 0;
+//		Die();
+//	}
+//}
 
 void UHealthComponent::BlockDamage(float Damage, float PoiseDamage, float DamageDirection, EStaggeringType StaggerType, AEternal_Grace_ArenaCharacter* DamageSource)
 {
@@ -176,24 +173,5 @@ void UHealthComponent::BlockDamage(float Damage, float PoiseDamage, float Damage
 		break;
 	default:
 		break;
-	}
-}
-
-void UHealthComponent::Die()
-{
-	OnCharacterDeath.Broadcast();
-}
-
-
-void UHealthComponent::CheckActorStaggerAnimation(UAnimMontage* Montage, AEternal_Grace_ArenaCharacter* Character)
-{
-	if (Montage)
-	{
-		Character->PlayAnimMontage(Montage);
-	}
-	else
-	{
-		UE_LOG(LogTemp, Warning, TEXT("Stagger Animation is nullptr"))
-			return;
 	}
 }

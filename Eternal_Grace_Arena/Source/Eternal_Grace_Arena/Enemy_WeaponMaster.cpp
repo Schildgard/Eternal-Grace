@@ -6,10 +6,13 @@
 #include "Kismet/KismetMathLibrary.h"
 #include "CharacterAnimInstance.h"
 #include "Components/CapsuleComponent.h"
+#include "StaggerComponent.h"
+#include "HealthComponent.h"
 
 AEnemy_WeaponMaster::AEnemy_WeaponMaster()
 {
 	GetOffMeAttack = nullptr;
+	StaggerComponent = CreateDefaultSubobject<UStaggerComponent>("StaggerComponent");
 }
 
 void AEnemy_WeaponMaster::LightAttack()
@@ -46,6 +49,31 @@ void AEnemy_WeaponMaster::LightAttack()
 		CharacterAnimationInstance->Montage_SetEndDelegate(CompletedDelegate, LightAttacks[RandomAttackIndex]);
 
 
+	}
+}
+
+void AEnemy_WeaponMaster::GetDamage_Implementation(float Damage, float PoiseDamage, float DamageDirection, EStaggeringType StaggerType, AEternal_Grace_ArenaCharacter* DamageSource)
+{
+	//float* CurrentHealth = &HealthComponent->CurrentHealth;
+//float* CurrentPoise = &HealthComponent->CurrentPoise;
+//float* MaxHealth = &HealthComponent->MaxHealth;
+//float* MaxPoise = &HealthComponent->MaxPoise;
+
+	HealthComponent->CurrentHealth -= Damage;
+	UE_LOG(LogTemp, Warning, TEXT("%s got %f Damage"), *GetName(), Damage)
+		HealthComponent->CurrentPoise -= PoiseDamage;
+
+
+	if (StaggerComponent)
+	{
+		StaggerComponent->GetStaggered(StaggerType, DamageDirection, DamageSource);
+	}
+
+
+	if (HealthComponent->CurrentHealth <= 0)
+	{
+		HealthComponent->CurrentHealth = 0;
+		Execute_Die(this);
 	}
 }
 

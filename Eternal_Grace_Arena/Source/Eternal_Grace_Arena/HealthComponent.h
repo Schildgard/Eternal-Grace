@@ -7,7 +7,6 @@
 #include "StaggeringType.h"
 #include "HealthComponent.generated.h"
 
-DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnCharacterDeath);
 class AEternal_Grace_ArenaCharacter;
 
 UCLASS(ClassGroup = (Custom), meta = (BlueprintSpawnableComponent))
@@ -17,9 +16,6 @@ class ETERNAL_GRACE_ARENA_API UHealthComponent : public UActorComponent
 
 public:
 	UHealthComponent();
-	UPROPERTY(BlueprintAssignable, Category ="Events")
-	FOnCharacterDeath OnCharacterDeath;
-
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = BaseValues, meta = (AllowPrivateAccess))
 	float MaxHealth;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = BaseValues, meta = (AllowPrivateAccess))
@@ -34,8 +30,6 @@ public:
 
 public:
 	UFUNCTION()
-	virtual void GetDamage(float Damage, float PoiseDamage, float DamageDirection, EStaggeringType StaggerType, AEternal_Grace_ArenaCharacter* DamageSource);
-	UFUNCTION()
 	virtual void BlockDamage(float Damage, float PoiseDamage, float DamageDirection, EStaggeringType StaggerType, AEternal_Grace_ArenaCharacter* DamageSource);
 
 protected:
@@ -43,11 +37,5 @@ protected:
 	virtual void BeginPlay() override;
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
-
-	UFUNCTION(CallInEditor, Category = Actions)
-	virtual void Die();
-
-	UFUNCTION()
-	void CheckActorStaggerAnimation(UAnimMontage* Montage, AEternal_Grace_ArenaCharacter* Character);
 
 };

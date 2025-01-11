@@ -63,6 +63,8 @@ public:
 	UFUNCTION()
 	void ResetAttackValues();
 	UFUNCTION()
-	float CalculateAttackAngle(AEternal_Grace_ArenaCharacter* Target);
+	float CalculateAttackAngle(AActor* Target);
 	
+protected:
+	virtual void BeginPlay()override;
 };

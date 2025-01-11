@@ -9,6 +9,7 @@
 /**
  * 
  */
+class UStaggerComponent;
 UCLASS()
 class ETERNAL_GRACE_ARENA_API AEnemy_WeaponMaster : public AEternal_Grace_ArenaBoss
 {
@@ -20,6 +21,11 @@ class ETERNAL_GRACE_ARENA_API AEnemy_WeaponMaster : public AEternal_Grace_ArenaB
 protected:
 	AEnemy_WeaponMaster();
 	virtual void LightAttack()override;
+	virtual void GetDamage_Implementation(float Damage, float PoiseDamage, float DamageDirection, EStaggeringType StaggerType, AEternal_Grace_ArenaCharacter* DamageSource)override;
+
+	//STAGGERCOMPONENT
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Attribtues, meta = (AllowPrivateAccess))
+	UStaggerComponent* StaggerComponent;
 
 	UFUNCTION()
 	void GetOffMeMove();

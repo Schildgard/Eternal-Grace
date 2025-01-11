@@ -3,23 +3,24 @@
 
 #include "PlayerCharacter.h"
 #include "StaminaComponent.h"
+#include "StaggerComponent.h"
 #include "CharacterAnimInstance.h"
-//#include "CharacterWeapon.h"
 #include "GameFramework/CharacterMovementComponent.h"
 #include "Kismet/KismetSystemLibrary.h"
 #include "Kismet/KismetMathLibrary.h"
 #include "I_Targetable.h"
 #include "EnhancedInputComponent.h"
 #include "EnhancedInputSubsystems.h"
-//#include "InputActionValue.h"
 #include "InteractableActor.h"
-//#include "HealthComponent.h"
-//#include "EternalGrace_GameInstance.h"
+#include "HealthComponent.h"
+
 
 
 APlayerCharacter::APlayerCharacter()
 {
 	StaminaComponent = CreateDefaultSubobject<UStaminaComponent>("StaminaComponent");
+	StaggerComponent = CreateDefaultSubobject<UStaggerComponent>("StaggerComponent");
+
 	RunningStaminaConsumption = 15.0f;
 	GuardCounterReactionCountdown = GuardCounterReactionTimer;
 
@@ -359,5 +360,31 @@ void APlayerCharacter::Guard()
 	else
 	{
 		CancelGuard();
+	}
+}
+
+void APlayerCharacter::GetDamage_Implementation(float Damage, float PoiseDamage, float DamageDirection, EStaggeringType StaggerType, AEternal_Grace_ArenaCharacter* DamageSource)
+{
+	
+	//float* CurrentHealth = &HealthComponent->CurrentHealth;
+//float* CurrentPoise = &HealthComponent->CurrentPoise;
+//float* MaxHealth = &HealthComponent->MaxHealth;
+//float* MaxPoise = &HealthComponent->MaxPoise;
+
+	HealthComponent->CurrentHealth -= Damage;
+	UE_LOG(LogTemp, Warning, TEXT("%s got %f Damage"), *GetName(), Damage)
+		HealthComponent->CurrentPoise -= PoiseDamage;
+
+
+	if(StaggerComponent)
+	{
+		StaggerComponent->GetStaggered(StaggerType, DamageDirection, DamageSource);
+	}
+
+
+	if (HealthComponent->CurrentHealth <= 0)
+	{
+		HealthComponent->CurrentHealth = 0;
+		Execute_Die(this);
 	}
 }

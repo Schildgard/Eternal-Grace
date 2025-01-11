@@ -4,10 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "Eternal_Grace_ArenaCharacter.h"
-//#include "Blueprint/UserWidget.h"
-//#include "HealthComponent.h"
 #include "Components/WidgetComponent.h"
-//#include "Eternal_Grace_ProgressBar.h"
 #include "Enemy_UI_Healthbar.h"
 #include "Eternal_Grace_ArenaEnemy.generated.h"
 
@@ -34,9 +31,6 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = AI, meta = (AllowPrivateAccess))
 	UPawnSensingComponent* SensingComponent;
 
-
-	//UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Actions, meta = (AllowPrivateAccess))
-	//TArray<UAnimMontage*> AttackMontages;
 public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Attack, meta = (AllowPrivateAccess))
 	float AttackRange;
@@ -81,7 +75,7 @@ public:
 protected:
 	virtual void BeginPlay()override;
 	virtual void Tick(float DeltaSeconds)override;
-	virtual void DeathEvent()override;
+	virtual void Die_Implementation()override;
 	
 	
 };

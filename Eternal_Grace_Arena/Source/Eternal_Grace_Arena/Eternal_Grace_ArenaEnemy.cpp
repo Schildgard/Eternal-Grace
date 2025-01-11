@@ -2,7 +2,6 @@
 
 
 #include "Eternal_Grace_ArenaEnemy.h"
-//#include "CharacterAnimInstance.h"
 #include "Kismet/KismetMathLibrary.h"
 #include "Kismet//GameplayStatics.h"
 #include "Perception/PawnSensingComponent.h"
@@ -120,9 +119,9 @@ void AEternal_Grace_ArenaEnemy::Tick(float DeltaSeconds)
 	//}
 }
 
-void AEternal_Grace_ArenaEnemy::DeathEvent()
+void AEternal_Grace_ArenaEnemy::Die_Implementation()
 {
-	Super::DeathEvent();
+	Super::Die_Implementation();
 	SendInfoToGameInstance();
 }
 
