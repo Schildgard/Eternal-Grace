@@ -13,6 +13,7 @@
 #include "EnhancedInputSubsystems.h"
 #include "InteractableActor.h"
 #include "HealthComponent.h"
+#include "ShieldComponent.h"
 
 
 
@@ -363,22 +364,34 @@ void APlayerCharacter::Guard()
 	}
 }
 
-void APlayerCharacter::GetDamage_Implementation(float Damage, float PoiseDamage, float DamageDirection, EStaggeringType StaggerType, AEternal_Grace_ArenaCharacter* DamageSource)
-{
-
-	HealthComponent->CurrentHealth -= Damage;
-	UE_LOG(LogTemp, Warning, TEXT("%s got %f Damage"), *GetName(), Damage)
-
-
-	if(StaggerComponent)
-	{
-		StaggerComponent->GetStaggered(StaggerType,PoiseDamage, DamageDirection, DamageSource);
-	}
-
-
-	if (HealthComponent->CurrentHealth <= 0)
-	{
-		HealthComponent->CurrentHealth = 0;
-		Execute_Die(this);
-	}
-}
+//void APlayerCharacter::GetDamage_Implementation(float Damage, float PoiseDamage, float DamageDirection, EStaggeringType StaggerType, AEternal_Grace_ArenaCharacter* DamageSource)
+//{
+//	Super::GetDamage_Implementation()
+//	//if (ShieldComponent && ShieldComponent->GetCurrentShield())
+//	//{
+//	//	if (CharacterAnimationInstance->isGuarding)
+//	//	{
+//	//		//Check if Attack is Frontal - NOT SURE IF THIS CALCULATION IS CORRECT
+//	//		if (DamageDirection <= 135.0f && DamageDirection >= 180.0f)
+//	//		{
+//	//			ShieldComponent->BlockDamage(Damage, PoiseDamage, DamageDirection, StaggerType, DamageSource);
+//	//			return;
+//	//		}
+//	//	}
+//	//}
+//
+////	HealthComponent->CurrentHealth -= Damage;
+////	UE_LOG(LogTemp, Warning, TEXT("%s got %f Damage"), *GetName(), Damage)
+////
+////		if (StaggerComponent)
+////		{
+////			StaggerComponent->GetStaggered(StaggerType, PoiseDamage, DamageDirection, DamageSource);
+////		}
+////
+////
+////	if (HealthComponent->CurrentHealth <= 0)
+////	{
+////		HealthComponent->CurrentHealth = 0;
+////		Execute_Die(this);
+////	}
+//}

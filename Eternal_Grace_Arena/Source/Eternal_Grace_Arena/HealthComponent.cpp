@@ -17,10 +17,7 @@ UHealthComponent::UHealthComponent()
 
 	// ...
 	MaxHealth = 1000.0f;
-//	MaxPoise = 25.0f;
 	CurrentHealth = MaxHealth;
-//	CurrentPoise = MaxPoise;
-//	PoiseRegenerationRate = 0.0f;
 }
 
 
@@ -38,12 +35,6 @@ void UHealthComponent::BeginPlay()
 void UHealthComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
-
-//	if (CurrentPoise <= MaxPoise)
-//	{
-//		CurrentPoise += DeltaTime * PoiseRegenerationRate;
-//	}
-
 
 }
 
@@ -129,49 +120,49 @@ void UHealthComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActo
 void UHealthComponent::BlockDamage(float Damage, float PoiseDamage, float DamageDirection, EStaggeringType StaggerType, AEternal_Grace_ArenaCharacter* DamageSource)
 {
 
-	AActor* Owner = GetOwner();
-	AEternal_Grace_ArenaCharacter* Character = Cast<AEternal_Grace_ArenaCharacter>(Owner);
-	//CALCULATE CHIP DAMAGE
-	Damage -= (Damage / 100) * Character->Shield->PhysicalDamageReduction;
-	CurrentHealth -= Damage;
-
-	//CALCULATE STAMINA CONSUMPTION if Defending Actor is Player
-	APlayerCharacter* DefendingPlayer = Cast<APlayerCharacter>(Character);
-	if (DefendingPlayer)
-	{
-		PoiseDamage -= Character->Shield->Stability;
-		DefendingPlayer->StaminaComponent->CurrentStamina -= PoiseDamage;
-		if (DefendingPlayer->StaminaComponent->CurrentStamina <= 0)
-		{
-			DefendingPlayer->PlayAnimMontage(DefendingPlayer->GuardBreakAnimation);
-			return;
-		}
-	}
-
-
-
-	//STILL HAVE TO THINK ABOUT WETHER AND HOW TO IMPLEMENT POISE HERE
-	switch (StaggerType)
-	{
-	case EStaggeringType::NormalStagger:
-		Character->PlayAnimMontage(Character->Block);
-		UE_LOG(LogTemp, Warning, TEXT("Normal Block"))
-			break;
-	case EStaggeringType::HeavyStagger:
-		Character->PlayAnimMontage(Character->BlockHeavyAttack);
-		UE_LOG(LogTemp, Warning, TEXT("Heavy Block"))
-			break;
-	case EStaggeringType::KnockbackStagger:
-		Character->PlayAnimMontage(Character->BlockThrowbackAttack);
-		UE_LOG(LogTemp, Warning, TEXT("Knockback Block"))
-			break;
-	case EStaggeringType::ThrowupStagger:
-		Character->PlayAnimMontage(Character->BlockThrowbackAttack);
-		break;
-	case EStaggeringType::CrushdownStagger:
-		Character->PlayAnimMontage(Character->BlockThrowbackAttack);
-		break;
-	default:
-		break;
-	}
+//	AActor* Owner = GetOwner();
+//	AEternal_Grace_ArenaCharacter* Character = Cast<AEternal_Grace_ArenaCharacter>(Owner);
+//	//CALCULATE CHIP DAMAGE
+//	Damage -= (Damage / 100) * Character->Shield->PhysicalDamageReduction;
+//	CurrentHealth -= Damage;
+//
+//	//CALCULATE STAMINA CONSUMPTION if Defending Actor is Player
+//	APlayerCharacter* DefendingPlayer = Cast<APlayerCharacter>(Character);
+//	if (DefendingPlayer)
+//	{
+//		PoiseDamage -= Character->Shield->Stability;
+//		DefendingPlayer->StaminaComponent->CurrentStamina -= PoiseDamage;
+//		if (DefendingPlayer->StaminaComponent->CurrentStamina <= 0)
+//		{
+//			DefendingPlayer->PlayAnimMontage(DefendingPlayer->GuardBreakAnimation);
+//			return;
+//		}
+//	}
+//
+//
+//
+//	//STILL HAVE TO THINK ABOUT WETHER AND HOW TO IMPLEMENT POISE HERE
+//	switch (StaggerType)
+//	{
+//	case EStaggeringType::NormalStagger:
+//		Character->PlayAnimMontage(Character->Block);
+//		UE_LOG(LogTemp, Warning, TEXT("Normal Block"))
+//			break;
+//	case EStaggeringType::HeavyStagger:
+//		Character->PlayAnimMontage(Character->BlockHeavyAttack);
+//		UE_LOG(LogTemp, Warning, TEXT("Heavy Block"))
+//			break;
+//	case EStaggeringType::KnockbackStagger:
+//		Character->PlayAnimMontage(Character->BlockThrowbackAttack);
+//		UE_LOG(LogTemp, Warning, TEXT("Knockback Block"))
+//			break;
+//	case EStaggeringType::ThrowupStagger:
+//		Character->PlayAnimMontage(Character->BlockThrowbackAttack);
+//		break;
+//	case EStaggeringType::CrushdownStagger:
+//		Character->PlayAnimMontage(Character->BlockThrowbackAttack);
+//		break;
+//	default:
+//		break;
+//}
 }

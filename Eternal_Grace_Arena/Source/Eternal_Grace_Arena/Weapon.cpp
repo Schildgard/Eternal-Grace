@@ -18,8 +18,8 @@ AWeapon::AWeapon()
 void AWeapon::BeginPlay()
 {
 	Super::BeginPlay();
-	Mesh->SetCollisionEnabled(ECollisionEnabled::NoCollision);
-	Mesh->SetCollisionResponseToAllChannels(ECR_Overlap);
+//	Mesh->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+//	Mesh->SetCollisionResponseToAllChannels(ECR_Overlap);
 }
 
 FWeaponStats AWeapon::GetWeaponStats()

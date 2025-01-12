@@ -16,6 +16,8 @@ AEquipment::AEquipment()
 void AEquipment::BeginPlay()
 {
 	Super::BeginPlay();
+	Mesh->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+	Mesh->SetCollisionResponseToAllChannels(ECR_Overlap);
 	
 }
 

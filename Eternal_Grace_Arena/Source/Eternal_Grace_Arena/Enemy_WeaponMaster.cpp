@@ -52,26 +52,26 @@ void AEnemy_WeaponMaster::LightAttack()
 	}
 }
 
-void AEnemy_WeaponMaster::GetDamage_Implementation(float Damage, float PoiseDamage, float DamageDirection, EStaggeringType StaggerType, AEternal_Grace_ArenaCharacter* DamageSource)
-{
-
-	HealthComponent->CurrentHealth -= Damage;
-	UE_LOG(LogTemp, Warning, TEXT("%s got %f Damage"), *GetName(), Damage)
-
-
-	if (StaggerComponent)
-	{
-		UE_LOG(LogTemp, Warning, TEXT("%s Has a Stagger Component. It is now tried to apply Stagger"), *Owner->GetName())
-		StaggerComponent->GetStaggered(StaggerType, PoiseDamage, DamageDirection, DamageSource);
-	}
-
-
-	if (HealthComponent->CurrentHealth <= 0)
-	{
-		HealthComponent->CurrentHealth = 0;
-		Execute_Die(this);
-	}
-}
+//void AEnemy_WeaponMaster::GetDamage_Implementation(float Damage, float PoiseDamage, float DamageDirection, EStaggeringType StaggerType, AEternal_Grace_ArenaCharacter* DamageSource)
+//{
+//
+//	HealthComponent->CurrentHealth -= Damage;
+//	UE_LOG(LogTemp, Warning, TEXT("%s got %f Damage"), *GetName(), Damage)
+//
+//
+//	if (StaggerComponent)
+//	{
+//		UE_LOG(LogTemp, Warning, TEXT("%s Has a Stagger Component. It is now tried to apply Stagger"), *Owner->GetName())
+//		StaggerComponent->GetStaggered(StaggerType, PoiseDamage, DamageDirection, DamageSource);
+//	}
+//
+//
+//	if (HealthComponent->CurrentHealth <= 0)
+//	{
+//		HealthComponent->CurrentHealth = 0;
+//		Execute_Die(this);
+//	}
+//}
 
 void AEnemy_WeaponMaster::GetOffMeMove()
 {

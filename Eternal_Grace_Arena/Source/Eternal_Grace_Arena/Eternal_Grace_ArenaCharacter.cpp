@@ -15,6 +15,7 @@
 #include "CharacterShield.h"
 #include "HealthComponent.h"
 #include "WeaponComponent.h"
+#include "ShieldComponent.h"
 
 DEFINE_LOG_CATEGORY(LogTemplateCharacter);
 
@@ -70,6 +71,9 @@ AEternal_Grace_ArenaCharacter::AEternal_Grace_ArenaCharacter()
 
 	WeaponComponent = CreateDefaultSubobject<UWeaponComponent>("Equipment: Weapon");
 	WeaponComponent->SetupAttachment(GetMesh(), WeaponSocket);
+
+	ShieldComponent = CreateDefaultSubobject<UShieldComponent>("Equipment: Shield");
+	ShieldComponent->SetupAttachment(GetMesh(), ShieldSocket);
 
 }
 
@@ -128,6 +132,10 @@ void AEternal_Grace_ArenaCharacter::BeginPlay()
 	world = GetWorld();
 	InitializeAnimationInstance();
 
+	if(CharacterAnimationInstance && ShieldComponent && ShieldComponent->CheckEquippedShieldClass())
+	{
+		ShieldComponent->SetAnimationInstanceReference();
+	}
 }
 
 void AEternal_Grace_ArenaCharacter::Tick(float DeltaSeconds)
@@ -188,6 +196,25 @@ void AEternal_Grace_ArenaCharacter::Look(const FInputActionValue& Value)
 
 void AEternal_Grace_ArenaCharacter::GetDamage_Implementation(float Damage, float PoiseDamage, float DamageDirection, EStaggeringType StaggerType, AEternal_Grace_ArenaCharacter* DamageSource)
 {
+
+	UE_LOG(LogTemp, Warning, TEXT("%s Base GetDamage Implementation triggered"), *GetName())
+
+	if (ShieldComponent && ShieldComponent->GetCurrentShield())
+	{
+		UE_LOG(LogTemp, Warning, TEXT("%s has a shield"), *GetName())
+		if (CharacterAnimationInstance->isGuarding)
+		{
+			UE_LOG(LogTemp, Warning, TEXT("%s was blocking"), *GetName())
+			//Check if Attack is Frontal
+			if (DamageDirection <= 135.0f || DamageDirection >= 180.0f)
+			{
+				UE_LOG(LogTemp, Warning, TEXT("%s was blocking a frontal attack"), *GetName())
+				ShieldComponent->BlockDamage(Damage, PoiseDamage, DamageDirection, StaggerType, DamageSource);
+				return;
+			}
+		}
+	}
+
 
 	HealthComponent->CurrentHealth -= Damage;
 	UE_LOG(LogTemp, Warning, TEXT("%s got %f Damage"), *GetName(), Damage)

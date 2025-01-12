@@ -16,6 +16,7 @@ class UInputAction;
 class UCharacterShield;
 class UHealthComponent;
 class UWeaponComponent;
+class UShieldComponent;
 struct FInputActionValue;
 
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnCharacterDeath);
@@ -66,21 +67,21 @@ protected:
 
 	//THIS PROPERTIES ARE PUBLIC BECAUSE THEY ARE CURRENTLY ACCESSED BY HEALTH COMPONENT WHICH IS TO BE CHANGED THROUGH AN INTERFACE SYSTEM
 public:
-	//BLOCK AND GUARD ANIMATIONS
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animations, meta = (AllowPrivateAccess))
-	UAnimMontage* Block;
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animations, meta = (AllowPrivateAccess))
-	UAnimMontage* BlockHeavyAttack;
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animations, meta = (AllowPrivateAccess))
-	UAnimMontage* BlockThrowbackAttack;
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animations, meta = (AllowPrivateAccess))
-	UAnimMontage* GuardBreakAnimation;
+//	//BLOCK AND GUARD ANIMATIONS
+//	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animations, meta = (AllowPrivateAccess))
+//	UAnimMontage* Block;
+//	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animations, meta = (AllowPrivateAccess))
+//	UAnimMontage* BlockHeavyAttack;
+//	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animations, meta = (AllowPrivateAccess))
+//	UAnimMontage* BlockThrowbackAttack;
+//	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animations, meta = (AllowPrivateAccess))
+//	UAnimMontage* GuardBreakAnimation;
 
-	//STAGGER ANIMATIONS
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animations, meta = (AllowPrivateAccess))
-	TArray<UAnimMontage*> StaggerAnims;
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animations, meta = (AllowPrivateAccess))
-	TArray<UAnimMontage*> StaggerAnimsBack;
+//	//STAGGER ANIMATIONS
+//	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animations, meta = (AllowPrivateAccess))
+//	TArray<UAnimMontage*> StaggerAnims;
+//	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animations, meta = (AllowPrivateAccess))
+//	TArray<UAnimMontage*> StaggerAnimsBack;
 
 	//DEATH ANIMATIONS
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animations, meta = (AllowPrivateAccess))
@@ -108,6 +109,9 @@ public:
 	UCharacterShield* Shield;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Equipment, meta = (AllowPrivateAccess))
 	FName ShieldSocket;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Equipment, meta = (AllowPrivateAccess))
+	UShieldComponent* ShieldComponent;
+
 
 	//HEALTH
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Attributes, meta = (AllowPrivateAccess))

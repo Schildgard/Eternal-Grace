@@ -36,14 +36,22 @@ void UShieldComponent::BeginPlay()
 		UE_LOG(LogTemp, Error, TEXT("Shield Component of %s Could not Cast its Owner to an EternalGrace Character"), *GetOwner()->GetName())
 			return;
 	}
+	OwningPlayer = Cast<APlayerCharacter>(OwningCharacter);
 
-	OwnersAnimationInstance = OwningCharacter->CharacterAnimationInstance;
-	if (!OwnersAnimationInstance)
+
+	if (!EquippedWeaponClass)
 	{
-		UE_LOG(LogTemp, Error, TEXT("Shield Component of %s Could not get Animation Instance"), *GetOwner()->GetName())
+		UE_LOG(LogTemp, Warning, TEXT("Failed to get Equipped Weapon Class for %s"), *GetName())
 			return;
 	}
-	OwningPlayer = Cast<APlayerCharacter>(OwningCharacter);
+
+	EquippedShield = GetWorld()->SpawnActor<AShield>(EquippedWeaponClass);
+	if (!EquippedShield)
+	{
+		UE_LOG(LogTemp, Warning, TEXT("Failed to Spawn Equipped Weapon Object for %s"), *GetName())
+			return;
+	}
+	EquippedShield->AttachToComponent(this, FAttachmentTransformRules::SnapToTargetNotIncludingScale);
 
 	// ...
 
@@ -74,7 +82,7 @@ void UShieldComponent::BlockDamage(float Damage, float PoiseDamage, float Damage
 	//CALCULTE AND APPLY STAMINA DMG ON PLAYER
 	if (OwningPlayer)
 	{
-		float StaminaDamage = PoiseDamage -((PoiseDamage/100) * EquippedShield->GetShieldStats().Stability);
+		float StaminaDamage = PoiseDamage - ((PoiseDamage / 100) * EquippedShield->GetShieldStats().Stability);
 		OwningPlayer->StaminaComponent->CurrentStamina -= StaminaDamage;
 		if (OwningPlayer->StaminaComponent->CurrentStamina <= 0)
 		{
@@ -109,5 +117,29 @@ void UShieldComponent::CancelGuard()
 	{
 		OwnersAnimationInstance->isGuarding = false;
 	}
+}
+
+AShield* UShieldComponent::GetCurrentShield()
+{
+	return EquippedShield;
+}
+
+void UShieldComponent::SetAnimationInstanceReference()
+{
+	OwnersAnimationInstance = OwningCharacter->CharacterAnimationInstance;
+	if (!OwnersAnimationInstance)
+	{
+		UE_LOG(LogTemp, Error, TEXT("Shield Component of %s Could not get Animation Instance"), *GetOwner()->GetName())
+			return;
+	}
+}
+
+bool UShieldComponent::CheckEquippedShieldClass()
+{
+	if (EquippedWeaponClass != nullptr)
+	{
+		return true;
+	}
+	return false;
 }
 

@@ -31,6 +31,7 @@ class ETERNAL_GRACE_ARENA_API AShield : public AEquipment
 {
 	GENERATED_BODY()
 
+	AShield();
 protected:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Attributes, meta = (AllowPrivateAccess))

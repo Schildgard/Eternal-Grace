@@ -55,5 +55,14 @@ public:
 	UFUNCTION()
 	void CancelGuard();
 
+	UFUNCTION()
+	AShield* GetCurrentShield();
+
+	UFUNCTION()
+	void SetAnimationInstanceReference();
+
+	UFUNCTION()
+	bool CheckEquippedShieldClass();
+
 
 };
