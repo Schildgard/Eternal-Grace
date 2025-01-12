@@ -34,11 +34,11 @@ class ETERNAL_GRACE_ARENA_API AWeapon : public AEquipment
 protected:
 	virtual void BeginPlay()override;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Combat, meta = (AllowPrivateAccess))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Attributes, meta = (AllowPrivateAccess))
 	FWeaponStats Stats;
 
 public:
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Multipliers, meta = (AllowPrivateAccess))
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Attributes, meta = (AllowPrivateAccess))
 	float DamageMultiplier;
 
 
