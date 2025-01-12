@@ -23,7 +23,6 @@ AEternal_Grace_ArenaEnemy::AEternal_Grace_ArenaEnemy()
 	//ReturningToStartPosition = false;
 
 	BackDetection = -0.35f;
-	//SecondPhaseTriggered = false;
 	SensingComponent = CreateDefaultSubobject<UPawnSensingComponent>("Pawn Sensing");
 }
 

@@ -88,9 +88,7 @@ public:
 	UWeaponComponent* WeaponComponent;
 
 
-	//SHIELD
-//UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Equipment, meta = (AllowPrivateAccess))
-//UCharacterShield* Shield;
+
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Equipment, meta = (AllowPrivateAccess))
 	FName ShieldSocket;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Equipment, meta = (AllowPrivateAccess))

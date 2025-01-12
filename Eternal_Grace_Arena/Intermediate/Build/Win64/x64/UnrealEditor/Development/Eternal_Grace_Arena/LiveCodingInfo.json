@@ -1,12 +1,10 @@
 {
 	"RemapUnityFiles": 
 	{
-		"Module.Eternal_Grace_Arena.1.cpp.obj": [
+		"Module.Eternal_Grace_Arena.cpp.obj": [
 			"AnimNotify_PlayRandomSound.gen.cpp.obj",
 			"BlendingWidget.gen.cpp.obj",
 			"CharacterAnimInstance.gen.cpp.obj",
-			"CharacterShield.gen.cpp.obj",
-			"CharacterWeapon.gen.cpp.obj",
 			"CustomPlayerController.gen.cpp.obj",
 			"Damage_Spells.gen.cpp.obj",
 			"Enemy_UI_Healthbar.gen.cpp.obj",
@@ -29,9 +27,7 @@
 			"HitEffectData.gen.cpp.obj",
 			"InteractableActor.gen.cpp.obj",
 			"InteractableActor_SceneLoader.gen.cpp.obj",
-			"I_Damageable.gen.cpp.obj"
-		],
-		"Module.Eternal_Grace_Arena.2.cpp.obj": [
+			"I_Damageable.gen.cpp.obj",
 			"I_Interactable.gen.cpp.obj",
 			"I_Targetable.gen.cpp.obj",
 			"NS_CancelMontage.gen.cpp.obj",
@@ -60,8 +56,6 @@
 			"AnimNotify_PlayRandomSound.cpp.obj",
 			"BlendingWidget.cpp.obj",
 			"CharacterAnimInstance.cpp.obj",
-			"CharacterShield.cpp.obj",
-			"CharacterWeapon.cpp.obj",
 			"CustomPlayerController.cpp.obj",
 			"Damage_Spells.cpp.obj",
 			"Enemy_UI_Healthbar.cpp.obj",
@@ -100,9 +94,7 @@
 			"Shield.cpp.obj",
 			"ShieldComponent.cpp.obj",
 			"Spell.cpp.obj",
-			"SpellComponent.cpp.obj"
-		],
-		"Module.Eternal_Grace_Arena.3.cpp.obj": [
+			"SpellComponent.cpp.obj",
 			"Spells_HomingProjectile.cpp.obj",
 			"Spells_Projectile.cpp.obj",
 			"StaggerComponent.cpp.obj",

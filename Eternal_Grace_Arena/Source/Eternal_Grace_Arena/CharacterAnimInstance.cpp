@@ -4,7 +4,6 @@
 #include "CharacterAnimInstance.h"
 #include "Eternal_Grace_ArenaCharacter.h"
 #include "Eternal_Grace_ArenaEnemy.h"
-#include "CharacterWeapon.h"
 
 void UCharacterAnimInstance::InterruptAttack(UAnimMontage* AttackAnimation, bool Interrupted)
 {

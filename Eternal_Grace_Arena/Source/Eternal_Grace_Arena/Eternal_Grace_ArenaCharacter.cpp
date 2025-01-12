@@ -12,7 +12,6 @@
 #include "InputActionValue.h"
 #include "CharacterAnimInstance.h"
 #include "Kismet/KismetMathLibrary.h"
-#include "CharacterShield.h"
 #include "HealthComponent.h"
 #include "StaggerComponent.h"
 #include "WeaponComponent.h"
