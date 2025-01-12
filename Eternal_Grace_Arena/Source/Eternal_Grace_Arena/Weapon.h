@@ -16,11 +16,11 @@ struct FWeaponStats
 {
 	GENERATED_BODY()
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Combat")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Attributes")
 	float BaseDamage;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Combat")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Attributes")
 	float StaminaCost;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Combat")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Attributes")
 	float PoiseDamage;
 };
 
@@ -33,27 +33,14 @@ class ETERNAL_GRACE_ARENA_API AWeapon : public AEquipment
 
 protected:
 	virtual void BeginPlay()override;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Attributes")
-	float BaseDamage;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Attributes")
-	float StaminaCost;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Attributes")
-	float PoiseDamage;
-
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Combat, meta = (AllowPrivateAccess))
 	FWeaponStats Stats;
 
 public:
-//	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Collision)
-//	TArray<AEternal_Grace_ArenaCharacter*> HittedActors;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Multipliers, meta = (AllowPrivateAccess))
 	float DamageMultiplier;
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Multipliers, meta = (AllowPrivateAccess))
-	EStaggeringType StaggerType;
 
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = HitEffect, meta = (AllowPrivateAccess))
-	UDataTable* HitEffectDataTable;
 
 
 	UFUNCTION()

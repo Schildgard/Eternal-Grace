@@ -12,7 +12,6 @@
 #include "InputActionValue.h"
 #include "CharacterAnimInstance.h"
 #include "Kismet/KismetMathLibrary.h"
-#include "CharacterWeapon.h"
 #include "CharacterShield.h"
 #include "HealthComponent.h"
 #include "WeaponComponent.h"
@@ -64,8 +63,6 @@ AEternal_Grace_ArenaCharacter::AEternal_Grace_ArenaCharacter()
 	WeaponSocket = FName("socket_weaponGrip");
 	ShieldSocket = FName("socket_shieldGrip");
 
-	Weapon = CreateDefaultSubobject<UCharacterWeapon>("Weapon Component");
-	Weapon->SetupAttachment(GetMesh(), WeaponSocket);
 	Shield = CreateDefaultSubobject<UCharacterShield>("Shield Component");
 	Shield->SetupAttachment(GetMesh(), ShieldSocket);
 	HealthComponent = CreateDefaultSubobject<UHealthComponent>(TEXT("Health"));
@@ -131,15 +128,6 @@ void AEternal_Grace_ArenaCharacter::BeginPlay()
 	world = GetWorld();
 	InitializeAnimationInstance();
 
-	if (Weapon)
-	{
-		Weapon->OnComponentBeginOverlap.AddDynamic(Weapon, &UCharacterWeapon::OnOverlapBegin);
-		UE_LOG(LogTemp, Warning, TEXT("Setup Weapon Collision"))
-	}
-	else
-	{
-		UE_LOG(LogTemp, Warning, TEXT("Failed to setup collision for Weapon"))
-	}
 }
 
 void AEternal_Grace_ArenaCharacter::Tick(float DeltaSeconds)
@@ -200,16 +188,9 @@ void AEternal_Grace_ArenaCharacter::Look(const FInputActionValue& Value)
 
 void AEternal_Grace_ArenaCharacter::GetDamage_Implementation(float Damage, float PoiseDamage, float DamageDirection, EStaggeringType StaggerType, AEternal_Grace_ArenaCharacter* DamageSource)
 {
-	//float* CurrentHealth = &HealthComponent->CurrentHealth;
-	//float* CurrentPoise = &HealthComponent->CurrentPoise;
-	//float* MaxHealth = &HealthComponent->MaxHealth;
-	//float* MaxPoise = &HealthComponent->MaxPoise;
 
 	HealthComponent->CurrentHealth -= Damage;
 	UE_LOG(LogTemp, Warning, TEXT("%s got %f Damage"), *GetName(), Damage)
-
-
-
 
 	if (HealthComponent->CurrentHealth <= 0)
 	{

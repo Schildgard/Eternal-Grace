@@ -2,9 +2,9 @@
 
 
 #include "NS_ChargedWeaponSwing.h"
-//#include "Eternal_Grace_ArenaCharacter.h"
 #include "PlayerCharacter.h"
-#include "CharacterWeapon.h"
+#include "WeaponComponent.h"
+#include "Weapon.h"
 
 //THE DIFFERENCE BETWEEN THE CHARGED SWING AND THE NORMAL SWING IS, THAT THE CHARGED ONE ADDS THE PLAYERS CURRENT CHARGE POWER TO ITS DMG MULTIPLIER
 void UNS_ChargedWeaponSwing::NotifyBegin(USkeletalMeshComponent* MeshComp, UAnimSequenceBase* Animation, float TotalDuration, const FAnimNotifyEventReference& EventReference)
@@ -20,15 +20,21 @@ void UNS_ChargedWeaponSwing::NotifyBegin(USkeletalMeshComponent* MeshComp, UAnim
 		}
 	}
 
-	PlayerActor->Weapon->SetCollisionEnabled(ECollisionEnabled::QueryOnly);
-
-	PlayerActor->Weapon->DamageMultiplier = (DamageMultiplier * PlayerActor->currentChargePower);
-	if (PlayerActor->Weapon->DamageMultiplier <= 1.0f)
+	AWeapon* CurrentWeapon = PlayerActor->WeaponComponent->GetCurrentWeapon();
+	if(!CurrentWeapon)
 	{
-		PlayerActor->Weapon->DamageMultiplier = 1.0f;
+		UE_LOG(LogTemp, Warning, TEXT("Could not get current weapon"))
+		return;
+	}
+	CurrentWeapon->GetMesh()->SetCollisionEnabled(ECollisionEnabled::QueryOnly);
+
+	CurrentWeapon->DamageMultiplier = (DamageMultiplier * PlayerActor->currentChargePower);
+	if (CurrentWeapon->DamageMultiplier <= 1.0f)
+	{
+		CurrentWeapon->DamageMultiplier = 1.0f;
 	}
 
-	PlayerActor->Weapon->StaggerType = StaggerType;
+	PlayerActor->WeaponComponent->SetStaggerType(StaggerType);
 }
 
 void UNS_ChargedWeaponSwing::NotifyEnd(USkeletalMeshComponent* MeshComp, UAnimSequenceBase* Animation, const FAnimNotifyEventReference& EventReference)

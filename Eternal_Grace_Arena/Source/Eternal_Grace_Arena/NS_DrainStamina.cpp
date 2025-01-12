@@ -3,8 +3,9 @@
 
 #include "NS_DrainStamina.h"
 #include "PlayerCharacter.h"
-#include "CharacterWeapon.h"
 #include "StaminaComponent.h"
+#include "WeaponComponent.h"
+#include "Weapon.h"
 
 UNS_DrainStamina::UNS_DrainStamina()
 {
@@ -26,5 +27,5 @@ void UNS_DrainStamina::Notify(USkeletalMeshComponent* MeshComp, UAnimSequenceBas
 		}
 	}
 
-	PerformingActor->StaminaComponent->CurrentStamina -= (PerformingActor->Weapon->Values.StaminaCost * ConsumptionMultiplier);
+	PerformingActor->StaminaComponent->CurrentStamina -= (PerformingActor->WeaponComponent->GetCurrentWeapon()->GetWeaponStats().StaminaCost * ConsumptionMultiplier);
 };

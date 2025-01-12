@@ -7,9 +7,11 @@
 
 AWeapon::AWeapon()
 {
-	BaseDamage = 50.0f;
-	PoiseDamage = 20.0f;
-	StaminaCost = 15.0f;
+	Stats = { 50.0f,20.0f,15.0f };
+	//Stats.BaseDamage = 50.0f;
+	//Stats.PoiseDamage = 20.0f;
+	//Stats.StaminaCost = 15.0f;
+	DamageMultiplier = 1.0f;
 	
 }
 

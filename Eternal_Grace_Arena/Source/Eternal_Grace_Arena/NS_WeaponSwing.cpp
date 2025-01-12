@@ -3,7 +3,6 @@
 
 #include "NS_WeaponSwing.h"
 #include "Eternal_Grace_ArenaCharacter.h"
-#include "CharacterWeapon.h"
 #include "WeaponComponent.h"
 #include "Weapon.h"
 
@@ -52,9 +51,7 @@ void UNS_WeaponSwing::NotifyEnd(USkeletalMeshComponent* MeshComp, UAnimSequenceB
 				return;
 		}
 	}
-//	PerformingActor->Weapon->SetCollisionEnabled(ECollisionEnabled::NoCollision);
-//	PerformingActor->Weapon->ResetAttackValues();
-//	PerformingActor->Weapon->StaggerType = EStaggeringType::NormalStagger;
+
 	AWeapon* CurrentWeapon = PerformingActor->WeaponComponent->GetCurrentWeapon();
 	if (!CurrentWeapon)
 	{

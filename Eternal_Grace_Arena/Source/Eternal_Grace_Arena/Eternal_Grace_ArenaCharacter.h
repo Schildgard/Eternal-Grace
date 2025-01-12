@@ -13,7 +13,6 @@ class USpringArmComponent;
 class UCameraComponent;
 class UInputMappingContext;
 class UInputAction;
-class UCharacterWeapon;
 class UCharacterShield;
 class UHealthComponent;
 class UWeaponComponent;
@@ -98,8 +97,6 @@ public:
 	class UCharacterAnimInstance* CharacterAnimationInstance;
 
 	//WEAPON
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Equipment, meta = (AllowPrivateAccess))
-	UCharacterWeapon* Weapon;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Equipment, meta = (AllowPrivateAccess))
 	FName WeaponSocket;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Equipment, meta = (AllowPrivateAccess))
