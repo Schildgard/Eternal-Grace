@@ -4,6 +4,8 @@
 #include "NS_WeaponSwing.h"
 #include "Eternal_Grace_ArenaCharacter.h"
 #include "CharacterWeapon.h"
+#include "WeaponComponent.h"
+#include "Weapon.h"
 
 
 UNS_WeaponSwing::UNS_WeaponSwing()
@@ -26,9 +28,16 @@ void UNS_WeaponSwing::NotifyBegin(USkeletalMeshComponent* MeshComp, UAnimSequenc
 				return;
 		}
 	}
-	PerformingActor->Weapon->SetCollisionEnabled(ECollisionEnabled::QueryOnly);
-	PerformingActor->Weapon->DamageMultiplier = DamageMultiplier;
-	PerformingActor->Weapon->StaggerType = StaggerType;
+
+	AWeapon* CurrentWeapon = PerformingActor->WeaponComponent->GetCurrentWeapon();
+	if(!CurrentWeapon)
+	{
+		UE_LOG(LogTemp, Error, TEXT("WeaponSwing Notify of %s could not get CurrentWeapon from WeaponCOmponent"), *PerformingActor->GetName())
+			return;
+	}
+	CurrentWeapon->GetMesh()->SetCollisionEnabled(ECollisionEnabled::QueryOnly);
+	CurrentWeapon->DamageMultiplier = DamageMultiplier;
+	PerformingActor->WeaponComponent->SetStaggerType(StaggerType);
 }
 
 
@@ -43,7 +52,16 @@ void UNS_WeaponSwing::NotifyEnd(USkeletalMeshComponent* MeshComp, UAnimSequenceB
 				return;
 		}
 	}
-	PerformingActor->Weapon->SetCollisionEnabled(ECollisionEnabled::NoCollision);
-	PerformingActor->Weapon->ResetAttackValues();
-	PerformingActor->Weapon->StaggerType = EStaggeringType::NormalStagger;
+//	PerformingActor->Weapon->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+//	PerformingActor->Weapon->ResetAttackValues();
+//	PerformingActor->Weapon->StaggerType = EStaggeringType::NormalStagger;
+	AWeapon* CurrentWeapon = PerformingActor->WeaponComponent->GetCurrentWeapon();
+	if (!CurrentWeapon)
+	{
+		UE_LOG(LogTemp, Error, TEXT("WeaponSwing Notify of %s could not get CurrentWeapon from WeaponCOmponent"), *PerformingActor->GetName())
+			return;
+	}
+	CurrentWeapon->GetMesh()->SetCollisionEnabled(ECollisionEnabled::NoCollision);	
+	PerformingActor->WeaponComponent->ResetAttackValues();
+	PerformingActor->WeaponComponent->SetStaggerType(EStaggeringType::NormalStagger);
 }

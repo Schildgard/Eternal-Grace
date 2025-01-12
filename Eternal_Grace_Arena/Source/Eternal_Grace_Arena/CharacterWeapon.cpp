@@ -30,58 +30,47 @@ UCharacterWeapon::UCharacterWeapon()
 void UCharacterWeapon::OnOverlapBegin(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
 	// TODO: ACTUALLY IT IS BETTER TO DO THIS IN INITIALIZATION LIKE BEGIN PLAY
-	if (WeaponOwner == nullptr)
-	{
-		WeaponOwner = GetOwner();
-	}
-
-
-	if (OtherActor != WeaponOwner && OtherActor->Implements<UI_Damageable>())
-	{
-		UE_LOG(LogTemp, Warning, TEXT("Hitted Actor has I_Damageable Interface"))
-
-			float Damage = Values.BaseDamage * DamageMultiplier;
-		float PoiseDamage = Values.PoiseDamage * DamageMultiplier;
-		float DamageDirection = CalculateAttackAngle(OtherActor);
-
-		II_Damageable::Execute_GetDamage(OtherActor, Damage, PoiseDamage, DamageDirection, StaggerType, Cast<AEternal_Grace_ArenaCharacter>(WeaponOwner));
-		AEternal_Grace_ArenaCharacter* TargetActor = Cast<AEternal_Grace_ArenaCharacter>(OtherActor);
-
-		HittedActors.AddUnique(TargetActor);
-		ApplyHitEffect(TargetActor->PhysicalMaterial);
-	}
-
-	//if (TargetActor && TargetActor != WeaponOwner)
-	//{
-	//	// CHECK IF HITTED ACTOR HAS AN HEALTH COMPONENT
-	//	if (TargetActor->HealthComponent && HittedActors.Contains(TargetActor) == false)
-	//	{
-	//		DealDamage(TargetActor);
-	//		HittedActors.AddUnique(TargetActor);
-	//	}
-	//}
-	//else if (TargetActor == nullptr) //if hitted Actor is no Character, check if it is an BaseActor
-
-	//{
-		AStaticMeshActor* HitActor = Cast<AStaticMeshActor>(OtherActor);
-		if (HitActor)
-		{
-			UStaticMeshComponent* MeshComponent = HitActor->GetStaticMeshComponent();
-			if (MeshComponent)
-			{
-				UMaterialInterface* Material = MeshComponent->GetMaterial(0);
-				if (Material)
-				{
-					UPhysicalMaterial* PhysMaterial = Material->GetPhysicalMaterial();
-					UE_LOG(LogTemp, Warning, TEXT("Got Phys Material %s"), *PhysMaterial->GetName());
-					ApplyHitEffect(PhysMaterial);
-				}
-
-			}
-		}
-	//}
-
-
+//	if (WeaponOwner == nullptr)
+//	{
+//		WeaponOwner = GetOwner();
+//	}
+//
+//
+//	if (OtherActor != WeaponOwner && OtherActor->Implements<UI_Damageable>())
+//	{
+//		UE_LOG(LogTemp, Warning, TEXT("Hitted Actor has I_Damageable Interface"))
+//
+//			float Damage = Values.BaseDamage * DamageMultiplier;
+//		float PoiseDamage = Values.PoiseDamage * DamageMultiplier;
+//		float DamageDirection = CalculateAttackAngle(OtherActor);
+//
+//		II_Damageable::Execute_GetDamage(OtherActor, Damage, PoiseDamage, DamageDirection, StaggerType, Cast<AEternal_Grace_ArenaCharacter>(WeaponOwner));
+//		AEternal_Grace_ArenaCharacter* TargetActor = Cast<AEternal_Grace_ArenaCharacter>(OtherActor);
+//
+//		HittedActors.AddUnique(TargetActor);
+//		ApplyHitEffect(TargetActor->PhysicalMaterial);
+//	}
+//
+//
+//		AStaticMeshActor* HitActor = Cast<AStaticMeshActor>(OtherActor);
+//		if (HitActor)
+//		{
+//			UStaticMeshComponent* MeshComponent = HitActor->GetStaticMeshComponent();
+//			if (MeshComponent)
+//			{
+//				UMaterialInterface* Material = MeshComponent->GetMaterial(0);
+//				if (Material)
+//				{
+//					UPhysicalMaterial* PhysMaterial = Material->GetPhysicalMaterial();
+//					UE_LOG(LogTemp, Warning, TEXT("Got Phys Material %s"), *PhysMaterial->GetName());
+//					ApplyHitEffect(PhysMaterial);
+//				}
+//
+//			}
+//		}
+//	//}
+//
+//
 
 
 
@@ -90,22 +79,22 @@ void UCharacterWeapon::OnOverlapBegin(UPrimitiveComponent* OverlappedComponent, 
 
 void UCharacterWeapon::DealDamage(AEternal_Grace_ArenaCharacter* Target)
 {
-	float Damage = Values.BaseDamage * DamageMultiplier;
-	float PoiseDamage = Values.PoiseDamage * DamageMultiplier;
-	float DamageDirection = CalculateAttackAngle(Target);
-
-
-	if (Target->Shield && Target->CharacterAnimationInstance->isGuarding && DamageDirection <= 45.0f)
-	{
-		Target->HealthComponent->BlockDamage(Damage, PoiseDamage, DamageDirection, StaggerType, Cast<AEternal_Grace_ArenaCharacter>(WeaponOwner)); //CHANGE THIS CAST LATER TO FIXED VARIABLE
-		if (Target->Shield->PhysicalMaterial)
-		{
-			ApplyHitEffect(Target->Shield->PhysicalMaterial);
-		}
-		return;
-	}
-	//Target->GetDamage(Damage, PoiseDamage, DamageDirection, StaggerType, Cast<AEternal_Grace_ArenaCharacter>(WeaponOwner));
-	ApplyHitEffect(Target->PhysicalMaterial);
+//	float Damage = Values.BaseDamage * DamageMultiplier;
+//	float PoiseDamage = Values.PoiseDamage * DamageMultiplier;
+//	float DamageDirection = CalculateAttackAngle(Target);
+//
+//
+//	if (Target->Shield && Target->CharacterAnimationInstance->isGuarding && DamageDirection <= 45.0f)
+//	{
+//		Target->HealthComponent->BlockDamage(Damage, PoiseDamage, DamageDirection, StaggerType, Cast<AEternal_Grace_ArenaCharacter>(WeaponOwner)); //CHANGE THIS CAST LATER TO FIXED VARIABLE
+//		if (Target->Shield->PhysicalMaterial)
+//		{
+//			ApplyHitEffect(Target->Shield->PhysicalMaterial);
+//		}
+//		return;
+//	}
+//	//Target->GetDamage(Damage, PoiseDamage, DamageDirection, StaggerType, Cast<AEternal_Grace_ArenaCharacter>(WeaponOwner));
+//	ApplyHitEffect(Target->PhysicalMaterial);
 }
 
 void UCharacterWeapon::ApplyHitEffect(UPhysicalMaterial* PhysicalMaterial)

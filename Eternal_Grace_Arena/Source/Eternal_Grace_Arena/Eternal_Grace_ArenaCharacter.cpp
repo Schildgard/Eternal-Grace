@@ -15,6 +15,7 @@
 #include "CharacterWeapon.h"
 #include "CharacterShield.h"
 #include "HealthComponent.h"
+#include "WeaponComponent.h"
 
 DEFINE_LOG_CATEGORY(LogTemplateCharacter);
 
@@ -69,6 +70,9 @@ AEternal_Grace_ArenaCharacter::AEternal_Grace_ArenaCharacter()
 	Shield->SetupAttachment(GetMesh(), ShieldSocket);
 	HealthComponent = CreateDefaultSubobject<UHealthComponent>(TEXT("Health"));
 
+
+	WeaponComponent = CreateDefaultSubobject<UWeaponComponent>("Equipment: Weapon");
+	WeaponComponent->SetupAttachment(GetMesh(), WeaponSocket);
 
 }
 

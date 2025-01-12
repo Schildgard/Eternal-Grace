@@ -94,6 +94,12 @@
     <ClCompile Include="..\..\Source\Eternal_Grace_Arena\Enemy_WeaponMaster.h">
       <Filter>Source\Eternal_Grace_Arena</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\Eternal_Grace_Arena\Equipment.cpp">
+      <Filter>Source\Eternal_Grace_Arena</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Eternal_Grace_Arena\Equipment.h">
+      <Filter>Source\Eternal_Grace_Arena</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\Eternal_Grace_Arena\EternalGrace_BaseActor.cpp">
       <Filter>Source\Eternal_Grace_Arena</Filter>
     </ClCompile>
@@ -323,6 +329,18 @@
       <Filter>Source\Eternal_Grace_Arena</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\Eternal_Grace_Arena\TitleScreenGameMode.h">
+      <Filter>Source\Eternal_Grace_Arena</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Eternal_Grace_Arena\Weapon.cpp">
+      <Filter>Source\Eternal_Grace_Arena</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Eternal_Grace_Arena\Weapon.h">
+      <Filter>Source\Eternal_Grace_Arena</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Eternal_Grace_Arena\WeaponComponent.cpp">
+      <Filter>Source\Eternal_Grace_Arena</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Eternal_Grace_Arena\WeaponComponent.h">
       <Filter>Source\Eternal_Grace_Arena</Filter>
     </ClCompile>
   </ItemGroup>

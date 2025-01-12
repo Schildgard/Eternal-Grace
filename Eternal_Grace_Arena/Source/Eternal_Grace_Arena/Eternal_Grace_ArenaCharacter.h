@@ -16,6 +16,7 @@ class UInputAction;
 class UCharacterWeapon;
 class UCharacterShield;
 class UHealthComponent;
+class UWeaponComponent;
 struct FInputActionValue;
 
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnCharacterDeath);
@@ -101,6 +102,9 @@ public:
 	UCharacterWeapon* Weapon;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Equipment, meta = (AllowPrivateAccess))
 	FName WeaponSocket;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Equipment, meta = (AllowPrivateAccess))
+	UWeaponComponent* WeaponComponent;
+
 
 	//SHIELD
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Equipment, meta = (AllowPrivateAccess))

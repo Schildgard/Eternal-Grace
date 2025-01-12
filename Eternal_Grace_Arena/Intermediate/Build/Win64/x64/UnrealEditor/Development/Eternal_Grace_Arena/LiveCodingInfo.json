@@ -11,6 +11,7 @@
 			"Damage_Spells.gen.cpp.obj",
 			"Enemy_UI_Healthbar.gen.cpp.obj",
 			"Enemy_WeaponMaster.gen.cpp.obj",
+			"Equipment.gen.cpp.obj",
 			"EternalGrace_BaseActor.gen.cpp.obj",
 			"EternalGrace_GameInstance.gen.cpp.obj",
 			"EternalGrace_GameMode.gen.cpp.obj",
@@ -49,6 +50,8 @@
 			"StaggeringType.gen.cpp.obj",
 			"StaminaComponent.gen.cpp.obj",
 			"TitleScreenGameMode.gen.cpp.obj",
+			"Weapon.gen.cpp.obj",
+			"WeaponComponent.gen.cpp.obj",
 			"PerModuleInline.gen.cpp.obj",
 			"AnimNotify_PlayRandomSound.cpp.obj",
 			"BlendingWidget.cpp.obj",
@@ -59,6 +62,7 @@
 			"Damage_Spells.cpp.obj",
 			"Enemy_UI_Healthbar.cpp.obj",
 			"Enemy_WeaponMaster.cpp.obj",
+			"Equipment.cpp.obj",
 			"EternalGrace_BaseActor.cpp.obj",
 			"EternalGrace_GameInstance.cpp.obj",
 			"EternalGrace_GameMode.cpp.obj",
@@ -96,7 +100,9 @@
 			"StaggerComponent.cpp.obj",
 			"StaggeringType.cpp.obj",
 			"StaminaComponent.cpp.obj",
-			"TitleScreenGameMode.cpp.obj"
+			"TitleScreenGameMode.cpp.obj",
+			"Weapon.cpp.obj",
+			"WeaponComponent.cpp.obj"
 		]
 	}
 }
