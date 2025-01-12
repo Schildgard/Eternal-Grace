@@ -14,6 +14,7 @@
 #include "Kismet/KismetMathLibrary.h"
 #include "CharacterShield.h"
 #include "HealthComponent.h"
+#include "StaggerComponent.h"
 #include "WeaponComponent.h"
 #include "ShieldComponent.h"
 
@@ -64,10 +65,8 @@ AEternal_Grace_ArenaCharacter::AEternal_Grace_ArenaCharacter()
 	WeaponSocket = FName("socket_weaponGrip");
 	ShieldSocket = FName("socket_shieldGrip");
 
-	Shield = CreateDefaultSubobject<UCharacterShield>("Shield Component");
-	Shield->SetupAttachment(GetMesh(), ShieldSocket);
 	HealthComponent = CreateDefaultSubobject<UHealthComponent>(TEXT("Health"));
-
+	StaggerComponent = CreateDefaultSubobject<UStaggerComponent>(TEXT("StaggerCOmponent"));
 
 	WeaponComponent = CreateDefaultSubobject<UWeaponComponent>("Equipment: Weapon");
 	WeaponComponent->SetupAttachment(GetMesh(), WeaponSocket);
@@ -132,7 +131,7 @@ void AEternal_Grace_ArenaCharacter::BeginPlay()
 	world = GetWorld();
 	InitializeAnimationInstance();
 
-	if(CharacterAnimationInstance && ShieldComponent && ShieldComponent->CheckEquippedShieldClass())
+	if (CharacterAnimationInstance && ShieldComponent && ShieldComponent->CheckEquippedShieldClass())
 	{
 		ShieldComponent->SetAnimationInstanceReference();
 	}
@@ -194,34 +193,45 @@ void AEternal_Grace_ArenaCharacter::Look(const FInputActionValue& Value)
 }
 
 
-void AEternal_Grace_ArenaCharacter::GetDamage_Implementation(float Damage, float PoiseDamage, float DamageDirection, EStaggeringType StaggerType, AEternal_Grace_ArenaCharacter* DamageSource)
+void AEternal_Grace_ArenaCharacter::GetDamage_Implementation(float Damage, float PoiseDamage, float DamageDirection, EStaggeringType StaggerType, AEternal_Grace_ArenaCharacter* DamageSource, bool Blocked)
 {
 
-	UE_LOG(LogTemp, Warning, TEXT("%s Base GetDamage Implementation triggered"), *GetName())
+	//UE_LOG(LogTemp, Warning, TEXT("%s Base GetDamage Implementation triggered"), *GetName())
 
-	if (ShieldComponent && ShieldComponent->GetCurrentShield())
+	//if (ShieldComponent && ShieldComponent->GetCurrentShield())
+	//{
+	//	UE_LOG(LogTemp, Warning, TEXT("%s has a shield"), *GetName())
+	//	if (CharacterAnimationInstance->isGuarding)
+	//	{
+	//		UE_LOG(LogTemp, Warning, TEXT("%s was blocking"), *GetName())
+	//		//Check if Attack is Frontal
+	//		if (DamageDirection <= 135.0f || DamageDirection >= 180.0f)
+	//		{
+	//			UE_LOG(LogTemp, Warning, TEXT("%s was blocking a frontal attack"), *GetName())
+	//			ShieldComponent->BlockDamage(Damage, PoiseDamage, DamageDirection, StaggerType, DamageSource);
+	//			return;
+	//		}
+	//	}
+	//}
+
+	if (Blocked == true)
 	{
-		UE_LOG(LogTemp, Warning, TEXT("%s has a shield"), *GetName())
-		if (CharacterAnimationInstance->isGuarding)
-		{
-			UE_LOG(LogTemp, Warning, TEXT("%s was blocking"), *GetName())
-			//Check if Attack is Frontal
-			if (DamageDirection <= 135.0f || DamageDirection >= 180.0f)
-			{
-				UE_LOG(LogTemp, Warning, TEXT("%s was blocking a frontal attack"), *GetName())
-				ShieldComponent->BlockDamage(Damage, PoiseDamage, DamageDirection, StaggerType, DamageSource);
-				return;
-			}
-		}
+		ShieldComponent->BlockDamage(Damage, PoiseDamage, DamageDirection, StaggerType, DamageSource);
+		return;
 	}
 
 
 	HealthComponent->CurrentHealth -= Damage;
 	UE_LOG(LogTemp, Warning, TEXT("%s got %f Damage"), *GetName(), Damage)
 
+		if (StaggerComponent)
+		{
+			StaggerComponent->GetStaggered(StaggerType, PoiseDamage, DamageDirection, DamageSource);
+		}
+
 	if (HealthComponent->CurrentHealth <= 0)
 	{
-		HealthComponent-> CurrentHealth = 0;
+		HealthComponent->CurrentHealth = 0;
 		Execute_Die(this);
 	}
 
@@ -245,7 +255,7 @@ void AEternal_Grace_ArenaCharacter::CheckActorStaggerAnimation(UAnimMontage* Mon
 {
 	if (Montage)
 	{
-	PlayAnimMontage(Montage);
+		PlayAnimMontage(Montage);
 	}
 	else
 	{

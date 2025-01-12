@@ -91,7 +91,14 @@ void UShieldComponent::BlockDamage(float Damage, float PoiseDamage, float Damage
 			return;
 		}
 	}
-	//APPLY BLOACK REACTION
+
+	if(OwningCharacter->HealthComponent->CurrentHealth <= 0)
+	{
+		II_Damageable::Execute_Die(OwningCharacter);
+	}
+
+
+	//APPLY BLOCK REACTION
 	if (BlockAnimationMap.Contains(StaggerType))
 	{
 		OwningCharacter->PlayAnimMontage(BlockAnimationMap[StaggerType]);

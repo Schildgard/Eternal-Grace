@@ -13,8 +13,8 @@ class USpringArmComponent;
 class UCameraComponent;
 class UInputMappingContext;
 class UInputAction;
-class UCharacterShield;
 class UHealthComponent;
+class UStaggerComponent;
 class UWeaponComponent;
 class UShieldComponent;
 struct FInputActionValue;
@@ -65,23 +65,7 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animations, meta = (AllowPrivateAccess))
 	TArray<UAnimMontage*> LightAttacks;
 
-	//THIS PROPERTIES ARE PUBLIC BECAUSE THEY ARE CURRENTLY ACCESSED BY HEALTH COMPONENT WHICH IS TO BE CHANGED THROUGH AN INTERFACE SYSTEM
 public:
-//	//BLOCK AND GUARD ANIMATIONS
-//	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animations, meta = (AllowPrivateAccess))
-//	UAnimMontage* Block;
-//	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animations, meta = (AllowPrivateAccess))
-//	UAnimMontage* BlockHeavyAttack;
-//	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animations, meta = (AllowPrivateAccess))
-//	UAnimMontage* BlockThrowbackAttack;
-//	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animations, meta = (AllowPrivateAccess))
-//	UAnimMontage* GuardBreakAnimation;
-
-//	//STAGGER ANIMATIONS
-//	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animations, meta = (AllowPrivateAccess))
-//	TArray<UAnimMontage*> StaggerAnims;
-//	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animations, meta = (AllowPrivateAccess))
-//	TArray<UAnimMontage*> StaggerAnimsBack;
 
 	//DEATH ANIMATIONS
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animations, meta = (AllowPrivateAccess))
@@ -105,8 +89,8 @@ public:
 
 
 	//SHIELD
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Equipment, meta = (AllowPrivateAccess))
-	UCharacterShield* Shield;
+//UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Equipment, meta = (AllowPrivateAccess))
+//UCharacterShield* Shield;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Equipment, meta = (AllowPrivateAccess))
 	FName ShieldSocket;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Equipment, meta = (AllowPrivateAccess))
@@ -117,10 +101,14 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Attributes, meta = (AllowPrivateAccess))
 	UHealthComponent* HealthComponent;
 
+	//STAGGERCOMPONENT
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Attribtues, meta = (AllowPrivateAccess))
+	UStaggerComponent* StaggerComponent;
+
 	UPROPERTY(BlueprintAssignable, Category = "Events")
 	FOnCharacterDeath OnCharacterDeath;
 
-	virtual void GetDamage_Implementation(float Damage, float PoiseDamage, float DamageDirection, EStaggeringType StaggerType, AEternal_Grace_ArenaCharacter* DamageSource)override;
+	virtual void GetDamage_Implementation(float Damage, float PoiseDamage, float DamageDirection, EStaggeringType StaggerType, AEternal_Grace_ArenaCharacter* DamageSource, bool Blocked)override;
 	virtual void Die_Implementation()override;
 
 

@@ -9,6 +9,9 @@
 #include "HitEffectData.h"
 #include "NiagaraFunctionLibrary.h"
 #include "Engine/StaticMeshActor.h"
+#include "ShieldComponent.h"
+#include "Shield.h"
+#include "CharacterAnimInstance.h"
 
 // Sets default values for this component's properties
 UWeaponComponent::UWeaponComponent()
@@ -63,34 +66,60 @@ void UWeaponComponent::DealDamage(UPrimitiveComponent* OverlappedComponent, AAct
 
 	if (OtherActor != WeaponOwner && OtherActor->Implements<UI_Damageable>())
 	{
+		UPhysicalMaterial* HitEffectToApply;
+
+		//CALCULATE DAMAGE PROPERTIES
 		float Damage = EquippedWeapon->GetWeaponStats().BaseDamage * EquippedWeapon->DamageMultiplier;
 		float PoiseDamage = EquippedWeapon->GetWeaponStats().PoiseDamage * EquippedWeapon->DamageMultiplier;;
 		float DamageDirection = CalculateAttackAngle(OtherActor);
+		bool AttackWasBlocked = false;
 
-		II_Damageable::Execute_GetDamage(OtherActor, Damage, PoiseDamage, DamageDirection, CurrentStaggerType, Cast<AEternal_Grace_ArenaCharacter>(WeaponOwner));
+
+		//CHECK IF HITTED WAS A CHARACTER
 		AEternal_Grace_ArenaCharacter* TargetActor = Cast<AEternal_Grace_ArenaCharacter>(OtherActor);
+		if (TargetActor)
+		{
+			HitEffectToApply = TargetActor->PhysicalMaterial;
+			HittedActors.AddUnique(TargetActor);
+			//CHECK IF ATTACK WAS FRONTAL AND BLOCKED BY A SHIELD
+			//IF SO, THE GET DAMAGE PARAMETER CHANGES SO IT RECOGNIZES THE BLOCK AND THE WEAPON APPLIES HIT EFFECT OF THE SHIELD INSTEAD OF THE TARGET
+			if (TargetActor->ShieldComponent && TargetActor->ShieldComponent->GetCurrentShield())
+			{
+				if (TargetActor->CharacterAnimationInstance->isGuarding)
+				{
+					if (DamageDirection <= 135.0f || DamageDirection >= 180.0f)
+					{
+						AttackWasBlocked = true;
+						HitEffectToApply = TargetActor->ShieldComponent->GetCurrentShield()->GetShieldStats().PhysicalMaterial;
+					}
+				}
+			}
+			ApplyHitEffect(HitEffectToApply);
+		}
 
-		HittedActors.AddUnique(TargetActor);
-		ApplyHitEffect(TargetActor->PhysicalMaterial);
+		II_Damageable::Execute_GetDamage(OtherActor, Damage, PoiseDamage, DamageDirection, CurrentStaggerType, Cast<AEternal_Grace_ArenaCharacter>(WeaponOwner), AttackWasBlocked);
 		return;
 	}
 
-	AStaticMeshActor* HitActor = Cast<AStaticMeshActor>(OtherActor);
-	if (HitActor)
-	{
-		UStaticMeshComponent* MeshComponent = HitActor->GetStaticMeshComponent();
-		if (MeshComponent)
-		{
-			UMaterialInterface* Material = MeshComponent->GetMaterial(0);
-			if (Material)
-			{
-				UPhysicalMaterial* PhysMaterial = Material->GetPhysicalMaterial();
-				UE_LOG(LogTemp, Warning, TEXT("Got Phys Material %s"), *PhysMaterial->GetName());
-				ApplyHitEffect(PhysMaterial);
-			}
 
-		}
-	}
+
+
+	//AStaticMeshActor* HitActor = Cast<AStaticMeshActor>(OtherActor);
+	//if (HitActor)
+	//{
+	//	UStaticMeshComponent* MeshComponent = HitActor->GetStaticMeshComponent();
+	//	if (MeshComponent)
+	//	{
+	//		UMaterialInterface* Material = MeshComponent->GetMaterial(0);
+	//		if (Material)
+	//		{
+	//			UPhysicalMaterial* PhysMaterial = Material->GetPhysicalMaterial();
+	//			UE_LOG(LogTemp, Warning, TEXT("Got Phys Material %s"), *PhysMaterial->GetName());
+	//			ApplyHitEffect(PhysMaterial);
+	//		}
+	//
+	//	}
+	//}
 
 }
 
@@ -159,5 +188,21 @@ void UWeaponComponent::ResetAttackValues()
 {
 	EquippedWeapon->DamageMultiplier = 1.0f;
 	HittedActors.Empty();
+}
+
+UPhysicalMaterial* UWeaponComponent::GetPhysicalMaterial(UPrimitiveComponent* OverlappedComponent)
+{
+	//CURRENTLY NOT IN USE AT ALL DUE TO COMPLICATIONS. PROBABLY CHANGE THE PARAMETER TO ANOTHER TYPE TO MAKE IT WORK
+	UE_LOG(LogTemp, Error, TEXT("Overllaped Component is %s"), *OverlappedComponent->GetName())
+		UMaterialInterface* TargetMaterial = OverlappedComponent->GetMaterial(0);
+	if (TargetMaterial)
+	{
+		UPhysicalMaterial* TargetsPhyiscalMaterial = TargetMaterial->GetPhysicalMaterial();
+		if (TargetsPhyiscalMaterial)
+		{
+			return TargetsPhyiscalMaterial;
+		}
+	}
+	return nullptr;
 }
 

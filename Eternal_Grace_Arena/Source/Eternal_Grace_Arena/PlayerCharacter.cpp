@@ -3,7 +3,6 @@
 
 #include "PlayerCharacter.h"
 #include "StaminaComponent.h"
-#include "StaggerComponent.h"
 #include "CharacterAnimInstance.h"
 #include "GameFramework/CharacterMovementComponent.h"
 #include "Kismet/KismetSystemLibrary.h"
@@ -20,7 +19,6 @@
 APlayerCharacter::APlayerCharacter()
 {
 	StaminaComponent = CreateDefaultSubobject<UStaminaComponent>("StaminaComponent");
-	StaggerComponent = CreateDefaultSubobject<UStaggerComponent>("StaggerComponent");
 
 	RunningStaminaConsumption = 15.0f;
 	GuardCounterReactionCountdown = GuardCounterReactionTimer;

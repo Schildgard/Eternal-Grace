@@ -25,7 +25,7 @@ class ETERNAL_GRACE_ARENA_API II_Damageable
 public:
 
 	UFUNCTION(BlueprintNativeEvent)
-	void GetDamage(float Damage, float PoiseDamage, float DamageDirection, EStaggeringType StaggerType, AEternal_Grace_ArenaCharacter* DamageSource);
+	void GetDamage(float Damage, float PoiseDamage, float DamageDirection, EStaggeringType StaggerType, AEternal_Grace_ArenaCharacter* DamageSource, bool Blocked);
 
 	UFUNCTION(BlueprintNativeEvent)
 	void Die();

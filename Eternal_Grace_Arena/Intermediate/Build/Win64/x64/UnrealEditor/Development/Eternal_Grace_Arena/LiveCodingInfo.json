@@ -100,12 +100,12 @@
 			"Shield.cpp.obj",
 			"ShieldComponent.cpp.obj",
 			"Spell.cpp.obj",
-			"SpellComponent.cpp.obj",
-			"Spells_HomingProjectile.cpp.obj",
-			"Spells_Projectile.cpp.obj",
-			"StaggerComponent.cpp.obj"
+			"SpellComponent.cpp.obj"
 		],
 		"Module.Eternal_Grace_Arena.3.cpp.obj": [
+			"Spells_HomingProjectile.cpp.obj",
+			"Spells_Projectile.cpp.obj",
+			"StaggerComponent.cpp.obj",
 			"StaggeringType.cpp.obj",
 			"StaminaComponent.cpp.obj",
 			"TitleScreenGameMode.cpp.obj",
