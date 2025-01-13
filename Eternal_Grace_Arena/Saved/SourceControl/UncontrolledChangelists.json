@@ -49,7 +49,6 @@
 				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/__ExternalActors__/Levels/Level_Mage/2/RY/K2F9KVM5PH71LTOLMBOM8U.uasset",
 				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/__ExternalActors__/Levels/Level_Mage/7/QT/X8FMDD470E6487P8WXC8VL.uasset",
 				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/__ExternalActors__/Levels/Level_Mage/4/1H/Z9JTZC76DCEO7LN5CZUE7E.uasset",
-				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/__ExternalActors__/Levels/Level_Mage/9/83/NMJNIA99S9JTP51JNDZK8I.uasset",
 				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/__ExternalObjects__/Levels/Level_Mage/A/J1/91D3JH9P885O675RLI20WS.uasset",
 				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/__ExternalObjects__/Levels/Level_Mage/1/V7/GCHNPH9VD9V6OBQX5PR9B3.uasset",
 				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/__ExternalObjects__/Levels/Level_Mage/A/97/Q8KYT3JQ0W3489OE3ZL1A6.uasset",
@@ -59,7 +58,17 @@
 				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Levels/Level_Mage.umap",
 				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Blueprints/Test_Enemy_Caster.uasset",
 				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Blueprints/Spells/BP_Spell_Fireball.uasset",
-				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/__ExternalActors__/Levels/Level_Mage/B/NX/TXJTEBAW4JYH9CGVU8843B.uasset"
+				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/__ExternalActors__/Levels/Level_Mage/B/NX/TXJTEBAW4JYH9CGVU8843B.uasset",
+				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Realistic_Starter_VFX_Pack_Vol2/Particles/Explosion/P_Molotov_Converted.uasset",
+				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Realistic_Starter_VFX_Pack_Vol2/Materials/M_Fire_C.uasset",
+				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Realistic_Starter_VFX_Pack_Vol2/Materials/M_Fire_Splat.uasset",
+				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Realistic_Starter_VFX_Pack_Vol2/Materials/M_Glow_D.uasset",
+				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/DarkFantasyCastle/Particle/NS_NS1_Fire_Camp.uasset",
+				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/DarkFantasyCastle/Particle/NS_Fire_01.uasset",
+				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Levels/Level_Main.umap",
+				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Audio/Spell_Sounds/Fire_Blast_D.uasset",
+				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Audio/Spell_Sounds/Fireball_C.uasset",
+				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/__ExternalActors__/Levels/Level_Mage/9/83/NMJNIA99S9JTP51JNDZK8I.uasset"
 			]
 		}
 	]

@@ -23,4 +23,5 @@ protected:
 	FVector Direction;
 
 	virtual void Tick(float DeltaSeconds)override;
+	virtual void DealDamage(AEternal_Grace_ArenaCharacter* Target)override;
 };

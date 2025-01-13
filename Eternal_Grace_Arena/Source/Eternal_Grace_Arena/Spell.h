@@ -32,6 +32,16 @@ protected:
 	UPROPERTY(EditAnywhere,BlueprintReadWrite, meta =(AllowPrivateAccess))
 	TSubclassOf<AEternal_Grace_ArenaCharacter> ValidCharacterClass;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (AllowPrivateAccess))
+	USoundBase* SpawningSound;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (AllowPrivateAccess))
+	USoundBase* LoopSound;
+
+
+
+	UPROPERTY()
+	AEternal_Grace_ArenaCharacter* InstigatingActor;
+
 	UFUNCTION()
 	virtual void SpellEffect(UPrimitiveComponent* OverlappedComponent,AActor* OtherActor,UPrimitiveComponent* OtherComponent,int32 OtherBodyIndex,bool bFromSweep,const FHitResult& SweepResult);
 

@@ -14,7 +14,9 @@ class ETERNAL_GRACE_ARENA_API ADamage_Spells : public ASpell
 {
 	GENERATED_BODY()
 
+
 protected:
+	ADamage_Spells();
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (AllowPrivateAccess))
 	float DamageValue; //APPLY NEGATIVE VALUE FOR HEALING EFFECTS
 
@@ -23,6 +25,8 @@ protected:
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, meta =(AllowPrivateAccess))
 	USoundBase* HitSFX;
+
+
 
 	virtual void SpellEffect(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComponent, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)override;
 

@@ -5,17 +5,20 @@
 #include "Components/SphereComponent.h"
 #include "NiagaraComponent.h"
 #include "Eternal_Grace_ArenaCharacter.h"
+#include "Kismet/GameplayStatics.h"
 
 // Sets default values
 ASpell::ASpell()
 {
- 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
+	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
 	HitBox = CreateDefaultSubobject<USphereComponent>("HitBox");
 	RootComponent = HitBox;
 	SpellVFX = CreateDefaultSubobject<UNiagaraComponent>("Spell Effect");
 	SpellVFX->SetupAttachment(RootComponent);
+
+	InstigatingActor = nullptr;
 
 	ValidCharacterClass = nullptr;
 
@@ -26,28 +29,31 @@ void ASpell::BeginPlay()
 {
 	Super::BeginPlay();
 	HitBox->OnComponentBeginOverlap.AddDynamic(this, &ASpell::SpellEffect);
-	UE_LOG(LogTemp, Warning, TEXT("%s was casted"), *GetName())
+
+	if (SpawningSound)
+	{
+		UGameplayStatics::PlaySoundAtLocation(GetWorld(), SpawningSound, GetActorLocation(), 1.0f);
+	}
+
+	InstigatingActor = Cast<AEternal_Grace_ArenaCharacter>(GetInstigator());
+	if (!InstigatingActor)
+	{
+		UE_LOG(LogTemp, Warning, TEXT("%s could not get Instigating Character"), *GetName())
+			return;
+	}
+	if (LoopSound)
+	{
+		UGameplayStatics::SpawnSoundAttached(LoopSound, InstigatingActor->GetRootComponent(), NAME_None, FVector(0.0f), EAttachLocation::SnapToTarget, true, true);
+	}
+
 }
 
-void ASpell::SpellEffect(UPrimitiveComponent* OverlappedComponent,AActor* OtherActor,UPrimitiveComponent* OtherComponent,int32 OtherBodyIndex,bool bFromSweep,const FHitResult& SweepResult)
+void ASpell::SpellEffect(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComponent, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
-	AActor* InstignatingActor = GetInstigator();
-		if (ValidCharacterClass == nullptr)
-		{
-			return;
-		}
-//if(OnHitVFX)
-//{
-//UNiagaraFunctionLibrary::SpawnSystemAttached(OnHitVFX, OtherComponent, NAME_None, FVector(0.0f), FRotator(0.0f), EAttachLocation::KeepRelativeOffset, true);
-//}
-		//if (OtherActor && OtherActor->IsA(ValidCharacterClass))
-		//{
-		//	AEternal_Grace_ArenaCharacter* HittedCharacter = Cast<AEternal_Grace_ArenaCharacter>(OtherActor);
-		//	if(HittedCharacter)
-		//	{
-		//		UE_LOG(LogTemp, Warning, TEXT("%s hitted"), *GetName(), *HittedCharacter->GetName())
-		//	}
-		//}
+	if (ValidCharacterClass == nullptr)
+	{
+		return;
+	}
 }
 
 // Called every frame

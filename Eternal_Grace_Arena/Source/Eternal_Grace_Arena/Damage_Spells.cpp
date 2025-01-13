@@ -8,6 +8,16 @@
 #include "NiagaraFunctionLibrary.h"
 #include "HealthComponent.h"
 
+
+
+ADamage_Spells::ADamage_Spells()
+{
+	DamageValue = 500.0f;
+	PoiseDamage = 100.0f;
+	HitSFX = nullptr;
+
+}
+
 void ADamage_Spells::SpellEffect(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComponent, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
 	Super::SpellEffect(OverlappedComponent, OtherActor, OtherComponent, OtherBodyIndex, bFromSweep, SweepResult);
@@ -33,16 +43,14 @@ void ADamage_Spells::DealDamage(AEternal_Grace_ArenaCharacter* Target)
 {
 	float HitAngle = CalculateAttackAngle(Target);
 
+	if(Target->Implements<UI_Damageable>())
+	{
+		II_Damageable::Execute_GetDamage(Target,DamageValue, PoiseDamage, HitAngle, EStaggeringType::NormalStagger, InstigatingActor, false);//ONLY PROJECTILES CAN BE BLOCKED
+	}
 	if (HitSFX)
 	{
 		UGameplayStatics::PlaySoundAtLocation(GetWorld(), HitSFX, Target->GetActorLocation());
 	}
-	AEternal_Grace_ArenaCharacter* Caster = Cast<AEternal_Grace_ArenaCharacter>(GetInstigator()); //BULLSHIT CODE. NEED TO REFACTOR HEALTH COMPONENT
-	if (Caster)
-	{
-	//	Target->GetDamage(DamageValue, PoiseDamage, HitAngle, EStaggeringType::NormalStagger, Caster);
-	}
-	else UE_LOG(LogTemp, Warning, TEXT("Caster could not be casted to a Eternal grace Character"))
 
 }
 
