@@ -12,6 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <None Include="..\..\.gitignore" />
+    <None Include="..\..\.vsconfig" />
     <Filter Include="Config">
       <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
     </Filter>
@@ -216,6 +217,12 @@
     <ClCompile Include="..\..\Source\Eternal_Grace_Arena\NS_CancelMontage.h">
       <Filter>Source\Eternal_Grace_Arena</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\Eternal_Grace_Arena\NS_CastSpell.cpp">
+      <Filter>Source\Eternal_Grace_Arena</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Eternal_Grace_Arena\NS_CastSpell.h">
+      <Filter>Source\Eternal_Grace_Arena</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\Eternal_Grace_Arena\NS_ChargedWeaponSwing.cpp">
       <Filter>Source\Eternal_Grace_Arena</Filter>
     </ClCompile>
@@ -282,6 +289,18 @@
     <ClCompile Include="..\..\Source\Eternal_Grace_Arena\ShieldComponent.h">
       <Filter>Source\Eternal_Grace_Arena</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\Eternal_Grace_Arena\SpawnManager.cpp">
+      <Filter>Source\Eternal_Grace_Arena</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Eternal_Grace_Arena\SpawnManager.h">
+      <Filter>Source\Eternal_Grace_Arena</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Eternal_Grace_Arena\SpawnPoint.cpp">
+      <Filter>Source\Eternal_Grace_Arena</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Eternal_Grace_Arena\SpawnPoint.h">
+      <Filter>Source\Eternal_Grace_Arena</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\Eternal_Grace_Arena\Spell.cpp">
       <Filter>Source\Eternal_Grace_Arena</Filter>
     </ClCompile>
@@ -304,6 +323,12 @@
       <Filter>Source\Eternal_Grace_Arena</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\Eternal_Grace_Arena\Spells_Projectile.h">
+      <Filter>Source\Eternal_Grace_Arena</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Eternal_Grace_Arena\Spell_Teleport.cpp">
+      <Filter>Source\Eternal_Grace_Arena</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Eternal_Grace_Arena\Spell_Teleport.h">
       <Filter>Source\Eternal_Grace_Arena</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\Eternal_Grace_Arena\StaggerComponent.cpp">

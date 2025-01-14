@@ -28,6 +28,7 @@ ASpell::ASpell()
 void ASpell::BeginPlay()
 {
 	Super::BeginPlay();
+
 	HitBox->OnComponentBeginOverlap.AddDynamic(this, &ASpell::SpellEffect);
 
 	if (SpawningSound)

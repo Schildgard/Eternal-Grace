@@ -1,7 +1,7 @@
 {
 	"RemapUnityFiles": 
 	{
-		"Module.Eternal_Grace_Arena.cpp.obj": [
+		"Module.Eternal_Grace_Arena.1.cpp.obj": [
 			"AnimNotify_PlayRandomSound.gen.cpp.obj",
 			"BlendingWidget.gen.cpp.obj",
 			"CharacterAnimInstance.gen.cpp.obj",
@@ -31,7 +31,10 @@
 			"I_Interactable.gen.cpp.obj",
 			"I_Targetable.gen.cpp.obj",
 			"NS_CancelMontage.gen.cpp.obj",
-			"NS_ChargedWeaponSwing.gen.cpp.obj",
+			"NS_CastSpell.gen.cpp.obj",
+			"NS_ChargedWeaponSwing.gen.cpp.obj"
+		],
+		"Module.Eternal_Grace_Arena.2.cpp.obj": [
 			"NS_ContinousRecourceConsumption.gen.cpp.obj",
 			"NS_DrainStamina.gen.cpp.obj",
 			"NS_RotateTowardsTarget.gen.cpp.obj",
@@ -42,10 +45,13 @@
 			"Player_UI_Bars.gen.cpp.obj",
 			"Shield.gen.cpp.obj",
 			"ShieldComponent.gen.cpp.obj",
+			"SpawnManager.gen.cpp.obj",
+			"SpawnPoint.gen.cpp.obj",
 			"Spell.gen.cpp.obj",
 			"SpellComponent.gen.cpp.obj",
 			"Spells_HomingProjectile.gen.cpp.obj",
 			"Spells_Projectile.gen.cpp.obj",
+			"Spell_Teleport.gen.cpp.obj",
 			"StaggerComponent.gen.cpp.obj",
 			"StaggeringType.gen.cpp.obj",
 			"StaminaComponent.gen.cpp.obj",
@@ -82,6 +88,7 @@
 			"I_Interactable.cpp.obj",
 			"I_Targetable.cpp.obj",
 			"NS_CancelMontage.cpp.obj",
+			"NS_CastSpell.cpp.obj",
 			"NS_ChargedWeaponSwing.cpp.obj",
 			"NS_ContinousRecourceConsumption.cpp.obj",
 			"NS_DrainStamina.cpp.obj",
@@ -89,14 +96,19 @@
 			"NS_SetStaggered.cpp.obj",
 			"NS_WeaponSwing.cpp.obj",
 			"NS_WeaponSwing_CollisionToggle.cpp.obj",
-			"PlayerCharacter.cpp.obj",
+			"PlayerCharacter.cpp.obj"
+		],
+		"Module.Eternal_Grace_Arena.3.cpp.obj": [
 			"Player_UI_Bars.cpp.obj",
 			"Shield.cpp.obj",
 			"ShieldComponent.cpp.obj",
+			"SpawnManager.cpp.obj",
+			"SpawnPoint.cpp.obj",
 			"Spell.cpp.obj",
 			"SpellComponent.cpp.obj",
 			"Spells_HomingProjectile.cpp.obj",
 			"Spells_Projectile.cpp.obj",
+			"Spell_Teleport.cpp.obj",
 			"StaggerComponent.cpp.obj",
 			"StaggeringType.cpp.obj",
 			"StaminaComponent.cpp.obj",

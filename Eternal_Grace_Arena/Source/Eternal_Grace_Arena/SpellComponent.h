@@ -19,13 +19,23 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, meta =(AllowPrivateAccess))
 	TArray<TSubclassOf<ASpell>> SpellList;
+
 protected:
 	// Called when the game starts
 	virtual void BeginPlay() override;
-
+	UPROPERTY()
+	FVector TargetPosition;
 public:	
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
+	UFUNCTION()
+	virtual void CastSpell(ASpell* SpellToCast);
+
+	UFUNCTION()
+	void SetTargetPosition(FVector NewPosition);
+
+	UFUNCTION()
+	FVector GetTargetPosition();
 		
 };

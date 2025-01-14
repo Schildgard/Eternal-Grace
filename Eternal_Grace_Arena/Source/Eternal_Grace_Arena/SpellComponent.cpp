@@ -31,3 +31,19 @@ void USpellComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActor
 	// ...
 }
 
+void USpellComponent::CastSpell(ASpell* SpellToCast)
+{
+
+	UE_LOG(LogTemp, Warning, TEXT("%s was casted through Spell Component"), *SpellToCast->GetName())
+}
+
+void USpellComponent::SetTargetPosition(FVector NewPosition)
+{
+	TargetPosition = NewPosition;
+}
+
+FVector USpellComponent::GetTargetPosition()
+{
+	return TargetPosition;
+}
+
