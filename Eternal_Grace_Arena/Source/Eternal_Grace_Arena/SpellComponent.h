@@ -22,14 +22,10 @@ public:
 protected:
 	virtual void BeginPlay() override;
 
-	//UPROPERTY()
-	//AEternal_Grace_ArenaCharacter* InstigatingActor;
-
 
 	UPROPERTY()
 	FVector TargetPosition;
 public:	
-	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
 	UFUNCTION()
@@ -40,8 +36,5 @@ public:
 
 	UFUNCTION()
 	FVector GetTargetPosition();
-
-	//UFUNCTION()
-	//AEternal_Grace_ArenaCharacter* GetInstigator();
-		
+	
 };

@@ -162,7 +162,6 @@ bool AEternal_Grace_ArenaEnemy::CheckIfPlayerIsBehind()
 	OwnerPlayerDistance.Normalize();
 
 	float dotproduct = UKismetMathLibrary::Dot_VectorVector(OwnerPlayerDistance, OwnerForwardDirection);
-	//float distance = UKismetMathLibrary::Vector_Distance(OwnerLocation, PlayerLocation);
 
 	DrawDebugLine(world, OwnerLocation, PlayerLocation, DebugColor, true, 2.0f);
 	if (dotproduct < BackDetection)

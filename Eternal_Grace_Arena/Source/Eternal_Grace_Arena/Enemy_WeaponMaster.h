@@ -15,8 +15,6 @@ class ETERNAL_GRACE_ARENA_API AEnemy_WeaponMaster : public AEternal_Grace_ArenaB
 	GENERATED_BODY()
 
 
-
-
 protected:
 	AEnemy_WeaponMaster();
 	virtual void LightAttack()override;

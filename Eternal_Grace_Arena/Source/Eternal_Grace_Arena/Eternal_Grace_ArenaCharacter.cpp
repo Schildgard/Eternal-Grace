@@ -195,24 +195,6 @@ void AEternal_Grace_ArenaCharacter::Look(const FInputActionValue& Value)
 void AEternal_Grace_ArenaCharacter::GetDamage_Implementation(float Damage, float PoiseDamage, float DamageDirection, EStaggeringType StaggerType, AEternal_Grace_ArenaCharacter* DamageSource, bool Blocked)
 {
 
-	//UE_LOG(LogTemp, Warning, TEXT("%s Base GetDamage Implementation triggered"), *GetName())
-
-	//if (ShieldComponent && ShieldComponent->GetCurrentShield())
-	//{
-	//	UE_LOG(LogTemp, Warning, TEXT("%s has a shield"), *GetName())
-	//	if (CharacterAnimationInstance->isGuarding)
-	//	{
-	//		UE_LOG(LogTemp, Warning, TEXT("%s was blocking"), *GetName())
-	//		//Check if Attack is Frontal
-	//		if (DamageDirection <= 135.0f || DamageDirection >= 180.0f)
-	//		{
-	//			UE_LOG(LogTemp, Warning, TEXT("%s was blocking a frontal attack"), *GetName())
-	//			ShieldComponent->BlockDamage(Damage, PoiseDamage, DamageDirection, StaggerType, DamageSource);
-	//			return;
-	//		}
-	//	}
-	//}
-
 	if (Blocked == true)
 	{
 		ShieldComponent->BlockDamage(Damage, PoiseDamage, DamageDirection, StaggerType, DamageSource);

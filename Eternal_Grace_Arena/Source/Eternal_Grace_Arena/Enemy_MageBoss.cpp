@@ -56,11 +56,10 @@ void AEnemy_MageBoss::BeginPlay()
 				SpawnPositions.Add(SpawnPosition);
 			}
 		}
-		//	UE_LOG(LogTemp, Warning, TEXT("Caster has %d Spawnpositions"), SpawnPositions.Num())
 	}
 	else
 	{
-		UE_LOG(LogTemp, Warning, TEXT("Caster could not get SpawnManager. Teleportation wont work"))
+		UE_LOG(LogTemp, Warning, TEXT("%s Could not find SpawnPositions in Level on BeginPlay. Teleportation wont work"), *GetName())
 	}
 }
 
@@ -72,7 +71,7 @@ void AEnemy_MageBoss::SetTeleportPosition()
 		FVector TargetLocation = SpawnPositions[RandomIndex]->GetActorLocation();
 		SpellComponent->SetTargetPosition(TargetLocation);
 		// NOT USED YET
-		BlockedSpawnPositions.Add(SpawnPositions[RandomIndex]);
+	//	BlockedSpawnPositions.Add(SpawnPositions[RandomIndex]);
 	}
 	else
 	{

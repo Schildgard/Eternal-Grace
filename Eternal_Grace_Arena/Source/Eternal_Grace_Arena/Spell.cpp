@@ -56,10 +56,6 @@ void ASpell::SpellEffect(UPrimitiveComponent* OverlappedComponent, AActor* Other
 		return;
 	}
 
-	//if(OnHitVFX)
-	//{
-	//	UNiagaraFunctionLibrary::SpawnSystemAtLocation();
-	//}
 }
 
 // Called every frame

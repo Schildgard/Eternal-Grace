@@ -31,10 +31,10 @@
 			"I_Damageable.gen.cpp.obj",
 			"I_Interactable.gen.cpp.obj",
 			"I_Targetable.gen.cpp.obj",
-			"NS_CancelMontage.gen.cpp.obj"
+			"NS_CancelMontage.gen.cpp.obj",
+			"NS_CastSpell.gen.cpp.obj"
 		],
 		"Module.Eternal_Grace_Arena.2.cpp.obj": [
-			"NS_CastSpell.gen.cpp.obj",
 			"NS_ChargedWeaponSwing.gen.cpp.obj",
 			"NS_ContinousRecourceConsumption.gen.cpp.obj",
 			"NS_DrainStamina.gen.cpp.obj",
@@ -46,7 +46,6 @@
 			"Player_UI_Bars.gen.cpp.obj",
 			"Shield.gen.cpp.obj",
 			"ShieldComponent.gen.cpp.obj",
-			"SpawnManager.gen.cpp.obj",
 			"SpawnPoint.gen.cpp.obj",
 			"Spell.gen.cpp.obj",
 			"SpellComponent.gen.cpp.obj",
@@ -94,9 +93,7 @@
 			"NS_ChargedWeaponSwing.cpp.obj",
 			"NS_ContinousRecourceConsumption.cpp.obj",
 			"NS_DrainStamina.cpp.obj",
-			"NS_RotateTowardsTarget.cpp.obj"
-		],
-		"Module.Eternal_Grace_Arena.3.cpp.obj": [
+			"NS_RotateTowardsTarget.cpp.obj",
 			"NS_SetStaggered.cpp.obj",
 			"NS_WeaponSwing.cpp.obj",
 			"NS_WeaponSwing_CollisionToggle.cpp.obj",
@@ -104,12 +101,13 @@
 			"Player_UI_Bars.cpp.obj",
 			"Shield.cpp.obj",
 			"ShieldComponent.cpp.obj",
-			"SpawnManager.cpp.obj",
 			"SpawnPoint.cpp.obj",
 			"Spell.cpp.obj",
 			"SpellComponent.cpp.obj",
 			"Spells_HomingProjectile.cpp.obj",
-			"Spells_Projectile.cpp.obj",
+			"Spells_Projectile.cpp.obj"
+		],
+		"Module.Eternal_Grace_Arena.3.cpp.obj": [
 			"Spell_Teleport.cpp.obj",
 			"StaggerComponent.cpp.obj",
 			"StaggeringType.cpp.obj",
