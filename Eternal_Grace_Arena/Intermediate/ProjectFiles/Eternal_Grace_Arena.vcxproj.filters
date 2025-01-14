@@ -70,6 +70,12 @@
     <ClCompile Include="..\..\Source\Eternal_Grace_Arena\Damage_Spells.h">
       <Filter>Source\Eternal_Grace_Arena</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\Eternal_Grace_Arena\Enemy_MageBoss.cpp">
+      <Filter>Source\Eternal_Grace_Arena</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Eternal_Grace_Arena\Enemy_MageBoss.h">
+      <Filter>Source\Eternal_Grace_Arena</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\Eternal_Grace_Arena\Enemy_UI_Healthbar.cpp">
       <Filter>Source\Eternal_Grace_Arena</Filter>
     </ClCompile>

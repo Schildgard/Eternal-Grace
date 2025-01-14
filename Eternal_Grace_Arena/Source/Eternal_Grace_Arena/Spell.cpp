@@ -6,6 +6,7 @@
 #include "NiagaraComponent.h"
 #include "Eternal_Grace_ArenaCharacter.h"
 #include "Kismet/GameplayStatics.h"
+#include "NiagaraFunctionLibrary.h"
 
 // Sets default values
 ASpell::ASpell()
@@ -24,7 +25,6 @@ ASpell::ASpell()
 
 }
 
-// Called when the game starts or when spawned
 void ASpell::BeginPlay()
 {
 	Super::BeginPlay();
@@ -55,6 +55,11 @@ void ASpell::SpellEffect(UPrimitiveComponent* OverlappedComponent, AActor* Other
 	{
 		return;
 	}
+
+	//if(OnHitVFX)
+	//{
+	//	UNiagaraFunctionLibrary::SpawnSystemAtLocation();
+	//}
 }
 
 // Called every frame

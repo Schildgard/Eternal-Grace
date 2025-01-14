@@ -16,7 +16,6 @@ ASpells_Projectile::ASpells_Projectile()
 	Movement->MaxSpeed = 100.0f;
 	Movement->ProjectileGravityScale = 0.0f;
 	Movement->bIsHomingProjectile = false;
-	Direction = GetActorForwardVector();
 }
 
 void ASpells_Projectile::Tick(float DeltaSeconds)
@@ -49,5 +48,10 @@ void ASpells_Projectile::DealDamage(AEternal_Grace_ArenaCharacter* Target)
 		UGameplayStatics::PlaySoundAtLocation(GetWorld(), HitSFX, Target->GetActorLocation());
 	}
 }
+
+//void ASpells_Projectile::SpellEffect(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComponent, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
+//{
+//	Super::SpellEffect(OverlappedComponent, OtherActor, OtherComponent, OtherBodyIndex, bFromSweep, SweepResult); 
+//}
 
 

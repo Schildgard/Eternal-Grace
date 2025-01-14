@@ -7,6 +7,7 @@
 			"CharacterAnimInstance.gen.cpp.obj",
 			"CustomPlayerController.gen.cpp.obj",
 			"Damage_Spells.gen.cpp.obj",
+			"Enemy_MageBoss.gen.cpp.obj",
 			"Enemy_UI_Healthbar.gen.cpp.obj",
 			"Enemy_WeaponMaster.gen.cpp.obj",
 			"Equipment.gen.cpp.obj",
@@ -30,11 +31,11 @@
 			"I_Damageable.gen.cpp.obj",
 			"I_Interactable.gen.cpp.obj",
 			"I_Targetable.gen.cpp.obj",
-			"NS_CancelMontage.gen.cpp.obj",
-			"NS_CastSpell.gen.cpp.obj",
-			"NS_ChargedWeaponSwing.gen.cpp.obj"
+			"NS_CancelMontage.gen.cpp.obj"
 		],
 		"Module.Eternal_Grace_Arena.2.cpp.obj": [
+			"NS_CastSpell.gen.cpp.obj",
+			"NS_ChargedWeaponSwing.gen.cpp.obj",
 			"NS_ContinousRecourceConsumption.gen.cpp.obj",
 			"NS_DrainStamina.gen.cpp.obj",
 			"NS_RotateTowardsTarget.gen.cpp.obj",
@@ -64,6 +65,7 @@
 			"CharacterAnimInstance.cpp.obj",
 			"CustomPlayerController.cpp.obj",
 			"Damage_Spells.cpp.obj",
+			"Enemy_MageBoss.cpp.obj",
 			"Enemy_UI_Healthbar.cpp.obj",
 			"Enemy_WeaponMaster.cpp.obj",
 			"Equipment.cpp.obj",
@@ -92,13 +94,13 @@
 			"NS_ChargedWeaponSwing.cpp.obj",
 			"NS_ContinousRecourceConsumption.cpp.obj",
 			"NS_DrainStamina.cpp.obj",
-			"NS_RotateTowardsTarget.cpp.obj",
+			"NS_RotateTowardsTarget.cpp.obj"
+		],
+		"Module.Eternal_Grace_Arena.3.cpp.obj": [
 			"NS_SetStaggered.cpp.obj",
 			"NS_WeaponSwing.cpp.obj",
 			"NS_WeaponSwing_CollisionToggle.cpp.obj",
-			"PlayerCharacter.cpp.obj"
-		],
-		"Module.Eternal_Grace_Arena.3.cpp.obj": [
+			"PlayerCharacter.cpp.obj",
 			"Player_UI_Bars.cpp.obj",
 			"Shield.cpp.obj",
 			"ShieldComponent.cpp.obj",

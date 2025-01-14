@@ -34,7 +34,7 @@ void ADamage_Spells::SpellEffect(UPrimitiveComponent* OverlappedComponent, AActo
 			{
 				UNiagaraFunctionLibrary::SpawnSystemAttached(OnHitVFX, OtherComponent, NAME_None, FVector(0.0f), FRotator(0.0f), EAttachLocation::KeepRelativeOffset, true);
 			}
-
+			Destroy();
 		}
 	}
 }

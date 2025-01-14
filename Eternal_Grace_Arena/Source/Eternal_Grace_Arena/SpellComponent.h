@@ -14,15 +14,18 @@ class ETERNAL_GRACE_ARENA_API USpellComponent : public UActorComponent
 	GENERATED_BODY()
 
 public:	
-	// Sets default values for this component's properties
 	USpellComponent();
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, meta =(AllowPrivateAccess))
 	TArray<TSubclassOf<ASpell>> SpellList;
 
 protected:
-	// Called when the game starts
 	virtual void BeginPlay() override;
+
+	//UPROPERTY()
+	//AEternal_Grace_ArenaCharacter* InstigatingActor;
+
+
 	UPROPERTY()
 	FVector TargetPosition;
 public:	
@@ -37,5 +40,8 @@ public:
 
 	UFUNCTION()
 	FVector GetTargetPosition();
+
+	//UFUNCTION()
+	//AEternal_Grace_ArenaCharacter* GetInstigator();
 		
 };

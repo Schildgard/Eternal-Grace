@@ -42,6 +42,7 @@ protected:
 	UPROPERTY()
 	AEternal_Grace_ArenaCharacter* InstigatingActor;
 
+	//TODO RENAME SPELL EFFECT TO ON HIT EVENT
 	UFUNCTION()
 	virtual void SpellEffect(UPrimitiveComponent* OverlappedComponent,AActor* OtherActor,UPrimitiveComponent* OtherComponent,int32 OtherBodyIndex,bool bFromSweep,const FHitResult& SweepResult);
 
