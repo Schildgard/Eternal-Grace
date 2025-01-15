@@ -26,3 +26,7 @@ void AEternal_Grace_ArenaBoss::Tick(float DeltaSeconds)
 		TriggerSecondPhase();
 	}
 }
+
+void AEternal_Grace_ArenaBoss::GetOffMeMove()
+{
+}

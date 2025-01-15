@@ -80,9 +80,15 @@ void ASpells_Projectile::DealDamage(AEternal_Grace_ArenaCharacter* Target)
 	}
 }
 
-//void ASpells_Projectile::SpellEffect(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComponent, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
-//{
-//	Super::SpellEffect(OverlappedComponent, OtherActor, OtherComponent, OtherBodyIndex, bFromSweep, SweepResult); 
-//}
+
+void ASpells_Projectile::SpellEffect(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComponent, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
+{
+	Super::SpellEffect(OverlappedComponent, OtherActor, OtherComponent, OtherBodyIndex, bFromSweep, SweepResult);
+
+	if (OtherActor && OtherActor->IsA(ValidCharacterClass))
+	{
+		Destroy(); //CHANGE THIS, SO THE VALID CHARACTER CHECK IS DONE IN VERY BASE CLASS
+	}
+}
 
 

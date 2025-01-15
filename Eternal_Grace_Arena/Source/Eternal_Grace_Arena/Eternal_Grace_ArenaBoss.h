@@ -25,9 +25,17 @@ public:
 	UAnimMontage* SecondPhaseMontage;
 
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Animations, meta = (AllowPrivateAccess))
+	UAnimMontage* GetOffMeAttack;
+
+
 
 	UFUNCTION()
 	virtual void TriggerSecondPhase();
 	virtual void Tick(float DeltaSeconds)override;
+
+
+	UFUNCTION()
+	virtual void GetOffMeMove();
 	
 };

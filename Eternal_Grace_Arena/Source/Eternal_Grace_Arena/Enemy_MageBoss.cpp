@@ -18,14 +18,30 @@ void AEnemy_MageBoss::LightAttack()
 	if (!CharacterAnimationInstance->isAttacking)
 	{
 		CharacterAnimationInstance->isAttacking = true;
-		int AttackIndex = 0;
+		int AttackIndex = 0; //FIREBALL
+
+		if (SecondPhaseTriggered)
+		{
+			AttackIndex = 2; //HOMING FIREBALL
+		}
+
 		// CHECK IF PLAYER IS IN TELEPORT RANGE
 		if (CheckDistancetoPlayer(350.0f))
 		{
-			AttackIndex = 1;
 			SetTeleportPosition();
+			RotateTowardsTarget(UGameplayStatics::GetPlayerCharacter(world, 0));
+			if (SecondPhaseTriggered)
+			{
+				//CAST PHASE TWO ATTACK
+				GetOffMeMove();
+				return;
+			}
+			else
+			{
+				AttackIndex = 1; //TELEPORT
+
+			}
 		}
-		RotateTowardsTarget(UGameplayStatics::GetPlayerCharacter(world, 0));
 
 		FOnMontageEnded InterruptDelegate;
 		FOnMontageEnded CompletedDelegate;
@@ -61,6 +77,23 @@ void AEnemy_MageBoss::BeginPlay()
 	{
 		UE_LOG(LogTemp, Warning, TEXT("%s Could not find SpawnPositions in Level on BeginPlay. Teleportation wont work"), *GetName())
 	}
+}
+
+void AEnemy_MageBoss::GetOffMeMove()
+{
+
+	PlayAnimMontage(GetOffMeAttack);
+
+	FOnMontageEnded InterruptDelegate;
+	FOnMontageEnded CompletedDelegate;
+
+	PlayAnimMontage(GetOffMeAttack, 1.0f); //CHANGE THIS TO FLEXIBLE ARRAY INDEX OF VIABLE ATTACKS
+	InterruptDelegate.BindUObject(CharacterAnimationInstance, &UCharacterAnimInstance::InterruptAttack);
+	CompletedDelegate.BindUObject(CharacterAnimationInstance, &UCharacterAnimInstance::OnAttackEnd);
+
+	CharacterAnimationInstance->Montage_SetBlendingOutDelegate(InterruptDelegate, GetOffMeAttack);
+	CharacterAnimationInstance->Montage_SetEndDelegate(CompletedDelegate, GetOffMeAttack);
+
 }
 
 void AEnemy_MageBoss::SetTeleportPosition()

@@ -19,8 +19,8 @@ protected:
 	AEnemy_WeaponMaster();
 	virtual void LightAttack()override;
 
-	UFUNCTION()
-	void GetOffMeMove();
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Animations, meta = (AllowPrivateAccess))
-	UAnimMontage* GetOffMeAttack;
+	
+	virtual void GetOffMeMove()override ;
+//	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Animations, meta = (AllowPrivateAccess))
+//	UAnimMontage* GetOffMeAttack;
 };

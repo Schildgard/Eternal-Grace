@@ -30,6 +30,7 @@ protected:
 
 	virtual void LightAttack()override;
 	virtual void BeginPlay()override;
+	virtual void GetOffMeMove()override;
 
 	UFUNCTION()
 	void SetTeleportPosition();
