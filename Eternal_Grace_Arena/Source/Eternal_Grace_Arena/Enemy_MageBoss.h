@@ -24,7 +24,7 @@ protected:
 	TArray<ASpawnPoint*> SpawnPositions;
 	//THIS ARRAY IS USED TO CONTROL IF THE CASTER CAN TELEPORT TO THE SAME POSITION MULTIPLE TIMES
 	UPROPERTY()
-	TArray<ASpawnPoint*> BlockedSpawnPositions;
+	TArray<int> BlockedSpawnPositionsIndices;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, meta = (AllowPrivateAccess))
 	UAnimMontage* TeleportAnim;
 

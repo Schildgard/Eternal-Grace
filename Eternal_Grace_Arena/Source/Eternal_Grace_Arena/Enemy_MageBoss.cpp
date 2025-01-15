@@ -67,11 +67,26 @@ void AEnemy_MageBoss::SetTeleportPosition()
 {
 	if (SpawnPositions.Num() >= 1)
 	{
+		//GET SPAWN POSITION INDEX
 		int RandomIndex = UKismetMathLibrary::RandomInteger(SpawnPositions.Num());
+
+		// IF THERE A AT LEAST 2 SPAWN POSITIONS, BLOCK THE CURRENT POSITION - kinda bullshit, i am sure there is a better way to do it
+		if (SpawnPositions.Num() >= 2)
+		{
+			BlockedSpawnPositionsIndices.Add(RandomIndex);
+
+		}
+
+		// IF POSITION IS BLOCKED, REPEAT THIS PROCESS RECURSIVELY UNTIL YOU FOUND ANOTHER POSITION
+//		if(BlockedSpawnPositionsIndices.Contains(RandomIndex))
+//		{
+//			SetTeleportPosition();
+//		}
+		BlockedSpawnPositionsIndices.Empty();
+
 		FVector TargetLocation = SpawnPositions[RandomIndex]->GetActorLocation();
 		SpellComponent->SetTargetPosition(TargetLocation);
-		// NOT USED YET
-	//	BlockedSpawnPositions.Add(SpawnPositions[RandomIndex]);
+
 	}
 	else
 	{
