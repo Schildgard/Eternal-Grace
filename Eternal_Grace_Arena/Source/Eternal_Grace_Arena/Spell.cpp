@@ -15,6 +15,7 @@ ASpell::ASpell()
 	PrimaryActorTick.bCanEverTick = true;
 
 	HitBox = CreateDefaultSubobject<USphereComponent>("HitBox");
+	//HitBox->SetupAttachment(RootComponent);
 	RootComponent = HitBox;
 	SpellVFX = CreateDefaultSubobject<UNiagaraComponent>("Spell Effect");
 	SpellVFX->SetupAttachment(RootComponent);
