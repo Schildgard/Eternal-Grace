@@ -7,15 +7,46 @@
 #include "ShieldComponent.h"
 #include "CharacterAnimInstance.h"
 #include "Kismet/GameplayStatics.h"
+#include "Kismet//KismetMathLibrary.h"
+#include "Enemy_MageBoss.h" //BULLSHIT CODE
+#include "SpellComponent.h" //ALSO BULLSHIT
 
 
 ASpells_Projectile::ASpells_Projectile()
 {
 	Movement = CreateDefaultSubobject<UProjectileMovementComponent>("ProjectileMovement");
-	Movement->InitialSpeed = 100.0f;
-	Movement->MaxSpeed = 100.0f;
+	Movement->InitialSpeed = 1000.0f;
+	Movement->MaxSpeed = 1000.0f;
 	Movement->ProjectileGravityScale = 0.0f;
 	Movement->bIsHomingProjectile = false;
+}
+
+void ASpells_Projectile::SetDirection(AEternal_Grace_ArenaCharacter* Target)
+{
+
+	FVector InstigatorLocation = InstigatingActor->GetActorLocation();
+	FVector TargetLocation = Target->GetActorLocation();
+	FVector TargetDirection = (TargetLocation - InstigatorLocation);
+	if (TargetDirection.Normalize())
+	{
+		Direction = TargetDirection;
+	}
+	else
+	{
+		Direction = GetActorForwardVector();
+	}
+}
+
+void ASpells_Projectile::BeginPlay()
+{
+	Super::BeginPlay();
+	//BULLSHIT CODE. GetSpellComponent should not be exclusive to boss. If I can check on every character if he has an spellcomponent, I dont need to cast into the mage boss here
+	AEnemy_MageBoss* Caster = Cast<AEnemy_MageBoss>(InstigatingActor);
+	if (Caster)
+	{
+		SetDirection(Caster->GetSpellComponent()->GetTarget());
+		Movement->Velocity = (Direction * Movement->InitialSpeed);
+	}
 }
 
 void ASpells_Projectile::Tick(float DeltaSeconds)
@@ -41,7 +72,7 @@ void ASpells_Projectile::DealDamage(AEternal_Grace_ArenaCharacter* Target)
 
 	if (Target->Implements<UI_Damageable>())
 	{
-	II_Damageable::Execute_GetDamage(Target, DamageValue, PoiseDamage, DamageDirection, EStaggeringType::NormalStagger, InstigatingActor, AttackWasBlocked);
+		II_Damageable::Execute_GetDamage(Target, DamageValue, PoiseDamage, DamageDirection, EStaggeringType::NormalStagger, InstigatingActor, AttackWasBlocked);
 	}
 	if (HitSFX)
 	{

@@ -22,19 +22,24 @@ public:
 protected:
 	virtual void BeginPlay() override;
 
-
 	UPROPERTY()
 	FVector TargetPosition;
+
+	UPROPERTY()
+	AEternal_Grace_ArenaCharacter* TargetCharacter;
+
+
+
+
 public:	
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
-
 	UFUNCTION()
 	virtual void CastSpell(ASpell* SpellToCast);
-
 	UFUNCTION()
 	void SetTargetPosition(FVector NewPosition);
-
 	UFUNCTION()
 	FVector GetTargetPosition();
+	UFUNCTION()
+	AEternal_Grace_ArenaCharacter* GetTarget();
 	
 };

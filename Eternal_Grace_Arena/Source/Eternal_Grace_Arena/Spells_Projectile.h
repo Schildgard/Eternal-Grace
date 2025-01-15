@@ -22,6 +22,10 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, meta = (AllowPrivateAccess))
 	FVector Direction;
 
+	UFUNCTION()
+	void SetDirection(AEternal_Grace_ArenaCharacter* Target);
+
+	virtual void BeginPlay()override;
 	virtual void Tick(float DeltaSeconds)override;
 	virtual void DealDamage(AEternal_Grace_ArenaCharacter* Target)override;
 //	virtual void SpellEffect(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComponent, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)override;
