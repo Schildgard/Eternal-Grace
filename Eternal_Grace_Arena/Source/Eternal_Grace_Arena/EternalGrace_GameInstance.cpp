@@ -12,6 +12,7 @@ UEternalGrace_GameInstance::UEternalGrace_GameInstance()
 {
 	//IT IS CRUCIAL THAT THE MAIN LEVEL IS NAMED EXACTLY THE SAME WAY AS THIS PROPERTY
 	MainWorldName = FName("Level_Main");
+	WinCondition = false;
 }
 
 void UEternalGrace_GameInstance::UploadHealthInfo(float HealthFromPlayer)
@@ -79,15 +80,15 @@ void UEternalGrace_GameInstance::SetObjectState(FName ObjectID, bool NewValue)
 		for (const TPair<FName, bool>& Depency : WinConditionDependencies)
 		{
 			//SET ACTIVE STATUS TO TRUE IF THE STATUS OF ALL RELATED OBJECTS MEETS EXPECTED CRITERIA
-			if (Depency.Value != Depency.Value)
+			if (Depency.Value != true)
 			{
 				return;
 			}
-			//WinCondition = true;
-			ObjectStates.Add("Exit", true);
-			UE_LOG(LogTemp, Error, TEXT("WIN CONDITION MET"))
-				return;
 		}
+		WinCondition = true;
+		ObjectStates.Add("Exit", true);
+		UE_LOG(LogTemp, Error, TEXT("WIN CONDITION MET"))
+			return;
 	}
 }
 

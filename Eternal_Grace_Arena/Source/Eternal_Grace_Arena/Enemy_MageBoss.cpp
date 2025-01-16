@@ -29,7 +29,6 @@ void AEnemy_MageBoss::LightAttack()
 		if (CheckDistancetoPlayer(350.0f))
 		{
 			SetTeleportPosition();
-			RotateTowardsTarget(UGameplayStatics::GetPlayerCharacter(world, 0));
 			if (SecondPhaseTriggered)
 			{
 				//CAST PHASE TWO ATTACK
@@ -43,6 +42,7 @@ void AEnemy_MageBoss::LightAttack()
 			}
 		}
 
+		RotateTowardsTarget(UGameplayStatics::GetPlayerCharacter(world, 0));
 		FOnMontageEnded InterruptDelegate;
 		FOnMontageEnded CompletedDelegate;
 
