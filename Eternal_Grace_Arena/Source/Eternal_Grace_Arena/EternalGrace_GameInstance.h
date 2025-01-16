@@ -61,5 +61,8 @@ public:
 	UFUNCTION()
 	FName GetMainWorldName();
 
+	UFUNCTION()
+	void CheckWinConditionChange();
+
 
 };
