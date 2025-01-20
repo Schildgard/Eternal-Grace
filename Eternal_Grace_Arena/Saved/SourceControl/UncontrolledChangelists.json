@@ -5,6 +5,11 @@
 			"guid": "00000000000000000000000000000000",
 			"description": "Default Uncontrolled Changelist",
 			"files": [
+				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/DarkLady/Mesh/SK_DarkLady_Skin1_Helm.uasset",
+				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/DarkLady/Mesh/All_Meshes_Skeleton.uasset",
+				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/DarkLady/Mesh/All_Meshes_PhysicsAsset.uasset",
+				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Blueprints/CharacterBlueprints/BP_Player.uasset",
+				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Characters/Dark_Lady/Head/Mesh/DarkLady_Head.uasset",
 				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/StarterContent/Architecture/Floor_400x400.uasset",
 				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Characters/Dark_Lady/Head/Helm2/T_DarkLady_Skin2_Helm3_Normal.uasset",
 				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Characters/Dark_Lady/Head/Helm2/T_DarkLady_Skin2_Helm3_Albedo.uasset",
