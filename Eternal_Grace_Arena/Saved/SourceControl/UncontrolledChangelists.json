@@ -12,7 +12,21 @@
 				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Blueprints/CharacterBlueprints/BP_MushroomKing.uasset",
 				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Animations/MushroomAnimations/Attack/AM_MK_BackhandSlap.uasset",
 				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Weapons/SM_Mosshammer.uasset",
-				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Blueprints/CharacterBlueprints/BP_DarkKnight.uasset"
+				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Blueprints/CharacterBlueprints/BP_DarkKnight.uasset",
+				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Animations/MushroomAnimations/Movement/ThirdPersonJump_Loop.uasset",
+				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Levels/Untitled.umap",
+				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Characters/MushroomKing/MushroomGuyStatic/Mushroom_ARPG_Warrior_Anim_UE_Attack_Heavy1_RT_Montage.uasset",
+				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Characters/MushroomKing/MushroomGuyStatic/Mushroom_ARPG_Warrior_Anim_UE_Attack_Heavy1_RT.uasset",
+				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Characters/MushroomKing/MushroomGuy03/Mesh/SK_MushroomKing_CtrlRig.uasset",
+				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Sequencer/Mushroom_Assbomb.uasset",
+				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Characters/Mannequins/Rigs/CR_Mannequin_Body.uasset",
+				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Characters/MushroomKing/MushroomGuy03/Mesh/IK_Mushroom.uasset",
+				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Animations/MushroomAnimations/Movement/AM_MK_JumpAttack.uasset",
+				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Animations/MushroomAnimations/Movement/ThirdPersonJump_Start.uasset",
+				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Animations/MushroomAnimations/Movement/ThirdPersonJump_End.uasset",
+				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Animations/MushroomAnimations/Movement/AM_MK_Assbomb.uasset",
+				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Levels/Level_Main.umap",
+				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Sequences/LS_Mushroom_Assbomb.uasset"
 			]
 		}
 	]
