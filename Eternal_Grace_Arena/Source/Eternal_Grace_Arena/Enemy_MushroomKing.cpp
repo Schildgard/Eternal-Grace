@@ -9,32 +9,19 @@
 void AEnemy_MushroomKing::GetOffMeMove()
 {
 	//JUMP END ANIMATION HAS AN NOTIFY WICH TRIGGERS AN AOE WAVE 
-	//if (GetOffMeAttack != nullptr)
-	//{
-		//PlayAnimMontage(GetOffMeAttack, 1.0f); // TO DO:REPLACE THAT MAGIC NUMBER WITH SOMETHING ELSE LIKE A POINTER TO A SPECIFIC MONTAGE OR SOMETHING
-	//	Jump();
 
 	PlayAnimMontage(GetOffMeAttack, 1.0f);
 
-	//	FOnMontageEnded InterruptDelegate;
 	FOnMontageEnded CompleteDelegate;
-
-	//	InterruptDelegate.BindUObject(CharacterAnimationInstance, &UCharacterAnimInstance::InterruptAttack);
-	//	InterruptDelegate.BindUObject(this, &AEternal_Grace_ArenaEnemy::ResetCollision);
-
-	//	CompleteDelegate.BindUObject(this, &AEternal_Grace_ArenaEnemy::ResetCollision);
 	CompleteDelegate.BindUObject(CharacterAnimationInstance, &UCharacterAnimInstance::OnAttackEnd);
-
-	//CharacterAnimationInstance->Montage_SetBlendingOutDelegate(InterruptDelegate, GetOffMeAttack);
 	CharacterAnimationInstance->Montage_SetEndDelegate(CompleteDelegate, GetOffMeAttack);
 }
-//Jump();
-
 
 void AEnemy_MushroomKing::Tick(float DeltaSeconds)
 {
 	Super::Tick(DeltaSeconds);
-
+	//TEST CHECK FOR DISTANCE
+	//CheckDistancetoPlayer(700);
 
 }
 
@@ -42,27 +29,36 @@ void AEnemy_MushroomKing::LightAttack()
 {
 	if (!CharacterAnimationInstance->isAttacking)
 	{
+		int RandomAttackIndex = UKismetMathLibrary::RandomInteger(2); //CHANGE THIS TO LENGTH OF VIABLE ATTACK ARRAY
 		CharacterAnimationInstance->isAttacking = true;
+		//If PLAYER is very Close
 		if (CheckDistancetoPlayer(300.f))
 		{
-			GetOffMeMove();
+				GetOffMeMove();
+			return;
+		}
+		else if (CheckDistancetoPlayer(450.f))
+		{
+			RotateTowardsTarget(UGameplayStatics::GetPlayerCharacter(world, 0));
+			RandomAttackIndex = 0;
 		}
 		else
 		{
 			RotateTowardsTarget(UGameplayStatics::GetPlayerCharacter(world, 0));
 
-				int RandomAttackIndex = UKismetMathLibrary::RandomInteger(2); //CHANGE THIS TO LENGTH OF VIABLE ATTACK ARRAY
-
-				PlayAnimMontage(LightAttacks[RandomAttackIndex], 1.0f);
-
-				FOnMontageEnded InterruptDelegate;
-				FOnMontageEnded CompletedDelegate;
-
-				InterruptDelegate.BindUObject(CharacterAnimationInstance, &UCharacterAnimInstance::InterruptAttack);
-				CompletedDelegate.BindUObject(CharacterAnimationInstance, &UCharacterAnimInstance::OnAttackEnd);
-
-				CharacterAnimationInstance->Montage_SetBlendingOutDelegate(InterruptDelegate, LightAttacks[RandomAttackIndex]);
-				CharacterAnimationInstance->Montage_SetEndDelegate(CompletedDelegate, LightAttacks[RandomAttackIndex]);
+			//int RandomAttackIndex = UKismetMathLibrary::RandomInteger(2); //CHANGE THIS TO LENGTH OF VIABLE ATTACK ARRAY
+			RandomAttackIndex = 1;
 		}
+
+		PlayAnimMontage(LightAttacks[RandomAttackIndex], 1.0f);
+
+		FOnMontageEnded InterruptDelegate;
+		FOnMontageEnded CompletedDelegate;
+
+		InterruptDelegate.BindUObject(CharacterAnimationInstance, &UCharacterAnimInstance::InterruptAttack);
+		CompletedDelegate.BindUObject(CharacterAnimationInstance, &UCharacterAnimInstance::OnAttackEnd);
+
+		CharacterAnimationInstance->Montage_SetBlendingOutDelegate(InterruptDelegate, LightAttacks[RandomAttackIndex]);
+		CharacterAnimationInstance->Montage_SetEndDelegate(CompletedDelegate, LightAttacks[RandomAttackIndex]);
 	}
 }

@@ -28,10 +28,29 @@ AEternal_Grace_ArenaEnemy::AEternal_Grace_ArenaEnemy()
 
 bool AEternal_Grace_ArenaEnemy::CheckDistancetoPlayer(float Threshold)
 {
+
+	FColor DebugColor = FColor::Black;
+
 	//CHECK IF IN RANGE
 	FVector OwnerLocation = GetActorLocation();
 	FVector PlayerLocation = UGameplayStatics::GetPlayerCharacter(world, 0)->GetActorLocation();
 	float Distance = UKismetMathLibrary::Vector_Distance(PlayerLocation, OwnerLocation);
+
+	//if(Distance <= 300.f)
+	//{
+	//	DebugColor = FColor::Red;
+	//
+	//}
+	//if (Distance > 300.f && Distance <= 500.f)
+	//{
+	//	DebugColor = FColor::Blue;
+	//}
+	//if (Distance > 500.f)
+	//{
+	//	DebugColor = FColor::Black;
+	//}
+	//DrawDebugLine(world, OwnerLocation, PlayerLocation, DebugColor, false);
+	//UE_LOG(LogTemp, Warning, TEXT("Distance: %f"), Distance)
 	if (Distance >= Threshold)
 	{
 		return false;
@@ -153,7 +172,7 @@ void AEternal_Grace_ArenaEnemy::SendInfoToGameInstance()
 
 bool AEternal_Grace_ArenaEnemy::CheckIfPlayerIsBehind()
 {
-	FColor DebugColor = FColor::Red;
+//	FColor DebugColor = FColor::Red;
 
 	FVector OwnerLocation = GetActorLocation();
 	FVector OwnerForwardDirection = GetActorForwardVector();
@@ -164,10 +183,12 @@ bool AEternal_Grace_ArenaEnemy::CheckIfPlayerIsBehind()
 
 	float dotproduct = UKismetMathLibrary::Dot_VectorVector(OwnerPlayerDistance, OwnerForwardDirection);
 
-	DrawDebugLine(world, OwnerLocation, PlayerLocation, DebugColor, true, 2.0f);
+//	DrawDebugLine(world, OwnerLocation, PlayerLocation, DebugColor, true);
+
+
 	if (dotproduct < BackDetection)
 	{
-		DebugColor = FColor::Green;
+	//	DebugColor = FColor::Green;
 		return true;
 	}
 

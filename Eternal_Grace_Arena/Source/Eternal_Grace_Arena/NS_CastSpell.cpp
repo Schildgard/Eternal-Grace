@@ -22,7 +22,9 @@ void UNS_CastSpell::Notify(USkeletalMeshComponent* MeshComp, UAnimSequenceBase* 
 		FActorSpawnParameters SpawnParams;
 		SpawnParams.Owner = OwningActor;
 		SpawnParams.Instigator = OwningActor;
-		ASpell* SpellCast = OwningActor->GetWorld()->SpawnActor<ASpell>(SpellToCast, OwningActor->GetActorLocation(), OwningActor->GetActorRotation(), SpawnParams);
+
+		FVector Offset = OwningActor->GetActorLocation() + FVector(OwningActor->GetActorForwardVector() * LocationOffset.X) +FVector(0, LocationOffset.Y, LocationOffset.Z);
+		ASpell* SpellCast = OwningActor->GetWorld()->SpawnActor<ASpell>(SpellToCast, Offset, OwningActor->GetActorRotation(), SpawnParams);
 	}
 	else
 	{

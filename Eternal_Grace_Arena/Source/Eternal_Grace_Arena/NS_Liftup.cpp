@@ -3,6 +3,7 @@
 
 #include "NS_Liftup.h"
 #include "Eternal_Grace_ArenaCharacter.h"
+#include "CharacterAnimInstance.h"
 #include "GameFramework/CharacterMovementComponent.h"
 
 void UNS_Liftup::Notify(USkeletalMeshComponent* MeshComp, UAnimSequenceBase* Animation, const FAnimNotifyEventReference& EventReference)

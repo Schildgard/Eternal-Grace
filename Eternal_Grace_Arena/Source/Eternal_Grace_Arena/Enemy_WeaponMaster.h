@@ -18,9 +18,6 @@ class ETERNAL_GRACE_ARENA_API AEnemy_WeaponMaster : public AEternal_Grace_ArenaB
 protected:
 	AEnemy_WeaponMaster();
 	virtual void LightAttack()override;
-
-	
 	virtual void GetOffMeMove()override ;
-//	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Animations, meta = (AllowPrivateAccess))
-//	UAnimMontage* GetOffMeAttack;
+
 };

@@ -15,7 +15,6 @@ AEnemy_WeaponMaster::AEnemy_WeaponMaster()
 
 void AEnemy_WeaponMaster::LightAttack()
 {
-	//Super::LightAttack();
 
 	if (CheckIfPlayerIsBehind() && SecondPhaseTriggered)
 	{
@@ -24,16 +23,11 @@ void AEnemy_WeaponMaster::LightAttack()
 	}
 
 
-
 	if (!CharacterAnimationInstance->isAttacking)
 	{
 		CharacterAnimationInstance->isAttacking = true;
 		RotateTowardsTarget(UGameplayStatics::GetPlayerCharacter(world, 0));
-		//WEAPONMASTER CAN NOD GUARD.....
-	//if (CharacterAnimationInstance->isGuarding)
-	//{
-	//	CancelGuard();
-	//}
+
 		int RandomAttackIndex = UKismetMathLibrary::RandomInteger(2); //CHANGE THIS TO LENGTH OF VIABLE ATTACK ARRAY
 
 		PlayAnimMontage(LightAttacks[RandomAttackIndex], 1.0f);
@@ -63,13 +57,10 @@ void AEnemy_WeaponMaster::GetOffMeMove()
 
 
 		RotateTowardsTarget(UGameplayStatics::GetPlayerCharacter(world, 0));
-		//if (CharacterAnimationInstance->isGuarding)
-		//{
-		//	CancelGuard();
-		//}
+
 		if (GetOffMeAttack != nullptr)
 		{
-			PlayAnimMontage(GetOffMeAttack, 1.0f); // TO DO:REPLACE THAT MAGIC NUMBER WITH SOMETHING ELSE LIKE A POINTER TO A SPECIFIC MONTAGE OR SOMETHING
+			PlayAnimMontage(GetOffMeAttack, 1.0f);
 
 			FOnMontageEnded InterruptDelegate;
 			FOnMontageEnded CompleteDelegate;
