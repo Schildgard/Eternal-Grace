@@ -34,7 +34,7 @@ public:
 	virtual void TriggerSecondPhase();
 	virtual void Tick(float DeltaSeconds)override;
 
-
+protected:
 	UFUNCTION()
 	virtual void GetOffMeMove();
 	

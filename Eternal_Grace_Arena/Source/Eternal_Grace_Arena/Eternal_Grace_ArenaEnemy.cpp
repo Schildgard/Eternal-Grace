@@ -28,6 +28,7 @@ AEternal_Grace_ArenaEnemy::AEternal_Grace_ArenaEnemy()
 
 bool AEternal_Grace_ArenaEnemy::CheckDistancetoPlayer(float Threshold)
 {
+	//CHECK IF IN RANGE
 	FVector OwnerLocation = GetActorLocation();
 	FVector PlayerLocation = UGameplayStatics::GetPlayerCharacter(world, 0)->GetActorLocation();
 	float Distance = UKismetMathLibrary::Vector_Distance(PlayerLocation, OwnerLocation);

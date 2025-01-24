@@ -40,7 +40,7 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = AI, meta = (AllowPrivateAccess))
 	bool isAggro;
 	UFUNCTION()
-	bool CheckDistancetoPlayer(float Threshold);
+	bool CheckDistancetoPlayer(float Threshold); //MAYBE CHANGE THIS TO FLOAT AS A RETURN TYPE
 	//UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = AI, meta = (AllowPrivateAccess))
 	//float ChasingCountDown;
 	//UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = AI, meta = (AllowPrivateAccess))

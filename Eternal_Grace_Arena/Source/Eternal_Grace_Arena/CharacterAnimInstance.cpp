@@ -11,6 +11,7 @@ void UCharacterAnimInstance::InterruptAttack(UAnimMontage* AttackAnimation, bool
 	{
 		if (isAttacking)
 		{
+			UE_LOG(LogTemp, Error, TEXT("Attack Interrupted"))
 			isAttacking = false;
 		}
 	}
@@ -21,6 +22,7 @@ void UCharacterAnimInstance::OnAttackEnd(UAnimMontage* AttackAnimation, bool Int
 {
 	if (isAttacking)
 	{
+		UE_LOG(LogTemp, Error, TEXT("Attack Ended"))
 		isAttacking = false;
 	}
 }
