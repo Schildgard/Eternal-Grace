@@ -232,6 +232,11 @@ void AEternal_Grace_ArenaCharacter::Die_Implementation()
 	OnCharacterDeath.Broadcast();
 }
 
+void AEternal_Grace_ArenaCharacter::FellOutOfWorld(const UDamageType& dmgType)
+{
+	Execute_Die(this);
+}
+
 void AEternal_Grace_ArenaCharacter::CheckActorStaggerAnimation(UAnimMontage* Montage)
 {
 	if (Montage)

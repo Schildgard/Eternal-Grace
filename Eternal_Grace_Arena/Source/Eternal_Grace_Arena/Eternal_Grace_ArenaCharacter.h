@@ -108,6 +108,7 @@ public:
 
 	virtual void GetDamage_Implementation(float Damage, float PoiseDamage, float DamageDirection, EStaggeringType StaggerType, AEternal_Grace_ArenaCharacter* DamageSource, bool Blocked)override;
 	virtual void Die_Implementation()override;
+	virtual void FellOutOfWorld(const class UDamageType& dmgType);
 
 
 
