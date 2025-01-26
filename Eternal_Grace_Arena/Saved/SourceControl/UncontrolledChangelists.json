@@ -43,14 +43,6 @@
 				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/DarkFantasyChurch/Meshes/Chains/SM_Chains_Rect.uasset",
 				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/DarkFantasyChurch/Meshes/Chains/SM_Chains_Rect_Large.uasset",
 				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/DarkFantasyChurch/Meshes/Chains/SM_Chains_Rect_small.uasset",
-				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Decals/Blood/High_Velocity_Blood_Spatter_sfjjcfzp_2K_BaseColor.uasset",
-				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Decals/Blood/High_Velocity_Blood_Spatter_sfjjcfzp_2K_Cavity.uasset",
-				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Decals/Blood/High_Velocity_Blood_Spatter_sfjjcfzp_2K_Gloss.uasset",
-				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Decals/Blood/High_Velocity_Blood_Spatter_sfjjcfzp_2K_Normal.uasset",
-				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Decals/Blood/High_Velocity_Blood_Spatter_sfjjcfzp_2K_Opacity.uasset",
-				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Decals/Blood/High_Velocity_Blood_Spatter_sfjjcfzp_2K_Roughness.uasset",
-				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Decals/Blood/High_Velocity_Blood_Spatter_sfjjcfzp_2K_Specular.uasset",
-				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Decals/Blood/M_Decal_Blood.uasset",
 				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Decals/Blood_1/M_Decal_Blood.uasset",
 				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Decals/Blood_1/High_Velocity_Blood_Spatter_sfjjcfzp_2K_Specular.uasset",
 				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Decals/Blood_1/High_Velocity_Blood_Spatter_sfjjcfzp_2K_Roughness.uasset",
@@ -66,7 +58,16 @@
 				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Decals/Blood_2/High_Velocity_Blood_Spatter_sgeoahup_4K_Opacity.uasset",
 				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Decals/Blood_2/High_Velocity_Blood_Spatter_sgeoahup_4K_Roughness.uasset",
 				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Decals/Blood_2/High_Velocity_Blood_Spatter_sgeoahup_4K_Specular.uasset",
-				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Decals/Blood_2/M_Decal_Blood2.uasset"
+				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Decals/Blood_2/M_Decal_Blood2.uasset",
+				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/EnvironmentAssets/HangingCage.uasset",
+				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Decals/Blood/High_Velocity_Blood_Spatter_sfjjcfzp_2K_BaseColor.uasset",
+				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Decals/Blood/High_Velocity_Blood_Spatter_sfjjcfzp_2K_Cavity.uasset",
+				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Decals/Blood/High_Velocity_Blood_Spatter_sfjjcfzp_2K_Gloss.uasset",
+				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Decals/Blood/High_Velocity_Blood_Spatter_sfjjcfzp_2K_Normal.uasset",
+				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Decals/Blood/High_Velocity_Blood_Spatter_sfjjcfzp_2K_Opacity.uasset",
+				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Decals/Blood/High_Velocity_Blood_Spatter_sfjjcfzp_2K_Roughness.uasset",
+				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Decals/Blood/High_Velocity_Blood_Spatter_sfjjcfzp_2K_Specular.uasset",
+				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Decals/Blood/M_Decal_Blood.uasset"
 			]
 		}
 	]
