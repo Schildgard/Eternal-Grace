@@ -55,7 +55,6 @@ void UWeaponComponent::BeginPlay()
 	}
 	EquippedWeapon->AttachToComponent(this, FAttachmentTransformRules::SnapToTargetNotIncludingScale);
 	EquippedWeapon->GetMesh()->OnComponentBeginOverlap.AddDynamic(this, &UWeaponComponent::DealDamage);
-	// ...
 
 }
 

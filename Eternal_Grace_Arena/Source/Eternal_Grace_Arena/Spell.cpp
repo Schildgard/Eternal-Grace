@@ -32,6 +32,7 @@ void ASpell::BeginPlay()
 
 	HitBox->OnComponentBeginOverlap.AddDynamic(this, &ASpell::SpellEffect);
 
+
 	if (SpawningSound)
 	{
 		UGameplayStatics::PlaySoundAtLocation(GetWorld(), SpawningSound, GetActorLocation(), 1.0f);
@@ -56,13 +57,6 @@ void ASpell::SpellEffect(UPrimitiveComponent* OverlappedComponent, AActor* Other
 	{
 		return;
 	}
-
-}
-
-// Called every frame
-void ASpell::Tick(float DeltaTime)
-{
-	Super::Tick(DeltaTime);
 
 }
 
