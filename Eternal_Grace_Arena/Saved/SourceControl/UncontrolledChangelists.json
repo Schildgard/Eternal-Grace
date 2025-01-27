@@ -5,7 +5,9 @@
 			"guid": "00000000000000000000000000000000",
 			"description": "Default Uncontrolled Changelist",
 			"files": [
-				"D:/Leon Depository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/StarterContent/Architecture/Floor_400x400.uasset"
+				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/StarterContent/Architecture/Floor_400x400.uasset",
+				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Levels/Level_Hub.umap",
+				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/DarkFantasyChurch/Materials/MI/MI_Floor_Puddles.uasset"
 			]
 		}
 	]
