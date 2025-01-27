@@ -28,14 +28,9 @@ void ASpells_EffectArea::SpellEffect(UPrimitiveComponent* OverlappedComponent, A
 {
 	AEternal_Grace_ArenaCharacter* EnteringCharacter = Cast<AEternal_Grace_ArenaCharacter>(OtherActor);
 
-	if (EnteringCharacter)
+	if (EnteringCharacter && EnteringCharacter->IsA(ValidCharacterClass))
 	{
 		AffectedCharacters.AddUnique(EnteringCharacter);
-		UE_LOG(LogTemp, Warning, TEXT("Added"))
-	}
-	else
-	{
-		UE_LOG(LogTemp, Warning, TEXT("Not Added"))
 	}
 }
 

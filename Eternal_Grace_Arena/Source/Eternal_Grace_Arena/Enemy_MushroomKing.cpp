@@ -20,9 +20,6 @@ void AEnemy_MushroomKing::GetOffMeMove()
 void AEnemy_MushroomKing::Tick(float DeltaSeconds)
 {
 	Super::Tick(DeltaSeconds);
-	//TEST CHECK FOR DISTANCE
-	//CheckDistancetoPlayer(700);
-
 }
 
 void AEnemy_MushroomKing::LightAttack()

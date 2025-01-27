@@ -53,8 +53,6 @@ void UShieldComponent::BeginPlay()
 	}
 	EquippedShield->AttachToComponent(this, FAttachmentTransformRules::SnapToTargetNotIncludingScale);
 
-	// ...
-
 }
 
 
