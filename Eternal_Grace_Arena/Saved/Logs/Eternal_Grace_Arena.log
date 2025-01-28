@@ -7569,3 +7569,1270 @@ FPackageName: Skipped package /Game/Audio/Combat/Grunts/14__Damage_Grunt__Male_ 
 [2025.01.28-15.49.52:626][ 71]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
 [2025.01.28-15.49.52:626][ 71]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
 [2025.01.28-15.49.52:627][ 71]AssetCheck: /Game/Levels/Level_Hub Validating asset
+[2025.01.28-15.50.50:176][361]LogChaosDD: Creating Chaos Debug Draw Scene for world World_13
+[2025.01.28-15.51.18:127][420]LogContentBrowser: Attempting asset rename: Level_World -> Level_Graveyard
+[2025.01.28-15.51.18:127][420]LogStreaming: Display: FlushAsyncLoading(397): 1 QueuedPackages, 0 AsyncPackages
+[2025.01.28-15.51.18:219][420]LogChaosDD: Creating Chaos Debug Draw Scene for world Level_World
+[2025.01.28-15.51.21:475][420]LogSlate: Window 'Message' being destroyed
+[2025.01.28-15.51.21:478][420]Message dialog closed, result: Cancel, title: Message, text: Source code, config INI, and text files may need Find/Replace for:
+
+
+Level_World
+
+Otherwise assets can be missing from cooked builds. Continue with rename?
+[2025.01.28-15.51.54:068][886]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2025.01.28-15.51.54:127][886]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Levels/Level_Hub" FILE="D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Levels/Level_Hub.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2025.01.28-15.51.54:157][886]LogUObjectHash: Compacting FUObjectHashTables data took   0.69ms
+[2025.01.28-15.51.54:267][886]LogSavePackage: Moving output files for package: /Game/Levels/Level_Hub
+[2025.01.28-15.51.54:268][886]LogSavePackage: Moving 'D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Saved/Level_Hub33A98C0C42C074A529534EB996512051.tmp' to 'D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Levels/Level_Hub.umap'
+[2025.01.28-15.51.54:274][886]LogFileHelpers: Saving map 'Level_Hub' took 0.148
+[2025.01.28-15.51.54:280][886]LogFileHelpers: InternalPromptForCheckoutAndSave took 211.967 ms (total: 5.20 sec)
+[2025.01.28-15.51.54:326][886]LogContentValidation: Display: Starting to validate 1 assets
+[2025.01.28-15.51.54:326][886]LogContentValidation: Enabled validators:
+[2025.01.28-15.51.54:326][886]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2025.01.28-15.51.54:326][886]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2025.01.28-15.51.54:326][886]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2025.01.28-15.51.54:326][886]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2025.01.28-15.51.54:326][886]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2025.01.28-15.51.54:326][886]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2025.01.28-15.51.54:327][886]AssetCheck: /Game/Levels/Level_Hub Validating asset
+[2025.01.28-15.51.55:407][996]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2025.01.28-15.51.55:412][996]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2025.01.28-15.51.55:438][996]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Level_Hub
+[2025.01.28-15.51.55:451][996]LogPlayLevel: PIE: StaticDuplicateObject took: (0.013783s)
+[2025.01.28-15.51.55:451][996]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Level_Hub.Level_Hub to /Game/Levels/UEDPIE_0_Level_Hub.Level_Hub (0.013817s)
+[2025.01.28-15.51.55:472][996]LogUObjectHash: Compacting FUObjectHashTables data took   0.65ms
+[2025.01.28-15.51.55:473][996]LogChaosDD: Creating Chaos Debug Draw Scene for world Level_Hub
+[2025.01.28-15.51.55:475][996]LogPlayLevel: PIE: World Init took: (0.001474s)
+[2025.01.28-15.51.55:475][996]LogAudio: Display: Creating Audio Device:                 Id: 18, Scope: Unique, Realtime: True
+[2025.01.28-15.51.55:477][996]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2025.01.28-15.51.55:477][996]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2025.01.28-15.51.55:477][996]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2025.01.28-15.51.55:477][996]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2025.01.28-15.51.55:477][996]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2025.01.28-15.51.55:477][996]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2025.01.28-15.51.55:477][996]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2025.01.28-15.51.55:477][996]LogAudio: Display: AudioDevice MaxSources: 32
+[2025.01.28-15.51.55:477][996]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2025.01.28-15.51.55:477][996]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2025.01.28-15.51.55:477][996]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2025.01.28-15.51.55:479][996]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2025.01.28-15.51.55:498][996]LogAudioMixer: Display: Using Audio Hardware Device Lautsprecher (Realtek(R) Audio)
+[2025.01.28-15.51.55:498][996]LogAudioMixer: Display: Initializing Sound Submixes...
+[2025.01.28-15.51.55:498][996]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2025.01.28-15.51.55:498][996]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2025.01.28-15.51.55:499][996]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=18
+[2025.01.28-15.51.55:499][996]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=18
+[2025.01.28-15.51.55:501][996]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=18
+[2025.01.28-15.51.55:501][996]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=18
+[2025.01.28-15.51.55:501][996]LogInit: FAudioDevice initialized with ID 18.
+[2025.01.28-15.51.55:501][996]LogAudio: Display: Audio Device (ID: 18) registered with world 'Level_Hub'.
+[2025.01.28-15.51.55:501][996]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 18
+[2025.01.28-15.51.55:504][996]LogLoad: Game class is 'GM_Custom_C'
+[2025.01.28-15.51.55:515][996]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Level_Hub.Level_Hub up for play (max tick rate 0) at 2025.01.28-16.51.55
+[2025.01.28-15.51.55:515][996]LogWorld: Bringing up level for play took: 0.011138
+[2025.01.28-15.51.55:517][996]LogOnline: OSS: Created online subsystem instance for: :Context_31
+[2025.01.28-15.51.55:519][996]LogSkeletalMesh: USkeletalMeshComponent: Recreating Clothing Actors for 'CharacterMesh0' with 'SKM_DarkLady'
+[2025.01.28-15.51.55:523][996]LogTemp: Warning: BP_InteractionStone_WeaponMaster_C_1 Could not Access GameInstance or GameInstance Dictionary did not Contained its key
+[2025.01.28-15.51.55:523][996]LogTemp: Warning: BP_InteractionStone_WeaponMaster_C_2 Could not Access GameInstance or GameInstance Dictionary did not Contained its key
+[2025.01.28-15.51.55:523][996]LogTemp: Warning: BP_InteractionStone_WeaponMaster_C_4 Could not Access GameInstance or GameInstance Dictionary did not Contained its key
+[2025.01.28-15.51.55:523][996]LogTemp: Warning: BP_InteractionStone_WeaponMaster_C_5 Could not Access GameInstance or GameInstance Dictionary did not Contained its key
+[2025.01.28-15.51.55:523][996]LogTemp: Warning: BP_InteractionStone_WeaponMaster_C_6 Could not Access GameInstance or GameInstance Dictionary did not Contained its key
+[2025.01.28-15.51.55:524][996]LogTemp: Warning: Failed to get Equipped Weapon Class for Equipment: Weapon
+[2025.01.28-15.51.55:524][996]LogTemp: Warning: Failed to get Equipped Weapon Class for Equipment: Shield
+[2025.01.28-15.51.55:524][996]LogTemp: Warning: Animation Instance set
+[2025.01.28-15.51.55:524][996]LogTemp: Warning: Animation Instance set
+[2025.01.28-15.51.55:525][996]PIE: Server logged in
+[2025.01.28-15.51.55:526][996]PIE: Play in editor total start time 0,116 seconds.
+[2025.01.28-15.52.07:793][453]LogStreaming: Warning: LoadPackage: SkipPackage: /Game/Levels (0xD00F42ACCC4E3005) - The package to load does not exist on disk or in the loader
+[2025.01.28-15.52.07:810][455]LogGlobalStatus: UEngine::Browse Started Browse: "/Game/Levels/Level_World"
+[2025.01.28-15.52.07:810][455]LogNet: Browse: /Game/Levels/Level_World
+[2025.01.28-15.52.07:810][455]LogLoad: LoadMap: /Game/Levels/Level_World
+[2025.01.28-15.52.07:810][455]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_Level_Hub
+[2025.01.28-15.52.07:816][455]LogWorld: UWorld::CleanupWorld for Level_Hub, bSessionEnded=true, bCleanupResources=true
+[2025.01.28-15.52.07:817][455]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.01.28-15.52.07:878][455]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2025.01.28-15.52.07:882][455]LogUObjectHash: Compacting FUObjectHashTables data took   0.79ms
+[2025.01.28-15.52.07:887][455]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Level_World
+[2025.01.28-15.52.07:910][455]LogPlayLevel: PIE: StaticDuplicateObject took: (0.022497s)
+[2025.01.28-15.52.07:910][455]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Level_World.Level_World to /Game/Levels/UEDPIE_0_Level_World.Level_World (0.022539s)
+[2025.01.28-15.52.07:910][455]LogAudio: Display: Audio Device (ID: 18) registered with world 'Level_World'.
+[2025.01.28-15.52.07:910][455]LogChaosDD: Creating Chaos Debug Draw Scene for world Level_World
+[2025.01.28-15.52.07:912][455]LogPlayLevel: PIE: World Init took: (0.001298s)
+[2025.01.28-15.52.07:912][455]LogLoad: Game class is 'GM_Custom_C'
+[2025.01.28-15.52.07:934][455]LogSkeletalMesh: USkeletalMeshComponent: Recreating Clothing Actors for 'CharacterMesh0' with 'SK_Dark_Knight'
+[2025.01.28-15.52.07:943][455]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Level_World.Level_World up for play (max tick rate 0) at 2025.01.28-16.52.07
+[2025.01.28-15.52.07:944][455]LogWorld: Bringing up level for play took: 0.032327
+[2025.01.28-15.52.07:946][455]LogSkeletalMesh: USkeletalMeshComponent: Recreating Clothing Actors for 'CharacterMesh0' with 'SKM_DarkLady'
+[2025.01.28-15.52.07:950][455]LogTemp: Warning: Failed to get Equipped Weapon Class for Equipment: Weapon
+[2025.01.28-15.52.07:950][455]LogTemp: Warning: Failed to get Equipped Weapon Class for Equipment: Shield
+[2025.01.28-15.52.07:950][455]LogTemp: Warning: Animation Instance set
+[2025.01.28-15.52.07:950][455]LogTemp: Warning: Failed to get Equipped Weapon Class for Equipment: Shield
+[2025.01.28-15.52.07:951][455]LogTemp: Warning: Animation Instance set
+[2025.01.28-15.52.07:951][455]LogTemp: Warning: Animation Instance set
+[2025.01.28-15.52.07:951][455]LogLoad: Took 0.141296 seconds to LoadMap(/Game/Levels/UEDPIE_0_Level_World)
+[2025.01.28-15.52.07:951][455]LogGlobalStatus: UEngine::LoadMap Load map complete /Game/Levels/UEDPIE_0_Level_World
+[2025.01.28-15.52.11:868][876]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.01.28-15.52.11:868][876]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_Level_World
+[2025.01.28-15.52.11:868][876]LogWorld: UWorld::CleanupWorld for Level_World, bSessionEnded=true, bCleanupResources=true
+[2025.01.28-15.52.11:871][876]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.01.28-15.52.11:875][876]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2025.01.28-15.52.11:880][876]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.01.28-15.52.11:904][876]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.01.28-15.52.11:905][876]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 18
+[2025.01.28-15.52.11:905][876]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=18
+[2025.01.28-15.52.11:907][876]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=18
+[2025.01.28-15.52.11:915][876]LogUObjectHash: Compacting FUObjectHashTables data took   0.72ms
+[2025.01.28-15.52.12:034][877]LogPlayLevel: Display: Destroying online subsystem :Context_31
+[2025.01.28-15.52.13:606][ 37]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2025.01.28-15.52.13:612][ 37]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2025.01.28-15.52.13:637][ 37]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Level_Hub
+[2025.01.28-15.52.13:652][ 37]LogPlayLevel: PIE: StaticDuplicateObject took: (0.013610s)
+[2025.01.28-15.52.13:652][ 37]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Level_Hub.Level_Hub to /Game/Levels/UEDPIE_0_Level_Hub.Level_Hub (0.013643s)
+[2025.01.28-15.52.13:672][ 37]LogUObjectHash: Compacting FUObjectHashTables data took   0.66ms
+[2025.01.28-15.52.13:675][ 37]LogChaosDD: Creating Chaos Debug Draw Scene for world Level_Hub
+[2025.01.28-15.52.13:677][ 37]LogPlayLevel: PIE: World Init took: (0.001353s)
+[2025.01.28-15.52.13:677][ 37]LogAudio: Display: Creating Audio Device:                 Id: 19, Scope: Unique, Realtime: True
+[2025.01.28-15.52.13:677][ 37]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2025.01.28-15.52.13:677][ 37]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2025.01.28-15.52.13:677][ 37]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2025.01.28-15.52.13:677][ 37]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2025.01.28-15.52.13:677][ 37]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2025.01.28-15.52.13:677][ 37]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2025.01.28-15.52.13:677][ 37]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2025.01.28-15.52.13:677][ 37]LogAudio: Display: AudioDevice MaxSources: 32
+[2025.01.28-15.52.13:677][ 37]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2025.01.28-15.52.13:677][ 37]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2025.01.28-15.52.13:677][ 37]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2025.01.28-15.52.13:680][ 37]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2025.01.28-15.52.13:698][ 37]LogAudioMixer: Display: Using Audio Hardware Device Lautsprecher (Realtek(R) Audio)
+[2025.01.28-15.52.13:698][ 37]LogAudioMixer: Display: Initializing Sound Submixes...
+[2025.01.28-15.52.13:698][ 37]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2025.01.28-15.52.13:698][ 37]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2025.01.28-15.52.13:699][ 37]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=19
+[2025.01.28-15.52.13:699][ 37]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=19
+[2025.01.28-15.52.13:701][ 37]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=19
+[2025.01.28-15.52.13:701][ 37]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=19
+[2025.01.28-15.52.13:701][ 37]LogInit: FAudioDevice initialized with ID 19.
+[2025.01.28-15.52.13:701][ 37]LogAudio: Display: Audio Device (ID: 19) registered with world 'Level_Hub'.
+[2025.01.28-15.52.13:701][ 37]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 19
+[2025.01.28-15.52.13:704][ 37]LogLoad: Game class is 'GM_Custom_C'
+[2025.01.28-15.52.13:715][ 37]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Level_Hub.Level_Hub up for play (max tick rate 0) at 2025.01.28-16.52.13
+[2025.01.28-15.52.13:715][ 37]LogWorld: Bringing up level for play took: 0.010823
+[2025.01.28-15.52.13:717][ 37]LogOnline: OSS: Created online subsystem instance for: :Context_32
+[2025.01.28-15.52.13:719][ 37]LogSkeletalMesh: USkeletalMeshComponent: Recreating Clothing Actors for 'CharacterMesh0' with 'SKM_DarkLady'
+[2025.01.28-15.52.13:723][ 37]LogTemp: Warning: BP_InteractionStone_WeaponMaster_C_1 Could not Access GameInstance or GameInstance Dictionary did not Contained its key
+[2025.01.28-15.52.13:723][ 37]LogTemp: Warning: BP_InteractionStone_WeaponMaster_C_2 Could not Access GameInstance or GameInstance Dictionary did not Contained its key
+[2025.01.28-15.52.13:723][ 37]LogTemp: Warning: BP_InteractionStone_WeaponMaster_C_4 Could not Access GameInstance or GameInstance Dictionary did not Contained its key
+[2025.01.28-15.52.13:723][ 37]LogTemp: Warning: BP_InteractionStone_WeaponMaster_C_5 Could not Access GameInstance or GameInstance Dictionary did not Contained its key
+[2025.01.28-15.52.13:723][ 37]LogTemp: Warning: BP_InteractionStone_WeaponMaster_C_6 Could not Access GameInstance or GameInstance Dictionary did not Contained its key
+[2025.01.28-15.52.13:723][ 37]LogTemp: Warning: Failed to get Equipped Weapon Class for Equipment: Weapon
+[2025.01.28-15.52.13:723][ 37]LogTemp: Warning: Failed to get Equipped Weapon Class for Equipment: Shield
+[2025.01.28-15.52.13:723][ 37]LogTemp: Warning: Animation Instance set
+[2025.01.28-15.52.13:724][ 37]LogTemp: Warning: Animation Instance set
+[2025.01.28-15.52.13:724][ 37]PIE: Server logged in
+[2025.01.28-15.52.13:726][ 37]PIE: Play in editor total start time 0,116 seconds.
+[2025.01.28-15.52.26:916][605]LogGlobalStatus: UEngine::Browse Started Browse: "/Game/Levels/Level_Main"
+[2025.01.28-15.52.26:916][605]LogNet: Browse: /Game/Levels/Level_Main
+[2025.01.28-15.52.26:916][605]LogLoad: LoadMap: /Game/Levels/Level_Main
+[2025.01.28-15.52.26:916][605]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_Level_Hub
+[2025.01.28-15.52.26:921][605]LogWorld: UWorld::CleanupWorld for Level_Hub, bSessionEnded=true, bCleanupResources=true
+[2025.01.28-15.52.26:923][605]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.01.28-15.52.26:969][605]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2025.01.28-15.52.26:973][605]LogUObjectHash: Compacting FUObjectHashTables data took   0.80ms
+[2025.01.28-15.52.26:978][605]LogStreaming: Display: FlushAsyncLoading(400): 1 QueuedPackages, 0 AsyncPackages
+[2025.01.28-15.52.27:261][605]LogAudio: Display: Audio Device (ID: 19) registered with world 'Level_Main'.
+[2025.01.28-15.52.27:261][605]LogChaosDD: Creating Chaos Debug Draw Scene for world Level_Main
+[2025.01.28-15.52.27:263][605]LogPlayLevel: PIE: World Init took: (0.001507s)
+[2025.01.28-15.52.27:263][605]LogLoad: Game class is 'GM_Custom_C'
+[2025.01.28-15.52.27:279][605]LogStaticMesh: Display: Waiting on static mesh StaticMesh /Game/Levels/UEDPIE_0_Level_Main.LandscapeNaniteMesh_10 being ready before playing
+[2025.01.28-15.52.27:279][605]LogStaticMesh: Display: Waiting on static mesh StaticMesh /Game/Levels/UEDPIE_0_Level_Main.LandscapeNaniteMesh_11 being ready before playing
+[2025.01.28-15.52.27:279][605]LogStaticMesh: Display: Waiting on static mesh StaticMesh /Game/Levels/UEDPIE_0_Level_Main.LandscapeNaniteMesh_8 being ready before playing
+[2025.01.28-15.52.27:279][605]LogStaticMesh: Display: Waiting on static mesh StaticMesh /Game/Levels/UEDPIE_0_Level_Main.LandscapeNaniteMesh_9 being ready before playing
+[2025.01.28-15.52.27:365][605]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Level_Main.Level_Main up for play (max tick rate 0) at 2025.01.28-16.52.27
+[2025.01.28-15.52.27:367][605]LogWorld: Bringing up level for play took: 0.087581
+[2025.01.28-15.52.27:369][605]LogSkeletalMesh: USkeletalMeshComponent: Recreating Clothing Actors for 'CharacterMesh0' with 'SKM_DarkLady'
+[2025.01.28-15.52.27:373][605]LogTemp: Warning: BP_InteractionStone_WeaponMaster_C_1 Could not Access GameInstance or GameInstance Dictionary did not Contained its key
+[2025.01.28-15.52.27:373][605]LogTemp: Warning: BP_InteractableActor_Torch_C_1 Could not Access GameInstance or GameInstance Dictionary did not Contained its key
+[2025.01.28-15.52.27:373][605]LogTemp: Warning: BP_InteractableActor_Torch_C_2 Could not Access GameInstance or GameInstance Dictionary did not Contained its key
+[2025.01.28-15.52.27:373][605]LogTemp: Warning: BP_InteractableActor_Torch_C_3 Could not Access GameInstance or GameInstance Dictionary did not Contained its key
+[2025.01.28-15.52.27:373][605]LogTemp: Warning: BP_InteractableActor_Torch_C_4 Could not Access GameInstance or GameInstance Dictionary did not Contained its key
+[2025.01.28-15.52.27:373][605]LogTemp: Warning: BP_EndLevel_C_1 Could not Access GameInstance or GameInstance Dictionary did not Contained its key
+[2025.01.28-15.52.27:373][605]LogTemp: Warning: BP_InteractionStone_WeaponMaster_C_2 Could not Access GameInstance or GameInstance Dictionary did not Contained its key
+[2025.01.28-15.52.27:374][605]LogTemp: Warning: Failed to get Equipped Weapon Class for Equipment: Shield
+[2025.01.28-15.52.27:375][605]LogTemp: Warning: Animation Instance set
+[2025.01.28-15.52.27:375][605]LogTemp: Warning: Animation Instance set
+[2025.01.28-15.52.27:375][605]LogLoad: Took 0.459104 seconds to LoadMap(/Game/Levels/Level_Main)
+[2025.01.28-15.52.27:375][605]LogGlobalStatus: UEngine::LoadMap Load map complete /Game/Levels/Level_Main
+[2025.01.28-15.52.27:465][607]LogRenderer: Warning: [VSM] Non-Nanite Marking Job Queue overflow. Performance may be affected. This occurs when many non-nanite meshes cover a large area of the shadow map.
+[2025.01.28-15.52.31:218][995]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.01.28-15.52.31:218][995]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_Level_Main
+[2025.01.28-15.52.31:219][995]LogWorld: UWorld::CleanupWorld for Level_Main, bSessionEnded=true, bCleanupResources=true
+[2025.01.28-15.52.31:224][995]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.01.28-15.52.31:229][995]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2025.01.28-15.52.31:234][995]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.01.28-15.52.31:263][995]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.01.28-15.52.31:264][995]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 19
+[2025.01.28-15.52.31:264][995]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=19
+[2025.01.28-15.52.31:266][995]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=19
+[2025.01.28-15.52.31:284][995]LogUObjectHash: Compacting FUObjectHashTables data took   0.97ms
+[2025.01.28-15.52.31:404][996]LogPlayLevel: Display: Destroying online subsystem :Context_32
+[2025.01.28-15.52.32:992][161]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2025.01.28-15.52.32:998][161]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2025.01.28-15.52.33:028][161]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Level_Hub
+[2025.01.28-15.52.33:042][161]LogPlayLevel: PIE: StaticDuplicateObject took: (0.013430s)
+[2025.01.28-15.52.33:042][161]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Level_Hub.Level_Hub to /Game/Levels/UEDPIE_0_Level_Hub.Level_Hub (0.013464s)
+[2025.01.28-15.52.33:062][161]LogUObjectHash: Compacting FUObjectHashTables data took   0.66ms
+[2025.01.28-15.52.33:065][161]LogChaosDD: Creating Chaos Debug Draw Scene for world Level_Hub
+[2025.01.28-15.52.33:065][161]LogPlayLevel: PIE: World Init took: (0.001339s)
+[2025.01.28-15.52.33:067][161]LogAudio: Display: Creating Audio Device:                 Id: 20, Scope: Unique, Realtime: True
+[2025.01.28-15.52.33:067][161]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2025.01.28-15.52.33:067][161]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2025.01.28-15.52.33:067][161]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2025.01.28-15.52.33:067][161]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2025.01.28-15.52.33:067][161]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2025.01.28-15.52.33:067][161]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2025.01.28-15.52.33:067][161]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2025.01.28-15.52.33:067][161]LogAudio: Display: AudioDevice MaxSources: 32
+[2025.01.28-15.52.33:067][161]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2025.01.28-15.52.33:067][161]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2025.01.28-15.52.33:067][161]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2025.01.28-15.52.33:069][161]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2025.01.28-15.52.33:087][161]LogAudioMixer: Display: Using Audio Hardware Device Lautsprecher (Realtek(R) Audio)
+[2025.01.28-15.52.33:087][161]LogAudioMixer: Display: Initializing Sound Submixes...
+[2025.01.28-15.52.33:088][161]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2025.01.28-15.52.33:088][161]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2025.01.28-15.52.33:088][161]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=20
+[2025.01.28-15.52.33:088][161]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=20
+[2025.01.28-15.52.33:090][161]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=20
+[2025.01.28-15.52.33:090][161]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=20
+[2025.01.28-15.52.33:090][161]LogInit: FAudioDevice initialized with ID 20.
+[2025.01.28-15.52.33:090][161]LogAudio: Display: Audio Device (ID: 20) registered with world 'Level_Hub'.
+[2025.01.28-15.52.33:090][161]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 20
+[2025.01.28-15.52.33:093][161]LogLoad: Game class is 'GM_Custom_C'
+[2025.01.28-15.52.33:104][161]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Level_Hub.Level_Hub up for play (max tick rate 0) at 2025.01.28-16.52.33
+[2025.01.28-15.52.33:104][161]LogWorld: Bringing up level for play took: 0.011043
+[2025.01.28-15.52.33:107][161]LogOnline: OSS: Created online subsystem instance for: :Context_33
+[2025.01.28-15.52.33:108][161]LogSkeletalMesh: USkeletalMeshComponent: Recreating Clothing Actors for 'CharacterMesh0' with 'SKM_DarkLady'
+[2025.01.28-15.52.33:112][161]LogTemp: Warning: BP_InteractionStone_WeaponMaster_C_1 Could not Access GameInstance or GameInstance Dictionary did not Contained its key
+[2025.01.28-15.52.33:112][161]LogTemp: Warning: BP_InteractionStone_WeaponMaster_C_2 Could not Access GameInstance or GameInstance Dictionary did not Contained its key
+[2025.01.28-15.52.33:112][161]LogTemp: Warning: BP_InteractionStone_WeaponMaster_C_4 Could not Access GameInstance or GameInstance Dictionary did not Contained its key
+[2025.01.28-15.52.33:112][161]LogTemp: Warning: BP_InteractionStone_WeaponMaster_C_5 Could not Access GameInstance or GameInstance Dictionary did not Contained its key
+[2025.01.28-15.52.33:112][161]LogTemp: Warning: BP_InteractionStone_WeaponMaster_C_6 Could not Access GameInstance or GameInstance Dictionary did not Contained its key
+[2025.01.28-15.52.33:112][161]LogTemp: Warning: Failed to get Equipped Weapon Class for Equipment: Weapon
+[2025.01.28-15.52.33:112][161]LogTemp: Warning: Failed to get Equipped Weapon Class for Equipment: Shield
+[2025.01.28-15.52.33:112][161]LogTemp: Warning: Animation Instance set
+[2025.01.28-15.52.33:113][161]LogTemp: Warning: Animation Instance set
+[2025.01.28-15.52.33:114][161]PIE: Server logged in
+[2025.01.28-15.52.33:115][161]PIE: Play in editor total start time 0,12 seconds.
+[2025.01.28-15.52.46:595][760]LogGlobalStatus: UEngine::Browse Started Browse: "/Game/Levels/Level_Dungeon"
+[2025.01.28-15.52.46:595][760]LogNet: Browse: /Game/Levels/Level_Dungeon
+[2025.01.28-15.52.46:595][760]LogLoad: LoadMap: /Game/Levels/Level_Dungeon
+[2025.01.28-15.52.46:595][760]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_Level_Hub
+[2025.01.28-15.52.46:601][760]LogWorld: UWorld::CleanupWorld for Level_Hub, bSessionEnded=true, bCleanupResources=true
+[2025.01.28-15.52.46:603][760]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.01.28-15.52.46:660][760]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2025.01.28-15.52.46:663][760]LogUObjectHash: Compacting FUObjectHashTables data took   0.69ms
+[2025.01.28-15.52.46:670][760]LogStreaming: Display: FlushAsyncLoading(402): 1 QueuedPackages, 0 AsyncPackages
+[2025.01.28-15.52.46:724][760]LogAudio: Display: Audio Device (ID: 20) registered with world 'Level_Dungeon'.
+[2025.01.28-15.52.46:724][760]LogChaosDD: Creating Chaos Debug Draw Scene for world Level_Dungeon
+[2025.01.28-15.52.46:726][760]LogPlayLevel: PIE: World Init took: (0.001340s)
+[2025.01.28-15.52.46:726][760]LogLoad: Game class is 'GM_Custom_C'
+[2025.01.28-15.52.46:731][760]LogSkeletalMesh: USkeletalMeshComponent: Recreating Clothing Actors for 'CharacterMesh0' with 'SevarogBloodred'
+[2025.01.28-15.52.46:764][760]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Level_Dungeon.Level_Dungeon up for play (max tick rate 0) at 2025.01.28-16.52.46
+[2025.01.28-15.52.46:766][760]LogWorld: Bringing up level for play took: 0.040616
+[2025.01.28-15.52.46:769][760]LogSkeletalMesh: USkeletalMeshComponent: Recreating Clothing Actors for 'CharacterMesh0' with 'SKM_DarkLady'
+[2025.01.28-15.52.46:773][760]LogTemp: Warning: Failed to get Equipped Weapon Class for Equipment: Weapon
+[2025.01.28-15.52.46:773][760]LogTemp: Warning: Failed to get Equipped Weapon Class for Equipment: Shield
+[2025.01.28-15.52.46:773][760]LogTemp: Warning: Animation Instance set
+[2025.01.28-15.52.46:773][760]LogTemp: Warning: Failed to get Equipped Weapon Class for Equipment: Weapon
+[2025.01.28-15.52.46:773][760]LogTemp: Warning: Failed to get Equipped Weapon Class for Equipment: Shield
+[2025.01.28-15.52.46:773][760]LogTemp: Warning: Animation Instance set
+[2025.01.28-15.52.46:774][760]LogTemp: Warning: Animation Instance set
+[2025.01.28-15.52.46:774][760]LogLoad: Took 0.178592 seconds to LoadMap(/Game/Levels/Level_Dungeon)
+[2025.01.28-15.52.46:774][760]LogGlobalStatus: UEngine::LoadMap Load map complete /Game/Levels/Level_Dungeon
+[2025.01.28-15.52.47:402][827]LogTemp: Warning: Character Charges Attack
+[2025.01.28-15.52.47:803][866]LogTemp: Warning: Character Releases Attack
+[2025.01.28-15.52.49:668][ 76]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.01.28-15.52.49:668][ 76]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_Level_Dungeon
+[2025.01.28-15.52.49:668][ 76]LogWorld: UWorld::CleanupWorld for Level_Dungeon, bSessionEnded=true, bCleanupResources=true
+[2025.01.28-15.52.49:670][ 76]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.01.28-15.52.49:674][ 76]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2025.01.28-15.52.49:679][ 76]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.01.28-15.52.49:703][ 76]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.01.28-15.52.49:704][ 76]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 20
+[2025.01.28-15.52.49:704][ 76]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=20
+[2025.01.28-15.52.49:706][ 76]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=20
+[2025.01.28-15.52.49:713][ 76]LogUObjectHash: Compacting FUObjectHashTables data took   0.70ms
+[2025.01.28-15.52.49:834][ 77]LogPlayLevel: Display: Destroying online subsystem :Context_33
+[2025.01.28-15.52.51:037][200]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.01.28-15.53.02:493][358]LogShaderCompilers: Display: ================================================
+[2025.01.28-15.53.02:493][358]LogShaderCompilers: Display: === FShaderJobCache stats ===
+[2025.01.28-15.53.02:493][358]LogShaderCompilers: Display: Total job queries 1.724, among them cache hits 352 (20.42%), DDC hits 399 (23.14%), Duplicates 212 (12.30%)
+[2025.01.28-15.53.02:493][358]LogShaderCompilers: Display: Tracking 1.160 distinct input hashes that result in 804 distinct outputs (69.31%)
+[2025.01.28-15.53.02:493][358]LogShaderCompilers: Display: RAM used: 535,05 KiB of 6,40 GiB budget. Usage: 0.01%
+[2025.01.28-15.53.02:493][358]LogShaderCompilers: Display: === Shader Compilation stats ===
+[2025.01.28-15.53.02:493][358]LogShaderCompilers: Display: Shaders Compiled: 761
+[2025.01.28-15.53.02:493][358]LogShaderCompilers: Display: Jobs assigned 761, completed 761 (100%)
+[2025.01.28-15.53.02:493][358]LogShaderCompilers: Display: Average time worker was idle: 328.87 s
+[2025.01.28-15.53.02:493][358]LogShaderCompilers: Display: Time job spent in pending queue: average 2.93 s, longest 13.04 s
+[2025.01.28-15.53.02:493][358]LogShaderCompilers: Display: Job execution time: average 2.86 s, max 9.46 s
+[2025.01.28-15.53.02:493][358]LogShaderCompilers: Display: Job life time (pending + execution): average 5.80 s, max 14.51
+[2025.01.28-15.53.02:493][358]LogShaderCompilers: Display: Shader code size: average 10,444 KiB, min 2,105 KiB, max 34,789 KiB
+[2025.01.28-15.53.02:493][358]LogShaderCompilers: Display: Time at least one job was in flight (either pending or executed): 88.12 s
+[2025.01.28-15.53.02:493][358]LogShaderCompilers: Display: Mutex wait stall in FShaderJobCache::SubmitJobs:  0.34%
+[2025.01.28-15.53.02:493][358]LogShaderCompilers: Display: Jobs were issued in 445 batches (only local compilation was used), average 1.71 jobs/batch
+[2025.01.28-15.53.02:493][358]LogShaderCompilers: Display: Average processing rate: 8.64 jobs/sec
+[2025.01.28-15.53.02:493][358]LogShaderCompilers: Display: Total thread time: 559,452 s
+[2025.01.28-15.53.02:493][358]LogShaderCompilers: Display: Total thread preprocess time: 28,572 s
+[2025.01.28-15.53.02:493][358]LogShaderCompilers: Display: Percentage time preprocessing: 5.11%
+[2025.01.28-15.53.02:493][358]LogShaderCompilers: Display: Effective parallelization: 6.35 (times faster than compiling all shaders on one thread). Compare with number of workers: 16
+[2025.01.28-15.53.02:493][358]LogShaderCompilers: Display: Top 5 most expensive shader types by average time:
+[2025.01.28-15.53.02:493][358]LogShaderCompilers: Display:                                        FMicropolyRasterizeCS (compiled    6 times, average 2.98 sec, max 3.64 sec, min 2.17 sec)
+[2025.01.28-15.53.02:493][358]LogShaderCompilers: Display:                         TBasePassCSFNoLightMapPolicySkylight (compiled   10 times, average 2.29 sec, max 2.94 sec, min 1.73 sec)
+[2025.01.28-15.53.02:493][358]LogShaderCompilers: Display:                                 TBasePassCSFNoLightMapPolicy (compiled   16 times, average 2.18 sec, max 2.87 sec, min 1.53 sec)
+[2025.01.28-15.53.02:493][358]LogShaderCompilers: Display:                                                 FLumenCardCS (compiled   16 times, average 1.83 sec, max 2.60 sec, min 1.20 sec)
+[2025.01.28-15.53.02:493][358]LogShaderCompilers: Display:                                  FPathTracingMaterialCHS_AHS (compiled   24 times, average 1.50 sec, max 1.66 sec, min 1.28 sec)
+[2025.01.28-15.53.02:493][358]LogShaderCompilers: Display: Top 5 shader types by total compile time:
+[2025.01.28-15.53.02:494][358]LogShaderCompilers: Display:                                             FDebugViewModePS - 9.91% of total time (compiled   41 times, average 1.35 sec, max 2.95 sec, min 0.82 sec)
+[2025.01.28-15.53.02:494][358]LogShaderCompilers: Display:                                TMaterialCHSFNoLightMapPolicy - 8.00% of total time (compiled   36 times, average 1.24 sec, max 2.41 sec, min 0.68 sec)
+[2025.01.28-15.53.02:494][358]LogShaderCompilers: Display:                                 TBasePassPSFNoLightMapPolicy - 6.92% of total time (compiled   64 times, average 0.60 sec, max 2.47 sec, min 0.37 sec)
+[2025.01.28-15.53.02:494][358]LogShaderCompilers: Display:                                  FPathTracingMaterialCHS_AHS - 6.43% of total time (compiled   24 times, average 1.50 sec, max 1.66 sec, min 1.28 sec)
+[2025.01.28-15.53.02:494][358]LogShaderCompilers: Display:                   TMaterialCHSFNoLightMapPolicyFAnyHitShader - 6.26% of total time (compiled   32 times, average 1.09 sec, max 1.74 sec, min 0.81 sec)
+[2025.01.28-15.53.02:494][358]LogShaderCompilers: Display: === Material stats ===
+[2025.01.28-15.53.02:494][358]LogShaderCompilers: Display: Materials Cooked:        0
+[2025.01.28-15.53.02:494][358]LogShaderCompilers: Display: Materials Translated:    313
+[2025.01.28-15.53.02:494][358]LogShaderCompilers: Display: Material Total Translate Time: 0.39 s
+[2025.01.28-15.53.02:494][358]LogShaderCompilers: Display: Material Translation Only: 0.26 s (66%)
+[2025.01.28-15.53.02:494][358]LogShaderCompilers: Display: Material DDC Serialization Only: 0.01 s (1%)
+[2025.01.28-15.53.02:494][358]LogShaderCompilers: Display: Material Cache Hits: 69 (22%)
+[2025.01.28-15.53.02:494][358]LogShaderCompilers: Display: ================================================
+[2025.01.28-15.53.06:452][777]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2025.01.28-15.53.06:504][777]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Levels/Level_Hub" FILE="D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Levels/Level_Hub.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2025.01.28-15.53.06:534][777]LogUObjectHash: Compacting FUObjectHashTables data took   0.65ms
+[2025.01.28-15.53.06:636][777]LogSavePackage: Moving output files for package: /Game/Levels/Level_Hub
+[2025.01.28-15.53.06:636][777]LogSavePackage: Moving 'D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Saved/Level_Hub65721A3F4F1E3C39C4A7CB8F61410BA1.tmp' to 'D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Levels/Level_Hub.umap'
+[2025.01.28-15.53.06:643][777]LogFileHelpers: Saving map 'Level_Hub' took 0.140
+[2025.01.28-15.53.06:649][777]LogFileHelpers: InternalPromptForCheckoutAndSave took 197.100 ms (total: 5.40 sec)
+[2025.01.28-15.53.06:686][777]LogContentValidation: Display: Starting to validate 1 assets
+[2025.01.28-15.53.06:686][777]LogContentValidation: Enabled validators:
+[2025.01.28-15.53.06:686][777]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2025.01.28-15.53.06:686][777]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2025.01.28-15.53.06:686][777]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2025.01.28-15.53.06:686][777]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2025.01.28-15.53.06:686][777]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2025.01.28-15.53.06:686][777]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2025.01.28-15.53.06:687][777]AssetCheck: /Game/Levels/Level_Hub Validating asset
+[2025.01.28-15.53.19:635][179]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 10646.943359
+[2025.01.28-15.53.19:796][197]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2025.01.28-15.53.19:796][197]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 10647.095703, Update Interval: 344.759674
+[2025.01.28-15.54.55:322][710]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2025.01.28-15.54.55:329][710]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2025.01.28-15.54.55:329][710]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Level_Hub
+[2025.01.28-15.54.55:342][710]LogPlayLevel: PIE: StaticDuplicateObject took: (0.014212s)
+[2025.01.28-15.54.55:342][710]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Level_Hub.Level_Hub to /Game/Levels/UEDPIE_0_Level_Hub.Level_Hub (0.014243s)
+[2025.01.28-15.54.55:364][710]LogUObjectHash: Compacting FUObjectHashTables data took   0.66ms
+[2025.01.28-15.54.55:370][710]LogChaosDD: Creating Chaos Debug Draw Scene for world Level_Hub
+[2025.01.28-15.54.55:371][710]LogPlayLevel: PIE: World Init took: (0.001359s)
+[2025.01.28-15.54.55:372][710]LogAudio: Display: Creating Audio Device:                 Id: 21, Scope: Unique, Realtime: True
+[2025.01.28-15.54.55:372][710]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2025.01.28-15.54.55:372][710]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2025.01.28-15.54.55:372][710]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2025.01.28-15.54.55:372][710]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2025.01.28-15.54.55:372][710]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2025.01.28-15.54.55:372][710]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2025.01.28-15.54.55:372][710]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2025.01.28-15.54.55:372][710]LogAudio: Display: AudioDevice MaxSources: 32
+[2025.01.28-15.54.55:372][710]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2025.01.28-15.54.55:372][710]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2025.01.28-15.54.55:372][710]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2025.01.28-15.54.55:374][710]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2025.01.28-15.54.55:394][710]LogAudioMixer: Display: Using Audio Hardware Device Lautsprecher (Realtek(R) Audio)
+[2025.01.28-15.54.55:394][710]LogAudioMixer: Display: Initializing Sound Submixes...
+[2025.01.28-15.54.55:394][710]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2025.01.28-15.54.55:394][710]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2025.01.28-15.54.55:395][710]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=21
+[2025.01.28-15.54.55:395][710]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=21
+[2025.01.28-15.54.55:396][710]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=21
+[2025.01.28-15.54.55:396][710]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=21
+[2025.01.28-15.54.55:396][710]LogInit: FAudioDevice initialized with ID 21.
+[2025.01.28-15.54.55:396][710]LogAudio: Display: Audio Device (ID: 21) registered with world 'Level_Hub'.
+[2025.01.28-15.54.55:396][710]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 21
+[2025.01.28-15.54.55:399][710]LogLoad: Game class is 'GM_Custom_C'
+[2025.01.28-15.54.55:410][710]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Level_Hub.Level_Hub up for play (max tick rate 0) at 2025.01.28-16.54.55
+[2025.01.28-15.54.55:411][710]LogWorld: Bringing up level for play took: 0.011165
+[2025.01.28-15.54.55:413][710]LogOnline: OSS: Created online subsystem instance for: :Context_34
+[2025.01.28-15.54.55:415][710]LogSkeletalMesh: USkeletalMeshComponent: Recreating Clothing Actors for 'CharacterMesh0' with 'SKM_DarkLady'
+[2025.01.28-15.54.55:418][710]LogTemp: Warning: BP_InteractionStone_WeaponMaster_C_1 Could not Access GameInstance or GameInstance Dictionary did not Contained its key
+[2025.01.28-15.54.55:418][710]LogTemp: Warning: BP_InteractionStone_WeaponMaster_C_2 Could not Access GameInstance or GameInstance Dictionary did not Contained its key
+[2025.01.28-15.54.55:418][710]LogTemp: Warning: BP_InteractionStone_WeaponMaster_C_4 Could not Access GameInstance or GameInstance Dictionary did not Contained its key
+[2025.01.28-15.54.55:418][710]LogTemp: Warning: BP_InteractionStone_WeaponMaster_C_5 Could not Access GameInstance or GameInstance Dictionary did not Contained its key
+[2025.01.28-15.54.55:418][710]LogTemp: Warning: BP_InteractionStone_WeaponMaster_C_6 Could not Access GameInstance or GameInstance Dictionary did not Contained its key
+[2025.01.28-15.54.55:418][710]LogTemp: Warning: Failed to get Equipped Weapon Class for Equipment: Weapon
+[2025.01.28-15.54.55:418][710]LogTemp: Warning: Failed to get Equipped Weapon Class for Equipment: Shield
+[2025.01.28-15.54.55:418][710]LogTemp: Warning: Animation Instance set
+[2025.01.28-15.54.55:419][710]LogTemp: Warning: Animation Instance set
+[2025.01.28-15.54.55:420][710]PIE: Server logged in
+[2025.01.28-15.54.55:421][710]PIE: Play in editor total start time 0,095 seconds.
+[2025.01.28-15.55.14:371][959]LogGlobalStatus: UEngine::Browse Started Browse: "/Game/Levels/Level_Dungeon"
+[2025.01.28-15.55.14:371][959]LogNet: Browse: /Game/Levels/Level_Dungeon
+[2025.01.28-15.55.14:371][959]LogLoad: LoadMap: /Game/Levels/Level_Dungeon
+[2025.01.28-15.55.14:371][959]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_Level_Hub
+[2025.01.28-15.55.14:376][959]LogWorld: UWorld::CleanupWorld for Level_Hub, bSessionEnded=true, bCleanupResources=true
+[2025.01.28-15.55.14:378][959]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.01.28-15.55.14:400][959]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2025.01.28-15.55.14:404][959]LogUObjectHash: Compacting FUObjectHashTables data took   0.73ms
+[2025.01.28-15.55.14:409][959]LogStreaming: Display: FlushAsyncLoading(404): 1 QueuedPackages, 0 AsyncPackages
+[2025.01.28-15.55.14:463][959]LogAudio: Display: Audio Device (ID: 21) registered with world 'Level_Dungeon'.
+[2025.01.28-15.55.14:463][959]LogChaosDD: Creating Chaos Debug Draw Scene for world Level_Dungeon
+[2025.01.28-15.55.14:464][959]LogPlayLevel: PIE: World Init took: (0.001395s)
+[2025.01.28-15.55.14:464][959]LogLoad: Game class is 'GM_Custom_C'
+[2025.01.28-15.55.14:470][959]LogSkeletalMesh: USkeletalMeshComponent: Recreating Clothing Actors for 'CharacterMesh0' with 'SevarogBloodred'
+[2025.01.28-15.55.14:506][959]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Level_Dungeon.Level_Dungeon up for play (max tick rate 0) at 2025.01.28-16.55.14
+[2025.01.28-15.55.14:508][959]LogWorld: Bringing up level for play took: 0.042974
+[2025.01.28-15.55.14:510][959]LogSkeletalMesh: USkeletalMeshComponent: Recreating Clothing Actors for 'CharacterMesh0' with 'SKM_DarkLady'
+[2025.01.28-15.55.14:514][959]LogTemp: Warning: Failed to get Equipped Weapon Class for Equipment: Weapon
+[2025.01.28-15.55.14:514][959]LogTemp: Warning: Failed to get Equipped Weapon Class for Equipment: Shield
+[2025.01.28-15.55.14:514][959]LogTemp: Warning: Animation Instance set
+[2025.01.28-15.55.14:514][959]LogTemp: Warning: Failed to get Equipped Weapon Class for Equipment: Weapon
+[2025.01.28-15.55.14:514][959]LogTemp: Warning: Failed to get Equipped Weapon Class for Equipment: Shield
+[2025.01.28-15.55.14:514][959]LogTemp: Warning: Animation Instance set
+[2025.01.28-15.55.14:515][959]LogTemp: Warning: Animation Instance set
+[2025.01.28-15.55.14:515][959]LogLoad: Took 0.144641 seconds to LoadMap(/Game/Levels/Level_Dungeon)
+[2025.01.28-15.55.14:515][959]LogGlobalStatus: UEngine::LoadMap Load map complete /Game/Levels/Level_Dungeon
+[2025.01.28-15.55.30:795][862]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.01.28-15.55.39:364][874]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.01.28-15.55.48:381][941]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.01.28-15.55.58:629][151]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.01.28-15.55.58:629][151]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_Level_Dungeon
+[2025.01.28-15.55.58:629][151]LogWorld: UWorld::CleanupWorld for Level_Dungeon, bSessionEnded=true, bCleanupResources=true
+[2025.01.28-15.55.58:631][151]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.01.28-15.55.58:635][151]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2025.01.28-15.55.58:640][151]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.01.28-15.55.58:664][151]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.01.28-15.55.58:665][151]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 21
+[2025.01.28-15.55.58:665][151]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=21
+[2025.01.28-15.55.58:667][151]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=21
+[2025.01.28-15.55.58:674][151]LogUObjectHash: Compacting FUObjectHashTables data took   0.86ms
+[2025.01.28-15.55.58:752][152]LogPlayLevel: Display: Destroying online subsystem :Context_34
+[2025.01.28-15.57.10:526][ 82]LogDerivedDataCache: C:/Users/Student/AppData/Local/UnrealEngine/Common/DerivedDataCache: Maintenance finished in +00:00:01.098 and deleted 0 files with total size 0 MiB and 0 empty folders. Scanned 1325 files in 2171 folders with total size 299 MiB.
+[2025.01.28-16.00.02:345][597]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 11049.909180
+[2025.01.28-16.00.03:346][600]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2025.01.28-16.00.03:346][600]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 11050.576172, Update Interval: 310.490417
+[2025.01.28-16.05.49:765][639]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 11397.209961
+[2025.01.28-16.05.50:765][642]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2025.01.28-16.05.50:765][642]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 11397.875977, Update Interval: 346.940521
+[2025.01.28-16.12.22:281][449]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 11789.841797
+[2025.01.28-16.12.22:457][470]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2025.01.28-16.12.22:457][470]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 11790.008789, Update Interval: 307.670532
+[2025.01.28-16.18.18:917][872]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 12146.873047
+[2025.01.28-16.18.19:119][896]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2025.01.28-16.18.19:119][896]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 12147.066406, Update Interval: 324.663239
+[2025.01.28-16.24.32:194][207]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 12520.832031
+[2025.01.28-16.24.32:358][226]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2025.01.28-16.24.32:358][226]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 12520.988281, Update Interval: 356.850494
+[2025.01.28-16.31.01:481][495]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 12910.665039
+[2025.01.28-16.31.01:632][513]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2025.01.28-16.31.01:632][513]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 12910.808594, Update Interval: 329.696960
+[2025.01.28-16.35.00:998][566]LogSlate: Warning: Unable to rasterize '../../../Engine/Content/Editor/Slate/Starship/AssetIcons/SkeletalMesh_64.svg'. File could not be found
+[2025.01.28-16.35.04:997][988]LogStreaming: Display: FlushAsyncLoading(405): 1 QueuedPackages, 0 AsyncPackages
+[2025.01.28-16.35.05:017][988]LogTexture: Display: Building textures: /Game/DarkFantasyChurch/Textures/Flags/T_Flags_Opacity.T_Flags_Opacity (TFO_AutoDXT, 2048x2048 x1x1x1) (Required Memory Estimate: 388.083323 MB), EncodeSpeed: Fast
+[2025.01.28-16.35.05:035][988]LogTexture: Display: Building textures: /Game/DarkFantasyChurch/Textures/Flags/T_Flags_ORM.T_Flags_ORM (TFO_AutoDXT, 2048x2048 x1x1x1) (Required Memory Estimate: 388.083323 MB), EncodeSpeed: Fast
+[2025.01.28-16.35.05:036][988]LogTexture: Display: Building textures: /Game/DarkFantasyChurch/Textures/Flags/T_Flags_BC.T_Flags_BC (TFO_AutoDXT, 2048x2048 x1x1x1) (Required Memory Estimate: 351.083323 MB), EncodeSpeed: Fast
+[2025.01.28-16.35.05:036][988]LogTexture: Display: Building textures: /Game/DarkFantasyChurch/Textures/Flags/T_Flags_N.T_Flags_N (TFO_BC5, 2048x2048 x1x1x1) (Required Memory Estimate: 562.499988 MB), EncodeSpeed: Fast
+[2025.01.28-16.35.05:175][989]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/DarkFantasyChurch/Meshes/Flags/SM_Flag_Small_04.SM_Flag_Small_04
+[2025.01.28-16.35.05:175][989]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/DarkFantasyChurch/Meshes/Flags/SM_Flag_Small_04.SM_Flag_Small_04
+[2025.01.28-16.35.05:176][989]LogActorFactory: Actor Factory spawned StaticMesh /Game/DarkFantasyChurch/Meshes/Flags/SM_Flag_Small_04.SM_Flag_Small_04 as actor: StaticMeshActor /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.StaticMeshActor_33
+[2025.01.28-16.35.06:947][135]LogUObjectHash: Compacting FUObjectHashTables data took   0.80ms
+[2025.01.28-16.35.06:953][135]LogEditorActor: Deleted 0 Actors (0.027 secs)
+[2025.01.28-16.35.06:957][135]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/DarkFantasyChurch/Meshes/Flags/SM_Flag_Small_04.SM_Flag_Small_04
+[2025.01.28-16.35.06:957][135]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/DarkFantasyChurch/Meshes/Flags/SM_Flag_Small_04.SM_Flag_Small_04
+[2025.01.28-16.35.06:959][135]LogActorFactory: Actor Factory spawned StaticMesh /Game/DarkFantasyChurch/Meshes/Flags/SM_Flag_Small_04.SM_Flag_Small_04 as actor: StaticMeshActor /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.StaticMeshActor_34
+[2025.01.28-16.35.23:312][787]LogStreaming: Display: FlushAsyncLoading(406): 1 QueuedPackages, 0 AsyncPackages
+[2025.01.28-16.35.23:467][790]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/DarkFantasyChurch/Meshes/Flags/SM_Flag_Mid_01.SM_Flag_Mid_01
+[2025.01.28-16.35.23:467][790]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/DarkFantasyChurch/Meshes/Flags/SM_Flag_Mid_01.SM_Flag_Mid_01
+[2025.01.28-16.35.23:467][790]LogActorFactory: Actor Factory spawned StaticMesh /Game/DarkFantasyChurch/Meshes/Flags/SM_Flag_Mid_01.SM_Flag_Mid_01 as actor: StaticMeshActor /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.StaticMeshActor_35
+[2025.01.28-16.35.24:774][900]LogUObjectHash: Compacting FUObjectHashTables data took   0.54ms
+[2025.01.28-16.35.24:779][900]LogEditorActor: Deleted 0 Actors (0.024 secs)
+[2025.01.28-16.35.24:783][900]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/DarkFantasyChurch/Meshes/Flags/SM_Flag_Mid_01.SM_Flag_Mid_01
+[2025.01.28-16.35.24:783][900]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/DarkFantasyChurch/Meshes/Flags/SM_Flag_Mid_01.SM_Flag_Mid_01
+[2025.01.28-16.35.24:785][900]LogActorFactory: Actor Factory spawned StaticMesh /Game/DarkFantasyChurch/Meshes/Flags/SM_Flag_Mid_01.SM_Flag_Mid_01 as actor: StaticMeshActor /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.StaticMeshActor_37
+[2025.01.28-16.35.37:893][210]Cmd: DELETE
+[2025.01.28-16.35.37:893][210]Cmd: ACTOR DELETE
+[2025.01.28-16.35.37:900][210]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.01.28-16.35.37:921][210]LogUObjectHash: Compacting FUObjectHashTables data took   0.38ms
+[2025.01.28-16.35.37:925][210]LogEditorActor: Deleted 1 Actors (0.031 secs)
+[2025.01.28-16.35.39:284][358]Cmd: DELETE
+[2025.01.28-16.35.39:284][358]Cmd: ACTOR DELETE
+[2025.01.28-16.35.39:291][358]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.01.28-16.35.39:315][358]LogUObjectHash: Compacting FUObjectHashTables data took   0.36ms
+[2025.01.28-16.35.39:319][358]LogEditorActor: Deleted 1 Actors (0.033 secs)
+[2025.01.28-16.35.42:159][680]LogStreaming: Display: FlushAsyncLoading(407): 1 QueuedPackages, 0 AsyncPackages
+[2025.01.28-16.35.42:295][682]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/DarkFantasyChurch/Meshes/Flags/SM_Flag_Mid_02.SM_Flag_Mid_02
+[2025.01.28-16.35.42:295][682]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/DarkFantasyChurch/Meshes/Flags/SM_Flag_Mid_02.SM_Flag_Mid_02
+[2025.01.28-16.35.42:296][682]LogActorFactory: Actor Factory spawned StaticMesh /Game/DarkFantasyChurch/Meshes/Flags/SM_Flag_Mid_02.SM_Flag_Mid_02 as actor: StaticMeshActor /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.StaticMeshActor_40
+[2025.01.28-16.35.43:325][784]LogUObjectHash: Compacting FUObjectHashTables data took   0.56ms
+[2025.01.28-16.35.43:329][784]LogEditorActor: Deleted 0 Actors (0.024 secs)
+[2025.01.28-16.35.43:332][784]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/DarkFantasyChurch/Meshes/Flags/SM_Flag_Mid_02.SM_Flag_Mid_02
+[2025.01.28-16.35.43:332][784]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/DarkFantasyChurch/Meshes/Flags/SM_Flag_Mid_02.SM_Flag_Mid_02
+[2025.01.28-16.35.43:333][784]LogActorFactory: Actor Factory spawned StaticMesh /Game/DarkFantasyChurch/Meshes/Flags/SM_Flag_Mid_02.SM_Flag_Mid_02 as actor: StaticMeshActor /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.StaticMeshActor_41
+[2025.01.28-16.36.47:865][467]Cmd: DELETE
+[2025.01.28-16.36.47:865][467]Cmd: ACTOR DELETE
+[2025.01.28-16.36.47:871][467]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.01.28-16.36.47:893][467]LogUObjectHash: Compacting FUObjectHashTables data took   0.58ms
+[2025.01.28-16.36.47:896][467]LogEditorActor: Deleted 1 Actors (0.030 secs)
+[2025.01.28-16.36.49:004][571]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/DarkFantasyChurch/Meshes/Flags/SM_Flag_Mid_02.SM_Flag_Mid_02
+[2025.01.28-16.36.49:004][571]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/DarkFantasyChurch/Meshes/Flags/SM_Flag_Mid_02.SM_Flag_Mid_02
+[2025.01.28-16.36.49:004][571]LogActorFactory: Actor Factory spawned StaticMesh /Game/DarkFantasyChurch/Meshes/Flags/SM_Flag_Mid_02.SM_Flag_Mid_02 as actor: StaticMeshActor /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.StaticMeshActor_43
+[2025.01.28-16.36.49:911][657]LogUObjectHash: Compacting FUObjectHashTables data took   0.35ms
+[2025.01.28-16.36.49:914][657]LogEditorActor: Deleted 0 Actors (0.024 secs)
+[2025.01.28-16.36.49:918][657]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/DarkFantasyChurch/Meshes/Flags/SM_Flag_Mid_02.SM_Flag_Mid_02
+[2025.01.28-16.36.49:918][657]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/DarkFantasyChurch/Meshes/Flags/SM_Flag_Mid_02.SM_Flag_Mid_02
+[2025.01.28-16.36.49:919][657]LogActorFactory: Actor Factory spawned StaticMesh /Game/DarkFantasyChurch/Meshes/Flags/SM_Flag_Mid_02.SM_Flag_Mid_02 as actor: StaticMeshActor /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.StaticMeshActor_45
+[2025.01.28-16.37.05:265][185]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 13274.479492
+[2025.01.28-16.37.05:471][195]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2025.01.28-16.37.05:471][195]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 13274.664062, Update Interval: 323.185516
+[2025.01.28-16.37.51:773][ 74]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/DarkFantasyChurch/Meshes/Flags/SM_Flag_Mid_02.SM_Flag_Mid_02
+[2025.01.28-16.37.51:773][ 74]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/DarkFantasyChurch/Meshes/Flags/SM_Flag_Mid_02.SM_Flag_Mid_02
+[2025.01.28-16.37.51:773][ 74]LogActorFactory: Actor Factory spawned StaticMesh /Game/DarkFantasyChurch/Meshes/Flags/SM_Flag_Mid_02.SM_Flag_Mid_02 as actor: StaticMeshActor /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.StaticMeshActor_47
+[2025.01.28-16.37.52:766][148]LogUObjectHash: Compacting FUObjectHashTables data took   0.35ms
+[2025.01.28-16.37.52:769][148]LogEditorActor: Deleted 0 Actors (0.024 secs)
+[2025.01.28-16.37.52:773][148]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/DarkFantasyChurch/Meshes/Flags/SM_Flag_Mid_02.SM_Flag_Mid_02
+[2025.01.28-16.37.52:773][148]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/DarkFantasyChurch/Meshes/Flags/SM_Flag_Mid_02.SM_Flag_Mid_02
+[2025.01.28-16.37.52:775][148]LogActorFactory: Actor Factory spawned StaticMesh /Game/DarkFantasyChurch/Meshes/Flags/SM_Flag_Mid_02.SM_Flag_Mid_02 as actor: StaticMeshActor /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.StaticMeshActor_48
+[2025.01.28-16.38.24:914][301]Cmd: ELEMENT MIRROR Y=-1
+[2025.01.28-16.39.24:053][490]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2025.01.28-16.39.24:058][490]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2025.01.28-16.39.24:082][490]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Level_Hub
+[2025.01.28-16.39.24:095][490]LogPlayLevel: PIE: StaticDuplicateObject took: (0.014116s)
+[2025.01.28-16.39.24:095][490]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Level_Hub.Level_Hub to /Game/Levels/UEDPIE_0_Level_Hub.Level_Hub (0.014147s)
+[2025.01.28-16.39.24:117][490]LogUObjectHash: Compacting FUObjectHashTables data took   0.80ms
+[2025.01.28-16.39.24:125][490]LogChaosDD: Creating Chaos Debug Draw Scene for world Level_Hub
+[2025.01.28-16.39.24:126][490]LogPlayLevel: PIE: World Init took: (0.001420s)
+[2025.01.28-16.39.24:127][490]LogAudio: Display: Creating Audio Device:                 Id: 22, Scope: Unique, Realtime: True
+[2025.01.28-16.39.24:127][490]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2025.01.28-16.39.24:127][490]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2025.01.28-16.39.24:127][490]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2025.01.28-16.39.24:127][490]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2025.01.28-16.39.24:127][490]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2025.01.28-16.39.24:127][490]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2025.01.28-16.39.24:127][490]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2025.01.28-16.39.24:127][490]LogAudio: Display: AudioDevice MaxSources: 32
+[2025.01.28-16.39.24:127][490]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2025.01.28-16.39.24:127][490]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2025.01.28-16.39.24:127][490]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2025.01.28-16.39.24:129][490]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2025.01.28-16.39.24:148][490]LogAudioMixer: Display: Using Audio Hardware Device Lautsprecher (Realtek(R) Audio)
+[2025.01.28-16.39.24:148][490]LogAudioMixer: Display: Initializing Sound Submixes...
+[2025.01.28-16.39.24:148][490]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2025.01.28-16.39.24:148][490]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2025.01.28-16.39.24:149][490]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=22
+[2025.01.28-16.39.24:149][490]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=22
+[2025.01.28-16.39.24:151][490]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=22
+[2025.01.28-16.39.24:151][490]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=22
+[2025.01.28-16.39.24:151][490]LogInit: FAudioDevice initialized with ID 22.
+[2025.01.28-16.39.24:151][490]LogAudio: Display: Audio Device (ID: 22) registered with world 'Level_Hub'.
+[2025.01.28-16.39.24:151][490]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 22
+[2025.01.28-16.39.24:154][490]LogLoad: Game class is 'GM_Custom_C'
+[2025.01.28-16.39.24:165][490]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Level_Hub.Level_Hub up for play (max tick rate 0) at 2025.01.28-17.39.24
+[2025.01.28-16.39.24:166][490]LogWorld: Bringing up level for play took: 0.011124
+[2025.01.28-16.39.24:167][490]LogOnline: OSS: Created online subsystem instance for: :Context_35
+[2025.01.28-16.39.24:170][490]LogSkeletalMesh: USkeletalMeshComponent: Recreating Clothing Actors for 'CharacterMesh0' with 'SKM_DarkLady'
+[2025.01.28-16.39.24:174][490]LogTemp: Warning: BP_InteractionStone_WeaponMaster_C_1 Could not Access GameInstance or GameInstance Dictionary did not Contained its key
+[2025.01.28-16.39.24:174][490]LogTemp: Warning: BP_InteractionStone_WeaponMaster_C_2 Could not Access GameInstance or GameInstance Dictionary did not Contained its key
+[2025.01.28-16.39.24:174][490]LogTemp: Warning: BP_InteractionStone_WeaponMaster_C_4 Could not Access GameInstance or GameInstance Dictionary did not Contained its key
+[2025.01.28-16.39.24:174][490]LogTemp: Warning: BP_InteractionStone_WeaponMaster_C_5 Could not Access GameInstance or GameInstance Dictionary did not Contained its key
+[2025.01.28-16.39.24:174][490]LogTemp: Warning: BP_InteractionStone_WeaponMaster_C_6 Could not Access GameInstance or GameInstance Dictionary did not Contained its key
+[2025.01.28-16.39.24:174][490]LogTemp: Warning: Failed to get Equipped Weapon Class for Equipment: Weapon
+[2025.01.28-16.39.24:174][490]LogTemp: Warning: Failed to get Equipped Weapon Class for Equipment: Shield
+[2025.01.28-16.39.24:174][490]LogTemp: Warning: Animation Instance set
+[2025.01.28-16.39.24:175][490]LogTemp: Warning: Animation Instance set
+[2025.01.28-16.39.24:175][490]PIE: Server logged in
+[2025.01.28-16.39.24:177][490]PIE: Play in editor total start time 0,12 seconds.
+[2025.01.28-16.39.37:642][ 52]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.01.28-16.39.37:642][ 52]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_Level_Hub
+[2025.01.28-16.39.37:643][ 52]LogWorld: UWorld::CleanupWorld for Level_Hub, bSessionEnded=true, bCleanupResources=true
+[2025.01.28-16.39.37:645][ 52]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.01.28-16.39.37:648][ 52]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2025.01.28-16.39.37:652][ 52]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.01.28-16.39.37:677][ 52]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.01.28-16.39.37:678][ 52]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 22
+[2025.01.28-16.39.37:678][ 52]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=22
+[2025.01.28-16.39.37:680][ 52]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=22
+[2025.01.28-16.39.37:688][ 52]LogUObjectHash: Compacting FUObjectHashTables data took   0.69ms
+[2025.01.28-16.39.37:769][ 53]LogPlayLevel: Display: Destroying online subsystem :Context_35
+[2025.01.28-16.39.50:026][236]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/DarkFantasyChurch/Meshes/Flags/SM_Flag_Mid_02.SM_Flag_Mid_02
+[2025.01.28-16.39.50:026][236]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/DarkFantasyChurch/Meshes/Flags/SM_Flag_Mid_02.SM_Flag_Mid_02
+[2025.01.28-16.39.50:026][236]LogActorFactory: Actor Factory spawned StaticMesh /Game/DarkFantasyChurch/Meshes/Flags/SM_Flag_Mid_02.SM_Flag_Mid_02 as actor: StaticMeshActor /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.StaticMeshActor_50
+[2025.01.28-16.39.51:589][370]LogUObjectHash: Compacting FUObjectHashTables data took   0.63ms
+[2025.01.28-16.39.51:593][370]LogEditorActor: Deleted 0 Actors (0.023 secs)
+[2025.01.28-16.39.51:597][370]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/DarkFantasyChurch/Meshes/Flags/SM_Flag_Mid_02.SM_Flag_Mid_02
+[2025.01.28-16.39.51:597][370]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/DarkFantasyChurch/Meshes/Flags/SM_Flag_Mid_02.SM_Flag_Mid_02
+[2025.01.28-16.39.51:599][370]LogActorFactory: Actor Factory spawned StaticMesh /Game/DarkFantasyChurch/Meshes/Flags/SM_Flag_Mid_02.SM_Flag_Mid_02 as actor: StaticMeshActor /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.StaticMeshActor_53
+[2025.01.28-16.41.35:856][897]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2025.01.28-16.41.35:862][897]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2025.01.28-16.41.35:862][897]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Level_Hub
+[2025.01.28-16.41.35:876][897]LogPlayLevel: PIE: StaticDuplicateObject took: (0.014351s)
+[2025.01.28-16.41.35:877][897]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Level_Hub.Level_Hub to /Game/Levels/UEDPIE_0_Level_Hub.Level_Hub (0.014380s)
+[2025.01.28-16.41.35:898][897]LogUObjectHash: Compacting FUObjectHashTables data took   0.65ms
+[2025.01.28-16.41.35:904][897]LogChaosDD: Creating Chaos Debug Draw Scene for world Level_Hub
+[2025.01.28-16.41.35:905][897]LogPlayLevel: PIE: World Init took: (0.001387s)
+[2025.01.28-16.41.35:906][897]LogAudio: Display: Creating Audio Device:                 Id: 23, Scope: Unique, Realtime: True
+[2025.01.28-16.41.35:906][897]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2025.01.28-16.41.35:906][897]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2025.01.28-16.41.35:906][897]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2025.01.28-16.41.35:906][897]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2025.01.28-16.41.35:906][897]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2025.01.28-16.41.35:906][897]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2025.01.28-16.41.35:906][897]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2025.01.28-16.41.35:906][897]LogAudio: Display: AudioDevice MaxSources: 32
+[2025.01.28-16.41.35:906][897]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2025.01.28-16.41.35:906][897]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2025.01.28-16.41.35:906][897]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2025.01.28-16.41.35:908][897]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2025.01.28-16.41.35:928][897]LogAudioMixer: Display: Using Audio Hardware Device Lautsprecher (Realtek(R) Audio)
+[2025.01.28-16.41.35:928][897]LogAudioMixer: Display: Initializing Sound Submixes...
+[2025.01.28-16.41.35:928][897]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2025.01.28-16.41.35:928][897]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2025.01.28-16.41.35:928][897]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=23
+[2025.01.28-16.41.35:928][897]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=23
+[2025.01.28-16.41.35:930][897]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=23
+[2025.01.28-16.41.35:930][897]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=23
+[2025.01.28-16.41.35:930][897]LogInit: FAudioDevice initialized with ID 23.
+[2025.01.28-16.41.35:930][897]LogAudio: Display: Audio Device (ID: 23) registered with world 'Level_Hub'.
+[2025.01.28-16.41.35:930][897]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 23
+[2025.01.28-16.41.35:932][897]LogLoad: Game class is 'GM_Custom_C'
+[2025.01.28-16.41.35:944][897]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Level_Hub.Level_Hub up for play (max tick rate 0) at 2025.01.28-17.41.35
+[2025.01.28-16.41.35:945][897]LogWorld: Bringing up level for play took: 0.011407
+[2025.01.28-16.41.35:946][897]LogOnline: OSS: Created online subsystem instance for: :Context_36
+[2025.01.28-16.41.35:949][897]LogSkeletalMesh: USkeletalMeshComponent: Recreating Clothing Actors for 'CharacterMesh0' with 'SKM_DarkLady'
+[2025.01.28-16.41.35:952][897]LogTemp: Warning: BP_InteractionStone_WeaponMaster_C_1 Could not Access GameInstance or GameInstance Dictionary did not Contained its key
+[2025.01.28-16.41.35:952][897]LogTemp: Warning: BP_InteractionStone_WeaponMaster_C_2 Could not Access GameInstance or GameInstance Dictionary did not Contained its key
+[2025.01.28-16.41.35:952][897]LogTemp: Warning: BP_InteractionStone_WeaponMaster_C_4 Could not Access GameInstance or GameInstance Dictionary did not Contained its key
+[2025.01.28-16.41.35:952][897]LogTemp: Warning: BP_InteractionStone_WeaponMaster_C_5 Could not Access GameInstance or GameInstance Dictionary did not Contained its key
+[2025.01.28-16.41.35:952][897]LogTemp: Warning: BP_InteractionStone_WeaponMaster_C_6 Could not Access GameInstance or GameInstance Dictionary did not Contained its key
+[2025.01.28-16.41.35:952][897]LogTemp: Warning: Failed to get Equipped Weapon Class for Equipment: Weapon
+[2025.01.28-16.41.35:952][897]LogTemp: Warning: Failed to get Equipped Weapon Class for Equipment: Shield
+[2025.01.28-16.41.35:952][897]LogTemp: Warning: Animation Instance set
+[2025.01.28-16.41.35:953][897]LogTemp: Warning: Animation Instance set
+[2025.01.28-16.41.35:954][897]PIE: Server logged in
+[2025.01.28-16.41.35:955][897]PIE: Play in editor total start time 0,095 seconds.
+[2025.01.28-16.41.40:460][409]LogTemp: Warning: Character Charges Attack
+[2025.01.28-16.41.40:674][434]LogTemp: Warning: Character Releases Attack
+[2025.01.28-16.41.59:202][600]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.01.28-16.41.59:202][600]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_Level_Hub
+[2025.01.28-16.41.59:202][600]LogWorld: UWorld::CleanupWorld for Level_Hub, bSessionEnded=true, bCleanupResources=true
+[2025.01.28-16.41.59:205][600]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.01.28-16.41.59:208][600]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2025.01.28-16.41.59:213][600]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.01.28-16.41.59:237][600]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.01.28-16.41.59:238][600]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 23
+[2025.01.28-16.41.59:238][600]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=23
+[2025.01.28-16.41.59:241][600]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=23
+[2025.01.28-16.41.59:248][600]LogUObjectHash: Compacting FUObjectHashTables data took   0.67ms
+[2025.01.28-16.41.59:324][601]LogPlayLevel: Display: Destroying online subsystem :Context_36
+[2025.01.28-16.42.09:146][500]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/DarkFantasyChurch/Meshes/Flags/SM_Flag_Mid_02.SM_Flag_Mid_02
+[2025.01.28-16.42.09:146][500]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/DarkFantasyChurch/Meshes/Flags/SM_Flag_Mid_02.SM_Flag_Mid_02
+[2025.01.28-16.42.09:147][500]LogActorFactory: Actor Factory spawned StaticMesh /Game/DarkFantasyChurch/Meshes/Flags/SM_Flag_Mid_02.SM_Flag_Mid_02 as actor: StaticMeshActor /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.StaticMeshActor_67
+[2025.01.28-16.42.10:229][585]LogUObjectHash: Compacting FUObjectHashTables data took   0.63ms
+[2025.01.28-16.42.10:232][585]LogEditorActor: Deleted 0 Actors (0.024 secs)
+[2025.01.28-16.42.10:237][585]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/DarkFantasyChurch/Meshes/Flags/SM_Flag_Mid_02.SM_Flag_Mid_02
+[2025.01.28-16.42.10:237][585]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/DarkFantasyChurch/Meshes/Flags/SM_Flag_Mid_02.SM_Flag_Mid_02
+[2025.01.28-16.42.10:238][585]LogActorFactory: Actor Factory spawned StaticMesh /Game/DarkFantasyChurch/Meshes/Flags/SM_Flag_Mid_02.SM_Flag_Mid_02 as actor: StaticMeshActor /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.StaticMeshActor_68
+[2025.01.28-16.42.18:215][337]Cmd: DELETE
+[2025.01.28-16.42.18:215][337]Cmd: ACTOR DELETE
+[2025.01.28-16.42.18:221][337]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.01.28-16.42.18:243][337]LogUObjectHash: Compacting FUObjectHashTables data took   0.35ms
+[2025.01.28-16.42.18:247][337]LogEditorActor: Deleted 1 Actors (0.031 secs)
+[2025.01.28-16.42.19:424][452]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/DarkFantasyChurch/Meshes/Flags/SM_Flag_Small_04.SM_Flag_Small_04
+[2025.01.28-16.42.19:424][452]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/DarkFantasyChurch/Meshes/Flags/SM_Flag_Small_04.SM_Flag_Small_04
+[2025.01.28-16.42.19:425][452]LogActorFactory: Actor Factory spawned StaticMesh /Game/DarkFantasyChurch/Meshes/Flags/SM_Flag_Small_04.SM_Flag_Small_04 as actor: StaticMeshActor /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.StaticMeshActor_69
+[2025.01.28-16.42.20:489][570]LogUObjectHash: Compacting FUObjectHashTables data took   0.35ms
+[2025.01.28-16.42.20:493][570]LogEditorActor: Deleted 0 Actors (0.024 secs)
+[2025.01.28-16.42.20:497][570]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/DarkFantasyChurch/Meshes/Flags/SM_Flag_Small_04.SM_Flag_Small_04
+[2025.01.28-16.42.20:497][570]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/DarkFantasyChurch/Meshes/Flags/SM_Flag_Small_04.SM_Flag_Small_04
+[2025.01.28-16.42.20:498][570]LogActorFactory: Actor Factory spawned StaticMesh /Game/DarkFantasyChurch/Meshes/Flags/SM_Flag_Small_04.SM_Flag_Small_04 as actor: StaticMeshActor /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.StaticMeshActor_70
+[2025.01.28-16.43.05:349][ 14]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 13633.727539
+[2025.01.28-16.43.05:518][ 32]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2025.01.28-16.43.05:518][ 32]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 13633.885742, Update Interval: 315.229340
+[2025.01.28-16.44.02:969][837]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/DarkFantasyChurch/Meshes/Flags/SM_Flag_Small_04.SM_Flag_Small_04
+[2025.01.28-16.44.02:970][837]LogActorFactory: Actor Factory spawned StaticMesh /Game/DarkFantasyChurch/Meshes/Flags/SM_Flag_Small_04.SM_Flag_Small_04 as actor: StaticMeshActor /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.StaticMeshActor_64
+[2025.01.28-16.44.17:565][230]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/DarkFantasyChurch/Meshes/Flags/SM_Flag_Small_04.SM_Flag_Small_04
+[2025.01.28-16.44.17:566][230]LogActorFactory: Actor Factory spawned StaticMesh /Game/DarkFantasyChurch/Meshes/Flags/SM_Flag_Small_04.SM_Flag_Small_04 as actor: StaticMeshActor /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.StaticMeshActor_54
+[2025.01.28-16.44.29:994][386]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/DarkFantasyChurch/Meshes/Flags/SM_Flag_Small_04.SM_Flag_Small_04
+[2025.01.28-16.44.29:995][386]LogActorFactory: Actor Factory spawned StaticMesh /Game/DarkFantasyChurch/Meshes/Flags/SM_Flag_Small_04.SM_Flag_Small_04 as actor: StaticMeshActor /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.StaticMeshActor_55
+[2025.01.28-16.44.38:102][215]Cmd: DELETE
+[2025.01.28-16.44.38:102][215]Cmd: ACTOR DELETE
+[2025.01.28-16.44.38:108][215]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.01.28-16.44.38:133][215]LogUObjectHash: Compacting FUObjectHashTables data took   0.77ms
+[2025.01.28-16.44.38:142][215]LogEditorActor: Deleted 1 Actors (0.041 secs)
+[2025.01.28-16.44.50:428][355]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/DarkFantasyChurch/Meshes/Flags/SM_Flag_Small_04.SM_Flag_Small_04
+[2025.01.28-16.44.50:428][355]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/DarkFantasyChurch/Meshes/Flags/SM_Flag_Small_04.SM_Flag_Small_04
+[2025.01.28-16.44.50:429][355]LogActorFactory: Actor Factory spawned StaticMesh /Game/DarkFantasyChurch/Meshes/Flags/SM_Flag_Small_04.SM_Flag_Small_04 as actor: StaticMeshActor /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.StaticMeshActor_89
+[2025.01.28-16.44.52:625][573]Cmd: DELETE
+[2025.01.28-16.44.52:625][573]Cmd: ACTOR DELETE
+[2025.01.28-16.44.52:632][573]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.01.28-16.44.52:654][573]LogUObjectHash: Compacting FUObjectHashTables data took   0.62ms
+[2025.01.28-16.44.52:660][573]LogEditorActor: Deleted 1 Actors (0.035 secs)
+[2025.01.28-16.44.54:087][742]Cmd: TRANSACTION UNDO
+[2025.01.28-16.44.54:087][742]LogEditorTransaction: Undo Delete Elements
+[2025.01.28-16.44.54:613][750]Cmd: TRANSACTION UNDO
+[2025.01.28-16.44.54:613][750]LogEditorTransaction: Undo Clicking on Elements
+[2025.01.28-16.44.55:764][857]Cmd: TRANSACTION UNDO
+[2025.01.28-16.44.55:764][857]LogEditorTransaction: Undo Place Object
+[2025.01.28-16.44.56:519][942]LogActorLevelEditorSelection: Warning: SelectActor: The requested operation could not be completed because the actor has invalid flags. (StaticMeshActor89) Flags: (0x00200001)
+[2025.01.28-16.44.58:998][151]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/DarkFantasyChurch/Meshes/Flags/SM_Flag_Small_04.SM_Flag_Small_04
+[2025.01.28-16.44.58:999][151]LogActorFactory: Actor Factory spawned StaticMesh /Game/DarkFantasyChurch/Meshes/Flags/SM_Flag_Small_04.SM_Flag_Small_04 as actor: StaticMeshActor /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.StaticMeshActor_65
+[2025.01.28-16.45.04:199][674]Cmd: DELETE
+[2025.01.28-16.45.04:199][674]Cmd: ACTOR DELETE
+[2025.01.28-16.45.04:207][674]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.01.28-16.45.04:228][674]LogUObjectHash: Compacting FUObjectHashTables data took   0.63ms
+[2025.01.28-16.45.04:236][674]LogEditorActor: Deleted 1 Actors (0.037 secs)
+[2025.01.28-16.45.21:449][394]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/DarkFantasyChurch/Meshes/Flags/SM_Flag_Small_04.SM_Flag_Small_04
+[2025.01.28-16.45.21:451][394]LogActorFactory: Actor Factory spawned StaticMesh /Game/DarkFantasyChurch/Meshes/Flags/SM_Flag_Small_04.SM_Flag_Small_04 as actor: StaticMeshActor /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.StaticMeshActor_49
+[2025.01.28-16.45.21:451][394]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/DarkFantasyChurch/Meshes/Flags/SM_Flag_Small_04.SM_Flag_Small_04
+[2025.01.28-16.45.21:452][394]LogActorFactory: Actor Factory spawned StaticMesh /Game/DarkFantasyChurch/Meshes/Flags/SM_Flag_Small_04.SM_Flag_Small_04 as actor: StaticMeshActor /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.StaticMeshActor_45
+[2025.01.28-16.45.21:452][394]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/DarkFantasyChurch/Meshes/Flags/SM_Flag_Small_04.SM_Flag_Small_04
+[2025.01.28-16.45.21:453][394]LogActorFactory: Actor Factory spawned StaticMesh /Game/DarkFantasyChurch/Meshes/Flags/SM_Flag_Small_04.SM_Flag_Small_04 as actor: StaticMeshActor /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.StaticMeshActor_41
+[2025.01.28-16.45.21:453][394]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/DarkFantasyChurch/Meshes/Flags/SM_Flag_Small_04.SM_Flag_Small_04
+[2025.01.28-16.45.21:454][394]LogActorFactory: Actor Factory spawned StaticMesh /Game/DarkFantasyChurch/Meshes/Flags/SM_Flag_Small_04.SM_Flag_Small_04 as actor: StaticMeshActor /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.StaticMeshActor_48
+[2025.01.28-16.45.52:566][649]LogUObjectHash: Compacting FUObjectHashTables data took   0.64ms
+[2025.01.28-16.45.53:844][649]LogSlate: Window 'Save Content' being destroyed
+[2025.01.28-16.45.53:853][649]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2025.01.28-16.45.53:896][649]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Levels/Level_Hub" FILE="D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Levels/Level_Hub.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2025.01.28-16.45.53:924][649]LogUObjectHash: Compacting FUObjectHashTables data took   0.35ms
+[2025.01.28-16.45.54:006][649]LogSavePackage: Moving output files for package: /Game/Levels/Level_Hub
+[2025.01.28-16.45.54:006][649]LogSavePackage: Moving 'D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Saved/Level_Hub4B4A43A14E568D27C50E1481137DF7B8.tmp' to 'D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Levels/Level_Hub.umap'
+[2025.01.28-16.45.54:013][649]LogFileHelpers: Saving map 'Level_Hub' took 0.118
+[2025.01.28-16.45.54:019][649]LogFileHelpers: InternalPromptForCheckoutAndSave took 166.809 ms (total: 5.57 sec)
+[2025.01.28-16.45.54:062][649]LogContentValidation: Display: Starting to validate 1 assets
+[2025.01.28-16.45.54:062][649]LogContentValidation: Enabled validators:
+[2025.01.28-16.45.54:062][649]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2025.01.28-16.45.54:063][649]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2025.01.28-16.45.54:063][649]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2025.01.28-16.45.54:063][649]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2025.01.28-16.45.54:063][649]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2025.01.28-16.45.54:063][649]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2025.01.28-16.45.54:063][649]AssetCheck: /Game/Levels/Level_Hub Validating asset
+[2025.01.28-16.47.00:106][713]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2025.01.28-16.47.00:128][713]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2025.01.28-16.47.00:152][713]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Level_Hub
+[2025.01.28-16.47.00:167][713]LogPlayLevel: PIE: StaticDuplicateObject took: (0.015212s)
+[2025.01.28-16.47.00:167][713]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Level_Hub.Level_Hub to /Game/Levels/UEDPIE_0_Level_Hub.Level_Hub (0.015252s)
+[2025.01.28-16.47.00:191][713]LogUObjectHash: Compacting FUObjectHashTables data took   0.65ms
+[2025.01.28-16.47.00:204][713]LogChaosDD: Creating Chaos Debug Draw Scene for world Level_Hub
+[2025.01.28-16.47.00:205][713]LogPlayLevel: PIE: World Init took: (0.001392s)
+[2025.01.28-16.47.00:205][713]LogAudio: Display: Creating Audio Device:                 Id: 24, Scope: Unique, Realtime: True
+[2025.01.28-16.47.00:205][713]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2025.01.28-16.47.00:205][713]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2025.01.28-16.47.00:205][713]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2025.01.28-16.47.00:205][713]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2025.01.28-16.47.00:205][713]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2025.01.28-16.47.00:205][713]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2025.01.28-16.47.00:205][713]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2025.01.28-16.47.00:205][713]LogAudio: Display: AudioDevice MaxSources: 32
+[2025.01.28-16.47.00:205][713]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2025.01.28-16.47.00:205][713]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2025.01.28-16.47.00:205][713]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2025.01.28-16.47.00:207][713]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2025.01.28-16.47.00:226][713]LogAudioMixer: Display: Using Audio Hardware Device Lautsprecher (Realtek(R) Audio)
+[2025.01.28-16.47.00:226][713]LogAudioMixer: Display: Initializing Sound Submixes...
+[2025.01.28-16.47.00:226][713]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2025.01.28-16.47.00:226][713]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2025.01.28-16.47.00:227][713]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=24
+[2025.01.28-16.47.00:227][713]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=24
+[2025.01.28-16.47.00:229][713]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=24
+[2025.01.28-16.47.00:229][713]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=24
+[2025.01.28-16.47.00:229][713]LogInit: FAudioDevice initialized with ID 24.
+[2025.01.28-16.47.00:229][713]LogAudio: Display: Audio Device (ID: 24) registered with world 'Level_Hub'.
+[2025.01.28-16.47.00:229][713]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 24
+[2025.01.28-16.47.00:232][713]LogLoad: Game class is 'GM_Custom_C'
+[2025.01.28-16.47.00:243][713]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Level_Hub.Level_Hub up for play (max tick rate 0) at 2025.01.28-17.47.00
+[2025.01.28-16.47.00:243][713]LogWorld: Bringing up level for play took: 0.011572
+[2025.01.28-16.47.00:245][713]LogOnline: OSS: Created online subsystem instance for: :Context_37
+[2025.01.28-16.47.00:248][713]LogSkeletalMesh: USkeletalMeshComponent: Recreating Clothing Actors for 'CharacterMesh0' with 'SKM_DarkLady'
+[2025.01.28-16.47.00:252][713]LogTemp: Warning: BP_InteractionStone_WeaponMaster_C_1 Could not Access GameInstance or GameInstance Dictionary did not Contained its key
+[2025.01.28-16.47.00:252][713]LogTemp: Warning: BP_InteractionStone_WeaponMaster_C_2 Could not Access GameInstance or GameInstance Dictionary did not Contained its key
+[2025.01.28-16.47.00:252][713]LogTemp: Warning: BP_InteractionStone_WeaponMaster_C_4 Could not Access GameInstance or GameInstance Dictionary did not Contained its key
+[2025.01.28-16.47.00:252][713]LogTemp: Warning: BP_InteractionStone_WeaponMaster_C_5 Could not Access GameInstance or GameInstance Dictionary did not Contained its key
+[2025.01.28-16.47.00:252][713]LogTemp: Warning: BP_InteractionStone_WeaponMaster_C_6 Could not Access GameInstance or GameInstance Dictionary did not Contained its key
+[2025.01.28-16.47.00:252][713]LogTemp: Warning: Failed to get Equipped Weapon Class for Equipment: Weapon
+[2025.01.28-16.47.00:252][713]LogTemp: Warning: Failed to get Equipped Weapon Class for Equipment: Shield
+[2025.01.28-16.47.00:252][713]LogTemp: Warning: Animation Instance set
+[2025.01.28-16.47.00:253][713]LogTemp: Warning: Animation Instance set
+[2025.01.28-16.47.00:254][713]PIE: Server logged in
+[2025.01.28-16.47.00:255][713]PIE: Play in editor total start time 0,129 seconds.
+[2025.01.28-16.47.00:803][770]LogTemp: Warning: Character Charges Attack
+[2025.01.28-16.47.00:944][787]LogTemp: Warning: Character Releases Attack
+[2025.01.28-16.47.17:075][720]LogTemp: Warning: BP_InteractionStone_WeaponMaster_C_6 is not Active 
+[2025.01.28-16.47.17:617][785]LogTemp: Warning: BP_InteractionStone_WeaponMaster_C_6 is not Active 
+[2025.01.28-16.47.17:825][810]LogTemp: Warning: BP_InteractionStone_WeaponMaster_C_6 is not Active 
+[2025.01.28-16.47.18:025][834]LogTemp: Warning: BP_InteractionStone_WeaponMaster_C_6 is not Active 
+[2025.01.28-16.47.20:092][ 80]LogTemp: Warning: BP_InteractionStone_WeaponMaster_C_5 is not Active 
+[2025.01.28-16.47.20:942][177]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.01.28-16.47.20:942][177]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_Level_Hub
+[2025.01.28-16.47.20:942][177]LogWorld: UWorld::CleanupWorld for Level_Hub, bSessionEnded=true, bCleanupResources=true
+[2025.01.28-16.47.20:945][177]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.01.28-16.47.20:948][177]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2025.01.28-16.47.20:953][177]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.01.28-16.47.20:979][177]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2025.01.28-16.47.20:979][177]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 24
+[2025.01.28-16.47.20:979][177]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=24
+[2025.01.28-16.47.20:981][177]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=24
+[2025.01.28-16.47.20:985][177]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.01.28-16.47.20:989][177]LogUObjectHash: Compacting FUObjectHashTables data took   0.68ms
+[2025.01.28-16.47.21:037][178]LogPlayLevel: Display: Destroying online subsystem :Context_37
+[2025.01.28-16.48.03:457][940]Cmd: SELECT NONE
+[2025.01.28-16.48.56:572][823]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 13984.421875
+[2025.01.28-16.48.56:745][842]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2025.01.28-16.48.56:745][842]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 13984.584961, Update Interval: 322.738739
+[2025.01.28-16.48.57:154][886]LogStreaming: Display: FlushAsyncLoading(408): 1 QueuedPackages, 0 AsyncPackages
+[2025.01.28-16.48.57:318][888]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/DarkFantasyChurch/Meshes/Flags/SM_Flag_Mid_03.SM_Flag_Mid_03
+[2025.01.28-16.48.57:318][888]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/DarkFantasyChurch/Meshes/Flags/SM_Flag_Mid_03.SM_Flag_Mid_03
+[2025.01.28-16.48.57:318][888]LogActorFactory: Actor Factory spawned StaticMesh /Game/DarkFantasyChurch/Meshes/Flags/SM_Flag_Mid_03.SM_Flag_Mid_03 as actor: StaticMeshActor /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.StaticMeshActor_97
+[2025.01.28-16.48.58:724][ 16]LogUObjectHash: Compacting FUObjectHashTables data took   0.72ms
+[2025.01.28-16.48.58:730][ 16]LogEditorActor: Deleted 0 Actors (0.027 secs)
+[2025.01.28-16.48.58:735][ 16]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/DarkFantasyChurch/Meshes/Flags/SM_Flag_Mid_03.SM_Flag_Mid_03
+[2025.01.28-16.48.58:735][ 16]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/DarkFantasyChurch/Meshes/Flags/SM_Flag_Mid_03.SM_Flag_Mid_03
+[2025.01.28-16.48.58:737][ 16]LogActorFactory: Actor Factory spawned StaticMesh /Game/DarkFantasyChurch/Meshes/Flags/SM_Flag_Mid_03.SM_Flag_Mid_03 as actor: StaticMeshActor /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.StaticMeshActor_100
+[2025.01.28-16.49.03:300][533]Cmd: DELETE
+[2025.01.28-16.49.03:300][533]Cmd: ACTOR DELETE
+[2025.01.28-16.49.03:308][533]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.01.28-16.49.03:329][533]LogUObjectHash: Compacting FUObjectHashTables data took   0.35ms
+[2025.01.28-16.49.03:333][533]LogEditorActor: Deleted 1 Actors (0.032 secs)
+[2025.01.28-16.49.21:658][444]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/DarkFantasyChurch/Meshes/Flags/SM_Flag_Mid_03.SM_Flag_Mid_03
+[2025.01.28-16.49.21:659][444]LogActorFactory: Actor Factory spawned StaticMesh /Game/DarkFantasyChurch/Meshes/Flags/SM_Flag_Mid_03.SM_Flag_Mid_03 as actor: StaticMeshActor /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.StaticMeshActor_49
+[2025.01.28-16.49.21:660][444]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/DarkFantasyChurch/Meshes/Flags/SM_Flag_Mid_03.SM_Flag_Mid_03
+[2025.01.28-16.49.21:660][444]LogActorFactory: Actor Factory spawned StaticMesh /Game/DarkFantasyChurch/Meshes/Flags/SM_Flag_Mid_03.SM_Flag_Mid_03 as actor: StaticMeshActor /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.StaticMeshActor_45
+[2025.01.28-16.49.21:662][444]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/DarkFantasyChurch/Meshes/Flags/SM_Flag_Mid_03.SM_Flag_Mid_03
+[2025.01.28-16.49.21:662][444]LogActorFactory: Actor Factory spawned StaticMesh /Game/DarkFantasyChurch/Meshes/Flags/SM_Flag_Mid_03.SM_Flag_Mid_03 as actor: StaticMeshActor /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.StaticMeshActor_41
+[2025.01.28-16.49.21:663][444]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/DarkFantasyChurch/Meshes/Flags/SM_Flag_Mid_03.SM_Flag_Mid_03
+[2025.01.28-16.49.21:663][444]LogActorFactory: Actor Factory spawned StaticMesh /Game/DarkFantasyChurch/Meshes/Flags/SM_Flag_Mid_03.SM_Flag_Mid_03 as actor: StaticMeshActor /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.StaticMeshActor_48
+[2025.01.28-16.50.20:960][  7]Cmd: TRANSACTION UNDO
+[2025.01.28-16.50.20:960][  7]LogEditorTransaction: Undo Move Elements
+[2025.01.28-16.51.14:482][836]Cmd: TRANSACTION UNDO
+[2025.01.28-16.51.14:482][836]LogEditorTransaction: Undo Rotate Elements
+[2025.01.28-16.51.14:908][844]Cmd: TRANSACTION UNDO
+[2025.01.28-16.51.14:908][844]LogEditorTransaction: Undo Move Elements
+[2025.01.28-16.51.15:319][880]Cmd: TRANSACTION UNDO
+[2025.01.28-16.51.15:319][880]LogEditorTransaction: Undo Clicking on Elements
+[2025.01.28-16.51.15:697][916]Cmd: TRANSACTION UNDO
+[2025.01.28-16.51.15:697][916]LogEditorTransaction: Undo Move Elements
+[2025.01.28-16.51.16:042][955]Cmd: TRANSACTION UNDO
+[2025.01.28-16.51.16:042][955]LogEditorTransaction: Undo Move Elements
+[2025.01.28-16.51.16:268][979]Cmd: TRANSACTION UNDO
+[2025.01.28-16.51.16:268][979]LogEditorTransaction: Undo Clicking on Elements
+[2025.01.28-16.51.16:462][996]Cmd: TRANSACTION UNDO
+[2025.01.28-16.51.16:462][996]LogEditorTransaction: Undo Clicking on Elements
+[2025.01.28-16.51.16:657][ 13]Cmd: TRANSACTION UNDO
+[2025.01.28-16.51.16:657][ 13]LogEditorTransaction: Undo Clicking on Elements
+[2025.01.28-16.51.17:011][ 44]Cmd: TRANSACTION UNDO
+[2025.01.28-16.51.17:011][ 44]LogEditorTransaction: Undo Move Elements
+[2025.01.28-16.51.17:341][ 81]Cmd: TRANSACTION UNDO
+[2025.01.28-16.51.17:341][ 81]LogEditorTransaction: Undo Move Elements
+[2025.01.28-16.51.17:679][119]Cmd: TRANSACTION UNDO
+[2025.01.28-16.51.17:679][119]LogEditorTransaction: Undo Clicking on Elements
+[2025.01.28-16.51.18:008][150]Cmd: TRANSACTION UNDO
+[2025.01.28-16.51.18:008][150]LogEditorTransaction: Undo Clicking on Elements
+[2025.01.28-16.51.18:395][155]Cmd: TRANSACTION UNDO
+[2025.01.28-16.51.18:395][155]LogEditorTransaction: Undo Move Elements
+[2025.01.28-16.51.18:771][183]Cmd: TRANSACTION UNDO
+[2025.01.28-16.51.18:771][183]LogEditorTransaction: Undo Rotate Elements
+[2025.01.28-16.51.19:244][238]Cmd: TRANSACTION UNDO
+[2025.01.28-16.51.19:244][238]LogEditorTransaction: Undo Move Elements
+[2025.01.28-16.51.19:648][285]Cmd: TRANSACTION UNDO
+[2025.01.28-16.51.19:649][285]LogEditorTransaction: Undo Move Elements
+[2025.01.28-16.51.20:004][326]Cmd: TRANSACTION UNDO
+[2025.01.28-16.51.20:004][326]LogEditorTransaction: Undo Move Elements
+[2025.01.28-16.51.20:387][370]Cmd: TRANSACTION UNDO
+[2025.01.28-16.51.20:387][370]LogEditorTransaction: Undo Clicking on Elements
+[2025.01.28-16.51.20:638][392]Cmd: TRANSACTION UNDO
+[2025.01.28-16.51.20:638][392]LogEditorTransaction: Undo Move Elements
+[2025.01.28-16.51.20:927][425]Cmd: TRANSACTION UNDO
+[2025.01.28-16.51.20:927][425]LogEditorTransaction: Undo Clicking on Elements
+[2025.01.28-16.51.21:214][453]Cmd: TRANSACTION UNDO
+[2025.01.28-16.51.21:214][453]LogEditorTransaction: Undo Clicking on Elements
+[2025.01.28-16.51.21:522][478]Cmd: TRANSACTION UNDO
+[2025.01.28-16.51.21:522][478]LogEditorTransaction: Undo Set Scale
+[2025.01.28-16.51.22:309][518]Cmd: TRANSACTION UNDO
+[2025.01.28-16.51.22:309][518]LogEditorTransaction: Undo Set Scale
+[2025.01.28-16.51.23:708][683]Cmd: TRANSACTION UNDO
+[2025.01.28-16.51.23:708][683]LogEditorTransaction: Undo Set Scale
+[2025.01.28-16.51.24:590][784]Cmd: TRANSACTION UNDO
+[2025.01.28-16.51.24:590][784]LogEditorTransaction: Undo Set Scale
+[2025.01.28-16.51.25:267][858]Cmd: TRANSACTION UNDO
+[2025.01.28-16.51.25:267][858]LogEditorTransaction: Undo Move Elements
+[2025.01.28-16.51.25:977][886]Cmd: TRANSACTION UNDO
+[2025.01.28-16.51.25:977][886]LogEditorTransaction: Undo Set Scale
+[2025.01.28-16.51.26:613][958]Cmd: TRANSACTION UNDO
+[2025.01.28-16.51.26:613][958]LogEditorTransaction: Undo Replace Actor(s)
+[2025.01.28-16.51.34:092][748]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/DarkFantasyChurch/Meshes/Flags/SM_Flag_Mid_02.SM_Flag_Mid_02
+[2025.01.28-16.51.34:093][748]LogActorFactory: Actor Factory spawned StaticMesh /Game/DarkFantasyChurch/Meshes/Flags/SM_Flag_Mid_02.SM_Flag_Mid_02 as actor: StaticMeshActor /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.StaticMeshActor_49
+[2025.01.28-16.51.34:094][748]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/DarkFantasyChurch/Meshes/Flags/SM_Flag_Mid_02.SM_Flag_Mid_02
+[2025.01.28-16.51.34:095][748]LogActorFactory: Actor Factory spawned StaticMesh /Game/DarkFantasyChurch/Meshes/Flags/SM_Flag_Mid_02.SM_Flag_Mid_02 as actor: StaticMeshActor /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.StaticMeshActor_45
+[2025.01.28-16.51.34:095][748]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/DarkFantasyChurch/Meshes/Flags/SM_Flag_Mid_02.SM_Flag_Mid_02
+[2025.01.28-16.51.34:095][748]LogActorFactory: Actor Factory spawned StaticMesh /Game/DarkFantasyChurch/Meshes/Flags/SM_Flag_Mid_02.SM_Flag_Mid_02 as actor: StaticMeshActor /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.StaticMeshActor_41
+[2025.01.28-16.51.34:096][748]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/DarkFantasyChurch/Meshes/Flags/SM_Flag_Mid_02.SM_Flag_Mid_02
+[2025.01.28-16.51.34:096][748]LogActorFactory: Actor Factory spawned StaticMesh /Game/DarkFantasyChurch/Meshes/Flags/SM_Flag_Mid_02.SM_Flag_Mid_02 as actor: StaticMeshActor /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.StaticMeshActor_48
+[2025.01.28-16.52.39:471][815]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/DarkFantasyChurch/Meshes/Flags/SM_Flag_Mid_02.SM_Flag_Mid_02
+[2025.01.28-16.52.39:472][815]LogActorFactory: Actor Factory spawned StaticMesh /Game/DarkFantasyChurch/Meshes/Flags/SM_Flag_Mid_02.SM_Flag_Mid_02 as actor: StaticMeshActor /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.StaticMeshActor_54
+[2025.01.28-16.52.45:676][439]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/DarkFantasyChurch/Meshes/Flags/SM_Flag_Mid_02.SM_Flag_Mid_02
+[2025.01.28-16.52.45:677][439]LogActorFactory: Actor Factory spawned StaticMesh /Game/DarkFantasyChurch/Meshes/Flags/SM_Flag_Mid_02.SM_Flag_Mid_02 as actor: StaticMeshActor /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.StaticMeshActor_64
+[2025.01.28-16.52.54:608][346]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/DarkFantasyChurch/Meshes/Flags/SM_Flag_Mid_02.SM_Flag_Mid_02
+[2025.01.28-16.52.54:609][346]LogActorFactory: Actor Factory spawned StaticMesh /Game/DarkFantasyChurch/Meshes/Flags/SM_Flag_Mid_02.SM_Flag_Mid_02 as actor: StaticMeshActor /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.StaticMeshActor_55
+[2025.01.28-16.52.54:610][346]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/DarkFantasyChurch/Meshes/Flags/SM_Flag_Mid_02.SM_Flag_Mid_02
+[2025.01.28-16.52.54:610][346]LogActorFactory: Actor Factory spawned StaticMesh /Game/DarkFantasyChurch/Meshes/Flags/SM_Flag_Mid_02.SM_Flag_Mid_02 as actor: StaticMeshActor /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.StaticMeshActor_81
+[2025.01.28-16.53.02:115][ 73]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/DarkFantasyChurch/Meshes/Flags/SM_Flag_Mid_02.SM_Flag_Mid_02
+[2025.01.28-16.53.02:116][ 73]LogActorFactory: Actor Factory spawned StaticMesh /Game/DarkFantasyChurch/Meshes/Flags/SM_Flag_Mid_02.SM_Flag_Mid_02 as actor: StaticMeshActor /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.StaticMeshActor_65
+[2025.01.28-16.53.02:117][ 73]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/DarkFantasyChurch/Meshes/Flags/SM_Flag_Mid_02.SM_Flag_Mid_02
+[2025.01.28-16.53.02:117][ 73]LogActorFactory: Actor Factory spawned StaticMesh /Game/DarkFantasyChurch/Meshes/Flags/SM_Flag_Mid_02.SM_Flag_Mid_02 as actor: StaticMeshActor /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.StaticMeshActor_91
+[2025.01.28-16.53.14:910][326]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/DarkFantasyChurch/Meshes/Flags/SM_Flag_Mid_02.SM_Flag_Mid_02
+[2025.01.28-16.53.14:910][326]LogActorFactory: Actor Factory spawned StaticMesh /Game/DarkFantasyChurch/Meshes/Flags/SM_Flag_Mid_02.SM_Flag_Mid_02 as actor: StaticMeshActor /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.StaticMeshActor_72
+[2025.01.28-16.53.14:912][326]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/DarkFantasyChurch/Meshes/Flags/SM_Flag_Mid_02.SM_Flag_Mid_02
+[2025.01.28-16.53.14:913][326]LogActorFactory: Actor Factory spawned StaticMesh /Game/DarkFantasyChurch/Meshes/Flags/SM_Flag_Mid_02.SM_Flag_Mid_02 as actor: StaticMeshActor /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.StaticMeshActor_73
+[2025.01.28-16.53.14:913][326]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/DarkFantasyChurch/Meshes/Flags/SM_Flag_Mid_02.SM_Flag_Mid_02
+[2025.01.28-16.53.14:914][326]LogActorFactory: Actor Factory spawned StaticMesh /Game/DarkFantasyChurch/Meshes/Flags/SM_Flag_Mid_02.SM_Flag_Mid_02 as actor: StaticMeshActor /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.StaticMeshActor_74
+[2025.01.28-16.53.14:914][326]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/DarkFantasyChurch/Meshes/Flags/SM_Flag_Mid_02.SM_Flag_Mid_02
+[2025.01.28-16.53.14:914][326]LogActorFactory: Actor Factory spawned StaticMesh /Game/DarkFantasyChurch/Meshes/Flags/SM_Flag_Mid_02.SM_Flag_Mid_02 as actor: StaticMeshActor /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.StaticMeshActor_75
+[2025.01.28-16.53.14:914][326]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/DarkFantasyChurch/Meshes/Flags/SM_Flag_Mid_02.SM_Flag_Mid_02
+[2025.01.28-16.53.14:915][326]LogActorFactory: Actor Factory spawned StaticMesh /Game/DarkFantasyChurch/Meshes/Flags/SM_Flag_Mid_02.SM_Flag_Mid_02 as actor: StaticMeshActor /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.StaticMeshActor_76
+[2025.01.28-16.53.14:915][326]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/DarkFantasyChurch/Meshes/Flags/SM_Flag_Mid_02.SM_Flag_Mid_02
+[2025.01.28-16.53.14:916][326]LogActorFactory: Actor Factory spawned StaticMesh /Game/DarkFantasyChurch/Meshes/Flags/SM_Flag_Mid_02.SM_Flag_Mid_02 as actor: StaticMeshActor /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.StaticMeshActor_77
+[2025.01.28-16.53.27:962][750]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/DarkFantasyChurch/Meshes/Flags/SM_Flag_Mid_02.SM_Flag_Mid_02
+[2025.01.28-16.53.27:963][750]LogActorFactory: Actor Factory spawned StaticMesh /Game/DarkFantasyChurch/Meshes/Flags/SM_Flag_Mid_02.SM_Flag_Mid_02 as actor: StaticMeshActor /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.StaticMeshActor_70
+[2025.01.28-16.53.27:964][750]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/DarkFantasyChurch/Meshes/Flags/SM_Flag_Mid_02.SM_Flag_Mid_02
+[2025.01.28-16.53.27:965][750]LogActorFactory: Actor Factory spawned StaticMesh /Game/DarkFantasyChurch/Meshes/Flags/SM_Flag_Mid_02.SM_Flag_Mid_02 as actor: StaticMeshActor /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.StaticMeshActor_71
+[2025.01.28-16.53.56:634][ 15]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2025.01.28-16.53.56:677][ 15]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Levels/Level_Hub" FILE="D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Levels/Level_Hub.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2025.01.28-16.53.56:710][ 15]LogUObjectHash: Compacting FUObjectHashTables data took   0.76ms
+[2025.01.28-16.53.56:796][ 15]LogSavePackage: Moving output files for package: /Game/Levels/Level_Hub
+[2025.01.28-16.53.56:796][ 15]LogSavePackage: Moving 'D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Saved/Level_Hub56BFFEDA4C1BFAFA700B6E98957B4CE1.tmp' to 'D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Levels/Level_Hub.umap'
+[2025.01.28-16.53.56:804][ 15]LogFileHelpers: Saving map 'Level_Hub' took 0.127
+[2025.01.28-16.53.56:808][ 15]LogFileHelpers: InternalPromptForCheckoutAndSave took 174.330 ms (total: 5.74 sec)
+[2025.01.28-16.53.56:860][ 15]LogContentValidation: Display: Starting to validate 1 assets
+[2025.01.28-16.53.56:860][ 15]LogContentValidation: Enabled validators:
+[2025.01.28-16.53.56:860][ 15]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2025.01.28-16.53.56:860][ 15]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2025.01.28-16.53.56:860][ 15]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2025.01.28-16.53.56:860][ 15]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2025.01.28-16.53.56:860][ 15]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2025.01.28-16.53.56:860][ 15]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2025.01.28-16.53.56:860][ 15]AssetCheck: /Game/Levels/Level_Hub Validating asset
+[2025.01.28-16.54.39:024][742]Cmd: TRANSACTION UNDO
+[2025.01.28-16.54.39:025][742]LogEditorTransaction: Undo Edit Sphere Radius
+[2025.01.28-16.54.41:317][947]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2025.01.28-16.54.41:366][947]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Levels/Level_Hub" FILE="D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Levels/Level_Hub.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2025.01.28-16.54.41:395][947]LogUObjectHash: Compacting FUObjectHashTables data took   0.34ms
+[2025.01.28-16.54.41:482][947]LogSavePackage: Moving output files for package: /Game/Levels/Level_Hub
+[2025.01.28-16.54.41:482][947]LogSavePackage: Moving 'D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Saved/Level_HubA35820C440280B6B5545369F2C52CDB9.tmp' to 'D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Levels/Level_Hub.umap'
+[2025.01.28-16.54.41:489][947]LogFileHelpers: Saving map 'Level_Hub' took 0.125
+[2025.01.28-16.54.41:497][947]LogFileHelpers: InternalPromptForCheckoutAndSave took 179.130 ms (total: 5.92 sec)
+[2025.01.28-16.54.41:547][947]LogContentValidation: Display: Starting to validate 1 assets
+[2025.01.28-16.54.41:547][947]LogContentValidation: Enabled validators:
+[2025.01.28-16.54.41:547][947]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2025.01.28-16.54.41:547][947]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2025.01.28-16.54.41:547][947]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2025.01.28-16.54.41:547][947]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2025.01.28-16.54.41:547][947]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2025.01.28-16.54.41:547][947]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2025.01.28-16.54.41:547][947]AssetCheck: /Game/Levels/Level_Hub Validating asset
+[2025.01.28-16.55.02:253][345]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 14350.524414
+[2025.01.28-16.55.02:439][366]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2025.01.28-16.55.02:439][366]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 14350.701172, Update Interval: 349.066437
+[2025.01.28-16.55.10:428][287]LogUObjectHash: Compacting FUObjectHashTables data took   0.36ms
+[2025.01.28-16.55.10:432][287]LogAssetEditorSubsystem: Opening Asset editor for World /Game/Levels/Level_World.Level_World
+[2025.01.28-16.55.10:432][287]Cmd: MAP LOAD FILE="D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Levels/Level_World.umap" TEMPLATE=0 SHOWPROGRESS=1 FEATURELEVEL=4
+[2025.01.28-16.55.10:467][287]LogWorld: UWorld::CleanupWorld for Level_Hub, bSessionEnded=true, bCleanupResources=true
+[2025.01.28-16.55.10:467][287]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.01.28-16.55.10:484][287]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2025.01.28-16.55.10:490][287]LogUObjectHash: Compacting FUObjectHashTables data took   0.69ms
+[2025.01.28-16.55.10:494][287]LogWorld: UWorld::CleanupWorld for Level_World, bSessionEnded=true, bCleanupResources=true
+[2025.01.28-16.55.10:496][287]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.01.28-16.55.10:540][287]LogUObjectHash: Compacting FUObjectHashTables data took   0.70ms
+[2025.01.28-16.55.10:606][287]LogUObjectHash: Compacting FUObjectHashTables data took   0.63ms
+[2025.01.28-16.55.10:608][287]LogStreaming: Display: FlushAsyncLoading(409): 1 QueuedPackages, 0 AsyncPackages
+[2025.01.28-16.55.10:680][287]LogAudio: Display: Audio Device (ID: 1) registered with world 'Level_World'.
+[2025.01.28-16.55.10:680][287]LogChaosDD: Creating Chaos Debug Draw Scene for world Level_World
+[2025.01.28-16.55.10:759][287]LogEditorServer: Finished looking for orphan Actors (0.000 secs)
+[2025.01.28-16.55.10:782][287]LogUObjectHash: Compacting FUObjectHashTables data took   0.64ms
+[2025.01.28-16.55.10:786][287]Cmd: MAP CHECKDEP NOCLEARLOG
+[2025.01.28-16.55.10:786][287]MapCheck: Map check complete: 0 Error(s), 0 Warning(s), took 0,052ms to complete.
+[2025.01.28-16.55.37:715][433]LogUObjectHash: Compacting FUObjectHashTables data took   0.47ms
+[2025.01.28-16.55.37:723][433]LogStreaming: Display: FlushAsyncLoading(410): 1 QueuedPackages, 0 AsyncPackages
+[2025.01.28-16.55.37:747][433]LogChaosDD: Creating Chaos Debug Draw Scene for world Level_Hub
+[2025.01.28-16.55.37:757][433]LogAssetEditorSubsystem: Opening Asset editor for World /Game/Levels/Level_Hub.Level_Hub
+[2025.01.28-16.55.37:757][433]Cmd: MAP LOAD FILE="D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Levels/Level_Hub.umap" TEMPLATE=0 SHOWPROGRESS=1 FEATURELEVEL=4
+[2025.01.28-16.55.37:784][433]LogWorld: UWorld::CleanupWorld for Level_World, bSessionEnded=true, bCleanupResources=true
+[2025.01.28-16.55.37:785][433]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.01.28-16.55.37:804][433]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2025.01.28-16.55.37:809][433]LogUObjectHash: Compacting FUObjectHashTables data took   0.69ms
+[2025.01.28-16.55.37:846][433]LogWorld: UWorld::CleanupWorld for Level_Hub, bSessionEnded=true, bCleanupResources=true
+[2025.01.28-16.55.37:846][433]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.01.28-16.55.37:868][433]LogUObjectHash: Compacting FUObjectHashTables data took   0.79ms
+[2025.01.28-16.55.37:885][433]LogUObjectHash: Compacting FUObjectHashTables data took   0.61ms
+[2025.01.28-16.55.37:908][433]LogAudio: Display: Audio Device (ID: 1) registered with world 'Level_Hub'.
+[2025.01.28-16.55.37:908][433]LogChaosDD: Creating Chaos Debug Draw Scene for world Level_Hub
+[2025.01.28-16.55.37:998][433]LogEditorServer: Finished looking for orphan Actors (0.000 secs)
+[2025.01.28-16.55.38:017][433]LogUObjectHash: Compacting FUObjectHashTables data took   0.63ms
+[2025.01.28-16.55.38:022][433]Cmd: MAP CHECKDEP NOCLEARLOG
+[2025.01.28-16.55.38:022][433]MapCheck: Map check complete: 0 Error(s), 0 Warning(s), took 0,048ms to complete.
+[2025.01.28-16.55.42:310][896]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2025.01.28-16.55.42:316][896]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2025.01.28-16.55.42:353][896]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Level_Hub
+[2025.01.28-16.55.42:367][896]LogPlayLevel: PIE: StaticDuplicateObject took: (0.014189s)
+[2025.01.28-16.55.42:367][896]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Level_Hub.Level_Hub to /Game/Levels/UEDPIE_0_Level_Hub.Level_Hub (0.014219s)
+[2025.01.28-16.55.42:383][896]LogUObjectHash: Compacting FUObjectHashTables data took   0.64ms
+[2025.01.28-16.55.42:388][896]LogChaosDD: Creating Chaos Debug Draw Scene for world Level_Hub
+[2025.01.28-16.55.42:389][896]LogPlayLevel: PIE: World Init took: (0.001286s)
+[2025.01.28-16.55.42:390][896]LogAudio: Display: Creating Audio Device:                 Id: 25, Scope: Unique, Realtime: True
+[2025.01.28-16.55.42:390][896]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2025.01.28-16.55.42:390][896]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2025.01.28-16.55.42:390][896]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2025.01.28-16.55.42:390][896]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2025.01.28-16.55.42:390][896]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2025.01.28-16.55.42:390][896]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2025.01.28-16.55.42:390][896]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2025.01.28-16.55.42:390][896]LogAudio: Display: AudioDevice MaxSources: 32
+[2025.01.28-16.55.42:390][896]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2025.01.28-16.55.42:390][896]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2025.01.28-16.55.42:390][896]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2025.01.28-16.55.42:392][896]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2025.01.28-16.55.42:411][896]LogAudioMixer: Display: Using Audio Hardware Device Lautsprecher (Realtek(R) Audio)
+[2025.01.28-16.55.42:412][896]LogAudioMixer: Display: Initializing Sound Submixes...
+[2025.01.28-16.55.42:412][896]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2025.01.28-16.55.42:412][896]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2025.01.28-16.55.42:412][896]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=25
+[2025.01.28-16.55.42:412][896]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=25
+[2025.01.28-16.55.42:414][896]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=25
+[2025.01.28-16.55.42:414][896]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=25
+[2025.01.28-16.55.42:414][896]LogInit: FAudioDevice initialized with ID 25.
+[2025.01.28-16.55.42:414][896]LogAudio: Display: Audio Device (ID: 25) registered with world 'Level_Hub'.
+[2025.01.28-16.55.42:414][896]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 25
+[2025.01.28-16.55.42:416][896]LogLoad: Game class is 'GM_Custom_C'
+[2025.01.28-16.55.42:427][896]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Level_Hub.Level_Hub up for play (max tick rate 0) at 2025.01.28-17.55.42
+[2025.01.28-16.55.42:427][896]LogWorld: Bringing up level for play took: 0.011460
+[2025.01.28-16.55.42:430][896]LogOnline: OSS: Created online subsystem instance for: :Context_38
+[2025.01.28-16.55.42:432][896]LogSkeletalMesh: USkeletalMeshComponent: Recreating Clothing Actors for 'CharacterMesh0' with 'SKM_DarkLady'
+[2025.01.28-16.55.42:436][896]LogTemp: Warning: BP_InteractionStone_WeaponMaster_C_1 Could not Access GameInstance or GameInstance Dictionary did not Contained its key
+[2025.01.28-16.55.42:436][896]LogTemp: Warning: BP_InteractionStone_WeaponMaster_C_2 Could not Access GameInstance or GameInstance Dictionary did not Contained its key
+[2025.01.28-16.55.42:436][896]LogTemp: Warning: BP_InteractionStone_WeaponMaster_C_4 Could not Access GameInstance or GameInstance Dictionary did not Contained its key
+[2025.01.28-16.55.42:436][896]LogTemp: Warning: BP_InteractionStone_WeaponMaster_C_5 Could not Access GameInstance or GameInstance Dictionary did not Contained its key
+[2025.01.28-16.55.42:436][896]LogTemp: Warning: BP_InteractionStone_WeaponMaster_C_6 Could not Access GameInstance or GameInstance Dictionary did not Contained its key
+[2025.01.28-16.55.42:437][896]LogTemp: Warning: Failed to get Equipped Weapon Class for Equipment: Weapon
+[2025.01.28-16.55.42:437][896]LogTemp: Warning: Failed to get Equipped Weapon Class for Equipment: Shield
+[2025.01.28-16.55.42:437][896]LogTemp: Warning: Animation Instance set
+[2025.01.28-16.55.42:437][896]LogTemp: Warning: Animation Instance set
+[2025.01.28-16.55.42:438][896]PIE: Server logged in
+[2025.01.28-16.55.42:439][896]PIE: Play in editor total start time 0,125 seconds.
+[2025.01.28-16.56.39:083][654]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.01.28-16.56.39:083][654]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_Level_Hub
+[2025.01.28-16.56.39:083][654]LogWorld: UWorld::CleanupWorld for Level_Hub, bSessionEnded=true, bCleanupResources=true
+[2025.01.28-16.56.39:086][654]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.01.28-16.56.39:089][654]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2025.01.28-16.56.39:095][654]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.01.28-16.56.39:111][654]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.01.28-16.56.39:113][654]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 25
+[2025.01.28-16.56.39:113][654]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=25
+[2025.01.28-16.56.39:115][654]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=25
+[2025.01.28-16.56.39:123][654]LogUObjectHash: Compacting FUObjectHashTables data took   0.68ms
+[2025.01.28-16.56.39:160][655]LogPlayLevel: Display: Destroying online subsystem :Context_38
+[2025.01.28-16.56.44:896][339]LogRenderer: Warning: [VSM] Non-Nanite Marking Job Queue overflow. Performance may be affected. This occurs when many non-nanite meshes cover a large area of the shadow map.
+[2025.01.28-16.57.00:048][967]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2025.01.28-16.57.00:054][967]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2025.01.28-16.57.00:082][967]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Level_Hub
+[2025.01.28-16.57.00:097][967]LogPlayLevel: PIE: StaticDuplicateObject took: (0.014615s)
+[2025.01.28-16.57.00:097][967]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Level_Hub.Level_Hub to /Game/Levels/UEDPIE_0_Level_Hub.Level_Hub (0.014650s)
+[2025.01.28-16.57.00:114][967]LogUObjectHash: Compacting FUObjectHashTables data took   0.64ms
+[2025.01.28-16.57.00:116][967]LogChaosDD: Creating Chaos Debug Draw Scene for world Level_Hub
+[2025.01.28-16.57.00:117][967]LogPlayLevel: PIE: World Init took: (0.001378s)
+[2025.01.28-16.57.00:119][967]LogAudio: Display: Creating Audio Device:                 Id: 26, Scope: Unique, Realtime: True
+[2025.01.28-16.57.00:119][967]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2025.01.28-16.57.00:119][967]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2025.01.28-16.57.00:119][967]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2025.01.28-16.57.00:119][967]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2025.01.28-16.57.00:119][967]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2025.01.28-16.57.00:119][967]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2025.01.28-16.57.00:119][967]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2025.01.28-16.57.00:119][967]LogAudio: Display: AudioDevice MaxSources: 32
+[2025.01.28-16.57.00:119][967]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2025.01.28-16.57.00:119][967]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2025.01.28-16.57.00:119][967]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2025.01.28-16.57.00:121][967]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2025.01.28-16.57.00:140][967]LogAudioMixer: Display: Using Audio Hardware Device Lautsprecher (Realtek(R) Audio)
+[2025.01.28-16.57.00:141][967]LogAudioMixer: Display: Initializing Sound Submixes...
+[2025.01.28-16.57.00:141][967]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2025.01.28-16.57.00:141][967]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2025.01.28-16.57.00:141][967]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=26
+[2025.01.28-16.57.00:141][967]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=26
+[2025.01.28-16.57.00:142][967]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=26
+[2025.01.28-16.57.00:142][967]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=26
+[2025.01.28-16.57.00:142][967]LogInit: FAudioDevice initialized with ID 26.
+[2025.01.28-16.57.00:142][967]LogAudio: Display: Audio Device (ID: 26) registered with world 'Level_Hub'.
+[2025.01.28-16.57.00:142][967]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 26
+[2025.01.28-16.57.00:145][967]LogLoad: Game class is 'GM_Custom_C'
+[2025.01.28-16.57.00:156][967]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Level_Hub.Level_Hub up for play (max tick rate 0) at 2025.01.28-17.57.00
+[2025.01.28-16.57.00:156][967]LogWorld: Bringing up level for play took: 0.011317
+[2025.01.28-16.57.00:158][967]LogOnline: OSS: Created online subsystem instance for: :Context_39
+[2025.01.28-16.57.00:161][967]LogSkeletalMesh: USkeletalMeshComponent: Recreating Clothing Actors for 'CharacterMesh0' with 'SKM_DarkLady'
+[2025.01.28-16.57.00:164][967]LogTemp: Warning: BP_InteractionStone_WeaponMaster_C_1 Could not Access GameInstance or GameInstance Dictionary did not Contained its key
+[2025.01.28-16.57.00:164][967]LogTemp: Warning: BP_InteractionStone_WeaponMaster_C_2 Could not Access GameInstance or GameInstance Dictionary did not Contained its key
+[2025.01.28-16.57.00:164][967]LogTemp: Warning: BP_InteractionStone_WeaponMaster_C_4 Could not Access GameInstance or GameInstance Dictionary did not Contained its key
+[2025.01.28-16.57.00:164][967]LogTemp: Warning: BP_InteractionStone_WeaponMaster_C_5 Could not Access GameInstance or GameInstance Dictionary did not Contained its key
+[2025.01.28-16.57.00:164][967]LogTemp: Warning: BP_InteractionStone_WeaponMaster_C_6 Could not Access GameInstance or GameInstance Dictionary did not Contained its key
+[2025.01.28-16.57.00:164][967]LogTemp: Warning: Failed to get Equipped Weapon Class for Equipment: Weapon
+[2025.01.28-16.57.00:164][967]LogTemp: Warning: Failed to get Equipped Weapon Class for Equipment: Shield
+[2025.01.28-16.57.00:164][967]LogTemp: Warning: Animation Instance set
+[2025.01.28-16.57.00:165][967]LogTemp: Warning: Animation Instance set
+[2025.01.28-16.57.00:166][967]PIE: Server logged in
+[2025.01.28-16.57.00:167][967]PIE: Play in editor total start time 0,115 seconds.
+[2025.01.28-16.57.11:518][314]LogDerivedDataCache: C:/Users/Student/AppData/Local/UnrealEngine/Common/DerivedDataCache: Maintenance finished in +00:00:02.089 and deleted 0 files with total size 0 MiB and 0 empty folders. Scanned 1325 files in 2171 folders with total size 299 MiB.
+[2025.01.28-16.59.15:450][144]LogGlobalStatus: UEngine::Browse Started Browse: "/Game/Levels/Level_World"
+[2025.01.28-16.59.15:450][144]LogNet: Browse: /Game/Levels/Level_World
+[2025.01.28-16.59.15:450][144]LogLoad: LoadMap: /Game/Levels/Level_World
+[2025.01.28-16.59.15:450][144]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_Level_Hub
+[2025.01.28-16.59.15:452][144]LogWorld: UWorld::CleanupWorld for Level_Hub, bSessionEnded=true, bCleanupResources=true
+[2025.01.28-16.59.15:455][144]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.01.28-16.59.15:510][144]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2025.01.28-16.59.15:514][144]LogUObjectHash: Compacting FUObjectHashTables data took   0.77ms
+[2025.01.28-16.59.15:516][144]LogStreaming: Display: FlushAsyncLoading(413): 1 QueuedPackages, 0 AsyncPackages
+[2025.01.28-16.59.15:594][144]LogAudio: Display: Audio Device (ID: 26) registered with world 'Level_World'.
+[2025.01.28-16.59.15:594][144]LogChaosDD: Creating Chaos Debug Draw Scene for world Level_World
+[2025.01.28-16.59.15:595][144]LogPlayLevel: PIE: World Init took: (0.001426s)
+[2025.01.28-16.59.15:595][144]LogLoad: Game class is 'GM_Custom_C'
+[2025.01.28-16.59.15:596][144]LogStaticMesh: Display: Waiting on static mesh StaticMesh /Game/Levels/UEDPIE_0_Level_World.LandscapeNaniteMesh_1 being ready before playing
+[2025.01.28-16.59.15:621][144]LogSkeletalMesh: USkeletalMeshComponent: Recreating Clothing Actors for 'CharacterMesh0' with 'SK_Dark_Knight'
+[2025.01.28-16.59.15:631][144]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Level_World.Level_World up for play (max tick rate 0) at 2025.01.28-17.59.15
+[2025.01.28-16.59.15:632][144]LogWorld: Bringing up level for play took: 0.036828
+[2025.01.28-16.59.15:635][144]LogSkeletalMesh: USkeletalMeshComponent: Recreating Clothing Actors for 'CharacterMesh0' with 'SKM_DarkLady'
+[2025.01.28-16.59.15:639][144]LogTemp: Warning: Failed to get Equipped Weapon Class for Equipment: Weapon
+[2025.01.28-16.59.15:639][144]LogTemp: Warning: Failed to get Equipped Weapon Class for Equipment: Shield
+[2025.01.28-16.59.15:639][144]LogTemp: Warning: Animation Instance set
+[2025.01.28-16.59.15:640][144]LogTemp: Warning: Failed to get Equipped Weapon Class for Equipment: Shield
+[2025.01.28-16.59.15:640][144]LogTemp: Warning: Animation Instance set
+[2025.01.28-16.59.15:640][144]LogTemp: Warning: Animation Instance set
+[2025.01.28-16.59.15:640][144]LogLoad: Took 0.189162 seconds to LoadMap(/Game/Levels/Level_World)
+[2025.01.28-16.59.15:640][144]LogGlobalStatus: UEngine::LoadMap Load map complete /Game/Levels/Level_World
+[2025.01.28-16.59.41:823][252]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.01.28-16.59.41:823][252]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_Level_World
+[2025.01.28-16.59.41:824][252]LogWorld: UWorld::CleanupWorld for Level_World, bSessionEnded=true, bCleanupResources=true
+[2025.01.28-16.59.41:826][252]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.01.28-16.59.41:831][252]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2025.01.28-16.59.41:835][252]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.01.28-16.59.41:852][252]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.01.28-16.59.41:853][252]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 26
+[2025.01.28-16.59.41:853][252]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=26
+[2025.01.28-16.59.41:855][252]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=26
+[2025.01.28-16.59.41:863][252]LogUObjectHash: Compacting FUObjectHashTables data took   0.67ms
+[2025.01.28-16.59.41:903][253]LogPlayLevel: Display: Destroying online subsystem :Context_39
+[2025.01.28-16.59.44:007][499]LogUObjectHash: Compacting FUObjectHashTables data took   0.61ms
+[2025.01.28-16.59.45:470][499]LogSlate: Window 'Save Content' being destroyed
+[2025.01.28-16.59.45:476][499]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2025.01.28-16.59.45:515][499]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Levels/Level_Hub" FILE="D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Levels/Level_Hub.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2025.01.28-16.59.45:551][499]LogUObjectHash: Compacting FUObjectHashTables data took   0.34ms
+[2025.01.28-16.59.45:626][499]LogSavePackage: Moving output files for package: /Game/Levels/Level_Hub
+[2025.01.28-16.59.45:627][499]LogSavePackage: Moving 'D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Saved/Level_Hub44208FFE4F71345681B5D8963ACA7490.tmp' to 'D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Levels/Level_Hub.umap'
+[2025.01.28-16.59.45:634][499]LogFileHelpers: Saving map 'Level_Hub' took 0.119
+[2025.01.28-16.59.45:639][499]LogFileHelpers: InternalPromptForCheckoutAndSave took 163.778 ms (total: 6.08 sec)
+[2025.01.28-16.59.45:681][499]LogContentValidation: Display: Starting to validate 1 assets
+[2025.01.28-16.59.45:681][499]LogContentValidation: Enabled validators:
+[2025.01.28-16.59.45:681][499]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2025.01.28-16.59.45:681][499]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2025.01.28-16.59.45:681][499]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2025.01.28-16.59.45:681][499]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2025.01.28-16.59.45:681][499]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2025.01.28-16.59.45:681][499]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2025.01.28-16.59.45:681][499]AssetCheck: /Game/Levels/Level_Hub Validating asset
+[2025.01.28-17.00.09:212][221]LogUObjectHash: Compacting FUObjectHashTables data took   0.35ms
+[2025.01.28-17.00.10:986][221]LogSlate: Window 'Save Content' being destroyed
+[2025.01.28-17.00.10:992][221]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2025.01.28-17.00.11:036][221]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Levels/Level_Hub" FILE="D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Levels/Level_Hub.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2025.01.28-17.00.11:073][221]LogUObjectHash: Compacting FUObjectHashTables data took   0.36ms
+[2025.01.28-17.00.11:152][221]LogSavePackage: Moving output files for package: /Game/Levels/Level_Hub
+[2025.01.28-17.00.11:152][221]LogSavePackage: Moving 'D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Saved/Level_Hub08FD8BF345C6D964A96278A03B4C67E6.tmp' to 'D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Levels/Level_Hub.umap'
+[2025.01.28-17.00.11:159][221]LogFileHelpers: Saving map 'Level_Hub' took 0.123
+[2025.01.28-17.00.11:165][221]LogFileHelpers: InternalPromptForCheckoutAndSave took 172.376 ms (total: 6.26 sec)
+[2025.01.28-17.00.11:180][221]LogStall: Shutdown...
+[2025.01.28-17.00.11:180][221]LogStall: Shutdown complete.
+[2025.01.28-17.00.11:201][221]LogSlate: Window 'Eternal_Grace_Arena - Unreal Editor' being destroyed
+[2025.01.28-17.00.11:314][221]LogContentValidation: Display: Starting to validate 1 assets
+[2025.01.28-17.00.11:314][221]LogContentValidation: Enabled validators:
+[2025.01.28-17.00.11:314][221]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2025.01.28-17.00.11:315][221]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2025.01.28-17.00.11:315][221]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2025.01.28-17.00.11:315][221]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2025.01.28-17.00.11:315][221]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2025.01.28-17.00.11:315][221]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2025.01.28-17.00.11:316][221]AssetCheck: /Game/Levels/Level_Hub Validating asset
+[2025.01.28-17.00.11:317][221]Cmd: QUIT_EDITOR
+[2025.01.28-17.00.11:317][222]LogCore: Engine exit requested (reason: UUnrealEdEngine::CloseEditor())
+[2025.01.28-17.00.11:320][222]LogCore: Engine exit requested (reason: EngineExit() was called; note: exit was already requested)
+[2025.01.28-17.00.11:320][222]LogStaticMesh: Abandoning remaining async distance field tasks for shutdown
+[2025.01.28-17.00.11:320][222]LogStaticMesh: Abandoning remaining async card representation tasks for shutdown
+[2025.01.28-17.00.11:323][222]LogWorld: UWorld::CleanupWorld for Level_Hub, bSessionEnded=true, bCleanupResources=true
+[2025.01.28-17.00.11:324][222]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.01.28-17.00.11:327][222]LogStylusInput: Shutting down StylusInput subsystem.
+[2025.01.28-17.00.11:327][222]LogLevelSequenceEditor: LevelSequenceEditor subsystem deinitialized.
+[2025.01.28-17.00.11:329][222]LogWorld: UWorld::CleanupWorld for World_11, bSessionEnded=true, bCleanupResources=true
+[2025.01.28-17.00.11:329][222]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.01.28-17.00.11:330][222]LogWorld: UWorld::CleanupWorld for World_10, bSessionEnded=true, bCleanupResources=true
+[2025.01.28-17.00.11:330][222]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.01.28-17.00.11:330][222]LogWorld: UWorld::CleanupWorld for World_9, bSessionEnded=true, bCleanupResources=true
+[2025.01.28-17.00.11:330][222]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.01.28-17.00.11:330][222]LogWorld: UWorld::CleanupWorld for World_8, bSessionEnded=true, bCleanupResources=true
+[2025.01.28-17.00.11:330][222]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.01.28-17.00.11:331][222]LogWorld: UWorld::CleanupWorld for World_7, bSessionEnded=true, bCleanupResources=true
+[2025.01.28-17.00.11:331][222]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.01.28-17.00.11:331][222]LogWorld: UWorld::CleanupWorld for World_6, bSessionEnded=true, bCleanupResources=true
+[2025.01.28-17.00.11:331][222]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.01.28-17.00.11:331][222]LogWorld: UWorld::CleanupWorld for World_5, bSessionEnded=true, bCleanupResources=true
+[2025.01.28-17.00.11:331][222]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.01.28-17.00.11:331][222]LogWorld: UWorld::CleanupWorld for World_4, bSessionEnded=true, bCleanupResources=true
+[2025.01.28-17.00.11:331][222]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.01.28-17.00.11:331][222]LogWorld: UWorld::CleanupWorld for World_1, bSessionEnded=true, bCleanupResources=true
+[2025.01.28-17.00.11:331][222]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.01.28-17.00.11:331][222]LogWorld: UWorld::CleanupWorld for World_0, bSessionEnded=true, bCleanupResources=true
+[2025.01.28-17.00.11:331][222]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.01.28-17.00.11:331][222]LogWorld: UWorld::CleanupWorld for World_12, bSessionEnded=true, bCleanupResources=true
+[2025.01.28-17.00.11:331][222]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.01.28-17.00.11:332][222]LogWorld: UWorld::CleanupWorld for World_13, bSessionEnded=true, bCleanupResources=true
+[2025.01.28-17.00.11:332][222]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.01.28-17.00.11:332][222]LogStudioTelemetry: Ended StudioTelemetry Session
+[2025.01.28-17.00.11:334][222]LogAnalytics: Display: [UEEditor.Rocket.Release] Destroying ET Analytics provider
+[2025.01.28-17.00.11:334][222]LogAnalytics: Display: [UEEditor.Rocket.Release] Ended ET Analytics provider session
+[2025.01.28-17.00.11:334][222]LogAnalytics: Display: [UEEditor.Rocket.Release] Destroyed ET Analytics provider
+[2025.01.28-17.00.11:980][222]LogAudio: Display: Beginning Audio Device Manager Shutdown (Module: AudioMixerXAudio2)...
+[2025.01.28-17.00.11:980][222]LogAudio: Display: Destroying 1 Remaining Audio Device(s)...
+[2025.01.28-17.00.11:981][222]LogAudio: Display: Audio Device unregistered from world 'Level_Hub'.
+[2025.01.28-17.00.11:981][222]LogAudio: Display: Shutting down audio device while 1 references to it are still alive. For more information, compile with INSTRUMENT_AUDIODEVICE_HANDLES.
+[2025.01.28-17.00.11:981][222]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=1
+[2025.01.28-17.00.11:982][222]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=1
+[2025.01.28-17.00.11:991][222]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID -1
+[2025.01.28-17.00.11:991][222]LogAudio: Display: Audio Device Manager Shutdown
+[2025.01.28-17.00.11:993][222]LogExit: Preparing to exit.
+[2025.01.28-17.00.12:017][222]LogUObjectHash: Compacting FUObjectHashTables data took   0.61ms
+[2025.01.28-17.00.12:941][222]LogEditorDataStorage: Deinitializing
+[2025.01.28-17.00.13:239][222]LogDemo: Cleaned up 0 splitscreen connections, owner deletion: enabled
+[2025.01.28-17.00.13:252][222]LogExit: Editor shut down
+[2025.01.28-17.00.13:253][222]LogExit: Transaction tracking system shut down
+[2025.01.28-17.00.13:364][222]LogCore: Error: PropertyBag: Expecting RefCount to be zero on destructor, but it is 2.
+[2025.01.28-17.00.13:384][222]LogExit: Object subsystem successfully closed.
+[2025.01.28-17.00.13:445][222]LogShaderCompilers: Display: Shaders left to compile 0
+[2025.01.28-17.00.14:142][222]LogMemoryProfiler: Shutdown
+[2025.01.28-17.00.14:142][222]LogNetworkingProfiler: Shutdown
+[2025.01.28-17.00.14:142][222]LoadingProfiler: Shutdown
+[2025.01.28-17.00.14:142][222]LogTimingProfiler: Shutdown
+[2025.01.28-17.00.14:165][222]LogSlate: Slate User Destroyed.  User Index 0, Is Virtual User: 0
+[2025.01.28-17.00.14:462][222]LogChaosDD: Chaos Debug Draw Shutdown
+[2025.01.28-17.00.14:462][222]LogStudioTelemetry: Display: Shutdown StudioTelemetry Module
+[2025.01.28-17.00.14:463][222]LogNFORDenoise: NFORDenoise function shutting down
+[2025.01.28-17.00.14:463][222]RenderDocPlugin: plugin has been unloaded.
+[2025.01.28-17.00.14:475][222]LogHttp: Warning: [FHttpManager::Shutdown] Unbinding delegates for 1 outstanding Http Requests:
+[2025.01.28-17.00.14:475][222]LogHttp: Warning: 	verb=[POST] url=[https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7B93AA1812-4C7A-BD7D-1203-BD9828AA0072%7D&AppID=UEEditor.Rocket.Release&AppVersion=5.5.1-38445549%2B%2B%2BUE5%2BRelease-5.5&UserID=eae1411c4bbf3674430f5d9ecaf5f8c2%7C9ab284dd8fa9494481da169659f282ec%7Ce6b6a615-726d-4e25-9bb2-01c521fa8906&AppEnvironment=datacollector-binary&UploadType=eteventstream] refs=[2] status=Processing
+[2025.01.28-17.00.15:035][222]LogEOSSDK: FEOSSDKManager::Shutdown EOS_Shutdown Result=[EOS_Success]
+[2025.01.28-17.00.15:039][222]LogXGEController: Cleaning working directory: C:/Users/Student/AppData/Local/Temp/UnrealXGEWorkingDir/
+[2025.01.28-17.00.15:042][222]LogIris: FNetObjectFactoryRegistry::UnregisterFactory is unregistering factory: None name: NetActorFactory id: 0
+[2025.01.28-17.00.15:042][222]LogIris: FNetObjectFactoryRegistry::UnregisterFactory is unregistering factory: None name: NetSubObjectFactory id: 1
+[2025.01.28-17.00.15:042][222]LogPakFile: Destroying PakPlatformFile
+[2025.01.28-17.00.15:659][222]LogD3D12RHI: ~FD3D12DynamicRHI
+[2025.01.28-17.00.15:796][222]LogExit: Exiting.
+[2025.01.28-17.00.15:853][222]Log file closed, 01/28/25 18:00:15
