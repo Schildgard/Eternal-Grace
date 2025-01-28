@@ -7273,3 +7273,299 @@ FPackageName: Skipped package /Game/Audio/Combat/Grunts/14__Damage_Grunt__Male_ 
 [2025.01.28-15.30.24:064][203]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
 [2025.01.28-15.30.24:064][203]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
 [2025.01.28-15.30.24:064][203]AssetCheck: /Game/Levels/Level_Hub Validating asset
+[2025.01.28-15.35.07:529][566]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 9553.991211
+[2025.01.28-15.35.07:728][589]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2025.01.28-15.35.07:728][589]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 9554.180664, Update Interval: 307.926880
+[2025.01.28-15.37.42:510][222]LogUObjectHash: Compacting FUObjectHashTables data took   0.85ms
+[2025.01.28-15.37.43:801][222]LogSlate: Window 'Save Content' being destroyed
+[2025.01.28-15.37.43:808][222]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2025.01.28-15.37.43:860][222]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Levels/Level_Hub" FILE="D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Levels/Level_Hub.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2025.01.28-15.37.43:906][222]LogUObjectHash: Compacting FUObjectHashTables data took   0.34ms
+[2025.01.28-15.37.43:984][222]LogSavePackage: Moving output files for package: /Game/Levels/Level_Hub
+[2025.01.28-15.37.43:984][222]LogSavePackage: Moving 'D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Saved/Level_Hub502DFC7C47BBFB84070385975D2E39D6.tmp' to 'D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Levels/Level_Hub.umap'
+[2025.01.28-15.37.43:991][222]LogFileHelpers: Saving map 'Level_Hub' took 0.132
+[2025.01.28-15.37.43:997][222]LogFileHelpers: InternalPromptForCheckoutAndSave took 189.082 ms (total: 4.38 sec)
+[2025.01.28-15.37.44:027][222]LogContentValidation: Display: Starting to validate 1 assets
+[2025.01.28-15.37.44:027][222]LogContentValidation: Enabled validators:
+[2025.01.28-15.37.44:027][222]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2025.01.28-15.37.44:027][222]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2025.01.28-15.37.44:027][222]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2025.01.28-15.37.44:027][222]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2025.01.28-15.37.44:027][222]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2025.01.28-15.37.44:027][222]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2025.01.28-15.37.44:027][222]AssetCheck: /Game/Levels/Level_Hub Validating asset
+[2025.01.28-15.38.02:470][ 32]LogShaderCompilers: Display: ================================================
+[2025.01.28-15.38.02:470][ 32]LogShaderCompilers: Display: === FShaderJobCache stats ===
+[2025.01.28-15.38.02:470][ 32]LogShaderCompilers: Display: Total job queries 1.673, among them cache hits 320 (19.13%), DDC hits 399 (23.85%), Duplicates 209 (12.49%)
+[2025.01.28-15.38.02:470][ 32]LogShaderCompilers: Display: Tracking 1.144 distinct input hashes that result in 790 distinct outputs (69.06%)
+[2025.01.28-15.38.02:470][ 32]LogShaderCompilers: Display: RAM used: 529,99 KiB of 6,40 GiB budget. Usage: 0.01%
+[2025.01.28-15.38.02:470][ 32]LogShaderCompilers: Display: === Shader Compilation stats ===
+[2025.01.28-15.38.02:470][ 32]LogShaderCompilers: Display: Shaders Compiled: 745
+[2025.01.28-15.38.02:470][ 32]LogShaderCompilers: Display: Jobs assigned 745, completed 745 (100%)
+[2025.01.28-15.38.02:470][ 32]LogShaderCompilers: Display: Average time worker was idle: 314.32 s
+[2025.01.28-15.38.02:470][ 32]LogShaderCompilers: Display: Time job spent in pending queue: average 3.00 s, longest 13.04 s
+[2025.01.28-15.38.02:470][ 32]LogShaderCompilers: Display: Job execution time: average 2.90 s, max 9.46 s
+[2025.01.28-15.38.02:470][ 32]LogShaderCompilers: Display: Job life time (pending + execution): average 5.90 s, max 14.51
+[2025.01.28-15.38.02:471][ 32]LogShaderCompilers: Display: Shader code size: average 10,404 KiB, min 2,105 KiB, max 34,789 KiB
+[2025.01.28-15.38.02:471][ 32]LogShaderCompilers: Display: Time at least one job was in flight (either pending or executed): 82.29 s
+[2025.01.28-15.38.02:471][ 32]LogShaderCompilers: Display: Mutex wait stall in FShaderJobCache::SubmitJobs:  0.34%
+[2025.01.28-15.38.02:471][ 32]LogShaderCompilers: Display: Jobs were issued in 429 batches (only local compilation was used), average 1.74 jobs/batch
+[2025.01.28-15.38.02:471][ 32]LogShaderCompilers: Display: Average processing rate: 9.05 jobs/sec
+[2025.01.28-15.38.02:471][ 32]LogShaderCompilers: Display: Total thread time: 547,515 s
+[2025.01.28-15.38.02:471][ 32]LogShaderCompilers: Display: Total thread preprocess time: 27,998 s
+[2025.01.28-15.38.02:471][ 32]LogShaderCompilers: Display: Percentage time preprocessing: 5.11%
+[2025.01.28-15.38.02:471][ 32]LogShaderCompilers: Display: Effective parallelization: 6.65 (times faster than compiling all shaders on one thread). Compare with number of workers: 16
+[2025.01.28-15.38.02:471][ 32]LogShaderCompilers: Display: Top 5 most expensive shader types by average time:
+[2025.01.28-15.38.02:471][ 32]LogShaderCompilers: Display:                                        FMicropolyRasterizeCS (compiled    6 times, average 2.98 sec, max 3.64 sec, min 2.17 sec)
+[2025.01.28-15.38.02:471][ 32]LogShaderCompilers: Display:                         TBasePassCSFNoLightMapPolicySkylight (compiled   10 times, average 2.29 sec, max 2.94 sec, min 1.73 sec)
+[2025.01.28-15.38.02:471][ 32]LogShaderCompilers: Display:                                 TBasePassCSFNoLightMapPolicy (compiled   14 times, average 2.23 sec, max 2.87 sec, min 1.53 sec)
+[2025.01.28-15.38.02:471][ 32]LogShaderCompilers: Display:                                                 FLumenCardCS (compiled   15 times, average 1.88 sec, max 2.60 sec, min 1.48 sec)
+[2025.01.28-15.38.02:471][ 32]LogShaderCompilers: Display:                                  FPathTracingMaterialCHS_AHS (compiled   24 times, average 1.50 sec, max 1.66 sec, min 1.28 sec)
+[2025.01.28-15.38.02:471][ 32]LogShaderCompilers: Display: Top 5 shader types by total compile time:
+[2025.01.28-15.38.02:471][ 32]LogShaderCompilers: Display:                                             FDebugViewModePS - 10.12% of total time (compiled   41 times, average 1.35 sec, max 2.95 sec, min 0.82 sec)
+[2025.01.28-15.38.02:471][ 32]LogShaderCompilers: Display:                                TMaterialCHSFNoLightMapPolicy - 8.01% of total time (compiled   35 times, average 1.25 sec, max 2.41 sec, min 0.68 sec)
+[2025.01.28-15.38.02:471][ 32]LogShaderCompilers: Display:                                 TBasePassPSFNoLightMapPolicy - 6.68% of total time (compiled   60 times, average 0.61 sec, max 2.47 sec, min 0.37 sec)
+[2025.01.28-15.38.02:471][ 32]LogShaderCompilers: Display:                                  FPathTracingMaterialCHS_AHS - 6.57% of total time (compiled   24 times, average 1.50 sec, max 1.66 sec, min 1.28 sec)
+[2025.01.28-15.38.02:471][ 32]LogShaderCompilers: Display:                   TMaterialCHSFNoLightMapPolicyFAnyHitShader - 6.40% of total time (compiled   32 times, average 1.09 sec, max 1.74 sec, min 0.81 sec)
+[2025.01.28-15.38.02:471][ 32]LogShaderCompilers: Display: === Material stats ===
+[2025.01.28-15.38.02:471][ 32]LogShaderCompilers: Display: Materials Cooked:        0
+[2025.01.28-15.38.02:471][ 32]LogShaderCompilers: Display: Materials Translated:    310
+[2025.01.28-15.38.02:471][ 32]LogShaderCompilers: Display: Material Total Translate Time: 0.39 s
+[2025.01.28-15.38.02:471][ 32]LogShaderCompilers: Display: Material Translation Only: 0.26 s (67%)
+[2025.01.28-15.38.02:471][ 32]LogShaderCompilers: Display: Material DDC Serialization Only: 0.01 s (1%)
+[2025.01.28-15.38.02:471][ 32]LogShaderCompilers: Display: Material Cache Hits: 68 (22%)
+[2025.01.28-15.38.02:471][ 32]LogShaderCompilers: Display: ================================================
+[2025.01.28-15.39.24:194][728]LogActorFactory: Actor Factory attempting to spawn BlueprintGeneratedClass /Game/Blueprints/BP_InteractionStone_WeaponMaster.BP_InteractionStone_WeaponMaster_C
+[2025.01.28-15.39.24:195][728]LogActorFactory: Actor Factory attempting to spawn BlueprintGeneratedClass /Game/Blueprints/BP_InteractionStone_WeaponMaster.BP_InteractionStone_WeaponMaster_C
+[2025.01.28-15.39.24:196][728]LogActorFactory: Actor Factory spawned Blueprint /Game/Blueprints/BP_InteractionStone_WeaponMaster.BP_InteractionStone_WeaponMaster as actor: BP_InteractionStone_WeaponMaster_C /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.BP_InteractionStone_WeaponMaster_C_0
+[2025.01.28-15.39.24:197][728]LogActorFactory: Actor Factory spawned Blueprint /Game/Blueprints/BP_InteractionStone_WeaponMaster.BP_InteractionStone_WeaponMaster as actor: BP_InteractionStone_WeaponMaster_C /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.BP_InteractionStone_WeaponMaster_C_0
+[2025.01.28-15.39.26:029][873]LogUObjectHash: Compacting FUObjectHashTables data took   0.47ms
+[2025.01.28-15.39.26:035][873]LogEditorActor: Deleted 0 Actors (0.027 secs)
+[2025.01.28-15.39.26:040][873]LogActorFactory: Actor Factory attempting to spawn BlueprintGeneratedClass /Game/Blueprints/BP_InteractionStone_WeaponMaster.BP_InteractionStone_WeaponMaster_C
+[2025.01.28-15.39.26:040][873]LogActorFactory: Actor Factory attempting to spawn BlueprintGeneratedClass /Game/Blueprints/BP_InteractionStone_WeaponMaster.BP_InteractionStone_WeaponMaster_C
+[2025.01.28-15.39.26:042][873]LogActorFactory: Actor Factory spawned Blueprint /Game/Blueprints/BP_InteractionStone_WeaponMaster.BP_InteractionStone_WeaponMaster as actor: BP_InteractionStone_WeaponMaster_C /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.BP_InteractionStone_WeaponMaster_C_1
+[2025.01.28-15.39.26:042][873]LogActorFactory: Actor Factory spawned Blueprint /Game/Blueprints/BP_InteractionStone_WeaponMaster.BP_InteractionStone_WeaponMaster as actor: BP_InteractionStone_WeaponMaster_C /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.BP_InteractionStone_WeaponMaster_C_1
+[2025.01.28-15.40.16:971][841]LogSlate: Window 'Delta Transform' being destroyed
+[2025.01.28-15.40.20:997][201]Cmd: ELEMENT MIRROR Y=-1
+[2025.01.28-15.40.35:876][673]LogActorFactory: Actor Factory attempting to spawn BlueprintGeneratedClass /Game/Blueprints/BP_InteractionStone_WeaponMaster.BP_InteractionStone_WeaponMaster_C
+[2025.01.28-15.40.35:876][673]LogActorFactory: Actor Factory attempting to spawn BlueprintGeneratedClass /Game/Blueprints/BP_InteractionStone_WeaponMaster.BP_InteractionStone_WeaponMaster_C
+[2025.01.28-15.40.35:876][673]LogActorFactory: Actor Factory spawned Blueprint /Game/Blueprints/BP_InteractionStone_WeaponMaster.BP_InteractionStone_WeaponMaster as actor: BP_InteractionStone_WeaponMaster_C /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.BP_InteractionStone_WeaponMaster_C_3
+[2025.01.28-15.40.35:877][673]LogActorFactory: Actor Factory spawned Blueprint /Game/Blueprints/BP_InteractionStone_WeaponMaster.BP_InteractionStone_WeaponMaster as actor: BP_InteractionStone_WeaponMaster_C /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.BP_InteractionStone_WeaponMaster_C_3
+[2025.01.28-15.40.36:685][738]LogUObjectHash: Compacting FUObjectHashTables data took   0.65ms
+[2025.01.28-15.40.36:692][738]LogEditorActor: Deleted 0 Actors (0.026 secs)
+[2025.01.28-15.40.36:695][738]LogActorFactory: Actor Factory attempting to spawn BlueprintGeneratedClass /Game/Blueprints/BP_InteractionStone_WeaponMaster.BP_InteractionStone_WeaponMaster_C
+[2025.01.28-15.40.36:695][738]LogActorFactory: Actor Factory attempting to spawn BlueprintGeneratedClass /Game/Blueprints/BP_InteractionStone_WeaponMaster.BP_InteractionStone_WeaponMaster_C
+[2025.01.28-15.40.36:697][738]LogActorFactory: Actor Factory spawned Blueprint /Game/Blueprints/BP_InteractionStone_WeaponMaster.BP_InteractionStone_WeaponMaster as actor: BP_InteractionStone_WeaponMaster_C /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.BP_InteractionStone_WeaponMaster_C_4
+[2025.01.28-15.40.36:698][738]LogActorFactory: Actor Factory spawned Blueprint /Game/Blueprints/BP_InteractionStone_WeaponMaster.BP_InteractionStone_WeaponMaster as actor: BP_InteractionStone_WeaponMaster_C /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.BP_InteractionStone_WeaponMaster_C_4
+[2025.01.28-15.41.05:957][615]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 9912.708984
+[2025.01.28-15.41.06:137][634]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2025.01.28-15.41.06:137][634]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 9912.877930, Update Interval: 329.101837
+[2025.01.28-15.41.07:568][786]Cmd: TRANSACTION UNDO
+[2025.01.28-15.41.07:568][786]LogEditorTransaction: Undo Move Elements
+[2025.01.28-15.41.08:011][794]Cmd: TRANSACTION UNDO
+[2025.01.28-15.41.08:011][794]LogEditorTransaction: Undo Move Elements
+[2025.01.28-15.41.08:661][851]Cmd: TRANSACTION UNDO
+[2025.01.28-15.41.08:662][851]LogEditorTransaction: Undo Rotate Elements
+[2025.01.28-15.42.03:706][474]Cmd: TRANSACTION UNDO
+[2025.01.28-15.42.03:706][474]LogEditorTransaction: Undo Move Elements
+[2025.01.28-15.42.04:140][482]Cmd: TRANSACTION UNDO
+[2025.01.28-15.42.04:140][482]LogEditorTransaction: Undo Rotate Elements
+[2025.01.28-15.42.58:926][887]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2025.01.28-15.42.58:932][887]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2025.01.28-15.42.58:966][887]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Level_Hub
+[2025.01.28-15.42.58:980][887]LogPlayLevel: PIE: StaticDuplicateObject took: (0.013589s)
+[2025.01.28-15.42.58:980][887]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Level_Hub.Level_Hub to /Game/Levels/UEDPIE_0_Level_Hub.Level_Hub (0.013621s)
+[2025.01.28-15.42.59:001][887]LogUObjectHash: Compacting FUObjectHashTables data took   0.64ms
+[2025.01.28-15.42.59:007][887]LogChaosDD: Creating Chaos Debug Draw Scene for world Level_Hub
+[2025.01.28-15.42.59:009][887]LogPlayLevel: PIE: World Init took: (0.001413s)
+[2025.01.28-15.42.59:010][887]LogAudio: Display: Creating Audio Device:                 Id: 17, Scope: Unique, Realtime: True
+[2025.01.28-15.42.59:010][887]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2025.01.28-15.42.59:010][887]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2025.01.28-15.42.59:010][887]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2025.01.28-15.42.59:010][887]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2025.01.28-15.42.59:010][887]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2025.01.28-15.42.59:010][887]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2025.01.28-15.42.59:010][887]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2025.01.28-15.42.59:010][887]LogAudio: Display: AudioDevice MaxSources: 32
+[2025.01.28-15.42.59:010][887]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2025.01.28-15.42.59:010][887]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2025.01.28-15.42.59:010][887]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2025.01.28-15.42.59:012][887]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2025.01.28-15.42.59:031][887]LogAudioMixer: Display: Using Audio Hardware Device Lautsprecher (Realtek(R) Audio)
+[2025.01.28-15.42.59:031][887]LogAudioMixer: Display: Initializing Sound Submixes...
+[2025.01.28-15.42.59:031][887]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2025.01.28-15.42.59:031][887]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2025.01.28-15.42.59:032][887]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=17
+[2025.01.28-15.42.59:032][887]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=17
+[2025.01.28-15.42.59:034][887]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=17
+[2025.01.28-15.42.59:034][887]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=17
+[2025.01.28-15.42.59:034][887]LogInit: FAudioDevice initialized with ID 17.
+[2025.01.28-15.42.59:034][887]LogAudio: Display: Audio Device (ID: 17) registered with world 'Level_Hub'.
+[2025.01.28-15.42.59:034][887]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 17
+[2025.01.28-15.42.59:036][887]LogLoad: Game class is 'GM_Custom_C'
+[2025.01.28-15.42.59:047][887]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Level_Hub.Level_Hub up for play (max tick rate 0) at 2025.01.28-16.42.59
+[2025.01.28-15.42.59:047][887]LogWorld: Bringing up level for play took: 0.010929
+[2025.01.28-15.42.59:049][887]LogOnline: OSS: Created online subsystem instance for: :Context_29
+[2025.01.28-15.42.59:052][887]LogSkeletalMesh: USkeletalMeshComponent: Recreating Clothing Actors for 'CharacterMesh0' with 'SKM_DarkLady'
+[2025.01.28-15.42.59:055][887]LogTemp: Warning: BP_InteractionStone_WeaponMaster_C_1 Could not Access GameInstance or GameInstance Dictionary did not Contained its key
+[2025.01.28-15.42.59:055][887]LogTemp: Warning: BP_InteractionStone_WeaponMaster_C_2 Could not Access GameInstance or GameInstance Dictionary did not Contained its key
+[2025.01.28-15.42.59:055][887]LogTemp: Warning: BP_InteractionStone_WeaponMaster_C_4 Could not Access GameInstance or GameInstance Dictionary did not Contained its key
+[2025.01.28-15.42.59:055][887]LogTemp: Warning: BP_InteractionStone_WeaponMaster_C_5 Could not Access GameInstance or GameInstance Dictionary did not Contained its key
+[2025.01.28-15.42.59:055][887]LogTemp: Warning: BP_InteractionStone_WeaponMaster_C_6 Could not Access GameInstance or GameInstance Dictionary did not Contained its key
+[2025.01.28-15.42.59:055][887]LogTemp: Warning: Failed to get Equipped Weapon Class for Equipment: Weapon
+[2025.01.28-15.42.59:055][887]LogTemp: Warning: Failed to get Equipped Weapon Class for Equipment: Shield
+[2025.01.28-15.42.59:055][887]LogTemp: Warning: Animation Instance set
+[2025.01.28-15.42.59:056][887]LogTemp: Warning: Animation Instance set
+[2025.01.28-15.42.59:057][887]PIE: Server logged in
+[2025.01.28-15.42.59:058][887]PIE: Play in editor total start time 0,128 seconds.
+[2025.01.28-15.43.21:538][518]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.01.28-15.43.21:538][518]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_Level_Hub
+[2025.01.28-15.43.21:538][518]LogWorld: UWorld::CleanupWorld for Level_Hub, bSessionEnded=true, bCleanupResources=true
+[2025.01.28-15.43.21:541][518]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.01.28-15.43.21:544][518]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2025.01.28-15.43.21:549][518]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.01.28-15.43.21:571][518]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.01.28-15.43.21:572][518]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 17
+[2025.01.28-15.43.21:572][518]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=17
+[2025.01.28-15.43.21:574][518]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=17
+[2025.01.28-15.43.21:582][518]LogUObjectHash: Compacting FUObjectHashTables data took   0.69ms
+[2025.01.28-15.43.21:703][519]LogPlayLevel: Display: Destroying online subsystem :Context_29
+[2025.01.28-15.44.10:783][649]LogStreaming: Display: FlushAsyncLoading(396): 1 QueuedPackages, 0 AsyncPackages
+[2025.01.28-15.44.10:789][649]LogStaticMesh: Display: Building static mesh Decorative_Picture_Frame_ukkpdhqbw_Mid (Required Memory Estimate: 6.260684 MB)...
+[2025.01.28-15.44.10:804][649]LogTexture: Display: Building textures: /Game/Megascans/3D_Assets/Frame/Decorative_Picture_Frame_ukkpdhqbw_Mid_2K_Specular.Decorative_Picture_Frame_ukkpdhqbw_Mid_2K_Specular (TFO_AutoDXT, 2048x2048 x1x1x1) (Required Memory Estimate: 388.083323 MB), EncodeSpeed: Fast
+[2025.01.28-15.44.10:813][649]LogStaticMesh: Adjacency [0.00s], tris: 4088, UVs 1
+[2025.01.28-15.44.10:814][649]LogTexture: Display: Building textures: /Game/Megascans/3D_Assets/Frame/Decorative_Picture_Frame_ukkpdhqbw_Mid_2K_AO.Decorative_Picture_Frame_ukkpdhqbw_Mid_2K_AO (TFO_AutoDXT, 2048x2048 x1x1x1) (Required Memory Estimate: 388.083323 MB), EncodeSpeed: Fast
+[2025.01.28-15.44.10:826][649]LogStaticMesh: Clustering [0.01s]. Ratio: 1.187500
+[2025.01.28-15.44.10:827][649]LogStaticMesh: Leaves [0.00s]
+[2025.01.28-15.44.10:829][649]LogTexture: Display: Building textures: /Game/Megascans/3D_Assets/Frame/Decorative_Picture_Frame_ukkpdhqbw_Mid_2K_Roughness.Decorative_Picture_Frame_ukkpdhqbw_Mid_2K_Roughness (TFO_AutoDXT, 2048x2048 x1x1x1) (Required Memory Estimate: 388.083323 MB), EncodeSpeed: Fast
+[2025.01.28-15.44.10:831][649]LogTexture: Display: Building textures: /Game/Megascans/3D_Assets/Frame/Decorative_Picture_Frame_ukkpdhqbw_Mid_2K_BaseColor.Decorative_Picture_Frame_ukkpdhqbw_Mid_2K_BaseColor (TFO_AutoDXT, 2048x2048 x1x1x1) (Required Memory Estimate: 388.083323 MB), EncodeSpeed: Fast
+[2025.01.28-15.44.10:856][649]LogTexture: Display: Building textures: /Game/Megascans/3D_Assets/Frame/Decorative_Picture_Frame_ukkpdhqbw_Mid_2K_Normal.Decorative_Picture_Frame_ukkpdhqbw_Mid_2K_Normal (TFO_BC5, 2048x2048 x1x1x1) (Required Memory Estimate: 562.499988 MB), EncodeSpeed: Fast
+[2025.01.28-15.44.11:004][652]LogStaticMesh: Reduce [0.18s]
+[2025.01.28-15.44.11:025][653]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/Megascans/3D_Assets/Frame/Decorative_Picture_Frame_ukkpdhqbw_Mid.Decorative_Picture_Frame_ukkpdhqbw_Mid
+[2025.01.28-15.44.11:025][653]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/Megascans/3D_Assets/Frame/Decorative_Picture_Frame_ukkpdhqbw_Mid.Decorative_Picture_Frame_ukkpdhqbw_Mid
+[2025.01.28-15.44.11:025][653]LogActorFactory: Actor Factory spawned StaticMesh /Game/Megascans/3D_Assets/Frame/Decorative_Picture_Frame_ukkpdhqbw_Mid.Decorative_Picture_Frame_ukkpdhqbw_Mid as actor: StaticMeshActor /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.StaticMeshActor_4
+[2025.01.28-15.44.11:041][653]LogStaticMesh: Display: Waiting for static meshes to be ready 0/1 (/Game/Megascans/3D_Assets/Frame/Decorative_Picture_Frame_ukkpdhqbw_Mid) ...
+[2025.01.28-15.44.11:062][653]LogStaticMesh: Fallback [0.06s], num tris: 1600
+[2025.01.28-15.44.11:063][653]LogStaticMesh: ConstrainClusters:
+[2025.01.28-15.44.11:063][653]LogStaticMesh:   Input: 69 Clusters, 7992 Triangles and 6145 Vertices
+[2025.01.28-15.44.11:063][653]LogStaticMesh:   Output without splits: 69 Clusters, 7992 Triangles and 6242 Vertices
+[2025.01.28-15.44.11:063][653]LogStaticMesh:   Output with splits: 69 Clusters, 7992 Triangles and 6242 Vertices
+[2025.01.28-15.44.11:063][653]LogStaticMesh: Material Stats - Unique Materials: 1, Fast Path Clusters: 69, Slow Path Clusters: 0, 1 Material: 69, 2 Materials: 0, 3 Materials: 0, At Least 4 Materials: 0
+[2025.01.28-15.44.11:064][653]LogStaticMesh: WritePages:
+[2025.01.28-15.44.11:064][653]LogStaticMesh:   Root: GPU size: 31996 bytes. 1 Pages. 31996.000 bytes per page (97.644% utilization).
+[2025.01.28-15.44.11:064][653]LogStaticMesh:   Streaming: GPU size: 47556 bytes. 1 Pages (1 with relative encoding). 47556.000 bytes per page (36.282% utilization).
+[2025.01.28-15.44.11:064][653]LogStaticMesh:   Page data disk size: 71252 bytes. Fixup data size: 368 bytes.
+[2025.01.28-15.44.11:064][653]LogStaticMesh:   Total GPU size: 79552 bytes, Total disk size: 71620 bytes.
+[2025.01.28-15.44.11:064][653]LogStaticMesh: Encode [0.00s]
+[2025.01.28-15.44.11:064][653]LogStaticMesh: Nanite build [0.25s]
+
+[2025.01.28-15.44.11:069][653]LogStaticMesh: Built static mesh [0.28s] /Game/Megascans/3D_Assets/Frame/Decorative_Picture_Frame_ukkpdhqbw_Mid.Decorative_Picture_Frame_ukkpdhqbw_Mid
+[2025.01.28-15.44.13:929][864]LogUObjectHash: Compacting FUObjectHashTables data took   0.69ms
+[2025.01.28-15.44.13:933][864]LogEditorActor: Deleted 0 Actors (0.025 secs)
+[2025.01.28-15.44.13:938][864]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/Megascans/3D_Assets/Frame/Decorative_Picture_Frame_ukkpdhqbw_Mid.Decorative_Picture_Frame_ukkpdhqbw_Mid
+[2025.01.28-15.44.13:938][864]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/Megascans/3D_Assets/Frame/Decorative_Picture_Frame_ukkpdhqbw_Mid.Decorative_Picture_Frame_ukkpdhqbw_Mid
+[2025.01.28-15.44.13:939][864]LogActorFactory: Actor Factory spawned StaticMesh /Game/Megascans/3D_Assets/Frame/Decorative_Picture_Frame_ukkpdhqbw_Mid.Decorative_Picture_Frame_ukkpdhqbw_Mid as actor: StaticMeshActor /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.StaticMeshActor_8
+[2025.01.28-15.44.52:416][909]Cmd: TRANSACTION UNDO
+[2025.01.28-15.44.52:416][909]LogEditorTransaction: Undo Move Elements
+[2025.01.28-15.44.52:929][919]Cmd: TRANSACTION UNDO
+[2025.01.28-15.44.52:929][919]LogEditorTransaction: Undo Scale Elements
+[2025.01.28-15.45.58:903][678]Cmd: ELEMENT MIRROR Y=-1
+[2025.01.28-15.46.00:571][868]Cmd: TRANSACTION UNDO
+[2025.01.28-15.46.00:572][868]LogEditorTransaction: Undo Mirroring Elements
+[2025.01.28-15.46.07:575][444]Cmd: ELEMENT MIRROR Y=-1
+[2025.01.28-15.46.17:178][418]Cmd: CAMERA SNAP
+[2025.01.28-15.46.17:178][418]Snapped camera to the first selected element.
+[2025.01.28-15.46.20:557][801]Cmd: TRANSACTION UNDO
+[2025.01.28-15.46.20:557][801]LogEditorTransaction: Undo Clicking on Elements
+[2025.01.28-15.47.00:931][ 80]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2025.01.28-15.47.00:969][ 80]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Levels/Level_Hub" FILE="D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Levels/Level_Hub.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2025.01.28-15.47.00:999][ 80]LogUObjectHash: Compacting FUObjectHashTables data took   0.76ms
+[2025.01.28-15.47.01:105][ 80]LogSavePackage: Moving output files for package: /Game/Levels/Level_Hub
+[2025.01.28-15.47.01:105][ 80]LogSavePackage: Moving 'D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Saved/Level_HubAEA7A9FA49ECF413B0A91CA398DB6F1F.tmp' to 'D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Levels/Level_Hub.umap'
+[2025.01.28-15.47.01:112][ 80]LogFileHelpers: Saving map 'Level_Hub' took 0.143
+[2025.01.28-15.47.01:118][ 80]LogFileHelpers: InternalPromptForCheckoutAndSave took 187.129 ms (total: 4.57 sec)
+[2025.01.28-15.47.01:167][ 80]LogContentValidation: Display: Starting to validate 1 assets
+[2025.01.28-15.47.01:167][ 80]LogContentValidation: Enabled validators:
+[2025.01.28-15.47.01:167][ 80]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2025.01.28-15.47.01:167][ 80]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2025.01.28-15.47.01:167][ 80]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2025.01.28-15.47.01:167][ 80]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2025.01.28-15.47.01:167][ 80]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2025.01.28-15.47.01:167][ 80]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2025.01.28-15.47.01:168][ 80]AssetCheck: /Game/Levels/Level_Hub Validating asset
+[2025.01.28-15.47.02:485][227]LogShaderCompilers: Display: ================================================
+[2025.01.28-15.47.02:485][227]LogShaderCompilers: Display: === FShaderJobCache stats ===
+[2025.01.28-15.47.02:485][227]LogShaderCompilers: Display: Total job queries 1.696, among them cache hits 336 (19.81%), DDC hits 399 (23.53%), Duplicates 209 (12.32%)
+[2025.01.28-15.47.02:485][227]LogShaderCompilers: Display: Tracking 1.151 distinct input hashes that result in 795 distinct outputs (69.07%)
+[2025.01.28-15.47.02:485][227]LogShaderCompilers: Display: RAM used: 531,79 KiB of 6,40 GiB budget. Usage: 0.01%
+[2025.01.28-15.47.02:485][227]LogShaderCompilers: Display: === Shader Compilation stats ===
+[2025.01.28-15.47.02:485][227]LogShaderCompilers: Display: Shaders Compiled: 752
+[2025.01.28-15.47.02:485][227]LogShaderCompilers: Display: Jobs assigned 752, completed 752 (100%)
+[2025.01.28-15.47.02:485][227]LogShaderCompilers: Display: Average time worker was idle: 330.26 s
+[2025.01.28-15.47.02:485][227]LogShaderCompilers: Display: Time job spent in pending queue: average 2.97 s, longest 13.04 s
+[2025.01.28-15.47.02:485][227]LogShaderCompilers: Display: Job execution time: average 2.89 s, max 9.46 s
+[2025.01.28-15.47.02:485][227]LogShaderCompilers: Display: Job life time (pending + execution): average 5.85 s, max 14.51
+[2025.01.28-15.47.02:485][227]LogShaderCompilers: Display: Shader code size: average 10,414 KiB, min 2,105 KiB, max 34,789 KiB
+[2025.01.28-15.47.02:485][227]LogShaderCompilers: Display: Time at least one job was in flight (either pending or executed): 84.52 s
+[2025.01.28-15.47.02:485][227]LogShaderCompilers: Display: Mutex wait stall in FShaderJobCache::SubmitJobs:  0.34%
+[2025.01.28-15.47.02:485][227]LogShaderCompilers: Display: Jobs were issued in 436 batches (only local compilation was used), average 1.72 jobs/batch
+[2025.01.28-15.47.02:485][227]LogShaderCompilers: Display: Average processing rate: 8.90 jobs/sec
+[2025.01.28-15.47.02:485][227]LogShaderCompilers: Display: Total thread time: 552,752 s
+[2025.01.28-15.47.02:485][227]LogShaderCompilers: Display: Total thread preprocess time: 28,249 s
+[2025.01.28-15.47.02:485][227]LogShaderCompilers: Display: Percentage time preprocessing: 5.11%
+[2025.01.28-15.47.02:485][227]LogShaderCompilers: Display: Effective parallelization: 6.54 (times faster than compiling all shaders on one thread). Compare with number of workers: 16
+[2025.01.28-15.47.02:485][227]LogShaderCompilers: Display: Top 5 most expensive shader types by average time:
+[2025.01.28-15.47.02:485][227]LogShaderCompilers: Display:                                        FMicropolyRasterizeCS (compiled    6 times, average 2.98 sec, max 3.64 sec, min 2.17 sec)
+[2025.01.28-15.47.02:485][227]LogShaderCompilers: Display:                         TBasePassCSFNoLightMapPolicySkylight (compiled   10 times, average 2.29 sec, max 2.94 sec, min 1.73 sec)
+[2025.01.28-15.47.02:485][227]LogShaderCompilers: Display:                                 TBasePassCSFNoLightMapPolicy (compiled   15 times, average 2.18 sec, max 2.87 sec, min 1.53 sec)
+[2025.01.28-15.47.02:485][227]LogShaderCompilers: Display:                                                 FLumenCardCS (compiled   16 times, average 1.83 sec, max 2.60 sec, min 1.20 sec)
+[2025.01.28-15.47.02:485][227]LogShaderCompilers: Display:                                  FPathTracingMaterialCHS_AHS (compiled   24 times, average 1.50 sec, max 1.66 sec, min 1.28 sec)
+[2025.01.28-15.47.02:485][227]LogShaderCompilers: Display: Top 5 shader types by total compile time:
+[2025.01.28-15.47.02:485][227]LogShaderCompilers: Display:                                             FDebugViewModePS - 10.03% of total time (compiled   41 times, average 1.35 sec, max 2.95 sec, min 0.82 sec)
+[2025.01.28-15.47.02:485][227]LogShaderCompilers: Display:                                TMaterialCHSFNoLightMapPolicy - 8.10% of total time (compiled   36 times, average 1.24 sec, max 2.41 sec, min 0.68 sec)
+[2025.01.28-15.47.02:485][227]LogShaderCompilers: Display:                                 TBasePassPSFNoLightMapPolicy - 6.71% of total time (compiled   61 times, average 0.61 sec, max 2.47 sec, min 0.37 sec)
+[2025.01.28-15.47.02:485][227]LogShaderCompilers: Display:                                  FPathTracingMaterialCHS_AHS - 6.51% of total time (compiled   24 times, average 1.50 sec, max 1.66 sec, min 1.28 sec)
+[2025.01.28-15.47.02:485][227]LogShaderCompilers: Display:                   TMaterialCHSFNoLightMapPolicyFAnyHitShader - 6.34% of total time (compiled   32 times, average 1.09 sec, max 1.74 sec, min 0.81 sec)
+[2025.01.28-15.47.02:485][227]LogShaderCompilers: Display: === Material stats ===
+[2025.01.28-15.47.02:485][227]LogShaderCompilers: Display: Materials Cooked:        0
+[2025.01.28-15.47.02:485][227]LogShaderCompilers: Display: Materials Translated:    311
+[2025.01.28-15.47.02:485][227]LogShaderCompilers: Display: Material Total Translate Time: 0.39 s
+[2025.01.28-15.47.02:485][227]LogShaderCompilers: Display: Material Translation Only: 0.26 s (66%)
+[2025.01.28-15.47.02:485][227]LogShaderCompilers: Display: Material DDC Serialization Only: 0.01 s (1%)
+[2025.01.28-15.47.02:485][227]LogShaderCompilers: Display: Material Cache Hits: 68 (22%)
+[2025.01.28-15.47.02:485][227]LogShaderCompilers: Display: ================================================
+[2025.01.28-15.47.20:839][233]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 10288.060547
+[2025.01.28-15.47.21:022][253]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2025.01.28-15.47.21:022][253]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 10288.236328, Update Interval: 300.005493
+[2025.01.28-15.49.28:159][593]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2025.01.28-15.49.28:207][593]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Levels/Level_Hub" FILE="D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Levels/Level_Hub.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2025.01.28-15.49.28:255][593]LogUObjectHash: Compacting FUObjectHashTables data took   0.71ms
+[2025.01.28-15.49.28:351][593]LogSavePackage: Moving output files for package: /Game/Levels/Level_Hub
+[2025.01.28-15.49.28:352][593]LogSavePackage: Moving 'D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Saved/Level_Hub7D55A0BB4C142DC9AC7D7E927864E06B.tmp' to 'D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Levels/Level_Hub.umap'
+[2025.01.28-15.49.28:359][593]LogFileHelpers: Saving map 'Level_Hub' took 0.153
+[2025.01.28-15.49.28:370][593]LogFileHelpers: InternalPromptForCheckoutAndSave took 210.995 ms (total: 4.78 sec)
+[2025.01.28-15.49.28:423][593]LogContentValidation: Display: Starting to validate 1 assets
+[2025.01.28-15.49.28:423][593]LogContentValidation: Enabled validators:
+[2025.01.28-15.49.28:423][593]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2025.01.28-15.49.28:423][593]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2025.01.28-15.49.28:423][593]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2025.01.28-15.49.28:423][593]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2025.01.28-15.49.28:423][593]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2025.01.28-15.49.28:423][593]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2025.01.28-15.49.28:423][593]AssetCheck: /Game/Levels/Level_Hub Validating asset
+[2025.01.28-15.49.52:368][ 71]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2025.01.28-15.49.52:427][ 71]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Levels/Level_Hub" FILE="D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Levels/Level_Hub.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2025.01.28-15.49.52:484][ 71]LogUObjectHash: Compacting FUObjectHashTables data took   0.49ms
+[2025.01.28-15.49.52:563][ 71]LogSavePackage: Moving output files for package: /Game/Levels/Level_Hub
+[2025.01.28-15.49.52:564][ 71]LogSavePackage: Moving 'D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Saved/Level_HubC74C38D5464DD3843EB99798B3A66279.tmp' to 'D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Levels/Level_Hub.umap'
+[2025.01.28-15.49.52:570][ 71]LogFileHelpers: Saving map 'Level_Hub' took 0.144
+[2025.01.28-15.49.52:577][ 71]LogFileHelpers: InternalPromptForCheckoutAndSave took 208.861 ms (total: 4.99 sec)
+[2025.01.28-15.49.52:626][ 71]LogContentValidation: Display: Starting to validate 1 assets
+[2025.01.28-15.49.52:626][ 71]LogContentValidation: Enabled validators:
+[2025.01.28-15.49.52:626][ 71]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2025.01.28-15.49.52:626][ 71]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2025.01.28-15.49.52:626][ 71]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2025.01.28-15.49.52:626][ 71]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2025.01.28-15.49.52:626][ 71]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2025.01.28-15.49.52:626][ 71]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2025.01.28-15.49.52:627][ 71]AssetCheck: /Game/Levels/Level_Hub Validating asset
