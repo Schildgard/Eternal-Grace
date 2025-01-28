@@ -8,7 +8,6 @@
 				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/StarterContent/Architecture/Floor_400x400.uasset",
 				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Levels/Level_Hub.umap",
 				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/DarkFantasyChurch/Materials/MI/MI_Floor_Puddles.uasset",
-				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Megascans/3D_Assets/Frame/MatID_1.uasset",
 				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Megascans/3D_Assets/Frame/Decorative_Picture_Frame_ukkpdhqbw_Mid.uasset",
 				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Megascans/3D_Assets/Frame/Decorative_Picture_Frame_ukkpdhqbw_Mid_2K_AO.uasset",
 				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Megascans/3D_Assets/Frame/Decorative_Picture_Frame_ukkpdhqbw_Mid_2K_BaseColor.uasset",
@@ -18,7 +17,15 @@
 				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Megascans/3D_Assets/Frame/Decorative_Picture_Frame_ukkpdhqbw_Mid_2K_Normal.uasset",
 				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Megascans/3D_Assets/Frame/Decorative_Picture_Frame_ukkpdhqbw_Mid_2K_Roughness.uasset",
 				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Megascans/3D_Assets/Frame/Decorative_Picture_Frame_ukkpdhqbw_Mid_2K_Specular.uasset",
-				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Megascans/3D_Assets/Frame/M_Frame.uasset"
+				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Megascans/3D_Assets/Frame/M_Frame.uasset",
+				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/DarkFantasyChurch/Meshes/Window/SM_Windows_01.uasset",
+				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/DarkFantasyChurch/Meshes/Window/SM_Windows_04.uasset",
+				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/DarkFantasyChurch/Meshes/Window/SM_Windows_06.uasset",
+				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/DarkFantasyChurch/Meshes/Window/SM_Windows_02.uasset",
+				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/DarkFantasyChurch/Meshes/Window/SM_Windows_03.uasset",
+				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/DarkFantasyChurch/Meshes/Window/SM_Windows_05.uasset",
+				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/DarkFantasyChurch/Meshes/Wall/SM_Wall_Door.uasset",
+				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Megascans/3D_Assets/Frame/MatID_1.uasset"
 			]
 		}
 	]
