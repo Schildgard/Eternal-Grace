@@ -6052,3 +6052,868 @@ FPackageName: Skipped package /Game/Audio/Combat/Grunts/14__Damage_Grunt__Male_ 
 [2025.01.28-14.11.48:796][249]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
 [2025.01.28-14.11.48:796][249]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
 [2025.01.28-14.11.48:796][249]AssetCheck: /Game/Levels/Level_Hub Validating asset
+[2025.01.28-14.13.05:790][479]Cmd: TRANSACTION UNDO
+[2025.01.28-14.13.05:790][479]LogEditorTransaction: Undo Move Elements
+[2025.01.28-14.13.58:920][832]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 4682.466797
+[2025.01.28-14.13.59:113][841]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2025.01.28-14.13.59:113][841]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 4682.638184, Update Interval: 339.575806
+[2025.01.28-14.15.05:630][597]Cmd: TRANSACTION UNDO
+[2025.01.28-14.15.05:630][597]LogEditorTransaction: Undo Clicking on Elements
+[2025.01.28-14.17.09:925][ 42]Cmd: DELETE
+[2025.01.28-14.17.09:925][ 42]Cmd: ACTOR DELETE
+[2025.01.28-14.17.09:931][ 42]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.01.28-14.17.09:932][ 42]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.01.28-14.17.09:932][ 42]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.01.28-14.17.09:933][ 42]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.01.28-14.17.09:933][ 42]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.01.28-14.17.09:934][ 42]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.01.28-14.17.09:934][ 42]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.01.28-14.17.09:935][ 42]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.01.28-14.17.09:935][ 42]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.01.28-14.17.09:936][ 42]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.01.28-14.17.12:778][ 42]LogSlate: Window 'Delete Referenced Actor' being destroyed
+[2025.01.28-14.17.15:529][ 42]LogSlate: Window 'Delete Referenced Actor' being destroyed
+[2025.01.28-14.17.15:550][ 42]LogUObjectHash: Compacting FUObjectHashTables data took   0.46ms
+[2025.01.28-14.17.15:578][ 42]LogEditorActor: Deleted 10 Actors (0.055 secs)
+[2025.01.28-14.19.03:446][292]LogStreaming: Display: FlushAsyncLoading(370): 1 QueuedPackages, 0 AsyncPackages
+[2025.01.28-14.19.03:447][292]LogStaticMesh: Display: Building static mesh SM_Ext_RoofC (Required Memory Estimate: 0.730017 MB)...
+[2025.01.28-14.19.03:454][292]LogStaticMesh: Built static mesh [0.01s] /Game/OldCathedral/Meshes/SM_Ext_RoofC.SM_Ext_RoofC
+[2025.01.28-14.19.03:642][295]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/OldCathedral/Meshes/SM_Ext_RoofC.SM_Ext_RoofC
+[2025.01.28-14.19.03:642][295]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/OldCathedral/Meshes/SM_Ext_RoofC.SM_Ext_RoofC
+[2025.01.28-14.19.03:642][295]LogActorFactory: Actor Factory spawned StaticMesh /Game/OldCathedral/Meshes/SM_Ext_RoofC.SM_Ext_RoofC as actor: StaticMeshActor /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.StaticMeshActor_360
+[2025.01.28-14.19.04:885][404]LogUObjectHash: Compacting FUObjectHashTables data took   0.62ms
+[2025.01.28-14.19.04:892][404]LogEditorActor: Deleted 0 Actors (0.024 secs)
+[2025.01.28-14.19.04:897][404]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/OldCathedral/Meshes/SM_Ext_RoofC.SM_Ext_RoofC
+[2025.01.28-14.19.04:897][404]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/OldCathedral/Meshes/SM_Ext_RoofC.SM_Ext_RoofC
+[2025.01.28-14.19.04:898][404]LogActorFactory: Actor Factory spawned StaticMesh /Game/OldCathedral/Meshes/SM_Ext_RoofC.SM_Ext_RoofC as actor: StaticMeshActor /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.StaticMeshActor_361
+[2025.01.28-14.20.15:133][ 14]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 5058.746094
+[2025.01.28-14.20.15:322][ 30]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2025.01.28-14.20.15:322][ 30]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 5058.923828, Update Interval: 303.865479
+[2025.01.28-14.20.16:210][109]Cmd: ELEMENT MIRROR Y=-1
+[2025.01.28-14.20.34:575][871]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/OldCathedral/Meshes/SM_Ext_Trim_4-5m_01.SM_Ext_Trim_4-5m_01
+[2025.01.28-14.20.34:575][871]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/OldCathedral/Meshes/SM_Ext_Trim_4-5m_01.SM_Ext_Trim_4-5m_01
+[2025.01.28-14.20.34:576][871]LogActorFactory: Actor Factory spawned StaticMesh /Game/OldCathedral/Meshes/SM_Ext_Trim_4-5m_01.SM_Ext_Trim_4-5m_01 as actor: StaticMeshActor /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.StaticMeshActor_365
+[2025.01.28-14.20.35:447][936]LogUObjectHash: Compacting FUObjectHashTables data took   0.70ms
+[2025.01.28-14.20.35:452][936]LogEditorActor: Deleted 0 Actors (0.024 secs)
+[2025.01.28-14.20.35:457][936]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/OldCathedral/Meshes/SM_Ext_Trim_4-5m_01.SM_Ext_Trim_4-5m_01
+[2025.01.28-14.20.35:457][936]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/OldCathedral/Meshes/SM_Ext_Trim_4-5m_01.SM_Ext_Trim_4-5m_01
+[2025.01.28-14.20.35:458][936]LogActorFactory: Actor Factory spawned StaticMesh /Game/OldCathedral/Meshes/SM_Ext_Trim_4-5m_01.SM_Ext_Trim_4-5m_01 as actor: StaticMeshActor /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.StaticMeshActor_366
+[2025.01.28-14.20.36:343][ 16]Cmd: DELETE
+[2025.01.28-14.20.36:343][ 16]Cmd: ACTOR DELETE
+[2025.01.28-14.20.36:347][ 16]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.01.28-14.20.36:364][ 16]LogUObjectHash: Compacting FUObjectHashTables data took   0.34ms
+[2025.01.28-14.20.36:368][ 16]LogEditorActor: Deleted 1 Actors (0.026 secs)
+[2025.01.28-14.20.37:267][ 96]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/OldCathedral/Meshes/SM_Ext_Trim_6m_01.SM_Ext_Trim_6m_01
+[2025.01.28-14.20.37:267][ 96]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/OldCathedral/Meshes/SM_Ext_Trim_6m_01.SM_Ext_Trim_6m_01
+[2025.01.28-14.20.37:268][ 96]LogActorFactory: Actor Factory spawned StaticMesh /Game/OldCathedral/Meshes/SM_Ext_Trim_6m_01.SM_Ext_Trim_6m_01 as actor: StaticMeshActor /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.StaticMeshActor_367
+[2025.01.28-14.20.39:185][292]LogUObjectHash: Compacting FUObjectHashTables data took   0.36ms
+[2025.01.28-14.20.39:188][292]LogEditorActor: Deleted 0 Actors (0.021 secs)
+[2025.01.28-14.20.39:193][292]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/OldCathedral/Meshes/SM_Ext_Trim_6m_01.SM_Ext_Trim_6m_01
+[2025.01.28-14.20.39:193][292]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/OldCathedral/Meshes/SM_Ext_Trim_6m_01.SM_Ext_Trim_6m_01
+[2025.01.28-14.20.39:195][292]LogActorFactory: Actor Factory spawned StaticMesh /Game/OldCathedral/Meshes/SM_Ext_Trim_6m_01.SM_Ext_Trim_6m_01 as actor: StaticMeshActor /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.StaticMeshActor_368
+[2025.01.28-14.20.51:298][463]Cmd: TRANSACTION UNDO
+[2025.01.28-14.20.51:298][463]LogEditorTransaction: Undo Move Elements
+[2025.01.28-14.20.57:854][ 77]Cmd: DELETE
+[2025.01.28-14.20.57:854][ 77]Cmd: ACTOR DELETE
+[2025.01.28-14.20.57:859][ 77]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.01.28-14.20.57:877][ 77]LogUObjectHash: Compacting FUObjectHashTables data took   0.67ms
+[2025.01.28-14.20.57:882][ 77]LogEditorActor: Deleted 1 Actors (0.028 secs)
+[2025.01.28-14.20.58:706][150]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/OldCathedral/Meshes/SM_Ext_Trim_4-5m_01.SM_Ext_Trim_4-5m_01
+[2025.01.28-14.20.58:706][150]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/OldCathedral/Meshes/SM_Ext_Trim_4-5m_01.SM_Ext_Trim_4-5m_01
+[2025.01.28-14.20.58:707][150]LogActorFactory: Actor Factory spawned StaticMesh /Game/OldCathedral/Meshes/SM_Ext_Trim_4-5m_01.SM_Ext_Trim_4-5m_01 as actor: StaticMeshActor /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.StaticMeshActor_371
+[2025.01.28-14.21.00:267][304]LogUObjectHash: Compacting FUObjectHashTables data took   0.40ms
+[2025.01.28-14.21.00:271][304]LogEditorActor: Deleted 0 Actors (0.021 secs)
+[2025.01.28-14.21.00:275][304]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/OldCathedral/Meshes/SM_Ext_Trim_4-5m_01.SM_Ext_Trim_4-5m_01
+[2025.01.28-14.21.00:275][304]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/OldCathedral/Meshes/SM_Ext_Trim_4-5m_01.SM_Ext_Trim_4-5m_01
+[2025.01.28-14.21.00:276][304]LogActorFactory: Actor Factory spawned StaticMesh /Game/OldCathedral/Meshes/SM_Ext_Trim_4-5m_01.SM_Ext_Trim_4-5m_01 as actor: StaticMeshActor /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.StaticMeshActor_372
+[2025.01.28-14.21.59:470][ 56]Cmd: ELEMENT MIRROR Y=-1
+[2025.01.28-14.22.34:398][615]Cmd: TRANSACTION UNDO
+[2025.01.28-14.22.34:398][615]LogEditorTransaction: Undo Move Elements
+[2025.01.28-14.22.51:483][216]LogUObjectHash: Compacting FUObjectHashTables data took   0.79ms
+[2025.01.28-14.22.52:968][216]LogSlate: Window 'Save Content' being destroyed
+[2025.01.28-14.22.52:976][216]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2025.01.28-14.22.53:026][216]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Levels/Level_Hub" FILE="D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Levels/Level_Hub.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2025.01.28-14.22.53:051][216]LogUObjectHash: Compacting FUObjectHashTables data took   0.47ms
+[2025.01.28-14.22.53:099][216]LogSavePackage: Moving output files for package: /Game/Levels/Level_Hub
+[2025.01.28-14.22.53:099][216]LogSavePackage: Moving 'D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Saved/Level_HubBCB7FD56498E196119B595BBD7617DEF.tmp' to 'D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Levels/Level_Hub.umap'
+[2025.01.28-14.22.53:107][216]LogFileHelpers: Saving map 'Level_Hub' took 0.081
+[2025.01.28-14.22.53:112][216]LogFileHelpers: InternalPromptForCheckoutAndSave took 135.369 ms (total: 1.84 sec)
+[2025.01.28-14.22.53:160][216]LogContentValidation: Display: Starting to validate 1 assets
+[2025.01.28-14.22.53:160][216]LogContentValidation: Enabled validators:
+[2025.01.28-14.22.53:160][216]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2025.01.28-14.22.53:160][216]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2025.01.28-14.22.53:160][216]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2025.01.28-14.22.53:160][216]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2025.01.28-14.22.53:160][216]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2025.01.28-14.22.53:160][216]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2025.01.28-14.22.53:160][216]AssetCheck: /Game/Levels/Level_Hub Validating asset
+[2025.01.28-14.22.56:185][508]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/OldCathedral/Meshes/SM_Ext_RoofF.SM_Ext_RoofF
+[2025.01.28-14.22.56:185][508]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/OldCathedral/Meshes/SM_Ext_RoofF.SM_Ext_RoofF
+[2025.01.28-14.22.56:186][508]LogActorFactory: Actor Factory spawned StaticMesh /Game/OldCathedral/Meshes/SM_Ext_RoofF.SM_Ext_RoofF as actor: StaticMeshActor /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.StaticMeshActor_375
+[2025.01.28-14.22.57:403][613]LogUObjectHash: Compacting FUObjectHashTables data took   0.33ms
+[2025.01.28-14.22.57:404][613]LogEditorActor: Deleted 0 Actors (0.019 secs)
+[2025.01.28-14.22.57:409][613]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/OldCathedral/Meshes/SM_Ext_RoofF.SM_Ext_RoofF
+[2025.01.28-14.22.57:409][613]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/OldCathedral/Meshes/SM_Ext_RoofF.SM_Ext_RoofF
+[2025.01.28-14.22.57:411][613]LogActorFactory: Actor Factory spawned StaticMesh /Game/OldCathedral/Meshes/SM_Ext_RoofF.SM_Ext_RoofF as actor: StaticMeshActor /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.StaticMeshActor_376
+[2025.01.28-14.22.58:343][701]Cmd: DELETE
+[2025.01.28-14.22.58:343][701]Cmd: ACTOR DELETE
+[2025.01.28-14.22.58:348][701]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.01.28-14.22.58:366][701]LogUObjectHash: Compacting FUObjectHashTables data took   0.35ms
+[2025.01.28-14.22.58:369][701]LogEditorActor: Deleted 1 Actors (0.026 secs)
+[2025.01.28-14.23.00:358][933]LogStreaming: Display: FlushAsyncLoading(371): 1 QueuedPackages, 0 AsyncPackages
+[2025.01.28-14.23.00:366][933]LogStaticMesh: Display: Building static mesh SM_Ext_RoofI (Required Memory Estimate: 21.603352 MB)...
+[2025.01.28-14.23.00:514][939]LogStaticMesh: Built static mesh [0.15s] /Game/OldCathedral/Meshes/SM_Ext_RoofI.SM_Ext_RoofI
+[2025.01.28-14.23.00:521][940]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/OldCathedral/Meshes/SM_Ext_RoofI.SM_Ext_RoofI
+[2025.01.28-14.23.00:521][940]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/OldCathedral/Meshes/SM_Ext_RoofI.SM_Ext_RoofI
+[2025.01.28-14.23.00:522][940]LogActorFactory: Actor Factory spawned StaticMesh /Game/OldCathedral/Meshes/SM_Ext_RoofI.SM_Ext_RoofI as actor: StaticMeshActor /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.StaticMeshActor_377
+[2025.01.28-14.23.01:713][ 37]LogUObjectHash: Compacting FUObjectHashTables data took   0.55ms
+[2025.01.28-14.23.01:716][ 37]LogEditorActor: Deleted 0 Actors (0.021 secs)
+[2025.01.28-14.23.01:720][ 37]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/OldCathedral/Meshes/SM_Ext_RoofI.SM_Ext_RoofI
+[2025.01.28-14.23.01:720][ 37]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/OldCathedral/Meshes/SM_Ext_RoofI.SM_Ext_RoofI
+[2025.01.28-14.23.01:722][ 37]LogActorFactory: Actor Factory spawned StaticMesh /Game/OldCathedral/Meshes/SM_Ext_RoofI.SM_Ext_RoofI as actor: StaticMeshActor /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.StaticMeshActor_378
+[2025.01.28-14.23.57:404][537]Cmd: DELETE
+[2025.01.28-14.23.57:404][537]Cmd: ACTOR DELETE
+[2025.01.28-14.23.57:409][537]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.01.28-14.23.57:428][537]LogUObjectHash: Compacting FUObjectHashTables data took   0.34ms
+[2025.01.28-14.23.57:430][537]LogEditorActor: Deleted 1 Actors (0.026 secs)
+[2025.01.28-14.23.58:712][670]Cmd: DELETE
+[2025.01.28-14.23.58:712][670]Cmd: ACTOR DELETE
+[2025.01.28-14.23.58:716][670]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.01.28-14.23.58:735][670]LogUObjectHash: Compacting FUObjectHashTables data took   0.34ms
+[2025.01.28-14.23.58:739][670]LogEditorActor: Deleted 1 Actors (0.026 secs)
+[2025.01.28-14.25.21:719][114]Cmd: TRANSACTION UNDO
+[2025.01.28-14.25.21:719][114]LogEditorTransaction: Undo Move Elements
+[2025.01.28-14.25.59:611][926]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 5403.271484
+[2025.01.28-14.25.59:779][944]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2025.01.28-14.25.59:779][944]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 5403.429688, Update Interval: 344.937286
+[2025.01.28-14.26.44:622][438]LogUObjectHash: Compacting FUObjectHashTables data took   0.74ms
+[2025.01.28-14.26.46:833][438]LogSlate: Window 'Save Content' being destroyed
+[2025.01.28-14.26.46:841][438]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2025.01.28-14.26.46:868][438]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Levels/Level_Hub" FILE="D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Levels/Level_Hub.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2025.01.28-14.26.46:911][438]LogUObjectHash: Compacting FUObjectHashTables data took   0.35ms
+[2025.01.28-14.26.46:959][438]LogSavePackage: Moving output files for package: /Game/Levels/Level_Hub
+[2025.01.28-14.26.46:960][438]LogSavePackage: Moving 'D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Saved/Level_Hub98C41E0C429333E848FD6AB4E4990BE8.tmp' to 'D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Levels/Level_Hub.umap'
+[2025.01.28-14.26.46:967][438]LogFileHelpers: Saving map 'Level_Hub' took 0.099
+[2025.01.28-14.26.46:971][438]LogFileHelpers: InternalPromptForCheckoutAndSave took 130.426 ms (total: 1.97 sec)
+[2025.01.28-14.26.47:018][438]LogContentValidation: Display: Starting to validate 1 assets
+[2025.01.28-14.26.47:018][438]LogContentValidation: Enabled validators:
+[2025.01.28-14.26.47:018][438]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2025.01.28-14.26.47:018][438]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2025.01.28-14.26.47:018][438]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2025.01.28-14.26.47:018][438]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2025.01.28-14.26.47:018][438]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2025.01.28-14.26.47:018][438]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2025.01.28-14.26.47:018][438]AssetCheck: /Game/Levels/Level_Hub Validating asset
+[2025.01.28-14.27.16:837][299]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2025.01.28-14.27.16:893][299]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Levels/Level_Hub" FILE="D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Levels/Level_Hub.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2025.01.28-14.27.16:933][299]LogUObjectHash: Compacting FUObjectHashTables data took   0.46ms
+[2025.01.28-14.27.16:987][299]LogSavePackage: Moving output files for package: /Game/Levels/Level_Hub
+[2025.01.28-14.27.16:987][299]LogSavePackage: Moving 'D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Saved/Level_HubAB1EC457495B4A6F53CC9C8C3E1AE59B.tmp' to 'D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Levels/Level_Hub.umap'
+[2025.01.28-14.27.16:993][299]LogFileHelpers: Saving map 'Level_Hub' took 0.100
+[2025.01.28-14.27.16:999][299]LogFileHelpers: InternalPromptForCheckoutAndSave took 162.531 ms (total: 2.13 sec)
+[2025.01.28-14.27.17:043][299]LogContentValidation: Display: Starting to validate 1 assets
+[2025.01.28-14.27.17:043][299]LogContentValidation: Enabled validators:
+[2025.01.28-14.27.17:043][299]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2025.01.28-14.27.17:043][299]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2025.01.28-14.27.17:043][299]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2025.01.28-14.27.17:043][299]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2025.01.28-14.27.17:043][299]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2025.01.28-14.27.17:043][299]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2025.01.28-14.27.17:043][299]AssetCheck: /Game/Levels/Level_Hub Validating asset
+[2025.01.28-14.30.53:936][598]Cmd: DELETE
+[2025.01.28-14.30.53:936][598]Cmd: ACTOR DELETE
+[2025.01.28-14.30.53:941][598]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.01.28-14.30.53:960][598]LogUObjectHash: Compacting FUObjectHashTables data took   0.38ms
+[2025.01.28-14.30.53:966][598]LogEditorActor: Deleted 1 Actors (0.030 secs)
+[2025.01.28-14.31.00:305][256]Cmd: DELETE
+[2025.01.28-14.31.00:306][256]Cmd: ACTOR DELETE
+[2025.01.28-14.31.00:311][256]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.01.28-14.31.00:329][256]LogUObjectHash: Compacting FUObjectHashTables data took   0.36ms
+[2025.01.28-14.31.00:332][256]LogEditorActor: Deleted 1 Actors (0.026 secs)
+[2025.01.28-14.31.08:109][149]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2025.01.28-14.31.08:168][149]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Levels/Level_Hub" FILE="D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Levels/Level_Hub.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2025.01.28-14.31.08:224][149]LogUObjectHash: Compacting FUObjectHashTables data took   0.34ms
+[2025.01.28-14.31.08:275][149]LogSavePackage: Moving output files for package: /Game/Levels/Level_Hub
+[2025.01.28-14.31.08:275][149]LogSavePackage: Moving 'D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Saved/Level_Hub196E79E841C6632851B9C0AA81063808.tmp' to 'D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Levels/Level_Hub.umap'
+[2025.01.28-14.31.08:282][149]LogFileHelpers: Saving map 'Level_Hub' took 0.115
+[2025.01.28-14.31.08:287][149]LogFileHelpers: InternalPromptForCheckoutAndSave took 179.055 ms (total: 2.31 sec)
+[2025.01.28-14.31.08:333][149]LogContentValidation: Display: Starting to validate 1 assets
+[2025.01.28-14.31.08:333][149]LogContentValidation: Enabled validators:
+[2025.01.28-14.31.08:333][149]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2025.01.28-14.31.08:333][149]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2025.01.28-14.31.08:333][149]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2025.01.28-14.31.08:333][149]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2025.01.28-14.31.08:333][149]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2025.01.28-14.31.08:333][149]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2025.01.28-14.31.08:334][149]AssetCheck: /Game/Levels/Level_Hub Validating asset
+[2025.01.28-14.32.31:213][759]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 5794.913574
+[2025.01.28-14.32.31:374][776]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2025.01.28-14.32.31:374][776]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 5795.064941, Update Interval: 300.045776
+[2025.01.28-14.33.21:969][734]Cmd: DELETE
+[2025.01.28-14.33.21:969][734]Cmd: ACTOR DELETE
+[2025.01.28-14.33.21:973][734]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.01.28-14.33.21:993][734]LogUObjectHash: Compacting FUObjectHashTables data took   0.82ms
+[2025.01.28-14.33.21:999][734]LogEditorActor: Deleted 1 Actors (0.031 secs)
+[2025.01.28-14.33.22:967][808]Cmd: DELETE
+[2025.01.28-14.33.22:967][808]Cmd: ACTOR DELETE
+[2025.01.28-14.33.22:972][808]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.01.28-14.33.22:991][808]LogUObjectHash: Compacting FUObjectHashTables data took   0.35ms
+[2025.01.28-14.33.22:995][808]LogEditorActor: Deleted 1 Actors (0.027 secs)
+[2025.01.28-14.33.25:617][ 62]Cmd: TRANSACTION UNDO
+[2025.01.28-14.33.25:617][ 62]LogEditorTransaction: Undo Clicking on Elements
+[2025.01.28-14.33.26:480][105]Cmd: TRANSACTION UNDO
+[2025.01.28-14.33.26:480][105]LogEditorTransaction: Undo Delete Elements
+[2025.01.28-14.33.27:384][188]Cmd: TRANSACTION UNDO
+[2025.01.28-14.33.27:384][188]LogEditorTransaction: Undo Clicking on Elements
+[2025.01.28-14.33.29:632][448]Cmd: TRANSACTION UNDO
+[2025.01.28-14.33.29:632][448]LogEditorTransaction: Undo Delete Elements
+[2025.01.28-14.33.45:729][965]Cmd: DELETE
+[2025.01.28-14.33.45:729][965]Cmd: ACTOR DELETE
+[2025.01.28-14.33.45:734][965]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.01.28-14.33.45:753][965]LogUObjectHash: Compacting FUObjectHashTables data took   0.63ms
+[2025.01.28-14.33.45:759][965]LogEditorActor: Deleted 1 Actors (0.031 secs)
+[2025.01.28-14.34.20:348][486]Cmd: DELETE
+[2025.01.28-14.34.20:348][486]Cmd: ACTOR DELETE
+[2025.01.28-14.34.20:353][486]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.01.28-14.34.20:372][486]LogUObjectHash: Compacting FUObjectHashTables data took   0.34ms
+[2025.01.28-14.34.20:375][486]LogEditorActor: Deleted 1 Actors (0.027 secs)
+[2025.01.28-14.34.43:107][926]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/DarkFantasyChurch/Meshes/Wall/SM_Wall_Door.SM_Wall_Door
+[2025.01.28-14.34.43:107][926]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/DarkFantasyChurch/Meshes/Wall/SM_Wall_Door.SM_Wall_Door
+[2025.01.28-14.34.43:108][926]LogActorFactory: Actor Factory spawned StaticMesh /Game/DarkFantasyChurch/Meshes/Wall/SM_Wall_Door.SM_Wall_Door as actor: StaticMeshActor /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.StaticMeshActor_388
+[2025.01.28-14.34.45:158][123]LogUObjectHash: Compacting FUObjectHashTables data took   0.33ms
+[2025.01.28-14.34.45:162][123]LogEditorActor: Deleted 0 Actors (0.023 secs)
+[2025.01.28-14.34.45:167][123]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/DarkFantasyChurch/Meshes/Wall/SM_Wall_Door.SM_Wall_Door
+[2025.01.28-14.34.45:167][123]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/DarkFantasyChurch/Meshes/Wall/SM_Wall_Door.SM_Wall_Door
+[2025.01.28-14.34.45:168][123]LogActorFactory: Actor Factory spawned StaticMesh /Game/DarkFantasyChurch/Meshes/Wall/SM_Wall_Door.SM_Wall_Door as actor: StaticMeshActor /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.StaticMeshActor_389
+[2025.01.28-14.34.51:404][808]Cmd: DELETE
+[2025.01.28-14.34.51:404][808]Cmd: ACTOR DELETE
+[2025.01.28-14.34.51:409][808]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.01.28-14.34.51:427][808]LogUObjectHash: Compacting FUObjectHashTables data took   0.37ms
+[2025.01.28-14.34.51:431][808]LogEditorActor: Deleted 1 Actors (0.027 secs)
+[2025.01.28-14.35.18:533][884]Cmd: TRANSACTION UNDO
+[2025.01.28-14.35.18:533][884]LogEditorTransaction: Undo Move Elements
+[2025.01.28-14.35.19:073][894]Cmd: TRANSACTION UNDO
+[2025.01.28-14.35.19:073][894]LogEditorTransaction: Undo Scale Elements
+[2025.01.28-14.35.19:906][986]Cmd: TRANSACTION UNDO
+[2025.01.28-14.35.19:906][986]LogEditorTransaction: Undo Clicking on Elements
+[2025.01.28-14.35.20:340][ 27]Cmd: TRANSACTION UNDO
+[2025.01.28-14.35.20:340][ 27]LogEditorTransaction: Undo Move Elements
+[2025.01.28-14.35.20:882][ 87]Cmd: TRANSACTION UNDO
+[2025.01.28-14.35.20:882][ 87]LogEditorTransaction: Undo Scale Elements
+[2025.01.28-14.35.21:855][198]Cmd: TRANSACTION UNDO
+[2025.01.28-14.35.21:855][198]LogEditorTransaction: Undo Clicking on Elements
+[2025.01.28-14.36.17:486][387]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/DarkFantasyChurch/Meshes/Column/SM_Small_Column.SM_Small_Column
+[2025.01.28-14.36.17:486][387]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/DarkFantasyChurch/Meshes/Column/SM_Small_Column.SM_Small_Column
+[2025.01.28-14.36.17:486][387]LogActorFactory: Actor Factory spawned StaticMesh /Game/DarkFantasyChurch/Meshes/Column/SM_Small_Column.SM_Small_Column as actor: StaticMeshActor /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.StaticMeshActor_391
+[2025.01.28-14.36.18:535][496]LogUObjectHash: Compacting FUObjectHashTables data took   0.65ms
+[2025.01.28-14.36.18:544][496]LogEditorActor: Deleted 0 Actors (0.027 secs)
+[2025.01.28-14.36.18:549][496]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/DarkFantasyChurch/Meshes/Column/SM_Small_Column.SM_Small_Column
+[2025.01.28-14.36.18:549][496]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/DarkFantasyChurch/Meshes/Column/SM_Small_Column.SM_Small_Column
+[2025.01.28-14.36.18:550][496]LogActorFactory: Actor Factory spawned StaticMesh /Game/DarkFantasyChurch/Meshes/Column/SM_Small_Column.SM_Small_Column as actor: StaticMeshActor /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.StaticMeshActor_392
+[2025.01.28-14.36.30:645][839]Cmd: DELETE
+[2025.01.28-14.36.30:645][839]Cmd: ACTOR DELETE
+[2025.01.28-14.36.30:650][839]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.01.28-14.36.30:669][839]LogUObjectHash: Compacting FUObjectHashTables data took   0.35ms
+[2025.01.28-14.36.30:672][839]LogEditorActor: Deleted 1 Actors (0.027 secs)
+[2025.01.28-14.36.31:684][935]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/DarkFantasyChurch/Meshes/Column/SM_Small_Column_half.SM_Small_Column_half
+[2025.01.28-14.36.31:684][935]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/DarkFantasyChurch/Meshes/Column/SM_Small_Column_half.SM_Small_Column_half
+[2025.01.28-14.36.31:685][935]LogActorFactory: Actor Factory spawned StaticMesh /Game/DarkFantasyChurch/Meshes/Column/SM_Small_Column_half.SM_Small_Column_half as actor: StaticMeshActor /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.StaticMeshActor_393
+[2025.01.28-14.36.32:573][ 23]LogUObjectHash: Compacting FUObjectHashTables data took   0.34ms
+[2025.01.28-14.36.32:576][ 23]LogEditorActor: Deleted 0 Actors (0.021 secs)
+[2025.01.28-14.36.32:580][ 23]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/DarkFantasyChurch/Meshes/Column/SM_Small_Column_half.SM_Small_Column_half
+[2025.01.28-14.36.32:580][ 23]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/DarkFantasyChurch/Meshes/Column/SM_Small_Column_half.SM_Small_Column_half
+[2025.01.28-14.36.32:582][ 23]LogActorFactory: Actor Factory spawned StaticMesh /Game/DarkFantasyChurch/Meshes/Column/SM_Small_Column_half.SM_Small_Column_half as actor: StaticMeshActor /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.StaticMeshActor_394
+[2025.01.28-14.37.31:950][536]Cmd: TRANSACTION UNDO
+[2025.01.28-14.37.31:950][536]LogEditorTransaction: Undo Snap Elements To Floor
+[2025.01.28-14.38.30:506][981]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 6154.222168
+[2025.01.28-14.38.31:938][115]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2025.01.28-14.38.31:938][115]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 6155.648438, Update Interval: 335.523560
+[2025.01.28-14.39.31:511][770]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2025.01.28-14.39.31:532][770]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2025.01.28-14.39.31:562][770]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Level_Hub
+[2025.01.28-14.39.31:575][770]LogPlayLevel: PIE: StaticDuplicateObject took: (0.012502s)
+[2025.01.28-14.39.31:575][770]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Level_Hub.Level_Hub to /Game/Levels/UEDPIE_0_Level_Hub.Level_Hub (0.012535s)
+[2025.01.28-14.39.31:594][770]LogUObjectHash: Compacting FUObjectHashTables data took   0.79ms
+[2025.01.28-14.39.31:600][770]LogChaosDD: Creating Chaos Debug Draw Scene for world Level_Hub
+[2025.01.28-14.39.31:602][770]LogPlayLevel: PIE: World Init took: (0.001438s)
+[2025.01.28-14.39.31:603][770]LogAudio: Display: Creating Audio Device:                 Id: 14, Scope: Unique, Realtime: True
+[2025.01.28-14.39.31:603][770]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2025.01.28-14.39.31:603][770]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2025.01.28-14.39.31:603][770]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2025.01.28-14.39.31:603][770]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2025.01.28-14.39.31:603][770]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2025.01.28-14.39.31:603][770]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2025.01.28-14.39.31:603][770]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2025.01.28-14.39.31:603][770]LogAudio: Display: AudioDevice MaxSources: 32
+[2025.01.28-14.39.31:603][770]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2025.01.28-14.39.31:603][770]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2025.01.28-14.39.31:603][770]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2025.01.28-14.39.31:606][770]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2025.01.28-14.39.31:625][770]LogAudioMixer: Display: Using Audio Hardware Device Lautsprecher (Realtek(R) Audio)
+[2025.01.28-14.39.31:625][770]LogAudioMixer: Display: Initializing Sound Submixes...
+[2025.01.28-14.39.31:625][770]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2025.01.28-14.39.31:625][770]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2025.01.28-14.39.31:626][770]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=14
+[2025.01.28-14.39.31:626][770]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=14
+[2025.01.28-14.39.31:628][770]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=14
+[2025.01.28-14.39.31:628][770]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=14
+[2025.01.28-14.39.31:628][770]LogInit: FAudioDevice initialized with ID 14.
+[2025.01.28-14.39.31:628][770]LogAudio: Display: Audio Device (ID: 14) registered with world 'Level_Hub'.
+[2025.01.28-14.39.31:628][770]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 14
+[2025.01.28-14.39.31:630][770]LogLoad: Game class is 'GM_Custom_C'
+[2025.01.28-14.39.31:642][770]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Level_Hub.Level_Hub up for play (max tick rate 0) at 2025.01.28-15.39.31
+[2025.01.28-14.39.31:643][770]LogWorld: Bringing up level for play took: 0.011735
+[2025.01.28-14.39.31:645][770]LogOnline: OSS: Created online subsystem instance for: :Context_24
+[2025.01.28-14.39.31:647][770]LogSkeletalMesh: USkeletalMeshComponent: Recreating Clothing Actors for 'CharacterMesh0' with 'SKM_DarkLady'
+[2025.01.28-14.39.31:651][770]LogTemp: Warning: Failed to get Equipped Weapon Class for Equipment: Weapon
+[2025.01.28-14.39.31:651][770]LogTemp: Warning: Failed to get Equipped Weapon Class for Equipment: Shield
+[2025.01.28-14.39.31:651][770]LogTemp: Warning: Animation Instance set
+[2025.01.28-14.39.31:651][770]LogTemp: Warning: Animation Instance set
+[2025.01.28-14.39.31:652][770]PIE: Server logged in
+[2025.01.28-14.39.31:653][770]PIE: Play in editor total start time 0,123 seconds.
+[2025.01.28-14.39.44:383][277]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.01.28-14.39.44:383][277]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_Level_Hub
+[2025.01.28-14.39.44:383][277]LogWorld: UWorld::CleanupWorld for Level_Hub, bSessionEnded=true, bCleanupResources=true
+[2025.01.28-14.39.44:386][277]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.01.28-14.39.44:389][277]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2025.01.28-14.39.44:394][277]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.01.28-14.39.44:414][277]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.01.28-14.39.44:415][277]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 14
+[2025.01.28-14.39.44:415][277]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=14
+[2025.01.28-14.39.44:417][277]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=14
+[2025.01.28-14.39.44:425][277]LogUObjectHash: Compacting FUObjectHashTables data took   0.68ms
+[2025.01.28-14.39.44:506][278]LogPlayLevel: Display: Destroying online subsystem :Context_24
+[2025.01.28-14.41.25:795][934]LogUObjectHash: Compacting FUObjectHashTables data took   0.64ms
+[2025.01.28-14.41.27:036][934]LogSlate: Window 'Save Content' being destroyed
+[2025.01.28-14.41.27:042][934]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2025.01.28-14.41.27:077][934]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Levels/Level_Hub" FILE="D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Levels/Level_Hub.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2025.01.28-14.41.27:103][934]LogUObjectHash: Compacting FUObjectHashTables data took   0.33ms
+[2025.01.28-14.41.27:152][934]LogSavePackage: Moving output files for package: /Game/Levels/Level_Hub
+[2025.01.28-14.41.27:153][934]LogSavePackage: Moving 'D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Saved/Level_Hub3D7ADF3A41B1446933EC0A88CF0F36CE.tmp' to 'D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Levels/Level_Hub.umap'
+[2025.01.28-14.41.27:158][934]LogFileHelpers: Saving map 'Level_Hub' took 0.082
+[2025.01.28-14.41.27:164][934]LogFileHelpers: InternalPromptForCheckoutAndSave took 122.578 ms (total: 2.43 sec)
+[2025.01.28-14.41.27:210][934]LogContentValidation: Display: Starting to validate 1 assets
+[2025.01.28-14.41.27:210][934]LogContentValidation: Enabled validators:
+[2025.01.28-14.41.27:210][934]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2025.01.28-14.41.27:210][934]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2025.01.28-14.41.27:210][934]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2025.01.28-14.41.27:210][934]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2025.01.28-14.41.27:210][934]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2025.01.28-14.41.27:210][934]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2025.01.28-14.41.27:210][934]AssetCheck: /Game/Levels/Level_Hub Validating asset
+[2025.01.28-14.45.04:140][879]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 6547.844727
+[2025.01.28-14.45.04:317][900]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2025.01.28-14.45.04:317][900]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 6548.013672, Update Interval: 345.688049
+[2025.01.28-14.45.05:470][ 34]LogUObjectHash: Compacting FUObjectHashTables data took   0.48ms
+[2025.01.28-14.45.05:474][ 34]LogStreaming: Display: FlushAsyncLoading(372): 1 QueuedPackages, 0 AsyncPackages
+[2025.01.28-14.45.05:593][ 34]LogChaosDD: Creating Chaos Debug Draw Scene for world Level_World
+[2025.01.28-14.45.05:609][ 34]LogAssetEditorSubsystem: Opening Asset editor for World /Game/Levels/Level_World.Level_World
+[2025.01.28-14.45.05:609][ 34]Cmd: MAP LOAD FILE="D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Levels/Level_World.umap" TEMPLATE=0 SHOWPROGRESS=1 FEATURELEVEL=4
+[2025.01.28-14.45.05:664][ 34]LogWorld: UWorld::CleanupWorld for Level_Hub, bSessionEnded=true, bCleanupResources=true
+[2025.01.28-14.45.05:664][ 34]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.01.28-14.45.05:683][ 34]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2025.01.28-14.45.05:688][ 34]LogUObjectHash: Compacting FUObjectHashTables data took   0.78ms
+[2025.01.28-14.45.05:693][ 34]LogWorld: UWorld::CleanupWorld for Level_World, bSessionEnded=true, bCleanupResources=true
+[2025.01.28-14.45.05:694][ 34]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.01.28-14.45.05:738][ 34]LogUObjectHash: Compacting FUObjectHashTables data took   0.77ms
+[2025.01.28-14.45.05:755][ 34]LogUObjectHash: Compacting FUObjectHashTables data took   0.63ms
+[2025.01.28-14.45.05:831][ 34]LogAudio: Display: Audio Device (ID: 1) registered with world 'Level_World'.
+[2025.01.28-14.45.05:831][ 34]LogChaosDD: Creating Chaos Debug Draw Scene for world Level_World
+[2025.01.28-14.45.05:909][ 34]LogEditorServer: Finished looking for orphan Actors (0.000 secs)
+[2025.01.28-14.45.05:932][ 34]LogUObjectHash: Compacting FUObjectHashTables data took   0.64ms
+[2025.01.28-14.45.05:936][ 34]Cmd: MAP CHECKDEP NOCLEARLOG
+[2025.01.28-14.45.05:936][ 34]MapCheck: Map check complete: 0 Error(s), 0 Warning(s), took 0,052ms to complete.
+[2025.01.28-14.46.01:704][554]LogUObjectHash: Compacting FUObjectHashTables data took   0.36ms
+[2025.01.28-14.46.01:711][554]LogStreaming: Display: FlushAsyncLoading(374): 1 QueuedPackages, 0 AsyncPackages
+[2025.01.28-14.46.01:750][554]LogChaosDD: Creating Chaos Debug Draw Scene for world Level_Dungeon
+[2025.01.28-14.46.01:757][554]LogAssetEditorSubsystem: Opening Asset editor for World /Game/Levels/Level_Dungeon.Level_Dungeon
+[2025.01.28-14.46.01:757][554]Cmd: MAP LOAD FILE="D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Levels/Level_Dungeon.umap" TEMPLATE=0 SHOWPROGRESS=1 FEATURELEVEL=4
+[2025.01.28-14.46.01:816][554]LogWorld: UWorld::CleanupWorld for Level_World, bSessionEnded=true, bCleanupResources=true
+[2025.01.28-14.46.01:816][554]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.01.28-14.46.01:835][554]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2025.01.28-14.46.01:839][554]LogUObjectHash: Compacting FUObjectHashTables data took   0.66ms
+[2025.01.28-14.46.01:842][554]LogWorld: UWorld::CleanupWorld for Level_Dungeon, bSessionEnded=true, bCleanupResources=true
+[2025.01.28-14.46.01:843][554]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.01.28-14.46.01:862][554]LogUObjectHash: Compacting FUObjectHashTables data took   0.65ms
+[2025.01.28-14.46.01:937][554]LogUObjectHash: Compacting FUObjectHashTables data took   0.62ms
+[2025.01.28-14.46.01:976][554]LogAudio: Display: Audio Device (ID: 1) registered with world 'Level_Dungeon'.
+[2025.01.28-14.46.01:976][554]LogChaosDD: Creating Chaos Debug Draw Scene for world Level_Dungeon
+[2025.01.28-14.46.02:050][554]LogEditorServer: Finished looking for orphan Actors (0.000 secs)
+[2025.01.28-14.46.02:070][554]LogUObjectHash: Compacting FUObjectHashTables data took   0.63ms
+[2025.01.28-14.46.02:075][554]Cmd: MAP CHECKDEP NOCLEARLOG
+[2025.01.28-14.46.02:075][554]MapCheck: Map check complete: 0 Error(s), 0 Warning(s), took 0,046ms to complete.
+[2025.01.28-14.46.22:754][810]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.01.28-14.47.06:202][847]LogUObjectHash: Compacting FUObjectHashTables data took   0.35ms
+[2025.01.28-14.47.06:207][847]LogStreaming: Display: FlushAsyncLoading(376): 1 QueuedPackages, 0 AsyncPackages
+[2025.01.28-14.47.06:506][847]LogChaosDD: Creating Chaos Debug Draw Scene for world Level_Main
+[2025.01.28-14.47.06:573][847]LogAssetEditorSubsystem: Opening Asset editor for World /Game/Levels/Level_Main.Level_Main
+[2025.01.28-14.47.06:573][847]Cmd: MAP LOAD FILE="D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Levels/Level_Main.umap" TEMPLATE=0 SHOWPROGRESS=1 FEATURELEVEL=4
+[2025.01.28-14.47.06:626][847]LogWorld: UWorld::CleanupWorld for Level_Dungeon, bSessionEnded=true, bCleanupResources=true
+[2025.01.28-14.47.06:626][847]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.01.28-14.47.06:647][847]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2025.01.28-14.47.06:651][847]LogUObjectHash: Compacting FUObjectHashTables data took   0.70ms
+[2025.01.28-14.47.06:671][847]LogWorld: UWorld::CleanupWorld for Level_Main, bSessionEnded=true, bCleanupResources=true
+[2025.01.28-14.47.06:673][847]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.01.28-14.47.06:734][847]LogUObjectHash: Compacting FUObjectHashTables data took   0.73ms
+[2025.01.28-14.47.06:752][847]LogUObjectHash: Compacting FUObjectHashTables data took   0.60ms
+[2025.01.28-14.47.07:011][847]LogAudio: Display: Audio Device (ID: 1) registered with world 'Level_Main'.
+[2025.01.28-14.47.07:011][847]LogChaosDD: Creating Chaos Debug Draw Scene for world Level_Main
+[2025.01.28-14.47.07:154][847]LogEditorServer: Finished looking for orphan Actors (0.000 secs)
+[2025.01.28-14.47.07:198][847]LogUObjectHash: Compacting FUObjectHashTables data took   0.62ms
+[2025.01.28-14.47.07:203][847]Cmd: MAP CHECKDEP NOCLEARLOG
+[2025.01.28-14.47.07:203][847]MapCheck: Map check complete: 0 Error(s), 0 Warning(s), took 0,051ms to complete.
+[2025.01.28-14.47.09:097][ 27]LogRenderer: Warning: [VSM] Non-Nanite Marking Job Queue overflow. Performance may be affected. This occurs when many non-nanite meshes cover a large area of the shadow map.
+[2025.01.28-14.47.13:112][493]LogD3D12RHI: OnlineHeap RollOver Detected. Increase the heap size to prevent creation of additional heaps
+[2025.01.28-14.47.22:262][503]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2025.01.28-14.47.22:288][503]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2025.01.28-14.47.22:323][503]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Level_Main
+[2025.01.28-14.47.22:435][503]LogPlayLevel: PIE: StaticDuplicateObject took: (0.112484s)
+[2025.01.28-14.47.22:435][503]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Level_Main.Level_Main to /Game/Levels/UEDPIE_0_Level_Main.Level_Main (0.112526s)
+[2025.01.28-14.47.22:453][503]LogUObjectHash: Compacting FUObjectHashTables data took   0.63ms
+[2025.01.28-14.47.22:458][503]LogChaosDD: Creating Chaos Debug Draw Scene for world Level_Main
+[2025.01.28-14.47.22:459][503]LogPlayLevel: PIE: World Init took: (0.001324s)
+[2025.01.28-14.47.22:460][503]LogAudio: Display: Creating Audio Device:                 Id: 15, Scope: Unique, Realtime: True
+[2025.01.28-14.47.22:460][503]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2025.01.28-14.47.22:460][503]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2025.01.28-14.47.22:460][503]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2025.01.28-14.47.22:460][503]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2025.01.28-14.47.22:460][503]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2025.01.28-14.47.22:460][503]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2025.01.28-14.47.22:460][503]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2025.01.28-14.47.22:460][503]LogAudio: Display: AudioDevice MaxSources: 32
+[2025.01.28-14.47.22:460][503]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2025.01.28-14.47.22:460][503]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2025.01.28-14.47.22:460][503]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2025.01.28-14.47.22:462][503]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2025.01.28-14.47.22:483][503]LogAudioMixer: Display: Using Audio Hardware Device Lautsprecher (Realtek(R) Audio)
+[2025.01.28-14.47.22:483][503]LogAudioMixer: Display: Initializing Sound Submixes...
+[2025.01.28-14.47.22:483][503]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2025.01.28-14.47.22:483][503]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2025.01.28-14.47.22:484][503]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=15
+[2025.01.28-14.47.22:484][503]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=15
+[2025.01.28-14.47.22:486][503]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=15
+[2025.01.28-14.47.22:486][503]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=15
+[2025.01.28-14.47.22:486][503]LogInit: FAudioDevice initialized with ID 15.
+[2025.01.28-14.47.22:486][503]LogAudio: Display: Audio Device (ID: 15) registered with world 'Level_Main'.
+[2025.01.28-14.47.22:486][503]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 15
+[2025.01.28-14.47.22:489][503]LogLoad: Game class is 'GM_Custom_C'
+[2025.01.28-14.47.22:540][503]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Level_Main.Level_Main up for play (max tick rate 0) at 2025.01.28-15.47.22
+[2025.01.28-14.47.22:542][503]LogWorld: Bringing up level for play took: 0.053093
+[2025.01.28-14.47.22:545][503]LogOnline: OSS: Created online subsystem instance for: :Context_25
+[2025.01.28-14.47.22:547][503]LogSkeletalMesh: USkeletalMeshComponent: Recreating Clothing Actors for 'CharacterMesh0' with 'SKM_DarkLady'
+[2025.01.28-14.47.22:551][503]LogTemp: Warning: BP_InteractionStone_WeaponMaster_C_1 Could not Access GameInstance or GameInstance Dictionary did not Contained its key
+[2025.01.28-14.47.22:551][503]LogTemp: Warning: BP_InteractableActor_Torch_C_1 Could not Access GameInstance or GameInstance Dictionary did not Contained its key
+[2025.01.28-14.47.22:551][503]LogTemp: Warning: BP_InteractableActor_Torch_C_2 Could not Access GameInstance or GameInstance Dictionary did not Contained its key
+[2025.01.28-14.47.22:551][503]LogTemp: Warning: BP_InteractableActor_Torch_C_3 Could not Access GameInstance or GameInstance Dictionary did not Contained its key
+[2025.01.28-14.47.22:551][503]LogTemp: Warning: BP_InteractableActor_Torch_C_4 Could not Access GameInstance or GameInstance Dictionary did not Contained its key
+[2025.01.28-14.47.22:551][503]LogTemp: Warning: BP_EndLevel_C_1 Could not Access GameInstance or GameInstance Dictionary did not Contained its key
+[2025.01.28-14.47.22:551][503]LogTemp: Warning: BP_InteractionStone_WeaponMaster_C_2 Could not Access GameInstance or GameInstance Dictionary did not Contained its key
+[2025.01.28-14.47.22:552][503]LogTemp: Warning: Failed to get Equipped Weapon Class for Equipment: Shield
+[2025.01.28-14.47.22:552][503]LogTemp: Warning: Animation Instance set
+[2025.01.28-14.47.22:553][503]LogTemp: Warning: Animation Instance set
+[2025.01.28-14.47.22:553][503]PIE: Server logged in
+[2025.01.28-14.47.22:555][503]PIE: Play in editor total start time 0,268 seconds.
+[2025.01.28-14.47.22:688][506]LogRenderer: Warning: [VSM] Non-Nanite Marking Job Queue overflow. Performance may be affected. This occurs when many non-nanite meshes cover a large area of the shadow map.
+[2025.01.28-14.47.29:681][258]LogTemp: Warning: Nearest Actor: BP_MushroomKing_C_1 
+[2025.01.28-14.47.29:681][258]LogTemp: Warning: No LockedOnTarget
+[2025.01.28-14.47.29:681][258]LogTemp: Warning: Lock On
+[2025.01.28-14.47.30:634][360]LogTemp: Warning: SetStaggerd Notify set its owner
+[2025.01.28-14.47.34:448][773]LogTemp: Error: Attack Ended
+[2025.01.28-14.47.43:285][679]LogTemp: Error: Attack Ended
+[2025.01.28-14.47.44:843][828]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.01.28-14.47.44:843][828]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_Level_Main
+[2025.01.28-14.47.44:844][828]LogWorld: UWorld::CleanupWorld for Level_Main, bSessionEnded=true, bCleanupResources=true
+[2025.01.28-14.47.44:849][828]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.01.28-14.47.44:853][828]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2025.01.28-14.47.44:858][828]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.01.28-14.47.44:876][828]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2025.01.28-14.47.44:876][828]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 15
+[2025.01.28-14.47.44:876][828]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=15
+[2025.01.28-14.47.44:878][828]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=15
+[2025.01.28-14.47.44:884][828]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.01.28-14.47.44:897][828]LogUObjectHash: Compacting FUObjectHashTables data took   1.10ms
+[2025.01.28-14.47.44:943][829]LogPlayLevel: Display: Destroying online subsystem :Context_25
+[2025.01.28-14.47.47:952][ 72]LogChaosDD: Creating Chaos Debug Draw Scene for world World_11
+[2025.01.28-14.49.03:040][581]Cmd: TRANSACTION UNDO
+[2025.01.28-14.49.03:040][581]LogEditorTransaction: Undo Move Elements
+[2025.01.28-14.50.02:350][837]LogShaderCompilers: Display: ================================================
+[2025.01.28-14.50.02:350][837]LogShaderCompilers: Display: === FShaderJobCache stats ===
+[2025.01.28-14.50.02:350][837]LogShaderCompilers: Display: Total job queries 1.214, among them cache hits 303 (24.96%), DDC hits 389 (32.04%), Duplicates 145 (11.94%)
+[2025.01.28-14.50.02:350][837]LogShaderCompilers: Display: Tracking 766 distinct input hashes that result in 597 distinct outputs (77.94%)
+[2025.01.28-14.50.02:350][837]LogShaderCompilers: Display: RAM used: 397,37 KiB of 6,40 GiB budget. Usage: 0.01%
+[2025.01.28-14.50.02:350][837]LogShaderCompilers: Display: === Shader Compilation stats ===
+[2025.01.28-14.50.02:350][837]LogShaderCompilers: Display: Shaders Compiled: 377
+[2025.01.28-14.50.02:350][837]LogShaderCompilers: Display: Jobs assigned 377, completed 377 (100%)
+[2025.01.28-14.50.02:350][837]LogShaderCompilers: Display: Average time worker was idle: 88.52 s
+[2025.01.28-14.50.02:350][837]LogShaderCompilers: Display: Time job spent in pending queue: average 2.01 s, longest 8.29 s
+[2025.01.28-14.50.02:350][837]LogShaderCompilers: Display: Job execution time: average 1.73 s, max 6.34 s
+[2025.01.28-14.50.02:350][837]LogShaderCompilers: Display: Job life time (pending + execution): average 3.74 s, max 10.13
+[2025.01.28-14.50.02:350][837]LogShaderCompilers: Display: Shader code size: average 11,217 KiB, min 2,188 KiB, max 34,789 KiB
+[2025.01.28-14.50.02:350][837]LogShaderCompilers: Display: Time at least one job was in flight (either pending or executed): 55.29 s
+[2025.01.28-14.50.02:350][837]LogShaderCompilers: Display: Mutex wait stall in FShaderJobCache::SubmitJobs:  0.46%
+[2025.01.28-14.50.02:350][837]LogShaderCompilers: Display: Jobs were issued in 314 batches (only local compilation was used), average 1.20 jobs/batch
+[2025.01.28-14.50.02:350][837]LogShaderCompilers: Display: Average processing rate: 6.82 jobs/sec
+[2025.01.28-14.50.02:350][837]LogShaderCompilers: Display: Total thread time: 322,424 s
+[2025.01.28-14.50.02:350][837]LogShaderCompilers: Display: Total thread preprocess time: 20,931 s
+[2025.01.28-14.50.02:350][837]LogShaderCompilers: Display: Percentage time preprocessing: 6.49%
+[2025.01.28-14.50.02:350][837]LogShaderCompilers: Display: Effective parallelization: 5.83 (times faster than compiling all shaders on one thread). Compare with number of workers: 16
+[2025.01.28-14.50.02:350][837]LogShaderCompilers: Display: Top 5 most expensive shader types by average time:
+[2025.01.28-14.50.02:350][837]LogShaderCompilers: Display:                                        FMicropolyRasterizeCS (compiled    6 times, average 2.98 sec, max 3.64 sec, min 2.17 sec)
+[2025.01.28-14.50.02:350][837]LogShaderCompilers: Display:                         TBasePassCSFNoLightMapPolicySkylight (compiled   10 times, average 2.29 sec, max 2.94 sec, min 1.73 sec)
+[2025.01.28-14.50.02:350][837]LogShaderCompilers: Display:                                 TBasePassCSFNoLightMapPolicy (compiled   14 times, average 2.23 sec, max 2.87 sec, min 1.53 sec)
+[2025.01.28-14.50.02:350][837]LogShaderCompilers: Display:                                                 FLumenCardCS (compiled   15 times, average 1.88 sec, max 2.60 sec, min 1.48 sec)
+[2025.01.28-14.50.02:350][837]LogShaderCompilers: Display:                                             FDebugViewModePS (compiled   13 times, average 1.60 sec, max 2.95 sec, min 0.90 sec)
+[2025.01.28-14.50.02:350][837]LogShaderCompilers: Display: Top 5 shader types by total compile time:
+[2025.01.28-14.50.02:350][837]LogShaderCompilers: Display:                                TMaterialCHSFNoLightMapPolicy - 11.29% of total time (compiled   28 times, average 1.30 sec, max 2.41 sec, min 0.68 sec)
+[2025.01.28-14.50.02:350][837]LogShaderCompilers: Display:                                 TBasePassCSFNoLightMapPolicy - 9.67% of total time (compiled   14 times, average 2.23 sec, max 2.87 sec, min 1.53 sec)
+[2025.01.28-14.50.02:350][837]LogShaderCompilers: Display:                                                 FLumenCardCS - 8.72% of total time (compiled   15 times, average 1.88 sec, max 2.60 sec, min 1.48 sec)
+[2025.01.28-14.50.02:350][837]LogShaderCompilers: Display:                         TBasePassCSFNoLightMapPolicySkylight - 7.09% of total time (compiled   10 times, average 2.29 sec, max 2.94 sec, min 1.73 sec)
+[2025.01.28-14.50.02:350][837]LogShaderCompilers: Display:                                 TBasePassPSFNoLightMapPolicy - 6.60% of total time (compiled   35 times, average 0.61 sec, max 1.48 sec, min 0.39 sec)
+[2025.01.28-14.50.02:350][837]LogShaderCompilers: Display: === Material stats ===
+[2025.01.28-14.50.02:350][837]LogShaderCompilers: Display: Materials Cooked:        0
+[2025.01.28-14.50.02:350][837]LogShaderCompilers: Display: Materials Translated:    279
+[2025.01.28-14.50.02:350][837]LogShaderCompilers: Display: Material Total Translate Time: 0.36 s
+[2025.01.28-14.50.02:350][837]LogShaderCompilers: Display: Material Translation Only: 0.24 s (67%)
+[2025.01.28-14.50.02:350][837]LogShaderCompilers: Display: Material DDC Serialization Only: 0.01 s (2%)
+[2025.01.28-14.50.02:350][837]LogShaderCompilers: Display: Material Cache Hits: 67 (24%)
+[2025.01.28-14.50.02:350][837]LogShaderCompilers: Display: ================================================
+[2025.01.28-14.51.23:896][968]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 6927.402832
+[2025.01.28-14.51.24:085][989]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2025.01.28-14.51.24:085][989]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 6927.582031, Update Interval: 346.878265
+[2025.01.28-14.55.35:365][837]LogUObjectHash: Compacting FUObjectHashTables data took   0.86ms
+[2025.01.28-14.55.37:088][837]LogSlate: Window 'Save Content' being destroyed
+[2025.01.28-14.55.37:095][837]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2025.01.28-14.55.37:169][837]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Levels/Level_Main" FILE="D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Levels/Level_Main.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2025.01.28-14.55.37:194][837]LogUObjectHash: Compacting FUObjectHashTables data took   0.34ms
+[2025.01.28-14.55.37:841][837]LogSavePackage: Moving output files for package: /Game/Levels/Level_Main
+[2025.01.28-14.55.37:841][837]LogSavePackage: Moving 'D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Saved/Level_Main4F7CE12041B78F3409BB52A04FA6961E.tmp' to 'D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Levels/Level_Main.umap'
+[2025.01.28-14.55.37:868][837]LogFileHelpers: Saving map 'Level_Main' took 0.699
+[2025.01.28-14.55.37:928][837]LogFileHelpers: InternalPromptForCheckoutAndSave took 831.986 ms (total: 3.26 sec)
+[2025.01.28-14.55.37:928][837]LogStreaming: Display: FlushAsyncLoading(378): 1 QueuedPackages, 0 AsyncPackages
+[2025.01.28-14.55.37:951][837]LogChaosDD: Creating Chaos Debug Draw Scene for world Level_Hub
+[2025.01.28-14.55.37:961][837]LogAssetEditorSubsystem: Opening Asset editor for World /Game/Levels/Level_Hub.Level_Hub
+[2025.01.28-14.55.37:961][837]Cmd: MAP LOAD FILE="D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Levels/Level_Hub.umap" TEMPLATE=0 SHOWPROGRESS=1 FEATURELEVEL=4
+[2025.01.28-14.55.38:009][837]LogWorld: UWorld::CleanupWorld for Level_Main, bSessionEnded=true, bCleanupResources=true
+[2025.01.28-14.55.38:009][837]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.01.28-14.55.38:029][837]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2025.01.28-14.55.38:046][837]LogUObjectHash: Compacting FUObjectHashTables data took   0.84ms
+[2025.01.28-14.55.38:056][837]LogWorld: UWorld::CleanupWorld for Level_Hub, bSessionEnded=true, bCleanupResources=true
+[2025.01.28-14.55.38:057][837]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.01.28-14.55.38:077][837]LogUObjectHash: Compacting FUObjectHashTables data took   0.66ms
+[2025.01.28-14.55.38:095][837]LogUObjectHash: Compacting FUObjectHashTables data took   0.60ms
+[2025.01.28-14.55.38:112][837]LogAudio: Display: Audio Device (ID: 1) registered with world 'Level_Hub'.
+[2025.01.28-14.55.38:112][837]LogChaosDD: Creating Chaos Debug Draw Scene for world Level_Hub
+[2025.01.28-14.55.38:188][837]LogEditorServer: Finished looking for orphan Actors (0.000 secs)
+[2025.01.28-14.55.38:208][837]LogUObjectHash: Compacting FUObjectHashTables data took   0.62ms
+[2025.01.28-14.55.38:213][837]Cmd: MAP CHECKDEP NOCLEARLOG
+[2025.01.28-14.55.38:213][837]MapCheck: Map check complete: 0 Error(s), 0 Warning(s), took 0,062ms to complete.
+[2025.01.28-14.55.38:278][837]LogContentValidation: Display: Starting to validate 1 assets
+[2025.01.28-14.55.38:278][837]LogContentValidation: Enabled validators:
+[2025.01.28-14.55.38:278][837]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2025.01.28-14.55.38:278][837]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2025.01.28-14.55.38:278][837]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2025.01.28-14.55.38:278][837]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2025.01.28-14.55.38:278][837]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2025.01.28-14.55.38:278][837]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2025.01.28-14.56.16:731][978]Cmd: DELETE
+[2025.01.28-14.56.16:731][978]Cmd: ACTOR DELETE
+[2025.01.28-14.56.16:736][978]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.01.28-14.56.16:752][978]LogUObjectHash: Compacting FUObjectHashTables data took   0.35ms
+[2025.01.28-14.56.16:758][978]LogEditorActor: Deleted 1 Actors (0.026 secs)
+[2025.01.28-14.56.17:226][ 12]Cmd: DELETE
+[2025.01.28-14.56.17:226][ 12]Cmd: ACTOR DELETE
+[2025.01.28-14.56.17:226][ 12]LogConsoleManager: Warning: Performance warning: Many (31) failed FindConsoleObject() for 'ACTOR'. 
+[2025.01.28-14.56.19:668][ 12]LogSlate: Window 'Delete Referenced Actor' being destroyed
+[2025.01.28-14.56.19:674][ 12]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.01.28-14.56.19:674][ 12]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.01.28-14.56.19:675][ 12]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.01.28-14.56.19:675][ 12]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.01.28-14.56.19:676][ 12]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.01.28-14.56.19:676][ 12]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.01.28-14.56.19:677][ 12]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.01.28-14.56.19:677][ 12]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.01.28-14.56.19:678][ 12]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.01.28-14.56.19:678][ 12]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.01.28-14.56.19:679][ 12]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.01.28-14.56.19:679][ 12]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.01.28-14.56.19:679][ 12]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.01.28-14.56.19:680][ 12]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.01.28-14.56.19:680][ 12]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.01.28-14.56.19:680][ 12]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.01.28-14.56.19:681][ 12]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.01.28-14.56.19:681][ 12]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.01.28-14.56.19:681][ 12]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.01.28-14.56.19:683][ 12]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.01.28-14.56.19:683][ 12]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.01.28-14.56.19:684][ 12]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.01.28-14.56.19:684][ 12]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.01.28-14.56.19:685][ 12]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.01.28-14.56.19:685][ 12]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.01.28-14.56.19:685][ 12]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.01.28-14.56.19:686][ 12]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.01.28-14.56.19:686][ 12]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.01.28-14.56.19:687][ 12]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.01.28-14.56.19:703][ 12]LogUObjectHash: Compacting FUObjectHashTables data took   0.33ms
+[2025.01.28-14.56.19:706][ 12]LogEditorActor: Deleted 29 Actors (0.039 secs)
+[2025.01.28-14.56.21:499][185]Cmd: DELETE
+[2025.01.28-14.56.21:499][185]Cmd: ACTOR DELETE
+[2025.01.28-14.56.21:503][185]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.01.28-14.56.21:520][185]LogUObjectHash: Compacting FUObjectHashTables data took   0.34ms
+[2025.01.28-14.56.21:524][185]LogEditorActor: Deleted 1 Actors (0.025 secs)
+[2025.01.28-14.56.25:980][658]Cmd: DELETE
+[2025.01.28-14.56.25:980][658]Cmd: ACTOR DELETE
+[2025.01.28-14.56.25:985][658]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.01.28-14.56.26:001][658]LogUObjectHash: Compacting FUObjectHashTables data took   0.35ms
+[2025.01.28-14.56.26:006][658]LogEditorActor: Deleted 1 Actors (0.026 secs)
+[2025.01.28-14.56.27:175][744]Cmd: DELETE
+[2025.01.28-14.56.27:175][744]Cmd: ACTOR DELETE
+[2025.01.28-14.56.27:179][744]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.01.28-14.56.27:197][744]LogUObjectHash: Compacting FUObjectHashTables data took   0.34ms
+[2025.01.28-14.56.27:201][744]LogEditorActor: Deleted 1 Actors (0.025 secs)
+[2025.01.28-14.56.28:077][831]Cmd: DELETE
+[2025.01.28-14.56.28:077][831]Cmd: ACTOR DELETE
+[2025.01.28-14.56.28:080][831]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.01.28-14.56.28:096][831]LogUObjectHash: Compacting FUObjectHashTables data took   0.34ms
+[2025.01.28-14.56.28:100][831]LogEditorActor: Deleted 1 Actors (0.024 secs)
+[2025.01.28-14.56.29:130][935]Cmd: DELETE
+[2025.01.28-14.56.29:130][935]Cmd: ACTOR DELETE
+[2025.01.28-14.56.29:134][935]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.01.28-14.56.29:151][935]LogUObjectHash: Compacting FUObjectHashTables data took   0.38ms
+[2025.01.28-14.56.29:155][935]LogEditorActor: Deleted 1 Actors (0.025 secs)
+[2025.01.28-14.56.29:876][  3]Cmd: DELETE
+[2025.01.28-14.56.29:876][  3]Cmd: ACTOR DELETE
+[2025.01.28-14.56.29:880][  3]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.01.28-14.56.29:898][  3]LogUObjectHash: Compacting FUObjectHashTables data took   0.35ms
+[2025.01.28-14.56.29:901][  3]LogEditorActor: Deleted 1 Actors (0.025 secs)
+[2025.01.28-14.56.30:561][ 64]Cmd: DELETE
+[2025.01.28-14.56.30:561][ 64]Cmd: ACTOR DELETE
+[2025.01.28-14.56.30:565][ 64]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.01.28-14.56.30:583][ 64]LogUObjectHash: Compacting FUObjectHashTables data took   0.34ms
+[2025.01.28-14.56.30:586][ 64]LogEditorActor: Deleted 1 Actors (0.025 secs)
+[2025.01.28-14.56.31:301][132]Cmd: DELETE
+[2025.01.28-14.56.31:301][132]Cmd: ACTOR DELETE
+[2025.01.28-14.56.31:306][132]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.01.28-14.56.31:323][132]LogUObjectHash: Compacting FUObjectHashTables data took   0.35ms
+[2025.01.28-14.56.31:327][132]LogEditorActor: Deleted 1 Actors (0.025 secs)
+[2025.01.28-14.56.34:852][503]Cmd: DELETE
+[2025.01.28-14.56.34:852][503]Cmd: ACTOR DELETE
+[2025.01.28-14.56.34:855][503]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.01.28-14.56.34:871][503]LogUObjectHash: Compacting FUObjectHashTables data took   0.35ms
+[2025.01.28-14.56.34:875][503]LogEditorActor: Deleted 1 Actors (0.024 secs)
+[2025.01.28-14.56.36:262][644]Cmd: DELETE
+[2025.01.28-14.56.36:262][644]Cmd: ACTOR DELETE
+[2025.01.28-14.56.36:266][644]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.01.28-14.56.36:281][644]LogUObjectHash: Compacting FUObjectHashTables data took   0.35ms
+[2025.01.28-14.56.36:287][644]LogEditorActor: Deleted 1 Actors (0.025 secs)
+[2025.01.28-14.56.36:810][690]Cmd: DELETE
+[2025.01.28-14.56.36:810][690]Cmd: ACTOR DELETE
+[2025.01.28-14.56.36:814][690]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.01.28-14.56.36:830][690]LogUObjectHash: Compacting FUObjectHashTables data took   0.34ms
+[2025.01.28-14.56.36:835][690]LogEditorActor: Deleted 1 Actors (0.024 secs)
+[2025.01.28-14.56.38:457][872]Cmd: TRANSACTION UNDO
+[2025.01.28-14.56.38:457][872]LogEditorTransaction: Undo Delete Elements
+[2025.01.28-14.56.44:908][475]Cmd: DELETE
+[2025.01.28-14.56.44:908][475]Cmd: ACTOR DELETE
+[2025.01.28-14.56.44:912][475]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.01.28-14.56.44:928][475]LogUObjectHash: Compacting FUObjectHashTables data took   0.35ms
+[2025.01.28-14.56.44:933][475]LogEditorActor: Deleted 1 Actors (0.025 secs)
+[2025.01.28-14.56.45:856][569]Cmd: DELETE
+[2025.01.28-14.56.45:856][569]Cmd: ACTOR DELETE
+[2025.01.28-14.56.45:860][569]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.01.28-14.56.45:875][569]LogUObjectHash: Compacting FUObjectHashTables data took   0.35ms
+[2025.01.28-14.56.45:879][569]LogEditorActor: Deleted 1 Actors (0.023 secs)
+[2025.01.28-14.56.46:795][662]Cmd: DELETE
+[2025.01.28-14.56.46:795][662]Cmd: ACTOR DELETE
+[2025.01.28-14.56.46:800][662]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.01.28-14.56.46:816][662]LogUObjectHash: Compacting FUObjectHashTables data took   0.35ms
+[2025.01.28-14.56.46:819][662]LogEditorActor: Deleted 1 Actors (0.024 secs)
+[2025.01.28-14.56.47:362][708]Cmd: DELETE
+[2025.01.28-14.56.47:362][708]Cmd: ACTOR DELETE
+[2025.01.28-14.56.47:365][708]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.01.28-14.56.47:382][708]LogUObjectHash: Compacting FUObjectHashTables data took   0.34ms
+[2025.01.28-14.56.47:386][708]LogEditorActor: Deleted 1 Actors (0.025 secs)
+[2025.01.28-14.56.53:947][375]Cmd: DELETE
+[2025.01.28-14.56.53:947][375]Cmd: ACTOR DELETE
+[2025.01.28-14.56.53:951][375]LogEditorActor: Deleted Actor: SkyLight
+[2025.01.28-14.56.53:952][375]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.01.28-14.56.53:952][375]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.01.28-14.56.53:970][375]LogUObjectHash: Compacting FUObjectHashTables data took   0.36ms
+[2025.01.28-14.56.53:974][375]LogEditorActor: Deleted 3 Actors (0.027 secs)
+[2025.01.28-14.56.54:883][467]Cmd: DELETE
+[2025.01.28-14.56.54:883][467]Cmd: ACTOR DELETE
+[2025.01.28-14.56.54:887][467]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.01.28-14.56.54:903][467]LogUObjectHash: Compacting FUObjectHashTables data took   0.34ms
+[2025.01.28-14.56.54:907][467]LogEditorActor: Deleted 1 Actors (0.024 secs)
+[2025.01.28-14.56.55:429][514]Cmd: DELETE
+[2025.01.28-14.56.55:429][514]Cmd: ACTOR DELETE
+[2025.01.28-14.56.55:433][514]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.01.28-14.56.55:450][514]LogUObjectHash: Compacting FUObjectHashTables data took   0.35ms
+[2025.01.28-14.56.55:453][514]LogEditorActor: Deleted 1 Actors (0.024 secs)
+[2025.01.28-14.56.55:844][546]Cmd: DELETE
+[2025.01.28-14.56.55:844][546]Cmd: ACTOR DELETE
+[2025.01.28-14.56.55:848][546]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.01.28-14.56.55:864][546]LogUObjectHash: Compacting FUObjectHashTables data took   0.39ms
+[2025.01.28-14.56.55:867][546]LogEditorActor: Deleted 1 Actors (0.024 secs)
+[2025.01.28-14.56.56:206][576]Cmd: DELETE
+[2025.01.28-14.56.56:207][576]Cmd: ACTOR DELETE
+[2025.01.28-14.56.56:211][576]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.01.28-14.56.56:228][576]LogUObjectHash: Compacting FUObjectHashTables data took   0.34ms
+[2025.01.28-14.56.56:231][576]LogEditorActor: Deleted 1 Actors (0.024 secs)
+[2025.01.28-14.56.56:567][605]Cmd: DELETE
+[2025.01.28-14.56.56:567][605]Cmd: ACTOR DELETE
+[2025.01.28-14.56.56:572][605]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.01.28-14.56.56:590][605]LogUObjectHash: Compacting FUObjectHashTables data took   0.35ms
+[2025.01.28-14.56.56:593][605]LogEditorActor: Deleted 1 Actors (0.024 secs)
+[2025.01.28-14.56.57:129][657]Cmd: DELETE
+[2025.01.28-14.56.57:129][657]Cmd: ACTOR DELETE
+[2025.01.28-14.56.57:133][657]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.01.28-14.56.57:150][657]LogUObjectHash: Compacting FUObjectHashTables data took   0.34ms
+[2025.01.28-14.56.57:153][657]LogEditorActor: Deleted 1 Actors (0.024 secs)
+[2025.01.28-14.56.58:393][784]Cmd: DELETE
+[2025.01.28-14.56.58:394][784]Cmd: ACTOR DELETE
+[2025.01.28-14.56.58:397][784]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.01.28-14.56.58:414][784]LogUObjectHash: Compacting FUObjectHashTables data took   0.33ms
+[2025.01.28-14.56.58:418][784]LogEditorActor: Deleted 1 Actors (0.025 secs)
+[2025.01.28-14.56.58:809][816]Cmd: DELETE
+[2025.01.28-14.56.58:809][816]Cmd: ACTOR DELETE
+[2025.01.28-14.56.58:813][816]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.01.28-14.56.58:830][816]LogUObjectHash: Compacting FUObjectHashTables data took   0.35ms
+[2025.01.28-14.56.58:834][816]LogEditorActor: Deleted 1 Actors (0.024 secs)
+[2025.01.28-14.56.59:318][859]Cmd: DELETE
+[2025.01.28-14.56.59:318][859]Cmd: ACTOR DELETE
+[2025.01.28-14.56.59:323][859]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.01.28-14.56.59:339][859]LogUObjectHash: Compacting FUObjectHashTables data took   0.34ms
+[2025.01.28-14.56.59:343][859]LogEditorActor: Deleted 1 Actors (0.024 secs)
+[2025.01.28-14.56.59:836][907]Cmd: DELETE
+[2025.01.28-14.56.59:836][907]Cmd: ACTOR DELETE
+[2025.01.28-14.56.59:840][907]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.01.28-14.56.59:857][907]LogUObjectHash: Compacting FUObjectHashTables data took   0.38ms
+[2025.01.28-14.56.59:860][907]LogEditorActor: Deleted 1 Actors (0.024 secs)
+[2025.01.28-14.57.00:606][977]Cmd: DELETE
+[2025.01.28-14.57.00:606][977]Cmd: ACTOR DELETE
+[2025.01.28-14.57.00:610][977]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.01.28-14.57.00:627][977]LogUObjectHash: Compacting FUObjectHashTables data took   0.34ms
+[2025.01.28-14.57.00:631][977]LogEditorActor: Deleted 1 Actors (0.024 secs)
+[2025.01.28-14.57.01:406][ 57]Cmd: DELETE
+[2025.01.28-14.57.01:406][ 57]Cmd: ACTOR DELETE
+[2025.01.28-14.57.01:410][ 57]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.01.28-14.57.01:427][ 57]LogUObjectHash: Compacting FUObjectHashTables data took   0.36ms
+[2025.01.28-14.57.01:431][ 57]LogEditorActor: Deleted 1 Actors (0.025 secs)
+[2025.01.28-14.57.01:958][103]Cmd: DELETE
+[2025.01.28-14.57.01:958][103]Cmd: ACTOR DELETE
+[2025.01.28-14.57.01:962][103]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.01.28-14.57.01:979][103]LogUObjectHash: Compacting FUObjectHashTables data took   0.34ms
+[2025.01.28-14.57.01:983][103]LogEditorActor: Deleted 1 Actors (0.025 secs)
+[2025.01.28-14.57.02:506][154]Cmd: DELETE
+[2025.01.28-14.57.02:506][154]Cmd: ACTOR DELETE
+[2025.01.28-14.57.02:510][154]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.01.28-14.57.02:527][154]LogUObjectHash: Compacting FUObjectHashTables data took   0.38ms
+[2025.01.28-14.57.02:530][154]LogEditorActor: Deleted 1 Actors (0.024 secs)
+[2025.01.28-14.57.03:460][250]Cmd: DELETE
+[2025.01.28-14.57.03:460][250]Cmd: ACTOR DELETE
+[2025.01.28-14.57.03:464][250]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.01.28-14.57.03:481][250]LogUObjectHash: Compacting FUObjectHashTables data took   0.34ms
+[2025.01.28-14.57.03:483][250]LogEditorActor: Deleted 1 Actors (0.023 secs)
+[2025.01.28-14.57.11:511][141]LogDerivedDataCache: C:/Users/Student/AppData/Local/UnrealEngine/Common/DerivedDataCache: Maintenance finished in +00:00:02.083 and deleted 1 files with total size 0 MiB and 27 empty folders. Scanned 1326 files in 2198 folders with total size 299 MiB.
+[2025.01.28-14.57.11:965][193]Cmd: DELETE
+[2025.01.28-14.57.11:965][193]Cmd: ACTOR DELETE
+[2025.01.28-14.57.11:969][193]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.01.28-14.57.11:986][193]LogUObjectHash: Compacting FUObjectHashTables data took   0.36ms
+[2025.01.28-14.57.11:990][193]LogEditorActor: Deleted 1 Actors (0.024 secs)
+[2025.01.28-14.57.13:083][307]Cmd: DELETE
+[2025.01.28-14.57.13:083][307]Cmd: ACTOR DELETE
+[2025.01.28-14.57.16:042][307]LogSlate: Window 'Delete Referenced Actor' being destroyed
+[2025.01.28-14.57.16:047][307]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.01.28-14.57.16:048][307]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.01.28-14.57.16:048][307]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.01.28-14.57.16:049][307]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.01.28-14.57.16:049][307]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.01.28-14.57.16:050][307]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.01.28-14.57.16:066][307]LogUObjectHash: Compacting FUObjectHashTables data took   0.33ms
+[2025.01.28-14.57.16:070][307]LogEditorActor: Deleted 6 Actors (0.028 secs)
+[2025.01.28-14.57.18:993][624]Cmd: DELETE
+[2025.01.28-14.57.18:993][624]Cmd: ACTOR DELETE
+[2025.01.28-14.57.18:997][624]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.01.28-14.57.19:014][624]LogUObjectHash: Compacting FUObjectHashTables data took   0.34ms
+[2025.01.28-14.57.19:018][624]LogEditorActor: Deleted 1 Actors (0.025 secs)
+[2025.01.28-14.57.22:203][988]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2025.01.28-14.57.22:247][988]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Levels/Level_Hub" FILE="D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Levels/Level_Hub.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2025.01.28-14.57.22:283][988]LogUObjectHash: Compacting FUObjectHashTables data took   0.33ms
+[2025.01.28-14.57.22:322][988]LogSavePackage: Moving output files for package: /Game/Levels/Level_Hub
+[2025.01.28-14.57.22:322][988]LogSavePackage: Moving 'D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Saved/Level_Hub6755D8E24D8D6D197D12FE96BD019A00.tmp' to 'D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Levels/Level_Hub.umap'
+[2025.01.28-14.57.22:329][988]LogFileHelpers: Saving map 'Level_Hub' took 0.082
+[2025.01.28-14.57.22:334][988]LogFileHelpers: InternalPromptForCheckoutAndSave took 130.978 ms (total: 3.39 sec)
+[2025.01.28-14.57.22:380][988]LogContentValidation: Display: Starting to validate 1 assets
+[2025.01.28-14.57.22:380][988]LogContentValidation: Enabled validators:
+[2025.01.28-14.57.22:380][988]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2025.01.28-14.57.22:380][988]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2025.01.28-14.57.22:380][988]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2025.01.28-14.57.22:380][988]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2025.01.28-14.57.22:380][988]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2025.01.28-14.57.22:380][988]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2025.01.28-14.57.22:381][988]AssetCheck: /Game/Levels/Level_Hub Validating asset
+[2025.01.28-14.57.48:202][950]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 7311.213867
+[2025.01.28-14.57.48:361][967]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2025.01.28-14.57.48:361][967]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 7311.363281, Update Interval: 314.398010
+[2025.01.28-14.59.02:370][654]LogShaderCompilers: Display: ================================================
+[2025.01.28-14.59.02:370][654]LogShaderCompilers: Display: === FShaderJobCache stats ===
+[2025.01.28-14.59.02:370][654]LogShaderCompilers: Display: Total job queries 1.221, among them cache hits 304 (24.90%), DDC hits 389 (31.86%), Duplicates 145 (11.88%)
+[2025.01.28-14.59.02:370][654]LogShaderCompilers: Display: Tracking 772 distinct input hashes that result in 601 distinct outputs (77.85%)
+[2025.01.28-14.59.02:370][654]LogShaderCompilers: Display: RAM used: 398,64 KiB of 6,40 GiB budget. Usage: 0.01%
+[2025.01.28-14.59.02:370][654]LogShaderCompilers: Display: === Shader Compilation stats ===
+[2025.01.28-14.59.02:370][654]LogShaderCompilers: Display: Shaders Compiled: 383
+[2025.01.28-14.59.02:371][654]LogShaderCompilers: Display: Jobs assigned 383, completed 383 (100%)
+[2025.01.28-14.59.02:371][654]LogShaderCompilers: Display: Average time worker was idle: 140.72 s
+[2025.01.28-14.59.02:371][654]LogShaderCompilers: Display: Time job spent in pending queue: average 1.98 s, longest 8.29 s
+[2025.01.28-14.59.02:371][654]LogShaderCompilers: Display: Job execution time: average 1.72 s, max 6.34 s
+[2025.01.28-14.59.02:371][654]LogShaderCompilers: Display: Job life time (pending + execution): average 3.71 s, max 10.13
+[2025.01.28-14.59.02:371][654]LogShaderCompilers: Display: Shader code size: average 11,234 KiB, min 2,188 KiB, max 34,789 KiB
+[2025.01.28-14.59.02:371][654]LogShaderCompilers: Display: Time at least one job was in flight (either pending or executed): 59.57 s
+[2025.01.28-14.59.02:371][654]LogShaderCompilers: Display: Mutex wait stall in FShaderJobCache::SubmitJobs:  0.46%
+[2025.01.28-14.59.02:371][654]LogShaderCompilers: Display: Jobs were issued in 320 batches (only local compilation was used), average 1.20 jobs/batch
+[2025.01.28-14.59.02:371][654]LogShaderCompilers: Display: Average processing rate: 6.43 jobs/sec
+[2025.01.28-14.59.02:371][654]LogShaderCompilers: Display: Total thread time: 327,708 s
+[2025.01.28-14.59.02:371][654]LogShaderCompilers: Display: Total thread preprocess time: 21,005 s
+[2025.01.28-14.59.02:371][654]LogShaderCompilers: Display: Percentage time preprocessing: 6.41%
+[2025.01.28-14.59.02:371][654]LogShaderCompilers: Display: Effective parallelization: 5.50 (times faster than compiling all shaders on one thread). Compare with number of workers: 16
+[2025.01.28-14.59.02:371][654]LogShaderCompilers: Display: Top 5 most expensive shader types by average time:
+[2025.01.28-14.59.02:371][654]LogShaderCompilers: Display:                                        FMicropolyRasterizeCS (compiled    6 times, average 2.98 sec, max 3.64 sec, min 2.17 sec)
+[2025.01.28-14.59.02:371][654]LogShaderCompilers: Display:                         TBasePassCSFNoLightMapPolicySkylight (compiled   10 times, average 2.29 sec, max 2.94 sec, min 1.73 sec)
+[2025.01.28-14.59.02:371][654]LogShaderCompilers: Display:                                 TBasePassCSFNoLightMapPolicy (compiled   14 times, average 2.23 sec, max 2.87 sec, min 1.53 sec)
+[2025.01.28-14.59.02:371][654]LogShaderCompilers: Display:                                                 FLumenCardCS (compiled   15 times, average 1.88 sec, max 2.60 sec, min 1.48 sec)
+[2025.01.28-14.59.02:371][654]LogShaderCompilers: Display:                                             FDebugViewModePS (compiled   13 times, average 1.60 sec, max 2.95 sec, min 0.90 sec)
+[2025.01.28-14.59.02:371][654]LogShaderCompilers: Display: Top 5 shader types by total compile time:
+[2025.01.28-14.59.02:371][654]LogShaderCompilers: Display:                                TMaterialCHSFNoLightMapPolicy - 11.40% of total time (compiled   29 times, average 1.29 sec, max 2.41 sec, min 0.68 sec)
+[2025.01.28-14.59.02:371][654]LogShaderCompilers: Display:                                 TBasePassCSFNoLightMapPolicy - 9.52% of total time (compiled   14 times, average 2.23 sec, max 2.87 sec, min 1.53 sec)
+[2025.01.28-14.59.02:371][654]LogShaderCompilers: Display:                                                 FLumenCardCS - 8.58% of total time (compiled   15 times, average 1.88 sec, max 2.60 sec, min 1.48 sec)
+[2025.01.28-14.59.02:371][654]LogShaderCompilers: Display:                                 TBasePassPSFNoLightMapPolicy - 7.42% of total time (compiled   37 times, average 0.66 sec, max 2.47 sec, min 0.39 sec)
+[2025.01.28-14.59.02:371][654]LogShaderCompilers: Display:                         TBasePassCSFNoLightMapPolicySkylight - 6.98% of total time (compiled   10 times, average 2.29 sec, max 2.94 sec, min 1.73 sec)
+[2025.01.28-14.59.02:371][654]LogShaderCompilers: Display: === Material stats ===
+[2025.01.28-14.59.02:371][654]LogShaderCompilers: Display: Materials Cooked:        0
+[2025.01.28-14.59.02:371][654]LogShaderCompilers: Display: Materials Translated:    279
+[2025.01.28-14.59.02:371][654]LogShaderCompilers: Display: Material Total Translate Time: 0.36 s
+[2025.01.28-14.59.02:371][654]LogShaderCompilers: Display: Material Translation Only: 0.24 s (67%)
+[2025.01.28-14.59.02:371][654]LogShaderCompilers: Display: Material DDC Serialization Only: 0.01 s (2%)
+[2025.01.28-14.59.02:371][654]LogShaderCompilers: Display: Material Cache Hits: 67 (24%)
+[2025.01.28-14.59.02:371][654]LogShaderCompilers: Display: ================================================
+[2025.01.28-15.00.12:969][440]Cmd: DELETE
+[2025.01.28-15.00.12:969][440]Cmd: ACTOR DELETE
+[2025.01.28-15.00.12:973][440]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.01.28-15.00.12:994][440]LogUObjectHash: Compacting FUObjectHashTables data took   0.46ms
+[2025.01.28-15.00.13:005][440]LogEditorActor: Deleted 1 Actors (0.035 secs)
+[2025.01.28-15.00.17:748][976]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2025.01.28-15.00.17:776][976]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Levels/Level_Hub" FILE="D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Levels/Level_Hub.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2025.01.28-15.00.17:801][976]LogUObjectHash: Compacting FUObjectHashTables data took   0.34ms
+[2025.01.28-15.00.17:849][976]LogSavePackage: Moving output files for package: /Game/Levels/Level_Hub
+[2025.01.28-15.00.17:850][976]LogSavePackage: Moving 'D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Saved/Level_Hub6AB8F7464F044E4F9E7EF487BBECA8CE.tmp' to 'D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Levels/Level_Hub.umap'
+[2025.01.28-15.00.17:858][976]LogFileHelpers: Saving map 'Level_Hub' took 0.082
+[2025.01.28-15.00.17:863][976]LogFileHelpers: InternalPromptForCheckoutAndSave took 114.121 ms (total: 3.51 sec)
+[2025.01.28-15.00.17:908][976]LogContentValidation: Display: Starting to validate 1 assets
+[2025.01.28-15.00.17:908][976]LogContentValidation: Enabled validators:
+[2025.01.28-15.00.17:908][976]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2025.01.28-15.00.17:908][976]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2025.01.28-15.00.17:908][976]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2025.01.28-15.00.17:908][976]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2025.01.28-15.00.17:908][976]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2025.01.28-15.00.17:908][976]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2025.01.28-15.00.17:908][976]AssetCheck: /Game/Levels/Level_Hub Validating asset
