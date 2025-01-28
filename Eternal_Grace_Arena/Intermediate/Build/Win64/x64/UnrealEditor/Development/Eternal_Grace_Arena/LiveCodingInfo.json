@@ -93,12 +93,12 @@
 			"I_Interactable.cpp.obj",
 			"I_Targetable.cpp.obj",
 			"NS_CancelMontage.cpp.obj",
-			"NS_CastSpell.cpp.obj"
-		],
-		"Module.Eternal_Grace_Arena.3.cpp.obj": [
+			"NS_CastSpell.cpp.obj",
 			"NS_ChargedWeaponSwing.cpp.obj",
 			"NS_ContinousRecourceConsumption.cpp.obj",
-			"NS_DrainStamina.cpp.obj",
+			"NS_DrainStamina.cpp.obj"
+		],
+		"Module.Eternal_Grace_Arena.3.cpp.obj": [
 			"NS_Liftup.cpp.obj",
 			"NS_RotateTowardsTarget.cpp.obj",
 			"NS_SetStaggered.cpp.obj",
