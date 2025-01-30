@@ -16,8 +16,11 @@ class ETERNAL_GRACE_ARENA_API UNS_Liftup : public UAnimNotify
 	GENERATED_BODY()
 
 protected:
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Weapon, meta = (AllowPrivateAccess))
+	UPROPERTY()
 	AEternal_Grace_ArenaCharacter* PerformingActor;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Weapon, meta = (AllowPrivateAccess))
+	float Velocityboost;
+
 
 	virtual void Notify(USkeletalMeshComponent* MeshComp, UAnimSequenceBase* Animation, const FAnimNotifyEventReference& EventReference);
 	

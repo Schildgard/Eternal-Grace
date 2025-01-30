@@ -14,7 +14,7 @@ void UNS_Liftup::Notify(USkeletalMeshComponent* MeshComp, UAnimSequenceBase* Ani
 	}
 	if (PerformingActor)
 	{
-		FVector LaunchVelocity = FVector(0.f, 0.f, 1000.f);
+		FVector LaunchVelocity = FVector(0.f, 0.f, Velocityboost);
 		PerformingActor->GetCharacterMovement()->AddImpulse(LaunchVelocity, true);
 	}
 	else
