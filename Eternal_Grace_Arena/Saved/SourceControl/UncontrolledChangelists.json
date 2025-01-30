@@ -18,7 +18,12 @@
 				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Realistic_Starter_VFX_Pack_Vol2/Materials/M_Explosion_D.uasset",
 				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/StarterContent/Props/Materials/M_Rock.uasset",
 				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Realistic_Starter_VFX_Pack_Vol2/Materials/M_Rock_B.uasset",
-				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/EnvironmentAssets/FireGoblet/MI_Stone_02.uasset"
+				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/EnvironmentAssets/FireGoblet/MI_Stone_02.uasset",
+				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Blueprints/Notifys/MushroomKingNotify/BP_NS_AssbombOnLand.uasset",
+				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Blueprints/Notifys/MushroomKingNotify/BP_NS_OnLand_MushroomKing.uasset",
+				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Animations/MushroomAnimations/Movement/AM_MK_AssbombLand_Montage.uasset",
+				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Animations/MushroomAnimations/Idle/AS_MushroomKing_Idle_Sitting.uasset",
+				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Animations/MushroomAnimations/Idle/AM_MushroomKing_Idle_Sitting_Montage.uasset"
 			]
 		}
 	]

@@ -12,9 +12,9 @@ void AEnemy_MushroomKing::GetOffMeMove()
 
 	PlayAnimMontage(GetOffMeAttack, 1.0f);
 
-	FOnMontageEnded CompleteDelegate;
-	CompleteDelegate.BindUObject(CharacterAnimationInstance, &UCharacterAnimInstance::OnAttackEnd);
-	CharacterAnimationInstance->Montage_SetEndDelegate(CompleteDelegate, GetOffMeAttack);
+//	FOnMontageEnded CompleteDelegate;
+//	CompleteDelegate.BindUObject(CharacterAnimationInstance, &UCharacterAnimInstance::OnAttackEnd);
+//	CharacterAnimationInstance->Montage_SetEndDelegate(CompleteDelegate, GetOffMeAttack);
 }
 
 void AEnemy_MushroomKing::Tick(float DeltaSeconds)
