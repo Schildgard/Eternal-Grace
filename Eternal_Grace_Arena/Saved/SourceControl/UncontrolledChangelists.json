@@ -6,24 +6,19 @@
 			"description": "Default Uncontrolled Changelist",
 			"files": [
 				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/StarterContent/Architecture/Floor_400x400.uasset",
-				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Levels/Level_Main.umap",
-				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Blueprints/Spells/BP_Spells_ShockwaveImpact.uasset",
-				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Blueprints/CharacterBlueprints/BP_DarkKnight.uasset",
-				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Blueprints/GameInstance_Blueprints/BP_EternalGrace_GameInstance.uasset",
-				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Audio/Spell_Sounds/MS_Impact_HeavyEarth.uasset",
 				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Animations/MushroomAnimations/Movement/ThirdPersonJump_End.uasset",
-				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Animations/MushroomAnimations/Attack/AM_MK_Assbomb.uasset",
-				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Blueprints/Spells/BP_Assbomb.uasset",
 				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Animations/MushroomAnimations/Movement/AS_MK_AssbombLand.uasset",
-				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Animations/MushroomAnimations/Movement/AS_MK_AssbombLand/Driving_AS_MK_AssbombLand.uasset",
+				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Levels/Level_Main.umap",
 				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Blueprints/AnimationBlueprints/ABP_MushroomKing.uasset",
-				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Levels/Level_MushroomMonster.umap",
-				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Animations/MushroomAnimations/Movement/ThirdPersonJump_Loop.uasset",
-				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Animations/MushroomAnimations/Movement/ThirdPersonJump_Start.uasset",
-				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Animations/MushroomAnimations/Movement/AS_MushroomKing_Assbombland.uasset",
-				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Animations/MushroomAnimations/Movement/AS_MushroomKing_Assbombland/Driving_AS_MushroomKing_Assbombland.uasset",
-				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/__ExternalActors__/Levels/Level_MushroomMonster/0/W2/5HHY6YF6EFRWHV35AWAUEZ.uasset",
-				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/__ExternalActors__/Levels/Level_MushroomMonster/C/7N/GSEY5S8992ADS5GVJOXF9Y.uasset"
+				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Animations/MushroomAnimations/Attack/AM_MK_Assbomb.uasset",
+				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Blueprints/NiagaraBlueprints/NS_EarthImpact.uasset",
+				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Blueprints/NiagaraBlueprints/NS_EarthShakingImapct.uasset",
+				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Realistic_Starter_VFX_Pack_Vol2/Materials/M_Dirt_A.uasset",
+				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Realistic_Starter_VFX_Pack_Vol2/Materials/M_Dirt_B.uasset",
+				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Realistic_Starter_VFX_Pack_Vol2/Materials/M_Explosion_D.uasset",
+				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/StarterContent/Props/Materials/M_Rock.uasset",
+				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Realistic_Starter_VFX_Pack_Vol2/Materials/M_Rock_B.uasset",
+				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/EnvironmentAssets/FireGoblet/MI_Stone_02.uasset"
 			]
 		}
 	]
