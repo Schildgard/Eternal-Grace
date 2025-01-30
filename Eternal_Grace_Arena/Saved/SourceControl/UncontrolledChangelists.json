@@ -23,7 +23,15 @@
 				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Blueprints/Notifys/MushroomKingNotify/BP_NS_OnLand_MushroomKing.uasset",
 				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Animations/MushroomAnimations/Movement/AM_MK_AssbombLand_Montage.uasset",
 				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Animations/MushroomAnimations/Idle/AS_MushroomKing_Idle_Sitting.uasset",
-				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Animations/MushroomAnimations/Idle/AM_MushroomKing_Idle_Sitting_Montage.uasset"
+				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Animations/MushroomAnimations/Idle/AM_MushroomKing_Idle_Sitting_Montage.uasset",
+				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Animations/MushroomAnimations/Movement/ThirdPersonJump_Loop.uasset",
+				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Animations/MushroomAnimations/Movement/ThirdPerson_Jump.uasset",
+				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Animations/MushroomAnimations/Movement/ThirdPersonJump_Start.uasset",
+				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Blueprints/Spells/BP_Spells_ShockwaveImpact.uasset",
+				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Blueprints/CharacterBlueprints/BP_Player.uasset",
+				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Animations/MushroomAnimations/Attack/AM_MK_VerticalSlam.uasset",
+				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Blueprints/Spells/BP_Spell_PoisonousMist.uasset",
+				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Blueprints/Spells/BP_Assbomb.uasset"
 			]
 		}
 	]
