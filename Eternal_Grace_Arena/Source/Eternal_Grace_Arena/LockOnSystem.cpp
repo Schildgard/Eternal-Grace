@@ -13,9 +13,12 @@
 ULockOnSystem::ULockOnSystem()
 {
 	LockedOnTarget = nullptr;
-	DistanceDivider = 2.0f;
+	DistanceInfluenceOnZ = 2.0f;
 	CharacterRotationInterpolation = 10.0f;
 	CameraRotationInterpolation = 2.0f;
+
+	MinZOffset = 30.f;
+	MaxZDrop = 150.f;
 
 }
 
@@ -31,31 +34,26 @@ void ULockOnSystem::UpdateLockOn(AEternal_Grace_ArenaCharacter* LockingActor, fl
 	{
 		return;
 	}
+	//IT IS WEIRD THAT THE LOCK ON SYSTEM GETS ITS PLAYER CONTROLLER BUT THE PLAYER CONTROLLER CALLS THIS FUNCTION..TODO: CHANGE THIS FUNCTION TO ONLY DO CALCULATIONS AND ROTATE IN THE CONTROLLER
+	APlayerController* CurrentPlayerController = UGameplayStatics::GetPlayerController(GetWorld(),0);
+	LockingActor->RotateTowardsTarget(LockedOnTarget);
 
 	//GET RELEVANT POSITIONS
-	FVector LockingActorPosition = LockingActor->GetActorLocation();
 	FVector CameraPosition = LockingActor->GetFollowCamera()->GetComponentLocation();
-	FVector TargetPosition = LockedOnTarget->GetCapsuleComponent()->GetComponentLocation();
-	//GET RELEVANT ROTATIONS
-	FRotator LockingActorRotation = LockingActor->GetActorRotation();
-	FRotator CameraRotation = LockingActor->GetFollowCamera()->GetComponentRotation();
+	FVector TargetPosition = LockedOnTarget->GetTargetLocation();
 
 	//DIVIDE DISTANCE TO OPTIMIZE CAMERA Z ANGLE
-	float Divider = UKismetMathLibrary::Vector_Distance(LockingActorPosition, TargetPosition) / DistanceDivider;
-	FVector TargetCameraDirection = FVector(TargetPosition.X, TargetPosition.Y, TargetPosition.Z - Divider);
-
-	//SET LOCKING ACTOR ROTATION
-	FRotator Look = UKismetMathLibrary::FindLookAtRotation(LockingActorPosition, TargetPosition);
-	FRotator NewRotation = FMath::RInterpTo(LockingActorRotation, Look, DeltaSeconds, CharacterRotationInterpolation);
-	LockingActor->SetActorRotation(NewRotation);
+	float Influence = UKismetMathLibrary::Vector_Distance(CameraPosition, TargetPosition) / DistanceInfluenceOnZ;
+	float ZAdjustment = FMath::Clamp(Influence, MinZOffset, MaxZDrop);
+	FVector TargetCameraDirection = FVector(TargetPosition.X, TargetPosition.Y, TargetPosition.Z - ZAdjustment);
 
 	//SET CAMERA ROTATION
 	FRotator CameraLook = UKismetMathLibrary::FindLookAtRotation(CameraPosition, TargetCameraDirection);
-	FRotator InterpolatedRotation = FMath::RInterpTo(UGameplayStatics::GetPlayerController(GetWorld(), 0)->GetControlRotation(), CameraLook, DeltaSeconds, CameraRotationInterpolation);
+	FRotator InterpolatedRotation = FMath::RInterpTo(CurrentPlayerController->GetControlRotation(), CameraLook, DeltaSeconds, CameraRotationInterpolation);
 
 	// ONLY USE INTERPOLATED PITCH AND YAW
-	FRotator UltimateRotation = FRotator(InterpolatedRotation.Pitch, InterpolatedRotation.Yaw, UGameplayStatics::GetPlayerController(GetWorld(), 0)->GetControlRotation().Roll);
-	UGameplayStatics::GetPlayerController(GetWorld(),0)->SetControlRotation(UltimateRotation);
+	FRotator UltimateRotation = FRotator(InterpolatedRotation.Pitch, InterpolatedRotation.Yaw, CurrentPlayerController->GetControlRotation().Roll);
+	CurrentPlayerController->SetControlRotation(UltimateRotation);
 
 }
 

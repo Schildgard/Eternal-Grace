@@ -3,7 +3,8 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "UObject/NoExportTypes.h"
+//#include "UObject/NoExportTypes.h"
+#include "Components/ActorComponent.h"
 #include "LockOnSystem.generated.h"
 
 /**
@@ -11,7 +12,7 @@
  */
 class AEternal_Grace_ArenaCharacter;
 UCLASS()
-class ETERNAL_GRACE_ARENA_API ULockOnSystem : public UObject
+class ETERNAL_GRACE_ARENA_API ULockOnSystem : public UActorComponent
 {
 	GENERATED_BODY()
 
@@ -34,7 +35,11 @@ private:
     UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "LockOn", meta = (AllowPrivateAccess))
     float CharacterRotationInterpolation;
     UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "LockOn", meta = (AllowPrivateAccess))
-    float DistanceDivider;
+    float DistanceInfluenceOnZ;
+    UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "LockOn", meta = (AllowPrivateAccess))
+    float MinZOffset;
+    UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "LockOn", meta = (AllowPrivateAccess))
+    float MaxZDrop;
     UPROPERTY()
     AEternal_Grace_ArenaCharacter* LockedOnTarget;
 };

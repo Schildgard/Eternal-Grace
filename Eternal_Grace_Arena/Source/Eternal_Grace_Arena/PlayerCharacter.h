@@ -54,8 +54,8 @@ public:
 	virtual void SwitchLockOnTarget();
 	UFUNCTION()
 	AActor* FindNearestTarget();
-	UFUNCTION()
-	virtual TArray<AActor*> ScanForTargets();
+	//UFUNCTION()
+	//virtual TArray<AActor*> ScanForTargets();
 	UFUNCTION()
 	void EngageLockOn(AActor* Target);
 	UFUNCTION()

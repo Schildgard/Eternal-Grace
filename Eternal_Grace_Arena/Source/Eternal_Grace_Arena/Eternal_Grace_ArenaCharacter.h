@@ -141,8 +141,10 @@ protected:
 	virtual void BeginPlay()override;
 	virtual void Tick(float DeltaSeconds) override;
 	void InitializeAnimationInstance();
+	
 
 public:
+	virtual FVector GetTargetLocation(AActor* Requestor = nullptr ) const override;
 	/** Returns CameraBoom subobject **/
 	FORCEINLINE class USpringArmComponent* GetCameraBoom() const { return CameraBoom; }
 	/** Returns FollowCamera subobject **/

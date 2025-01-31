@@ -27,7 +27,6 @@ class AActor;
 	DECLARE_FUNCTION(execGuardCounterAttack); \
 	DECLARE_FUNCTION(execDisengageLockOn); \
 	DECLARE_FUNCTION(execEngageLockOn); \
-	DECLARE_FUNCTION(execScanForTargets); \
 	DECLARE_FUNCTION(execFindNearestTarget); \
 	DECLARE_FUNCTION(execSwitchLockOnTarget); \
 	DECLARE_FUNCTION(execToggleLockOn);

@@ -49,9 +49,9 @@ public:
 
 protected:
 	//LOCKON SYSTEM
-	UPROPERTY(BlueprintReadWrite, Category = "Lock-On")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = LockOn, meta = (AllowPrivateAccess))
 	ULockOnSystem* LockOnSystem;
-	UFUNCTION(BlueprintCallable, Category = "Lock-On")
+	UFUNCTION(BlueprintCallable, Category = "LockOn")
 	void ToggleLockOn();
 	UPROPERTY()
 	UEternalGrace_GameInstance* ActiveGameInstance;
