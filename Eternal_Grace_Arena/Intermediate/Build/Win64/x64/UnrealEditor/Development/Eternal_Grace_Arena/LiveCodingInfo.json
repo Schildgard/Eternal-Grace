@@ -30,12 +30,13 @@
 			"InteractableActor.gen.cpp.obj",
 			"InteractableActor_SceneLoader.gen.cpp.obj",
 			"I_Damageable.gen.cpp.obj",
-			"I_Interactable.gen.cpp.obj",
-			"I_Targetable.gen.cpp.obj",
-			"NS_CancelMontage.gen.cpp.obj",
-			"NS_CastSpell.gen.cpp.obj"
+			"I_Interactable.gen.cpp.obj"
 		],
 		"Module.Eternal_Grace_Arena.2.cpp.obj": [
+			"I_Targetable.gen.cpp.obj",
+			"LockOnSystem.gen.cpp.obj",
+			"NS_CancelMontage.gen.cpp.obj",
+			"NS_CastSpell.gen.cpp.obj",
 			"NS_ChargedWeaponSwing.gen.cpp.obj",
 			"NS_ContinousRecourceConsumption.gen.cpp.obj",
 			"NS_DrainStamina.gen.cpp.obj",
@@ -67,8 +68,11 @@
 			"BlendingWidget.cpp.obj",
 			"CharacterAnimInstance.cpp.obj",
 			"CustomPlayerController.cpp.obj",
-			"Damage_Spells.cpp.obj",
+			"Damage_Spells.cpp.obj"
+		],
+		"Module.Eternal_Grace_Arena.3.cpp.obj": [
 			"Enemy_MageBoss.cpp.obj",
+			"Enemy_MushroomKing.cpp.obj",
 			"Enemy_UI_Healthbar.cpp.obj",
 			"Enemy_WeaponMaster.cpp.obj",
 			"Equipment.cpp.obj",
@@ -89,12 +93,10 @@
 			"HitEffectData.cpp.obj",
 			"InteractableActor.cpp.obj",
 			"InteractableActor_SceneLoader.cpp.obj",
-			"Enemy_MushroomKing.cpp.obj"
-		],
-		"Module.Eternal_Grace_Arena.3.cpp.obj": [
 			"I_Damageable.cpp.obj",
 			"I_Interactable.cpp.obj",
 			"I_Targetable.cpp.obj",
+			"LockOnSystem.cpp.obj",
 			"NS_CancelMontage.cpp.obj",
 			"NS_CastSpell.cpp.obj",
 			"NS_ChargedWeaponSwing.cpp.obj",

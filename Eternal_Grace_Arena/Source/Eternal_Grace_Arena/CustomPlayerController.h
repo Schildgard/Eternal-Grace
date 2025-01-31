@@ -5,6 +5,7 @@
 #include "CoreMinimal.h"
 #include "GameFramework/PlayerController.h"
 #include "Blueprint/UserWidget.h"
+#include "InputAction.h"
 //#include "Eternal_Grace_ArenaCharacter.h"
 #include "PlayerCharacter.h"
 #include "Eternal_Grace_ProgressBar.h"
@@ -16,6 +17,8 @@
  */
 class UBlendingWidget;
 class UEternalGrace_GameInstance;
+class ULockOnSystem;
+class AEternal_Grace_ArenaCharacter;
 UCLASS()
 class ETERNAL_GRACE_ARENA_API ACustomPlayerController : public APlayerController
 {
@@ -44,11 +47,33 @@ public:
 	void HandlePlayerDeath();
 
 
-
- protected:
-	//REFERENCE TO CURRENT GAMEINSTANCE
+protected:
+	//LOCKON SYSTEM
+	UPROPERTY(BlueprintReadWrite, Category = "Lock-On")
+	ULockOnSystem* LockOnSystem;
+	UFUNCTION(BlueprintCallable, Category = "Lock-On")
+	void ToggleLockOn();
 	UPROPERTY()
 	UEternalGrace_GameInstance* ActiveGameInstance;
+
+	UFUNCTION()
+	AEternal_Grace_ArenaCharacter* FindNearestTarget();
+	UFUNCTION()
+	virtual TArray<AActor*> ScanForTargets();
+
+	//LOCKON PROPERTIES
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = LockOn, meta = (AllowPrivateAccess))
+	TArray<TEnumAsByte<EObjectTypeQuery>> ObjectTypes;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess))
+	UInputAction* ToggleLockOnAction;
+
+
+
+ protected:
+	 virtual void SetupInputComponent() override;
+
+	//REFERENCE TO CURRENT GAMEINSTANCE
 
 	virtual void BeginPlay()override;
 	virtual void Tick(float DeltaSeconds)override;

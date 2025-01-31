@@ -238,6 +238,7 @@ void APlayerCharacter::Tick(float DeltaSeconds)
 	if (CharacterAnimationInstance && CharacterAnimationInstance->isLockedOn && LockedOnTarget != nullptr && CharacterAnimationInstance->isRunning == false)
 	{
 		RotateTowardsTarget(LockedOnTarget);
+		
 	}
 	//RESET GUARDCOUNTER REACTIONTIME
 	if (GuardCounterPossible)
