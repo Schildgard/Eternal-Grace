@@ -67,10 +67,10 @@
 			"AnimNotify_PlayRandomSound.cpp.obj",
 			"BlendingWidget.cpp.obj",
 			"CharacterAnimInstance.cpp.obj",
-			"CustomPlayerController.cpp.obj",
-			"Damage_Spells.cpp.obj"
+			"CustomPlayerController.cpp.obj"
 		],
 		"Module.Eternal_Grace_Arena.3.cpp.obj": [
+			"Damage_Spells.cpp.obj",
 			"Enemy_MageBoss.cpp.obj",
 			"Enemy_MushroomKing.cpp.obj",
 			"Enemy_UI_Healthbar.cpp.obj",

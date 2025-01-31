@@ -2531,3 +2531,476 @@ FPackageName: Skipped package /Interchange/gltf/MaterialInstances/MI_Default_Opa
 [2025.01.31-09.12.30:036][568]LogUObjectHash: Compacting FUObjectHashTables data took   2.30ms
 [2025.01.31-09.12.30:094][569]LogPlayLevel: Display: Destroying online subsystem :Context_17
 [2025.01.31-09.12.58:994][836]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_5
+[2025.01.31-09.14.55:980][731]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_6
+[2025.01.31-09.14.56:911][756]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/ThirdPerson/Blueprints/BP_ThirdPersonCharacter.BP_ThirdPersonCharacter
+[2025.01.31-09.14.56:911][756]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_7
+[2025.01.31-09.16.17:003][123]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 3646.879150
+[2025.01.31-09.16.18:006][126]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2025.01.31-09.16.18:007][126]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 3647.546143, Update Interval: 358.139587
+[2025.01.31-09.16.48:615][218]LogDerivedDataCache: C:/Users/Leon/AppData/Local/UnrealEngine/Common/DerivedDataCache: Maintenance finished in +00:00:00.000 and deleted 0 files with total size 0 MiB and 0 empty folders. Scanned 0 files in 1 folders with total size 0 MiB.
+[2025.01.31-09.22.16:610][528]LogHotReload: New module detected: UnrealEditor-Eternal_Grace_Arena-0108.dll
+[2025.01.31-09.22.17:965][532]LogHotReload: Starting Hot-Reload from IDE
+[2025.01.31-09.22.18:078][532]LogUObjectHash: Compacting FUObjectHashTables data took   2.55ms
+[2025.01.31-09.22.18:715][532]LogUObjectHash: Compacting FUObjectHashTables data took   2.36ms
+[2025.01.31-09.22.18:769][532]Display: HotReload took  0.8s.
+[2025.01.31-09.22.18:769][532]Display: Reload/Re-instancing Complete: 1 package changed, 56 classes unchanged, 1 enum unchanged, 3 scriptstructs unchanged, 91 functions remapped, 3 scriptstructs remapped
+[2025.01.31-09.22.23:785][611]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2025.01.31-09.22.23:802][611]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2025.01.31-09.22.23:803][611]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Level_Hub
+[2025.01.31-09.22.23:847][611]LogPlayLevel: PIE: StaticDuplicateObject took: (0.043988s)
+[2025.01.31-09.22.23:847][611]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Level_Hub.Level_Hub to /Game/Levels/UEDPIE_0_Level_Hub.Level_Hub (0.044036s)
+[2025.01.31-09.22.23:988][611]LogUObjectHash: Compacting FUObjectHashTables data took   5.73ms
+[2025.01.31-09.22.23:991][611]LogChaosDD: Creating Chaos Debug Draw Scene for world Level_Hub
+[2025.01.31-09.22.23:997][611]LogPlayLevel: PIE: World Init took: (0.005711s)
+[2025.01.31-09.22.23:998][611]LogAudio: Display: Creating Audio Device:                 Id: 14, Scope: Unique, Realtime: True
+[2025.01.31-09.22.23:999][611]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2025.01.31-09.22.23:999][611]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2025.01.31-09.22.23:999][611]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2025.01.31-09.22.23:999][611]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2025.01.31-09.22.23:999][611]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2025.01.31-09.22.23:999][611]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2025.01.31-09.22.23:999][611]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2025.01.31-09.22.23:999][611]LogAudio: Display: AudioDevice MaxSources: 32
+[2025.01.31-09.22.23:999][611]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2025.01.31-09.22.23:999][611]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2025.01.31-09.22.23:999][611]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2025.01.31-09.22.24:005][611]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2025.01.31-09.22.24:040][611]LogAudioMixer: Display: Using Audio Hardware Device Köpfhörer (Synaptics HD Audio)
+[2025.01.31-09.22.24:041][611]LogAudioMixer: Display: Initializing Sound Submixes...
+[2025.01.31-09.22.24:041][611]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2025.01.31-09.22.24:041][611]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2025.01.31-09.22.24:042][611]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=14
+[2025.01.31-09.22.24:042][611]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=14
+[2025.01.31-09.22.24:046][611]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=14
+[2025.01.31-09.22.24:046][611]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=14
+[2025.01.31-09.22.24:046][611]LogInit: FAudioDevice initialized with ID 14.
+[2025.01.31-09.22.24:046][611]LogAudio: Display: Audio Device (ID: 14) registered with world 'Level_Hub'.
+[2025.01.31-09.22.24:047][611]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 14
+[2025.01.31-09.22.24:051][611]LogLoad: Game class is 'GM_Custom_C'
+[2025.01.31-09.22.24:078][611]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Level_Hub.Level_Hub up for play (max tick rate 0) at 2025.01.31-10.22.24
+[2025.01.31-09.22.24:080][611]LogWorld: Bringing up level for play took: 0.028363
+[2025.01.31-09.22.24:082][611]LogOnline: OSS: Created online subsystem instance for: :Context_21
+[2025.01.31-09.22.24:087][611]LogSkeletalMesh: USkeletalMeshComponent: Recreating Clothing Actors for 'CharacterMesh0' with 'SKM_DarkLady'
+[2025.01.31-09.22.24:095][611]LogTemp: Warning: BP_InteractionStone_WeaponMaster_C_1 Could not Access GameInstance or GameInstance Dictionary did not Contained its key
+[2025.01.31-09.22.24:095][611]LogTemp: Warning: BP_InteractionStone_WeaponMaster_C_2 Could not Access GameInstance or GameInstance Dictionary did not Contained its key
+[2025.01.31-09.22.24:096][611]LogTemp: Warning: BP_InteractionStone_WeaponMaster_C_4 Could not Access GameInstance or GameInstance Dictionary did not Contained its key
+[2025.01.31-09.22.24:096][611]LogTemp: Warning: BP_InteractionStone_WeaponMaster_C_5 Could not Access GameInstance or GameInstance Dictionary did not Contained its key
+[2025.01.31-09.22.24:096][611]LogTemp: Warning: BP_InteractionStone_WeaponMaster_C_6 Could not Access GameInstance or GameInstance Dictionary did not Contained its key
+[2025.01.31-09.22.24:097][611]LogTemp: Warning: Failed to get Equipped Weapon Class for Equipment: Weapon
+[2025.01.31-09.22.24:097][611]LogTemp: Warning: Failed to get Equipped Weapon Class for Equipment: Shield
+[2025.01.31-09.22.24:097][611]LogTemp: Warning: Animation Instance set
+[2025.01.31-09.22.24:098][611]LogTemp: Warning: Animation Instance set
+[2025.01.31-09.22.24:100][611]PIE: Server logged in
+[2025.01.31-09.22.24:102][611]PIE: Play in editor total start time 0,306 seconds.
+[2025.01.31-09.22.24:925][653]LogTemp: Warning: Locked on : BP_ThirdPersonCharacter_C_1
+[2025.01.31-09.22.30:697][973]LogTemp: Warning: Character Charges Attack
+[2025.01.31-09.22.30:870][982]LogTemp: Warning: Character Releases Attack
+[2025.01.31-09.22.33:735][164]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.01.31-09.22.33:735][164]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_Level_Hub
+[2025.01.31-09.22.33:736][164]LogWorld: UWorld::CleanupWorld for Level_Hub, bSessionEnded=true, bCleanupResources=true
+[2025.01.31-09.22.33:741][164]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.01.31-09.22.33:751][164]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2025.01.31-09.22.33:762][164]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.01.31-09.22.33:792][164]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2025.01.31-09.22.33:808][164]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 14
+[2025.01.31-09.22.33:808][164]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=14
+[2025.01.31-09.22.33:810][164]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=14
+[2025.01.31-09.22.33:817][164]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.01.31-09.22.33:848][164]LogUObjectHash: Compacting FUObjectHashTables data took   2.71ms
+[2025.01.31-09.22.34:286][165]LogPlayLevel: Display: Destroying online subsystem :Context_21
+[2025.01.31-09.22.42:581][411]LogUObjectHash: Compacting FUObjectHashTables data took   2.12ms
+[2025.01.31-09.22.42:587][411]LogStreaming: Display: FlushAsyncLoading(502): 1 QueuedPackages, 0 AsyncPackages
+[2025.01.31-09.22.42:818][411]LogChaosDD: Creating Chaos Debug Draw Scene for world Level_World
+[2025.01.31-09.22.42:845][411]LogAssetEditorSubsystem: Opening Asset editor for World /Game/Levels/Level_World.Level_World
+[2025.01.31-09.22.42:845][411]Cmd: MAP LOAD FILE="../../../../../../Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Levels/Level_World.umap" TEMPLATE=0 SHOWPROGRESS=1 FEATURELEVEL=4
+[2025.01.31-09.22.42:895][411]LogWorld: UWorld::CleanupWorld for Level_Hub, bSessionEnded=true, bCleanupResources=true
+[2025.01.31-09.22.42:896][411]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.01.31-09.22.42:927][411]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2025.01.31-09.22.42:938][411]LogUObjectHash: Compacting FUObjectHashTables data took   2.24ms
+[2025.01.31-09.22.42:944][411]LogWorld: UWorld::CleanupWorld for Level_World, bSessionEnded=true, bCleanupResources=true
+[2025.01.31-09.22.42:946][411]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.01.31-09.22.43:042][411]LogUObjectHash: Compacting FUObjectHashTables data took   1.67ms
+[2025.01.31-09.22.43:070][411]LogUObjectHash: Compacting FUObjectHashTables data took   1.52ms
+[2025.01.31-09.22.43:225][411]LogAudio: Display: Audio Device (ID: 1) registered with world 'Level_World'.
+[2025.01.31-09.22.43:225][411]LogChaosDD: Creating Chaos Debug Draw Scene for world Level_World
+[2025.01.31-09.22.43:348][411]LogEditorServer: Finished looking for orphan Actors (0.000 secs)
+[2025.01.31-09.22.43:416][411]LogUObjectHash: Compacting FUObjectHashTables data took   1.58ms
+[2025.01.31-09.22.43:436][411]Cmd: MAP CHECKDEP NOCLEARLOG
+[2025.01.31-09.22.43:436][411]MapCheck: Map check complete: 0 Error(s), 0 Warning(s), took 0,101ms to complete.
+[2025.01.31-09.22.45:248][485]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2025.01.31-09.22.45:261][485]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2025.01.31-09.22.45:261][485]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Level_World
+[2025.01.31-09.22.45:329][485]LogPlayLevel: PIE: StaticDuplicateObject took: (0.067478s)
+[2025.01.31-09.22.45:329][485]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Level_World.Level_World to /Game/Levels/UEDPIE_0_Level_World.Level_World (0.067600s)
+[2025.01.31-09.22.45:358][485]LogUObjectHash: Compacting FUObjectHashTables data took   2.00ms
+[2025.01.31-09.22.45:364][485]LogChaosDD: Creating Chaos Debug Draw Scene for world Level_World
+[2025.01.31-09.22.45:367][485]LogPlayLevel: PIE: World Init took: (0.002379s)
+[2025.01.31-09.22.45:368][485]LogAudio: Display: Creating Audio Device:                 Id: 15, Scope: Unique, Realtime: True
+[2025.01.31-09.22.45:368][485]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2025.01.31-09.22.45:368][485]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2025.01.31-09.22.45:368][485]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2025.01.31-09.22.45:368][485]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2025.01.31-09.22.45:368][485]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2025.01.31-09.22.45:368][485]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2025.01.31-09.22.45:368][485]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2025.01.31-09.22.45:368][485]LogAudio: Display: AudioDevice MaxSources: 32
+[2025.01.31-09.22.45:368][485]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2025.01.31-09.22.45:368][485]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2025.01.31-09.22.45:368][485]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2025.01.31-09.22.45:372][485]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2025.01.31-09.22.45:400][485]LogAudioMixer: Display: Using Audio Hardware Device Köpfhörer (Synaptics HD Audio)
+[2025.01.31-09.22.45:401][485]LogAudioMixer: Display: Initializing Sound Submixes...
+[2025.01.31-09.22.45:401][485]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2025.01.31-09.22.45:401][485]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2025.01.31-09.22.45:401][485]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=15
+[2025.01.31-09.22.45:401][485]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=15
+[2025.01.31-09.22.45:407][485]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=15
+[2025.01.31-09.22.45:407][485]LogInit: FAudioDevice initialized with ID 15.
+[2025.01.31-09.22.45:407][485]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=15
+[2025.01.31-09.22.45:407][485]LogAudio: Display: Audio Device (ID: 15) registered with world 'Level_World'.
+[2025.01.31-09.22.45:407][485]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 15
+[2025.01.31-09.22.45:410][485]LogLoad: Game class is 'GM_Custom_C'
+[2025.01.31-09.22.45:427][485]LogSkeletalMesh: USkeletalMeshComponent: Recreating Clothing Actors for 'CharacterMesh0' with 'SK_Dark_Knight'
+[2025.01.31-09.22.45:443][485]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Level_World.Level_World up for play (max tick rate 0) at 2025.01.31-10.22.45
+[2025.01.31-09.22.45:447][485]LogWorld: Bringing up level for play took: 0.035896
+[2025.01.31-09.22.45:451][485]LogOnline: OSS: Created online subsystem instance for: :Context_22
+[2025.01.31-09.22.45:455][485]LogSkeletalMesh: USkeletalMeshComponent: Recreating Clothing Actors for 'CharacterMesh0' with 'SKM_DarkLady'
+[2025.01.31-09.22.45:460][485]LogTemp: Warning: BP_InteractionStone_Statue_C_1 Could not Access GameInstance or GameInstance Dictionary did not Contained its key
+[2025.01.31-09.22.45:461][485]LogTemp: Warning: Failed to get Equipped Weapon Class for Equipment: Weapon
+[2025.01.31-09.22.45:462][485]LogTemp: Warning: Failed to get Equipped Weapon Class for Equipment: Shield
+[2025.01.31-09.22.45:462][485]LogTemp: Warning: Animation Instance set
+[2025.01.31-09.22.45:462][485]LogTemp: Warning: Failed to get Equipped Weapon Class for Equipment: Shield
+[2025.01.31-09.22.45:462][485]LogTemp: Warning: Animation Instance set
+[2025.01.31-09.22.45:464][485]LogTemp: Warning: Animation Instance set
+[2025.01.31-09.22.45:466][485]PIE: Server logged in
+[2025.01.31-09.22.45:469][485]PIE: Play in editor total start time 0,212 seconds.
+[2025.01.31-09.22.49:127][698]LogTemp: Warning: Find Nearest Target: No Actors Scanned
+[2025.01.31-09.22.49:891][747]LogTemp: Warning: Locked on : BP_DarkKnight_C_1
+[2025.01.31-09.22.53:425][949]LogTemp: Error: Attack Ended
+[2025.01.31-09.22.55:715][ 86]LogTemp: Warning: Character Already is Attacking
+[2025.01.31-09.22.55:791][ 90]LogTemp: Warning: BP_DarkKnight_C_1 got 50.000000 Damage
+[2025.01.31-09.22.56:016][102]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 4045.887695
+[2025.01.31-09.22.56:218][110]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2025.01.31-09.22.56:218][110]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 4046.065918, Update Interval: 322.751556
+[2025.01.31-09.22.56:252][112]LogTemp: Warning: BP_DarkKnight_C_1 got 50.000000 Damage
+[2025.01.31-09.22.56:489][123]LogTemp: Warning: Character Charges Attack
+[2025.01.31-09.22.56:944][149]LogTemp: Warning: Character Releases Attack
+[2025.01.31-09.22.57:127][159]LogTemp: Warning: BP_DarkKnight_C_1 got 50.000000 Damage
+[2025.01.31-09.22.57:238][165]LogTemp: Warning: Character Already is Attacking
+[2025.01.31-09.22.57:669][188]LogTemp: Warning: Character Already is Attacking
+[2025.01.31-09.22.57:766][193]LogTemp: Warning: BP_DarkKnight_C_1 got 50.000000 Damage
+[2025.01.31-09.22.58:065][210]LogTemp: Error: Attack Ended
+[2025.01.31-09.23.01:455][386]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.01.31-09.23.01:455][386]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_Level_World
+[2025.01.31-09.23.01:457][386]LogWorld: UWorld::CleanupWorld for Level_World, bSessionEnded=true, bCleanupResources=true
+[2025.01.31-09.23.01:461][386]LogTemp: Error: Attack Interrupted
+[2025.01.31-09.23.01:461][386]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.01.31-09.23.01:468][386]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2025.01.31-09.23.01:475][386]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.01.31-09.23.01:502][386]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.01.31-09.23.01:504][386]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 15
+[2025.01.31-09.23.01:504][386]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=15
+[2025.01.31-09.23.01:507][386]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=15
+[2025.01.31-09.23.01:521][386]LogUObjectHash: Compacting FUObjectHashTables data took   2.36ms
+[2025.01.31-09.23.01:591][387]LogPlayLevel: Display: Destroying online subsystem :Context_22
+[2025.01.31-09.23.37:671][620]LogHotReload: New module detected: UnrealEditor-Eternal_Grace_Arena-0110.dll
+[2025.01.31-09.23.38:680][623]LogHotReload: Starting Hot-Reload from IDE
+[2025.01.31-09.23.38:767][623]LogUObjectHash: Compacting FUObjectHashTables data took   1.99ms
+[2025.01.31-09.23.39:308][623]LogUObjectHash: Compacting FUObjectHashTables data took   2.27ms
+[2025.01.31-09.23.39:354][623]Display: HotReload took  0.7s.
+[2025.01.31-09.23.39:354][623]Display: Reload/Re-instancing Complete: 1 package changed, 56 classes unchanged, 1 enum unchanged, 3 scriptstructs unchanged, 91 functions remapped, 3 scriptstructs remapped
+[2025.01.31-09.23.41:228][627]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2025.01.31-09.23.41:240][627]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2025.01.31-09.23.41:265][627]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Level_World
+[2025.01.31-09.23.41:316][627]LogPlayLevel: PIE: StaticDuplicateObject took: (0.051458s)
+[2025.01.31-09.23.41:316][627]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Level_World.Level_World to /Game/Levels/UEDPIE_0_Level_World.Level_World (0.051551s)
+[2025.01.31-09.23.41:436][627]LogUObjectHash: Compacting FUObjectHashTables data took   3.09ms
+[2025.01.31-09.23.41:440][627]LogChaosDD: Creating Chaos Debug Draw Scene for world Level_World
+[2025.01.31-09.23.41:443][627]LogPlayLevel: PIE: World Init took: (0.002619s)
+[2025.01.31-09.23.41:445][627]LogAudio: Display: Creating Audio Device:                 Id: 16, Scope: Unique, Realtime: True
+[2025.01.31-09.23.41:445][627]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2025.01.31-09.23.41:445][627]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2025.01.31-09.23.41:445][627]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2025.01.31-09.23.41:445][627]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2025.01.31-09.23.41:446][627]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2025.01.31-09.23.41:446][627]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2025.01.31-09.23.41:446][627]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2025.01.31-09.23.41:446][627]LogAudio: Display: AudioDevice MaxSources: 32
+[2025.01.31-09.23.41:446][627]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2025.01.31-09.23.41:446][627]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2025.01.31-09.23.41:446][627]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2025.01.31-09.23.41:448][627]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2025.01.31-09.23.41:478][627]LogAudioMixer: Display: Using Audio Hardware Device Köpfhörer (Synaptics HD Audio)
+[2025.01.31-09.23.41:478][627]LogAudioMixer: Display: Initializing Sound Submixes...
+[2025.01.31-09.23.41:478][627]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2025.01.31-09.23.41:478][627]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2025.01.31-09.23.41:479][627]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=16
+[2025.01.31-09.23.41:479][627]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=16
+[2025.01.31-09.23.41:483][627]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=16
+[2025.01.31-09.23.41:483][627]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=16
+[2025.01.31-09.23.41:483][627]LogInit: FAudioDevice initialized with ID 16.
+[2025.01.31-09.23.41:483][627]LogAudio: Display: Audio Device (ID: 16) registered with world 'Level_World'.
+[2025.01.31-09.23.41:483][627]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 16
+[2025.01.31-09.23.41:487][627]LogLoad: Game class is 'GM_Custom_C'
+[2025.01.31-09.23.41:502][627]LogSkeletalMesh: USkeletalMeshComponent: Recreating Clothing Actors for 'CharacterMesh0' with 'SK_Dark_Knight'
+[2025.01.31-09.23.41:516][627]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Level_World.Level_World up for play (max tick rate 0) at 2025.01.31-10.23.41
+[2025.01.31-09.23.41:518][627]LogWorld: Bringing up level for play took: 0.030662
+[2025.01.31-09.23.41:521][627]LogOnline: OSS: Created online subsystem instance for: :Context_23
+[2025.01.31-09.23.41:525][627]LogSkeletalMesh: USkeletalMeshComponent: Recreating Clothing Actors for 'CharacterMesh0' with 'SKM_DarkLady'
+[2025.01.31-09.23.41:534][627]LogTemp: Warning: BP_InteractionStone_Statue_C_1 Could not Access GameInstance or GameInstance Dictionary did not Contained its key
+[2025.01.31-09.23.41:535][627]LogTemp: Warning: Failed to get Equipped Weapon Class for Equipment: Weapon
+[2025.01.31-09.23.41:536][627]LogTemp: Warning: Failed to get Equipped Weapon Class for Equipment: Shield
+[2025.01.31-09.23.41:536][627]LogTemp: Warning: Animation Instance set
+[2025.01.31-09.23.41:536][627]LogTemp: Warning: Failed to get Equipped Weapon Class for Equipment: Shield
+[2025.01.31-09.23.41:536][627]LogTemp: Warning: Animation Instance set
+[2025.01.31-09.23.41:537][627]LogTemp: Warning: Animation Instance set
+[2025.01.31-09.23.41:538][627]PIE: Server logged in
+[2025.01.31-09.23.41:540][627]PIE: Play in editor total start time 0,304 seconds.
+[2025.01.31-09.23.45:559][837]LogTemp: Warning: Find Nearest Target: No Actors Scanned
+[2025.01.31-09.23.46:214][876]LogTemp: Warning: Locked on : BP_DarkKnight_C_1
+[2025.01.31-09.23.47:581][953]LogTemp: Warning: Cancle Anim Notify Performed
+[2025.01.31-09.23.52:904][264]LogTemp: Error: Attack Ended
+[2025.01.31-09.23.56:007][456]LogTemp: Warning: Character Charges Attack
+[2025.01.31-09.23.56:971][515]LogTemp: Warning: Character Releases Attack
+[2025.01.31-09.23.57:177][528]LogTemp: Warning: BP_DarkKnight_C_1 got 58.156639 Damage
+[2025.01.31-09.23.57:444][544]LogTemp: Warning: Character Already is not Charging
+[2025.01.31-09.23.57:616][554]LogTemp: Warning: Character Already is Attacking
+[2025.01.31-09.23.57:712][559]LogTemp: Warning: BP_DarkKnight_C_1 got 50.000000 Damage
+[2025.01.31-09.23.57:909][570]LogTemp: Warning: Character Already is Attacking
+[2025.01.31-09.23.58:136][583]LogTemp: Warning: Character Already is Attacking
+[2025.01.31-09.23.58:514][603]LogTemp: Warning: Character Already is Attacking
+[2025.01.31-09.23.58:625][610]LogTemp: Warning: BP_DarkKnight_C_1 got 50.000000 Damage
+[2025.01.31-09.23.58:851][626]LogTemp: Error: Attack Ended
+[2025.01.31-09.23.58:907][630]LogTemp: Warning: Character Already is Attacking
+[2025.01.31-09.23.59:018][638]LogTemp: Warning: BP_DarkKnight_C_1 got 50.000000 Damage
+[2025.01.31-09.23.59:106][644]LogTemp: Warning: Character Already is Attacking
+[2025.01.31-09.23.59:510][672]LogTemp: Warning: Character Already is Attacking
+[2025.01.31-09.23.59:602][678]LogTemp: Warning: BP_DarkKnight_C_1 got 50.000000 Damage
+[2025.01.31-09.23.59:922][696]LogTemp: Warning: Character Already is Attacking
+[2025.01.31-09.23.59:975][699]LogTemp: Warning: BP_DarkKnight_C_1 got 50.000000 Damage
+[2025.01.31-09.24.00:562][734]LogTemp: Warning: BP_Player_C_0 got 300.000000 Damage
+[2025.01.31-09.24.00:583][735]LogTemp: Warning: SetStaggerd Notify set its owner
+[2025.01.31-09.24.01:319][778]LogTemp: Warning: BP_Player_C_0 got 300.000000 Damage
+[2025.01.31-09.24.04:155][949]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.01.31-09.24.04:155][949]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_Level_World
+[2025.01.31-09.24.04:158][949]LogWorld: UWorld::CleanupWorld for Level_World, bSessionEnded=true, bCleanupResources=true
+[2025.01.31-09.24.04:161][949]LogTemp: Error: Attack Interrupted
+[2025.01.31-09.24.04:162][949]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.01.31-09.24.04:167][949]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2025.01.31-09.24.04:176][949]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.01.31-09.24.04:205][949]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2025.01.31-09.24.04:217][949]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 16
+[2025.01.31-09.24.04:217][949]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=16
+[2025.01.31-09.24.04:220][949]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=16
+[2025.01.31-09.24.04:227][949]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.01.31-09.24.04:258][949]LogUObjectHash: Compacting FUObjectHashTables data took   4.20ms
+[2025.01.31-09.24.04:325][950]LogPlayLevel: Display: Destroying online subsystem :Context_23
+[2025.01.31-09.24.32:012][150]LogHotReload: New module detected: UnrealEditor-Eternal_Grace_Arena-0112.dll
+[2025.01.31-09.24.34:686][158]LogHotReload: Starting Hot-Reload from IDE
+[2025.01.31-09.24.34:763][158]LogUObjectHash: Compacting FUObjectHashTables data took   2.15ms
+[2025.01.31-09.24.35:318][158]LogUObjectHash: Compacting FUObjectHashTables data took   2.03ms
+[2025.01.31-09.24.35:362][158]Display: HotReload took  0.7s.
+[2025.01.31-09.24.35:362][158]Display: Reload/Re-instancing Complete: 1 package changed, 56 classes unchanged, 1 enum unchanged, 3 scriptstructs unchanged, 91 functions remapped, 3 scriptstructs remapped
+[2025.01.31-09.24.37:634][163]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2025.01.31-09.24.37:648][163]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2025.01.31-09.24.37:648][163]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Level_World
+[2025.01.31-09.24.37:696][163]LogPlayLevel: PIE: StaticDuplicateObject took: (0.047563s)
+[2025.01.31-09.24.37:696][163]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Level_World.Level_World to /Game/Levels/UEDPIE_0_Level_World.Level_World (0.047619s)
+[2025.01.31-09.24.37:812][163]LogUObjectHash: Compacting FUObjectHashTables data took   3.12ms
+[2025.01.31-09.24.37:818][163]LogChaosDD: Creating Chaos Debug Draw Scene for world Level_World
+[2025.01.31-09.24.37:820][163]LogPlayLevel: PIE: World Init took: (0.002002s)
+[2025.01.31-09.24.37:821][163]LogAudio: Display: Creating Audio Device:                 Id: 17, Scope: Unique, Realtime: True
+[2025.01.31-09.24.37:821][163]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2025.01.31-09.24.37:821][163]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2025.01.31-09.24.37:821][163]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2025.01.31-09.24.37:821][163]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2025.01.31-09.24.37:821][163]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2025.01.31-09.24.37:821][163]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2025.01.31-09.24.37:821][163]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2025.01.31-09.24.37:821][163]LogAudio: Display: AudioDevice MaxSources: 32
+[2025.01.31-09.24.37:822][163]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2025.01.31-09.24.37:822][163]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2025.01.31-09.24.37:822][163]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2025.01.31-09.24.37:824][163]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2025.01.31-09.24.37:856][163]LogAudioMixer: Display: Using Audio Hardware Device Köpfhörer (Synaptics HD Audio)
+[2025.01.31-09.24.37:857][163]LogAudioMixer: Display: Initializing Sound Submixes...
+[2025.01.31-09.24.37:857][163]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2025.01.31-09.24.37:857][163]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2025.01.31-09.24.37:857][163]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=17
+[2025.01.31-09.24.37:858][163]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=17
+[2025.01.31-09.24.37:861][163]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=17
+[2025.01.31-09.24.37:861][163]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=17
+[2025.01.31-09.24.37:861][163]LogInit: FAudioDevice initialized with ID 17.
+[2025.01.31-09.24.37:861][163]LogAudio: Display: Audio Device (ID: 17) registered with world 'Level_World'.
+[2025.01.31-09.24.37:861][163]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 17
+[2025.01.31-09.24.37:866][163]LogLoad: Game class is 'GM_Custom_C'
+[2025.01.31-09.24.37:882][163]LogSkeletalMesh: USkeletalMeshComponent: Recreating Clothing Actors for 'CharacterMesh0' with 'SK_Dark_Knight'
+[2025.01.31-09.24.37:897][163]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Level_World.Level_World up for play (max tick rate 0) at 2025.01.31-10.24.37
+[2025.01.31-09.24.37:899][163]LogWorld: Bringing up level for play took: 0.033128
+[2025.01.31-09.24.37:903][163]LogOnline: OSS: Created online subsystem instance for: :Context_24
+[2025.01.31-09.24.37:907][163]LogSkeletalMesh: USkeletalMeshComponent: Recreating Clothing Actors for 'CharacterMesh0' with 'SKM_DarkLady'
+[2025.01.31-09.24.37:913][163]LogTemp: Warning: BP_InteractionStone_Statue_C_1 Could not Access GameInstance or GameInstance Dictionary did not Contained its key
+[2025.01.31-09.24.37:914][163]LogTemp: Warning: Failed to get Equipped Weapon Class for Equipment: Weapon
+[2025.01.31-09.24.37:914][163]LogTemp: Warning: Failed to get Equipped Weapon Class for Equipment: Shield
+[2025.01.31-09.24.37:914][163]LogTemp: Warning: Animation Instance set
+[2025.01.31-09.24.37:914][163]LogTemp: Warning: Failed to get Equipped Weapon Class for Equipment: Shield
+[2025.01.31-09.24.37:915][163]LogTemp: Warning: Animation Instance set
+[2025.01.31-09.24.37:916][163]LogTemp: Warning: Animation Instance set
+[2025.01.31-09.24.37:917][163]PIE: Server logged in
+[2025.01.31-09.24.37:918][163]PIE: Play in editor total start time 0,275 seconds.
+[2025.01.31-09.24.42:257][381]LogTemp: Warning: Locked on : BP_DarkKnight_C_1
+[2025.01.31-09.24.46:211][610]LogTemp: Error: Attack Ended
+[2025.01.31-09.24.48:745][747]LogTemp: Warning: Cancle Anim Notify Performed
+[2025.01.31-09.24.51:516][918]LogTemp: Warning: Character Already is Attacking
+[2025.01.31-09.24.51:607][924]LogTemp: Warning: BP_DarkKnight_C_1 got 50.000000 Damage
+[2025.01.31-09.24.51:920][942]LogTemp: Warning: Character Already is Attacking
+[2025.01.31-09.24.52:024][948]LogTemp: Warning: BP_DarkKnight_C_1 got 50.000000 Damage
+[2025.01.31-09.24.52:112][954]LogTemp: Warning: Character Already is Attacking
+[2025.01.31-09.24.52:514][976]LogTemp: Warning: Character Already is Attacking
+[2025.01.31-09.24.52:605][982]LogTemp: Warning: BP_DarkKnight_C_1 got 50.000000 Damage
+[2025.01.31-09.24.52:914][999]LogTemp: Warning: Character Already is Attacking
+[2025.01.31-09.24.52:970][  2]LogTemp: Warning: BP_DarkKnight_C_1 got 50.000000 Damage
+[2025.01.31-09.24.53:098][ 10]LogTemp: Warning: Character Already is Attacking
+[2025.01.31-09.24.53:177][ 15]LogTemp: Error: Attack Ended
+[2025.01.31-09.24.53:630][ 44]LogTemp: Warning: BP_DarkKnight_C_1 got 50.000000 Damage
+[2025.01.31-09.24.55:786][181]LogTemp: Warning: Character Charges Attack
+[2025.01.31-09.24.56:529][221]LogTemp: Warning: Character Releases Attack
+[2025.01.31-09.24.57:164][257]LogTemp: Warning: Character Already is Attacking
+[2025.01.31-09.24.57:259][262]LogTemp: Warning: BP_DarkKnight_C_1 got 50.000000 Damage
+[2025.01.31-09.24.57:672][286]LogTemp: Warning: BP_DarkKnight_C_1 got 50.000000 Damage
+[2025.01.31-09.24.57:814][294]LogTemp: Error: Attack Ended
+[2025.01.31-09.25.00:972][483]LogTemp: Warning: BP_DarkKnight_C_1 got 50.000000 Damage
+[2025.01.31-09.25.02:455][559]LogTemp: Error: Attack Ended
+[2025.01.31-09.25.03:090][592]LogTemp: Warning: Unlock
+[2025.01.31-09.25.06:325][778]LogTemp: Warning: Locked on : BP_DarkKnight_C_1
+[2025.01.31-09.25.06:631][795]LogTemp: Warning: Cancle Anim Notify Performed
+[2025.01.31-09.25.07:686][854]LogTemp: Warning: Unlock
+[2025.01.31-09.25.08:830][918]LogTemp: Warning: Locked on : BP_DarkKnight_C_1
+[2025.01.31-09.25.11:361][ 58]LogTemp: Warning: Character Charges Attack
+[2025.01.31-09.25.11:662][ 76]LogTemp: Warning: Character Releases Attack
+[2025.01.31-09.25.11:864][ 88]LogTemp: Warning: BP_DarkKnight_C_1 got 78.190842 Damage
+[2025.01.31-09.25.12:192][108]LogTemp: Warning: Character Already is Attacking
+[2025.01.31-09.25.12:277][113]LogTemp: Warning: BP_DarkKnight_C_1 got 50.000000 Damage
+[2025.01.31-09.25.12:278][113]LogTemp: Error: Attack Interrupted
+[2025.01.31-09.25.12:293][114]LogTemp: Error: Can now perform GetOffMeMove
+[2025.01.31-09.25.12:580][130]LogTemp: Warning: Character Already is Attacking
+[2025.01.31-09.25.12:776][141]LogTemp: Warning: Character Already is Attacking
+[2025.01.31-09.25.13:264][170]LogTemp: Warning: BP_DarkKnight_C_1 got 50.000000 Damage
+[2025.01.31-09.25.13:404][178]LogTemp: Warning: BP_Player_C_0 got 300.000000 Damage
+[2025.01.31-09.25.13:426][179]LogTemp: Warning: SetStaggerd Notify set its owner
+[2025.01.31-09.25.13:486][180]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.01.31-09.25.13:486][180]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_Level_World
+[2025.01.31-09.25.13:488][180]LogWorld: UWorld::CleanupWorld for Level_World, bSessionEnded=true, bCleanupResources=true
+[2025.01.31-09.25.13:492][180]LogTemp: Error: Attack Interrupted
+[2025.01.31-09.25.13:492][180]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.01.31-09.25.13:499][180]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2025.01.31-09.25.13:512][180]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.01.31-09.25.13:552][180]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2025.01.31-09.25.13:559][180]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 17
+[2025.01.31-09.25.13:559][180]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=17
+[2025.01.31-09.25.13:562][180]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=17
+[2025.01.31-09.25.13:571][180]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.01.31-09.25.13:600][180]LogUObjectHash: Compacting FUObjectHashTables data took   2.61ms
+[2025.01.31-09.25.13:673][181]LogPlayLevel: Display: Destroying online subsystem :Context_24
+[2025.01.31-09.29.01:268][ 18]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 4411.134277
+[2025.01.31-09.29.02:268][ 21]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2025.01.31-09.29.02:268][ 21]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 4411.801270, Update Interval: 306.648773
+[2025.01.31-09.33.25:981][812]LogHotReload: New module detected: UnrealEditor-Eternal_Grace_Arena-0114.dll
+[2025.01.31-09.33.26:995][815]LogHotReload: Starting Hot-Reload from IDE
+[2025.01.31-09.33.27:086][815]LogUObjectHash: Compacting FUObjectHashTables data took   2.41ms
+[2025.01.31-09.33.27:725][815]LogUObjectHash: Compacting FUObjectHashTables data took   1.87ms
+[2025.01.31-09.33.27:773][815]Display: HotReload took  0.8s.
+[2025.01.31-09.33.27:774][815]Display: Reload/Re-instancing Complete: 1 package changed, 56 classes unchanged, 1 enum unchanged, 3 scriptstructs unchanged, 91 functions remapped, 3 scriptstructs remapped
+[2025.01.31-09.35.03:354][100]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 4773.210938
+[2025.01.31-09.35.04:355][103]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2025.01.31-09.35.04:355][103]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 4773.879395, Update Interval: 353.448303
+[2025.01.31-09.37.52:970][611]LogUObjectHash: Compacting FUObjectHashTables data took   5.53ms
+[2025.01.31-09.37.53:135][611]LogStall: Shutdown...
+[2025.01.31-09.37.53:135][611]LogStall: Shutdown complete.
+[2025.01.31-09.37.53:204][611]LogSlate: Window 'BP_ThirdPersonCharacter' being destroyed
+[2025.01.31-09.37.53:255][611]LogWorld: UWorld::CleanupWorld for World_7, bSessionEnded=true, bCleanupResources=true
+[2025.01.31-09.37.53:255][611]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.01.31-09.37.53:406][611]LogSlate: Window 'Eternal_Grace_Arena - Unreal Editor' being destroyed
+[2025.01.31-09.37.53:740][611]LogUObjectHash: Compacting FUObjectHashTables data took   3.31ms
+[2025.01.31-09.37.53:756][611]Cmd: QUIT_EDITOR
+[2025.01.31-09.37.53:756][612]LogCore: Engine exit requested (reason: UUnrealEdEngine::CloseEditor())
+[2025.01.31-09.37.53:765][612]LogCore: Engine exit requested (reason: EngineExit() was called; note: exit was already requested)
+[2025.01.31-09.37.53:766][612]LogStaticMesh: Abandoning remaining async distance field tasks for shutdown
+[2025.01.31-09.37.53:766][612]LogStaticMesh: Abandoning remaining async card representation tasks for shutdown
+[2025.01.31-09.37.53:772][612]LogWorld: UWorld::CleanupWorld for Level_World, bSessionEnded=true, bCleanupResources=true
+[2025.01.31-09.37.53:772][612]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.01.31-09.37.53:794][612]LogStylusInput: Shutting down StylusInput subsystem.
+[2025.01.31-09.37.53:795][612]LogLevelSequenceEditor: LevelSequenceEditor subsystem deinitialized.
+[2025.01.31-09.37.53:799][612]LogWorld: UWorld::CleanupWorld for World_3, bSessionEnded=true, bCleanupResources=true
+[2025.01.31-09.37.53:799][612]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.01.31-09.37.53:803][612]LogWorld: UWorld::CleanupWorld for World_2, bSessionEnded=true, bCleanupResources=true
+[2025.01.31-09.37.53:803][612]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.01.31-09.37.53:806][612]LogWorld: UWorld::CleanupWorld for World_1, bSessionEnded=true, bCleanupResources=true
+[2025.01.31-09.37.53:806][612]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.01.31-09.37.53:810][612]LogWorld: UWorld::CleanupWorld for World_4, bSessionEnded=true, bCleanupResources=true
+[2025.01.31-09.37.53:810][612]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.01.31-09.37.53:813][612]LogWorld: UWorld::CleanupWorld for World_5, bSessionEnded=true, bCleanupResources=true
+[2025.01.31-09.37.53:813][612]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.01.31-09.37.53:816][612]LogWorld: UWorld::CleanupWorld for World_6, bSessionEnded=true, bCleanupResources=true
+[2025.01.31-09.37.53:816][612]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.01.31-09.37.53:820][612]LogStudioTelemetry: Ended StudioTelemetry Session
+[2025.01.31-09.37.53:823][612]LogAnalytics: Display: [UEEditor.Rocket.Release] Destroying ET Analytics provider
+[2025.01.31-09.37.53:823][612]LogAnalytics: Display: [UEEditor.Rocket.Release] Ended ET Analytics provider session
+[2025.01.31-09.37.53:823][612]LogAnalytics: Display: [UEEditor.Rocket.Release] Destroyed ET Analytics provider
+[2025.01.31-09.37.54:247][612]LogAudio: Display: Beginning Audio Device Manager Shutdown (Module: AudioMixerXAudio2)...
+[2025.01.31-09.37.54:247][612]LogAudio: Display: Destroying 1 Remaining Audio Device(s)...
+[2025.01.31-09.37.54:247][612]LogAudio: Display: Audio Device unregistered from world 'Level_World'.
+[2025.01.31-09.37.54:247][612]LogAudio: Display: Shutting down audio device while 1 references to it are still alive. For more information, compile with INSTRUMENT_AUDIODEVICE_HANDLES.
+[2025.01.31-09.37.54:247][612]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=1
+[2025.01.31-09.37.54:259][612]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=1
+[2025.01.31-09.37.54:308][612]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID -1
+[2025.01.31-09.37.54:308][612]LogAudio: Display: Audio Device Manager Shutdown
+[2025.01.31-09.37.54:310][612]LogWindowsTextInputMethodSystem: Activated input method: Deutsch (Deutschland) - (Keyboard).
+[2025.01.31-09.37.54:316][612]LogExit: Preparing to exit.
+[2025.01.31-09.37.54:353][612]LogUObjectHash: Compacting FUObjectHashTables data took   1.98ms
+[2025.01.31-09.37.54:355][612]LogPython: Display: Object '/ControlRig/Python/RigHierarchy/add_controls_for_selected_PY.add_controls_for_selected_options' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2025.01.31-09.37.54:355][612]LogPython: Display: Object '/ControlRig/Python/RigHierarchy/add_controls_for_selected_PY.add_controls_for_selected' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2025.01.31-09.37.54:356][612]LogPython: Display: Object '/ControlRig/Python/RigHierarchy/add_null_above_selected_PY.add_null_above_selected' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2025.01.31-09.37.54:358][612]LogPython: Display: Object '/ControlRig/Python/RigHierarchy/align_items_PY.align_translation_rotation' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2025.01.31-09.37.54:358][612]LogPython: Display: Object '/ControlRig/Python/RigHierarchy/align_items_PY.align_translation_all' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2025.01.31-09.37.54:358][612]LogPython: Display: Object '/ControlRig/Python/RigHierarchy/align_items_PY.align_translation_x' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2025.01.31-09.37.54:358][612]LogPython: Display: Object '/ControlRig/Python/RigHierarchy/align_items_PY.align_translation_y' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2025.01.31-09.37.54:358][612]LogPython: Display: Object '/ControlRig/Python/RigHierarchy/align_items_PY.align_translation_z' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2025.01.31-09.37.54:358][612]LogPython: Display: Object '/ControlRig/Python/RigHierarchy/align_items_PY.align_rotation' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2025.01.31-09.37.54:358][612]LogPython: Display: Object '/ControlRig/Python/RigHierarchy/align_items_PY.align_scale' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2025.01.31-09.37.54:358][612]LogPython: Display: Object '/ControlRig/Python/RigHierarchy/rename_items_PY.search_replace_name_dialog' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2025.01.31-09.37.54:358][612]LogPython: Display: Object '/ControlRig/Python/RigHierarchy/rename_items_PY.search_replace_entry' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2025.01.31-09.37.54:358][612]LogPython: Display: Object '/ControlRig/Python/RigHierarchy/rename_items_PY.add_prefix_dialog' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2025.01.31-09.37.54:358][612]LogPython: Display: Object '/ControlRig/Python/RigHierarchy/rename_items_PY.add_prefix_entry' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2025.01.31-09.37.54:358][612]LogPython: Display: Object '/ControlRig/Python/RigHierarchy/rename_items_PY.add_suffix_dialog' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2025.01.31-09.37.54:358][612]LogPython: Display: Object '/ControlRig/Python/RigHierarchy/rename_items_PY.add_suffix_entry' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2025.01.31-09.37.54:358][612]LogPython: Display: Object '/ControlRig/Python/RigHierarchy/rename_items_PY.do_rename_dialog' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2025.01.31-09.37.54:358][612]LogPython: Display: Object '/ControlRig/Python/RigHierarchy/rename_items_PY.do_rename_entry' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2025.01.31-09.37.54:359][612]LogPython: Display: Object '/ControlRig/Python/RigHierarchy/set_bone_reference_pose_PY.set_bone_reference_pose' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2025.01.31-09.37.54:359][612]LogPython: Display: Object '/ControlRig/Python/ControlRigWorkflows/workflow_fbik_import_ik_rig_PY.import_ik_rig_options' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2025.01.31-09.37.54:359][612]LogPython: Display: Object '/ControlRig/Python/RigHierarchy/add_controls_for_selected_PY.ControlOutputFormat' was externally referenced when shutting down Python. Forcibly releasing its Python resources!
+[2025.01.31-09.37.55:504][612]LogEditorDataStorage: Deinitializing
+[2025.01.31-09.37.55:843][612]LogDemo: Cleaned up 0 splitscreen connections, owner deletion: enabled
+[2025.01.31-09.37.55:915][612]LogExit: Editor shut down
+[2025.01.31-09.37.55:923][612]LogExit: Transaction tracking system shut down
+[2025.01.31-09.37.56:308][612]LogExit: Object subsystem successfully closed.
+[2025.01.31-09.37.56:354][612]LogShaderCompilers: Display: Shaders left to compile 0
+[2025.01.31-09.37.57:026][612]LogMemoryProfiler: Shutdown
+[2025.01.31-09.37.57:026][612]LogNetworkingProfiler: Shutdown
+[2025.01.31-09.37.57:026][612]LoadingProfiler: Shutdown
+[2025.01.31-09.37.57:026][612]LogTimingProfiler: Shutdown
+[2025.01.31-09.37.57:061][612]LogSlate: Slate User Destroyed.  User Index 0, Is Virtual User: 0
+[2025.01.31-09.37.57:532][612]LogChaosDD: Chaos Debug Draw Shutdown
+[2025.01.31-09.37.58:068][612]LogEOSSDK: FEOSSDKManager::Shutdown EOS_Shutdown Result=[EOS_Success]
+[2025.01.31-09.37.58:110][612]LogHttp: Warning: [FHttpManager::Shutdown] Unbinding delegates for 1 outstanding Http Requests:
+[2025.01.31-09.37.58:110][612]LogHttp: Warning: 	verb=[POST] url=[https://datarouter.ol.epicgames.com/datarouter/api/v1/public/data?SessionID=%7BBED51A12-4BC2-2D79-F24B-7B820299FBED%7D&AppID=UEEditor.Rocket.Release&AppVersion=5.5.2-39378466%2B%2B%2BUE5%2BRelease-5.5&UserID=95592508460ec5cf8c00daa33f1b0d0c%7C9ab284dd8fa9494481da169659f282ec%7C36d40e5f-8ff1-490e-8eb0-4e66a47d46d2&AppEnvironment=datacollector-binary&UploadType=eteventstream] refs=[2] status=Processing
+[2025.01.31-09.37.58:123][612]RenderDocPlugin: plugin has been unloaded.
+[2025.01.31-09.37.58:123][612]LogStudioTelemetry: Display: Shutdown StudioTelemetry Module
+[2025.01.31-09.37.58:123][612]LogNFORDenoise: NFORDenoise function shutting down
+[2025.01.31-09.37.58:123][612]LogXGEController: Cleaning working directory: C:/Users/Leon/AppData/Local/Temp/UnrealXGEWorkingDir/
+[2025.01.31-09.37.58:127][612]LogIris: FNetObjectFactoryRegistry::UnregisterFactory is unregistering factory: None name: NetActorFactory id: 0
+[2025.01.31-09.37.58:127][612]LogIris: FNetObjectFactoryRegistry::UnregisterFactory is unregistering factory: None name: NetSubObjectFactory id: 1
+[2025.01.31-09.37.58:127][612]LogPakFile: Destroying PakPlatformFile
+[2025.01.31-09.37.58:721][612]LogD3D12RHI: ~FD3D12DynamicRHI
+[2025.01.31-09.37.58:763][612]LogExit: Exiting.
+[2025.01.31-09.37.58:809][612]Log file closed, 01/31/25 10:37:58
