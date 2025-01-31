@@ -6,7 +6,6 @@
 #include "GameFramework/PlayerController.h"
 #include "Blueprint/UserWidget.h"
 #include "InputAction.h"
-//#include "Eternal_Grace_ArenaCharacter.h"
 #include "PlayerCharacter.h"
 #include "Eternal_Grace_ProgressBar.h"
 #include "Player_UI_Bars.h"

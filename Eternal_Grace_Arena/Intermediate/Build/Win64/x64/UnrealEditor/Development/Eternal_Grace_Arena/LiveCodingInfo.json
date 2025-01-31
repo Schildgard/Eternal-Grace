@@ -67,9 +67,7 @@
 			"AnimNotify_PlayRandomSound.cpp.obj",
 			"BlendingWidget.cpp.obj",
 			"CharacterAnimInstance.cpp.obj",
-			"CustomPlayerController.cpp.obj"
-		],
-		"Module.Eternal_Grace_Arena.3.cpp.obj": [
+			"CustomPlayerController.cpp.obj",
 			"Damage_Spells.cpp.obj",
 			"Enemy_MageBoss.cpp.obj",
 			"Enemy_MushroomKing.cpp.obj",
@@ -77,7 +75,9 @@
 			"Enemy_WeaponMaster.cpp.obj",
 			"Equipment.cpp.obj",
 			"EternalGrace_BaseActor.cpp.obj",
-			"EternalGrace_GameInstance.cpp.obj",
+			"EternalGrace_GameInstance.cpp.obj"
+		],
+		"Module.Eternal_Grace_Arena.3.cpp.obj": [
 			"EternalGrace_GameMode.cpp.obj",
 			"EternalGrace_GameState.cpp.obj",
 			"EternalGrace_PlayerState.cpp.obj",
