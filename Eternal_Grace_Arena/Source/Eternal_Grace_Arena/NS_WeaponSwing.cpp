@@ -6,7 +6,9 @@
 #include "WeaponComponent.h"
 #include "Weapon.h"
 #include "Kismet/KismetSystemLibrary.h"
+#include "Kismet/GameplayStatics.h"
 #include "NiagaraFunctionLibrary.h"
+#include "HitEffectData.h"
 
 
 UNS_WeaponSwing::UNS_WeaponSwing()
@@ -31,7 +33,7 @@ void UNS_WeaponSwing::NotifyBegin(USkeletalMeshComponent* MeshComp, UAnimSequenc
 	}
 
 	AWeapon* CurrentWeapon = PerformingActor->WeaponComponent->GetCurrentWeapon();
-	if(!CurrentWeapon)
+	if (!CurrentWeapon)
 	{
 		UE_LOG(LogTemp, Error, TEXT("WeaponSwing Notify of %s could not get CurrentWeapon from WeaponCOmponent"), *PerformingActor->GetName())
 			return;
@@ -60,7 +62,7 @@ void UNS_WeaponSwing::NotifyEnd(USkeletalMeshComponent* MeshComp, UAnimSequenceB
 		UE_LOG(LogTemp, Error, TEXT("WeaponSwing Notify of %s could not get CurrentWeapon from WeaponCOmponent"), *PerformingActor->GetName())
 			return;
 	}
-	CurrentWeapon->GetMesh()->SetCollisionEnabled(ECollisionEnabled::NoCollision);	
+	CurrentWeapon->GetMesh()->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 	PerformingActor->WeaponComponent->ResetAttackValues();
 	PerformingActor->WeaponComponent->SetStaggerType(EStaggeringType::NormalStagger);
 }
@@ -78,23 +80,64 @@ void UNS_WeaponSwing::NotifyTick(USkeletalMeshComponent* MeshComp, UAnimSequence
 		}
 	}
 	Super::NotifyTick(MeshComp, Animation, FrameDeltaTime, EventReference);
-	//TRY HERE TO SPAWN NIAGARA
+
+	//SPHERE TRACE FOR HIT EFFECT
 	TArray<AActor*> Ignore;
 	FHitResult Hit;
-	//PerformingActor->WeaponComponent->GetCurrentWeapon()->GetSocket("weaponStart");
-	//PerformingActor->WeaponComponent->GetCurrentWeapon()->GetSocket("weaponEnd");
+
 	FVector Start = PerformingActor->WeaponComponent->GetCurrentWeapon()->GetMesh()->GetSocketLocation("weaponStart");
 	FVector End = PerformingActor->WeaponComponent->GetCurrentWeapon()->GetMesh()->GetSocketLocation("weaponEnd");
 
 	Ignore.Add(PerformingActor);
 	Ignore.Add(PerformingActor->WeaponComponent->GetCurrentWeapon());
 
-	//UKismetSystemLibrary::SphereTraceMultiForObjects(GetWorld(), Start, End, 5.0f, PerformingActor->WeaponComponent->ObjectTypes, false,Ignore,EDrawDebugTrace::None,Hit,true);
-
 	UKismetSystemLibrary::SphereTraceSingleForObjects(PerformingActor->world, Start, End, 5.0f, PerformingActor->WeaponComponent->ObjectTypes, false, Ignore, EDrawDebugTrace::ForDuration, Hit, true);
 	if (Hit.bBlockingHit)
 	{
 		UNiagaraFunctionLibrary::SpawnSystemAtLocation(PerformingActor->world, PerformingActor->WeaponComponent->GetWeaponSparks(), Hit.Location, FRotator(Hit.ImpactNormal.X, 0.0f, 0.0f));
-		UE_LOG(LogTemp, Warning, TEXT("Hitted : %s"), *Hit.GetActor()->GetName())
+
+		//THIS SECTION IS AN ATTEMPT TO MOVE THE HIT EFFECT TO THE SPHERE TRACING. HOW EVER I MUST SOMEHOW FIND A WAY TO CHECK IF THE ATTACK WAS BLOCKED,
+		// WHICH IS BY NY CALCULATED IN THE DEAL DAMAGE FUNCTION WHICH TRIGGERS ON OVERLAP COLLISION
+		
+	//	AEternal_Grace_ArenaCharacter* Char = Cast<AEternal_Grace_ArenaCharacter>(Hit.GetActor());
+	//	if (Char)
+	//	{
+	//		UE_LOG(LogTemp, Warning, TEXT("Hit Character"))
+	//			UPhysicalMaterial* PhysicalMaterial = Char->PhysicalMaterial;
+	//		if (PhysicalMaterial)
+	//		{
+	//
+	//			//CREATE A CONTEXT STRING
+	//			static const FString ContextString(TEXT("Hit Effect Context"));
+	//			FName MaterialName = FName(*PhysicalMaterial->GetName());
+	//			//GONNA CHECK WHAT CONTEXT STRING PARAMETER DOES
+	//			FHitEffectData* EffectData = PerformingActor->WeaponComponent->GetHitEffectDataTable()->FindRow<FHitEffectData>(MaterialName, ContextString);
+	//
+	//			if (EffectData)
+	//			{
+	//				UE_LOG(LogTemp, Warning, TEXT("PhysicalMaterial is : %s"), *MaterialName.ToString());
+	//				if (EffectData->HitSound)
+	//				{
+	//					UGameplayStatics::PlaySoundAtLocation(PerformingActor->world, EffectData->HitSound, Hit.Location);
+	//				}
+	//				if (EffectData->NiagaraEffect)
+	//				{
+	//					UNiagaraFunctionLibrary::SpawnSystemAtLocation(PerformingActor->world, EffectData->NiagaraEffect, Hit.Location, FRotator(Hit.ImpactNormal.X, 0.0f, 0.0f));
+	//				}
+	//			}
+	//			else
+	//			{
+	//				UE_LOG(LogTemp, Warning, TEXT("No effects found for PhysicalMaterial: %s"), *MaterialName.ToString());
+	//			}
+	//
+	//		}
+	//	}
+	//	else
+	//	{
+		//	UNiagaraFunctionLibrary::SpawnSystemAtLocation(PerformingActor->world, PerformingActor->WeaponComponent->GetWeaponSparks(), Hit.Location, FRotator(Hit.ImpactNormal.X, 0.0f, 0.0f));
+
+	//	}
 	}
+
+	//TODO PROBABLY IMPLEMENT DEAL DAMAGE HERE AS WELL ?
 }

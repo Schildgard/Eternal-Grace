@@ -68,10 +68,10 @@
 			"BlendingWidget.cpp.obj",
 			"CharacterAnimInstance.cpp.obj",
 			"CustomPlayerController.cpp.obj",
-			"Damage_Spells.cpp.obj"
+			"Damage_Spells.cpp.obj",
+			"Enemy_MageBoss.cpp.obj"
 		],
 		"Module.Eternal_Grace_Arena.3.cpp.obj": [
-			"Enemy_MageBoss.cpp.obj",
 			"Enemy_MushroomKing.cpp.obj",
 			"Enemy_UI_Healthbar.cpp.obj",
 			"Enemy_WeaponMaster.cpp.obj",

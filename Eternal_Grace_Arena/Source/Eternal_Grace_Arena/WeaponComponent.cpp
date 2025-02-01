@@ -96,33 +96,13 @@ void UWeaponComponent::DealDamage(UPrimitiveComponent* OverlappedComponent, AAct
 						}
 					}
 				}
-				ApplyHitEffect(HitEffectToApply);
+			ApplyHitEffect(HitEffectToApply);
 			}
 
 			II_Damageable::Execute_GetDamage(OtherActor, Damage, PoiseDamage, DamageDirection, CurrentStaggerType, Cast<AEternal_Grace_ArenaCharacter>(WeaponOwner), AttackWasBlocked);
 			return;
 		}
 	}
-
-
-
-
-	//AStaticMeshActor* HitActor = Cast<AStaticMeshActor>(OtherActor);
-	//if (HitActor)
-	//{
-	//	UStaticMeshComponent* MeshComponent = HitActor->GetStaticMeshComponent();
-	//	if (MeshComponent)
-	//	{
-	//		UMaterialInterface* Material = MeshComponent->GetMaterial(0);
-	//		if (Material)
-	//		{
-	//			UPhysicalMaterial* PhysMaterial = Material->GetPhysicalMaterial();
-	//			UE_LOG(LogTemp, Warning, TEXT("Got Phys Material %s"), *PhysMaterial->GetName());
-	//			ApplyHitEffect(PhysMaterial);
-	//		}
-	//
-	//	}
-	//}
 
 }
 
@@ -193,21 +173,21 @@ void UWeaponComponent::ResetAttackValues()
 	HittedActors.Empty();
 }
 
-UPhysicalMaterial* UWeaponComponent::GetPhysicalMaterial(UPrimitiveComponent* OverlappedComponent)
-{
-	//CURRENTLY NOT IN USE AT ALL DUE TO COMPLICATIONS. PROBABLY CHANGE THE PARAMETER TO ANOTHER TYPE TO MAKE IT WORK
-	UE_LOG(LogTemp, Error, TEXT("Overllaped Component is %s"), *OverlappedComponent->GetName())
-		UMaterialInterface* TargetMaterial = OverlappedComponent->GetMaterial(0);
-	if (TargetMaterial)
-	{
-		UPhysicalMaterial* TargetsPhyiscalMaterial = TargetMaterial->GetPhysicalMaterial();
-		if (TargetsPhyiscalMaterial)
-		{
-			return TargetsPhyiscalMaterial;
-		}
-	}
-	return nullptr;
-}
+//UPhysicalMaterial* UWeaponComponent::GetPhysicalMaterial(UPrimitiveComponent* OverlappedComponent)
+//{
+//	//CURRENTLY NOT USED
+//	UE_LOG(LogTemp, Error, TEXT("Overllaped Component is %s"), *OverlappedComponent->GetName())
+//		UMaterialInterface* TargetMaterial = OverlappedComponent->GetMaterial(0);
+//	if (TargetMaterial)
+//	{
+//		UPhysicalMaterial* TargetsPhyiscalMaterial = TargetMaterial->GetPhysicalMaterial();
+//		if (TargetsPhyiscalMaterial)
+//		{
+//			return TargetsPhyiscalMaterial;
+//		}
+//	}
+//	return nullptr;
+//}
 
 UNiagaraSystem* UWeaponComponent::GetWeaponTrail()
 {
@@ -217,5 +197,10 @@ UNiagaraSystem* UWeaponComponent::GetWeaponTrail()
 UNiagaraSystem* UWeaponComponent::GetWeaponSparks()
 {
 	return WeaponSparks;
+}
+
+UDataTable* UWeaponComponent::GetHitEffectDataTable()
+{
+	return HitEffectDataTable;
 }
 

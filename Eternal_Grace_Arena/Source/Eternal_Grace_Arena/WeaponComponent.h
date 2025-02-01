@@ -76,12 +76,14 @@ public:
 	UFUNCTION()
 	void ResetAttackValues();
 
-	UFUNCTION()
-	UPhysicalMaterial* GetPhysicalMaterial(UPrimitiveComponent* OverlappedComponent);
+	//UFUNCTION()
+	//UPhysicalMaterial* GetPhysicalMaterial(UPrimitiveComponent* OverlappedComponent);
 
 	UFUNCTION()
 	UNiagaraSystem* GetWeaponTrail();
 	UFUNCTION()
 	UNiagaraSystem* GetWeaponSparks();
+	UFUNCTION()
+	UDataTable* GetHitEffectDataTable();
 		
 };
