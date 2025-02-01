@@ -12,6 +12,7 @@
 #include "ShieldComponent.h"
 #include "Shield.h"
 #include "CharacterAnimInstance.h"
+#include "NiagaraSystem.h"
 
 // Sets default values for this component's properties
 UWeaponComponent::UWeaponComponent()
@@ -206,5 +207,15 @@ UPhysicalMaterial* UWeaponComponent::GetPhysicalMaterial(UPrimitiveComponent* Ov
 		}
 	}
 	return nullptr;
+}
+
+UNiagaraSystem* UWeaponComponent::GetWeaponTrail()
+{
+	return WeaponTrail;
+}
+
+UNiagaraSystem* UWeaponComponent::GetWeaponSparks()
+{
+	return WeaponSparks;
 }
 

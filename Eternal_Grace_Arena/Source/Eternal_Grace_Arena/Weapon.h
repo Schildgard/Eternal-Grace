@@ -42,8 +42,10 @@ public:
 	float DamageMultiplier;
 
 
-
 	UFUNCTION()
 	FWeaponStats GetWeaponStats();
+
+	UFUNCTION()
+	FTransform GetSocket(FName SocketName);
 	
 };

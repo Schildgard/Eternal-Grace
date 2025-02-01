@@ -27,3 +27,14 @@ FWeaponStats AWeapon::GetWeaponStats()
 	return Stats;
 }
 
+FTransform AWeapon::GetSocket(FName SocketName)
+{
+	if (GetMesh() && GetMesh()->DoesSocketExist(SocketName))
+	{
+		UE_LOG(LogTemp, Warning, TEXT("Success"))
+			return GetMesh()->GetSocketTransform(SocketName);
+	}
+	UE_LOG(LogTemp, Warning, TEXT("Fail"))
+		return FTransform::Identity;
+}
+

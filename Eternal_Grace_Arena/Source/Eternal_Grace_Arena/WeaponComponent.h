@@ -9,6 +9,7 @@
 
 class AWeapon;
 class AEternal_Grace_ArenaCharacter;
+class UNiagaraSystem;
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
 class ETERNAL_GRACE_ARENA_API UWeaponComponent : public USceneComponent
 {
@@ -50,9 +51,19 @@ protected:
 	UFUNCTION()
 	void ApplyHitEffect(UPhysicalMaterial* PhysicalMaterial);
 
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Trail, meta = (AllowPrivateAccess))
+	UNiagaraSystem* WeaponTrail;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Trail, meta = (AllowPrivateAccess))
+	UNiagaraSystem* WeaponSparks;
+
 
 
 public:	
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = HitTrace, meta = (AllowPrivateAccess))
+	TArray<TEnumAsByte<EObjectTypeQuery>> ObjectTypes;
+
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
@@ -65,8 +76,12 @@ public:
 	UFUNCTION()
 	void ResetAttackValues();
 
-	
 	UFUNCTION()
 	UPhysicalMaterial* GetPhysicalMaterial(UPrimitiveComponent* OverlappedComponent);
+
+	UFUNCTION()
+	UNiagaraSystem* GetWeaponTrail();
+	UFUNCTION()
+	UNiagaraSystem* GetWeaponSparks();
 		
 };
