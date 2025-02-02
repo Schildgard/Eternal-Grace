@@ -4,6 +4,7 @@
 #include "Weapon.h"
 #include "Eternal_Grace_ArenaCharacter.h"
 #include "Engine/StaticMeshActor.h"
+#include "Components/CapsuleComponent.h"
 
 AWeapon::AWeapon()
 {
@@ -12,6 +13,8 @@ AWeapon::AWeapon()
 	//Stats.PoiseDamage = 20.0f;
 	//Stats.StaminaCost = 15.0f;
 	DamageMultiplier = 1.0f;
+
+	ColliderComponent = CreateDefaultSubobject<UCapsuleComponent>(TEXT("Hitbox"));
 	
 }
 
@@ -36,5 +39,10 @@ FTransform AWeapon::GetSocket(FName SocketName)
 	}
 	UE_LOG(LogTemp, Warning, TEXT("Fail"))
 		return FTransform::Identity;
+}
+
+UCapsuleComponent* AWeapon::GetColliderShape()
+{
+	return ColliderComponent;
 }
 

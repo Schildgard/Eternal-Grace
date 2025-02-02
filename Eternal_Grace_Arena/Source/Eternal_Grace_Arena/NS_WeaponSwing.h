@@ -26,9 +26,17 @@ protected:
 	virtual void NotifyEnd(USkeletalMeshComponent* MeshComp, UAnimSequenceBase* Animation, const FAnimNotifyEventReference& EventReference)override;
 	virtual void NotifyTick(USkeletalMeshComponent* MeshComp, UAnimSequenceBase* Animation, float FrameDeltaTime, const FAnimNotifyEventReference& EventReference);
 
+
+
+	UPROPERTY()
+	TArray<AEternal_Grace_ArenaCharacter*> HittedActors;
+
 public:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Weapon, meta = (AllowPrivateAccess))
 	EStaggeringType StaggerType;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Weapon, meta = (AllowPrivateAccess))
 	float DamageMultiplier;
+
+//	UFUNCTION()
+//	FHitEffectData FindHitEffectData(UPhysicalMaterial* PhysicalMaterial);
 };

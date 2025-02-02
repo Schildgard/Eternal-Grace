@@ -47,8 +47,6 @@ protected:
 		const FHitResult& SweepResult);
 
 	UFUNCTION()
-	float CalculateAttackAngle(AActor* Target);
-	UFUNCTION()
 	void ApplyHitEffect(UPhysicalMaterial* PhysicalMaterial);
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Trail, meta = (AllowPrivateAccess))
@@ -60,6 +58,8 @@ protected:
 
 
 public:	
+	UFUNCTION()
+	float CalculateAttackAngle(AActor* Target);
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = HitTrace, meta = (AllowPrivateAccess))
 	TArray<TEnumAsByte<EObjectTypeQuery>> ObjectTypes;

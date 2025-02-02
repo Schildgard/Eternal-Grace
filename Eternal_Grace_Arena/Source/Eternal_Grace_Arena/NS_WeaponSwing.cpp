@@ -9,6 +9,10 @@
 #include "Kismet/GameplayStatics.h"
 #include "NiagaraFunctionLibrary.h"
 #include "HitEffectData.h"
+#include "ShieldComponent.h"
+#include "Shield.h"
+#include "CharacterAnimInstance.h"
+#include "Components/CapsuleComponent.h"
 
 
 UNS_WeaponSwing::UNS_WeaponSwing()
@@ -21,6 +25,7 @@ UNS_WeaponSwing::UNS_WeaponSwing()
 }
 void UNS_WeaponSwing::NotifyBegin(USkeletalMeshComponent* MeshComp, UAnimSequenceBase* Animation, float TotalDuration, const FAnimNotifyEventReference& EventReference)
 {
+	HittedActors.Empty();
 	//THIS SHOULDNT BE DONE ON EVERY NOTIFY BEGIN, BUT ON INITIALIZATION
 	if (!PerformingActor)
 	{
@@ -46,6 +51,7 @@ void UNS_WeaponSwing::NotifyBegin(USkeletalMeshComponent* MeshComp, UAnimSequenc
 
 void UNS_WeaponSwing::NotifyEnd(USkeletalMeshComponent* MeshComp, UAnimSequenceBase* Animation, const FAnimNotifyEventReference& EventReference)
 {
+	HittedActors.Empty();
 	if (!PerformingActor)
 	{
 		PerformingActor = Cast<AEternal_Grace_ArenaCharacter>(MeshComp->GetOwner());
@@ -87,57 +93,121 @@ void UNS_WeaponSwing::NotifyTick(USkeletalMeshComponent* MeshComp, UAnimSequence
 
 	FVector Start = PerformingActor->WeaponComponent->GetCurrentWeapon()->GetMesh()->GetSocketLocation("weaponStart");
 	FVector End = PerformingActor->WeaponComponent->GetCurrentWeapon()->GetMesh()->GetSocketLocation("weaponEnd");
+	float CollisionRadius = PerformingActor->WeaponComponent->GetCurrentWeapon()->GetColliderShape()->GetScaledCapsuleRadius();
 
 	Ignore.Add(PerformingActor);
 	Ignore.Add(PerformingActor->WeaponComponent->GetCurrentWeapon());
 
-	UKismetSystemLibrary::SphereTraceSingleForObjects(PerformingActor->world, Start, End, 5.0f, PerformingActor->WeaponComponent->ObjectTypes, false, Ignore, EDrawDebugTrace::ForDuration, Hit, true);
+	UKismetSystemLibrary::SphereTraceSingleForObjects(PerformingActor->world, Start, End, CollisionRadius, PerformingActor->WeaponComponent->ObjectTypes, false, Ignore, EDrawDebugTrace::None, Hit, true);
+
 	if (Hit.bBlockingHit)
 	{
-		UNiagaraFunctionLibrary::SpawnSystemAtLocation(PerformingActor->world, PerformingActor->WeaponComponent->GetWeaponSparks(), Hit.Location, FRotator(Hit.ImpactNormal.X, 0.0f, 0.0f));
 
-		//THIS SECTION IS AN ATTEMPT TO MOVE THE HIT EFFECT TO THE SPHERE TRACING. HOW EVER I MUST SOMEHOW FIND A WAY TO CHECK IF THE ATTACK WAS BLOCKED,
-		// WHICH IS BY NY CALCULATED IN THE DEAL DAMAGE FUNCTION WHICH TRIGGERS ON OVERLAP COLLISION
-		
-	//	AEternal_Grace_ArenaCharacter* Char = Cast<AEternal_Grace_ArenaCharacter>(Hit.GetActor());
-	//	if (Char)
-	//	{
-	//		UE_LOG(LogTemp, Warning, TEXT("Hit Character"))
-	//			UPhysicalMaterial* PhysicalMaterial = Char->PhysicalMaterial;
-	//		if (PhysicalMaterial)
-	//		{
-	//
-	//			//CREATE A CONTEXT STRING
-	//			static const FString ContextString(TEXT("Hit Effect Context"));
-	//			FName MaterialName = FName(*PhysicalMaterial->GetName());
-	//			//GONNA CHECK WHAT CONTEXT STRING PARAMETER DOES
-	//			FHitEffectData* EffectData = PerformingActor->WeaponComponent->GetHitEffectDataTable()->FindRow<FHitEffectData>(MaterialName, ContextString);
-	//
-	//			if (EffectData)
-	//			{
-	//				UE_LOG(LogTemp, Warning, TEXT("PhysicalMaterial is : %s"), *MaterialName.ToString());
-	//				if (EffectData->HitSound)
-	//				{
-	//					UGameplayStatics::PlaySoundAtLocation(PerformingActor->world, EffectData->HitSound, Hit.Location);
-	//				}
-	//				if (EffectData->NiagaraEffect)
-	//				{
-	//					UNiagaraFunctionLibrary::SpawnSystemAtLocation(PerformingActor->world, EffectData->NiagaraEffect, Hit.Location, FRotator(Hit.ImpactNormal.X, 0.0f, 0.0f));
-	//				}
-	//			}
-	//			else
-	//			{
-	//				UE_LOG(LogTemp, Warning, TEXT("No effects found for PhysicalMaterial: %s"), *MaterialName.ToString());
-	//			}
-	//
-	//		}
-	//	}
-	//	else
-	//	{
-		//	UNiagaraFunctionLibrary::SpawnSystemAtLocation(PerformingActor->world, PerformingActor->WeaponComponent->GetWeaponSparks(), Hit.Location, FRotator(Hit.ImpactNormal.X, 0.0f, 0.0f));
+		UPhysicalMaterial* PhysicalMaterial = nullptr; // NEED FUNCTION TO GET PHYSICAL MATERIAL OF OBJECTS ETC.
 
-	//	}
+
+
+		AActor* HittedActor = Hit.GetActor();
+		AEternal_Grace_ArenaCharacter* Char = Cast<AEternal_Grace_ArenaCharacter>(HittedActor);
+		if (Char)
+		{
+
+			if (!HittedActors.Contains(HittedActor) && Char->Implements<UI_Damageable>())
+			{
+				HittedActors.AddUnique(Char);
+				PhysicalMaterial = Char->PhysicalMaterial;
+				AWeapon* EquippedWeapon = PerformingActor->WeaponComponent->GetCurrentWeapon();
+
+				//CALCULATE DAMAGE PROPERTIES
+				float Damage = EquippedWeapon->GetWeaponStats().BaseDamage * EquippedWeapon->DamageMultiplier;
+				float PoiseDamage = EquippedWeapon->GetWeaponStats().PoiseDamage * EquippedWeapon->DamageMultiplier;;
+				float DamageDirection = PerformingActor->WeaponComponent->CalculateAttackAngle(Char);
+				bool AttackWasBlocked = false;
+
+
+				if (Char->ShieldComponent && Char->ShieldComponent->GetCurrentShield())
+				{
+					if (Char->CharacterAnimationInstance->isGuarding)
+					{
+						if (DamageDirection <= 135.0f || DamageDirection >= 180.0f)
+						{
+							AttackWasBlocked = true;
+							PhysicalMaterial = Char->ShieldComponent->GetCurrentShield()->GetShieldStats().PhysicalMaterial;
+						}
+					}
+				}
+
+				II_Damageable::Execute_GetDamage(Char, Damage, PoiseDamage, DamageDirection, StaggerType, PerformingActor, AttackWasBlocked);
+				if (PhysicalMaterial)
+				{
+					static const FString ContextString(TEXT("Hit Effect Context"));
+					FName MaterialName = FName(*PhysicalMaterial->GetName());
+					FHitEffectData* EffectData = PerformingActor->WeaponComponent->GetHitEffectDataTable()->FindRow<FHitEffectData>(MaterialName, ContextString);
+					//	FHitEffectData* EffectData = &FindHitEffectData(PhysicalMaterial);
+					if (EffectData)
+					{
+						if (EffectData->HitSound)
+						{
+							UGameplayStatics::PlaySoundAtLocation(PerformingActor->world, EffectData->HitSound, Hit.Location);
+						}
+						if (EffectData->NiagaraEffect)
+						{
+							UNiagaraFunctionLibrary::SpawnSystemAtLocation(PerformingActor->world, EffectData->NiagaraEffect, Hit.Location, FRotator(Hit.ImpactNormal.X, 0.0f, 0.0f));
+							UE_LOG(LogTemp, Error, TEXT("CHAR SUCESS: Specific Spark because of Collision with %s of %s"), *Hit.GetComponent()->GetName(), *Hit.GetActor()->GetName())
+						}
+						return;
+
+					}
+
+				}
+			}
+		}
+		else
+		{
+			if (PhysicalMaterial)
+			{
+				static const FString ContextString(TEXT("Hit Effect Context"));
+				FName MaterialName = FName(*PhysicalMaterial->GetName());
+				FHitEffectData* EffectData = PerformingActor->WeaponComponent->GetHitEffectDataTable()->FindRow<FHitEffectData>(MaterialName, ContextString);
+				//	FHitEffectData* EffectData = &FindHitEffectData(PhysicalMaterial);
+				if (EffectData)
+				{
+					if (EffectData->HitSound)
+					{
+						UGameplayStatics::PlaySoundAtLocation(PerformingActor->world, EffectData->HitSound, Hit.Location);
+					}
+					if (EffectData->NiagaraEffect)
+					{
+						UNiagaraFunctionLibrary::SpawnSystemAtLocation(PerformingActor->world, EffectData->NiagaraEffect, Hit.Location, FRotator(Hit.ImpactNormal.X, 0.0f, 0.0f));
+						UE_LOG(LogTemp, Error, TEXT("Specific Spark because of Collision with %s of %s"), *Hit.GetComponent()->GetName(), *Hit.GetActor()->GetName())
+					}
+					return;
+				}
+
+			}
+			UNiagaraFunctionLibrary::SpawnSystemAtLocation(PerformingActor->world, PerformingActor->WeaponComponent->GetWeaponSparks(), Hit.Location, FRotator(Hit.ImpactNormal.X, 0.0f, 0.0f));
+			UE_LOG(LogTemp, Error, TEXT("Normal Sparks because of Collision with %s of %s"), *Hit.GetComponent()->GetName(), *Hit.GetActor()->GetName())
+		}
 	}
-
-	//TODO PROBABLY IMPLEMENT DEAL DAMAGE HERE AS WELL ?
 }
+
+//FHitEffectData* UNS_WeaponSwing::FindHitEffectData(UPhysicalMaterial* PhysicalMaterial)
+//{
+//
+//	static const FString ContextString(TEXT("Hit Effect Context"));
+//	FName MaterialName = FName(*PhysicalMaterial->GetName());
+//	FHitEffectData* EffectData = PerformingActor->WeaponComponent->GetHitEffectDataTable()->FindRow<FHitEffectData>(MaterialName, ContextString);
+//	return EffectData;
+//	//if (EffectData)
+//	//{
+//	//	if (EffectData->HitSound)
+//	//	{
+//	//		UGameplayStatics::PlaySoundAtLocation(PerformingActor->world, EffectData->HitSound, Hit.Location);
+//	//	}
+//	//	if (EffectData->NiagaraEffect)
+//	//	{
+//	//		UNiagaraFunctionLibrary::SpawnSystemAtLocation(PerformingActor->world, EffectData->NiagaraEffect, Hit.Location, FRotator(Hit.ImpactNormal.X, 0.0f, 0.0f));
+//	//		UE_LOG(LogTemp, Error, TEXT("Specific Spark because of Collision with %s"), *Hit.GetComponent()->GetName())
+//	//	}
+//	//}
+//}

@@ -11,6 +11,7 @@
  * 
  */
 class AEternal_Grace_ArenaCharacter;
+class UCapsuleComponent;
 USTRUCT(BlueprintType)
 struct FWeaponStats
 {
@@ -37,6 +38,10 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Attributes, meta = (AllowPrivateAccess))
 	FWeaponStats Stats;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Attributes, meta = (AllowPrivateAccess))
+	UCapsuleComponent* ColliderComponent;
+	
+
 public:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Attributes, meta = (AllowPrivateAccess))
 	float DamageMultiplier;
@@ -47,5 +52,8 @@ public:
 
 	UFUNCTION()
 	FTransform GetSocket(FName SocketName);
+
+	UFUNCTION()
+	UCapsuleComponent* GetColliderShape();
 	
 };

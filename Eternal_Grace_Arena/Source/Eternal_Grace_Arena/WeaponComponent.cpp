@@ -64,45 +64,45 @@ void UWeaponComponent::DealDamage(UPrimitiveComponent* OverlappedComponent, AAct
 {
 
 
-	if (OtherActor != WeaponOwner && OtherActor->Implements<UI_Damageable>())
-	{
-		if (!HittedActors.Contains(OtherActor))
-		{
-			UPhysicalMaterial* HitEffectToApply;
-
-			//CALCULATE DAMAGE PROPERTIES
-			float Damage = EquippedWeapon->GetWeaponStats().BaseDamage * EquippedWeapon->DamageMultiplier;
-			float PoiseDamage = EquippedWeapon->GetWeaponStats().PoiseDamage * EquippedWeapon->DamageMultiplier;;
-			float DamageDirection = CalculateAttackAngle(OtherActor);
-			bool AttackWasBlocked = false;
-
-
-			//CHECK IF HITTED WAS A CHARACTER
-			AEternal_Grace_ArenaCharacter* TargetActor = Cast<AEternal_Grace_ArenaCharacter>(OtherActor);
-			if (TargetActor)
-			{
-				HitEffectToApply = TargetActor->PhysicalMaterial;
-				HittedActors.AddUnique(TargetActor); //MAYBE IT MAKES SENSE TO CHANGE THIS TO TARGETACTOR->GET OWNER
-				//CHECK IF ATTACK WAS FRONTAL AND BLOCKED BY A SHIELD
-				//IF SO, THE GET DAMAGE PARAMETER CHANGES SO IT RECOGNIZES THE BLOCK AND THE WEAPON APPLIES HIT EFFECT OF THE SHIELD INSTEAD OF THE TARGET
-				if (TargetActor->ShieldComponent && TargetActor->ShieldComponent->GetCurrentShield())
-				{
-					if (TargetActor->CharacterAnimationInstance->isGuarding)
-					{
-						if (DamageDirection <= 135.0f || DamageDirection >= 180.0f)
-						{
-							AttackWasBlocked = true;
-							HitEffectToApply = TargetActor->ShieldComponent->GetCurrentShield()->GetShieldStats().PhysicalMaterial;
-						}
-					}
-				}
-			ApplyHitEffect(HitEffectToApply);
-			}
-
-			II_Damageable::Execute_GetDamage(OtherActor, Damage, PoiseDamage, DamageDirection, CurrentStaggerType, Cast<AEternal_Grace_ArenaCharacter>(WeaponOwner), AttackWasBlocked);
-			return;
-		}
-	}
+//	if (OtherActor != WeaponOwner && OtherActor->Implements<UI_Damageable>())
+//	{
+//		if (!HittedActors.Contains(OtherActor))
+//		{
+//			UPhysicalMaterial* HitEffectToApply;
+//
+//			//CALCULATE DAMAGE PROPERTIES
+//			float Damage = EquippedWeapon->GetWeaponStats().BaseDamage * EquippedWeapon->DamageMultiplier;
+//			float PoiseDamage = EquippedWeapon->GetWeaponStats().PoiseDamage * EquippedWeapon->DamageMultiplier;;
+//			float DamageDirection = CalculateAttackAngle(OtherActor);
+//			bool AttackWasBlocked = false;
+//
+//
+//			//CHECK IF HITTED WAS A CHARACTER
+//			AEternal_Grace_ArenaCharacter* TargetActor = Cast<AEternal_Grace_ArenaCharacter>(OtherActor);
+//			if (TargetActor)
+//			{
+//				HitEffectToApply = TargetActor->PhysicalMaterial;
+//				HittedActors.AddUnique(TargetActor); //MAYBE IT MAKES SENSE TO CHANGE THIS TO TARGETACTOR->GET OWNER
+//				//CHECK IF ATTACK WAS FRONTAL AND BLOCKED BY A SHIELD
+//				//IF SO, THE GET DAMAGE PARAMETER CHANGES SO IT RECOGNIZES THE BLOCK AND THE WEAPON APPLIES HIT EFFECT OF THE SHIELD INSTEAD OF THE TARGET
+//				if (TargetActor->ShieldComponent && TargetActor->ShieldComponent->GetCurrentShield())
+//				{
+//					if (TargetActor->CharacterAnimationInstance->isGuarding)
+//					{
+//						if (DamageDirection <= 135.0f || DamageDirection >= 180.0f)
+//						{
+//							AttackWasBlocked = true;
+//							HitEffectToApply = TargetActor->ShieldComponent->GetCurrentShield()->GetShieldStats().PhysicalMaterial;
+//						}
+//					}
+//				}
+//			ApplyHitEffect(HitEffectToApply);
+//			}
+//
+//			II_Damageable::Execute_GetDamage(OtherActor, Damage, PoiseDamage, DamageDirection, CurrentStaggerType, Cast<AEternal_Grace_ArenaCharacter>(WeaponOwner), AttackWasBlocked);
+//			return;
+//		}
+//	}
 
 }
 
