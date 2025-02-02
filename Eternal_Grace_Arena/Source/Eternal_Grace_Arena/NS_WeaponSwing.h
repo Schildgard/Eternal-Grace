@@ -5,12 +5,14 @@
 #include "CoreMinimal.h"
 #include "Animation/AnimNotifies/AnimNotifyState.h"
 #include "StaggeringType.h"
+
 #include "NS_WeaponSwing.generated.h"
 
 /**
  *
  */
 class AEternal_Grace_ArenaCharacter;
+struct FHitEffectData;
 UCLASS()
 class ETERNAL_GRACE_ARENA_API UNS_WeaponSwing : public UAnimNotifyState
 {
@@ -37,6 +39,6 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Weapon, meta = (AllowPrivateAccess))
 	float DamageMultiplier;
 
-//	UFUNCTION()
-//	FHitEffectData FindHitEffectData(UPhysicalMaterial* PhysicalMaterial);
+	UFUNCTION()
+	void ApplyHitEffect(FHitEffectData HitEffectData, FVector HitLocation, FRotator HitRotation);
 };

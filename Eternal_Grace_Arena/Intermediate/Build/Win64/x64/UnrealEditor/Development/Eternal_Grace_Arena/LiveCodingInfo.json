@@ -65,11 +65,11 @@
 			"WeaponComponent.gen.cpp.obj",
 			"PerModuleInline.gen.cpp.obj",
 			"AnimNotify_PlayRandomSound.cpp.obj",
-			"BlendingWidget.cpp.obj",
-			"CharacterAnimInstance.cpp.obj",
-			"CustomPlayerController.cpp.obj"
+			"BlendingWidget.cpp.obj"
 		],
 		"Module.Eternal_Grace_Arena.3.cpp.obj": [
+			"CharacterAnimInstance.cpp.obj",
+			"CustomPlayerController.cpp.obj",
 			"Damage_Spells.cpp.obj",
 			"Enemy_MageBoss.cpp.obj",
 			"Enemy_MushroomKing.cpp.obj",
