@@ -12,8 +12,6 @@ AWeapon::AWeapon()
 	//Stats.BaseDamage = 50.0f;
 	//Stats.PoiseDamage = 20.0f;
 	//Stats.StaminaCost = 15.0f;
-	DamageMultiplier = 1.0f;
-
 	ColliderComponent = CreateDefaultSubobject<UCapsuleComponent>(TEXT("Hitbox"));
 	
 }
@@ -21,8 +19,6 @@ AWeapon::AWeapon()
 void AWeapon::BeginPlay()
 {
 	Super::BeginPlay();
-//	Mesh->SetCollisionEnabled(ECollisionEnabled::NoCollision);
-//	Mesh->SetCollisionResponseToAllChannels(ECR_Overlap);
 }
 
 FWeaponStats AWeapon::GetWeaponStats()

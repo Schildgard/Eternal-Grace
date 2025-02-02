@@ -4,7 +4,6 @@
 
 #include "CoreMinimal.h"
 #include "Components/SceneComponent.h"
-#include "StaggeringType.h"
 #include "WeaponComponent.generated.h"
 
 class AWeapon;
@@ -30,24 +29,9 @@ protected:
 	TSubclassOf<AWeapon> EquippedWeaponClass;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, meta = (AllowPrivateAccess))
 	AWeapon* EquippedWeapon;
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Collision)
-	TArray<AEternal_Grace_ArenaCharacter*> HittedActors;
+
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = HitEffect, meta = (AllowPrivateAccess))
 	UDataTable* HitEffectDataTable;
-	UPROPERTY()
-	EStaggeringType CurrentStaggerType;
-
-
-	UFUNCTION()
-	void DealDamage(UPrimitiveComponent* OverlappedComponent,
-		AActor* OtherActor,
-		UPrimitiveComponent* OtherComp,
-		int32 OtherBodyIndex,
-		bool bFromSweep,
-		const FHitResult& SweepResult);
-
-	UFUNCTION()
-	void ApplyHitEffect(UPhysicalMaterial* PhysicalMaterial);
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Trail, meta = (AllowPrivateAccess))
 	UNiagaraSystem* WeaponTrail;
@@ -56,28 +40,19 @@ protected:
 	UNiagaraSystem* WeaponSparks;
 
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = HitTrace, meta = (AllowPrivateAccess))
+	TArray<TEnumAsByte<EObjectTypeQuery>> ObjectTypes;
 
 public:	
 	UFUNCTION()
 	float CalculateAttackAngle(AActor* Target);
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = HitTrace, meta = (AllowPrivateAccess))
-	TArray<TEnumAsByte<EObjectTypeQuery>> ObjectTypes;
 
-	// Called every frame
-	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
-
-	UFUNCTION(BlueprintCallable)
-	void SetStaggerType(EStaggeringType StaggerType);
+	UFUNCTION()
+	TArray<TEnumAsByte<EObjectTypeQuery>> GetObjectTypes();
 
 	UFUNCTION()
 	AWeapon* GetCurrentWeapon();
-
-	UFUNCTION()
-	void ResetAttackValues();
-
-	//UFUNCTION()
-	//UPhysicalMaterial* GetPhysicalMaterial(UPrimitiveComponent* OverlappedComponent);
 
 	UFUNCTION()
 	UNiagaraSystem* GetWeaponTrail();

@@ -4,7 +4,6 @@
 
 #include "CoreMinimal.h"
 #include "Equipment.h"
-#include "StaggeringType.h"
 #include "Weapon.generated.h"
 
 /**
@@ -43,10 +42,6 @@ protected:
 	
 
 public:
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Attributes, meta = (AllowPrivateAccess))
-	float DamageMultiplier;
-
-
 	UFUNCTION()
 	FWeaponStats GetWeaponStats();
 

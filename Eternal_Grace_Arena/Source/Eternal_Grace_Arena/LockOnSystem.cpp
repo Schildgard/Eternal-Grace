@@ -6,6 +6,7 @@
 #include "Kismet/KismetMathLibrary.h"
 #include "Kismet/GameplayStatics.h"
 #include "Camera/CameraComponent.h"
+#include "CharacterAnimInstance.h"
 
 
 ULockOnSystem::ULockOnSystem()
@@ -28,13 +29,17 @@ void ULockOnSystem::LockOnTarget(AEternal_Grace_ArenaCharacter* NewTarget, AEter
 
 void ULockOnSystem::UpdateLockOn(AEternal_Grace_ArenaCharacter* LockingActor, float DeltaSeconds)
 {
-	if(!LockedOnTarget ||!LockingActor)
+	if (!LockedOnTarget || !LockingActor)
 	{
 		return;
 	}
 	//IT IS WEIRD THAT THE LOCK ON SYSTEM GETS ITS PLAYER CONTROLLER BUT THE PLAYER CONTROLLER CALLS THIS FUNCTION..TODO: CHANGE THIS FUNCTION TO ONLY DO CALCULATIONS AND ROTATE IN THE CONTROLLER
-	APlayerController* CurrentPlayerController = UGameplayStatics::GetPlayerController(GetWorld(),0);
-	LockingActor->RotateTowardsTarget(LockedOnTarget);
+	APlayerController* CurrentPlayerController = UGameplayStatics::GetPlayerController(GetWorld(), 0);
+	//While sprinting the character rotates freely
+	if (!LockingActor->CharacterAnimationInstance->isRunning)
+	{
+		LockingActor->RotateTowardsTarget(LockedOnTarget);
+	}
 
 	//GET RELEVANT POSITIONS
 	FVector CameraPosition = LockingActor->GetFollowCamera()->GetComponentLocation();

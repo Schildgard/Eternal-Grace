@@ -34,7 +34,7 @@ void AEnemy_MushroomKing::LightAttack()
 				GetOffMeMove();
 			return;
 		}
-		else if (CheckDistancetoPlayer(450.f))
+		else if (CheckDistancetoPlayer(400.f))
 		{
 			RotateTowardsTarget(UGameplayStatics::GetPlayerCharacter(world, 0));
 			RandomAttackIndex = 0;
