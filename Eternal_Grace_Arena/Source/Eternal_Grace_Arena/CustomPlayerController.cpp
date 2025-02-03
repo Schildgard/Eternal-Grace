@@ -29,7 +29,6 @@ ACustomPlayerController::ACustomPlayerController()
 }
 void ACustomPlayerController::ShowYouDiedScreen()
 {
-	//CHECK IF YOU DIED SCREEN CLASS WAS ASSIGNED IN EDITOR
 	if (YouDiedScreenClass)
 	{
 		//CREATE OBJECT OF YOU DIED SCREEN CLASS
@@ -167,10 +166,6 @@ void ACustomPlayerController::BeginPlay()
 		HUDWidget = CreateWidget<UPlayer_UI_Bars>(this, HUDWidgetClass);
 		HUDWidget->AddToViewport();
 	}
-	else
-	{
-		UE_LOG(LogTemp, Error, TEXT("CustomPlayer Controller could not find HUDWidgetClass or HudWidget"))
-	}
 	PlayerCharacter = Cast<APlayerCharacter>(AcknowledgedPawn);
 	if (PlayerCharacter)
 	{
@@ -182,10 +177,6 @@ void ACustomPlayerController::BeginPlay()
 		{
 			PlayerCharacter->OnCharacterDeath.AddDynamic(ActiveGameInstance, &UEternalGrace_GameInstance::ResetHealthInformation);
 		}
-	}
-	else
-	{
-		UE_LOG(LogTemp, Error, TEXT("CustomPlayer Controller could not Cast to Player Class"))
 	}
 };
 

@@ -16,6 +16,7 @@ struct FWeaponStats
 {
 	GENERATED_BODY()
 
+	FWeaponStats(): BaseDamage(50.0f), StaminaCost(15.0f), PoiseDamage(20.0f){}
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Attributes")
 	float BaseDamage;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Attributes")

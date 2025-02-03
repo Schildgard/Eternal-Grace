@@ -19,6 +19,7 @@
 			"EternalGrace_GameState.gen.cpp.obj",
 			"EternalGrace_PlayerState.gen.cpp.obj",
 			"EternalGrace_TitleScreen.gen.cpp.obj",
+			"Eternal_Grace_Arena.init.gen.cpp.obj",
 			"Eternal_Grace_ArenaBoss.gen.cpp.obj",
 			"Eternal_Grace_ArenaCharacter.gen.cpp.obj",
 			"Eternal_Grace_ArenaEnemy.gen.cpp.obj",
@@ -28,8 +29,7 @@
 			"HealthComponent.gen.cpp.obj",
 			"HitEffectData.gen.cpp.obj",
 			"InteractableActor.gen.cpp.obj",
-			"InteractableActor_SceneLoader.gen.cpp.obj",
-			"Eternal_Grace_Arena.init.gen.cpp.obj"
+			"InteractableActor_SceneLoader.gen.cpp.obj"
 		],
 		"Module.Eternal_Grace_Arena.2.cpp.obj": [
 			"I_Damageable.gen.cpp.obj",
@@ -63,12 +63,12 @@
 			"StaminaComponent.gen.cpp.obj",
 			"TitleScreenGameMode.gen.cpp.obj",
 			"Weapon.gen.cpp.obj",
-			"WeaponComponent.gen.cpp.obj",
-			"PerModuleInline.gen.cpp.obj",
-			"AnimatedWidget.cpp.obj",
-			"AnimNotify_PlayRandomSound.cpp.obj"
+			"WeaponComponent.gen.cpp.obj"
 		],
 		"Module.Eternal_Grace_Arena.3.cpp.obj": [
+			"PerModuleInline.gen.cpp.obj",
+			"AnimatedWidget.cpp.obj",
+			"AnimNotify_PlayRandomSound.cpp.obj",
 			"BlendingWidget.cpp.obj",
 			"CharacterAnimInstance.cpp.obj",
 			"CustomPlayerController.cpp.obj",
@@ -79,9 +79,11 @@
 			"Enemy_WeaponMaster.cpp.obj",
 			"Equipment.cpp.obj",
 			"EternalGrace_BaseActor.cpp.obj",
+			"EternalGrace_GameInstance.cpp.obj",
 			"EternalGrace_GameMode.cpp.obj",
 			"EternalGrace_GameState.cpp.obj",
 			"EternalGrace_PlayerState.cpp.obj",
+			"EternalGrace_TitleScreen.cpp.obj",
 			"Eternal_Grace_Arena.cpp.obj",
 			"Eternal_Grace_ArenaBoss.cpp.obj",
 			"Eternal_Grace_ArenaCharacter.cpp.obj",
@@ -110,6 +112,7 @@
 			"NS_WeaponSwing_CollisionToggle.cpp.obj",
 			"PlayerCharacter.cpp.obj",
 			"Player_UI_Bars.cpp.obj",
+			"Shield.cpp.obj",
 			"ShieldComponent.cpp.obj",
 			"SpawnPoint.cpp.obj",
 			"Spell.cpp.obj",
@@ -122,11 +125,8 @@
 			"StaggeringType.cpp.obj",
 			"StaminaComponent.cpp.obj",
 			"TitleScreenGameMode.cpp.obj",
-			"WeaponComponent.cpp.obj",
-			"EternalGrace_GameInstance.cpp.obj",
-			"EternalGrace_TitleScreen.cpp.obj",
-			"Shield.cpp.obj",
-			"Weapon.cpp.obj"
+			"Weapon.cpp.obj",
+			"WeaponComponent.cpp.obj"
 		]
 	}
 }

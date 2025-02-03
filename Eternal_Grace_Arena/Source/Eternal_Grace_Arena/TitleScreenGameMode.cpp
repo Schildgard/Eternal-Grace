@@ -16,7 +16,11 @@ void ATitleScreenGameMode::BeginPlay()
 			{
 				CurrentController->SetShowMouseCursor(true);
 				TitleScreenObject->AddToViewport();
-			}UE_LOG(LogTemp, Error, TEXT("Failed to Create TitleScreen Object"))
+			}
+			else
+			{
+				UE_LOG(LogTemp, Error, TEXT("Failed to Create TitleScreen Object"))
+			}
 		}
 	}
 	else UE_LOG(LogTemp, Error, TEXT("No TitleScreen Class Assigned"))

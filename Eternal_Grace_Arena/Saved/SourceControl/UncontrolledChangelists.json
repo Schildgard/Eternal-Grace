@@ -5,14 +5,11 @@
 			"guid": "00000000000000000000000000000000",
 			"description": "Default Uncontrolled Changelist",
 			"files": [
-				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/StarterContent/Architecture/Floor_400x400.uasset",
-				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Blueprints/UI_Blueprints/BP_MainMenu.uasset",
-				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Blueprints/GameInstance_Blueprints/BP_EternalGrace_GameInstance.uasset",
-				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Blueprints/UI_Blueprints/BP_YouDiedWidget.uasset",
-				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/StarterContent/Materials/M_Ground_Moss.uasset",
-				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/ThirdPerson/Blueprints/BP_ThirdPersonCharacter.uasset",
-				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Blueprints/BP_MainMenu.uasset",
-				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Blueprints/BP_TestWeapon_Invisible.uasset"
+				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/StarterContent/Audio/Collapse01.uasset",
+				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Animations/PlayerAnimations/Combat/Stagger/Stagger_Frontal/ARPG_Warrior_Anim_UE_Hit_knockdown_RT.uasset",
+				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Animations/PlayerAnimations/Combat/Stagger/Stagger_Frontal/ARPG_Warrior_Anim_UE_Hit_knockdown2_RT.uasset",
+				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Animations/PlayerAnimations/Combat/Stagger/Stagger_Frontal/ARPG_Warrior_Anim_UE_Hit2_RT.uasset",
+				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Animations/PlayerAnimations/Combat/Stagger/Stagger_Frontal/ARPG_Warrior_Anim_UE_Hit1_RT.uasset"
 			]
 		}
 	]
