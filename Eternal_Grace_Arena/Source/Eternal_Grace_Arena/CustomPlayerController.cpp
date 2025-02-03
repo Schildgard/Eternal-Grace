@@ -73,6 +73,50 @@ void ACustomPlayerController::HandlePlayerDeath()
 	ShowYouDiedScreen();
 }
 
+void ACustomPlayerController::ShowLoadingScreen()
+{
+	//CHECK IF YOU DIED SCREEN CLASS WAS ASSIGNED IN EDITOR
+	if (LoadingScreenClass)
+	{
+		//CREATE OBJECT OF YOU DIED SCREEN CLASS
+		LoadingScreen = CreateWidget<UBlendingWidget>(this, LoadingScreenClass);
+		if (LoadingScreen)
+		{
+			//ACTIVATE YOU DIED SCREEN TO VIEWPORT
+			LoadingScreen->AddToViewport();
+			if (LoadingScreen->BlendingAnimation)
+			{
+				//ACTIVATE BLEND IN ANIMATION
+				LoadingScreen->PlayAnimation(LoadingScreen->BlendingAnimation);
+				//BIND LEVEL RELOAD TO YOU DIED SCREEN
+				FWidgetAnimationDynamicEvent Reload;
+				Reload.BindDynamic(this, &ACustomPlayerController::ReloadLevel);
+				LoadingScreen->BindToAnimationFinished(LoadingScreen->BlendOutAnimation, Reload);
+			}
+			//DEACTIVATE INPUT
+			FInputModeUIOnly InputMode;
+			SetInputMode(InputMode);
+		}
+	}
+}
+
+void ACustomPlayerController::HideLoadingScreen()
+{
+	//PROBABLY UNNECCESSARY
+	if (LoadingScreen)
+	{
+		LoadingScreen->RemoveFromViewport();
+		//REACTIVATE INPUT
+		FInputModeGameOnly InputMode;
+		SetInputMode(InputMode);
+	}
+}
+
+void ACustomPlayerController::HandleLoadingScreen()
+{
+	ShowLoadingScreen();
+}
+
 
 void ACustomPlayerController::ToggleLockOn()
 {

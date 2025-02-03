@@ -38,6 +38,14 @@ public:
 	TSubclassOf<UUserWidget> YouDiedScreenClass;
 	UPROPERTY()
 	UBlendingWidget* YouDiedWidget;
+	//LOADING SCREEN HANDLING
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (AllowPrivateAccess))
+	TSubclassOf<UUserWidget> LoadingScreenClass;
+	UPROPERTY()
+	UBlendingWidget* LoadingScreen;
+
+
+
 
 	UFUNCTION()
 	void ShowYouDiedScreen();
@@ -45,6 +53,14 @@ public:
 	void HideYouDiedScreen();
 	UFUNCTION()
 	void HandlePlayerDeath();
+
+	UFUNCTION()
+	void ShowLoadingScreen();
+	UFUNCTION()
+	void HideLoadingScreen();
+	UFUNCTION()
+	void HandleLoadingScreen();
+
 
 
 protected:

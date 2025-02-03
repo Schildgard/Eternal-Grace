@@ -63,7 +63,6 @@ void AInteractableActor_SceneLoader::BeginPlay()
 
 void AInteractableActor_SceneLoader::LoadLevel()
 {
-	//UWorld* LoadedLevel = LevelToLoad.Get();
 	if (!LevelNameToLoad.IsNone())
 	{
 		UGameplayStatics::OpenLevel(this, LevelNameToLoad);

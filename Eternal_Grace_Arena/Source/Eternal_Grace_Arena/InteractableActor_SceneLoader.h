@@ -32,16 +32,4 @@ protected:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Scene Loading", meta = (AllowPrivateAccess))
 	FName LevelNameToLoad;
-
-
-	//COMMUNICATION WITH GAME INSTANCE
-	//UPROPERTY()
-	//UEternalGrace_GameInstance* ActiveGameInstance;
-	//UPROPERTY(EditAnywhere, BlueprintReadWrite,Category = "Scene Loading", meta = (AllowPrivateAccess))
-	//bool isActive;
-	//UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "State")
-	//FName UniqueID;
-	//
-	//UFUNCTION()
-	//void UpdateStatus();
 };

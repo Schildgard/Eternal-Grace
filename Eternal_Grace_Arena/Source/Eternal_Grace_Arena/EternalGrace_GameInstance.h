@@ -34,10 +34,10 @@ protected:
 	TMap<FName, bool> WinConditionDependencies;
 
 
-//	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (AllowPrivateAccess))
-//	TSubclassOf<UUserWidget> LoadingScreenClass;
-//	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (AllowPrivateAccess))
-//	UBlendingWidget* LoadingScreen;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (AllowPrivateAccess))
+	TSubclassOf<UUserWidget> LoadingScreenClass;
+	UPROPERTY()
+	UBlendingWidget* LoadingScreen;
 
 
 

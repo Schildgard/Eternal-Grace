@@ -6,6 +6,7 @@
 #include "PlayerCharacter.h"
 #include "EternalGrace_PlayerState.h"
 #include "Kismet/GameplayStatics.h"
+#include "Kismet/KismetSystemLibrary.h"
 #include "HealthComponent.h"
 #include "BlendingWidget.h"
 
@@ -45,7 +46,11 @@ void UEternalGrace_GameInstance::OnMapEnter(UWorld* LoadedWorld)
 	{
 		PlayerCharacter->HealthComponent->CurrentHealth = GetHealthInfo();
 	}
-	else UE_LOG(LogTemp, Error, TEXT("GameInstance: Failed to Cast Player On Map Enter Function"))
+	else
+	{
+
+		UE_LOG(LogTemp, Error, TEXT("GameInstance: Failed to Cast Player On Map Enter Function"))
+	}
 }
 
 void UEternalGrace_GameInstance::OnMapLeave()
@@ -57,7 +62,25 @@ void UEternalGrace_GameInstance::OnMapLeave()
 		UploadHealthInfo(PlayerCharacter->HealthComponent->CurrentHealth);
 	}
 	else
+	{
 		UE_LOG(LogTemp, Error, TEXT("GameInstance: Failed to Cast Player On Map Leave Function"))
+	}
+
+	//RUFE HIER LOADING SCREEN AUF
+	if (LoadingScreenClass)
+	{
+		UE_LOG(LogTemp, Error, TEXT("GOOD DOOL"))
+			LoadingScreen = CreateWidget<UBlendingWidget>(this, LoadingScreenClass);
+		if (LoadingScreen)
+		{
+			//ACTIVATE YOU DIED SCREEN TO VIEWPORT
+			LoadingScreen->AddToViewport();
+			if (LoadingScreen->BlendingAnimation)
+			{
+				//LoadingScreen->PlayAnimation(LoadingScreen->BlendingAnimation);
+			}
+		}
+	}
 }
 
 void UEternalGrace_GameInstance::SetObjectState(FName ObjectID, bool NewValue)

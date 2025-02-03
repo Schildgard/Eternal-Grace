@@ -29,10 +29,10 @@
 			"HitEffectData.gen.cpp.obj",
 			"InteractableActor.gen.cpp.obj",
 			"InteractableActor_SceneLoader.gen.cpp.obj",
-			"I_Damageable.gen.cpp.obj",
-			"I_Interactable.gen.cpp.obj"
+			"I_Damageable.gen.cpp.obj"
 		],
 		"Module.Eternal_Grace_Arena.2.cpp.obj": [
+			"I_Interactable.gen.cpp.obj",
 			"I_Targetable.gen.cpp.obj",
 			"LockOnSystem.gen.cpp.obj",
 			"NS_CancelMontage.gen.cpp.obj",
@@ -68,13 +68,13 @@
 			"BlendingWidget.cpp.obj",
 			"CharacterAnimInstance.cpp.obj",
 			"CustomPlayerController.cpp.obj",
-			"Damage_Spells.cpp.obj",
+			"Damage_Spells.cpp.obj"
+		],
+		"Module.Eternal_Grace_Arena.3.cpp.obj": [
 			"Enemy_MageBoss.cpp.obj",
 			"Enemy_MushroomKing.cpp.obj",
 			"Enemy_UI_Healthbar.cpp.obj",
-			"Enemy_WeaponMaster.cpp.obj"
-		],
-		"Module.Eternal_Grace_Arena.3.cpp.obj": [
+			"Enemy_WeaponMaster.cpp.obj",
 			"Equipment.cpp.obj",
 			"EternalGrace_BaseActor.cpp.obj",
 			"EternalGrace_GameInstance.cpp.obj",
