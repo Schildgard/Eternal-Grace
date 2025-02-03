@@ -15,8 +15,9 @@
 UEternalGrace_GameInstance::UEternalGrace_GameInstance()
 {
 	//IT IS CRUCIAL THAT THE MAIN LEVEL IS NAMED EXACTLY THE SAME WAY AS THIS PROPERTY
-	MainWorldName = FName("Level_Main");
+	MainWorldName = FName("Level_Hub");
 	WinCondition = false;
+	LoadingScreen = nullptr;
 }
 
 void UEternalGrace_GameInstance::UploadHealthInfo(float HealthFromPlayer)
@@ -68,7 +69,6 @@ void UEternalGrace_GameInstance::OnMapLeave()
 		UE_LOG(LogTemp, Error, TEXT("GameInstance: Failed to Cast Player On Map Leave Function"))
 	}
 
-	//RUFE HIER LOADING SCREEN AUF
 	if (LoadingScreenClass)
 	{
 		UE_LOG(LogTemp, Error, TEXT("GOOD DOOL"))
@@ -107,7 +107,6 @@ void UEternalGrace_GameInstance::SetObjectState(FName ObjectID, bool NewValue)
 	if (!WinCondition)
 	{
 		CheckWinConditionChange();
-
 	}
 }
 
@@ -128,18 +127,14 @@ FName UEternalGrace_GameInstance::GetMainWorldName()
 
 void UEternalGrace_GameInstance::CheckWinConditionChange()
 {
-	UE_LOG(LogTemp, Error, TEXT("PERFORM WIN CONDITION CHECK"))
 		//ITERATE THROUGH EVERY WIN CONDITION
 		for (const TPair<FName, bool>& Dependency : WinConditionDependencies)
 		{
-			UE_LOG(LogTemp, Error, TEXT("CHECK WINCONDITION: %s"), *Dependency.Key.ToString())
 				//CHECK IF THIS CONDITION IS MET IN OBJECTSTATES
 				if (bool* ConditionIsMet = ObjectStates.Find(Dependency.Key))
 				{
-					UE_LOG(LogTemp, Error, TEXT("WIN CONDITION IS IN ObJECT STATES "));
 					if (*ConditionIsMet != Dependency.Value)
 					{
-						UE_LOG(LogTemp, Error, TEXT("Condition is not Met %s"), *Dependency.Key.ToString())
 							return;
 					}
 				}

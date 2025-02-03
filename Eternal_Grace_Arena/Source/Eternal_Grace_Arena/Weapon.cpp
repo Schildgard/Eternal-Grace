@@ -8,10 +8,10 @@
 
 AWeapon::AWeapon()
 {
-	Stats = { 50.0f,20.0f,15.0f };
-	//Stats.BaseDamage = 50.0f;
-	//Stats.PoiseDamage = 20.0f;
-	//Stats.StaminaCost = 15.0f;
+
+	Stats.BaseDamage = 50.0f;
+	Stats.StaminaCost = 15.0f;
+	Stats.PoiseDamage = 20.0f;
 	ColliderComponent = CreateDefaultSubobject<UCapsuleComponent>(TEXT("Hitbox"));
 	
 }

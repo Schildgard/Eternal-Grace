@@ -34,6 +34,8 @@ protected:
 	UPROPERTY(meta=(BindWidgetAnimOptional), Transient)
 	UWidgetAnimation* ScrollAnimation;
 
+//	UPROPERTY()
+//	UEternalGrace_GameInstance* ActivGameInstance;
 
 	UFUNCTION()
 	void StartGame();

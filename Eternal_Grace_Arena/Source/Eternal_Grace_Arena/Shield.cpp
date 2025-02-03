@@ -6,12 +6,11 @@
 
 AShield::AShield()
 {
-	Stats =
-	{
-		100.0f,
-		50.0f,
-		nullptr,
-	};
+
+	Stats.PhysicalDamageReduction = 100.0f;
+	Stats.Stability = 50.0f;
+	Stats.PhysicalMaterial = nullptr;
+
 }
 
 FShieldStats AShield::GetShieldStats()

@@ -31,7 +31,9 @@ void UEternalGrace_TitleScreen::StartGame()
 		UEternalGrace_GameInstance* CustomInstance = Cast<UEternalGrace_GameInstance>(CurrentInstance);
 		if (CustomInstance)
 		{
-			UGameplayStatics::OpenLevel(GetWorld(), CustomInstance->GetMainWorldName());
+			CustomInstance->SetLevelToLoad("Level_Hub");
+			CustomInstance->OnMapLeave();
+			FCoreUObjectDelegates::PostLoadMapWithWorld.AddUObject(CustomInstance, &UEternalGrace_GameInstance::OnMapEnter);
 		}
 		else UE_LOG(LogTemp, Error, TEXT("TitleScreen Could not Get Custom-GameInstance"))
 	}
