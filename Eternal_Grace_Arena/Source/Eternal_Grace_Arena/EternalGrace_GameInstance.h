@@ -38,6 +38,8 @@ protected:
 	TSubclassOf<UUserWidget> LoadingScreenClass;
 	UPROPERTY()
 	UBlendingWidget* LoadingScreen;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Scene Loading", meta = (AllowPrivateAccess))
+	FName LevelNameToLoad;
 
 
 
@@ -70,4 +72,12 @@ public:
 
 	UFUNCTION()
 	void CheckWinConditionChange();
+
+	UFUNCTION()
+	void SetLevelToLoad(FName LevelName);
+
+	UFUNCTION()
+	void LoadLevel();
+	UFUNCTION()
+	void EnterLevel();
 };

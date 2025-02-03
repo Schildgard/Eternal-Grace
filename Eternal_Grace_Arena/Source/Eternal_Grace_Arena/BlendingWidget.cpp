@@ -6,7 +6,10 @@
 
 void UBlendingWidget::PlayAnimationSound()
 {
-	UGameplayStatics::PlaySound2D(this, AnimationSound);
+	if (AnimationSound)
+	{
+		UGameplayStatics::PlaySound2D(this, AnimationSound);
+	}
 }
 
 void UBlendingWidget::BlendOut()

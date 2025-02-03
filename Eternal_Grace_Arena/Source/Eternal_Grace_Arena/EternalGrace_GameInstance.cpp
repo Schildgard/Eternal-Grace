@@ -9,6 +9,8 @@
 #include "Kismet/KismetSystemLibrary.h"
 #include "HealthComponent.h"
 #include "BlendingWidget.h"
+#include "Engine/StreamableManager.h"
+#include "Engine/AssetManager.h"
 
 UEternalGrace_GameInstance::UEternalGrace_GameInstance()
 {
@@ -77,7 +79,11 @@ void UEternalGrace_GameInstance::OnMapLeave()
 			LoadingScreen->AddToViewport();
 			if (LoadingScreen->BlendingAnimation)
 			{
-				//LoadingScreen->PlayAnimation(LoadingScreen->BlendingAnimation);
+				LoadingScreen->PlayAnimation(LoadingScreen->BlendingAnimation);
+				//NOW TRIGGER LOAD LEVEL WHEN LOADING SCREEN BLENDET IN
+				FWidgetAnimationDynamicEvent load;
+				load.BindDynamic(this, &UEternalGrace_GameInstance::LoadLevel);
+				LoadingScreen->BindToAnimationFinished(LoadingScreen->BlendingAnimation, load);
 			}
 		}
 	}
@@ -148,6 +154,36 @@ void UEternalGrace_GameInstance::CheckWinConditionChange()
 	UE_LOG(LogTemp, Error, TEXT("ALL WIN CONDITION MET"))
 		WinCondition = true;
 	ObjectStates.Add("Exit", true);
+}
+
+void UEternalGrace_GameInstance::SetLevelToLoad(FName LevelName)
+{
+	LevelNameToLoad = LevelName;
+}
+
+void UEternalGrace_GameInstance::LoadLevel()
+{
+	// CREATE SOFT PATH TO LEVEL. THIS IS NECCESSARY DUE TO COMPLICATIONS ON LEVEL LOAD/UNLOAD WHILE USING REGULAR POINTERS
+	FString LevelPath = FString::Printf(TEXT("/Game/Levels"), *LevelNameToLoad.ToString());
+	FSoftObjectPath LevelSoftPath(LevelPath);
+	if (LevelSoftPath.IsValid())
+	{
+		FStreamableManager& StreamManager = UAssetManager::GetStreamableManager();
+		StreamManager.RequestAsyncLoad(LevelSoftPath, FStreamableDelegate::CreateUObject(this, &UEternalGrace_GameInstance::EnterLevel));
+	}
+	else UE_LOG(LogTemp, Warning, TEXT("%s Failed to create Softpath to Level"), *GetName())
+}
+
+void UEternalGrace_GameInstance::EnterLevel()
+{
+	if (!LevelNameToLoad.IsNone())
+	{
+		UGameplayStatics::OpenLevel(this, LevelNameToLoad);
+	}
+	else
+	{
+		UE_LOG(LogTemp, Warning, TEXT("LoadLevel Function was called but LevelToLoad could not be getted."))
+	}
 }
 
 

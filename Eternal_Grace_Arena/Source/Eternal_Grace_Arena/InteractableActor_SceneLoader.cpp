@@ -8,6 +8,7 @@
 #include "Blueprint/UserWidget.h"
 #include "EternalGrace_GameState.h"
 #include "EternalGrace_GameInstance.h"
+#include "AnimatedWidget.h"
 
 AInteractableActor_SceneLoader::AInteractableActor_SceneLoader()
 {
@@ -27,16 +28,8 @@ void AInteractableActor_SceneLoader::Interact_Implementation()
 		}
 		else
 		{
-			// CREATE SOFT PATH TO LEVEL. THIS IS NECCESSARY DUE TO COMPLICATIONS ON LEVEL LOAD/UNLOAD WHILE USING REGULAR POINTERS
-			FString LevelPath = FString::Printf(TEXT("/Game/Levels"), *LevelNameToLoad.ToString());
-			FSoftObjectPath LevelSoftPath(LevelPath);
-			if (LevelSoftPath.IsValid())
-			{
-				FStreamableManager& StreamManager = UAssetManager::GetStreamableManager();
-				StreamManager.RequestAsyncLoad(LevelSoftPath, FStreamableDelegate::CreateUObject(this, &AInteractableActor_SceneLoader::LoadLevel));
-				// BROADCAST THAT A MAPCHANGE IS HAPPENING. LISTENERS ARE FOR EXAMPLE THE GAMEINSTANCE WHICH SAVES PLAYER VALUES AND RETURNS THEM TO NEW PLAYER INSTANCE ON LEVEL LOAD
-				OnInteract.Broadcast();
-			} else UE_LOG(LogTemp, Warning, TEXT("%s Failed to create Softpath to Level"), *GetName())
+			ActiveGameInstance->SetLevelToLoad(LevelNameToLoad);
+			OnInteract.Broadcast();
 		}
 	}
 	else
@@ -78,13 +71,23 @@ void AInteractableActor_SceneLoader::OnBeginOverlap(UPrimitiveComponent* Overlap
 	if (InteractInfoWidget && !InteractInfoWidget->IsInViewport())
 	{
 		InteractInfoWidget->AddToViewport();
+		if (InteractInfoWidget->GetBlendInAnimation())
+		{
+			InteractInfoWidget->PlayAnimation(InteractInfoWidget->GetBlendInAnimation());
+		}
+		if (InteractInfoWidget->GetBlendOutAnimation())
+		{
+			FWidgetAnimationDynamicEvent EndDelegate;
+			EndDelegate.BindDynamic(InteractInfoWidget, &UAnimatedWidget::BlendOut);
+			InteractInfoWidget->BindToAnimationFinished(InteractInfoWidget->GetBlendOutAnimation(), EndDelegate);
+		}
 	}
 }
 
 void AInteractableActor_SceneLoader::OnOverlapEnd(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComponent, int32 OtherBodyIndex)
 {
-	if (InteractInfoWidget && InteractInfoWidget->IsInViewport())
+	if (InteractInfoWidget->GetBlendOutAnimation())
 	{
-		InteractInfoWidget->RemoveFromViewport();
+		InteractInfoWidget->PlayAnimation(InteractInfoWidget->GetBlendOutAnimation());
 	}
 }
