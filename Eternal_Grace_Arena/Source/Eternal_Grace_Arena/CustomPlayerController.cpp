@@ -54,6 +54,8 @@ void ACustomPlayerController::ShowYouDiedScreen()
 		}
 	}
 }
+
+
 void ACustomPlayerController::HideYouDiedScreen()
 {
 	//PROBABLY UNNECCESSARY
@@ -201,7 +203,7 @@ void ACustomPlayerController::Tick(float DeltaSeconds)
 		HUDWidget->UpdateProgressBar(HUDWidget->Staminabar, PlayerCharacter->StaminaComponent->MaxStamina, PlayerCharacter->StaminaComponent->CurrentStamina);
 	}
 
-	if(LockOnSystem && LockOnSystem->GetLockedOnTarget())
+	if (LockOnSystem && LockOnSystem->GetLockedOnTarget())
 	{
 		LockOnSystem->UpdateLockOn(PlayerCharacter, DeltaSeconds);
 	}

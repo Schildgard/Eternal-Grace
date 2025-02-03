@@ -19,7 +19,7 @@ class ETERNAL_GRACE_ARENA_API UPlayer_UI_Bars : public UEternal_Grace_ProgressBa
 	UProgressBar* Healthbar;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = UI, meta = (BindWidget))
 	UProgressBar* Staminabar;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = UI, meta = (BindWidget))
-	UProgressBar* Pressurebar;
+	//UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = UI, meta = (BindWidget))
+	//UProgressBar* Pressurebar;
 	
 };

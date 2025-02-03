@@ -38,6 +38,7 @@ public:
 	TSubclassOf<UUserWidget> YouDiedScreenClass;
 	UPROPERTY()
 	UBlendingWidget* YouDiedWidget;
+
 	UFUNCTION()
 	void ShowYouDiedScreen();
 	UFUNCTION()
@@ -71,15 +72,9 @@ protected:
 
  protected:
 	 virtual void SetupInputComponent() override;
-
-	//REFERENCE TO CURRENT GAMEINSTANCE
-
 	virtual void BeginPlay()override;
 	virtual void Tick(float DeltaSeconds)override;
 
 	UFUNCTION()
 	void ReloadLevel();
-
-
-
 };

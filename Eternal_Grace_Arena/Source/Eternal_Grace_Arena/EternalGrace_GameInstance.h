@@ -10,6 +10,7 @@
  *
  */
  //WORLD UPDATE MEANS WHEN SOMETHING HAPPENES THAT CHANGES THINGS IN THE WORLD, LIKE DEFEATING A BOSS WHICH CHANGES oBJECTSTATES 
+class UBlendingWidget;
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnWorldUpdate);
 
 UCLASS()
@@ -31,6 +32,12 @@ protected:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (AllowPrivateAccess))
 	TMap<FName, bool> WinConditionDependencies;
+
+
+//	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (AllowPrivateAccess))
+//	TSubclassOf<UUserWidget> LoadingScreenClass;
+//	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (AllowPrivateAccess))
+//	UBlendingWidget* LoadingScreen;
 
 
 
@@ -63,6 +70,4 @@ public:
 
 	UFUNCTION()
 	void CheckWinConditionChange();
-
-
 };

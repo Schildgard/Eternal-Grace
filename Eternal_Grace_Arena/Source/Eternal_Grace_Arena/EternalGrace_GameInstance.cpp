@@ -7,6 +7,7 @@
 #include "EternalGrace_PlayerState.h"
 #include "Kismet/GameplayStatics.h"
 #include "HealthComponent.h"
+#include "BlendingWidget.h"
 
 UEternalGrace_GameInstance::UEternalGrace_GameInstance()
 {
@@ -77,19 +78,7 @@ void UEternalGrace_GameInstance::SetObjectState(FName ObjectID, bool NewValue)
 	if (!WinCondition)
 	{
 		CheckWinConditionChange();
-		//		//ITERATE THROUGH DICTIONARY
-		//		for (const TPair<FName, bool>& Depency : WinConditionDependencies)
-		//		{
-		//			//SET ACTIVE STATUS TO TRUE IF THE STATUS OF ALL RELATED OBJECTS MEETS EXPECTED CRITERIA
-		//			if (Depency.Value != true)
-		//			{
-		//				return;
-		//			}
-		//		}
-		//		WinCondition = true;
-		//		ObjectStates.Add("Exit", true);
-		//		UE_LOG(LogTemp, Error, TEXT("WIN CONDITION MET"))
-		//			return;
+
 	}
 }
 
