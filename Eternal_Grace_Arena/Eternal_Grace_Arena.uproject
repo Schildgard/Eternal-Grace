@@ -40,5 +40,8 @@
 			"Name": "ChaosClothAssetEditor",
 			"Enabled": true
 		}
+	],
+	"TargetPlatforms": [
+		"Windows"
 	]
 }
