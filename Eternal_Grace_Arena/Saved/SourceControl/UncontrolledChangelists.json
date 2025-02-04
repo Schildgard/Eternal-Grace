@@ -5,34 +5,8 @@
 			"guid": "00000000000000000000000000000000",
 			"description": "Default Uncontrolled Changelist",
 			"files": [
-				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/StarterContent/Audio/Collapse01.uasset",
-				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Animations/PlayerAnimations/Combat/Stagger/Stagger_Frontal/ARPG_Warrior_Anim_UE_Hit_knockdown_RT.uasset",
-				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Animations/PlayerAnimations/Combat/Stagger/Stagger_Frontal/ARPG_Warrior_Anim_UE_Hit_knockdown2_RT.uasset",
-				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Animations/PlayerAnimations/Combat/Stagger/Stagger_Frontal/ARPG_Warrior_Anim_UE_Hit2_RT.uasset",
-				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Animations/PlayerAnimations/Combat/Stagger/Stagger_Frontal/ARPG_Warrior_Anim_UE_Hit1_RT.uasset",
-				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Animations/CustomRetargeting/RTG_WeaponMasterToKnight.uasset",
-				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Animations/CustomRetargeting/IK_WeaponMaster.uasset",
-				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Animations/CustomRetargeting/IK_Knight.uasset",
-				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Animations/DarkKnightAnimations/Fixed_Animations/Idle/GreatSword_Idle_1_Inplace_RT.uasset",
-				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Animations/DarkKnightAnimations/Fixed_Animations/Idle/GreatSword_Idle_Inplace_RT.uasset",
-				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Animations/DarkKnightAnimations/Fixed_Animations/Idle/AS_DarkKnight__Idle01_RT.uasset",
-				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Animations/DarkKnightAnimations/Fixed_Animations/Idle/AS_DarkKnight_Idle02_RT.uasset",
-				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Animations/DarkKnightAnimations/Fixed_Animations/Attacks/AM_WeaponMaster_Backslash_RT.uasset",
-				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Animations/DarkKnightAnimations/Fixed_Animations/Attacks/AM_WeaponMaster_HomeRun_RT.uasset",
-				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Animations/DarkKnightAnimations/Fixed_Animations/Attacks/GreatSword_Attack01_Root_RT.uasset",
-				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Animations/DarkKnightAnimations/Fixed_Animations/Attacks/GreatSword_FocusEnergy_L_Start_1_Root_RT.uasset",
-				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Animations/DarkKnightAnimations/Fixed_Animations/Attacks/GreatSword_SPAttack1_2_Root_RT.uasset",
-				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Animations/DarkKnightAnimations/Fixed_Animations/Attacks/test_RT.uasset",
-				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Animations/DarkKnightAnimations/Fixed_Animations/Attacks/fixed_test_RT.uasset",
-				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Blueprints/CharacterBlueprints/BP_DarkKnight.uasset",
-				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/GreatSword_Attack01_Root_RTTTT.uasset",
-				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/test_RTTTT.uasset",
-				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Blueprints/AnimationBlueprints/ABP_DarkKnight.uasset",
-				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Animations/DarkKnightAnimations/Movement/BS_WM_WalkRun_RT.uasset",
-				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Animations/DarkKnightAnimations/Movement/Test/BS_MF_Unarmed_WalkRun_Male_RT.uasset",
-				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Animations/DarkKnightAnimations/Idle/GreatSword_Idle_Inplace_RT.uasset",
-				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Animations/DarkKnightAnimations/Idle/GreatSword_Idle_1_Inplace_RT.uasset",
-				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Animations/DarkKnightAnimations/Idle/GreatSword_Common_Idle_Inplace_RT.uasset"
+				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/StarterContent/Architecture/Floor_400x400.uasset",
+				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Levels/Level_Hub.umap"
 			]
 		}
 	]
