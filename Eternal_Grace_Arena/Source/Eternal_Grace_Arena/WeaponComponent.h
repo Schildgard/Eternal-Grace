@@ -4,11 +4,11 @@
 
 #include "CoreMinimal.h"
 #include "Components/SceneComponent.h"
-#include "StaggeringType.h"
 #include "WeaponComponent.generated.h"
 
 class AWeapon;
 class AEternal_Grace_ArenaCharacter;
+class UNiagaraSystem;
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
 class ETERNAL_GRACE_ARENA_API UWeaponComponent : public USceneComponent
 {
@@ -29,44 +29,36 @@ protected:
 	TSubclassOf<AWeapon> EquippedWeaponClass;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, meta = (AllowPrivateAccess))
 	AWeapon* EquippedWeapon;
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Collision)
-	TArray<AEternal_Grace_ArenaCharacter*> HittedActors;
+
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = HitEffect, meta = (AllowPrivateAccess))
 	UDataTable* HitEffectDataTable;
-	UPROPERTY()
-	EStaggeringType CurrentStaggerType;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Trail, meta = (AllowPrivateAccess))
+	UNiagaraSystem* WeaponTrail;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Trail, meta = (AllowPrivateAccess))
+	UNiagaraSystem* WeaponSparks;
 
 
-	UFUNCTION()
-	void DealDamage(UPrimitiveComponent* OverlappedComponent,
-		AActor* OtherActor,
-		UPrimitiveComponent* OtherComp,
-		int32 OtherBodyIndex,
-		bool bFromSweep,
-		const FHitResult& SweepResult);
-
-	UFUNCTION()
-	float CalculateAttackAngle(AActor* Target);
-	UFUNCTION()
-	void ApplyHitEffect(UPhysicalMaterial* PhysicalMaterial);
-
-
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = HitTrace, meta = (AllowPrivateAccess))
+	TArray<TEnumAsByte<EObjectTypeQuery>> ObjectTypes;
 
 public:	
-	// Called every frame
-	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
+	UFUNCTION()
+	float CalculateAttackAngle(AActor* Target);
 
-	UFUNCTION(BlueprintCallable)
-	void SetStaggerType(EStaggeringType StaggerType);
+
+	UFUNCTION()
+	TArray<TEnumAsByte<EObjectTypeQuery>> GetObjectTypes();
 
 	UFUNCTION()
 	AWeapon* GetCurrentWeapon();
 
 	UFUNCTION()
-	void ResetAttackValues();
-
-	
+	UNiagaraSystem* GetWeaponTrail();
 	UFUNCTION()
-	UPhysicalMaterial* GetPhysicalMaterial(UPrimitiveComponent* OverlappedComponent);
+	UNiagaraSystem* GetWeaponSparks();
+	UFUNCTION()
+	UDataTable* GetHitEffectDataTable();
 		
 };

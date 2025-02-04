@@ -39,6 +39,12 @@
     <Filter Include="Source\Eternal_Grace_Arena">
       <UniqueIdentifier>{31A7CE0D-C649-35D4-98CB-3D8F07305A35}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\Eternal_Grace_Arena\AnimatedWidget.cpp">
+      <Filter>Source\Eternal_Grace_Arena</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Eternal_Grace_Arena\AnimatedWidget.h">
+      <Filter>Source\Eternal_Grace_Arena</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\Eternal_Grace_Arena\AnimNotify_PlayRandomSound.cpp">
       <Filter>Source\Eternal_Grace_Arena</Filter>
     </ClCompile>
@@ -216,6 +222,12 @@
     <ClCompile Include="..\..\Source\Eternal_Grace_Arena\I_Targetable.h">
       <Filter>Source\Eternal_Grace_Arena</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\Eternal_Grace_Arena\LockOnSystem.cpp">
+      <Filter>Source\Eternal_Grace_Arena</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Eternal_Grace_Arena\LockOnSystem.h">
+      <Filter>Source\Eternal_Grace_Arena</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\Eternal_Grace_Arena\NS_CancelMontage.cpp">
       <Filter>Source\Eternal_Grace_Arena</Filter>
     </ClCompile>
@@ -246,6 +258,21 @@
     <ClCompile Include="..\..\Source\Eternal_Grace_Arena\NS_DrainStamina.h">
       <Filter>Source\Eternal_Grace_Arena</Filter>
     </ClCompile>
+<<<<<<< HEAD
+=======
+    <ClCompile Include="..\..\Source\Eternal_Grace_Arena\NS_Liftup.cpp">
+      <Filter>Source\Eternal_Grace_Arena</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Eternal_Grace_Arena\NS_Liftup.h">
+      <Filter>Source\Eternal_Grace_Arena</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Eternal_Grace_Arena\NS_PlayFootstepSound.cpp">
+      <Filter>Source\Eternal_Grace_Arena</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Eternal_Grace_Arena\NS_PlayFootstepSound.h">
+      <Filter>Source\Eternal_Grace_Arena</Filter>
+    </ClCompile>
+>>>>>>> main
     <ClCompile Include="..\..\Source\Eternal_Grace_Arena\NS_RotateTowardsTarget.cpp">
       <Filter>Source\Eternal_Grace_Arena</Filter>
     </ClCompile>
@@ -310,6 +337,12 @@
       <Filter>Source\Eternal_Grace_Arena</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\Eternal_Grace_Arena\SpellComponent.h">
+      <Filter>Source\Eternal_Grace_Arena</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Eternal_Grace_Arena\Spells_EffectArea.cpp">
+      <Filter>Source\Eternal_Grace_Arena</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Eternal_Grace_Arena\Spells_EffectArea.h">
       <Filter>Source\Eternal_Grace_Arena</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\Eternal_Grace_Arena\Spells_HomingProjectile.cpp">

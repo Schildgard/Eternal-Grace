@@ -6,6 +6,8 @@
 #include "Kismet/KismetMathLibrary.h"
 #include "Eternal_Grace_ArenaCharacter.h"
 #include "NiagaraFunctionLibrary.h"
+#include "CharacterAnimInstance.h"
+#include "ShieldComponent.h"
 #include "HealthComponent.h"
 
 
@@ -15,6 +17,9 @@ ADamage_Spells::ADamage_Spells()
 	DamageValue = 500.0f;
 	PoiseDamage = 100.0f;
 	HitSFX = nullptr;
+	isBlockable = true;
+
+	StaggerType = EStaggeringType::NormalStagger;
 
 }
 
@@ -44,7 +49,28 @@ void ADamage_Spells::DealDamage(AEternal_Grace_ArenaCharacter* Target)
 
 	if(Target->Implements<UI_Damageable>())
 	{
-		II_Damageable::Execute_GetDamage(Target,DamageValue, PoiseDamage, HitAngle, EStaggeringType::NormalStagger, InstigatingActor, false);//ONLY PROJECTILES CAN BE BLOCKED
+		if (!isBlockable)
+		{
+		II_Damageable::Execute_GetDamage(Target,DamageValue, PoiseDamage, HitAngle, StaggerType, InstigatingActor, false);//ONLY PROJECTILES CAN BE BLOCKED
+		}
+		else
+		{
+			bool AttackWasBlocked = false;
+			if (Target->ShieldComponent && Target->ShieldComponent->GetCurrentShield())
+			{
+				if (Target->CharacterAnimationInstance->isGuarding)
+				{
+					if (HitAngle <= 135.0f || HitAngle >= 180.0f)
+					{
+						AttackWasBlocked = true;
+					}
+				}
+			}
+
+			II_Damageable::Execute_GetDamage(Target, DamageValue, PoiseDamage, HitAngle, StaggerType, InstigatingActor, AttackWasBlocked);//ONLY PROJECTILES CAN BE BLOCKED
+		}
+
+
 	}
 	if (HitSFX)
 	{

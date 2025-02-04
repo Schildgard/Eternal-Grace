@@ -7,6 +7,13 @@
 #include "BlendingWidget.h"
 #include "Kismet/GameplayStatics.h"
 #include "EternalGrace_GameInstance.h"
+#include "LockOnSystem.h"
+#include "I_Targetable.h"
+#include "CharacterAnimInstance.h"
+#include "Eternal_Grace_ArenaCharacter.h"
+#include "EnhancedInputComponent.h"
+#include "EnhancedInputSubsystems.h"
+#include "Kismet/KismetMathLibrary.h"
 
 ACustomPlayerController::ACustomPlayerController()
 {
@@ -16,10 +23,12 @@ ACustomPlayerController::ACustomPlayerController()
 	YouDiedScreenClass = nullptr;
 	YouDiedWidget = nullptr;
 	ActiveGameInstance = nullptr;
+
+
+	LockOnSystem = CreateDefaultSubobject<ULockOnSystem>(TEXT("LockOnSystem"));
 }
 void ACustomPlayerController::ShowYouDiedScreen()
 {
-	//CHECK IF YOU DIED SCREEN CLASS WAS ASSIGNED IN EDITOR
 	if (YouDiedScreenClass)
 	{
 		//CREATE OBJECT OF YOU DIED SCREEN CLASS
@@ -44,9 +53,10 @@ void ACustomPlayerController::ShowYouDiedScreen()
 		}
 	}
 }
+
+
 void ACustomPlayerController::HideYouDiedScreen()
 {
-	//PROBABLY UNNECCESSARY
 	if (YouDiedWidget)
 	{
 		YouDiedWidget->RemoveFromViewport();
@@ -60,6 +70,93 @@ void ACustomPlayerController::HandlePlayerDeath()
 {
 	ShowYouDiedScreen();
 }
+
+
+
+void ACustomPlayerController::ToggleLockOn()
+{
+	if (LockOnSystem->GetLockedOnTarget())
+	{
+		LockOnSystem->UnlockTarget();
+		PlayerCharacter->CharacterAnimationInstance->isLockedOn = false;
+	}
+	else
+	{
+		AEternal_Grace_ArenaCharacter* Target = FindNearestTarget();
+		if (Target)
+		{
+			LockOnSystem->LockOnTarget(FindNearestTarget(), PlayerCharacter);
+			PlayerCharacter->CharacterAnimationInstance->isLockedOn = true;
+		}
+	}
+}
+
+
+AEternal_Grace_ArenaCharacter* ACustomPlayerController::FindNearestTarget()
+{
+	//GET SCANNED ACTOR ARRAY FROM SCAN FUNCTION
+	TArray<AActor*> ScannedActors = ScanForTargets();
+	if (ScannedActors.Num() <= 0)
+	{
+		UE_LOG(LogTemp, Warning, TEXT("Find Nearest Target: No Actors Scanned"))
+			return nullptr;
+	}
+
+	AActor* ClosestTarget = nullptr;
+	float comparison = 0.0f;
+	float distance = 10000.0f;
+
+	//ITERATE THROUGH SCANNED ACTORS TO FIND SMALLEST DISTANCE
+	for (AActor* Actor : ScannedActors)
+	{
+		comparison = PlayerCharacter->GetDistanceTo(Actor);
+		if (comparison <= distance)
+		{
+			distance = comparison; //SAVE SMALLEST DISTANCE
+			ClosestTarget = Actor; //SAVE ACTOR IF DISTANCE IS SMALLEST
+		}
+	}
+
+	AEternal_Grace_ArenaCharacter* NewTarget = Cast<AEternal_Grace_ArenaCharacter>(ClosestTarget);
+	return NewTarget;
+}
+
+TArray<AActor*> ACustomPlayerController::ScanForTargets()
+{
+	FVector PlayerPosition = PlayerCharacter->GetActorLocation();
+	TArray<FHitResult> ScanHits; //SET UP A LIST FOR HITTED OBJECTS
+	TArray<AActor*> ActorsToIgnore; //SET UP A LIST SO ACTORS WONT GET SCANNED MULTIPLE TIMES
+	TArray<AActor*> ScannedActors;
+	UKismetSystemLibrary::SphereTraceMultiForObjects(GetWorld(), PlayerPosition, PlayerPosition, 750.0f, ObjectTypes, true, ActorsToIgnore, EDrawDebugTrace::None, ScanHits, true, FLinearColor::Red, FLinearColor::Green, 5.0f);
+
+	if (ScanHits.Num() > 0)
+	{
+		//ITERARE THROUGH SCANHITS
+		for (const FHitResult& Hit : ScanHits)
+		{
+			AActor* HitActor = Hit.GetActor();
+			//ADD HITTED ACTOR TO IGNORE AND VIABLE TARGET LIST
+			if (HitActor && HitActor != PlayerCharacter && !ActorsToIgnore.Contains(HitActor) && HitActor->Implements<UI_Targetable>())
+			{
+				ScannedActors.Add(HitActor);
+				ActorsToIgnore.Add(HitActor);
+			}
+		}
+	}
+	return ScannedActors;
+}
+
+
+
+
+void ACustomPlayerController::SetupInputComponent()
+{
+	Super::SetupInputComponent();
+	if (UEnhancedInputComponent* EnhancedInputComponent = Cast<UEnhancedInputComponent>(InputComponent))
+	{
+		EnhancedInputComponent->BindAction(ToggleLockOnAction, ETriggerEvent::Triggered, this, &ACustomPlayerController::ToggleLockOn);
+	}
+}
 void ACustomPlayerController::BeginPlay()
 {
 	Super::BeginPlay();
@@ -68,10 +165,6 @@ void ACustomPlayerController::BeginPlay()
 	{
 		HUDWidget = CreateWidget<UPlayer_UI_Bars>(this, HUDWidgetClass);
 		HUDWidget->AddToViewport();
-	}
-	else
-	{
-		UE_LOG(LogTemp, Error, TEXT("CustomPlayer Controller could not find HUDWidgetClass or HudWidget"))
 	}
 	PlayerCharacter = Cast<APlayerCharacter>(AcknowledgedPawn);
 	if (PlayerCharacter)
@@ -85,10 +178,6 @@ void ACustomPlayerController::BeginPlay()
 			PlayerCharacter->OnCharacterDeath.AddDynamic(ActiveGameInstance, &UEternalGrace_GameInstance::ResetHealthInformation);
 		}
 	}
-	else
-	{
-		UE_LOG(LogTemp, Error, TEXT("CustomPlayer Controller could not Cast to Player Class"))
-	}
 };
 
 void ACustomPlayerController::Tick(float DeltaSeconds)
@@ -98,6 +187,11 @@ void ACustomPlayerController::Tick(float DeltaSeconds)
 	{
 		HUDWidget->UpdateProgressBar(HUDWidget->Healthbar, PlayerCharacter->HealthComponent->MaxHealth, PlayerCharacter->HealthComponent->CurrentHealth);
 		HUDWidget->UpdateProgressBar(HUDWidget->Staminabar, PlayerCharacter->StaminaComponent->MaxStamina, PlayerCharacter->StaminaComponent->CurrentStamina);
+	}
+
+	if (LockOnSystem && LockOnSystem->GetLockedOnTarget())
+	{
+		LockOnSystem->UpdateLockOn(PlayerCharacter, DeltaSeconds);
 	}
 }
 

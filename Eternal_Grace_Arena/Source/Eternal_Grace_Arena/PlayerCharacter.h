@@ -24,10 +24,6 @@ class ETERNAL_GRACE_ARENA_API APlayerCharacter : public AEternal_Grace_ArenaChar
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess))
 	UInputAction* GuardCounterAction;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess))
-	UInputAction* ToggleLockOnAction;
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess))
-	UInputAction* SwitchLockOnTargetAction;
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess))
 	UInputAction* InteractAction;
 
 
@@ -37,29 +33,6 @@ public:
 	UStaminaComponent* StaminaComponent;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Attribtues, meta = (AllowPrivateAccess))
 	float RunningStaminaConsumption;
-	
-
-	//LOCKON PROPERTIES
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = LockOn, meta = (AllowPrivateAccess))
-	TArray<TEnumAsByte<EObjectTypeQuery>> ObjectTypes;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = LockOn, meta = (AllowPrivateAccess))
-	AActor* LockedOnTarget;
-
-
-
-	//LOCK ON FUNCTIONS
-	UFUNCTION()
-	virtual void ToggleLockOn();
-	UFUNCTION()
-	virtual void SwitchLockOnTarget();
-	UFUNCTION()
-	AActor* FindNearestTarget();
-	UFUNCTION()
-	virtual TArray<AActor*> ScanForTargets();
-	UFUNCTION()
-	void EngageLockOn(AActor* Target);
-	UFUNCTION()
-	void DisengageLockOn();
 
 	//GUARD COUNTER
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animation, meta = (AllowPrivateAccess))

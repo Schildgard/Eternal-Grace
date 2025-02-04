@@ -108,6 +108,7 @@ public:
 
 	virtual void GetDamage_Implementation(float Damage, float PoiseDamage, float DamageDirection, EStaggeringType StaggerType, AEternal_Grace_ArenaCharacter* DamageSource, bool Blocked)override;
 	virtual void Die_Implementation()override;
+	virtual void FellOutOfWorld(const class UDamageType& dmgType);
 
 
 
@@ -140,8 +141,10 @@ protected:
 	virtual void BeginPlay()override;
 	virtual void Tick(float DeltaSeconds) override;
 	void InitializeAnimationInstance();
+	
 
 public:
+	virtual FVector GetTargetLocation(AActor* Requestor = nullptr ) const override;
 	/** Returns CameraBoom subobject **/
 	FORCEINLINE class USpringArmComponent* GetCameraBoom() const { return CameraBoom; }
 	/** Returns FollowCamera subobject **/

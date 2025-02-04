@@ -155,6 +155,16 @@ void AEternal_Grace_ArenaCharacter::InitializeAnimationInstance()
 	UE_LOG(LogTemp, Warning, TEXT("Animation Instance could not be found"))
 }
 
+FVector AEternal_Grace_ArenaCharacter::GetTargetLocation(AActor* Requestor) const
+{
+	USkeletalMeshComponent* SkeletalMesh = GetMesh();
+	if(SkeletalMesh)
+	{
+		return SkeletalMesh->GetSocketLocation("Target");
+	}
+	return Super::GetTargetLocation(Requestor);
+}
+
 void AEternal_Grace_ArenaCharacter::Move(const FInputActionValue& Value)
 {
 	// input is a Vector2D
@@ -230,6 +240,11 @@ void AEternal_Grace_ArenaCharacter::Die_Implementation()
 		UE_LOG(LogTemp, Error, TEXT("No DeathAnimation Assigned to %s"), *GetName())
 	}
 	OnCharacterDeath.Broadcast();
+}
+
+void AEternal_Grace_ArenaCharacter::FellOutOfWorld(const UDamageType& dmgType)
+{
+	Execute_Die(this);
 }
 
 void AEternal_Grace_ArenaCharacter::CheckActorStaggerAnimation(UAnimMontage* Montage)

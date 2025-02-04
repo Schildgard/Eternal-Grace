@@ -86,7 +86,7 @@ void AInteractableActor::BeginPlay()
 	if (ActiveGameInstance)
 	{
 		//SET IS ACTIVE DEPENDING ON DICTIONARY OF GAME INSTANCE
-		ActiveGameInstance->OnObjectStateChange.AddDynamic(this, &AInteractableActor_SceneLoader::UpdateStatus);
+		ActiveGameInstance->OnObjectStateChange.AddDynamic(this, &AInteractableActor::UpdateStatus);
 		UpdateStatus();
 	}
 

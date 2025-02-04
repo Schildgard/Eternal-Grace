@@ -9,7 +9,6 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
-class AActor;
 #ifdef ETERNAL_GRACE_ARENA_PlayerCharacter_generated_h
 #error "PlayerCharacter.generated.h already included, missing '#pragma once' in PlayerCharacter.h"
 #endif
@@ -24,13 +23,7 @@ class AActor;
 	DECLARE_FUNCTION(execSprintAttack); \
 	DECLARE_FUNCTION(execIncreaseChargePower); \
 	DECLARE_FUNCTION(execInteract); \
-	DECLARE_FUNCTION(execGuardCounterAttack); \
-	DECLARE_FUNCTION(execDisengageLockOn); \
-	DECLARE_FUNCTION(execEngageLockOn); \
-	DECLARE_FUNCTION(execScanForTargets); \
-	DECLARE_FUNCTION(execFindNearestTarget); \
-	DECLARE_FUNCTION(execSwitchLockOnTarget); \
-	DECLARE_FUNCTION(execToggleLockOn);
+	DECLARE_FUNCTION(execGuardCounterAttack);
 
 
 #define FID_Repository_Eternal_Grace_Arena_Eternal_Grace_Arena_Source_Eternal_Grace_Arena_PlayerCharacter_h_16_INCLASS_NO_PURE_DECLS \

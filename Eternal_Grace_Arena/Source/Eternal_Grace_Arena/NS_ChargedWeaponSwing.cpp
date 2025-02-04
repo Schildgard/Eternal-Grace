@@ -26,15 +26,12 @@ void UNS_ChargedWeaponSwing::NotifyBegin(USkeletalMeshComponent* MeshComp, UAnim
 		UE_LOG(LogTemp, Warning, TEXT("Could not get current weapon"))
 		return;
 	}
-	CurrentWeapon->GetMesh()->SetCollisionEnabled(ECollisionEnabled::QueryOnly);
 
-	CurrentWeapon->DamageMultiplier = (DamageMultiplier * PlayerActor->currentChargePower);
-	if (CurrentWeapon->DamageMultiplier <= 1.0f)
+	DamageMultiplier = (DamageMultiplier * PlayerActor->currentChargePower);
+	if (DamageMultiplier <= 1.0f)
 	{
-		CurrentWeapon->DamageMultiplier = 1.0f;
+		DamageMultiplier = 1.0f;
 	}
-
-	PlayerActor->WeaponComponent->SetStaggerType(StaggerType);
 }
 
 void UNS_ChargedWeaponSwing::NotifyEnd(USkeletalMeshComponent* MeshComp, UAnimSequenceBase* Animation, const FAnimNotifyEventReference& EventReference)

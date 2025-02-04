@@ -4,18 +4,19 @@
 
 #include "CoreMinimal.h"
 #include "Equipment.h"
-#include "StaggeringType.h"
 #include "Weapon.generated.h"
 
 /**
  * 
  */
 class AEternal_Grace_ArenaCharacter;
+class UCapsuleComponent;
 USTRUCT(BlueprintType)
 struct FWeaponStats
 {
 	GENERATED_BODY()
 
+	FWeaponStats(): BaseDamage(50.0f), StaminaCost(15.0f), PoiseDamage(20.0f){}
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Attributes")
 	float BaseDamage;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Attributes")
@@ -37,13 +38,18 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Attributes, meta = (AllowPrivateAccess))
 	FWeaponStats Stats;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Attributes, meta = (AllowPrivateAccess))
+	UCapsuleComponent* ColliderComponent;
+	
+
 public:
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Attributes, meta = (AllowPrivateAccess))
-	float DamageMultiplier;
-
-
-
 	UFUNCTION()
 	FWeaponStats GetWeaponStats();
+
+	UFUNCTION()
+	FTransform GetSocket(FName SocketName);
+
+	UFUNCTION()
+	UCapsuleComponent* GetColliderShape();
 	
 };

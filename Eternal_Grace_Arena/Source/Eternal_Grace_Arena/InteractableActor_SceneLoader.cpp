@@ -8,6 +8,7 @@
 #include "Blueprint/UserWidget.h"
 #include "EternalGrace_GameState.h"
 #include "EternalGrace_GameInstance.h"
+#include "AnimatedWidget.h"
 
 AInteractableActor_SceneLoader::AInteractableActor_SceneLoader()
 {
@@ -27,16 +28,8 @@ void AInteractableActor_SceneLoader::Interact_Implementation()
 		}
 		else
 		{
-			// CREATE SOFT PATH TO LEVEL. THIS IS NECCESSARY DUE TO COMPLICATIONS ON LEVEL LOAD/UNLOAD WHILE USING REGULAR POINTERS
-			FString LevelPath = FString::Printf(TEXT("/Game/Levels"), *LevelNameToLoad.ToString());
-			FSoftObjectPath LevelSoftPath(LevelPath);
-			if (LevelSoftPath.IsValid())
-			{
-				FStreamableManager& StreamManager = UAssetManager::GetStreamableManager();
-				StreamManager.RequestAsyncLoad(LevelSoftPath, FStreamableDelegate::CreateUObject(this, &AInteractableActor_SceneLoader::LoadLevel));
-				// BROADCAST THAT A MAPCHANGE IS HAPPENING. LISTENERS ARE FOR EXAMPLE THE GAMEINSTANCE WHICH SAVES PLAYER VALUES AND RETURNS THEM TO NEW PLAYER INSTANCE ON LEVEL LOAD
-				OnInteract.Broadcast();
-			} else UE_LOG(LogTemp, Warning, TEXT("%s Failed to create Softpath to Level"), *GetName())
+			ActiveGameInstance->SetLevelToLoad(LevelNameToLoad);
+			OnInteract.Broadcast();
 		}
 	}
 	else
@@ -50,24 +43,10 @@ void AInteractableActor_SceneLoader::BeginPlay()
 {
 	Super::BeginPlay();
 
-//	UGameInstance* CurrentInstance = UGameplayStatics::GetGameInstance(GetWorld());
-//	ActiveGameInstance = Cast<UEternalGrace_GameInstance>(CurrentInstance);
 	if (ActiveGameInstance)
 	{
-		//ActiveGameInstance = ActiveGameInstance;
 		OnInteract.AddDynamic(ActiveGameInstance, &UEternalGrace_GameInstance::OnMapLeave);
-	//	ActiveGameInstance->OnObjectStateChange.AddDynamic(this, &AInteractableActor_SceneLoader::UpdateStatus);
 		FCoreUObjectDelegates::PostLoadMapWithWorld.AddUObject(ActiveGameInstance, &UEternalGrace_GameInstance::OnMapEnter);
-		//SET IS ACTIVE DEPENDING ON DICTIONARY OF GAME INSTANCE
-	//	if (ActiveGameInstance->ObjectStates.Contains(UniqueID))
-	//	{
-	//		isActive = ActiveGameInstance->ObjectStates[UniqueID];
-	//		UE_LOG(LogTemp, Warning, TEXT("%s Got its Value from GameInstance"), *GetName())
-	//	}
-	//	else
-	//	{
-	//		UE_LOG(LogTemp, Warning, TEXT("GameInstance had the Key of %s yet, so its default active status is true"), *GetName())
-	//	}
 	}
 	else
 	{
@@ -77,7 +56,6 @@ void AInteractableActor_SceneLoader::BeginPlay()
 
 void AInteractableActor_SceneLoader::LoadLevel()
 {
-	//UWorld* LoadedLevel = LevelToLoad.Get();
 	if (!LevelNameToLoad.IsNone())
 	{
 		UGameplayStatics::OpenLevel(this, LevelNameToLoad);
@@ -93,26 +71,23 @@ void AInteractableActor_SceneLoader::OnBeginOverlap(UPrimitiveComponent* Overlap
 	if (InteractInfoWidget && !InteractInfoWidget->IsInViewport())
 	{
 		InteractInfoWidget->AddToViewport();
+		if (InteractInfoWidget->GetBlendInAnimation())
+		{
+			InteractInfoWidget->PlayAnimation(InteractInfoWidget->GetBlendInAnimation());
+		}
+		if (InteractInfoWidget->GetBlendOutAnimation())
+		{
+			FWidgetAnimationDynamicEvent EndDelegate;
+			EndDelegate.BindDynamic(InteractInfoWidget, &UAnimatedWidget::BlendOut);
+			InteractInfoWidget->BindToAnimationFinished(InteractInfoWidget->GetBlendOutAnimation(), EndDelegate);
+		}
 	}
 }
 
 void AInteractableActor_SceneLoader::OnOverlapEnd(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComponent, int32 OtherBodyIndex)
 {
-	if (InteractInfoWidget && InteractInfoWidget->IsInViewport())
+	if (InteractInfoWidget->GetBlendOutAnimation())
 	{
-		InteractInfoWidget->RemoveFromViewport();
+		InteractInfoWidget->PlayAnimation(InteractInfoWidget->GetBlendOutAnimation());
 	}
 }
-
-//void AInteractableActor_SceneLoader::UpdateStatus()
-//{
-//
-//	if (ActiveGameInstance && ActiveGameInstance->ObjectStates.Contains(UniqueID))
-//	{
-//		isActive = ActiveGameInstance->ObjectStates[UniqueID];
-//	}
-//	else
-//	{
-//		UE_LOG(LogTemp, Warning, TEXT("%s Could not Access GameInstance or GameInstance Dictionary did not Contained its key"), *GetName())
-//	}
-//}

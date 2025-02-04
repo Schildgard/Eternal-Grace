@@ -6,13 +6,18 @@
 #include "PlayerCharacter.h"
 #include "EternalGrace_PlayerState.h"
 #include "Kismet/GameplayStatics.h"
+#include "Kismet/KismetSystemLibrary.h"
 #include "HealthComponent.h"
+#include "BlendingWidget.h"
+#include "Engine/StreamableManager.h"
+#include "Engine/AssetManager.h"
 
 UEternalGrace_GameInstance::UEternalGrace_GameInstance()
 {
 	//IT IS CRUCIAL THAT THE MAIN LEVEL IS NAMED EXACTLY THE SAME WAY AS THIS PROPERTY
-	MainWorldName = FName("Level_Main");
+	MainWorldName = FName("Level_Hub");
 	WinCondition = false;
+	LoadingScreen = nullptr;
 }
 
 void UEternalGrace_GameInstance::UploadHealthInfo(float HealthFromPlayer)
@@ -44,7 +49,11 @@ void UEternalGrace_GameInstance::OnMapEnter(UWorld* LoadedWorld)
 	{
 		PlayerCharacter->HealthComponent->CurrentHealth = GetHealthInfo();
 	}
-	else UE_LOG(LogTemp, Error, TEXT("GameInstance: Failed to Cast Player On Map Enter Function"))
+	else
+	{
+
+		UE_LOG(LogTemp, Error, TEXT("GameInstance: Failed to Cast Player On Map Enter Function"))
+	}
 }
 
 void UEternalGrace_GameInstance::OnMapLeave()
@@ -56,7 +65,28 @@ void UEternalGrace_GameInstance::OnMapLeave()
 		UploadHealthInfo(PlayerCharacter->HealthComponent->CurrentHealth);
 	}
 	else
+	{
 		UE_LOG(LogTemp, Error, TEXT("GameInstance: Failed to Cast Player On Map Leave Function"))
+	}
+
+	if (LoadingScreenClass)
+	{
+		UE_LOG(LogTemp, Error, TEXT("GOOD DOOL"))
+			LoadingScreen = CreateWidget<UBlendingWidget>(this, LoadingScreenClass);
+		if (LoadingScreen)
+		{
+			//ACTIVATE YOU DIED SCREEN TO VIEWPORT
+			LoadingScreen->AddToViewport();
+			if (LoadingScreen->BlendingAnimation)
+			{
+				LoadingScreen->PlayAnimation(LoadingScreen->BlendingAnimation);
+				//NOW TRIGGER LOAD LEVEL WHEN LOADING SCREEN BLENDET IN
+				FWidgetAnimationDynamicEvent load;
+				load.BindDynamic(this, &UEternalGrace_GameInstance::LoadLevel);
+				LoadingScreen->BindToAnimationFinished(LoadingScreen->BlendingAnimation, load);
+			}
+		}
+	}
 }
 
 void UEternalGrace_GameInstance::SetObjectState(FName ObjectID, bool NewValue)
@@ -77,19 +107,6 @@ void UEternalGrace_GameInstance::SetObjectState(FName ObjectID, bool NewValue)
 	if (!WinCondition)
 	{
 		CheckWinConditionChange();
-		//		//ITERATE THROUGH DICTIONARY
-		//		for (const TPair<FName, bool>& Depency : WinConditionDependencies)
-		//		{
-		//			//SET ACTIVE STATUS TO TRUE IF THE STATUS OF ALL RELATED OBJECTS MEETS EXPECTED CRITERIA
-		//			if (Depency.Value != true)
-		//			{
-		//				return;
-		//			}
-		//		}
-		//		WinCondition = true;
-		//		ObjectStates.Add("Exit", true);
-		//		UE_LOG(LogTemp, Error, TEXT("WIN CONDITION MET"))
-		//			return;
 	}
 }
 
@@ -110,18 +127,14 @@ FName UEternalGrace_GameInstance::GetMainWorldName()
 
 void UEternalGrace_GameInstance::CheckWinConditionChange()
 {
-	UE_LOG(LogTemp, Error, TEXT("PERFORM WIN CONDITION CHECK"))
 		//ITERATE THROUGH EVERY WIN CONDITION
 		for (const TPair<FName, bool>& Dependency : WinConditionDependencies)
 		{
-			UE_LOG(LogTemp, Error, TEXT("CHECK WINCONDITION: %s"), *Dependency.Key.ToString())
 				//CHECK IF THIS CONDITION IS MET IN OBJECTSTATES
 				if (bool* ConditionIsMet = ObjectStates.Find(Dependency.Key))
 				{
-					UE_LOG(LogTemp, Error, TEXT("WIN CONDITION IS IN ObJECT STATES "));
 					if (*ConditionIsMet != Dependency.Value)
 					{
-						UE_LOG(LogTemp, Error, TEXT("Condition is not Met %s"), *Dependency.Key.ToString())
 							return;
 					}
 				}
@@ -136,6 +149,36 @@ void UEternalGrace_GameInstance::CheckWinConditionChange()
 	UE_LOG(LogTemp, Error, TEXT("ALL WIN CONDITION MET"))
 		WinCondition = true;
 	ObjectStates.Add("Exit", true);
+}
+
+void UEternalGrace_GameInstance::SetLevelToLoad(FName LevelName)
+{
+	LevelNameToLoad = LevelName;
+}
+
+void UEternalGrace_GameInstance::LoadLevel()
+{
+	// CREATE SOFT PATH TO LEVEL. THIS IS NECCESSARY DUE TO COMPLICATIONS ON LEVEL LOAD/UNLOAD WHILE USING REGULAR POINTERS
+	FString LevelPath = FString::Printf(TEXT("/Game/Levels"), *LevelNameToLoad.ToString());
+	FSoftObjectPath LevelSoftPath(LevelPath);
+	if (LevelSoftPath.IsValid())
+	{
+		FStreamableManager& StreamManager = UAssetManager::GetStreamableManager();
+		StreamManager.RequestAsyncLoad(LevelSoftPath, FStreamableDelegate::CreateUObject(this, &UEternalGrace_GameInstance::EnterLevel));
+	}
+	else UE_LOG(LogTemp, Warning, TEXT("%s Failed to create Softpath to Level"), *GetName())
+}
+
+void UEternalGrace_GameInstance::EnterLevel()
+{
+	if (!LevelNameToLoad.IsNone())
+	{
+		UGameplayStatics::OpenLevel(this, LevelNameToLoad);
+	}
+	else
+	{
+		UE_LOG(LogTemp, Warning, TEXT("LoadLevel Function was called but LevelToLoad could not be getted."))
+	}
 }
 
 

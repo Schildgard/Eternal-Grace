@@ -7,7 +7,6 @@
 #include "GameFramework/CharacterMovementComponent.h"
 #include "Kismet/KismetSystemLibrary.h"
 #include "Kismet/KismetMathLibrary.h"
-#include "I_Targetable.h"
 #include "EnhancedInputComponent.h"
 #include "EnhancedInputSubsystems.h"
 #include "InteractableActor.h"
@@ -26,107 +25,6 @@ APlayerCharacter::APlayerCharacter()
 	currentChargePower = 0.0f;
 	maxChargePower = 2.0f;
 }
-
-void APlayerCharacter::ToggleLockOn()
-{
-	if (CharacterAnimationInstance->isLockedOn == false)
-	{
-		AActor* ClosestTarget = FindNearestTarget();
-		if (ClosestTarget)
-		{
-			EngageLockOn(ClosestTarget);
-			UE_LOG(LogTemp, Warning, TEXT("Lock On"))
-		}
-		else
-		{
-			UE_LOG(LogTemp, Warning, TEXT("No Lock on Target in Range"))
-		}
-	}
-	else
-	{
-		DisengageLockOn();
-		UE_LOG(LogTemp, Warning, TEXT("Lock On Off"))
-	}
-}
-
-void APlayerCharacter::SwitchLockOnTarget()
-{
-}
-
-AActor* APlayerCharacter::FindNearestTarget()
-{
-	//GET SCANNED ACTOR ARRAY FROM SCAN FUNCTION
-	TArray<AActor*> ScannedActors = ScanForTargets();
-	if (ScannedActors.Num() <= 0)
-	{
-		UE_LOG(LogTemp, Warning, TEXT("Find Nearest Target: No Actors Scanned"))
-			return nullptr;
-	}
-
-
-	AActor* ClosestTarget = nullptr;
-	float comparison = 0.0f;
-	float distance = 10000.0f;
-
-	//ITERATE THROUGH SCANNED ACTORS TO FIND SMALLEST DISTANCE
-	for (AActor* Actor : ScannedActors)
-	{
-		comparison = GetDistanceTo(Actor);
-		if (comparison <= distance)
-		{
-			distance = comparison; //SAVE SMALLEST DISTANCE
-			ClosestTarget = Actor; //SAVE ACTOR IF DISTANCE IS SMALLEST
-		}
-	}
-
-	UE_LOG(LogTemp, Warning, TEXT("Nearest Actor: %s "), *ClosestTarget->GetName());
-	return ClosestTarget;
-}
-
-TArray<AActor*> APlayerCharacter::ScanForTargets()
-{
-	FVector PlayerPosition = GetActorLocation();
-	TArray<FHitResult> ScanHits; //SET UP A LIST FOR HITTED OBJECTS
-	TArray<AActor*> ActorsToIgnore; //SET UP A LIST SO ACTORS WONT GET SCANNED MULTIPLE TIMES
-	TArray<AActor*> ScannedActors;
-	UKismetSystemLibrary::SphereTraceMultiForObjects(world, PlayerPosition, PlayerPosition, 750.0f, ObjectTypes, true, ActorsToIgnore, EDrawDebugTrace::None, ScanHits, true, FLinearColor::Red, FLinearColor::Green, 5.0f);
-
-	if (ScanHits.Num() > 0)
-	{
-		//ITERARE THROUGH SCANHITS
-		for (const FHitResult& Hit : ScanHits)
-		{
-			AActor* HitActor = Hit.GetActor();
-			//ADD HITTED ACTOR TO IGNORE AND VIABLE TARGET LIST
-			if (HitActor && HitActor != this && !ActorsToIgnore.Contains(HitActor) && HitActor->Implements<UI_Targetable>())
-			{
-				ScannedActors.Add(HitActor);
-				ActorsToIgnore.Add(HitActor);
-			}
-		}
-	}
-	return ScannedActors;
-}
-
-void APlayerCharacter::EngageLockOn(AActor* Target)
-{
-	CharacterAnimationInstance->isLockedOn = true;
-	LockedOnTarget = Target;
-
-	if (LockedOnTarget != nullptr)
-	{
-		FRotator Look = UKismetMathLibrary::FindLookAtRotation(GetActorLocation(), LockedOnTarget->GetActorLocation());
-		SetActorRotation(Look);
-	}
-	UE_LOG(LogTemp, Warning, TEXT("No LockedOnTarget"))
-}
-
-void APlayerCharacter::DisengageLockOn()
-{
-	CharacterAnimationInstance->isLockedOn = false;
-	LockedOnTarget = nullptr;
-}
-
 
 
 void APlayerCharacter::GuardCounterAttack()
@@ -234,11 +132,7 @@ void APlayerCharacter::Tick(float DeltaSeconds)
 			}
 		}
 	}
-	//PLAYER ROTATION WHILE LOCK ON
-	if (CharacterAnimationInstance && CharacterAnimationInstance->isLockedOn && LockedOnTarget != nullptr && CharacterAnimationInstance->isRunning == false)
-	{
-		RotateTowardsTarget(LockedOnTarget);
-	}
+
 	//RESET GUARDCOUNTER REACTIONTIME
 	if (GuardCounterPossible)
 	{
@@ -255,11 +149,8 @@ void APlayerCharacter::Tick(float DeltaSeconds)
 void APlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
-	if (UEnhancedInputComponent* EnhancedInputComponent = Cast<UEnhancedInputComponent>(PlayerInputComponent)) {
-
-		//Lock On
-		EnhancedInputComponent->BindAction(ToggleLockOnAction, ETriggerEvent::Triggered, this, &APlayerCharacter::ToggleLockOn);
-		EnhancedInputComponent->BindAction(SwitchLockOnTargetAction, ETriggerEvent::Triggered, this, &APlayerCharacter::SwitchLockOnTarget);
+	if (UEnhancedInputComponent* EnhancedInputComponent = Cast<UEnhancedInputComponent>(PlayerInputComponent))
+	{
 		//GuardCounter
 		EnhancedInputComponent->BindAction(GuardCounterAction, ETriggerEvent::Completed, this, &APlayerCharacter::GuardCounterAttack);
 		//Interactions
@@ -361,35 +252,3 @@ void APlayerCharacter::Guard()
 		CancelGuard();
 	}
 }
-
-//void APlayerCharacter::GetDamage_Implementation(float Damage, float PoiseDamage, float DamageDirection, EStaggeringType StaggerType, AEternal_Grace_ArenaCharacter* DamageSource)
-//{
-//	Super::GetDamage_Implementation()
-//	//if (ShieldComponent && ShieldComponent->GetCurrentShield())
-//	//{
-//	//	if (CharacterAnimationInstance->isGuarding)
-//	//	{
-//	//		//Check if Attack is Frontal - NOT SURE IF THIS CALCULATION IS CORRECT
-//	//		if (DamageDirection <= 135.0f && DamageDirection >= 180.0f)
-//	//		{
-//	//			ShieldComponent->BlockDamage(Damage, PoiseDamage, DamageDirection, StaggerType, DamageSource);
-//	//			return;
-//	//		}
-//	//	}
-//	//}
-//
-////	HealthComponent->CurrentHealth -= Damage;
-////	UE_LOG(LogTemp, Warning, TEXT("%s got %f Damage"), *GetName(), Damage)
-////
-////		if (StaggerComponent)
-////		{
-////			StaggerComponent->GetStaggered(StaggerType, PoiseDamage, DamageDirection, DamageSource);
-////		}
-////
-////
-////	if (HealthComponent->CurrentHealth <= 0)
-////	{
-////		HealthComponent->CurrentHealth = 0;
-////		Execute_Die(this);
-////	}
-//}

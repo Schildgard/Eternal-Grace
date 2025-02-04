@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "Spell.h"
+#include "StaggeringType.h"
 #include "Damage_Spells.generated.h"
 
 /**
@@ -22,6 +23,12 @@ protected:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta =(AllowPrivateAccess))
 	float PoiseDamage;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (AllowPrivateAccess))
+	EStaggeringType StaggerType;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (AllowPrivateAccess))
+	bool isBlockable;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, meta =(AllowPrivateAccess))
 	USoundBase* HitSFX;

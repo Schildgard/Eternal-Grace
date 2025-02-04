@@ -10,6 +10,7 @@
 class UEternalGrace_GameInstance;
 class UNiagaraComponent;
 class USphereComponent;
+class UAnimatedWidget;
 UCLASS()
 class ETERNAL_GRACE_ARENA_API AInteractableActor : public AActor, public II_Interactable
 {
@@ -50,7 +51,7 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (AllowPrivateAccess))
 	TSubclassOf<UUserWidget> InfoClass;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (AllowPrivateAccess))
-	UUserWidget* InteractInfoWidget;
+	UAnimatedWidget* InteractInfoWidget;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (AllowPrivateAccess))
 	UNiagaraComponent* NiagaraEffect;

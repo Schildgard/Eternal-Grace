@@ -20,27 +20,17 @@ void AEnemy_MageBoss::LightAttack()
 		CharacterAnimationInstance->isAttacking = true;
 		int AttackIndex = 0; //FIREBALL
 
-		if (SecondPhaseTriggered)
-		{
-			AttackIndex = 2; //HOMING FIREBALL
-		}
-
 		// CHECK IF PLAYER IS IN TELEPORT RANGE
 		if (CheckDistancetoPlayer(350.0f))
 		{
 			SetTeleportPosition();
-			if (SecondPhaseTriggered)
-			{
-				//CAST PHASE TWO ATTACK
-				GetOffMeMove();
-				return;
-			}
-			else
-			{
-				AttackIndex = 1; //TELEPORT
-
-			}
+			AttackIndex = 1; //TELEPORT
 		}
+		else if (SecondPhaseTriggered)
+		{
+			AttackIndex = 2; //HOMING FIREBALL
+		}
+
 
 		RotateTowardsTarget(UGameplayStatics::GetPlayerCharacter(world, 0));
 		FOnMontageEnded InterruptDelegate;
@@ -70,6 +60,7 @@ void AEnemy_MageBoss::BeginPlay()
 			if (SpawnPosition)
 			{
 				SpawnPositions.Add(SpawnPosition);
+				AvaiableSpawnPositions.Add(SpawnPosition);
 			}
 		}
 	}
@@ -79,52 +70,21 @@ void AEnemy_MageBoss::BeginPlay()
 	}
 }
 
-void AEnemy_MageBoss::GetOffMeMove()
-{
-
-	PlayAnimMontage(GetOffMeAttack);
-
-	FOnMontageEnded InterruptDelegate;
-	FOnMontageEnded CompletedDelegate;
-
-	PlayAnimMontage(GetOffMeAttack, 1.0f); //CHANGE THIS TO FLEXIBLE ARRAY INDEX OF VIABLE ATTACKS
-	InterruptDelegate.BindUObject(CharacterAnimationInstance, &UCharacterAnimInstance::InterruptAttack);
-	CompletedDelegate.BindUObject(CharacterAnimationInstance, &UCharacterAnimInstance::OnAttackEnd);
-
-	CharacterAnimationInstance->Montage_SetBlendingOutDelegate(InterruptDelegate, GetOffMeAttack);
-	CharacterAnimationInstance->Montage_SetEndDelegate(CompletedDelegate, GetOffMeAttack);
-
-}
-
 void AEnemy_MageBoss::SetTeleportPosition()
 {
-	if (SpawnPositions.Num() >= 1)
+	if (AvaiableSpawnPositions.Num() <= 0)
 	{
-		//GET SPAWN POSITION INDEX
-		int RandomIndex = UKismetMathLibrary::RandomInteger(SpawnPositions.Num());
-
-		// IF THERE A AT LEAST 2 SPAWN POSITIONS, BLOCK THE CURRENT POSITION - kinda bullshit, i am sure there is a better way to do it
-		if (SpawnPositions.Num() >= 2)
-		{
-			BlockedSpawnPositionsIndices.Add(RandomIndex);
-
-		}
-
-		// IF POSITION IS BLOCKED, REPEAT THIS PROCESS RECURSIVELY UNTIL YOU FOUND ANOTHER POSITION
-//		if(BlockedSpawnPositionsIndices.Contains(RandomIndex))
-//		{
-//			SetTeleportPosition();
-//		}
-		BlockedSpawnPositionsIndices.Empty();
-
-		FVector TargetLocation = SpawnPositions[RandomIndex]->GetActorLocation();
-		SpellComponent->SetTargetPosition(TargetLocation);
-
+		//RESET AVAIABLE LIST
+		AvaiableSpawnPositions = SpawnPositions;
 	}
-	else
-	{
-		UE_LOG(LogTemp, Error, TEXT("No Position to Teleport"))
-	}
+
+	//GET RANDOM SPAWNPOSITION
+	int RandomIndex = UKismetMathLibrary::RandomInteger(AvaiableSpawnPositions.Num());
+	//SET TELEPORT POSITION
+	FVector TargetLocation = AvaiableSpawnPositions[RandomIndex]->GetActorLocation();
+	SpellComponent->SetTargetPosition(TargetLocation);
+	// SAFEREMOVE POSITION FROM AVAIABLE LIST
+	AvaiableSpawnPositions.RemoveAt(RandomIndex);
 }
 
 USpellComponent* AEnemy_MageBoss::GetSpellComponent()

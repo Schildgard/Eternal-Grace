@@ -2,6 +2,10 @@
 	"BuildId": "37670630",
 	"Modules": 
 	{
+<<<<<<< HEAD
 		"Eternal_Grace_Arena": "UnrealEditor-Eternal_Grace_Arena.dll"
+=======
+		"Eternal_Grace_Arena": "UnrealEditor-Eternal_Grace_Arena-0011.dll"
+>>>>>>> main
 	}
 }

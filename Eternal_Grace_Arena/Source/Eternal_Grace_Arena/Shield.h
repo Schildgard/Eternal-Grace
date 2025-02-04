@@ -14,6 +14,10 @@ USTRUCT(BlueprintType)
 struct FShieldStats
 {
 	GENERATED_BODY()
+
+
+	FShieldStats(): PhysicalDamageReduction(100.0f), Stability(50.f), PhysicalMaterial(nullptr){}
+	
 	// PERCENTAGE VALUE
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Combat, meta = (AllowPrivateAccess))
 	float PhysicalDamageReduction;

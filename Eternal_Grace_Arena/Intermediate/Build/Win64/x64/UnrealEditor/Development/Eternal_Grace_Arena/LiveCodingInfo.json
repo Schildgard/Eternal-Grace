@@ -2,6 +2,7 @@
 	"RemapUnityFiles": 
 	{
 		"Module.Eternal_Grace_Arena.1.cpp.obj": [
+			"AnimatedWidget.gen.cpp.obj",
 			"AnimNotify_PlayRandomSound.gen.cpp.obj",
 			"BlendingWidget.gen.cpp.obj",
 			"CharacterAnimInstance.gen.cpp.obj",
@@ -27,17 +28,23 @@
 			"HealthComponent.gen.cpp.obj",
 			"HitEffectData.gen.cpp.obj",
 			"InteractableActor.gen.cpp.obj",
-			"InteractableActor_SceneLoader.gen.cpp.obj",
+			"InteractableActor_SceneLoader.gen.cpp.obj"
+		],
+		"Module.Eternal_Grace_Arena.2.cpp.obj": [
 			"I_Damageable.gen.cpp.obj",
 			"I_Interactable.gen.cpp.obj",
 			"I_Targetable.gen.cpp.obj",
+			"LockOnSystem.gen.cpp.obj",
 			"NS_CancelMontage.gen.cpp.obj",
-			"NS_CastSpell.gen.cpp.obj"
-		],
-		"Module.Eternal_Grace_Arena.2.cpp.obj": [
+			"NS_CastSpell.gen.cpp.obj",
 			"NS_ChargedWeaponSwing.gen.cpp.obj",
 			"NS_ContinousRecourceConsumption.gen.cpp.obj",
 			"NS_DrainStamina.gen.cpp.obj",
+<<<<<<< HEAD
+=======
+			"NS_Liftup.gen.cpp.obj",
+			"NS_PlayFootstepSound.gen.cpp.obj",
+>>>>>>> main
 			"NS_RotateTowardsTarget.gen.cpp.obj",
 			"NS_SetStaggered.gen.cpp.obj",
 			"NS_WeaponSwing.gen.cpp.obj",
@@ -49,6 +56,7 @@
 			"SpawnPoint.gen.cpp.obj",
 			"Spell.gen.cpp.obj",
 			"SpellComponent.gen.cpp.obj",
+			"Spells_EffectArea.gen.cpp.obj",
 			"Spells_HomingProjectile.gen.cpp.obj",
 			"Spells_Projectile.gen.cpp.obj",
 			"Spell_Teleport.gen.cpp.obj",
@@ -57,8 +65,11 @@
 			"StaminaComponent.gen.cpp.obj",
 			"TitleScreenGameMode.gen.cpp.obj",
 			"Weapon.gen.cpp.obj",
-			"WeaponComponent.gen.cpp.obj",
+			"WeaponComponent.gen.cpp.obj"
+		],
+		"Module.Eternal_Grace_Arena.3.cpp.obj": [
 			"PerModuleInline.gen.cpp.obj",
+			"AnimatedWidget.cpp.obj",
 			"AnimNotify_PlayRandomSound.cpp.obj",
 			"BlendingWidget.cpp.obj",
 			"CharacterAnimInstance.cpp.obj",
@@ -88,24 +99,29 @@
 			"I_Damageable.cpp.obj",
 			"I_Interactable.cpp.obj",
 			"I_Targetable.cpp.obj",
+			"LockOnSystem.cpp.obj",
 			"NS_CancelMontage.cpp.obj",
 			"NS_CastSpell.cpp.obj",
 			"NS_ChargedWeaponSwing.cpp.obj",
 			"NS_ContinousRecourceConsumption.cpp.obj",
 			"NS_DrainStamina.cpp.obj",
+<<<<<<< HEAD
+=======
+			"NS_Liftup.cpp.obj",
+			"NS_PlayFootstepSound.cpp.obj",
+>>>>>>> main
 			"NS_RotateTowardsTarget.cpp.obj",
 			"NS_SetStaggered.cpp.obj",
 			"NS_WeaponSwing.cpp.obj",
 			"NS_WeaponSwing_CollisionToggle.cpp.obj",
-			"PlayerCharacter.cpp.obj"
-		],
-		"Module.Eternal_Grace_Arena.3.cpp.obj": [
+			"PlayerCharacter.cpp.obj",
 			"Player_UI_Bars.cpp.obj",
 			"Shield.cpp.obj",
 			"ShieldComponent.cpp.obj",
 			"SpawnPoint.cpp.obj",
 			"Spell.cpp.obj",
 			"SpellComponent.cpp.obj",
+			"Spells_EffectArea.cpp.obj",
 			"Spells_HomingProjectile.cpp.obj",
 			"Spells_Projectile.cpp.obj",
 			"Spell_Teleport.cpp.obj",
