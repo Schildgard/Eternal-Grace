@@ -5,11 +5,19 @@
 			"guid": "00000000000000000000000000000000",
 			"description": "Default Uncontrolled Changelist",
 			"files": [
-				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Levels/Level_Hub.umap",
-				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/StarterContent/Architecture/Floor_400x400.uasset",
+				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/StarterContent/HDRI/HDRI_Epic_Courtyard_Daylight.uasset",
 				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Levels/Level_Hub.umap",
-				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Levels/_GENERATED/Student/Stairs_209FF764.uasset",
-				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Levels/_GENERATED/Student/Stairs_D2AC6589.uasset"
+				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/OldCathedral/Meshes/SM_Bush_01.uasset",
+				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/OldCathedral/Meshes/SM_Bush_02.uasset",
+				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/OldCathedral/Meshes/SM_Bush_03.uasset",
+				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/OldCathedral/Meshes/SM_Grass_01.uasset",
+				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/OldCathedral/Meshes/SM_Grass_02.uasset",
+				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/OldCathedral/Meshes/SM_Grass_03.uasset",
+				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/OldCathedral/Meshes/SM_Grass_04.uasset",
+				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/StarterContent/Materials/M_Ground_Grass.uasset",
+				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Characters/Dark_Lady/Body_Armor/SKM_DarkLady.uasset",
+				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Levels/Level_World.umap",
+				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Levels/Level_Dungeon.umap"
 			]
 		}
 	]
