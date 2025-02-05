@@ -37,3 +37,13 @@ UCapsuleComponent* AWeapon::GetColliderShape()
 	return ColliderComponent;
 }
 
+TArray<UAnimMontage*> AWeapon::GetHeavyAttackMontages()
+{
+	return HeavyAttackMontages;
+}
+
+TArray<UAnimMontage*> AWeapon::GetLightAttackMontages()
+{
+ return LightAttackMontages;
+}
+

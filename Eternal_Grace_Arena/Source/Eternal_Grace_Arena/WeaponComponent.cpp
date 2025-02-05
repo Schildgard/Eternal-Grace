@@ -8,6 +8,7 @@
 #include "Kismet//GameplayStatics.h"
 #include "HitEffectData.h"
 #include "NiagaraSystem.h"
+#include "CharacterAnimInstance.h"
 
 UWeaponComponent::UWeaponComponent()
 {
@@ -26,6 +27,7 @@ void UWeaponComponent::BeginPlay()
 	Super::BeginPlay();
 
 	WeaponOwner = GetOwner();
+	OwningCharacter = Cast<AEternal_Grace_ArenaCharacter>(WeaponOwner);
 	if (!WeaponOwner)
 	{
 		UE_LOG(LogTemp, Warning, TEXT("Failed to get WeaponOwner for %s"), *GetName())
@@ -44,7 +46,54 @@ void UWeaponComponent::BeginPlay()
 		UE_LOG(LogTemp, Warning, TEXT("Failed to Spawn Equipped Weapon Object for %s"), *GetName())
 			return;
 	}
+
 	EquippedWeapon->AttachToComponent(this, FAttachmentTransformRules::SnapToTargetNotIncludingScale);
+	CurrentLightAttacks = EquippedWeapon->GetLightAttackMontages();
+	CurrentHeavyAttacks = EquippedWeapon->GetHeavyAttackMontages();
+}
+
+void UWeaponComponent::Attack()
+{
+	
+	if (!OwningCharacter->CharacterAnimationInstance->isAttacking)
+	{
+		OwningCharacter->CharacterAnimationInstance->isAttacking = true;
+		if (OwningCharacter->CharacterAnimationInstance->isGuarding)
+		{
+			OwningCharacter->CancelGuard(); // THIS IS NOT GOOD: BETWEEN ATTACK THERE IS A SMALL WINDOW WHERE GUARD IS ACTIVATED. NEED TO CHANGE THIS LATER
+		}
+		int AttackIndex = OwningCharacter->CharacterAnimationInstance->attackCount;
+		if (CurrentLightAttacks[AttackIndex] != nullptr)
+		{
+			OwningCharacter->PlayAnimMontage(CurrentLightAttacks[AttackIndex], 1.0f);
+		}
+	}
+	else
+	{
+		UE_LOG(LogTemp, Warning, TEXT("Character Already is Attacking"))
+	}
+
+}
+
+void UWeaponComponent::HeavyAttack()
+{
+	//When Heavy Attack Button is released from charge Position the Player Character unleashes his Heavy Attack 
+	if (OwningCharacter->CharacterAnimationInstance->isCharging)
+	{
+		OwningCharacter->CharacterAnimationInstance->isCharging = false; //LEAVE CHARGING STATE
+		OwningCharacter->CharacterAnimationInstance->isAttacking = true; //SET PLAYER IN ATTACK STATE, SO THE ANIMATION CAN NOT BE INTERUPTED BY A LIGHT ATTACK COMMAND
+		OwningCharacter->CharacterAnimationInstance->isInHeavyAttack = true; // SET PLAYER IN HEAVY ATTACK STATE, SO ANOTHER HEAVY ATTACK COMMAND TRIGGERS THE SECOND ATTACK ANIM
+		UE_LOG(LogTemp, Warning, TEXT("Character Releases Attack"))
+			OwningCharacter->PlayAnimMontage(CurrentHeavyAttacks[0], 1.0f);
+	}
+	else if (OwningCharacter->CharacterAnimationInstance->isInHeavyAttack)
+	{
+		//IF PLAYER IS IN HEAVY ATTACK, A SECOND HEAVY ATTACK COMMAND TRIGGERS THE FOLLOW UP ANIMATION
+		OwningCharacter->CharacterAnimationInstance->isInHeavyAttack = false;//LEAVE HEAVY ATTACK STATE, SO THE FOLLOW UP ANIMATION ONLY TRIGGERS ONCE
+		OwningCharacter->CharacterAnimationInstance->isAttacking = true; //SET IS ATTACKING TO TRUE TO MAKE SURE THE FOLLOW UP ANIMATION IS NOT CANCELED BY LIGHT ATTACK COMMAND
+		OwningCharacter->PlayAnimMontage(CurrentHeavyAttacks[1], 1.0f);
+		UE_LOG(LogTemp, Warning, TEXT("Character Already is not Charging"))
+	}
 }
 
 float UWeaponComponent::CalculateAttackAngle(AActor* Target)
@@ -82,5 +131,10 @@ UNiagaraSystem* UWeaponComponent::GetWeaponSparks()
 UDataTable* UWeaponComponent::GetHitEffectDataTable()
 {
 	return HitEffectDataTable;
+}
+
+TArray<UAnimMontage*> UWeaponComponent::GetCurrentLightAttacks()
+{
+	return CurrentLightAttacks;
 }
 

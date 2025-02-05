@@ -17,7 +17,12 @@
 				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/StarterContent/Materials/M_Ground_Grass.uasset",
 				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Characters/Dark_Lady/Body_Armor/SKM_DarkLady.uasset",
 				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Levels/Level_World.umap",
-				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Levels/Level_Dungeon.umap"
+				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Levels/Level_Dungeon.umap",
+				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/OldCathedral/Materials/MM_Landscape_Ground.uasset",
+				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Blueprints/BP_TestWeapon.uasset",
+				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/OldCathedral/Meshes/SM_Ext_OrnamentA_12m_01.uasset",
+				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Blueprints/BP_TestWeapon3.uasset",
+				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Blueprints/CharacterBlueprints/BP_Player.uasset"
 			]
 		}
 	]

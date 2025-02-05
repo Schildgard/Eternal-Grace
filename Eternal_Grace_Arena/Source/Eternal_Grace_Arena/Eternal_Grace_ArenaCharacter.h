@@ -61,10 +61,6 @@ class AEternal_Grace_ArenaCharacter : public ACharacter, public II_Damageable
 protected:
 	AEternal_Grace_ArenaCharacter();
 
-	//LIGHT ATTACKS
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animations, meta = (AllowPrivateAccess))
-	TArray<UAnimMontage*> LightAttacks;
-
 public:
 
 	//DEATH ANIMATIONS
@@ -122,6 +118,7 @@ protected:
 	virtual void LightAttack();
 	UFUNCTION()
 	virtual void Guard();
+public:
 	UFUNCTION()
 	virtual void CancelGuard();
 

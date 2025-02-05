@@ -18,6 +18,9 @@ class ETERNAL_GRACE_ARENA_API AEnemy_MageBoss : public AEternal_Grace_ArenaBoss
 
 protected:
 	AEnemy_MageBoss();
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animations, meta = (AllowPrivateAccess))
+	TArray<UAnimMontage*> LightAttacks;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, meta = (AllowPrivateAccess))
 	USpellComponent* SpellComponent;
 	UPROPERTY()
@@ -26,6 +29,7 @@ protected:
 	TArray<ASpawnPoint*> AvaiableSpawnPositions;
 
 	virtual void LightAttack()override;
+
 	virtual void BeginPlay()override;
 
 	UFUNCTION()

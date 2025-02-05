@@ -24,6 +24,9 @@ protected:
 	UPROPERTY()
 	AActor* WeaponOwner;
 
+	UPROPERTY()
+	AEternal_Grace_ArenaCharacter* OwningCharacter;
+
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, meta =(AllowPrivateAccess))
 	TSubclassOf<AWeapon> EquippedWeaponClass;
@@ -43,7 +46,23 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = HitTrace, meta = (AllowPrivateAccess))
 	TArray<TEnumAsByte<EObjectTypeQuery>> ObjectTypes;
 
+
+
+	UPROPERTY()
+	TArray<UAnimMontage*> CurrentLightAttacks;
+
+	UPROPERTY()
+	TArray<UAnimMontage*> CurrentHeavyAttacks;
+
 public:	
+
+	UFUNCTION()
+	void Attack();
+
+	UFUNCTION()
+	void HeavyAttack();
+
+
 	UFUNCTION()
 	float CalculateAttackAngle(AActor* Target);
 
@@ -60,5 +79,9 @@ public:
 	UNiagaraSystem* GetWeaponSparks();
 	UFUNCTION()
 	UDataTable* GetHitEffectDataTable();
+
+
+	UFUNCTION()
+	TArray<UAnimMontage*> GetCurrentLightAttacks();
 		
 };

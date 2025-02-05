@@ -135,35 +135,6 @@ DEFINE_FUNCTION(APlayerCharacter::execGuardCounterAttack)
 }
 // End Class APlayerCharacter Function GuardCounterAttack
 
-// Begin Class APlayerCharacter Function HeavyAttack
-struct Z_Construct_UFunction_APlayerCharacter_HeavyAttack_Statics
-{
-#if WITH_METADATA
-	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "PlayerCharacter.h" },
-	};
-#endif // WITH_METADATA
-	static const UECodeGen_Private::FFunctionParams FuncParams;
-};
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_APlayerCharacter_HeavyAttack_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_APlayerCharacter, nullptr, "HeavyAttack", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00080401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_APlayerCharacter_HeavyAttack_Statics::Function_MetaDataParams), Z_Construct_UFunction_APlayerCharacter_HeavyAttack_Statics::Function_MetaDataParams) };
-UFunction* Z_Construct_UFunction_APlayerCharacter_HeavyAttack()
-{
-	static UFunction* ReturnFunction = nullptr;
-	if (!ReturnFunction)
-	{
-		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_APlayerCharacter_HeavyAttack_Statics::FuncParams);
-	}
-	return ReturnFunction;
-}
-DEFINE_FUNCTION(APlayerCharacter::execHeavyAttack)
-{
-	P_FINISH;
-	P_NATIVE_BEGIN;
-	P_THIS->HeavyAttack();
-	P_NATIVE_END;
-}
-// End Class APlayerCharacter Function HeavyAttack
-
 // Begin Class APlayerCharacter Function IncreaseChargePower
 struct Z_Construct_UFunction_APlayerCharacter_IncreaseChargePower_Statics
 {
@@ -295,7 +266,6 @@ void APlayerCharacter::StaticRegisterNativesAPlayerCharacter()
 		{ "ChargeHeavyAttack", &APlayerCharacter::execChargeHeavyAttack },
 		{ "Dodge", &APlayerCharacter::execDodge },
 		{ "GuardCounterAttack", &APlayerCharacter::execGuardCounterAttack },
-		{ "HeavyAttack", &APlayerCharacter::execHeavyAttack },
 		{ "IncreaseChargePower", &APlayerCharacter::execIncreaseChargePower },
 		{ "Interact", &APlayerCharacter::execInteract },
 		{ "Sprint", &APlayerCharacter::execSprint },
@@ -388,21 +358,16 @@ struct Z_Construct_UClass_APlayerCharacter_Statics
 		{ "Category", "Attributes" },
 		{ "ModuleRelativePath", "PlayerCharacter.h" },
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_HeavyAttacks_MetaData[] = {
-		{ "AllowPrivateAccess", "" },
-		{ "Category", "Animations" },
-#if !UE_BUILD_SHIPPING
-		{ "Comment", "//HEAVY ATTACKS\n" },
-#endif
-		{ "ModuleRelativePath", "PlayerCharacter.h" },
-#if !UE_BUILD_SHIPPING
-		{ "ToolTip", "HEAVY ATTACKS" },
-#endif
-	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ChargeAttack_MetaData[] = {
 		{ "AllowPrivateAccess", "" },
 		{ "Category", "Animations" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "//HEAVY ATTACKS\n//UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animations, meta = (AllowPrivateAccess))\n//TArray<UAnimMontage*> HeavyAttacks;\n" },
+#endif
 		{ "ModuleRelativePath", "PlayerCharacter.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "HEAVY ATTACKS\nUPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animations, meta = (AllowPrivateAccess))\nTArray<UAnimMontage*> HeavyAttacks;" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_RunningAttack_MetaData[] = {
 		{ "AllowPrivateAccess", "" },
@@ -450,8 +415,6 @@ struct Z_Construct_UClass_APlayerCharacter_Statics
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_GuardCounterReactionCountdown;
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_currentChargePower;
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_maxChargePower;
-	static const UECodeGen_Private::FObjectPropertyParams NewProp_HeavyAttacks_Inner;
-	static const UECodeGen_Private::FArrayPropertyParams NewProp_HeavyAttacks;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_ChargeAttack;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_RunningAttack;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_DodgeAction;
@@ -463,7 +426,6 @@ struct Z_Construct_UClass_APlayerCharacter_Statics
 		{ &Z_Construct_UFunction_APlayerCharacter_ChargeHeavyAttack, "ChargeHeavyAttack" }, // 1713464993
 		{ &Z_Construct_UFunction_APlayerCharacter_Dodge, "Dodge" }, // 3111381103
 		{ &Z_Construct_UFunction_APlayerCharacter_GuardCounterAttack, "GuardCounterAttack" }, // 1036179294
-		{ &Z_Construct_UFunction_APlayerCharacter_HeavyAttack, "HeavyAttack" }, // 171223720
 		{ &Z_Construct_UFunction_APlayerCharacter_IncreaseChargePower, "IncreaseChargePower" }, // 2751030947
 		{ &Z_Construct_UFunction_APlayerCharacter_Interact, "Interact" }, // 1929792896
 		{ &Z_Construct_UFunction_APlayerCharacter_Sprint, "Sprint" }, // 2307348509
@@ -490,8 +452,6 @@ const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_APlayerCharacter
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_APlayerCharacter_Statics::NewProp_GuardCounterReactionCountdown = { "GuardCounterReactionCountdown", nullptr, (EPropertyFlags)0x0010000000000000, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APlayerCharacter, GuardCounterReactionCountdown), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_GuardCounterReactionCountdown_MetaData), NewProp_GuardCounterReactionCountdown_MetaData) };
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_APlayerCharacter_Statics::NewProp_currentChargePower = { "currentChargePower", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APlayerCharacter, currentChargePower), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_currentChargePower_MetaData), NewProp_currentChargePower_MetaData) };
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_APlayerCharacter_Statics::NewProp_maxChargePower = { "maxChargePower", nullptr, (EPropertyFlags)0x0010000000000015, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APlayerCharacter, maxChargePower), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_maxChargePower_MetaData), NewProp_maxChargePower_MetaData) };
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_APlayerCharacter_Statics::NewProp_HeavyAttacks_Inner = { "HeavyAttacks", nullptr, (EPropertyFlags)0x0000000000000000, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, 0, Z_Construct_UClass_UAnimMontage_NoRegister, METADATA_PARAMS(0, nullptr) };
-const UECodeGen_Private::FArrayPropertyParams Z_Construct_UClass_APlayerCharacter_Statics::NewProp_HeavyAttacks = { "HeavyAttacks", nullptr, (EPropertyFlags)0x0020080000000015, UECodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APlayerCharacter, HeavyAttacks), EArrayPropertyFlags::None, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_HeavyAttacks_MetaData), NewProp_HeavyAttacks_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_APlayerCharacter_Statics::NewProp_ChargeAttack = { "ChargeAttack", nullptr, (EPropertyFlags)0x0020080000000015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APlayerCharacter, ChargeAttack), Z_Construct_UClass_UAnimMontage_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ChargeAttack_MetaData), NewProp_ChargeAttack_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_APlayerCharacter_Statics::NewProp_RunningAttack = { "RunningAttack", nullptr, (EPropertyFlags)0x0020080000000015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APlayerCharacter, RunningAttack), Z_Construct_UClass_UAnimMontage_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_RunningAttack_MetaData), NewProp_RunningAttack_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_APlayerCharacter_Statics::NewProp_DodgeAction = { "DodgeAction", nullptr, (EPropertyFlags)0x0020080000000015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APlayerCharacter, DodgeAction), Z_Construct_UClass_UAnimMontage_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_DodgeAction_MetaData), NewProp_DodgeAction_MetaData) };
@@ -508,8 +468,6 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_APlayerCh
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APlayerCharacter_Statics::NewProp_GuardCounterReactionCountdown,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APlayerCharacter_Statics::NewProp_currentChargePower,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APlayerCharacter_Statics::NewProp_maxChargePower,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APlayerCharacter_Statics::NewProp_HeavyAttacks_Inner,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APlayerCharacter_Statics::NewProp_HeavyAttacks,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APlayerCharacter_Statics::NewProp_ChargeAttack,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APlayerCharacter_Statics::NewProp_RunningAttack,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APlayerCharacter_Statics::NewProp_DodgeAction,
@@ -556,10 +514,10 @@ APlayerCharacter::~APlayerCharacter() {}
 struct Z_CompiledInDeferFile_FID_Eternal_Grace_Arena_Source_Eternal_Grace_Arena_PlayerCharacter_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_APlayerCharacter, APlayerCharacter::StaticClass, TEXT("APlayerCharacter"), &Z_Registration_Info_UClass_APlayerCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APlayerCharacter), 1298429104U) },
+		{ Z_Construct_UClass_APlayerCharacter, APlayerCharacter::StaticClass, TEXT("APlayerCharacter"), &Z_Registration_Info_UClass_APlayerCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APlayerCharacter), 1371672734U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Eternal_Grace_Arena_Source_Eternal_Grace_Arena_PlayerCharacter_h_3142993837(TEXT("/Script/Eternal_Grace_Arena"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Eternal_Grace_Arena_Source_Eternal_Grace_Arena_PlayerCharacter_h_2491524339(TEXT("/Script/Eternal_Grace_Arena"),
 	Z_CompiledInDeferFile_FID_Eternal_Grace_Arena_Source_Eternal_Grace_Arena_PlayerCharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Eternal_Grace_Arena_Source_Eternal_Grace_Arena_PlayerCharacter_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

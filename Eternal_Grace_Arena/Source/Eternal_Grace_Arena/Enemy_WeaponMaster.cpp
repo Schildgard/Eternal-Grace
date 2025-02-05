@@ -7,15 +7,22 @@
 #include "CharacterAnimInstance.h"
 #include "Components/CapsuleComponent.h"
 #include "HealthComponent.h"
+#include "WeaponComponent.h"
 
 AEnemy_WeaponMaster::AEnemy_WeaponMaster()
 {
 	GetOffMeAttack = nullptr;
 }
 
+
+
 void AEnemy_WeaponMaster::LightAttack()
 {
+	Attack();
+}
 
+void AEnemy_WeaponMaster::Attack()
+{
 	if (CheckIfPlayerIsBehind() && SecondPhaseTriggered)
 	{
 		GetOffMeMove();
@@ -30,7 +37,7 @@ void AEnemy_WeaponMaster::LightAttack()
 
 		int RandomAttackIndex = UKismetMathLibrary::RandomInteger(2); //CHANGE THIS TO LENGTH OF VIABLE ATTACK ARRAY
 
-		PlayAnimMontage(LightAttacks[RandomAttackIndex], 1.0f);
+		PlayAnimMontage(WeaponComponent->GetCurrentLightAttacks()[RandomAttackIndex], 1.0f);
 
 		FOnMontageEnded InterruptDelegate;
 		FOnMontageEnded CompletedDelegate;
@@ -38,9 +45,8 @@ void AEnemy_WeaponMaster::LightAttack()
 		InterruptDelegate.BindUObject(CharacterAnimationInstance, &UCharacterAnimInstance::InterruptAttack);
 		CompletedDelegate.BindUObject(CharacterAnimationInstance, &UCharacterAnimInstance::OnAttackEnd);
 
-		CharacterAnimationInstance->Montage_SetBlendingOutDelegate(InterruptDelegate, LightAttacks[RandomAttackIndex]);
-		CharacterAnimationInstance->Montage_SetEndDelegate(CompletedDelegate, LightAttacks[RandomAttackIndex]);
-
+		CharacterAnimationInstance->Montage_SetBlendingOutDelegate(InterruptDelegate, WeaponComponent->GetCurrentLightAttacks()[RandomAttackIndex]);
+		CharacterAnimationInstance->Montage_SetEndDelegate(CompletedDelegate, WeaponComponent->GetCurrentLightAttacks()[RandomAttackIndex]);
 
 	}
 }

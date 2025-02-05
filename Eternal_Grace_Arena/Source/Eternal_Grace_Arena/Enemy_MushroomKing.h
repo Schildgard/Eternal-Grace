@@ -15,9 +15,13 @@ class ETERNAL_GRACE_ARENA_API AEnemy_MushroomKing : public AEternal_Grace_ArenaB
 	GENERATED_BODY()
 
 protected:
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animations, meta = (AllowPrivateAccess))
+TArray<UAnimMontage*> LightAttacks;
 	virtual void GetOffMeMove()override;
 
 	virtual void Tick(float DeltaSeconds)override;
 
 	virtual void LightAttack()override;
+	UFUNCTION()
+	void Attack();
 };

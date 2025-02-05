@@ -114,7 +114,7 @@ void AEternal_Grace_ArenaCharacter::SetupPlayerInputComponent(UInputComponent* P
 		EnhancedInputComponent->BindAction(GuardAction, ETriggerEvent::Canceled, this, &AEternal_Grace_ArenaCharacter::CancelGuard);
 
 		//Light Attack
-		EnhancedInputComponent->BindAction(LightAttackAction, ETriggerEvent::Triggered, this, &AEternal_Grace_ArenaCharacter::LightAttack);
+		EnhancedInputComponent->BindAction(LightAttackAction, ETriggerEvent::Triggered, WeaponComponent, &UWeaponComponent::Attack);
 
 
 	}
@@ -262,23 +262,7 @@ void AEternal_Grace_ArenaCharacter::CheckActorStaggerAnimation(UAnimMontage* Mon
 
 void AEternal_Grace_ArenaCharacter::LightAttack()
 {
-	if (!CharacterAnimationInstance->isAttacking)
-	{
-		CharacterAnimationInstance->isAttacking = true;
-		if (CharacterAnimationInstance->isGuarding)
-		{
-			CancelGuard(); // THIS IS NOT GOOD: BETWEEN ATTACK THERE IS A SMALL WINDOW WHERE GUARD IS ACTIVATED. NEED TO CHANGE THIS LATER
-		}
-		int AttackIndex = CharacterAnimationInstance->attackCount;
-		if (LightAttacks[AttackIndex] != nullptr)
-		{
-			PlayAnimMontage(LightAttacks[AttackIndex], 1.0f);
-		}
-	}
-	else
-	{
-		UE_LOG(LogTemp, Warning, TEXT("Character Already is Attacking"))
-	}
+//	WeaponComponent->Attack();
 }
 
 

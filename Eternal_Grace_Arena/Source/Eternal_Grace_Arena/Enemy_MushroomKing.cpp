@@ -24,6 +24,13 @@ void AEnemy_MushroomKing::Tick(float DeltaSeconds)
 
 void AEnemy_MushroomKing::LightAttack()
 {
+	Attack();
+	
+}
+
+void AEnemy_MushroomKing::Attack()
+{
+
 	if (!CharacterAnimationInstance->isAttacking)
 	{
 		int RandomAttackIndex = UKismetMathLibrary::RandomInteger(2); //CHANGE THIS TO LENGTH OF VIABLE ATTACK ARRAY
@@ -31,7 +38,7 @@ void AEnemy_MushroomKing::LightAttack()
 		//If PLAYER is very Close
 		if (CheckDistancetoPlayer(300.f))
 		{
-				GetOffMeMove();
+			GetOffMeMove();
 			return;
 		}
 		else if (CheckDistancetoPlayer(400.f))

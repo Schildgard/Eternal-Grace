@@ -22,6 +22,7 @@ protected:
 
 
 
+
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = UI, meta = (AllowPrivateAccess))
 	UWidgetComponent* HPBarComponent;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = UI, meta = (AllowPrivateAccess))

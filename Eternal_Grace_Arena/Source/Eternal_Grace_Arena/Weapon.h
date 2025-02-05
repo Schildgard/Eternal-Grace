@@ -40,6 +40,14 @@ protected:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Attributes, meta = (AllowPrivateAccess))
 	UCapsuleComponent* ColliderComponent;
+
+	
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animations, meta = (AllowPrivateAccess))
+	TArray<UAnimMontage*> LightAttackMontages;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animations, meta = (AllowPrivateAccess))
+	TArray<UAnimMontage*> HeavyAttackMontages;
+
 	
 
 public:
@@ -51,5 +59,11 @@ public:
 
 	UFUNCTION()
 	UCapsuleComponent* GetColliderShape();
+
+	UFUNCTION()
+	TArray<UAnimMontage*> GetLightAttackMontages();
+
+	UFUNCTION()
+	TArray<UAnimMontage*> GetHeavyAttackMontages();
 	
 };

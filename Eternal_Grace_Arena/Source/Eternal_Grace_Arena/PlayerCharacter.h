@@ -59,8 +59,8 @@ public:
 
 protected:
 	//HEAVY ATTACKS
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animations, meta = (AllowPrivateAccess))
-	TArray<UAnimMontage*> HeavyAttacks;
+	//UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animations, meta = (AllowPrivateAccess))
+	//TArray<UAnimMontage*> HeavyAttacks;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animations, meta = (AllowPrivateAccess))
 	UAnimMontage* ChargeAttack;
 
@@ -89,8 +89,8 @@ protected:
 	void CancelSprint();
 	UFUNCTION()
 	void ChargeHeavyAttack();
-	UFUNCTION()
-	void HeavyAttack();
+	//UFUNCTION()
+	//void HeavyAttack();
 
 
 
