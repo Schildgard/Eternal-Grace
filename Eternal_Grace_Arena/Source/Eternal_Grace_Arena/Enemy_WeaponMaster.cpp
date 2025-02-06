@@ -18,37 +18,13 @@ AEnemy_WeaponMaster::AEnemy_WeaponMaster()
 
 void AEnemy_WeaponMaster::LightAttack()
 {
-	Attack();
-}
-
-void AEnemy_WeaponMaster::Attack()
-{
 	if (CheckIfPlayerIsBehind() && SecondPhaseTriggered)
 	{
 		GetOffMeMove();
 		return;
 	}
+	Super::LightAttack();
 
-
-	if (!CharacterAnimationInstance->isAttacking)
-	{
-		CharacterAnimationInstance->isAttacking = true;
-		RotateTowardsTarget(UGameplayStatics::GetPlayerCharacter(world, 0));
-
-		int RandomAttackIndex = UKismetMathLibrary::RandomInteger(2); //CHANGE THIS TO LENGTH OF VIABLE ATTACK ARRAY
-
-		PlayAnimMontage(WeaponComponent->GetCurrentLightAttacks()[RandomAttackIndex], 1.0f);
-
-		FOnMontageEnded InterruptDelegate;
-		FOnMontageEnded CompletedDelegate;
-
-		InterruptDelegate.BindUObject(CharacterAnimationInstance, &UCharacterAnimInstance::InterruptAttack);
-		CompletedDelegate.BindUObject(CharacterAnimationInstance, &UCharacterAnimInstance::OnAttackEnd);
-
-		CharacterAnimationInstance->Montage_SetBlendingOutDelegate(InterruptDelegate, WeaponComponent->GetCurrentLightAttacks()[RandomAttackIndex]);
-		CharacterAnimationInstance->Montage_SetEndDelegate(CompletedDelegate, WeaponComponent->GetCurrentLightAttacks()[RandomAttackIndex]);
-
-	}
 }
 
 void AEnemy_WeaponMaster::GetOffMeMove()

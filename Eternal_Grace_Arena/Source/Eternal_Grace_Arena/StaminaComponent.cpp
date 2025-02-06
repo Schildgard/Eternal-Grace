@@ -48,6 +48,28 @@ void UStaminaComponent::TickComponent(float DeltaTime, ELevelTick TickType, FAct
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 
+	//if (CurrentStamina <= 0)
+	//{
+	//	CurrentStamina = 0;
+	//	Exhausted = true;
+	//}
+	//if (Exhausted)
+	//{
+	//	ExhaustionCountdown -= DeltaTime;
+	//}
+	//if (ExhaustionCountdown <= 0)
+	//{
+	//	Exhausted = false;
+	//	ExhaustionCountdown = ExhaustionTimer;
+	//}
+
+	ManageExhaustion(DeltaTime);
+	//ManageStaminaRegeneration(DeltaTime);
+
+}
+
+void UStaminaComponent::ManageExhaustion(float DeltaTime)
+{
 	if (CurrentStamina <= 0)
 	{
 		CurrentStamina = 0;
@@ -62,5 +84,14 @@ void UStaminaComponent::TickComponent(float DeltaTime, ELevelTick TickType, FAct
 		Exhausted = false;
 		ExhaustionCountdown = ExhaustionTimer;
 	}
+}
+
+void UStaminaComponent::ManageStaminaRegeneration(float DeltaTime)
+{
+//	if (CurrentStamina >= MaxStamina || Exhausted || !CanRegenerate)
+//	{
+//		return;
+//	}
+//	CurrentStamina += StaminaRegenerationRate * DeltaTime;
 }
 

@@ -114,7 +114,7 @@ void AEternal_Grace_ArenaCharacter::SetupPlayerInputComponent(UInputComponent* P
 		EnhancedInputComponent->BindAction(GuardAction, ETriggerEvent::Canceled, this, &AEternal_Grace_ArenaCharacter::CancelGuard);
 
 		//Light Attack
-		EnhancedInputComponent->BindAction(LightAttackAction, ETriggerEvent::Triggered, WeaponComponent, &UWeaponComponent::Attack);
+		EnhancedInputComponent->BindAction(LightAttackAction, ETriggerEvent::Triggered, this, &AEternal_Grace_ArenaCharacter::LightAttack);
 
 
 	}
@@ -262,7 +262,7 @@ void AEternal_Grace_ArenaCharacter::CheckActorStaggerAnimation(UAnimMontage* Mon
 
 void AEternal_Grace_ArenaCharacter::LightAttack()
 {
-//	WeaponComponent->Attack();
+	//OVERRIDE
 }
 
 

@@ -17,18 +17,19 @@ void AEnemy_MageBoss::LightAttack()
 {
 	if (!CharacterAnimationInstance->isAttacking)
 	{
+		TArray<UAnimMontage*> Spells = SpellComponent->GetSpellList();
 		CharacterAnimationInstance->isAttacking = true;
-		int AttackIndex = 0; //FIREBALL
+		int SpellIndex = 0; //FIREBALL
 
 		// CHECK IF PLAYER IS IN TELEPORT RANGE
 		if (CheckDistancetoPlayer(350.0f))
 		{
 			SetTeleportPosition();
-			AttackIndex = 1; //TELEPORT
+			SpellIndex = 1; //TELEPORT
 		}
 		else if (SecondPhaseTriggered)
 		{
-			AttackIndex = 2; //HOMING FIREBALL
+			SpellIndex = 2; //HOMING FIREBALL
 		}
 
 
@@ -36,12 +37,12 @@ void AEnemy_MageBoss::LightAttack()
 		FOnMontageEnded InterruptDelegate;
 		FOnMontageEnded CompletedDelegate;
 
-		PlayAnimMontage(LightAttacks[AttackIndex], 1.0f); //CHANGE THIS TO FLEXIBLE ARRAY INDEX OF VIABLE ATTACKS
+		PlayAnimMontage(Spells[SpellIndex], 1.0f); //CHANGE THIS TO FLEXIBLE ARRAY INDEX OF VIABLE ATTACKS
 		InterruptDelegate.BindUObject(CharacterAnimationInstance, &UCharacterAnimInstance::InterruptAttack);
 		CompletedDelegate.BindUObject(CharacterAnimationInstance, &UCharacterAnimInstance::OnAttackEnd);
 
-		CharacterAnimationInstance->Montage_SetBlendingOutDelegate(InterruptDelegate, LightAttacks[AttackIndex]);
-		CharacterAnimationInstance->Montage_SetEndDelegate(CompletedDelegate, LightAttacks[AttackIndex]);
+		CharacterAnimationInstance->Montage_SetBlendingOutDelegate(InterruptDelegate, Spells[SpellIndex]);
+		CharacterAnimationInstance->Montage_SetEndDelegate(CompletedDelegate, Spells[SpellIndex]);
 	}
 }
 

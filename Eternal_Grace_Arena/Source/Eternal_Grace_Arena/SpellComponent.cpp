@@ -33,15 +33,6 @@ void USpellComponent::BeginPlay()
 	
 }
 
-
-// Called every frame
-void USpellComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
-{
-	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
-
-	// ...
-}
-
 void USpellComponent::CastSpell(ASpell* SpellToCast)
 {
 
@@ -61,5 +52,10 @@ FVector USpellComponent::GetTargetPosition()
 AEternal_Grace_ArenaCharacter* USpellComponent::GetTarget()
 {
 	return TargetCharacter;
+}
+
+TArray<UAnimMontage*> USpellComponent::GetSpellList()
+{
+	return AvaiableSpells;
 }
 

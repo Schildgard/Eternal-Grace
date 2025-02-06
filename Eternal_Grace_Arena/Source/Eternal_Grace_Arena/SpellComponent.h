@@ -16,8 +16,11 @@ class ETERNAL_GRACE_ARENA_API USpellComponent : public UActorComponent
 public:	
 	USpellComponent();
 
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, meta =(AllowPrivateAccess))
-	TArray<TSubclassOf<ASpell>> SpellList;
+	//UPROPERTY(EditAnywhere, BlueprintReadOnly, meta =(AllowPrivateAccess))
+	//TArray<TSubclassOf<ASpell>> SpellList;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, meta = (AllowPrivateAccess))
+	TArray<UAnimMontage*> AvaiableSpells;
 
 protected:
 	virtual void BeginPlay() override;
@@ -29,10 +32,7 @@ protected:
 	AEternal_Grace_ArenaCharacter* TargetCharacter;
 
 
-
-
-public:	
-	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
+public:
 	UFUNCTION()
 	virtual void CastSpell(ASpell* SpellToCast);
 	UFUNCTION()
@@ -41,5 +41,8 @@ public:
 	FVector GetTargetPosition();
 	UFUNCTION()
 	AEternal_Grace_ArenaCharacter* GetTarget();
+
+	UFUNCTION()
+	TArray<UAnimMontage*> GetSpellList();
 	
 };

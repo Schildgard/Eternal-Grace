@@ -5,6 +5,7 @@
 #include "CharacterAnimInstance.h"
 #include "Kismet/GameplayStatics.h"
 #include "Kismet//KismetMathLibrary.h"
+#include "WeaponComponent.h"
 
 void AEnemy_MushroomKing::GetOffMeMove()
 {
@@ -24,16 +25,10 @@ void AEnemy_MushroomKing::Tick(float DeltaSeconds)
 
 void AEnemy_MushroomKing::LightAttack()
 {
-	Attack();
-	
-}
-
-void AEnemy_MushroomKing::Attack()
-{
-
+	TArray<UAnimMontage*> Attacks = WeaponComponent->GetCurrentLightAttacks();
 	if (!CharacterAnimationInstance->isAttacking)
 	{
-		int RandomAttackIndex = UKismetMathLibrary::RandomInteger(2); //CHANGE THIS TO LENGTH OF VIABLE ATTACK ARRAY
+		int AttackIndex = 0;
 		CharacterAnimationInstance->isAttacking = true;
 		//If PLAYER is very Close
 		if (CheckDistancetoPlayer(300.f))
@@ -44,17 +39,15 @@ void AEnemy_MushroomKing::Attack()
 		else if (CheckDistancetoPlayer(400.f))
 		{
 			RotateTowardsTarget(UGameplayStatics::GetPlayerCharacter(world, 0));
-			RandomAttackIndex = 0;
+			AttackIndex = 0;
 		}
 		else
 		{
 			RotateTowardsTarget(UGameplayStatics::GetPlayerCharacter(world, 0));
-
-			//int RandomAttackIndex = UKismetMathLibrary::RandomInteger(2); //CHANGE THIS TO LENGTH OF VIABLE ATTACK ARRAY
-			RandomAttackIndex = 1;
+			AttackIndex = 1;
 		}
 
-		PlayAnimMontage(LightAttacks[RandomAttackIndex], 1.0f);
+		PlayAnimMontage(Attacks[AttackIndex], 1.0f);
 
 		FOnMontageEnded InterruptDelegate;
 		FOnMontageEnded CompletedDelegate;
@@ -62,7 +55,9 @@ void AEnemy_MushroomKing::Attack()
 		InterruptDelegate.BindUObject(CharacterAnimationInstance, &UCharacterAnimInstance::InterruptAttack);
 		CompletedDelegate.BindUObject(CharacterAnimationInstance, &UCharacterAnimInstance::OnAttackEnd);
 
-		CharacterAnimationInstance->Montage_SetBlendingOutDelegate(InterruptDelegate, LightAttacks[RandomAttackIndex]);
-		CharacterAnimationInstance->Montage_SetEndDelegate(CompletedDelegate, LightAttacks[RandomAttackIndex]);
+		CharacterAnimationInstance->Montage_SetBlendingOutDelegate(InterruptDelegate, Attacks[AttackIndex]);
+		CharacterAnimationInstance->Montage_SetEndDelegate(CompletedDelegate, Attacks[AttackIndex]);
 	}
+
+	
 }

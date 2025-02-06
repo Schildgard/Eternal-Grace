@@ -9,6 +9,10 @@
 #include "DrawDebugHelpers.h"
 #include "Components/CapsuleComponent.h"
 #include "HealthComponent.h"
+#include "CharacterAnimInstance.h"
+#include "WeaponComponent.h"
+
+
 AEternal_Grace_ArenaEnemy::AEternal_Grace_ArenaEnemy()
 {
 	HPBarComponent = CreateDefaultSubobject<UWidgetComponent>(TEXT("HP Bar"));
@@ -17,6 +21,7 @@ AEternal_Grace_ArenaEnemy::AEternal_Grace_ArenaEnemy()
 	HPBarComponent->SetRelativeLocation(FVector(0, 0, 163.0f));
 	AttackRange = 350.f;
 	HealthbarWidget = nullptr;
+	isAggro = false;
 
 	//ChasingDistanceThreshold = 300.0f;
 	//ChasingCountDown = ChasingTimer;
@@ -142,6 +147,31 @@ void AEternal_Grace_ArenaEnemy::Die_Implementation()
 {
 	Super::Die_Implementation();
 	SendInfoToGameInstance();
+}
+
+void AEternal_Grace_ArenaEnemy::LightAttack()
+{
+	if (!CharacterAnimationInstance->isAttacking)
+	{
+		TArray<UAnimMontage*> Attacks = WeaponComponent->GetCurrentLightAttacks();
+
+		CharacterAnimationInstance->isAttacking = true;
+		RotateTowardsTarget(UGameplayStatics::GetPlayerCharacter(world, 0));
+
+		int RandomAttackIndex = UKismetMathLibrary::RandomInteger(Attacks.Num()); //CHANGE THIS TO LENGTH OF VIABLE ATTACK ARRAY
+
+		PlayAnimMontage(Attacks[RandomAttackIndex], 1.0f);
+
+		FOnMontageEnded InterruptDelegate;
+		FOnMontageEnded CompletedDelegate;
+
+		InterruptDelegate.BindUObject(CharacterAnimationInstance, &UCharacterAnimInstance::InterruptAttack);
+		CompletedDelegate.BindUObject(CharacterAnimationInstance, &UCharacterAnimInstance::OnAttackEnd);
+
+		CharacterAnimationInstance->Montage_SetBlendingOutDelegate(InterruptDelegate, Attacks[RandomAttackIndex]);
+		CharacterAnimationInstance->Montage_SetEndDelegate(CompletedDelegate, Attacks[RandomAttackIndex]);
+
+	}
 }
 
 void AEternal_Grace_ArenaEnemy::SpotPlayer(APawn* SpottedPawn)

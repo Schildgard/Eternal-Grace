@@ -48,19 +48,19 @@ protected:
 
 
 
-	UPROPERTY()
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (AllowPrivateAccess))
 	TArray<UAnimMontage*> CurrentLightAttacks;
 
-	UPROPERTY()
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (AllowPrivateAccess))
 	TArray<UAnimMontage*> CurrentHeavyAttacks;
 
 public:	
 
 	UFUNCTION()
-	void Attack();
+	void HeavyAttack();
 
 	UFUNCTION()
-	void HeavyAttack();
+	void UpdateCurrentMoveSet();
 
 
 	UFUNCTION()
@@ -83,5 +83,7 @@ public:
 
 	UFUNCTION()
 	TArray<UAnimMontage*> GetCurrentLightAttacks();
+	UFUNCTION()
+	TArray<UAnimMontage*> GetCurrentHeavyAttacks();
 		
 };

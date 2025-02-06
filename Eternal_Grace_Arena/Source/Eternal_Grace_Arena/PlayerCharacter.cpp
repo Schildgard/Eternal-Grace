@@ -73,7 +73,7 @@ void APlayerCharacter::IncreaseChargePower()
 		if (currentChargePower >= maxChargePower)
 		{
 			currentChargePower = maxChargePower;
-			WeaponComponent->HeavyAttack();
+			HeavyAttack();
 		}
 	}
 }
@@ -94,13 +94,6 @@ void APlayerCharacter::Dodge()
 void APlayerCharacter::BeginPlay()
 {
 	Super::BeginPlay();
-
-	if (StaminaComponent == nullptr)
-	{
-		UE_LOG(LogTemp, Warning, TEXT("StaminaComponent could not be found"))
-			return;
-	}
-
 };
 
 void APlayerCharacter::Tick(float DeltaSeconds)
@@ -127,7 +120,7 @@ void APlayerCharacter::Tick(float DeltaSeconds)
 		if (CharacterAnimationInstance->isRunning)
 		{
 			StaminaComponent->CurrentStamina -= (RunningStaminaConsumption * DeltaSeconds);
-			if (StaminaComponent->CurrentStamina <= 0.0f)
+			if (StaminaComponent->CurrentStamina <= 0.0f || GetVelocity().Size() < 50.f)
 			{
 				CancelSprint();
 			}
@@ -165,7 +158,7 @@ void APlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCom
 		//Heavy Attack
 		EnhancedInputComponent->BindAction(HeavyAttackAction, ETriggerEvent::Started, this, &APlayerCharacter::ChargeHeavyAttack);
 		EnhancedInputComponent->BindAction(HeavyAttackAction, ETriggerEvent::Triggered, this, &APlayerCharacter::IncreaseChargePower);
-		EnhancedInputComponent->BindAction(HeavyAttackAction, ETriggerEvent::Completed, WeaponComponent, &UWeaponComponent::HeavyAttack);
+		EnhancedInputComponent->BindAction(HeavyAttackAction, ETriggerEvent::Completed, this, &APlayerCharacter::HeavyAttack);
 
 	}
 	else
@@ -176,7 +169,7 @@ void APlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCom
 
 void APlayerCharacter::Sprint()
 {
-	if (StaminaComponent->CurrentStamina >= 0.1f)
+	if (StaminaComponent->CurrentStamina >= 0.1f && GetVelocity().Size() > 50.f)
 	{
 		CharacterAnimationInstance->isRunning = true;
 		GetCharacterMovement()->MaxWalkSpeed = 750.f;
@@ -197,8 +190,21 @@ void APlayerCharacter::LightAttack()
 {
 	if (StaminaComponent->CurrentStamina >= 1.0f)
 	{
-		//Super::LightAttack();
-		WeaponComponent->Attack();
+		TArray<UAnimMontage*> Attacks = WeaponComponent->GetCurrentLightAttacks();
+
+		if (!CharacterAnimationInstance->isAttacking)
+		{
+			CharacterAnimationInstance->isAttacking = true;
+			if (CharacterAnimationInstance->isGuarding)
+			{
+				CancelGuard(); // THIS IS NOT GOOD: BETWEEN ATTACK THERE IS A SMALL WINDOW WHERE GUARD IS ACTIVATED. NEED TO CHANGE THIS LATER
+			}
+			int AttackIndex = CharacterAnimationInstance->attackCount;
+			if (Attacks[AttackIndex] != nullptr)
+			{
+				PlayAnimMontage(Attacks[AttackIndex], 1.0f);
+			}
+		}
 	}
 }
 
@@ -216,13 +222,30 @@ void APlayerCharacter::ChargeHeavyAttack()
 	}
 }
 
-//void APlayerCharacter::HeavyAttack()
-//{
-//	if (StaminaComponent->CurrentStamina >= 1.0f)
-//	{
-//		WeaponComponent->HeavyAttack();
-//	}
-//}
+void APlayerCharacter::HeavyAttack()
+{
+	if (StaminaComponent->CurrentStamina >= 1.0f)
+	{
+		TArray<UAnimMontage*> HeavyAttacks = WeaponComponent->GetCurrentHeavyAttacks();
+		//When Heavy Attack Button is released from charge Position the Player Character unleashes his Heavy Attack 
+		if (CharacterAnimationInstance->isCharging)
+		{
+			CharacterAnimationInstance->isCharging = false; //LEAVE CHARGING STATE
+			CharacterAnimationInstance->isAttacking = true; //SET PLAYER IN ATTACK STATE, SO THE ANIMATION CAN NOT BE INTERUPTED BY A LIGHT ATTACK COMMAND
+			CharacterAnimationInstance->isInHeavyAttack = true; // SET PLAYER IN HEAVY ATTACK STATE, SO ANOTHER HEAVY ATTACK COMMAND TRIGGERS THE SECOND ATTACK ANIM
+			UE_LOG(LogTemp, Warning, TEXT("Character Releases Attack"))
+				PlayAnimMontage(HeavyAttacks[0], 1.0f);
+		}
+		else if (CharacterAnimationInstance->isInHeavyAttack)
+		{
+			//IF PLAYER IS IN HEAVY ATTACK, A SECOND HEAVY ATTACK COMMAND TRIGGERS THE FOLLOW UP ANIMATION
+			CharacterAnimationInstance->isInHeavyAttack = false;//LEAVE HEAVY ATTACK STATE, SO THE FOLLOW UP ANIMATION ONLY TRIGGERS ONCE
+			CharacterAnimationInstance->isAttacking = true; //SET IS ATTACKING TO TRUE TO MAKE SURE THE FOLLOW UP ANIMATION IS NOT CANCELED BY LIGHT ATTACK COMMAND
+			PlayAnimMontage(HeavyAttacks[1], 1.0f);
+			UE_LOG(LogTemp, Warning, TEXT("Character Already is not Charging"))
+		}
+	}
+}
 
 void APlayerCharacter::Guard()
 {

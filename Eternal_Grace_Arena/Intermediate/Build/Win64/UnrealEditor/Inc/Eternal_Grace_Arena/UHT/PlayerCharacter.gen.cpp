@@ -135,6 +135,35 @@ DEFINE_FUNCTION(APlayerCharacter::execGuardCounterAttack)
 }
 // End Class APlayerCharacter Function GuardCounterAttack
 
+// Begin Class APlayerCharacter Function HeavyAttack
+struct Z_Construct_UFunction_APlayerCharacter_HeavyAttack_Statics
+{
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "PlayerCharacter.h" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_APlayerCharacter_HeavyAttack_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_APlayerCharacter, nullptr, "HeavyAttack", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00080401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_APlayerCharacter_HeavyAttack_Statics::Function_MetaDataParams), Z_Construct_UFunction_APlayerCharacter_HeavyAttack_Statics::Function_MetaDataParams) };
+UFunction* Z_Construct_UFunction_APlayerCharacter_HeavyAttack()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_APlayerCharacter_HeavyAttack_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(APlayerCharacter::execHeavyAttack)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->HeavyAttack();
+	P_NATIVE_END;
+}
+// End Class APlayerCharacter Function HeavyAttack
+
 // Begin Class APlayerCharacter Function IncreaseChargePower
 struct Z_Construct_UFunction_APlayerCharacter_IncreaseChargePower_Statics
 {
@@ -266,6 +295,7 @@ void APlayerCharacter::StaticRegisterNativesAPlayerCharacter()
 		{ "ChargeHeavyAttack", &APlayerCharacter::execChargeHeavyAttack },
 		{ "Dodge", &APlayerCharacter::execDodge },
 		{ "GuardCounterAttack", &APlayerCharacter::execGuardCounterAttack },
+		{ "HeavyAttack", &APlayerCharacter::execHeavyAttack },
 		{ "IncreaseChargePower", &APlayerCharacter::execIncreaseChargePower },
 		{ "Interact", &APlayerCharacter::execInteract },
 		{ "Sprint", &APlayerCharacter::execSprint },
@@ -361,13 +391,7 @@ struct Z_Construct_UClass_APlayerCharacter_Statics
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ChargeAttack_MetaData[] = {
 		{ "AllowPrivateAccess", "" },
 		{ "Category", "Animations" },
-#if !UE_BUILD_SHIPPING
-		{ "Comment", "//HEAVY ATTACKS\n//UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animations, meta = (AllowPrivateAccess))\n//TArray<UAnimMontage*> HeavyAttacks;\n" },
-#endif
 		{ "ModuleRelativePath", "PlayerCharacter.h" },
-#if !UE_BUILD_SHIPPING
-		{ "ToolTip", "HEAVY ATTACKS\nUPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animations, meta = (AllowPrivateAccess))\nTArray<UAnimMontage*> HeavyAttacks;" },
-#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_RunningAttack_MetaData[] = {
 		{ "AllowPrivateAccess", "" },
@@ -426,6 +450,7 @@ struct Z_Construct_UClass_APlayerCharacter_Statics
 		{ &Z_Construct_UFunction_APlayerCharacter_ChargeHeavyAttack, "ChargeHeavyAttack" }, // 1713464993
 		{ &Z_Construct_UFunction_APlayerCharacter_Dodge, "Dodge" }, // 3111381103
 		{ &Z_Construct_UFunction_APlayerCharacter_GuardCounterAttack, "GuardCounterAttack" }, // 1036179294
+		{ &Z_Construct_UFunction_APlayerCharacter_HeavyAttack, "HeavyAttack" }, // 171223720
 		{ &Z_Construct_UFunction_APlayerCharacter_IncreaseChargePower, "IncreaseChargePower" }, // 2751030947
 		{ &Z_Construct_UFunction_APlayerCharacter_Interact, "Interact" }, // 1929792896
 		{ &Z_Construct_UFunction_APlayerCharacter_Sprint, "Sprint" }, // 2307348509
@@ -511,14 +536,14 @@ APlayerCharacter::~APlayerCharacter() {}
 // End Class APlayerCharacter
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_Eternal_Grace_Arena_Source_Eternal_Grace_Arena_PlayerCharacter_h_Statics
+struct Z_CompiledInDeferFile_FID_Repository_Eternal_Grace_Arena_Eternal_Grace_Arena_Source_Eternal_Grace_Arena_PlayerCharacter_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_APlayerCharacter, APlayerCharacter::StaticClass, TEXT("APlayerCharacter"), &Z_Registration_Info_UClass_APlayerCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APlayerCharacter), 1371672734U) },
+		{ Z_Construct_UClass_APlayerCharacter, APlayerCharacter::StaticClass, TEXT("APlayerCharacter"), &Z_Registration_Info_UClass_APlayerCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APlayerCharacter), 4154363027U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Eternal_Grace_Arena_Source_Eternal_Grace_Arena_PlayerCharacter_h_2491524339(TEXT("/Script/Eternal_Grace_Arena"),
-	Z_CompiledInDeferFile_FID_Eternal_Grace_Arena_Source_Eternal_Grace_Arena_PlayerCharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Eternal_Grace_Arena_Source_Eternal_Grace_Arena_PlayerCharacter_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Repository_Eternal_Grace_Arena_Eternal_Grace_Arena_Source_Eternal_Grace_Arena_PlayerCharacter_h_1719720237(TEXT("/Script/Eternal_Grace_Arena"),
+	Z_CompiledInDeferFile_FID_Repository_Eternal_Grace_Arena_Eternal_Grace_Arena_Source_Eternal_Grace_Arena_PlayerCharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Repository_Eternal_Grace_Arena_Eternal_Grace_Arena_Source_Eternal_Grace_Arena_PlayerCharacter_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration

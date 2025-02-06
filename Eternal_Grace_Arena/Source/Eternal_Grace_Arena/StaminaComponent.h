@@ -32,6 +32,10 @@ public:
 	float ExhaustionCountdown;
 
 	void RegenerateStamina(float RegenerationRate);
+
+
+	UPROPERTY()
+	bool CanRegenerate;
 protected:
 	// Called when the game starts
 	virtual void BeginPlay() override;
@@ -40,6 +44,14 @@ protected:
 public:	
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
+
+	UFUNCTION()
+	void ManageExhaustion(float DeltaTime);
+
+	UFUNCTION()
+	void ManageStaminaRegeneration(float DeltaTime);
+
+
 
 		
 };
