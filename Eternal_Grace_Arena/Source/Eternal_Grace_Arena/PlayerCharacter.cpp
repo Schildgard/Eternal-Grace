@@ -190,15 +190,16 @@ void APlayerCharacter::LightAttack()
 {
 	if (StaminaComponent->CurrentStamina >= 1.0f)
 	{
-		TArray<UAnimMontage*> Attacks = WeaponComponent->GetCurrentLightAttacks();
-
-		if (!CharacterAnimationInstance->isAttacking)
+		if (!CharacterAnimationInstance->isAttacking && !GetMovementComponent()->IsFalling())
 		{
 			CharacterAnimationInstance->isAttacking = true;
+			//INTERUPT BLOCKING STATE IF BLOCKING
 			if (CharacterAnimationInstance->isGuarding)
 			{
 				CancelGuard(); // THIS IS NOT GOOD: BETWEEN ATTACK THERE IS A SMALL WINDOW WHERE GUARD IS ACTIVATED. NEED TO CHANGE THIS LATER
 			}
+
+			TArray<UAnimMontage*> Attacks = WeaponComponent->GetCurrentLightAttacks();
 			int AttackIndex = CharacterAnimationInstance->attackCount;
 			if (Attacks[AttackIndex] != nullptr)
 			{
@@ -210,7 +211,7 @@ void APlayerCharacter::LightAttack()
 
 void APlayerCharacter::ChargeHeavyAttack()
 {
-	if (StaminaComponent->CurrentStamina >= 1.0f)
+	if (StaminaComponent->CurrentStamina >= 1.0f&& !GetMovementComponent()->IsFalling())
 	{
 		//When Heavy Attack Button is first pressed, Player goes into Charge Stand
 		if (!CharacterAnimationInstance->isCharging && !CharacterAnimationInstance->isAttacking && !CharacterAnimationInstance->isInHeavyAttack)
@@ -224,7 +225,7 @@ void APlayerCharacter::ChargeHeavyAttack()
 
 void APlayerCharacter::HeavyAttack()
 {
-	if (StaminaComponent->CurrentStamina >= 1.0f)
+	if (StaminaComponent->CurrentStamina >= 1.0f && !CharacterAnimationInstance->isInHeavyAttack)
 	{
 		TArray<UAnimMontage*> HeavyAttacks = WeaponComponent->GetCurrentHeavyAttacks();
 		//When Heavy Attack Button is released from charge Position the Player Character unleashes his Heavy Attack 
@@ -236,16 +237,17 @@ void APlayerCharacter::HeavyAttack()
 			UE_LOG(LogTemp, Warning, TEXT("Character Releases Attack"))
 				PlayAnimMontage(HeavyAttacks[0], 1.0f);
 		}
-		else if (CharacterAnimationInstance->isInHeavyAttack)
-		{
-			//IF PLAYER IS IN HEAVY ATTACK, A SECOND HEAVY ATTACK COMMAND TRIGGERS THE FOLLOW UP ANIMATION
-			CharacterAnimationInstance->isInHeavyAttack = false;//LEAVE HEAVY ATTACK STATE, SO THE FOLLOW UP ANIMATION ONLY TRIGGERS ONCE
-			CharacterAnimationInstance->isAttacking = true; //SET IS ATTACKING TO TRUE TO MAKE SURE THE FOLLOW UP ANIMATION IS NOT CANCELED BY LIGHT ATTACK COMMAND
-			PlayAnimMontage(HeavyAttacks[1], 1.0f);
-			UE_LOG(LogTemp, Warning, TEXT("Character Already is not Charging"))
-		}
+		//	else if (CharacterAnimationInstance->isInHeavyAttack)
+		//	{
+		//		//IF PLAYER IS IN HEAVY ATTACK, A SECOND HEAVY ATTACK COMMAND TRIGGERS THE FOLLOW UP ANIMATION
+		//		CharacterAnimationInstance->isInHeavyAttack = false;//LEAVE HEAVY ATTACK STATE, SO THE FOLLOW UP ANIMATION ONLY TRIGGERS ONCE
+		//		CharacterAnimationInstance->isAttacking = true; //SET IS ATTACKING TO TRUE TO MAKE SURE THE FOLLOW UP ANIMATION IS NOT CANCELED BY LIGHT ATTACK COMMAND
+		//		PlayAnimMontage(HeavyAttacks[1], 1.0f);
+		//		UE_LOG(LogTemp, Warning, TEXT("Character Already is not Charging"))
+		//	}
 	}
 }
+
 
 void APlayerCharacter::Guard()
 {

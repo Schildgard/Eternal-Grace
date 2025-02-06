@@ -52,28 +52,6 @@ void UWeaponComponent::BeginPlay()
 }
 
 
-
-void UWeaponComponent::HeavyAttack()
-{
-	//When Heavy Attack Button is released from charge Position the Player Character unleashes his Heavy Attack 
-//	if (OwningCharacter->CharacterAnimationInstance->isCharging)
-//	{
-//		OwningCharacter->CharacterAnimationInstance->isCharging = false; //LEAVE CHARGING STATE
-//		OwningCharacter->CharacterAnimationInstance->isAttacking = true; //SET PLAYER IN ATTACK STATE, SO THE ANIMATION CAN NOT BE INTERUPTED BY A LIGHT ATTACK COMMAND
-//		OwningCharacter->CharacterAnimationInstance->isInHeavyAttack = true; // SET PLAYER IN HEAVY ATTACK STATE, SO ANOTHER HEAVY ATTACK COMMAND TRIGGERS THE SECOND ATTACK ANIM
-//		UE_LOG(LogTemp, Warning, TEXT("Character Releases Attack"))
-//			OwningCharacter->PlayAnimMontage(CurrentHeavyAttacks[0], 1.0f);
-//	}
-//	else if (OwningCharacter->CharacterAnimationInstance->isInHeavyAttack)
-//	{
-//		//IF PLAYER IS IN HEAVY ATTACK, A SECOND HEAVY ATTACK COMMAND TRIGGERS THE FOLLOW UP ANIMATION
-//		OwningCharacter->CharacterAnimationInstance->isInHeavyAttack = false;//LEAVE HEAVY ATTACK STATE, SO THE FOLLOW UP ANIMATION ONLY TRIGGERS ONCE
-//		OwningCharacter->CharacterAnimationInstance->isAttacking = true; //SET IS ATTACKING TO TRUE TO MAKE SURE THE FOLLOW UP ANIMATION IS NOT CANCELED BY LIGHT ATTACK COMMAND
-//		OwningCharacter->PlayAnimMontage(CurrentHeavyAttacks[1], 1.0f);
-//		UE_LOG(LogTemp, Warning, TEXT("Character Already is not Charging"))
-//	}
-}
-
 void UWeaponComponent::UpdateCurrentMoveSet()
 {
 	if(EquippedWeapon)

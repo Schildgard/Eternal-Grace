@@ -46,6 +46,16 @@ void AEnemy_MageBoss::LightAttack()
 	}
 }
 
+void AEnemy_MageBoss::Tick(float DeltaSeconds)
+{
+	Super::Tick(DeltaSeconds);
+
+	if(!CharacterAnimationInstance->isAttacking && isAggro)
+	{
+		RotateTowardsTarget(UGameplayStatics::GetPlayerCharacter(world, 0));
+	}
+}
+
 void AEnemy_MageBoss::BeginPlay()
 {
 	Super::BeginPlay();

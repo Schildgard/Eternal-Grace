@@ -20,16 +20,16 @@
 			"EternalGrace_PlayerState.gen.cpp.obj",
 			"EternalGrace_TitleScreen.gen.cpp.obj",
 			"Eternal_Grace_ArenaBoss.gen.cpp.obj",
+			"Eternal_Grace_ArenaCharacter.gen.cpp.obj",
 			"Eternal_Grace_ArenaEnemy.gen.cpp.obj",
 			"Eternal_Grace_ArenaEnemy_Caster.gen.cpp.obj",
+			"Eternal_Grace_ArenaGameMode.gen.cpp.obj",
 			"Eternal_Grace_ProgressBar.gen.cpp.obj",
 			"HealthComponent.gen.cpp.obj",
 			"HitEffectData.gen.cpp.obj",
 			"InteractableActor.gen.cpp.obj",
 			"InteractableActor_SceneLoader.gen.cpp.obj",
-			"Eternal_Grace_Arena.init.gen.cpp.obj",
-			"Eternal_Grace_ArenaCharacter.gen.cpp.obj",
-			"Eternal_Grace_ArenaGameMode.gen.cpp.obj"
+			"Eternal_Grace_Arena.init.gen.cpp.obj"
 		],
 		"Module.Eternal_Grace_Arena.2.cpp.obj": [
 			"I_Damageable.gen.cpp.obj",
@@ -47,6 +47,7 @@
 			"NS_SetStaggered.gen.cpp.obj",
 			"NS_WeaponSwing.gen.cpp.obj",
 			"NS_WeaponSwing_CollisionToggle.gen.cpp.obj",
+			"PlayerCharacter.gen.cpp.obj",
 			"Player_UI_Bars.gen.cpp.obj",
 			"Shield.gen.cpp.obj",
 			"ShieldComponent.gen.cpp.obj",
@@ -62,8 +63,7 @@
 			"StaminaComponent.gen.cpp.obj",
 			"TitleScreenGameMode.gen.cpp.obj",
 			"Weapon.gen.cpp.obj",
-			"WeaponComponent.gen.cpp.obj",
-			"PlayerCharacter.gen.cpp.obj"
+			"WeaponComponent.gen.cpp.obj"
 		],
 		"Module.Eternal_Grace_Arena.3.cpp.obj": [
 			"PerModuleInline.gen.cpp.obj",
@@ -71,8 +71,8 @@
 			"AnimNotify_PlayRandomSound.cpp.obj",
 			"BlendingWidget.cpp.obj",
 			"CharacterAnimInstance.cpp.obj",
+			"CustomPlayerController.cpp.obj",
 			"Damage_Spells.cpp.obj",
-			"Enemy_MageBoss.cpp.obj",
 			"Enemy_MushroomKing.cpp.obj",
 			"Enemy_UI_Healthbar.cpp.obj",
 			"Enemy_WeaponMaster.cpp.obj",
@@ -84,7 +84,9 @@
 			"EternalGrace_PlayerState.cpp.obj",
 			"EternalGrace_TitleScreen.cpp.obj",
 			"Eternal_Grace_Arena.cpp.obj",
+			"Eternal_Grace_ArenaBoss.cpp.obj",
 			"Eternal_Grace_ArenaCharacter.cpp.obj",
+			"Eternal_Grace_ArenaEnemy.cpp.obj",
 			"Eternal_Grace_ArenaEnemy_Caster.cpp.obj",
 			"Eternal_Grace_ArenaGameMode.cpp.obj",
 			"Eternal_Grace_ProgressBar.cpp.obj",
@@ -107,7 +109,6 @@
 			"NS_SetStaggered.cpp.obj",
 			"NS_WeaponSwing.cpp.obj",
 			"NS_WeaponSwing_CollisionToggle.cpp.obj",
-			"PlayerCharacter.cpp.obj",
 			"Player_UI_Bars.cpp.obj",
 			"Shield.cpp.obj",
 			"ShieldComponent.cpp.obj",
@@ -123,10 +124,9 @@
 			"StaminaComponent.cpp.obj",
 			"TitleScreenGameMode.cpp.obj",
 			"Weapon.cpp.obj",
-			"WeaponComponent.cpp.obj",
-			"CustomPlayerController.cpp.obj",
-			"Eternal_Grace_ArenaBoss.cpp.obj",
-			"Eternal_Grace_ArenaEnemy.cpp.obj"
+			"Enemy_MageBoss.cpp.obj",
+			"PlayerCharacter.cpp.obj",
+			"WeaponComponent.cpp.obj"
 		]
 	}
 }

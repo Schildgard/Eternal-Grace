@@ -57,9 +57,6 @@ protected:
 public:	
 
 	UFUNCTION()
-	void HeavyAttack();
-
-	UFUNCTION()
 	void UpdateCurrentMoveSet();
 
 
@@ -85,5 +82,4 @@ public:
 	TArray<UAnimMontage*> GetCurrentLightAttacks();
 	UFUNCTION()
 	TArray<UAnimMontage*> GetCurrentHeavyAttacks();
-		
 };

@@ -12,7 +12,17 @@
 				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Blueprints/CharacterBlueprints/Test_Enemy_Caster.uasset",
 				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Blueprints/CharacterBlueprints/BP_MushroomKing.uasset",
 				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Blueprints/UI_Blueprints/BP_Player_UI_Bars.uasset",
-				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Blueprints/WeaponBlueprints/BP_TestWeapon4.uasset"
+				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Blueprints/WeaponBlueprints/BP_TestWeapon4.uasset",
+				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Blueprints/BP_Test_Shield.uasset",
+				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Animations/DarkLadyAnimations/Combat/Attacks/AirAttacks/ARPG_Warrior_Anim_UE_Attack_Airborne_Mid_RT.uasset",
+				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Animations/DarkLadyAnimations/Combat/Attacks/AirAttacks/AM_DarkLady_JumpAttack.uasset",
+				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Blueprints/BP_TestWeapon.uasset",
+				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Levels/MainMenu.umap",
+				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Animations/DarkLadyAnimations/Combat/Attacks/AirAttacks/AM_DarkLady_AttackLand.uasset",
+				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Blueprints/CharacterBlueprints/BP_Player.uasset",
+				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/AI/MageBoss/BT_MageBoss.uasset",
+				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/AI/WeaponMaster/BT_WeaponMaster.uasset",
+				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Blueprints/AnimationBlueprints/ABP_DarkLady.uasset"
 			]
 		}
 	]

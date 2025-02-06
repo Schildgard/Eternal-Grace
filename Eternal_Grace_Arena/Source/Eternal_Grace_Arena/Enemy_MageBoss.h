@@ -27,7 +27,7 @@ protected:
 	TArray<ASpawnPoint*> AvaiableSpawnPositions;
 
 	virtual void LightAttack()override;
-
+	virtual void Tick(float DeltaSeconds)override;
 	virtual void BeginPlay()override;
 
 	UFUNCTION()
