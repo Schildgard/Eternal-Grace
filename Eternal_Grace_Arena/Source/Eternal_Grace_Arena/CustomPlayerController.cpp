@@ -72,44 +72,44 @@ void ACustomPlayerController::HandlePlayerDeath()
 	ShowYouDiedScreen();
 }
 
-void ACustomPlayerController::ShowBossHPBar()
-{
-	if (BossHPBarClass)
-	{
-		BossHPBar = CreateWidget<UPlayer_UI_Bars>(this, BossHPBarClass);
-		if (BossHPBar)
-		{
-			BossHPBar->AddToViewport();
-			UWidgetAnimation* BlendInAnimation = BossHPBar->GetBlendInAnimation();
-			if (BlendInAnimation)
-			{
-				BossHPBar->PlayAnimation(BlendInAnimation);
-			}
-		}
-	}
-}
-
-void ACustomPlayerController::HideBossHPBar()
-{
-	if (BossHPBar)
-	{
-		UWidgetAnimation* BlendOutAnimation = BossHPBar->GetBlendOutAnimation();
-		if (BlendOutAnimation)
-		{
-			BossHPBar->PlayAnimation(BlendOutAnimation);
-		}
-		else
-		{
-			BossHPBar->RemoveFromViewport();
-		}
-	}
-
-}
-
-UPlayer_UI_Bars* ACustomPlayerController::GetBossHPBarWidget()
-{
-	return BossHPBar;
-}
+//void ACustomPlayerController::ShowBossHPBar()
+//{
+//	if (BossHPBarClass)
+//	{
+//		BossHPBar = CreateWidget<UPlayer_UI_Bars>(this, BossHPBarClass);
+//		if (BossHPBar)
+//		{
+//			BossHPBar->AddToViewport();
+//			UWidgetAnimation* BlendInAnimation = BossHPBar->GetBlendInAnimation();
+//			if (BlendInAnimation)
+//			{
+//				BossHPBar->PlayAnimation(BlendInAnimation);
+//			}
+//		}
+//	}
+//}
+//
+//void ACustomPlayerController::HideBossHPBar()
+//{
+//	if (BossHPBar)
+//	{
+//		UWidgetAnimation* BlendOutAnimation = BossHPBar->GetBlendOutAnimation();
+//		if (BlendOutAnimation)
+//		{
+//			BossHPBar->PlayAnimation(BlendOutAnimation);
+//		}
+//		else
+//		{
+//			BossHPBar->RemoveFromViewport();
+//		}
+//	}
+//
+//}
+//
+//UPlayer_UI_Bars* ACustomPlayerController::GetBossHPBarWidget()
+//{
+//	return BossHPBar;
+//}
 
 
 

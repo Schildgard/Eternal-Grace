@@ -9,6 +9,9 @@ AEternal_Grace_ArenaBoss::AEternal_Grace_ArenaBoss()
 	SecondPhaseMontage = nullptr;
 	SecondPhaseTriggered = false;
 	isAggro = true;
+	GetOffMeAttack = nullptr;
+	HealthbarWidget = nullptr;
+	HealthbarWidgetClass = nullptr;
 }
 
 void AEternal_Grace_ArenaBoss::TriggerSecondPhase()
@@ -25,6 +28,18 @@ void AEternal_Grace_ArenaBoss::Tick(float DeltaSeconds)
 	{
 		TriggerSecondPhase();
 	}
+}
+
+void AEternal_Grace_ArenaBoss::BeginPlay()
+{
+	Super::BeginPlay();
+
+	if (HealthbarWidgetClass)
+	{
+		HealthbarWidget = CreateWidget<UEnemy_UI_Healthbar>(GetWorld(), HealthbarWidgetClass);
+	}
+	ShowHealthWidget();
+
 }
 
 void AEternal_Grace_ArenaBoss::GetOffMeMove()

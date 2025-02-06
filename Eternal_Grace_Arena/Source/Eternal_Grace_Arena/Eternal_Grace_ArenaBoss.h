@@ -28,14 +28,20 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Animations, meta = (AllowPrivateAccess))
 	UAnimMontage* GetOffMeAttack;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = UI, meta = (AllowPrivateAccess))
+	TSubclassOf<UEnemy_UI_Healthbar> HealthbarWidgetClass;
+
 
 
 	UFUNCTION()
 	virtual void TriggerSecondPhase();
 	virtual void Tick(float DeltaSeconds)override;
+	virtual void BeginPlay()override;
 
 protected:
 	UFUNCTION()
 	virtual void GetOffMeMove();
+
+
 	
 };

@@ -23,9 +23,15 @@ protected:
 
 
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = UI, meta = (AllowPrivateAccess))
-	UWidgetComponent* HPBarComponent;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = UI, meta = (AllowPrivateAccess))
+	//UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = UI, meta = (AllowPrivateAccess))
+	//UWidgetComponent* HPBarComponent;
+
+
+
+
+//	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = UI, meta = (AllowPrivateAccess))
+//	TSubclassOf<UEnemy_UI_Healthbar> HealthbarWidgetClass;
+	UPROPERTY()
 	UEnemy_UI_Healthbar* HealthbarWidget;
 
 	//PLAYER DETECTION
@@ -69,9 +75,14 @@ public:
 	UFUNCTION()
 	bool CheckIfPlayerIsBehind();
 
-
 	UFUNCTION()
 	void ResetCollision(UAnimMontage* AttackAnimation, bool Interrupted);
+
+	UFUNCTION()
+	void ShowHealthWidget();
+
+	UFUNCTION()
+	void HideHealthWidget();
 
 protected:
 	virtual void BeginPlay()override;

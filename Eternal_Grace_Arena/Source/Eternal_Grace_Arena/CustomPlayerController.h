@@ -31,10 +31,10 @@ public:
 	UPROPERTY()
 	UPlayer_UI_Bars* HUDWidget;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "User Interface", meta = (AllowPrivateAccess))
-	TSubclassOf<UPlayer_UI_Bars> BossHPBarClass;
-	UPROPERTY()
-	UPlayer_UI_Bars* BossHPBar;
+	//UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "User Interface", meta = (AllowPrivateAccess))
+	//TSubclassOf<UPlayer_UI_Bars> BossHPBarClass;
+	//UPROPERTY()
+	//UPlayer_UI_Bars* BossHPBar;
 
 
 	UPROPERTY()
@@ -56,13 +56,13 @@ public:
 
 
 
-	UFUNCTION()
-	void ShowBossHPBar();
-	UFUNCTION()
-	void HideBossHPBar();
-
-	UFUNCTION()
-	UPlayer_UI_Bars* GetBossHPBarWidget();
+	//UFUNCTION()
+	//void ShowBossHPBar();
+	//UFUNCTION()
+	//void HideBossHPBar();
+	//
+	//UFUNCTION()
+	//UPlayer_UI_Bars* GetBossHPBarWidget();
 
 
 

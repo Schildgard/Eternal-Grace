@@ -16,13 +16,14 @@
 
 AEternal_Grace_ArenaEnemy::AEternal_Grace_ArenaEnemy()
 {
-	HPBarComponent = CreateDefaultSubobject<UWidgetComponent>(TEXT("HP Bar"));
-	HPBarComponent->SetupAttachment(RootComponent);
-	HPBarComponent->SetWidgetSpace(EWidgetSpace::Screen);
-	HPBarComponent->SetRelativeLocation(FVector(0, 0, 163.0f));
+	//HPBarComponent = CreateDefaultSubobject<UWidgetComponent>(TEXT("HP Bar"));
+	//HPBarComponent->SetupAttachment(RootComponent);
+	//HPBarComponent->SetWidgetSpace(EWidgetSpace::Screen);
+	//HPBarComponent->SetRelativeLocation(FVector(0, 0, 163.0f));
 	AttackRange = 350.f;
 	HealthbarWidget = nullptr;
 	isAggro = false;
+//	HealthbarWidgetClass = nullptr;
 
 	//ChasingDistanceThreshold = 300.0f;
 	//ChasingCountDown = ChasingTimer;
@@ -68,34 +69,42 @@ bool AEternal_Grace_ArenaEnemy::CheckDistancetoPlayer(float Threshold)
 void AEternal_Grace_ArenaEnemy::BeginPlay()
 {
 	Super::BeginPlay();
-	if (HPBarComponent)
-	{
-		UUserWidget* Widget = HPBarComponent->GetWidget();
-		if (Widget)
-		{
-			HealthbarWidget = Cast<UEnemy_UI_Healthbar>(Widget);
-			if (HealthbarWidget == nullptr)
-			{
-				UE_LOG(LogTemp, Error, TEXT("%s Failed to cast WidgetProperty to Enemy_UI_Bar"), *GetName())
-			}
-		}
-		else
-		{
-			UE_LOG(LogTemp, Error, TEXT("Get Widget Function of %s HPBarComponent failed"), *GetName())
-		}
-	}
-	else
-	{
-		UE_LOG(LogTemp, Error, TEXT("HP-Bar Component for %s is nullptr"), *GetName())
-	}
-
-
-
-	//	ACustomPlayerController* PlayerController = Cast<ACustomPlayerController>(UGameplayStatics::GetPlayerController(GetWorld(), 0));
-	//	if(PlayerController)
+	//if (HPBarComponent)
+	//{
+	//	UUserWidget* Widget = HPBarComponent->GetWidget();
+	//	if (Widget)
 	//	{
-	//		HealthbarWidget = Cast
+	//		HealthbarWidget = Cast<UEnemy_UI_Healthbar>(Widget);
+	//		if (HealthbarWidget == nullptr)
+	//		{
+	//			UE_LOG(LogTemp, Error, TEXT("%s Failed to cast WidgetProperty to Enemy_UI_Bar"), *GetName())
+	//		}
 	//	}
+	//	else
+	//	{
+	//		UE_LOG(LogTemp, Error, TEXT("Get Widget Function of %s HPBarComponent failed"), *GetName())
+	//	}
+	//}
+	//else
+	//{
+	//	UE_LOG(LogTemp, Error, TEXT("HP-Bar Component for %s is nullptr"), *GetName())
+	//}
+
+
+
+//	if(HealthbarWidgetClass)
+//	{
+//		HealthbarWidget = CreateWidget<UEnemy_UI_Healthbar>(GetWorld(), HealthbarWidgetClass);
+//	}
+//	if (HealthbarWidget)
+//	{
+//		HealthbarWidget->AddToViewport();
+//		UE_LOG(LogTemp, Error, TEXT("HealthbarWidget Added"))
+//	}
+//	else
+//	{
+//		UE_LOG(LogTemp, Error, TEXT("No HealthbarWidget"))
+//	}
 
 
 
@@ -159,6 +168,7 @@ void AEternal_Grace_ArenaEnemy::Tick(float DeltaSeconds)
 
 void AEternal_Grace_ArenaEnemy::Die_Implementation()
 {
+	HideHealthWidget();
 	Super::Die_Implementation();
 	SendInfoToGameInstance();
 }
@@ -245,5 +255,40 @@ void AEternal_Grace_ArenaEnemy::ResetCollision(UAnimMontage* AttackAnimation, bo
 	{
 		UCapsuleComponent* ActorCollisionCapsule = GetCapsuleComponent();
 		ActorCollisionCapsule->SetCollisionResponseToChannel(ECollisionChannel::ECC_Pawn, ECollisionResponse::ECR_Block);
+	}
+}
+
+void AEternal_Grace_ArenaEnemy::ShowHealthWidget()
+{
+	if (HealthbarWidget)
+	{
+		HealthbarWidget->AddToViewport();
+		UWidgetAnimation* BlendInAnimation = HealthbarWidget->GetBlendInAnimation();
+		if (BlendInAnimation)
+		{
+			HealthbarWidget->PlayAnimation(BlendInAnimation);
+		}
+		if (HealthbarWidget->GetBlendOutAnimation()) //BIND BLENDOUT ANIMATION TO REMOVE FROM VIEWPORT IN WIDGET
+		{
+			FWidgetAnimationDynamicEvent EndDelegate;
+			EndDelegate.BindDynamic(HealthbarWidget, &UAnimatedWidget::BlendOut);
+			HealthbarWidget->BindToAnimationFinished(HealthbarWidget->GetBlendOutAnimation(), EndDelegate);
+		}
+	}
+	else
+	{
+		UE_LOG(LogTemp, Error, TEXT("No HealthbarWidget"))
+	}
+}
+
+void AEternal_Grace_ArenaEnemy::HideHealthWidget()
+{
+	if(HealthbarWidget)
+	{
+		UWidgetAnimation* BlendOutAnimation = HealthbarWidget->GetBlendOutAnimation();
+		if(BlendOutAnimation)
+		{
+			HealthbarWidget->PlayAnimation(BlendOutAnimation);
+		}
 	}
 }
