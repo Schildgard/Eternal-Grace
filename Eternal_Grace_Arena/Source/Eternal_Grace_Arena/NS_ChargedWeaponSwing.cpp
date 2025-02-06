@@ -32,6 +32,10 @@ void UNS_ChargedWeaponSwing::NotifyBegin(USkeletalMeshComponent* MeshComp, UAnim
 	{
 		DamageMultiplier = 1.0f;
 	}
+	if(DamageMultiplier >= 3.0f)
+	{
+		DamageMultiplier = 3.0f;
+	}
 }
 
 void UNS_ChargedWeaponSwing::NotifyEnd(USkeletalMeshComponent* MeshComp, UAnimSequenceBase* Animation, const FAnimNotifyEventReference& EventReference)

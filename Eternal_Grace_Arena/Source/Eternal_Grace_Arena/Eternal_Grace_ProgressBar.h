@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "Blueprint/UserWidget.h"
+#include "AnimatedWidget.h"
 #include "Components/ProgressBar.h"
 #include "Eternal_Grace_ProgressBar.generated.h"
 
@@ -11,7 +12,7 @@
  * 
  */
 UCLASS()
-class ETERNAL_GRACE_ARENA_API UEternal_Grace_ProgressBar : public UUserWidget
+class ETERNAL_GRACE_ARENA_API UEternal_Grace_ProgressBar : public UAnimatedWidget
 {
 	GENERATED_BODY()
 

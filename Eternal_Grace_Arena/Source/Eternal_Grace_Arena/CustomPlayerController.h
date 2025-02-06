@@ -30,6 +30,13 @@ public:
 	TSubclassOf<UPlayer_UI_Bars> HUDWidgetClass;
 	UPROPERTY()
 	UPlayer_UI_Bars* HUDWidget;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "User Interface", meta = (AllowPrivateAccess))
+	TSubclassOf<UPlayer_UI_Bars> BossHPBarClass;
+	UPROPERTY()
+	UPlayer_UI_Bars* BossHPBar;
+
+
 	UPROPERTY()
 	APlayerCharacter* PlayerCharacter;
 
@@ -46,6 +53,16 @@ public:
 	void HideYouDiedScreen();
 	UFUNCTION()
 	void HandlePlayerDeath();
+
+
+
+	UFUNCTION()
+	void ShowBossHPBar();
+	UFUNCTION()
+	void HideBossHPBar();
+
+	UFUNCTION()
+	UPlayer_UI_Bars* GetBossHPBarWidget();
 
 
 

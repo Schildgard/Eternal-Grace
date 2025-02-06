@@ -11,6 +11,7 @@
 #include "HealthComponent.h"
 #include "CharacterAnimInstance.h"
 #include "WeaponComponent.h"
+#include "CustomPlayerController.h"
 
 
 AEternal_Grace_ArenaEnemy::AEternal_Grace_ArenaEnemy()
@@ -87,6 +88,19 @@ void AEternal_Grace_ArenaEnemy::BeginPlay()
 	{
 		UE_LOG(LogTemp, Error, TEXT("HP-Bar Component for %s is nullptr"), *GetName())
 	}
+
+
+
+	//	ACustomPlayerController* PlayerController = Cast<ACustomPlayerController>(UGameplayStatics::GetPlayerController(GetWorld(), 0));
+	//	if(PlayerController)
+	//	{
+	//		HealthbarWidget = Cast
+	//	}
+
+
+
+
+
 
 	if (SensingComponent)
 	{
@@ -202,7 +216,7 @@ void AEternal_Grace_ArenaEnemy::SendInfoToGameInstance()
 
 bool AEternal_Grace_ArenaEnemy::CheckIfPlayerIsBehind()
 {
-//	FColor DebugColor = FColor::Red;
+	//	FColor DebugColor = FColor::Red;
 
 	FVector OwnerLocation = GetActorLocation();
 	FVector OwnerForwardDirection = GetActorForwardVector();
@@ -213,12 +227,12 @@ bool AEternal_Grace_ArenaEnemy::CheckIfPlayerIsBehind()
 
 	float dotproduct = UKismetMathLibrary::Dot_VectorVector(OwnerPlayerDistance, OwnerForwardDirection);
 
-//	DrawDebugLine(world, OwnerLocation, PlayerLocation, DebugColor, true);
+	//	DrawDebugLine(world, OwnerLocation, PlayerLocation, DebugColor, true);
 
 
 	if (dotproduct < BackDetection)
 	{
-	//	DebugColor = FColor::Green;
+		//	DebugColor = FColor::Green;
 		return true;
 	}
 
