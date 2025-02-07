@@ -11,6 +11,7 @@ void EmptyLinkFunctionForGeneratedCodePlayerCharacter() {}
 
 // Begin Cross Module References
 ENGINE_API UClass* Z_Construct_UClass_UAnimMontage_NoRegister();
+ENGINE_API UClass* Z_Construct_UClass_UPostProcessComponent_NoRegister();
 ENHANCEDINPUT_API UClass* Z_Construct_UClass_UInputAction_NoRegister();
 ETERNAL_GRACE_ARENA_API UClass* Z_Construct_UClass_AEternal_Grace_ArenaCharacter();
 ETERNAL_GRACE_ARENA_API UClass* Z_Construct_UClass_APlayerCharacter();
@@ -105,6 +106,50 @@ DEFINE_FUNCTION(APlayerCharacter::execDodge)
 	P_NATIVE_END;
 }
 // End Class APlayerCharacter Function Dodge
+
+// Begin Class APlayerCharacter Function GetPoisonPostProcessEffect
+struct Z_Construct_UFunction_APlayerCharacter_GetPoisonPostProcessEffect_Statics
+{
+	struct PlayerCharacter_eventGetPoisonPostProcessEffect_Parms
+	{
+		UPostProcessComponent* ReturnValue;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "PlayerCharacter.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ReturnValue_MetaData[] = {
+		{ "EditInline", "true" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_ReturnValue;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_APlayerCharacter_GetPoisonPostProcessEffect_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000080588, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(PlayerCharacter_eventGetPoisonPostProcessEffect_Parms, ReturnValue), Z_Construct_UClass_UPostProcessComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ReturnValue_MetaData), NewProp_ReturnValue_MetaData) };
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_APlayerCharacter_GetPoisonPostProcessEffect_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_APlayerCharacter_GetPoisonPostProcessEffect_Statics::NewProp_ReturnValue,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_APlayerCharacter_GetPoisonPostProcessEffect_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_APlayerCharacter_GetPoisonPostProcessEffect_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_APlayerCharacter, nullptr, "GetPoisonPostProcessEffect", nullptr, nullptr, Z_Construct_UFunction_APlayerCharacter_GetPoisonPostProcessEffect_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_APlayerCharacter_GetPoisonPostProcessEffect_Statics::PropPointers), sizeof(Z_Construct_UFunction_APlayerCharacter_GetPoisonPostProcessEffect_Statics::PlayerCharacter_eventGetPoisonPostProcessEffect_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_APlayerCharacter_GetPoisonPostProcessEffect_Statics::Function_MetaDataParams), Z_Construct_UFunction_APlayerCharacter_GetPoisonPostProcessEffect_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_APlayerCharacter_GetPoisonPostProcessEffect_Statics::PlayerCharacter_eventGetPoisonPostProcessEffect_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_APlayerCharacter_GetPoisonPostProcessEffect()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_APlayerCharacter_GetPoisonPostProcessEffect_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(APlayerCharacter::execGetPoisonPostProcessEffect)
+{
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	*(UPostProcessComponent**)Z_Param__Result=P_THIS->GetPoisonPostProcessEffect();
+	P_NATIVE_END;
+}
+// End Class APlayerCharacter Function GetPoisonPostProcessEffect
 
 // Begin Class APlayerCharacter Function GuardCounterAttack
 struct Z_Construct_UFunction_APlayerCharacter_GuardCounterAttack_Statics
@@ -294,6 +339,7 @@ void APlayerCharacter::StaticRegisterNativesAPlayerCharacter()
 		{ "CancelSprint", &APlayerCharacter::execCancelSprint },
 		{ "ChargeHeavyAttack", &APlayerCharacter::execChargeHeavyAttack },
 		{ "Dodge", &APlayerCharacter::execDodge },
+		{ "GetPoisonPostProcessEffect", &APlayerCharacter::execGetPoisonPostProcessEffect },
 		{ "GuardCounterAttack", &APlayerCharacter::execGuardCounterAttack },
 		{ "HeavyAttack", &APlayerCharacter::execHeavyAttack },
 		{ "IncreaseChargePower", &APlayerCharacter::execIncreaseChargePower },
@@ -334,6 +380,23 @@ struct Z_Construct_UClass_APlayerCharacter_Statics
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_InteractAction_MetaData[] = {
 		{ "AllowPrivateAccess", "" },
 		{ "Category", "Input" },
+		{ "ModuleRelativePath", "PlayerCharacter.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_DodgeAction_MetaData[] = {
+		{ "AllowPrivateAccess", "" },
+		{ "Category", "Input" },
+		{ "ModuleRelativePath", "PlayerCharacter.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_DefaultPostProcess_MetaData[] = {
+		{ "AllowPrivateAccess", "" },
+		{ "Category", "PostProcessing" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "PlayerCharacter.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_PoisonPostProcess_MetaData[] = {
+		{ "AllowPrivateAccess", "" },
+		{ "Category", "PostProcessing" },
+		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "PlayerCharacter.h" },
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_StaminaComponent_MetaData[] = {
@@ -404,17 +467,6 @@ struct Z_Construct_UClass_APlayerCharacter_Statics
 		{ "ToolTip", "SPRINT ATTACKS" },
 #endif
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_DodgeAction_MetaData[] = {
-		{ "AllowPrivateAccess", "" },
-		{ "Category", "Animations" },
-#if !UE_BUILD_SHIPPING
-		{ "Comment", "//DODGE\n" },
-#endif
-		{ "ModuleRelativePath", "PlayerCharacter.h" },
-#if !UE_BUILD_SHIPPING
-		{ "ToolTip", "DODGE" },
-#endif
-	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_InteractAnimation_MetaData[] = {
 		{ "AllowPrivateAccess", "" },
 		{ "Category", "Animations" },
@@ -426,11 +478,19 @@ struct Z_Construct_UClass_APlayerCharacter_Statics
 		{ "ToolTip", "INTERACT" },
 #endif
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_DodgeMontage_MetaData[] = {
+		{ "AllowPrivateAccess", "" },
+		{ "Category", "Animations" },
+		{ "ModuleRelativePath", "PlayerCharacter.h" },
+	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_HeavyAttackAction;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_SprintAction;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_GuardCounterAction;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_InteractAction;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_DodgeAction;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_DefaultPostProcess;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_PoisonPostProcess;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_StaminaComponent;
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_RunningStaminaConsumption;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_GuardCounter;
@@ -441,14 +501,15 @@ struct Z_Construct_UClass_APlayerCharacter_Statics
 	static const UECodeGen_Private::FFloatPropertyParams NewProp_maxChargePower;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_ChargeAttack;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_RunningAttack;
-	static const UECodeGen_Private::FObjectPropertyParams NewProp_DodgeAction;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_InteractAnimation;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_DodgeMontage;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
 		{ &Z_Construct_UFunction_APlayerCharacter_CancelSprint, "CancelSprint" }, // 1635053788
 		{ &Z_Construct_UFunction_APlayerCharacter_ChargeHeavyAttack, "ChargeHeavyAttack" }, // 1713464993
 		{ &Z_Construct_UFunction_APlayerCharacter_Dodge, "Dodge" }, // 3111381103
+		{ &Z_Construct_UFunction_APlayerCharacter_GetPoisonPostProcessEffect, "GetPoisonPostProcessEffect" }, // 3760307018
 		{ &Z_Construct_UFunction_APlayerCharacter_GuardCounterAttack, "GuardCounterAttack" }, // 1036179294
 		{ &Z_Construct_UFunction_APlayerCharacter_HeavyAttack, "HeavyAttack" }, // 171223720
 		{ &Z_Construct_UFunction_APlayerCharacter_IncreaseChargePower, "IncreaseChargePower" }, // 2751030947
@@ -466,6 +527,9 @@ const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_APlayerCharact
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_APlayerCharacter_Statics::NewProp_SprintAction = { "SprintAction", nullptr, (EPropertyFlags)0x0040000000000015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APlayerCharacter, SprintAction), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SprintAction_MetaData), NewProp_SprintAction_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_APlayerCharacter_Statics::NewProp_GuardCounterAction = { "GuardCounterAction", nullptr, (EPropertyFlags)0x0040000000000015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APlayerCharacter, GuardCounterAction), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_GuardCounterAction_MetaData), NewProp_GuardCounterAction_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_APlayerCharacter_Statics::NewProp_InteractAction = { "InteractAction", nullptr, (EPropertyFlags)0x0040000000000015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APlayerCharacter, InteractAction), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_InteractAction_MetaData), NewProp_InteractAction_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_APlayerCharacter_Statics::NewProp_DodgeAction = { "DodgeAction", nullptr, (EPropertyFlags)0x0040000000000015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APlayerCharacter, DodgeAction), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_DodgeAction_MetaData), NewProp_DodgeAction_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_APlayerCharacter_Statics::NewProp_DefaultPostProcess = { "DefaultPostProcess", nullptr, (EPropertyFlags)0x004000000008001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APlayerCharacter, DefaultPostProcess), Z_Construct_UClass_UPostProcessComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_DefaultPostProcess_MetaData), NewProp_DefaultPostProcess_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_APlayerCharacter_Statics::NewProp_PoisonPostProcess = { "PoisonPostProcess", nullptr, (EPropertyFlags)0x004000000008001d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APlayerCharacter, PoisonPostProcess), Z_Construct_UClass_UPostProcessComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_PoisonPostProcess_MetaData), NewProp_PoisonPostProcess_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_APlayerCharacter_Statics::NewProp_StaminaComponent = { "StaminaComponent", nullptr, (EPropertyFlags)0x001000000008000d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APlayerCharacter, StaminaComponent), Z_Construct_UClass_UStaminaComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_StaminaComponent_MetaData), NewProp_StaminaComponent_MetaData) };
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_APlayerCharacter_Statics::NewProp_RunningStaminaConsumption = { "RunningStaminaConsumption", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APlayerCharacter, RunningStaminaConsumption), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_RunningStaminaConsumption_MetaData), NewProp_RunningStaminaConsumption_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_APlayerCharacter_Statics::NewProp_GuardCounter = { "GuardCounter", nullptr, (EPropertyFlags)0x0010000000000015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APlayerCharacter, GuardCounter), Z_Construct_UClass_UAnimMontage_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_GuardCounter_MetaData), NewProp_GuardCounter_MetaData) };
@@ -479,13 +543,16 @@ const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_APlayerCharacte
 const UECodeGen_Private::FFloatPropertyParams Z_Construct_UClass_APlayerCharacter_Statics::NewProp_maxChargePower = { "maxChargePower", nullptr, (EPropertyFlags)0x0010000000000015, UECodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APlayerCharacter, maxChargePower), METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_maxChargePower_MetaData), NewProp_maxChargePower_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_APlayerCharacter_Statics::NewProp_ChargeAttack = { "ChargeAttack", nullptr, (EPropertyFlags)0x0020080000000015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APlayerCharacter, ChargeAttack), Z_Construct_UClass_UAnimMontage_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ChargeAttack_MetaData), NewProp_ChargeAttack_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_APlayerCharacter_Statics::NewProp_RunningAttack = { "RunningAttack", nullptr, (EPropertyFlags)0x0020080000000015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APlayerCharacter, RunningAttack), Z_Construct_UClass_UAnimMontage_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_RunningAttack_MetaData), NewProp_RunningAttack_MetaData) };
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_APlayerCharacter_Statics::NewProp_DodgeAction = { "DodgeAction", nullptr, (EPropertyFlags)0x0020080000000015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APlayerCharacter, DodgeAction), Z_Construct_UClass_UAnimMontage_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_DodgeAction_MetaData), NewProp_DodgeAction_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_APlayerCharacter_Statics::NewProp_InteractAnimation = { "InteractAnimation", nullptr, (EPropertyFlags)0x0020080000000015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APlayerCharacter, InteractAnimation), Z_Construct_UClass_UAnimMontage_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_InteractAnimation_MetaData), NewProp_InteractAnimation_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_APlayerCharacter_Statics::NewProp_DodgeMontage = { "DodgeMontage", nullptr, (EPropertyFlags)0x0020080000000015, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(APlayerCharacter, DodgeMontage), Z_Construct_UClass_UAnimMontage_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_DodgeMontage_MetaData), NewProp_DodgeMontage_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_APlayerCharacter_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APlayerCharacter_Statics::NewProp_HeavyAttackAction,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APlayerCharacter_Statics::NewProp_SprintAction,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APlayerCharacter_Statics::NewProp_GuardCounterAction,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APlayerCharacter_Statics::NewProp_InteractAction,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APlayerCharacter_Statics::NewProp_DodgeAction,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APlayerCharacter_Statics::NewProp_DefaultPostProcess,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APlayerCharacter_Statics::NewProp_PoisonPostProcess,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APlayerCharacter_Statics::NewProp_StaminaComponent,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APlayerCharacter_Statics::NewProp_RunningStaminaConsumption,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APlayerCharacter_Statics::NewProp_GuardCounter,
@@ -495,8 +562,8 @@ const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_APlayerCh
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APlayerCharacter_Statics::NewProp_maxChargePower,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APlayerCharacter_Statics::NewProp_ChargeAttack,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APlayerCharacter_Statics::NewProp_RunningAttack,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APlayerCharacter_Statics::NewProp_DodgeAction,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APlayerCharacter_Statics::NewProp_InteractAnimation,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APlayerCharacter_Statics::NewProp_DodgeMontage,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_APlayerCharacter_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_APlayerCharacter_Statics::DependentSingletons[])() = {
@@ -536,14 +603,14 @@ APlayerCharacter::~APlayerCharacter() {}
 // End Class APlayerCharacter
 
 // Begin Registration
-struct Z_CompiledInDeferFile_FID_Eternal_Grace_Arena_Source_Eternal_Grace_Arena_PlayerCharacter_h_Statics
+struct Z_CompiledInDeferFile_FID_Repository_Eternal_Grace_Arena_Eternal_Grace_Arena_Source_Eternal_Grace_Arena_PlayerCharacter_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_APlayerCharacter, APlayerCharacter::StaticClass, TEXT("APlayerCharacter"), &Z_Registration_Info_UClass_APlayerCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APlayerCharacter), 4154363027U) },
+		{ Z_Construct_UClass_APlayerCharacter, APlayerCharacter::StaticClass, TEXT("APlayerCharacter"), &Z_Registration_Info_UClass_APlayerCharacter, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(APlayerCharacter), 2379717419U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Eternal_Grace_Arena_Source_Eternal_Grace_Arena_PlayerCharacter_h_1719720237(TEXT("/Script/Eternal_Grace_Arena"),
-	Z_CompiledInDeferFile_FID_Eternal_Grace_Arena_Source_Eternal_Grace_Arena_PlayerCharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Eternal_Grace_Arena_Source_Eternal_Grace_Arena_PlayerCharacter_h_Statics::ClassInfo),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Repository_Eternal_Grace_Arena_Eternal_Grace_Arena_Source_Eternal_Grace_Arena_PlayerCharacter_h_3518010768(TEXT("/Script/Eternal_Grace_Arena"),
+	Z_CompiledInDeferFile_FID_Repository_Eternal_Grace_Arena_Eternal_Grace_Arena_Source_Eternal_Grace_Arena_PlayerCharacter_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Repository_Eternal_Grace_Arena_Eternal_Grace_Arena_Source_Eternal_Grace_Arena_PlayerCharacter_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
 // End Registration

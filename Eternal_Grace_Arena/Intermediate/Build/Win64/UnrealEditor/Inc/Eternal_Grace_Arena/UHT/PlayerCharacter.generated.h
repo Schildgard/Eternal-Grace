@@ -9,12 +9,13 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class UPostProcessComponent;
 #ifdef ETERNAL_GRACE_ARENA_PlayerCharacter_generated_h
 #error "PlayerCharacter.generated.h already included, missing '#pragma once' in PlayerCharacter.h"
 #endif
 #define ETERNAL_GRACE_ARENA_PlayerCharacter_generated_h
 
-#define FID_Eternal_Grace_Arena_Source_Eternal_Grace_Arena_PlayerCharacter_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
+#define FID_Repository_Eternal_Grace_Arena_Eternal_Grace_Arena_Source_Eternal_Grace_Arena_PlayerCharacter_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
 	DECLARE_FUNCTION(execHeavyAttack); \
 	DECLARE_FUNCTION(execChargeHeavyAttack); \
 	DECLARE_FUNCTION(execCancelSprint); \
@@ -23,10 +24,11 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 	DECLARE_FUNCTION(execSprintAttack); \
 	DECLARE_FUNCTION(execIncreaseChargePower); \
 	DECLARE_FUNCTION(execInteract); \
+	DECLARE_FUNCTION(execGetPoisonPostProcessEffect); \
 	DECLARE_FUNCTION(execGuardCounterAttack);
 
 
-#define FID_Eternal_Grace_Arena_Source_Eternal_Grace_Arena_PlayerCharacter_h_16_INCLASS_NO_PURE_DECLS \
+#define FID_Repository_Eternal_Grace_Arena_Eternal_Grace_Arena_Source_Eternal_Grace_Arena_PlayerCharacter_h_17_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAPlayerCharacter(); \
 	friend struct Z_Construct_UClass_APlayerCharacter_Statics; \
@@ -35,7 +37,7 @@ public: \
 	DECLARE_SERIALIZER(APlayerCharacter)
 
 
-#define FID_Eternal_Grace_Arena_Source_Eternal_Grace_Arena_PlayerCharacter_h_16_ENHANCED_CONSTRUCTORS \
+#define FID_Repository_Eternal_Grace_Arena_Eternal_Grace_Arena_Source_Eternal_Grace_Arena_PlayerCharacter_h_17_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	APlayerCharacter(APlayerCharacter&&); \
@@ -47,13 +49,13 @@ public: \
 	NO_API virtual ~APlayerCharacter();
 
 
-#define FID_Eternal_Grace_Arena_Source_Eternal_Grace_Arena_PlayerCharacter_h_13_PROLOG
-#define FID_Eternal_Grace_Arena_Source_Eternal_Grace_Arena_PlayerCharacter_h_16_GENERATED_BODY \
+#define FID_Repository_Eternal_Grace_Arena_Eternal_Grace_Arena_Source_Eternal_Grace_Arena_PlayerCharacter_h_14_PROLOG
+#define FID_Repository_Eternal_Grace_Arena_Eternal_Grace_Arena_Source_Eternal_Grace_Arena_PlayerCharacter_h_17_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_Eternal_Grace_Arena_Source_Eternal_Grace_Arena_PlayerCharacter_h_16_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_Eternal_Grace_Arena_Source_Eternal_Grace_Arena_PlayerCharacter_h_16_INCLASS_NO_PURE_DECLS \
-	FID_Eternal_Grace_Arena_Source_Eternal_Grace_Arena_PlayerCharacter_h_16_ENHANCED_CONSTRUCTORS \
+	FID_Repository_Eternal_Grace_Arena_Eternal_Grace_Arena_Source_Eternal_Grace_Arena_PlayerCharacter_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_Repository_Eternal_Grace_Arena_Eternal_Grace_Arena_Source_Eternal_Grace_Arena_PlayerCharacter_h_17_INCLASS_NO_PURE_DECLS \
+	FID_Repository_Eternal_Grace_Arena_Eternal_Grace_Arena_Source_Eternal_Grace_Arena_PlayerCharacter_h_17_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -61,7 +63,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 template<> ETERNAL_GRACE_ARENA_API UClass* StaticClass<class APlayerCharacter>();
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_Eternal_Grace_Arena_Source_Eternal_Grace_Arena_PlayerCharacter_h
+#define CURRENT_FILE_ID FID_Repository_Eternal_Grace_Arena_Eternal_Grace_Arena_Source_Eternal_Grace_Arena_PlayerCharacter_h
 
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS

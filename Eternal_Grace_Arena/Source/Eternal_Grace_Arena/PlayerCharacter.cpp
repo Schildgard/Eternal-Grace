@@ -13,12 +13,15 @@
 #include "HealthComponent.h"
 #include "ShieldComponent.h"
 #include "WeaponComponent.h"
+#include "Components/PostProcessComponent.h"
 
 
 
 APlayerCharacter::APlayerCharacter()
 {
 	StaminaComponent = CreateDefaultSubobject<UStaminaComponent>("StaminaComponent");
+	DefaultPostProcess = CreateDefaultSubobject<UPostProcessComponent>("Default");
+	PoisonPostProcess = CreateDefaultSubobject<UPostProcessComponent>("Poison");
 
 	RunningStaminaConsumption = 15.0f;
 	GuardCounterReactionCountdown = GuardCounterReactionTimer;
@@ -36,6 +39,11 @@ void APlayerCharacter::GuardCounterAttack()
 		CharacterAnimationInstance->isGuarding = false;
 		PlayAnimMontage(GuardCounter, 1.0f);
 	}
+}
+
+UPostProcessComponent* APlayerCharacter::GetPoisonPostProcessEffect()
+{
+	return PoisonPostProcess;
 }
 
 void APlayerCharacter::Interact()
@@ -85,9 +93,10 @@ void APlayerCharacter::SprintAttack()
 
 void APlayerCharacter::Dodge()
 {
-	if (StaminaComponent->CurrentStamina >= 1.0f)
+	if (StaminaComponent->CurrentStamina >= 1.0f && !CharacterAnimationInstance->isAttacking && !GetMovementComponent()->IsFalling() && !CharacterAnimationInstance->isDodging)
 	{
-		PlayAnimMontage(DodgeAction);
+		CharacterAnimationInstance->isDodging = true;
+		PlayAnimMontage(DodgeMontage);
 	}
 }
 
@@ -150,6 +159,8 @@ void APlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCom
 		//Interactions
 		EnhancedInputComponent->BindAction(InteractAction, ETriggerEvent::Completed, this, &APlayerCharacter::Interact);
 
+		EnhancedInputComponent->BindAction(DodgeAction, ETriggerEvent::Triggered, this, &APlayerCharacter::Dodge);
+
 		//Sprinting
 		EnhancedInputComponent->BindAction(SprintAction, ETriggerEvent::Triggered, this, &APlayerCharacter::Sprint);
 		EnhancedInputComponent->BindAction(SprintAction, ETriggerEvent::Completed, this, &APlayerCharacter::CancelSprint);
@@ -201,7 +212,8 @@ void APlayerCharacter::LightAttack()
 
 			TArray<UAnimMontage*> Attacks = WeaponComponent->GetCurrentLightAttacks();
 			int AttackIndex = CharacterAnimationInstance->attackCount;
-			if (Attacks[AttackIndex] != nullptr)
+
+			if (AttackIndex <= Attacks.Num() - 1)
 			{
 				PlayAnimMontage(Attacks[AttackIndex], 1.0f);
 			}
@@ -211,7 +223,7 @@ void APlayerCharacter::LightAttack()
 
 void APlayerCharacter::ChargeHeavyAttack()
 {
-	if (StaminaComponent->CurrentStamina >= 1.0f&& !GetMovementComponent()->IsFalling())
+	if (StaminaComponent->CurrentStamina >= 1.0f && !GetMovementComponent()->IsFalling())
 	{
 		//When Heavy Attack Button is first pressed, Player goes into Charge Stand
 		if (!CharacterAnimationInstance->isCharging && !CharacterAnimationInstance->isAttacking && !CharacterAnimationInstance->isInHeavyAttack)

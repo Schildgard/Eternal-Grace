@@ -19,6 +19,7 @@
 			"EternalGrace_GameState.gen.cpp.obj",
 			"EternalGrace_PlayerState.gen.cpp.obj",
 			"EternalGrace_TitleScreen.gen.cpp.obj",
+			"Eternal_Grace_Arena.init.gen.cpp.obj",
 			"Eternal_Grace_ArenaBoss.gen.cpp.obj",
 			"Eternal_Grace_ArenaCharacter.gen.cpp.obj",
 			"Eternal_Grace_ArenaEnemy.gen.cpp.obj",
@@ -27,11 +28,10 @@
 			"Eternal_Grace_ProgressBar.gen.cpp.obj",
 			"HealthComponent.gen.cpp.obj",
 			"HitEffectData.gen.cpp.obj",
-			"InteractableActor.gen.cpp.obj",
-			"InteractableActor_SceneLoader.gen.cpp.obj",
-			"Eternal_Grace_Arena.init.gen.cpp.obj"
+			"InteractableActor.gen.cpp.obj"
 		],
 		"Module.Eternal_Grace_Arena.2.cpp.obj": [
+			"InteractableActor_SceneLoader.gen.cpp.obj",
 			"I_Damageable.gen.cpp.obj",
 			"I_Interactable.gen.cpp.obj",
 			"I_Targetable.gen.cpp.obj",
@@ -61,11 +61,13 @@
 			"StaggerComponent.gen.cpp.obj",
 			"StaggeringType.gen.cpp.obj",
 			"StaminaComponent.gen.cpp.obj",
-			"TitleScreenGameMode.gen.cpp.obj",
-			"Weapon.gen.cpp.obj",
-			"WeaponComponent.gen.cpp.obj"
+			"StatusEffectComponent.gen.cpp.obj",
+			"StatusWarningEffect.gen.cpp.obj",
+			"TitleScreenGameMode.gen.cpp.obj"
 		],
 		"Module.Eternal_Grace_Arena.3.cpp.obj": [
+			"Weapon.gen.cpp.obj",
+			"WeaponComponent.gen.cpp.obj",
 			"PerModuleInline.gen.cpp.obj",
 			"AnimatedWidget.cpp.obj",
 			"AnimNotify_PlayRandomSound.cpp.obj",
@@ -73,6 +75,7 @@
 			"CharacterAnimInstance.cpp.obj",
 			"CustomPlayerController.cpp.obj",
 			"Damage_Spells.cpp.obj",
+			"Enemy_MageBoss.cpp.obj",
 			"Enemy_MushroomKing.cpp.obj",
 			"Enemy_UI_Healthbar.cpp.obj",
 			"Enemy_WeaponMaster.cpp.obj",
@@ -109,6 +112,7 @@
 			"NS_SetStaggered.cpp.obj",
 			"NS_WeaponSwing.cpp.obj",
 			"NS_WeaponSwing_CollisionToggle.cpp.obj",
+			"PlayerCharacter.cpp.obj",
 			"Player_UI_Bars.cpp.obj",
 			"Shield.cpp.obj",
 			"ShieldComponent.cpp.obj",
@@ -122,10 +126,10 @@
 			"StaggerComponent.cpp.obj",
 			"StaggeringType.cpp.obj",
 			"StaminaComponent.cpp.obj",
+			"StatusEffectComponent.cpp.obj",
+			"StatusWarningEffect.cpp.obj",
 			"TitleScreenGameMode.cpp.obj",
 			"Weapon.cpp.obj",
-			"Enemy_MageBoss.cpp.obj",
-			"PlayerCharacter.cpp.obj",
 			"WeaponComponent.cpp.obj"
 		]
 	}

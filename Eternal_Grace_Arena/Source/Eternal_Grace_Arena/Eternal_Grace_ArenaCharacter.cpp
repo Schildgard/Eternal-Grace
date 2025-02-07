@@ -16,6 +16,7 @@
 #include "StaggerComponent.h"
 #include "WeaponComponent.h"
 #include "ShieldComponent.h"
+#include "StatusEffectComponent.h"
 
 DEFINE_LOG_CATEGORY(LogTemplateCharacter);
 
@@ -59,7 +60,6 @@ AEternal_Grace_ArenaCharacter::AEternal_Grace_ArenaCharacter()
 	// Note: The skeletal mesh and anim blueprint references on the Mesh component (inherited from Character) 
 	// are set in the derived blueprint asset named ThirdPersonCharacter (to avoid direct content references in C++)
 
-//	LockedOnTarget = nullptr;
 	PhysicalMaterial = nullptr;
 	WeaponSocket = FName("socket_weaponGrip");
 	ShieldSocket = FName("socket_shieldGrip");
@@ -72,7 +72,6 @@ AEternal_Grace_ArenaCharacter::AEternal_Grace_ArenaCharacter()
 
 	ShieldComponent = CreateDefaultSubobject<UShieldComponent>("Equipment: Shield");
 	ShieldComponent->SetupAttachment(GetMesh(), ShieldSocket);
-
 }
 
 //////////////////////////////////////////////////////////////////////////
@@ -149,7 +148,6 @@ void AEternal_Grace_ArenaCharacter::InitializeAnimationInstance()
 	{
 		//CAST ANIMATION INSTANCE TO SPECIFIC CHARACTER ANIMATION INSTANCE
 		CharacterAnimationInstance = Cast<UCharacterAnimInstance>(CurrentAnimInstance);
-		UE_LOG(LogTemp, Warning, TEXT("Animation Instance set"))
 			return;
 	}
 	UE_LOG(LogTemp, Warning, TEXT("Animation Instance could not be found"))
@@ -213,7 +211,7 @@ void AEternal_Grace_ArenaCharacter::GetDamage_Implementation(float Damage, float
 
 
 	HealthComponent->CurrentHealth -= Damage;
-	UE_LOG(LogTemp, Warning, TEXT("%s got %f Damage"), *GetName(), Damage)
+	//UE_LOG(LogTemp, Warning, TEXT("%s got %f Damage"), *GetName(), Damage)
 
 		if (StaggerComponent)
 		{
@@ -285,6 +283,11 @@ void AEternal_Grace_ArenaCharacter::CancelGuard()
 	{
 		CharacterAnimationInstance->isGuarding = false;
 	}
+}
+
+UStatusEffectComponent* AEternal_Grace_ArenaCharacter::GetStatusEffectComponent()
+{
+	return StatusEffectComponent;
 }
 
 void AEternal_Grace_ArenaCharacter::RotateTowardsTarget(AActor* Target)

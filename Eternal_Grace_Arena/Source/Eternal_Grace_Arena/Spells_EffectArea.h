@@ -17,6 +17,8 @@ class ETERNAL_GRACE_ARENA_API ASpells_EffectArea : public ADamage_Spells
 
 protected:
 
+	ASpells_EffectArea();
+
 	UPROPERTY()
 	TArray<AEternal_Grace_ArenaCharacter*> AffectedCharacters;
 
@@ -26,5 +28,9 @@ protected:
 
 	UFUNCTION()
 	void RemoveFromEffectList(UPrimitiveComponent* OverlappedComponent,AActor* OtherActor,UPrimitiveComponent* OtherComponent,int32 OtherBodyIndex);
+	UFUNCTION()
+	void ApplyScreenEffect(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComponent, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
+	UFUNCTION()
+	void RemoveScreenEffect(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComponent, int32 OtherBodyIndex);
 	
 };

@@ -10,6 +10,7 @@
  *
  */
 class UStaminaComponent;
+class UPostProcessComponent;
 UCLASS()
 class ETERNAL_GRACE_ARENA_API APlayerCharacter : public AEternal_Grace_ArenaCharacter
 {
@@ -25,7 +26,13 @@ class ETERNAL_GRACE_ARENA_API APlayerCharacter : public AEternal_Grace_ArenaChar
 	UInputAction* GuardCounterAction;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess))
 	UInputAction* InteractAction;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess))
+	UInputAction* DodgeAction;
 
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = PostProcessing, meta = (AllowPrivateAccess))
+	UPostProcessComponent* DefaultPostProcess;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = PostProcessing, meta = (AllowPrivateAccess))
+	UPostProcessComponent* PoisonPostProcess;
 
 public:
 	//STAMINA
@@ -44,6 +51,9 @@ public:
 	float GuardCounterReactionCountdown;
 	UFUNCTION()
 	void GuardCounterAttack();
+
+	UFUNCTION()
+	UPostProcessComponent* GetPoisonPostProcessEffect();
 
 	//INTERACT
 	UFUNCTION()
@@ -65,13 +75,12 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animations, meta = (AllowPrivateAccess))
 	UAnimMontage* RunningAttack;
 
-	//DODGE
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animations, meta = (AllowPrivateAccess))
-	UAnimMontage* DodgeAction;
-
 	//INTERACT
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animations, meta = (AllowPrivateAccess))
 	UAnimMontage* InteractAnimation;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animations, meta = (AllowPrivateAccess))
+	UAnimMontage* DodgeMontage;
 
 
 	UFUNCTION()

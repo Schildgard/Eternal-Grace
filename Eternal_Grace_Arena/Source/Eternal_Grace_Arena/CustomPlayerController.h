@@ -18,6 +18,7 @@ class UBlendingWidget;
 class UEternalGrace_GameInstance;
 class ULockOnSystem;
 class AEternal_Grace_ArenaCharacter;
+class UPostProcessComponent;
 UCLASS()
 class ETERNAL_GRACE_ARENA_API ACustomPlayerController : public APlayerController
 {
@@ -31,10 +32,9 @@ public:
 	UPROPERTY()
 	UPlayer_UI_Bars* HUDWidget;
 
-	//UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "User Interface", meta = (AllowPrivateAccess))
-	//TSubclassOf<UPlayer_UI_Bars> BossHPBarClass;
-	//UPROPERTY()
-	//UPlayer_UI_Bars* BossHPBar;
+//	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = PostProcessing, meta = (AllowPrivateAccess))
+//	UPostProcessComponent* ScreenEffectComponent;
+
 
 
 	UPROPERTY()
@@ -54,15 +54,6 @@ public:
 	UFUNCTION()
 	void HandlePlayerDeath();
 
-
-
-	//UFUNCTION()
-	//void ShowBossHPBar();
-	//UFUNCTION()
-	//void HideBossHPBar();
-	//
-	//UFUNCTION()
-	//UPlayer_UI_Bars* GetBossHPBarWidget();
 
 
 
@@ -96,4 +87,11 @@ protected:
 
 	UFUNCTION()
 	void ReloadLevel();
+
+
+public:
+	//UFUNCTION()
+	//void ApplyPoisonEffectOnScreen();
+	//UFUNCTION()
+	//void RemovePoisonEffectFromScreen();
 };

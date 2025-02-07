@@ -17,6 +17,7 @@ class UHealthComponent;
 class UStaggerComponent;
 class UWeaponComponent;
 class UShieldComponent;
+class UStatusEffectComponent;
 struct FInputActionValue;
 
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnCharacterDeath);
@@ -99,6 +100,10 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Attribtues, meta = (AllowPrivateAccess))
 	UStaggerComponent* StaggerComponent;
 
+	//STATUSEFFECTS
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Attributes, meta = (AllowPrivateAccess))
+	UStatusEffectComponent* StatusEffectComponent;
+
 	UPROPERTY(BlueprintAssignable, Category = "Events")
 	FOnCharacterDeath OnCharacterDeath;
 
@@ -121,7 +126,8 @@ protected:
 public:
 	UFUNCTION()
 	virtual void CancelGuard();
-
+	UFUNCTION()
+	UStatusEffectComponent* GetStatusEffectComponent();
 
 public:
 	UFUNCTION()

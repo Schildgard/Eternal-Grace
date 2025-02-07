@@ -31,6 +31,8 @@ public:
 	bool isCharging;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = State, meta = (AllowPrivateAccess))
 	bool isStaggered;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = State, meta = (AllowPrivateAccess))
+	bool isDodging;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Animation, meta = (AllowPrivateAccess))
 	int attackCount;
