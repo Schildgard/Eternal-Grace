@@ -9,13 +9,13 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
-class UPostProcessComponent;
 #ifdef ETERNAL_GRACE_ARENA_PlayerCharacter_generated_h
 #error "PlayerCharacter.generated.h already included, missing '#pragma once' in PlayerCharacter.h"
 #endif
 #define ETERNAL_GRACE_ARENA_PlayerCharacter_generated_h
 
 #define FID_Repository_Eternal_Grace_Arena_Eternal_Grace_Arena_Source_Eternal_Grace_Arena_PlayerCharacter_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execUpdateStatusEffectVisualization); \
 	DECLARE_FUNCTION(execHeavyAttack); \
 	DECLARE_FUNCTION(execChargeHeavyAttack); \
 	DECLARE_FUNCTION(execCancelSprint); \
@@ -24,7 +24,6 @@ class UPostProcessComponent;
 	DECLARE_FUNCTION(execSprintAttack); \
 	DECLARE_FUNCTION(execIncreaseChargePower); \
 	DECLARE_FUNCTION(execInteract); \
-	DECLARE_FUNCTION(execGetPoisonPostProcessEffect); \
 	DECLARE_FUNCTION(execGuardCounterAttack);
 
 

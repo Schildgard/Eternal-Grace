@@ -12,7 +12,7 @@ UStaminaComponent::UStaminaComponent()
 
 	MaxStamina = 100.0f;
 	CurrentStamina = MaxStamina;
-	Exhausted = false;
+	isExhausted = false;
 	StaminaRegenerationRate = 5.0f;
 	ReducedStaminaRegenerationRate = 2.0f;
 	ExhaustionCountdown = ExhaustionTimer;
@@ -32,7 +32,7 @@ void UStaminaComponent::BeginPlay()
 
 void UStaminaComponent::RegenerateStamina(float RegenerationRate)
 {
-	if (Exhausted == false)
+	if (isExhausted == false)
 	{
 		CurrentStamina += RegenerationRate;
 	}
@@ -73,15 +73,15 @@ void UStaminaComponent::ManageExhaustion(float DeltaTime)
 	if (CurrentStamina <= 0)
 	{
 		CurrentStamina = 0;
-		Exhausted = true;
+		isExhausted = true;
 	}
-	if (Exhausted)
+	if (isExhausted)
 	{
 		ExhaustionCountdown -= DeltaTime;
 	}
 	if (ExhaustionCountdown <= 0)
 	{
-		Exhausted = false;
+		isExhausted = false;
 		ExhaustionCountdown = ExhaustionTimer;
 	}
 }
@@ -93,5 +93,10 @@ void UStaminaComponent::ManageStaminaRegeneration(float DeltaTime)
 //		return;
 //	}
 //	CurrentStamina += StaminaRegenerationRate * DeltaTime;
+}
+
+bool UStaminaComponent::GetExhaustion()
+{
+	return isExhausted;
 }
 

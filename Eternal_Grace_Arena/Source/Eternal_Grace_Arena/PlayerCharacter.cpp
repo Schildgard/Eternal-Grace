@@ -14,6 +14,7 @@
 #include "ShieldComponent.h"
 #include "WeaponComponent.h"
 #include "Components/PostProcessComponent.h"
+#include "StatusEffectComponent.h"
 
 
 
@@ -22,12 +23,15 @@ APlayerCharacter::APlayerCharacter()
 	StaminaComponent = CreateDefaultSubobject<UStaminaComponent>("StaminaComponent");
 	DefaultPostProcess = CreateDefaultSubobject<UPostProcessComponent>("Default");
 	PoisonPostProcess = CreateDefaultSubobject<UPostProcessComponent>("Poison");
+	ExhaustionPostProcess = CreateDefaultSubobject<UPostProcessComponent>("Exhaustion");
 
 	RunningStaminaConsumption = 15.0f;
 	GuardCounterReactionCountdown = GuardCounterReactionTimer;
 
 	currentChargePower = 0.0f;
 	maxChargePower = 2.0f;
+
+	BlendSpeed = 3.0f;
 }
 
 
@@ -39,11 +43,6 @@ void APlayerCharacter::GuardCounterAttack()
 		CharacterAnimationInstance->isGuarding = false;
 		PlayAnimMontage(GuardCounter, 1.0f);
 	}
-}
-
-UPostProcessComponent* APlayerCharacter::GetPoisonPostProcessEffect()
-{
-	return PoisonPostProcess;
 }
 
 void APlayerCharacter::Interact()
@@ -112,7 +111,7 @@ void APlayerCharacter::Tick(float DeltaSeconds)
 	if (StaminaComponent && CharacterAnimationInstance)
 	{
 		//STAMINA REGENERATION CONDITIONS -> Maybe refactor this to stamina component ?
-		if (StaminaComponent->CurrentStamina < StaminaComponent->MaxStamina && StaminaComponent->Exhausted == false
+		if (StaminaComponent->CurrentStamina < StaminaComponent->MaxStamina && StaminaComponent->isExhausted == false
 			&& CharacterAnimationInstance->isAttacking == false && CharacterAnimationInstance->isRunning == false &&
 			CharacterAnimationInstance->isCharging == false)
 		{
@@ -146,6 +145,10 @@ void APlayerCharacter::Tick(float DeltaSeconds)
 			GuardCounterPossible = false;
 		}
 	}
+
+
+	//SET POISONED POST PROCESS EFFECT STATUS
+	UpdateStatusEffectVisualization(DeltaSeconds);
 
 }
 
@@ -260,10 +263,39 @@ void APlayerCharacter::HeavyAttack()
 	}
 }
 
+void APlayerCharacter::UpdateStatusEffectVisualization(float DeltaSeconds)
+{
+	if (StatusEffectComponent->GetIsPoisoned())
+	{
+		if (PoisonPostProcess->BlendWeight < 1.0f)
+		{
+	//		PoisonPostProcess->BlendWeight = FMath::Clamp(PoisonPostProcess->BlendWeight + (BlendSpeed * DeltaSeconds), 0.0f, 1.0f);
+		}
+	}
+	else if (PoisonPostProcess->BlendWeight > 0.0f)
+	{
+	//	PoisonPostProcess->BlendWeight =  FMath::Clamp(PoisonPostProcess->BlendWeight - (BlendSpeed * DeltaSeconds), 0.0f, 1.0f);
+	}
+
+
+	if (StaminaComponent->GetExhaustion())
+	{	
+		if(ExhaustionPostProcess->BlendWeight < 1.0f)
+		{
+			ExhaustionPostProcess->BlendWeight =  FMath::Clamp(ExhaustionPostProcess->BlendWeight + (BlendSpeed * DeltaSeconds), 0.0f, 1.0f);
+		}
+	}
+	else if (ExhaustionPostProcess->BlendWeight >0.0f)
+	{
+		ExhaustionPostProcess->BlendWeight = FMath::Clamp(ExhaustionPostProcess->BlendWeight - (BlendSpeed * DeltaSeconds), 0.0f, 1.0f);
+	}
+
+}
+
 
 void APlayerCharacter::Guard()
 {
-	if (StaminaComponent->Exhausted == false)
+	if (StaminaComponent->isExhausted == false)
 	{
 		Super::Guard();
 	}

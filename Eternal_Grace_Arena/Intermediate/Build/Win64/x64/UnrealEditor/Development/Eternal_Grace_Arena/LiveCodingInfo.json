@@ -61,11 +61,11 @@
 			"StaggerComponent.gen.cpp.obj",
 			"StaggeringType.gen.cpp.obj",
 			"StaminaComponent.gen.cpp.obj",
-			"StatusEffectComponent.gen.cpp.obj",
-			"StatusWarningEffect.gen.cpp.obj",
-			"TitleScreenGameMode.gen.cpp.obj"
+			"StatusEffectComponent.gen.cpp.obj"
 		],
 		"Module.Eternal_Grace_Arena.3.cpp.obj": [
+			"StatusWarningEffect.gen.cpp.obj",
+			"TitleScreenGameMode.gen.cpp.obj",
 			"Weapon.gen.cpp.obj",
 			"WeaponComponent.gen.cpp.obj",
 			"PerModuleInline.gen.cpp.obj",

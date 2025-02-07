@@ -4,13 +4,13 @@
 #include "StatusEffectComponent.h"
 #include "Components/PostProcessComponent.h"
 #include "Eternal_Grace_ArenaCharacter.h"
-#include "PlayerCharacter.h"
 
 // Sets default values for this component's properties
 UStatusEffectComponent::UStatusEffectComponent()
 {
-
 	PrimaryComponentTick.bCanEverTick = true;
+	isPoisoned = false;
+	PoisonDamage = 50.0f;
 }
 
 
@@ -19,8 +19,7 @@ void UStatusEffectComponent::BeginPlay()
 {
 	Super::BeginPlay();
 	OwningCharacter = Cast<AEternal_Grace_ArenaCharacter>(GetOwner());
-	Player = Cast<APlayerCharacter>(OwningCharacter);
-	
+
 }
 
 
@@ -29,26 +28,19 @@ void UStatusEffectComponent::TickComponent(float DeltaTime, ELevelTick TickType,
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 
-	if(isPoisoned && Player)
+	if (isPoisoned)
 	{
-		if(Player->GetPoisonPostProcessEffect()->BlendWeight< 1.0f)
-		{
-			Player->GetPoisonPostProcessEffect()->BlendWeight += DeltaTime;
-		}
-
-	}
-	else if (Player)
-	{
-		if(Player->GetPoisonPostProcessEffect()->BlendWeight > 0.0f)
-		{
-			Player->GetPoisonPostProcessEffect()->BlendWeight -= DeltaTime;
-		}
+		II_Damageable::Execute_GetDamage(OwningCharacter, (PoisonDamage * DeltaTime), 0, 0, EStaggeringType::NoStagger, nullptr, false);
 	}
 }
 
 void UStatusEffectComponent::SetIsPoisoned(bool Condition)
 {
 	isPoisoned = Condition;
-	UE_LOG(LogTemp, Warning, TEXT("Poisen was Set or Unset"))
+}
+
+bool UStatusEffectComponent::GetIsPoisoned()
+{
+	return isPoisoned;
 }
 

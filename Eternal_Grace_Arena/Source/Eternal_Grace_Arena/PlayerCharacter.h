@@ -33,6 +33,8 @@ class ETERNAL_GRACE_ARENA_API APlayerCharacter : public AEternal_Grace_ArenaChar
 	UPostProcessComponent* DefaultPostProcess;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = PostProcessing, meta = (AllowPrivateAccess))
 	UPostProcessComponent* PoisonPostProcess;
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = PostProcessing, meta = (AllowPrivateAccess))
+	UPostProcessComponent* ExhaustionPostProcess;
 
 public:
 	//STAMINA
@@ -52,9 +54,6 @@ public:
 	UFUNCTION()
 	void GuardCounterAttack();
 
-	UFUNCTION()
-	UPostProcessComponent* GetPoisonPostProcessEffect();
-
 	//INTERACT
 	UFUNCTION()
 	void Interact();
@@ -65,6 +64,9 @@ public:
 	float currentChargePower;
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Attributes, meta = (AllowPrivateAccess))
 	float maxChargePower = 2.5f;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = PostProcessing, meta = (AllowPrivateAccess))
+	float BlendSpeed;
 
 
 protected:
@@ -97,6 +99,8 @@ protected:
 	void ChargeHeavyAttack();
 	UFUNCTION()
 	void HeavyAttack();
+	UFUNCTION()
+	void UpdateStatusEffectVisualization(float DeltaSeconds);
 
 
 

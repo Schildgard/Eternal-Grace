@@ -253,7 +253,6 @@
     <None Include="..\..\Source\Eternal_Grace_Arena.Target.cs"/>
     <None Include="..\..\Source\Eternal_Grace_ArenaEditor.Target.cs"/>
     <None Include="..\..\.gitignore"/>
-    <None Include="..\..\.vsconfig"/>
     <None Include="..\..\Config\DefaultEditor.ini"/>
     <None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini"/>
     <None Include="..\..\Config\DefaultEngine.ini"/>

@@ -25,7 +25,7 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = BaseValues, meta = (AllowPrivateAccess))
 	float ReducedStaminaRegenerationRate;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = BaseValues, meta = (AllowPrivateAccess))
-	bool Exhausted;
+	bool isExhausted;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = BaseValues, meta = (AllowPrivateAccess))
 	float ExhaustionTimer;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = BaseValues, meta = (AllowPrivateAccess))
@@ -50,6 +50,9 @@ public:
 
 	UFUNCTION()
 	void ManageStaminaRegeneration(float DeltaTime);
+
+	UFUNCTION()
+	bool GetExhaustion();
 
 
 

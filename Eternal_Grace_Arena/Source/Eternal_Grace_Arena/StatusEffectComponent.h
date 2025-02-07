@@ -7,7 +7,6 @@
 #include "StatusEffectComponent.generated.h"
 
 class AEternal_Grace_ArenaCharacter;
-class APlayerCharacter;
 class UPostProcessComponent;
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
 class ETERNAL_GRACE_ARENA_API UStatusEffectComponent : public UActorComponent
@@ -25,7 +24,9 @@ protected:
 	bool isPoisoned;
 	UPROPERTY()
 	AEternal_Grace_ArenaCharacter* OwningCharacter;
-	APlayerCharacter* Player;
+
+	UPROPERTY()
+	float PoisonDamage;
 
 public:	
 
@@ -33,6 +34,9 @@ public:
 
 	UFUNCTION()
 	void SetIsPoisoned(bool Condition);
+
+	UFUNCTION()
+	bool GetIsPoisoned();
 
 		
 };
