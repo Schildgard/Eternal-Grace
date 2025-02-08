@@ -3175,3 +3175,426 @@ Sampler Limit: 32
 [2025.02.08-18.39.24:241][947]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
 [2025.02.08-18.39.24:242][947]AssetCheck: /Game/Levels/Level_Hub Validating asset
 [2025.02.08-18.39.24:243][947]AssetCheck: /Game/OldCathedral/Materials/MI_Landscape_Ground Validating asset
+[2025.02.08-18.40.07:504][259]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 4031.776367
+[2025.02.08-18.40.08:506][262]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2025.02.08-18.40.08:506][262]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 4032.444336, Update Interval: 305.268097
+[2025.02.08-18.40.18:836][293]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.40.21:168][300]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.41.01:324][430]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.41.01:324][430]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.41.11:813][748]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.41.12:026][755]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.41.19:516][983]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.41.19:517][983]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.41.24:698][153]LogUObjectHash: Compacting FUObjectHashTables data took   1.16ms
+[2025.02.08-18.41.26:466][153]LogSlate: Window 'Save Content' being destroyed
+[2025.02.08-18.41.26:482][153]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2025.02.08-18.41.26:544][153]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Levels/Level_Hub" FILE="../../../../../../Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Levels/Level_Hub.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2025.02.08-18.41.26:608][153]LogUObjectHash: Compacting FUObjectHashTables data took   1.08ms
+[2025.02.08-18.41.26:645][153]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_25 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.41.26:648][153]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_18 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.41.26:650][153]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_16 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.41.27:044][153]LogSavePackage: Moving output files for package: /Game/Levels/Level_Hub
+[2025.02.08-18.41.27:044][153]LogSavePackage: Moving '../../../../../../Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Saved/Level_Hub1FEDF4704EB786D964F1D3BB4ECF3B1D.tmp' to '../../../../../../Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Levels/Level_Hub.umap'
+[2025.02.08-18.41.27:074][153]LogFileHelpers: Saving map 'Level_Hub' took 0.531
+[2025.02.08-18.41.27:086][153]LogFileHelpers: InternalPromptForCheckoutAndSave took 604.656 ms (total: 7.29 sec)
+[2025.02.08-18.41.27:157][153]LogContentValidation: Display: Starting to validate 1 assets
+[2025.02.08-18.41.27:158][153]LogContentValidation: Enabled validators:
+[2025.02.08-18.41.27:158][153]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2025.02.08-18.41.27:158][153]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2025.02.08-18.41.27:158][153]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2025.02.08-18.41.27:158][153]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2025.02.08-18.41.27:158][153]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2025.02.08-18.41.27:158][153]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2025.02.08-18.41.27:158][153]AssetCheck: /Game/Levels/Level_Hub Validating asset
+[2025.02.08-18.41.39:898][546]Cmd: TRANSACTION UNDO
+[2025.02.08-18.41.39:898][546]LogEditorTransaction: Undo Landscape Editing: Paint
+[2025.02.08-18.41.40:098][546]LogConsoleManager: Warning: Performance warning: Many (31) failed FindConsoleObject() for 'r.Water.WaterInfo.RenderMethod'. 
+[2025.02.08-18.41.59:648][243]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2025.02.08-18.41.59:765][243]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Levels/Level_Hub" FILE="../../../../../../Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Levels/Level_Hub.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2025.02.08-18.41.59:822][243]LogUObjectHash: Compacting FUObjectHashTables data took   0.85ms
+[2025.02.08-18.41.59:840][243]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_18 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.41.59:843][243]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_16 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.42.00:196][243]LogSavePackage: Moving output files for package: /Game/Levels/Level_Hub
+[2025.02.08-18.42.00:196][243]LogSavePackage: Moving '../../../../../../Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Saved/Level_Hub584953F5464BE6762CBABC8D94456D0F.tmp' to '../../../../../../Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Levels/Level_Hub.umap'
+[2025.02.08-18.42.00:221][243]LogFileHelpers: Saving map 'Level_Hub' took 0.457
+[2025.02.08-18.42.00:238][243]LogFileHelpers: InternalPromptForCheckoutAndSave took 589.353 ms (total: 7.88 sec)
+[2025.02.08-18.42.00:280][243]LogContentValidation: Display: Starting to validate 1 assets
+[2025.02.08-18.42.00:280][243]LogContentValidation: Enabled validators:
+[2025.02.08-18.42.00:280][243]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2025.02.08-18.42.00:280][243]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2025.02.08-18.42.00:280][243]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2025.02.08-18.42.00:280][243]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2025.02.08-18.42.00:280][243]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2025.02.08-18.42.00:280][243]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2025.02.08-18.42.00:280][243]AssetCheck: /Game/Levels/Level_Hub Validating asset
+[2025.02.08-18.42.06:233][442]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.42.06:454][449]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.42.27:234][111]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.42.29:425][167]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.43.07:430][367]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.43.07:636][374]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.43.18:181][679]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.43.18:360][686]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.44.00:764][969]Cmd: TRANSACTION UNDO
+[2025.02.08-18.44.00:765][969]LogEditorTransaction: Undo Landscape Editing: Paint
+[2025.02.08-18.44.00:795][969]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_16 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.44.00:836][969]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_18 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.44.00:837][969]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_34 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.44.02:390][  7]Cmd: TRANSACTION UNDO
+[2025.02.08-18.44.02:390][  7]LogEditorTransaction: Undo Landscape Editing: Paint
+[2025.02.08-18.44.02:455][  7]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_18 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.44.02:456][  7]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_34 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.44.45:634][293]Cmd: TRANSACTION UNDO
+[2025.02.08-18.44.45:634][293]LogEditorTransaction: Undo Landscape Editing: Paint
+[2025.02.08-18.44.45:701][293]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_66 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.44.46:521][308]Cmd: TRANSACTION UNDO
+[2025.02.08-18.44.46:521][308]LogEditorTransaction: Undo Landscape Editing: Paint
+[2025.02.08-18.44.46:584][308]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_66 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.44.47:427][328]Cmd: TRANSACTION UNDO
+[2025.02.08-18.44.47:427][328]LogEditorTransaction: Undo Landscape Editing: Paint
+[2025.02.08-18.44.47:492][328]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_66 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.44.48:569][356]Cmd: TRANSACTION UNDO
+[2025.02.08-18.44.48:569][356]LogEditorTransaction: Undo Landscape Editing: Paint
+[2025.02.08-18.44.54:343][502]Cmd: TRANSACTION UNDO
+[2025.02.08-18.44.54:343][502]LogEditorTransaction: Undo Landscape Editing: Paint
+[2025.02.08-18.44.54:372][502]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_68 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.44.54:424][502]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_62 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.44.55:251][508]Cmd: TRANSACTION UNDO
+[2025.02.08-18.44.55:251][508]LogEditorTransaction: Undo Landscape Editing: Paint
+[2025.02.08-18.44.55:313][508]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_62 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.44.56:016][517]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.44.56:566][535]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.45.01:404][741]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.45.02:011][766]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.45.46:024][332]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 4370.292969
+[2025.02.08-18.45.46:219][340]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2025.02.08-18.45.46:219][340]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 4370.464355, Update Interval: 309.908142
+[2025.02.08-18.47.27:368][560]LogAssetEditorSubsystem: Opening Asset editor for LandscapeLayerInfoObject /Game/OldCathedral/Levels/SharedLevelAssets/AerialRocks_LayerInfo.AerialRocks_LayerInfo
+[2025.02.08-18.47.29:026][599]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.47.29:588][617]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.48.23:888][237]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2025.02.08-18.48.23:998][237]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Levels/Level_Hub" FILE="../../../../../../Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Levels/Level_Hub.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2025.02.08-18.48.24:074][237]LogUObjectHash: Compacting FUObjectHashTables data took   1.04ms
+[2025.02.08-18.48.24:089][237]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_19 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.48.24:092][237]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_2 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.48.24:094][237]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_21 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.48.24:096][237]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_25 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.48.24:099][237]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_30 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.48.24:101][237]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_32 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.48.24:102][237]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_4 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.48.24:104][237]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_8 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.48.24:105][237]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_68 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.48.24:106][237]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_66 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.48.24:108][237]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_62 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.48.24:109][237]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_34 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.48.24:110][237]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_56 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.48.24:112][237]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_57 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.48.24:113][237]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_58 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.48.24:114][237]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_59 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.48.24:116][237]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_18 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.48.24:117][237]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_16 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.48.24:118][237]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_71 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.48.24:119][237]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_70 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.48.24:483][237]LogSavePackage: Moving output files for package: /Game/Levels/Level_Hub
+[2025.02.08-18.48.24:483][237]LogSavePackage: Moving '../../../../../../Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Saved/Level_Hub178B0C5A4B089E4C630D9080B2AB2B30.tmp' to '../../../../../../Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Levels/Level_Hub.umap'
+[2025.02.08-18.48.24:510][237]LogFileHelpers: Saving map 'Level_Hub' took 0.513
+[2025.02.08-18.48.24:519][237]LogFileHelpers: InternalPromptForCheckoutAndSave took 629.701 ms (total: 8.51 sec)
+[2025.02.08-18.48.24:557][237]LogContentValidation: Display: Starting to validate 1 assets
+[2025.02.08-18.48.24:557][237]LogContentValidation: Enabled validators:
+[2025.02.08-18.48.24:557][237]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2025.02.08-18.48.24:557][237]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2025.02.08-18.48.24:557][237]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2025.02.08-18.48.24:557][237]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2025.02.08-18.48.24:557][237]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2025.02.08-18.48.24:557][237]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2025.02.08-18.48.24:557][237]AssetCheck: /Game/Levels/Level_Hub Validating asset
+[2025.02.08-18.48.36:182][678]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.48.36:378][685]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.49.05:919][543]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.49.05:919][543]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.49.13:575][749]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.49.14:039][767]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.49.17:969][898]Cmd: TRANSACTION UNDO
+[2025.02.08-18.49.17:970][898]LogEditorTransaction: Undo Landscape Editing: Noise
+[2025.02.08-18.49.18:030][898]MapCheck: Warning: Fixed up shared weightmap texture for layer GroundLeaf_01 in component 'LandscapeComponent_3' (shares with 'LandscapeComponent_2') 
+[2025.02.08-18.49.18:030][898]MapCheck: Warning: Fixed up shared weightmap texture for layer GroundLeaf_02 in component 'LandscapeComponent_3' (shares with 'LandscapeComponent_2') 
+[2025.02.08-18.49.18:076][898]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_1 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.145824 MB), EncodeSpeed: Fast
+[2025.02.08-18.49.18:118][898]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_13 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.145824 MB), EncodeSpeed: Fast
+[2025.02.08-18.49.18:119][898]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_24 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.145824 MB), EncodeSpeed: Fast
+[2025.02.08-18.49.18:120][898]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_56 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.49.18:121][898]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_4 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.49.18:122][898]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_21 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.49.18:122][898]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_16 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.49.18:124][898]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_18 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.49.18:125][898]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_34 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.49.20:408][934]Cmd: TRANSACTION UNDO
+[2025.02.08-18.49.20:408][934]LogEditorTransaction: Undo Landscape Editing: Noise
+[2025.02.08-18.49.20:460][934]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_13 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.145824 MB), EncodeSpeed: Fast
+[2025.02.08-18.49.20:483][934]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_16 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.49.20:484][934]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_24 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.145824 MB), EncodeSpeed: Fast
+[2025.02.08-18.49.21:927][966]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.49.22:097][973]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.49.22:371][984]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.49.23:127][  8]Cmd: TRANSACTION UNDO
+[2025.02.08-18.49.23:127][  8]LogEditorTransaction: Undo Landscape Editing: Noise
+[2025.02.08-18.49.36:296][446]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.49.40:696][610]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.49.41:177][628]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.49.42:200][666]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.49.43:621][705]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.49.52:360][995]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.49.52:499][  2]Cmd: TRANSACTION UNDO
+[2025.02.08-18.49.52:499][  2]LogEditorTransaction: Undo Landscape Editing: Noise
+[2025.02.08-18.49.52:567][  2]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_15 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.145824 MB), EncodeSpeed: Fast
+[2025.02.08-18.49.52:568][  2]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_27 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.145824 MB), EncodeSpeed: Fast
+[2025.02.08-18.50.13:031][727]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.50.16:620][849]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.50.31:090][255]Cmd: TRANSACTION UNDO
+[2025.02.08-18.50.31:090][255]LogEditorTransaction: Undo Landscape Editing: Noise
+[2025.02.08-18.50.31:240][255]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_16 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.50.31:241][255]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_2 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.50.31:243][255]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_34 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.50.32:112][266]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.50.32:214][269]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.50.32:747][286]Cmd: TRANSACTION UNDO
+[2025.02.08-18.50.32:747][286]LogEditorTransaction: Undo Landscape Editing: Noise
+[2025.02.08-18.50.32:821][286]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_34 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.50.34:761][336]Cmd: TRANSACTION UNDO
+[2025.02.08-18.50.34:761][336]LogEditorTransaction: Undo Landscape Editing: Noise
+[2025.02.08-18.50.36:151][372]Cmd: TRANSACTION UNDO
+[2025.02.08-18.50.36:151][372]LogEditorTransaction: Undo Landscape Editing: Noise
+[2025.02.08-18.50.37:820][421]Cmd: TRANSACTION UNDO
+[2025.02.08-18.50.37:820][421]LogEditorTransaction: Undo Landscape Editing: Noise
+[2025.02.08-18.50.39:945][483]Cmd: TRANSACTION UNDO
+[2025.02.08-18.50.39:945][483]LogEditorTransaction: Undo Landscape Editing: Paint
+[2025.02.08-18.50.40:000][483]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_16 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.50.40:001][483]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_2 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.50.43:289][574]LogUObjectHash: Compacting FUObjectHashTables data took   1.20ms
+[2025.02.08-18.50.44:743][574]LogSlate: Window 'Save Content' being destroyed
+[2025.02.08-18.50.44:755][574]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2025.02.08-18.50.44:808][574]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Levels/Level_Hub" FILE="../../../../../../Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Levels/Level_Hub.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2025.02.08-18.50.44:863][574]LogUObjectHash: Compacting FUObjectHashTables data took   0.47ms
+[2025.02.08-18.50.45:247][574]LogSavePackage: Moving output files for package: /Game/Levels/Level_Hub
+[2025.02.08-18.50.45:247][574]LogSavePackage: Moving '../../../../../../Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Saved/Level_HubC01E13E44A0561B3B684D6A300D35DEE.tmp' to '../../../../../../Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Levels/Level_Hub.umap'
+[2025.02.08-18.50.45:276][574]LogFileHelpers: Saving map 'Level_Hub' took 0.469
+[2025.02.08-18.50.45:277][574]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/OldCathedral/Materials/MI_Landscape_Ground] ([1] browsable assets)...
+[2025.02.08-18.50.45:318][574]OBJ SavePackage:     Rendered thumbnail for [MaterialInstanceConstant /Game/OldCathedral/Materials/MI_Landscape_Ground.MI_Landscape_Ground]
+[2025.02.08-18.50.45:318][574]OBJ SavePackage: Finished generating thumbnails for package [/Game/OldCathedral/Materials/MI_Landscape_Ground]
+[2025.02.08-18.50.45:330][574]LogUObjectHash: Compacting FUObjectHashTables data took   0.42ms
+[2025.02.08-18.50.45:347][574]LogUObjectHash: Compacting FUObjectHashTables data took   0.55ms
+[2025.02.08-18.50.45:350][574]LogSavePackage: Moving output files for package: /Game/OldCathedral/Materials/MI_Landscape_Ground
+[2025.02.08-18.50.45:351][574]LogSavePackage: Moving '../../../../../../Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Saved/MI_Landscape_GroundF4CD86E148EDF6618DAF4D86BAF5D3D8.tmp' to '../../../../../../Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/OldCathedral/Materials/MI_Landscape_Ground.uasset'
+[2025.02.08-18.50.45:363][574]LogFileHelpers: InternalPromptForCheckoutAndSave took 607.298 ms (total: 9.12 sec)
+[2025.02.08-18.50.45:406][574]LogContentValidation: Display: Starting to validate 2 assets
+[2025.02.08-18.50.45:406][574]LogContentValidation: Enabled validators:
+[2025.02.08-18.50.45:406][574]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2025.02.08-18.50.45:406][574]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2025.02.08-18.50.45:406][574]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2025.02.08-18.50.45:406][574]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2025.02.08-18.50.45:406][574]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2025.02.08-18.50.45:406][574]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2025.02.08-18.50.45:407][574]AssetCheck: /Game/Levels/Level_Hub Validating asset
+[2025.02.08-18.50.45:407][574]AssetCheck: /Game/OldCathedral/Materials/MI_Landscape_Ground Validating asset
+[2025.02.08-18.50.57:401][938]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.50.57:504][941]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.50.58:068][959]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.51.03:025][109]Cmd: TRANSACTION UNDO
+[2025.02.08-18.51.03:025][109]LogEditorTransaction: Undo Landscape Editing: Noise
+[2025.02.08-18.51.10:719][277]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.51.18:841][497]Cmd: TRANSACTION UNDO
+[2025.02.08-18.51.18:841][497]LogEditorTransaction: Undo Landscape Editing: Noise
+[2025.02.08-18.51.18:950][497]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_24 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.145824 MB), EncodeSpeed: Fast
+[2025.02.08-18.51.27:623][778]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 4711.897461
+[2025.02.08-18.51.27:826][785]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2025.02.08-18.51.27:826][785]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 4712.071777, Update Interval: 306.917938
+[2025.02.08-18.51.31:922][922]Cmd: TRANSACTION UNDO
+[2025.02.08-18.51.31:922][922]LogEditorTransaction: Undo Landscape Editing: Noise
+[2025.02.08-18.51.39:836][143]Cmd: TRANSACTION UNDO
+[2025.02.08-18.51.39:836][143]LogEditorTransaction: Undo Landscape Editing: Noise
+[2025.02.08-18.51.40:821][156]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.51.40:920][159]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.51.46:811][345]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.51.46:967][348]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.51.47:545][366]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.51.54:705][621]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.51.56:027][659]Cmd: TRANSACTION UNDO
+[2025.02.08-18.51.56:027][659]LogEditorTransaction: Undo Landscape Editing: Noise
+[2025.02.08-18.52.13:209][178]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.52.16:530][265]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.52.18:993][342]Cmd: TRANSACTION UNDO
+[2025.02.08-18.52.18:993][342]LogEditorTransaction: Undo Landscape Editing: Noise
+[2025.02.08-18.52.19:108][342]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_3 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.145824 MB), EncodeSpeed: Fast
+[2025.02.08-18.52.19:148][342]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_13 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.145824 MB), EncodeSpeed: Fast
+[2025.02.08-18.52.19:149][342]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_24 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.145824 MB), EncodeSpeed: Fast
+[2025.02.08-18.52.19:150][342]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_56 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.52.19:151][342]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_4 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.52.19:152][342]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_21 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.52.19:153][342]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_16 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.52.19:154][342]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_18 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.52.19:155][342]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_34 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.52.19:156][342]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_2 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.52.19:157][342]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_19 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.52.19:158][342]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_66 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.52.19:944][353]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.52.20:043][356]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.52.21:293][396]Cmd: TRANSACTION UNDO
+[2025.02.08-18.52.21:293][396]LogEditorTransaction: Undo Landscape Editing: Noise
+[2025.02.08-18.52.21:990][402]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.52.22:062][405]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.52.22:491][419]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.52.22:687][423]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.52.24:419][479]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.52.24:517][482]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.52.25:179][500]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.52.25:798][522]Cmd: TRANSACTION UNDO
+[2025.02.08-18.52.25:798][522]LogEditorTransaction: Undo Landscape Editing: Paint
+[2025.02.08-18.52.25:839][522]MapCheck: Warning: Fixed up shared weightmap texture for layer GroundLeaf_01 in component 'LandscapeComponent_9' (shares with 'LandscapeComponent_8') 
+[2025.02.08-18.52.25:839][522]MapCheck: Warning: Fixed up shared weightmap texture for layer GroundLeaf_02 in component 'LandscapeComponent_9' (shares with 'LandscapeComponent_8') 
+[2025.02.08-18.52.25:849][522]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_2 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.52.26:541][531]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.52.26:950][549]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.52.43:634][224]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.52.45:795][291]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.52.50:501][434]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.52.56:163][592]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.52.57:662][635]Cmd: TRANSACTION UNDO
+[2025.02.08-18.52.57:662][635]LogEditorTransaction: Undo Landscape Editing: Noise
+[2025.02.08-18.52.57:702][635]MapCheck: Warning: Fixed up shared weightmap texture for layer GroundLeaf_01 in component 'LandscapeComponent_10' (shares with 'LandscapeComponent_8') 
+[2025.02.08-18.52.57:702][635]MapCheck: Warning: Fixed up shared weightmap texture for layer GroundLeaf_02 in component 'LandscapeComponent_10' (shares with 'LandscapeComponent_8') 
+[2025.02.08-18.52.57:720][635]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_13 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.145824 MB), EncodeSpeed: Fast
+[2025.02.08-18.52.57:721][635]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_56 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.52.57:762][635]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_16 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.52.58:379][644]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.52.58:593][654]Cmd: TRANSACTION UNDO
+[2025.02.08-18.52.58:593][654]LogEditorTransaction: Undo Landscape Editing: Noise
+[2025.02.08-18.52.58:638][654]MapCheck: Warning: Fixed up shared weightmap texture for layer GroundLeaf_01 in component 'LandscapeComponent_14' (shares with 'LandscapeComponent_13') 
+[2025.02.08-18.52.58:638][654]MapCheck: Warning: Fixed up shared weightmap texture for layer GroundLeaf_02 in component 'LandscapeComponent_14' (shares with 'LandscapeComponent_13') 
+[2025.02.08-18.52.58:638][654]MapCheck: Warning: Fixed up shared weightmap texture for layer AerialRocks in component 'LandscapeComponent_14' (shares with 'LandscapeComponent_13') 
+[2025.02.08-18.52.58:657][654]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_13 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.145824 MB), EncodeSpeed: Fast
+[2025.02.08-18.52.58:680][654]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_27 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.145824 MB), EncodeSpeed: Fast
+[2025.02.08-18.52.58:681][654]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_25 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.52.58:682][654]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_16 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.52.59:182][662]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.52.59:449][670]Cmd: TRANSACTION UNDO
+[2025.02.08-18.52.59:449][670]LogEditorTransaction: Undo Landscape Editing: Noise
+[2025.02.08-18.52.59:455][670]MapCheck: Warning: Fixed up shared weightmap texture for layer GroundLeaf_01 in component 'LandscapeComponent_14' (shares with 'LandscapeComponent_13') 
+[2025.02.08-18.52.59:455][670]MapCheck: Warning: Fixed up shared weightmap texture for layer GroundLeaf_02 in component 'LandscapeComponent_14' (shares with 'LandscapeComponent_13') 
+[2025.02.08-18.53.09:258][ 50]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.53.13:888][208]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.53.21:421][491]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.53.25:361][621]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.53.30:024][787]Cmd: TRANSACTION UNDO
+[2025.02.08-18.53.30:024][787]LogEditorTransaction: Undo Landscape Editing: Paint
+[2025.02.08-18.53.30:052][787]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_27 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.145824 MB), EncodeSpeed: Fast
+[2025.02.08-18.53.30:053][787]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_16 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.53.30:053][787]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_25 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.53.30:753][793]Cmd: TRANSACTION UNDO
+[2025.02.08-18.53.30:753][793]LogEditorTransaction: Undo Landscape Editing: Paint
+[2025.02.08-18.53.30:772][793]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_27 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.145824 MB), EncodeSpeed: Fast
+[2025.02.08-18.53.30:772][793]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_25 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.53.30:773][793]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_16 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.55.05:930][543]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.55.06:591][561]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.55.27:403][166]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.55.27:612][173]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.55.43:526][625]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.55.43:738][632]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.55.54:702][936]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.55.54:899][943]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.56.09:171][381]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.56.09:570][388]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.56.21:505][790]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.56.22:050][808]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.56.40:347][343]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.56.40:750][350]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.56.43:849][443]LogAssetEditorSubsystem: Opening Asset editor for LandscapeLayerInfoObject /Game/OldCathedral/Levels/SharedLevelAssets/BrownMudRock_LayerInfo.BrownMudRock_LayerInfo
+[2025.02.08-18.56.44:224][445]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.56.45:155][473]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.56.53:734][742]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.56.56:259][812]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.57.06:304][124]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.57.06:496][131]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.57.22:675][685]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 5066.950195
+[2025.02.08-18.57.22:854][692]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2025.02.08-18.57.22:854][692]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 5067.102539, Update Interval: 335.902588
+[2025.02.08-18.57.50:129][475]LogSlate: Window 'Pick Landscape Edit Layer Class' being destroyed
+[2025.02.08-18.57.54:926][549]LogSlate: Window 'Pick Landscape Edit Layer Class' being destroyed
+[2025.02.08-18.59.04:231][748]Cmd: TRANSACTION UNDO
+[2025.02.08-18.59.04:231][748]LogEditorTransaction: Undo Landscape Editing: Paint
+[2025.02.08-18.59.04:283][748]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_16 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.59.04:284][748]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_27 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.145824 MB), EncodeSpeed: Fast
+[2025.02.08-18.59.04:284][748]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_18 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.59.08:275][872]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.59.08:486][879]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.59.14:758][ 72]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.59.14:972][ 79]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.59.37:736][768]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.59.38:758][800]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.59.46:093][ 41]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.59.46:293][ 48]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.59.47:101][ 66]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.59.56:258][321]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.59.56:719][339]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.59.56:719][339]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-19.00.02:767][573]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-19.00.07:678][717]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-19.00.09:006][762]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-19.00.17:291][ 49]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-19.00.19:568][ 95]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-19.00.19:835][102]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-19.00.21:029][126]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-19.00.21:602][133]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-19.00.30:030][361]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-19.00.30:288][368]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-19.00.51:842][ 58]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2025.02.08-19.00.51:954][ 58]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Levels/Level_Hub" FILE="../../../../../../Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Levels/Level_Hub.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2025.02.08-19.00.52:037][ 58]LogUObjectHash: Compacting FUObjectHashTables data took   1.01ms
+[2025.02.08-19.00.52:053][ 58]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_0 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-19.00.52:058][ 58]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_10 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-19.00.52:061][ 58]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_14 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-19.00.52:064][ 58]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_19 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-19.00.52:066][ 58]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_2 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-19.00.52:069][ 58]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_21 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-19.00.52:072][ 58]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_28 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-19.00.52:074][ 58]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_32 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-19.00.52:076][ 58]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_4 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-19.00.52:079][ 58]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_8 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-19.00.52:081][ 58]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_66 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-19.00.52:084][ 58]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_34 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-19.00.52:087][ 58]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_18 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-19.00.52:089][ 58]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_16 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-19.00.52:091][ 58]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_99 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-19.00.52:096][ 58]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_92 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-19.00.52:098][ 58]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_93 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-19.00.52:100][ 58]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_95 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-19.00.52:103][ 58]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_106 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-19.00.52:495][ 58]LogSavePackage: Moving output files for package: /Game/Levels/Level_Hub
+[2025.02.08-19.00.52:496][ 58]LogSavePackage: Moving '../../../../../../Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Saved/Level_Hub04BE60B0468463579C584FACE86A8F5F.tmp' to '../../../../../../Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Levels/Level_Hub.umap'
+[2025.02.08-19.00.52:522][ 58]LogFileHelpers: Saving map 'Level_Hub' took 0.571
+[2025.02.08-19.00.52:532][ 58]LogFileHelpers: InternalPromptForCheckoutAndSave took 689.407 ms (total: 9.81 sec)
+[2025.02.08-19.00.52:579][ 58]LogContentValidation: Display: Starting to validate 1 assets
+[2025.02.08-19.00.52:579][ 58]LogContentValidation: Enabled validators:
+[2025.02.08-19.00.52:580][ 58]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2025.02.08-19.00.52:580][ 58]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2025.02.08-19.00.52:580][ 58]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2025.02.08-19.00.52:580][ 58]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2025.02.08-19.00.52:580][ 58]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2025.02.08-19.00.52:580][ 58]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2025.02.08-19.00.52:580][ 58]AssetCheck: /Game/Levels/Level_Hub Validating asset
+[2025.02.08-19.01.43:177][592]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2025.02.08-19.01.43:307][592]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Levels/Level_Hub" FILE="../../../../../../Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Levels/Level_Hub.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2025.02.08-19.01.43:368][592]LogUObjectHash: Compacting FUObjectHashTables data took   0.45ms
+[2025.02.08-19.01.43:775][592]LogSavePackage: Moving output files for package: /Game/Levels/Level_Hub
+[2025.02.08-19.01.43:775][592]LogSavePackage: Moving '../../../../../../Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Saved/Level_Hub871EB614414C78B95B3ACBA5427F6EF5.tmp' to '../../../../../../Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Levels/Level_Hub.umap'
+[2025.02.08-19.01.43:801][592]LogFileHelpers: Saving map 'Level_Hub' took 0.495
+[2025.02.08-19.01.43:810][592]LogFileHelpers: InternalPromptForCheckoutAndSave took 633.513 ms (total: 10.4 sec)
+[2025.02.08-19.01.43:855][592]LogContentValidation: Display: Starting to validate 1 assets
+[2025.02.08-19.01.43:855][592]LogContentValidation: Enabled validators:
+[2025.02.08-19.01.43:856][592]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2025.02.08-19.01.43:856][592]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2025.02.08-19.01.43:856][592]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2025.02.08-19.01.43:856][592]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2025.02.08-19.01.43:856][592]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2025.02.08-19.01.43:856][592]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2025.02.08-19.01.43:856][592]AssetCheck: /Game/Levels/Level_Hub Validating asset
