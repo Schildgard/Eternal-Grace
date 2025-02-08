@@ -2320,3 +2320,858 @@ Script Stack (0 frames) :
 [2025.02.08-17.51.48:840][762]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
 [2025.02.08-17.51.48:840][762]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
 [2025.02.08-17.51.48:840][762]AssetCheck: /Game/Levels/Level_Hub Validating asset
+[2025.02.08-17.52.51:086][326]LogStreaming: Display: FlushAsyncLoading(355): 1 QueuedPackages, 0 AsyncPackages
+[2025.02.08-17.52.51:946][326]LogRenderer: Display: Invalidated clipmap due to WPO threshold change. This can occur due to resolution or FOV changes.
+[2025.02.08-17.53.22:478][379]Cmd: TRANSACTION UNDO
+[2025.02.08-17.53.22:478][379]LogEditorTransaction: Undo Landscape Editing: Paint
+[2025.02.08-17.53.22:487][379]LogDeviceProfileManager: Going up to parent DeviceProfile []
+[2025.02.08-17.53.22:543][379]LogDeviceProfileManager: Going up to parent DeviceProfile []
+[2025.02.08-17.53.22:545][379]LogDeviceProfileManager: Going up to parent DeviceProfile []
+[2025.02.08-17.53.22:548][379]LogDeviceProfileManager: Going up to parent DeviceProfile [AppleTV]
+[2025.02.08-17.53.22:548][379]LogDeviceProfileManager: Going up to parent DeviceProfile [IOS]
+[2025.02.08-17.53.22:548][379]LogDeviceProfileManager: Going up to parent DeviceProfile []
+[2025.02.08-17.53.22:550][379]LogDeviceProfileManager: Display: Deviceprofile None not found.
+[2025.02.08-17.53.22:571][379]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_23 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-17.53.22:571][379]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_2 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-17.53.22:572][379]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_7 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.145824 MB), EncodeSpeed: Fast
+[2025.02.08-17.53.22:573][379]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_19 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-17.53.22:573][379]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_21 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-17.53.23:307][393]Cmd: TRANSACTION UNDO
+[2025.02.08-17.53.23:307][393]LogEditorTransaction: Undo Landscape Editing: Paint
+[2025.02.08-17.53.23:364][393]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_2 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-17.53.23:365][393]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_19 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-17.53.24:725][434]Cmd: TRANSACTION UNDO
+[2025.02.08-17.53.24:725][434]LogEditorTransaction: Undo Landscape Editing: Paint
+[2025.02.08-17.53.24:810][434]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_7 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.145824 MB), EncodeSpeed: Fast
+[2025.02.08-17.53.24:810][434]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_23 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-17.53.24:812][434]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_21 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-17.53.25:589][454]Cmd: TRANSACTION UNDO
+[2025.02.08-17.53.25:589][454]LogEditorTransaction: Undo Landscape Editing: Paint
+[2025.02.08-17.53.25:662][454]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_7 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.145824 MB), EncodeSpeed: Fast
+[2025.02.08-17.53.56:392][826]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-17.54.24:603][110]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-17.55.29:753][746]Cmd: TRANSACTION UNDO
+[2025.02.08-17.55.29:754][746]LogEditorTransaction: Undo Landscape Editing: Paint
+[2025.02.08-17.55.29:807][746]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_16 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-17.55.29:808][746]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_18 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-17.55.49:724][469]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 1373.990845
+[2025.02.08-17.55.49:912][477]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2025.02.08-17.55.49:912][477]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 1374.154907, Update Interval: 332.289795
+[2025.02.08-17.56.33:732][111]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2025.02.08-17.56.33:746][111]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2025.02.08-17.56.33:746][111]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Level_Hub
+[2025.02.08-17.56.33:845][111]LogPlayLevel: PIE: StaticDuplicateObject took: (0.098514s)
+[2025.02.08-17.56.33:845][111]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Level_Hub.Level_Hub to /Game/Levels/UEDPIE_0_Level_Hub.Level_Hub (0.098570s)
+[2025.02.08-17.56.33:877][111]LogUObjectHash: Compacting FUObjectHashTables data took   0.85ms
+[2025.02.08-17.56.33:880][111]LogChaosDD: Creating Chaos Debug Draw Scene for world Level_Hub
+[2025.02.08-17.56.33:882][111]LogPlayLevel: PIE: World Init took: (0.002191s)
+[2025.02.08-17.56.33:883][111]LogAudio: Display: Creating Audio Device:                 Id: 8, Scope: Unique, Realtime: True
+[2025.02.08-17.56.33:883][111]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2025.02.08-17.56.33:883][111]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2025.02.08-17.56.33:883][111]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2025.02.08-17.56.33:883][111]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2025.02.08-17.56.33:883][111]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2025.02.08-17.56.33:883][111]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2025.02.08-17.56.33:883][111]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2025.02.08-17.56.33:883][111]LogAudio: Display: AudioDevice MaxSources: 32
+[2025.02.08-17.56.33:883][111]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2025.02.08-17.56.33:883][111]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2025.02.08-17.56.33:883][111]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2025.02.08-17.56.33:889][111]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2025.02.08-17.56.33:920][111]LogAudioMixer: Display: Using Audio Hardware Device Köpfhörer (Synaptics HD Audio)
+[2025.02.08-17.56.33:921][111]LogAudioMixer: Display: Initializing Sound Submixes...
+[2025.02.08-17.56.33:921][111]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2025.02.08-17.56.33:921][111]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2025.02.08-17.56.33:922][111]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=8
+[2025.02.08-17.56.33:922][111]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=8
+[2025.02.08-17.56.33:926][111]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=8
+[2025.02.08-17.56.33:926][111]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=8
+[2025.02.08-17.56.33:926][111]LogInit: FAudioDevice initialized with ID 8.
+[2025.02.08-17.56.33:926][111]LogAudio: Display: Audio Device (ID: 8) registered with world 'Level_Hub'.
+[2025.02.08-17.56.33:926][111]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 8
+[2025.02.08-17.56.33:931][111]LogLoad: Game class is 'GM_Custom_C'
+[2025.02.08-17.56.33:996][111]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Level_Hub.Level_Hub up for play (max tick rate 0) at 2025.02.08-18.56.33
+[2025.02.08-17.56.33:997][111]LogWorld: Bringing up level for play took: 0.065791
+[2025.02.08-17.56.34:001][111]LogOnline: OSS: Created online subsystem instance for: :Context_10
+[2025.02.08-17.56.34:005][111]LogSkeletalMesh: USkeletalMeshComponent: Recreating Clothing Actors for 'CharacterMesh0' with 'SKM_DarkLady'
+[2025.02.08-17.56.34:011][111]LogTemp: Warning: BP_InteractionStone_WeaponMaster_C_1 Could not Access GameInstance or GameInstance Dictionary did not Contained its key
+[2025.02.08-17.56.34:011][111]LogTemp: Warning: BP_InteractionStone_WeaponMaster_C_2 Could not Access GameInstance or GameInstance Dictionary did not Contained its key
+[2025.02.08-17.56.34:011][111]LogTemp: Warning: BP_InteractionStone_WeaponMaster_C_4 Could not Access GameInstance or GameInstance Dictionary did not Contained its key
+[2025.02.08-17.56.34:011][111]LogTemp: Warning: BP_InteractionStone_WeaponMaster_C_5 Could not Access GameInstance or GameInstance Dictionary did not Contained its key
+[2025.02.08-17.56.34:011][111]LogTemp: Warning: BP_InteractionStone_WeaponMaster_C_6 Could not Access GameInstance or GameInstance Dictionary did not Contained its key
+[2025.02.08-17.56.34:012][111]LogTemp: Warning: Failed to get Equipped Weapon Class for Equipment: Weapon
+[2025.02.08-17.56.34:012][111]LogTemp: Warning: Failed to get Equipped Weapon Class for Equipment: Shield
+[2025.02.08-17.56.34:012][111]LogTemp: Warning: Failed to get Equipped Weapon Class for Equipment: Weapon
+[2025.02.08-17.56.34:012][111]LogTemp: Warning: Failed to get Equipped Weapon Class for Equipment: Shield
+[2025.02.08-17.56.34:014][111]PIE: Server logged in
+[2025.02.08-17.56.34:016][111]PIE: Play in editor total start time 0,275 seconds.
+[2025.02.08-17.56.43:997][610]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.02.08-17.56.43:997][610]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_Level_Hub
+[2025.02.08-17.56.43:997][610]LogWorld: UWorld::CleanupWorld for Level_Hub, bSessionEnded=true, bCleanupResources=true
+[2025.02.08-17.56.44:003][610]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.02.08-17.56.44:007][610]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2025.02.08-17.56.44:012][610]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.02.08-17.56.44:026][610]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2025.02.08-17.56.44:027][610]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 8
+[2025.02.08-17.56.44:027][610]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=8
+[2025.02.08-17.56.44:029][610]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=8
+[2025.02.08-17.56.44:035][610]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.02.08-17.56.44:046][610]LogUObjectHash: Compacting FUObjectHashTables data took   0.95ms
+[2025.02.08-17.56.44:148][611]LogPlayLevel: Display: Destroying online subsystem :Context_10
+[2025.02.08-17.58.30:834][264]Cmd: TRANSACTION UNDO
+[2025.02.08-17.58.30:834][264]LogEditorTransaction: Undo Landscape Editing: Noise
+[2025.02.08-17.58.30:914][264]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_4 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-17.58.30:916][264]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_18 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-17.58.30:985][264]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_25 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-17.58.30:986][264]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_37 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-17.58.30:989][264]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_36 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-17.58.30:990][264]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_16 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-17.58.31:752][276]Cmd: TRANSACTION UNDO
+[2025.02.08-17.58.31:752][276]LogEditorTransaction: Undo Landscape Editing: Noise
+[2025.02.08-17.58.31:807][276]MapCheck: Warning: Fixed up shared weightmap texture for layer GroundLeaf_01 in component 'LandscapeComponent_24' (shares with 'LandscapeComponent_19') 
+[2025.02.08-17.58.31:807][276]MapCheck: Warning: Fixed up shared weightmap texture for layer GroundLeaf_02 in component 'LandscapeComponent_24' (shares with 'LandscapeComponent_19') 
+[2025.02.08-17.58.31:848][276]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_21 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-17.58.31:849][276]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_34 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-17.58.31:851][276]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_4 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-17.58.31:853][276]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_18 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-17.58.31:895][276]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_25 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-17.58.31:896][276]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_37 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-17.58.31:896][276]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_36 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-17.58.31:897][276]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_16 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-17.58.54:981][ 63]Cmd: TRANSACTION UNDO
+[2025.02.08-17.58.54:981][ 63]LogEditorTransaction: Undo Landscape Editing: Noise
+[2025.02.08-17.58.55:021][ 63]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_37 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-17.58.55:022][ 63]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_25 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-17.58.55:695][ 70]Cmd: TRANSACTION UNDO
+[2025.02.08-17.58.55:696][ 70]LogEditorTransaction: Undo Landscape Editing: Noise
+[2025.02.08-17.58.56:608][ 95]Cmd: TRANSACTION UNDO
+[2025.02.08-17.58.56:608][ 95]LogEditorTransaction: Undo Landscape Editing: Noise
+[2025.02.08-17.58.56:614][ 95]MapCheck: Warning: Fixed up shared weightmap texture for layer GroundLeaf_01 in component 'LandscapeComponent_23' (shares with 'LandscapeComponent_20') 
+[2025.02.08-17.58.56:614][ 95]MapCheck: Warning: Fixed up shared weightmap texture for layer GroundLeaf_02 in component 'LandscapeComponent_23' (shares with 'LandscapeComponent_20') 
+[2025.02.08-17.58.56:614][ 95]MapCheck: Warning: Fixed up shared weightmap texture for layer GroundLeaf_01 in component 'LandscapeComponent_26' (shares with 'LandscapeComponent_15') 
+[2025.02.08-17.58.56:614][ 95]MapCheck: Warning: Fixed up shared weightmap texture for layer GroundLeaf_02 in component 'LandscapeComponent_26' (shares with 'LandscapeComponent_15') 
+[2025.02.08-17.58.56:614][ 95]MapCheck: Warning: Fixed up shared weightmap texture for layer GroundLeaf_01 in component 'LandscapeComponent_29' (shares with 'LandscapeComponent_21') 
+[2025.02.08-17.58.56:614][ 95]MapCheck: Warning: Fixed up shared weightmap texture for layer GroundLeaf_02 in component 'LandscapeComponent_29' (shares with 'LandscapeComponent_21') 
+[2025.02.08-17.58.56:670][ 95]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_16 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-17.59.07:068][456]Cmd: TRANSACTION UNDO
+[2025.02.08-17.59.07:068][456]LogEditorTransaction: Undo Landscape Editing: Noise
+[2025.02.08-17.59.07:124][456]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_15 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.145824 MB), EncodeSpeed: Fast
+[2025.02.08-17.59.07:125][456]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_13 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.145824 MB), EncodeSpeed: Fast
+[2025.02.08-18.00.59:182][ 15]LogAssetEditorSubsystem: Opening Asset editor for LandscapeLayerInfoObject /Game/OldCathedral/Levels/SharedLevelAssets/AerialRocks_LayerInfo.AerialRocks_LayerInfo
+[2025.02.08-18.01.28:389][219]LogAssetEditorSubsystem: Opening Asset editor for Texture2D /Game/OldCathedral/Textures/Ground/T_AerialRocks_BC.T_AerialRocks_BC
+[2025.02.08-18.01.46:195][901]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 1730.465332
+[2025.02.08-18.01.46:387][908]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2025.02.08-18.01.46:387][908]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 1730.632324, Update Interval: 324.135864
+[2025.02.08-18.03.13:139][387]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_3
+[2025.02.08-18.03.13:634][399]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.03.13:634][399]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.03.13:635][399]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.03.19:940][627]LogShaderCompilers: Display: ================================================
+[2025.02.08-18.03.19:940][627]LogShaderCompilers: Display: === FShaderJobCache stats ===
+[2025.02.08-18.03.19:940][627]LogShaderCompilers: Display: Total job queries 643, among them cache hits 130 (20.22%), DDC hits 443 (68.90%), Duplicates 67 (10.42%)
+[2025.02.08-18.03.19:940][627]LogShaderCompilers: Display: Tracking 446 distinct input hashes that result in 291 distinct outputs (65.25%)
+[2025.02.08-18.03.19:940][627]LogShaderCompilers: Display: RAM used: 180,98 KiB of 1,60 GiB budget. Usage: 0.01%
+[2025.02.08-18.03.19:940][627]LogShaderCompilers: Display: === Shader Compilation stats ===
+[2025.02.08-18.03.19:940][627]LogShaderCompilers: Display: Shaders Compiled: 3
+[2025.02.08-18.03.19:941][627]LogShaderCompilers: Display: Jobs assigned 3, completed 3 (100%)
+[2025.02.08-18.03.19:941][627]LogShaderCompilers: Display: Average time worker was idle: 0.22 s
+[2025.02.08-18.03.19:941][627]LogShaderCompilers: Display: Time job spent in pending queue: average 0.05 s, longest 0.08 s
+[2025.02.08-18.03.19:941][627]LogShaderCompilers: Display: Job execution time: average 2.36 s, max 4.92 s
+[2025.02.08-18.03.19:941][627]LogShaderCompilers: Display: Job life time (pending + execution): average 2.40 s, max 5.00
+[2025.02.08-18.03.19:941][627]LogShaderCompilers: Display: Shader code size: average 8,09 KiB, min 5,773 KiB, max 10,941 KiB
+[2025.02.08-18.03.19:941][627]LogShaderCompilers: Display: Time at least one job was in flight (either pending or executed): 6.46 s
+[2025.02.08-18.03.19:941][627]LogShaderCompilers: Display: Mutex wait stall in FShaderJobCache::SubmitJobs:  0.00%
+[2025.02.08-18.03.19:941][627]LogShaderCompilers: Display: Jobs were issued in 3 batches (only local compilation was used), average 1.00 jobs/batch
+[2025.02.08-18.03.19:941][627]LogShaderCompilers: Display: Average processing rate: 0.46 jobs/sec
+[2025.02.08-18.03.19:941][627]LogShaderCompilers: Display: Total thread time: 2,472 s
+[2025.02.08-18.03.19:941][627]LogShaderCompilers: Display: Total thread preprocess time: 15,586 s
+[2025.02.08-18.03.19:941][627]LogShaderCompilers: Display: Percentage time preprocessing: 630.60%
+[2025.02.08-18.03.19:941][627]LogShaderCompilers: Display: Effective parallelization: 0.38 (times faster than compiling all shaders on one thread). Compare with number of workers: 4
+[2025.02.08-18.03.19:941][627]LogShaderCompilers: Display: Top 5 most expensive shader types by average time:
+[2025.02.08-18.03.19:941][627]LogShaderCompilers: Display:                                 TBasePassPSFNoLightMapPolicy (compiled    2 times, average 0.90 sec, max 1.02 sec, min 0.78 sec)
+[2025.02.08-18.03.19:941][627]LogShaderCompilers: Display:                                 TBasePassVSFNoLightMapPolicy (compiled    1 times, average 0.67 sec, max 0.67 sec, min 0.67 sec)
+[2025.02.08-18.03.19:941][627]LogShaderCompilers: Display:                                 TBasePassCSFNoLightMapPolicy (compiled    0 times, average 0.00 sec, max 0.00 sec, min 0.00 sec)
+[2025.02.08-18.03.19:941][627]LogShaderCompilers: Display:                                          TDepthOnlyVS<false> (compiled    0 times, average 0.00 sec, max 0.00 sec, min 0.00 sec)
+[2025.02.08-18.03.19:941][627]LogShaderCompilers: Display:                                                 FLumenCardCS (compiled    0 times, average 0.00 sec, max 0.00 sec, min 0.00 sec)
+[2025.02.08-18.03.19:941][627]LogShaderCompilers: Display: Top 5 shader types by total compile time:
+[2025.02.08-18.03.19:941][627]LogShaderCompilers: Display:                                 TBasePassPSFNoLightMapPolicy - 72.74% of total time (compiled    2 times, average 0.90 sec, max 1.02 sec, min 0.78 sec)
+[2025.02.08-18.03.19:941][627]LogShaderCompilers: Display:                                 TBasePassVSFNoLightMapPolicy - 27.26% of total time (compiled    1 times, average 0.67 sec, max 0.67 sec, min 0.67 sec)
+[2025.02.08-18.03.19:941][627]LogShaderCompilers: Display:                                          TDepthOnlyVS<false> - 0.00% of total time (compiled    0 times, average 0.00 sec, max 0.00 sec, min 0.00 sec)
+[2025.02.08-18.03.19:941][627]LogShaderCompilers: Display:                                                 FLumenCardCS - 0.00% of total time (compiled    0 times, average 0.00 sec, max 0.00 sec, min 0.00 sec)
+[2025.02.08-18.03.19:941][627]LogShaderCompilers: Display:                                 TBasePassCSFNoLightMapPolicy - 0.00% of total time (compiled    0 times, average 0.00 sec, max 0.00 sec, min 0.00 sec)
+[2025.02.08-18.03.19:941][627]LogShaderCompilers: Display: === Material stats ===
+[2025.02.08-18.03.19:941][627]LogShaderCompilers: Display: Materials Cooked:        0
+[2025.02.08-18.03.19:941][627]LogShaderCompilers: Display: Materials Translated:    224
+[2025.02.08-18.03.19:941][627]LogShaderCompilers: Display: Material Total Translate Time: 0.33 s
+[2025.02.08-18.03.19:941][627]LogShaderCompilers: Display: Material Translation Only: 0.15 s (45%)
+[2025.02.08-18.03.19:941][627]LogShaderCompilers: Display: Material DDC Serialization Only: 0.00 s (1%)
+[2025.02.08-18.03.19:941][627]LogShaderCompilers: Display: Material Cache Hits: 43 (19%)
+[2025.02.08-18.03.19:941][627]LogShaderCompilers: Display: ================================================
+[2025.02.08-18.03.23:030][729]LogAssetEditorSubsystem: Opening Asset editor for MaterialInstanceConstant /Game/OldCathedral/Materials/MI_Landscape_Ground.MI_Landscape_Ground
+[2025.02.08-18.03.23:032][729]LogStreaming: Warning: Failed to read file '../../../Engine/Content/Editor/Slate/Icons/ValueTypes/Bool.png' error.
+[2025.02.08-18.03.23:032][729]LogSlate: Could not find file for Slate resource: ../../../Engine/Content/Editor/Slate/Icons/ValueTypes/Bool.png
+[2025.02.08-18.03.23:032][729]LogStreaming: Warning: Failed to read file '../../../Engine/Content/Editor/Slate/Icons/ValueTypes/Float2.png' error.
+[2025.02.08-18.03.23:032][729]LogSlate: Could not find file for Slate resource: ../../../Engine/Content/Editor/Slate/Icons/ValueTypes/Float2.png
+[2025.02.08-18.03.23:032][729]LogStreaming: Warning: Failed to read file '../../../Engine/Content/Editor/Slate/Icons/ValueTypes/None.png' error.
+[2025.02.08-18.03.23:032][729]LogSlate: Could not find file for Slate resource: ../../../Engine/Content/Editor/Slate/Icons/ValueTypes/None.png
+[2025.02.08-18.03.23:032][729]LogStreaming: Warning: Failed to read file '../../../Engine/Content/Editor/Slate/Icons/ValueTypes/Float3_RGB.png' error.
+[2025.02.08-18.03.23:032][729]LogSlate: Could not find file for Slate resource: ../../../Engine/Content/Editor/Slate/Icons/ValueTypes/Float3_RGB.png
+[2025.02.08-18.03.23:032][729]LogStreaming: Warning: Failed to read file '../../../Engine/Content/Editor/Slate/Icons/ValueTypes/Float3_XYZ.png' error.
+[2025.02.08-18.03.23:032][729]LogSlate: Could not find file for Slate resource: ../../../Engine/Content/Editor/Slate/Icons/ValueTypes/Float3_XYZ.png
+[2025.02.08-18.03.23:032][729]LogStreaming: Warning: Failed to read file '../../../Engine/Content/Editor/Slate/Icons/ValueTypes/Float1.png' error.
+[2025.02.08-18.03.23:032][729]LogSlate: Could not find file for Slate resource: ../../../Engine/Content/Editor/Slate/Icons/ValueTypes/Float1.png
+[2025.02.08-18.03.23:032][729]LogStreaming: Warning: Failed to read file '../../../Engine/Content/Editor/Slate/Icons/ValueTypes/Float4_RGBA.png' error.
+[2025.02.08-18.03.23:032][729]LogSlate: Could not find file for Slate resource: ../../../Engine/Content/Editor/Slate/Icons/ValueTypes/Float4_RGBA.png
+[2025.02.08-18.03.23:032][729]LogStreaming: Warning: Failed to read file '../../../Engine/Content/Editor/Slate/Icons/ValueTypes/Float3_RPY.png' error.
+[2025.02.08-18.03.23:032][729]LogSlate: Could not find file for Slate resource: ../../../Engine/Content/Editor/Slate/Icons/ValueTypes/Float3_RPY.png
+[2025.02.08-18.03.23:032][729]LogStreaming: Warning: Failed to read file '../../../Engine/Content/Editor/Slate/Icons/ValueTypes/Float_Any.png' error.
+[2025.02.08-18.03.23:032][729]LogSlate: Could not find file for Slate resource: ../../../Engine/Content/Editor/Slate/Icons/ValueTypes/Float_Any.png
+[2025.02.08-18.03.23:032][729]LogStreaming: Warning: Failed to read file '../../../Engine/Content/Editor/Slate/Icons/ValueTypes/Texture.png' error.
+[2025.02.08-18.03.23:032][729]LogSlate: Could not find file for Slate resource: ../../../Engine/Content/Editor/Slate/Icons/ValueTypes/Texture.png
+[2025.02.08-18.03.23:032][729]LogStreaming: Warning: Failed to read file '../../../Engine/Content/Editor/Slate/Icons/EditorIcons/WhiteBall.png' error.
+[2025.02.08-18.03.23:032][729]LogSlate: Could not find file for Slate resource: ../../../Engine/Content/Editor/Slate/Icons/EditorIcons/WhiteBall.png
+[2025.02.08-18.03.23:032][729]LogStreaming: Warning: Failed to read file '../../../Engine/Content/Editor/Slate/Icons/EditorIcons/MaterialTypeDefaultLit.png' error.
+[2025.02.08-18.03.23:032][729]LogSlate: Could not find file for Slate resource: ../../../Engine/Content/Editor/Slate/Icons/EditorIcons/MaterialTypeDefaultLit.png
+[2025.02.08-18.03.23:032][729]LogStreaming: Warning: Failed to read file '../../../Engine/Content/Editor/Slate/Icons/EditorIcons/Remove_16px.png' error.
+[2025.02.08-18.03.23:032][729]LogSlate: Could not find file for Slate resource: ../../../Engine/Content/Editor/Slate/Icons/EditorIcons/Remove_16px.png
+[2025.02.08-18.03.23:032][729]LogStreaming: Warning: Failed to read file '../../../Engine/Content/Editor/Slate/Images/Borders/Border_SinglePixel.png' error.
+[2025.02.08-18.03.23:032][729]LogSlate: Could not find file for Slate resource: ../../../Engine/Content/Editor/Slate/Images/Borders/Border_SinglePixel.png
+[2025.02.08-18.03.23:032][729]LogStreaming: Warning: Failed to read file '../../../Engine/Content/Editor/Slate/Images/Borders/Border_LeftTopRight.png' error.
+[2025.02.08-18.03.23:032][729]LogSlate: Could not find file for Slate resource: ../../../Engine/Content/Editor/Slate/Images/Borders/Border_LeftTopRight.png
+[2025.02.08-18.03.23:032][729]LogStreaming: Warning: Failed to read file '../../../Engine/Content/Editor/Slate/Images/Borders/Border_LeftBottomRight.png' error.
+[2025.02.08-18.03.23:032][729]LogSlate: Could not find file for Slate resource: ../../../Engine/Content/Editor/Slate/Images/Borders/Border_LeftBottomRight.png
+[2025.02.08-18.03.23:032][729]LogStreaming: Warning: Failed to read file '../../../Engine/Content/Editor/Slate/Icons/EditorIcons/BaseToggle_16x.png' error.
+[2025.02.08-18.03.23:032][729]LogSlate: Could not find file for Slate resource: ../../../Engine/Content/Editor/Slate/Icons/EditorIcons/BaseToggle_16x.png
+[2025.02.08-18.03.23:032][729]LogStreaming: Warning: Failed to read file '../../../Engine/Content/Editor/Slate/Icons/EditorIcons/MaterialTypeUnlit.png' error.
+[2025.02.08-18.03.23:032][729]LogSlate: Could not find file for Slate resource: ../../../Engine/Content/Editor/Slate/Icons/EditorIcons/MaterialTypeUnlit.png
+[2025.02.08-18.03.23:032][729]LogStreaming: Warning: Failed to read file '../../../Engine/Content/Editor/Slate/Images/Borders/Border_TopRightBottom.png' error.
+[2025.02.08-18.03.23:032][729]LogSlate: Could not find file for Slate resource: ../../../Engine/Content/Editor/Slate/Images/Borders/Border_TopRightBottom.png
+[2025.02.08-18.03.23:032][729]LogStreaming: Warning: Failed to read file '../../../Engine/Content/Editor/Slate/Icons/EditorIcons/MaskToggle_16x.png' error.
+[2025.02.08-18.03.23:032][729]LogSlate: Could not find file for Slate resource: ../../../Engine/Content/Editor/Slate/Icons/EditorIcons/MaskToggle_16x.png
+[2025.02.08-18.03.23:033][729]LogStreaming: Warning: Failed to read file '../../../Engine/Content/Editor/Slate/Images/Borders/Border_TopLeftBottom.png' error.
+[2025.02.08-18.03.23:033][729]LogSlate: Could not find file for Slate resource: ../../../Engine/Content/Editor/Slate/Images/Borders/Border_TopLeftBottom.png
+[2025.02.08-18.03.23:033][729]LogStreaming: Warning: Failed to read file '../../../Engine/Content/Editor/Slate/Images/Borders/Border_Top.png' error.
+[2025.02.08-18.03.23:033][729]LogStreaming: Warning: Failed to read file '../../../Engine/Content/Editor/Slate/Icons/EditorIcons/LayerAdd.png' error.
+[2025.02.08-18.03.23:033][729]LogSlate: Could not find file for Slate resource: ../../../Engine/Content/Editor/Slate/Images/Borders/Border_Top.png
+[2025.02.08-18.03.23:033][729]LogSlate: Could not find file for Slate resource: ../../../Engine/Content/Editor/Slate/Icons/EditorIcons/LayerAdd.png
+[2025.02.08-18.03.23:033][729]LogStreaming: Warning: Failed to read file '../../../Engine/Content/Editor/Slate/Images/Borders/Border_Bottom.png' error.
+[2025.02.08-18.03.23:033][729]LogSlate: Could not find file for Slate resource: ../../../Engine/Content/Editor/Slate/Images/Borders/Border_Bottom.png
+[2025.02.08-18.03.23:033][729]LogStreaming: Warning: Failed to read file '../../../Engine/Content/Editor/Slate/Icons/EditorIcons/Duplicate_40x.png' error.
+[2025.02.08-18.03.23:033][729]LogSlate: Could not find file for Slate resource: ../../../Engine/Content/Editor/Slate/Icons/EditorIcons/Duplicate_40x.png
+[2025.02.08-18.03.23:033][729]LogStreaming: Warning: Failed to read file '../../../Engine/Content/Editor/Slate/Images/Borders/Border_Left.png' error.
+[2025.02.08-18.03.23:033][729]LogSlate: Could not find file for Slate resource: ../../../Engine/Content/Editor/Slate/Images/Borders/Border_Left.png
+[2025.02.08-18.03.23:033][729]LogStreaming: Warning: Failed to read file '../../../Engine/Content/Editor/Slate/Icons/EditorIcons/LayerRemove.png' error.
+[2025.02.08-18.03.23:033][729]LogSlate: Could not find file for Slate resource: ../../../Engine/Content/Editor/Slate/Icons/EditorIcons/LayerRemove.png
+[2025.02.08-18.03.23:033][729]LogStreaming: Warning: Failed to read file '../../../Engine/Content/Editor/Slate/Images/Borders/Border_Right.png' error.
+[2025.02.08-18.03.23:033][729]LogSlate: Could not find file for Slate resource: ../../../Engine/Content/Editor/Slate/Images/Borders/Border_Right.png
+[2025.02.08-18.03.23:042][729]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_4
+[2025.02.08-18.03.23:052][729]LogStreaming: Display: FlushAsyncLoading(373): 1 QueuedPackages, 0 AsyncPackages
+[2025.02.08-18.03.24:287][738]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.03.24:740][749]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.03.26:760][805]LogAssetEditorSubsystem: Opening Asset editor for Material /Game/OldCathedral/Materials/MM_Landscape_Ground.MM_Landscape_Ground
+[2025.02.08-18.03.26:766][805]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_5
+[2025.02.08-18.03.27:277][805]MaterialEditorStats: Texture samplers: 0/16
+[2025.02.08-18.03.27:277][805]MaterialEditorStats: Texture Lookups (Est.): VS(3), PS(3)
+[2025.02.08-18.03.27:277][805]MaterialEditorStats: User interpolators: 2/4 Scalars (1/4 Vectors) (TexCoords: 2, Custom: 0)
+[2025.02.08-18.03.27:277][805]MaterialEditorStats: Shader Count: 0
+[2025.02.08-18.03.27:277][805]MaterialEditorStats: Preshaders: 6  (6 param fetches, 9 ops)
+[2025.02.08-18.03.27:296][805]LogSlate: Took 0.008487 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-BoldCondensed.ttf' (158K)
+[2025.02.08-18.03.27:653][807]MaterialEditorStats: Base pass shader: 162 instructions
+Stats: Resources Used: 4
+Resource Limit: 64
+Samplers Used: 1
+Sampler Limit: 32
+
+[2025.02.08-18.03.27:653][807]MaterialEditorStats: Base pass vertex shader: 151 instructions
+Stats: Resources Used: 5
+Resource Limit: 64
+Samplers Used: 0
+Sampler Limit: 32
+
+[2025.02.08-18.03.27:653][807]MaterialEditorStats: Texture samplers: 1/16
+[2025.02.08-18.03.27:653][807]MaterialEditorStats: Texture Lookups (Est.): VS(3), PS(3)
+[2025.02.08-18.03.27:653][807]MaterialEditorStats: User interpolators: 2/4 Scalars (1/4 Vectors) (TexCoords: 2, Custom: 0)
+[2025.02.08-18.03.27:653][807]MaterialEditorStats: Shader Count: 2
+[2025.02.08-18.03.27:653][807]MaterialEditorStats: Preshaders: 6  (6 param fetches, 9 ops)
+[2025.02.08-18.05.42:630][257]Cmd: TRANSACTION UNDO
+[2025.02.08-18.05.42:630][257]LogEditorTransaction: Undo Landscape Editing: Noise
+[2025.02.08-18.05.42:654][257]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_24 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.145824 MB), EncodeSpeed: Fast
+[2025.02.08-18.05.42:654][257]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_4 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.05.42:678][257]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_13 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.145824 MB), EncodeSpeed: Fast
+[2025.02.08-18.05.42:679][257]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_18 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.05.42:680][257]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_56 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.05.42:682][257]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_16 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.05.48:293][393]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.05.48:750][411]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.06.20:005][441]LogShaderCompilers: Display: ================================================
+[2025.02.08-18.06.20:005][441]LogShaderCompilers: Display: === FShaderJobCache stats ===
+[2025.02.08-18.06.20:005][441]LogShaderCompilers: Display: Total job queries 753, among them cache hits 177 (23.51%), DDC hits 490 (65.07%), Duplicates 71 (9.43%)
+[2025.02.08-18.06.20:005][441]LogShaderCompilers: Display: Tracking 505 distinct input hashes that result in 326 distinct outputs (64.55%)
+[2025.02.08-18.06.20:005][441]LogShaderCompilers: Display: RAM used: 194,46 KiB of 1,60 GiB budget. Usage: 0.01%
+[2025.02.08-18.06.20:005][441]LogShaderCompilers: Display: === Shader Compilation stats ===
+[2025.02.08-18.06.20:005][441]LogShaderCompilers: Display: Shaders Compiled: 15
+[2025.02.08-18.06.20:005][441]LogShaderCompilers: Display: Jobs assigned 15, completed 15 (100%)
+[2025.02.08-18.06.20:005][441]LogShaderCompilers: Display: Average time worker was idle: 3.68 s
+[2025.02.08-18.06.20:005][441]LogShaderCompilers: Display: Time job spent in pending queue: average 0.08 s, longest 0.40 s
+[2025.02.08-18.06.20:005][441]LogShaderCompilers: Display: Job execution time: average 1.27 s, max 4.92 s
+[2025.02.08-18.06.20:005][441]LogShaderCompilers: Display: Job life time (pending + execution): average 1.35 s, max 5.00
+[2025.02.08-18.06.20:005][441]LogShaderCompilers: Display: Shader code size: average 7,356 KiB, min 5,488 KiB, max 10,941 KiB
+[2025.02.08-18.06.20:005][441]LogShaderCompilers: Display: Time at least one job was in flight (either pending or executed): 12.26 s
+[2025.02.08-18.06.20:005][441]LogShaderCompilers: Display: Mutex wait stall in FShaderJobCache::SubmitJobs:  0.00%
+[2025.02.08-18.06.20:005][441]LogShaderCompilers: Display: Jobs were issued in 15 batches (only local compilation was used), average 1.00 jobs/batch
+[2025.02.08-18.06.20:005][441]LogShaderCompilers: Display: Average processing rate: 1.22 jobs/sec
+[2025.02.08-18.06.20:005][441]LogShaderCompilers: Display: Total thread time: 12,18 s
+[2025.02.08-18.06.20:005][441]LogShaderCompilers: Display: Total thread preprocess time: 18,519 s
+[2025.02.08-18.06.20:005][441]LogShaderCompilers: Display: Percentage time preprocessing: 152.05%
+[2025.02.08-18.06.20:005][441]LogShaderCompilers: Display: Effective parallelization: 0.99 (times faster than compiling all shaders on one thread). Compare with number of workers: 4
+[2025.02.08-18.06.20:005][441]LogShaderCompilers: Display: Top 5 most expensive shader types by average time:
+[2025.02.08-18.06.20:005][441]LogShaderCompilers: Display:                                 TBasePassPSFNoLightMapPolicy (compiled    9 times, average 0.91 sec, max 1.04 sec, min 0.60 sec)
+[2025.02.08-18.06.20:005][441]LogShaderCompilers: Display:                                 TBasePassVSFNoLightMapPolicy (compiled    6 times, average 0.66 sec, max 0.75 sec, min 0.53 sec)
+[2025.02.08-18.06.20:005][441]LogShaderCompilers: Display:                                 TBasePassCSFNoLightMapPolicy (compiled    0 times, average 0.00 sec, max 0.00 sec, min 0.00 sec)
+[2025.02.08-18.06.20:005][441]LogShaderCompilers: Display:                                          TDepthOnlyVS<false> (compiled    0 times, average 0.00 sec, max 0.00 sec, min 0.00 sec)
+[2025.02.08-18.06.20:005][441]LogShaderCompilers: Display:                                                 FLumenCardCS (compiled    0 times, average 0.00 sec, max 0.00 sec, min 0.00 sec)
+[2025.02.08-18.06.20:005][441]LogShaderCompilers: Display: Top 5 shader types by total compile time:
+[2025.02.08-18.06.20:005][441]LogShaderCompilers: Display:                                 TBasePassPSFNoLightMapPolicy - 67.31% of total time (compiled    9 times, average 0.91 sec, max 1.04 sec, min 0.60 sec)
+[2025.02.08-18.06.20:005][441]LogShaderCompilers: Display:                                 TBasePassVSFNoLightMapPolicy - 32.69% of total time (compiled    6 times, average 0.66 sec, max 0.75 sec, min 0.53 sec)
+[2025.02.08-18.06.20:005][441]LogShaderCompilers: Display:                                          TDepthOnlyVS<false> - 0.00% of total time (compiled    0 times, average 0.00 sec, max 0.00 sec, min 0.00 sec)
+[2025.02.08-18.06.20:005][441]LogShaderCompilers: Display:                                                 FLumenCardCS - 0.00% of total time (compiled    0 times, average 0.00 sec, max 0.00 sec, min 0.00 sec)
+[2025.02.08-18.06.20:005][441]LogShaderCompilers: Display:                                 TBasePassCSFNoLightMapPolicy - 0.00% of total time (compiled    0 times, average 0.00 sec, max 0.00 sec, min 0.00 sec)
+[2025.02.08-18.06.20:005][441]LogShaderCompilers: Display: === Material stats ===
+[2025.02.08-18.06.20:006][441]LogShaderCompilers: Display: Materials Cooked:        0
+[2025.02.08-18.06.20:006][441]LogShaderCompilers: Display: Materials Translated:    252
+[2025.02.08-18.06.20:006][441]LogShaderCompilers: Display: Material Total Translate Time: 0.36 s
+[2025.02.08-18.06.20:006][441]LogShaderCompilers: Display: Material Translation Only: 0.16 s (44%)
+[2025.02.08-18.06.20:006][441]LogShaderCompilers: Display: Material DDC Serialization Only: 0.00 s (1%)
+[2025.02.08-18.06.20:006][441]LogShaderCompilers: Display: Material Cache Hits: 43 (17%)
+[2025.02.08-18.06.20:006][441]LogShaderCompilers: Display: ================================================
+[2025.02.08-18.07.55:452][693]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 2099.723633
+[2025.02.08-18.07.55:660][701]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2025.02.08-18.07.55:660][701]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 2099.909668, Update Interval: 340.050049
+[2025.02.08-18.07.56:830][742]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2025.02.08-18.07.56:895][742]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/OldCathedral/Materials/MI_Landscape_Ground] ([1] browsable assets)...
+[2025.02.08-18.07.56:940][742]OBJ SavePackage:     Rendered thumbnail for [MaterialInstanceConstant /Game/OldCathedral/Materials/MI_Landscape_Ground.MI_Landscape_Ground]
+[2025.02.08-18.07.56:940][742]OBJ SavePackage: Finished generating thumbnails for package [/Game/OldCathedral/Materials/MI_Landscape_Ground]
+[2025.02.08-18.07.57:040][742]LogUObjectHash: Compacting FUObjectHashTables data took   0.93ms
+[2025.02.08-18.07.59:685][742]LogUObjectHash: Compacting FUObjectHashTables data took   0.82ms
+[2025.02.08-18.07.59:698][742]LogSavePackage: Moving output files for package: /Game/OldCathedral/Materials/MI_Landscape_Ground
+[2025.02.08-18.07.59:698][742]LogSavePackage: Moving '../../../../../../Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Saved/MI_Landscape_Ground9A5470224A13E9B50B00029F724FA073.tmp' to '../../../../../../Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/OldCathedral/Materials/MI_Landscape_Ground.uasset'
+[2025.02.08-18.07.59:706][742]LogFileHelpers: InternalPromptForCheckoutAndSave took 2.87 sec (total: 4.61 sec)
+[2025.02.08-18.07.59:778][742]LogContentValidation: Display: Starting to validate 1 assets
+[2025.02.08-18.07.59:778][742]LogContentValidation: Enabled validators:
+[2025.02.08-18.07.59:778][742]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2025.02.08-18.07.59:778][742]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2025.02.08-18.07.59:778][742]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2025.02.08-18.07.59:778][742]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2025.02.08-18.07.59:778][742]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2025.02.08-18.07.59:778][742]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2025.02.08-18.07.59:778][742]AssetCheck: /Game/OldCathedral/Materials/MI_Landscape_Ground Validating asset
+[2025.02.08-18.08.40:214][ 28]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2025.02.08-18.08.40:335][ 28]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/OldCathedral/Materials/MI_Landscape_Ground] ([1] browsable assets)...
+[2025.02.08-18.08.40:382][ 28]OBJ SavePackage:     Rendered thumbnail for [MaterialInstanceConstant /Game/OldCathedral/Materials/MI_Landscape_Ground.MI_Landscape_Ground]
+[2025.02.08-18.08.40:382][ 28]OBJ SavePackage: Finished generating thumbnails for package [/Game/OldCathedral/Materials/MI_Landscape_Ground]
+[2025.02.08-18.08.40:399][ 28]LogUObjectHash: Compacting FUObjectHashTables data took   0.93ms
+[2025.02.08-18.08.40:422][ 28]LogUObjectHash: Compacting FUObjectHashTables data took   0.50ms
+[2025.02.08-18.08.40:427][ 28]LogSavePackage: Moving output files for package: /Game/OldCathedral/Materials/MI_Landscape_Ground
+[2025.02.08-18.08.40:427][ 28]LogSavePackage: Moving '../../../../../../Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Saved/MI_Landscape_GroundF0066BD44243BFC8322959A553F11E70.tmp' to '../../../../../../Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/OldCathedral/Materials/MI_Landscape_Ground.uasset'
+[2025.02.08-18.08.40:439][ 28]LogFileHelpers: InternalPromptForCheckoutAndSave took 224.375 ms (total: 4.83 sec)
+[2025.02.08-18.08.40:491][ 28]LogContentValidation: Display: Starting to validate 1 assets
+[2025.02.08-18.08.40:491][ 28]LogContentValidation: Enabled validators:
+[2025.02.08-18.08.40:491][ 28]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2025.02.08-18.08.40:491][ 28]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2025.02.08-18.08.40:491][ 28]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2025.02.08-18.08.40:491][ 28]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2025.02.08-18.08.40:491][ 28]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2025.02.08-18.08.40:491][ 28]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2025.02.08-18.08.40:491][ 28]AssetCheck: /Game/OldCathedral/Materials/MI_Landscape_Ground Validating asset
+[2025.02.08-18.08.49:793][378]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2025.02.08-18.08.49:807][378]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2025.02.08-18.08.49:808][378]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Level_Hub
+[2025.02.08-18.08.49:885][378]LogPlayLevel: PIE: StaticDuplicateObject took: (0.076997s)
+[2025.02.08-18.08.49:885][378]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Level_Hub.Level_Hub to /Game/Levels/UEDPIE_0_Level_Hub.Level_Hub (0.077037s)
+[2025.02.08-18.08.49:899][378]LogUObjectHash: Compacting FUObjectHashTables data took   1.01ms
+[2025.02.08-18.08.49:900][378]LogChaosDD: Creating Chaos Debug Draw Scene for world Level_Hub
+[2025.02.08-18.08.49:902][378]LogPlayLevel: PIE: World Init took: (0.002157s)
+[2025.02.08-18.08.49:904][378]LogAudio: Display: Creating Audio Device:                 Id: 9, Scope: Unique, Realtime: True
+[2025.02.08-18.08.49:904][378]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2025.02.08-18.08.49:904][378]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2025.02.08-18.08.49:904][378]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2025.02.08-18.08.49:904][378]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2025.02.08-18.08.49:904][378]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2025.02.08-18.08.49:904][378]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2025.02.08-18.08.49:904][378]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2025.02.08-18.08.49:904][378]LogAudio: Display: AudioDevice MaxSources: 32
+[2025.02.08-18.08.49:904][378]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2025.02.08-18.08.49:904][378]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2025.02.08-18.08.49:904][378]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2025.02.08-18.08.49:907][378]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2025.02.08-18.08.49:939][378]LogAudioMixer: Display: Using Audio Hardware Device Köpfhörer (Synaptics HD Audio)
+[2025.02.08-18.08.49:940][378]LogAudioMixer: Display: Initializing Sound Submixes...
+[2025.02.08-18.08.49:940][378]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2025.02.08-18.08.49:940][378]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2025.02.08-18.08.49:940][378]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=9
+[2025.02.08-18.08.49:940][378]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=9
+[2025.02.08-18.08.49:947][378]LogInit: FAudioDevice initialized with ID 9.
+[2025.02.08-18.08.49:947][378]LogAudio: Display: Audio Device (ID: 9) registered with world 'Level_Hub'.
+[2025.02.08-18.08.49:947][378]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 9
+[2025.02.08-18.08.49:947][378]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=9
+[2025.02.08-18.08.49:947][378]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=9
+[2025.02.08-18.08.49:952][378]LogLoad: Game class is 'GM_Custom_C'
+[2025.02.08-18.08.50:023][378]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Level_Hub.Level_Hub up for play (max tick rate 0) at 2025.02.08-19.08.50
+[2025.02.08-18.08.50:024][378]LogWorld: Bringing up level for play took: 0.072218
+[2025.02.08-18.08.50:028][378]LogOnline: OSS: Created online subsystem instance for: :Context_14
+[2025.02.08-18.08.50:031][378]LogSkeletalMesh: USkeletalMeshComponent: Recreating Clothing Actors for 'CharacterMesh0' with 'SKM_DarkLady'
+[2025.02.08-18.08.50:037][378]LogTemp: Warning: BP_InteractionStone_WeaponMaster_C_1 Could not Access GameInstance or GameInstance Dictionary did not Contained its key
+[2025.02.08-18.08.50:037][378]LogTemp: Warning: BP_InteractionStone_WeaponMaster_C_2 Could not Access GameInstance or GameInstance Dictionary did not Contained its key
+[2025.02.08-18.08.50:037][378]LogTemp: Warning: BP_InteractionStone_WeaponMaster_C_4 Could not Access GameInstance or GameInstance Dictionary did not Contained its key
+[2025.02.08-18.08.50:037][378]LogTemp: Warning: BP_InteractionStone_WeaponMaster_C_5 Could not Access GameInstance or GameInstance Dictionary did not Contained its key
+[2025.02.08-18.08.50:038][378]LogTemp: Warning: BP_InteractionStone_WeaponMaster_C_6 Could not Access GameInstance or GameInstance Dictionary did not Contained its key
+[2025.02.08-18.08.50:038][378]LogTemp: Warning: Failed to get Equipped Weapon Class for Equipment: Weapon
+[2025.02.08-18.08.50:038][378]LogTemp: Warning: Failed to get Equipped Weapon Class for Equipment: Shield
+[2025.02.08-18.08.50:038][378]LogTemp: Warning: Failed to get Equipped Weapon Class for Equipment: Weapon
+[2025.02.08-18.08.50:038][378]LogTemp: Warning: Failed to get Equipped Weapon Class for Equipment: Shield
+[2025.02.08-18.08.50:041][378]PIE: Server logged in
+[2025.02.08-18.08.50:043][378]PIE: Play in editor total start time 0,238 seconds.
+[2025.02.08-18.09.00:236][784]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.02.08-18.09.00:236][784]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_Level_Hub
+[2025.02.08-18.09.00:237][784]LogWorld: UWorld::CleanupWorld for Level_Hub, bSessionEnded=true, bCleanupResources=true
+[2025.02.08-18.09.00:243][784]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.02.08-18.09.00:249][784]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2025.02.08-18.09.00:255][784]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.02.08-18.09.00:270][784]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.02.08-18.09.00:272][784]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 9
+[2025.02.08-18.09.00:272][784]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=9
+[2025.02.08-18.09.00:274][784]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=9
+[2025.02.08-18.09.00:290][784]LogUObjectHash: Compacting FUObjectHashTables data took   1.11ms
+[2025.02.08-18.09.00:428][785]LogPlayLevel: Display: Destroying online subsystem :Context_14
+[2025.02.08-18.09.05:562][953]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2025.02.08-18.09.05:615][953]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Levels/Level_Hub" FILE="../../../../../../Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Levels/Level_Hub.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2025.02.08-18.09.05:669][953]LogUObjectHash: Compacting FUObjectHashTables data took   0.82ms
+[2025.02.08-18.09.05:684][953]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_0 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.09.05:686][953]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_10 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.09.05:689][953]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_12 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.09.05:691][953]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_14 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.09.05:693][953]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_19 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.09.05:695][953]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_2 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.09.06:107][953]LogSavePackage: Moving output files for package: /Game/Levels/Level_Hub
+[2025.02.08-18.09.06:108][953]LogSavePackage: Moving '../../../../../../Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Saved/Level_HubEA3358494C3C8A96D7C44FB283B07984.tmp' to '../../../../../../Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Levels/Level_Hub.umap'
+[2025.02.08-18.09.06:133][953]LogFileHelpers: Saving map 'Level_Hub' took 0.520
+[2025.02.08-18.09.06:144][953]LogFileHelpers: InternalPromptForCheckoutAndSave took 582.031 ms (total: 5.42 sec)
+[2025.02.08-18.09.06:203][953]LogContentValidation: Display: Starting to validate 1 assets
+[2025.02.08-18.09.06:203][953]LogContentValidation: Enabled validators:
+[2025.02.08-18.09.06:203][953]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2025.02.08-18.09.06:203][953]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2025.02.08-18.09.06:203][953]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2025.02.08-18.09.06:203][953]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2025.02.08-18.09.06:203][953]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2025.02.08-18.09.06:203][953]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2025.02.08-18.09.06:203][953]AssetCheck: /Game/Levels/Level_Hub Validating asset
+[2025.02.08-18.09.06:619][967]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2025.02.08-18.09.06:638][967]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2025.02.08-18.09.06:638][967]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Level_Hub
+[2025.02.08-18.09.06:728][967]LogPlayLevel: PIE: StaticDuplicateObject took: (0.090048s)
+[2025.02.08-18.09.06:728][967]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Level_Hub.Level_Hub to /Game/Levels/UEDPIE_0_Level_Hub.Level_Hub (0.090118s)
+[2025.02.08-18.09.06:742][967]LogUObjectHash: Compacting FUObjectHashTables data took   1.36ms
+[2025.02.08-18.09.06:743][967]LogChaosDD: Creating Chaos Debug Draw Scene for world Level_Hub
+[2025.02.08-18.09.06:747][967]LogPlayLevel: PIE: World Init took: (0.003202s)
+[2025.02.08-18.09.06:749][967]LogAudio: Display: Creating Audio Device:                 Id: 10, Scope: Unique, Realtime: True
+[2025.02.08-18.09.06:749][967]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2025.02.08-18.09.06:749][967]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2025.02.08-18.09.06:749][967]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2025.02.08-18.09.06:749][967]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2025.02.08-18.09.06:749][967]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2025.02.08-18.09.06:749][967]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2025.02.08-18.09.06:749][967]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2025.02.08-18.09.06:749][967]LogAudio: Display: AudioDevice MaxSources: 32
+[2025.02.08-18.09.06:749][967]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2025.02.08-18.09.06:749][967]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2025.02.08-18.09.06:749][967]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2025.02.08-18.09.06:752][967]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2025.02.08-18.09.06:782][967]LogAudioMixer: Display: Using Audio Hardware Device Köpfhörer (Synaptics HD Audio)
+[2025.02.08-18.09.06:782][967]LogAudioMixer: Display: Initializing Sound Submixes...
+[2025.02.08-18.09.06:782][967]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2025.02.08-18.09.06:782][967]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2025.02.08-18.09.06:783][967]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=10
+[2025.02.08-18.09.06:783][967]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=10
+[2025.02.08-18.09.06:787][967]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=10
+[2025.02.08-18.09.06:788][967]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=10
+[2025.02.08-18.09.06:788][967]LogInit: FAudioDevice initialized with ID 10.
+[2025.02.08-18.09.06:788][967]LogAudio: Display: Audio Device (ID: 10) registered with world 'Level_Hub'.
+[2025.02.08-18.09.06:788][967]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 10
+[2025.02.08-18.09.06:792][967]LogLoad: Game class is 'GM_Custom_C'
+[2025.02.08-18.09.06:865][967]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Level_Hub.Level_Hub up for play (max tick rate 0) at 2025.02.08-19.09.06
+[2025.02.08-18.09.06:866][967]LogWorld: Bringing up level for play took: 0.074194
+[2025.02.08-18.09.06:870][967]LogOnline: OSS: Created online subsystem instance for: :Context_15
+[2025.02.08-18.09.06:873][967]LogSkeletalMesh: USkeletalMeshComponent: Recreating Clothing Actors for 'CharacterMesh0' with 'SKM_DarkLady'
+[2025.02.08-18.09.06:879][967]LogTemp: Warning: BP_InteractionStone_WeaponMaster_C_1 Could not Access GameInstance or GameInstance Dictionary did not Contained its key
+[2025.02.08-18.09.06:879][967]LogTemp: Warning: BP_InteractionStone_WeaponMaster_C_2 Could not Access GameInstance or GameInstance Dictionary did not Contained its key
+[2025.02.08-18.09.06:879][967]LogTemp: Warning: BP_InteractionStone_WeaponMaster_C_4 Could not Access GameInstance or GameInstance Dictionary did not Contained its key
+[2025.02.08-18.09.06:879][967]LogTemp: Warning: BP_InteractionStone_WeaponMaster_C_5 Could not Access GameInstance or GameInstance Dictionary did not Contained its key
+[2025.02.08-18.09.06:879][967]LogTemp: Warning: BP_InteractionStone_WeaponMaster_C_6 Could not Access GameInstance or GameInstance Dictionary did not Contained its key
+[2025.02.08-18.09.06:880][967]LogTemp: Warning: Failed to get Equipped Weapon Class for Equipment: Weapon
+[2025.02.08-18.09.06:880][967]LogTemp: Warning: Failed to get Equipped Weapon Class for Equipment: Shield
+[2025.02.08-18.09.06:880][967]LogTemp: Warning: Failed to get Equipped Weapon Class for Equipment: Weapon
+[2025.02.08-18.09.06:880][967]LogTemp: Warning: Failed to get Equipped Weapon Class for Equipment: Shield
+[2025.02.08-18.09.06:882][967]PIE: Server logged in
+[2025.02.08-18.09.06:885][967]PIE: Play in editor total start time 0,251 seconds.
+[2025.02.08-18.09.16:436][309]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.02.08-18.09.16:436][309]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_Level_Hub
+[2025.02.08-18.09.16:436][309]LogWorld: UWorld::CleanupWorld for Level_Hub, bSessionEnded=true, bCleanupResources=true
+[2025.02.08-18.09.16:442][309]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.02.08-18.09.16:447][309]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2025.02.08-18.09.16:452][309]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.02.08-18.09.16:466][309]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.02.08-18.09.16:468][309]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 10
+[2025.02.08-18.09.16:468][309]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=10
+[2025.02.08-18.09.16:470][309]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=10
+[2025.02.08-18.09.16:483][309]LogUObjectHash: Compacting FUObjectHashTables data took   0.96ms
+[2025.02.08-18.09.16:610][310]LogPlayLevel: Display: Destroying online subsystem :Context_15
+[2025.02.08-18.09.20:091][417]LogShaderCompilers: Display: ================================================
+[2025.02.08-18.09.20:091][417]LogShaderCompilers: Display: === FShaderJobCache stats ===
+[2025.02.08-18.09.20:091][417]LogShaderCompilers: Display: Total job queries 760, among them cache hits 177 (23.29%), DDC hits 492 (64.74%), Duplicates 71 (9.34%)
+[2025.02.08-18.09.20:091][417]LogShaderCompilers: Display: Tracking 512 distinct input hashes that result in 331 distinct outputs (64.65%)
+[2025.02.08-18.09.20:091][417]LogShaderCompilers: Display: RAM used: 196,48 KiB of 1,60 GiB budget. Usage: 0.01%
+[2025.02.08-18.09.20:091][417]LogShaderCompilers: Display: === Shader Compilation stats ===
+[2025.02.08-18.09.20:091][417]LogShaderCompilers: Display: Shaders Compiled: 20
+[2025.02.08-18.09.20:091][417]LogShaderCompilers: Display: Jobs assigned 20, completed 20 (100%)
+[2025.02.08-18.09.20:091][417]LogShaderCompilers: Display: Average time worker was idle: 89.38 s
+[2025.02.08-18.09.20:091][417]LogShaderCompilers: Display: Time job spent in pending queue: average 0.08 s, longest 0.40 s
+[2025.02.08-18.09.20:091][417]LogShaderCompilers: Display: Job execution time: average 1.30 s, max 4.92 s
+[2025.02.08-18.09.20:091][417]LogShaderCompilers: Display: Job life time (pending + execution): average 1.38 s, max 5.00
+[2025.02.08-18.09.20:091][417]LogShaderCompilers: Display: Shader code size: average 7,554 KiB, min 4,219 KiB, max 12,883 KiB
+[2025.02.08-18.09.20:091][417]LogShaderCompilers: Display: Time at least one job was in flight (either pending or executed): 14.66 s
+[2025.02.08-18.09.20:091][417]LogShaderCompilers: Display: Mutex wait stall in FShaderJobCache::SubmitJobs:  0.00%
+[2025.02.08-18.09.20:091][417]LogShaderCompilers: Display: Jobs were issued in 20 batches (only local compilation was used), average 1.00 jobs/batch
+[2025.02.08-18.09.20:091][417]LogShaderCompilers: Display: Average processing rate: 1.36 jobs/sec
+[2025.02.08-18.09.20:091][417]LogShaderCompilers: Display: Total thread time: 16,249 s
+[2025.02.08-18.09.20:091][417]LogShaderCompilers: Display: Total thread preprocess time: 18,624 s
+[2025.02.08-18.09.20:091][417]LogShaderCompilers: Display: Percentage time preprocessing: 114.61%
+[2025.02.08-18.09.20:091][417]LogShaderCompilers: Display: Effective parallelization: 1.11 (times faster than compiling all shaders on one thread). Compare with number of workers: 4
+[2025.02.08-18.09.20:091][417]LogShaderCompilers: Display: Top 5 most expensive shader types by average time:
+[2025.02.08-18.09.20:091][417]LogShaderCompilers: Display:                                             FDebugViewModePS (compiled    1 times, average 1.75 sec, max 1.75 sec, min 1.75 sec)
+[2025.02.08-18.09.20:091][417]LogShaderCompilers: Display:                                 TBasePassPSFNoLightMapPolicy (compiled    9 times, average 0.91 sec, max 1.04 sec, min 0.60 sec)
+[2025.02.08-18.09.20:091][417]LogShaderCompilers: Display:                         TBasePassPSFNoLightMapPolicySkylight (compiled    1 times, average 0.74 sec, max 0.74 sec, min 0.74 sec)
+[2025.02.08-18.09.20:091][417]LogShaderCompilers: Display:                                 TBasePassVSFNoLightMapPolicy (compiled    6 times, average 0.66 sec, max 0.75 sec, min 0.53 sec)
+[2025.02.08-18.09.20:091][417]LogShaderCompilers: Display:                                                 FLumenCardPS (compiled    1 times, average 0.55 sec, max 0.55 sec, min 0.55 sec)
+[2025.02.08-18.09.20:092][417]LogShaderCompilers: Display: Top 5 shader types by total compile time:
+[2025.02.08-18.09.20:092][417]LogShaderCompilers: Display:                                 TBasePassPSFNoLightMapPolicy - 50.45% of total time (compiled    9 times, average 0.91 sec, max 1.04 sec, min 0.60 sec)
+[2025.02.08-18.09.20:092][417]LogShaderCompilers: Display:                                 TBasePassVSFNoLightMapPolicy - 24.50% of total time (compiled    6 times, average 0.66 sec, max 0.75 sec, min 0.53 sec)
+[2025.02.08-18.09.20:092][417]LogShaderCompilers: Display:                                             FDebugViewModePS - 10.76% of total time (compiled    1 times, average 1.75 sec, max 1.75 sec, min 1.75 sec)
+[2025.02.08-18.09.20:092][417]LogShaderCompilers: Display:                         TBasePassPSFNoLightMapPolicySkylight - 4.53% of total time (compiled    1 times, average 0.74 sec, max 0.74 sec, min 0.74 sec)
+[2025.02.08-18.09.20:092][417]LogShaderCompilers: Display:                                                 FLumenCardPS - 3.41% of total time (compiled    1 times, average 0.55 sec, max 0.55 sec, min 0.55 sec)
+[2025.02.08-18.09.20:092][417]LogShaderCompilers: Display: === Material stats ===
+[2025.02.08-18.09.20:092][417]LogShaderCompilers: Display: Materials Cooked:        0
+[2025.02.08-18.09.20:092][417]LogShaderCompilers: Display: Materials Translated:    253
+[2025.02.08-18.09.20:092][417]LogShaderCompilers: Display: Material Total Translate Time: 0.36 s
+[2025.02.08-18.09.20:092][417]LogShaderCompilers: Display: Material Translation Only: 0.16 s (45%)
+[2025.02.08-18.09.20:092][417]LogShaderCompilers: Display: Material DDC Serialization Only: 0.00 s (1%)
+[2025.02.08-18.09.20:092][417]LogShaderCompilers: Display: Material Cache Hits: 43 (17%)
+[2025.02.08-18.09.20:092][417]LogShaderCompilers: Display: ================================================
+[2025.02.08-18.09.23:396][510]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2025.02.08-18.09.23:468][510]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Levels/Level_Hub" FILE="../../../../../../Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Levels/Level_Hub.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2025.02.08-18.09.23:531][510]LogUObjectHash: Compacting FUObjectHashTables data took   0.98ms
+[2025.02.08-18.09.23:950][510]LogSavePackage: Moving output files for package: /Game/Levels/Level_Hub
+[2025.02.08-18.09.23:951][510]LogSavePackage: Moving '../../../../../../Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Saved/Level_HubBE5D7377485C4622DD86ADAADC070ACC.tmp' to '../../../../../../Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Levels/Level_Hub.umap'
+[2025.02.08-18.09.23:981][510]LogFileHelpers: Saving map 'Level_Hub' took 0.514
+[2025.02.08-18.09.23:993][510]LogFileHelpers: InternalPromptForCheckoutAndSave took 596.432 ms (total: 6.01 sec)
+[2025.02.08-18.09.24:065][510]LogContentValidation: Display: Starting to validate 1 assets
+[2025.02.08-18.09.24:066][510]LogContentValidation: Enabled validators:
+[2025.02.08-18.09.24:066][510]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2025.02.08-18.09.24:066][510]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2025.02.08-18.09.24:066][510]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2025.02.08-18.09.24:066][510]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2025.02.08-18.09.24:066][510]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2025.02.08-18.09.24:066][510]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2025.02.08-18.09.24:066][510]AssetCheck: /Game/Levels/Level_Hub Validating asset
+[2025.02.08-18.09.26:758][605]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2025.02.08-18.09.26:773][605]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2025.02.08-18.09.26:773][605]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Level_Hub
+[2025.02.08-18.09.26:850][605]LogPlayLevel: PIE: StaticDuplicateObject took: (0.076947s)
+[2025.02.08-18.09.26:850][605]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Level_Hub.Level_Hub to /Game/Levels/UEDPIE_0_Level_Hub.Level_Hub (0.076981s)
+[2025.02.08-18.09.26:865][605]LogUObjectHash: Compacting FUObjectHashTables data took   1.05ms
+[2025.02.08-18.09.26:866][605]LogChaosDD: Creating Chaos Debug Draw Scene for world Level_Hub
+[2025.02.08-18.09.26:868][605]LogPlayLevel: PIE: World Init took: (0.002509s)
+[2025.02.08-18.09.26:870][605]LogAudio: Display: Creating Audio Device:                 Id: 11, Scope: Unique, Realtime: True
+[2025.02.08-18.09.26:870][605]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2025.02.08-18.09.26:870][605]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2025.02.08-18.09.26:870][605]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2025.02.08-18.09.26:870][605]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2025.02.08-18.09.26:870][605]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2025.02.08-18.09.26:870][605]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2025.02.08-18.09.26:870][605]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2025.02.08-18.09.26:870][605]LogAudio: Display: AudioDevice MaxSources: 32
+[2025.02.08-18.09.26:871][605]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2025.02.08-18.09.26:871][605]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2025.02.08-18.09.26:871][605]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2025.02.08-18.09.26:873][605]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2025.02.08-18.09.26:900][605]LogAudioMixer: Display: Using Audio Hardware Device Köpfhörer (Synaptics HD Audio)
+[2025.02.08-18.09.26:900][605]LogAudioMixer: Display: Initializing Sound Submixes...
+[2025.02.08-18.09.26:900][605]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2025.02.08-18.09.26:900][605]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2025.02.08-18.09.26:901][605]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=11
+[2025.02.08-18.09.26:901][605]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=11
+[2025.02.08-18.09.26:904][605]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=11
+[2025.02.08-18.09.26:905][605]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=11
+[2025.02.08-18.09.26:905][605]LogInit: FAudioDevice initialized with ID 11.
+[2025.02.08-18.09.26:905][605]LogAudio: Display: Audio Device (ID: 11) registered with world 'Level_Hub'.
+[2025.02.08-18.09.26:905][605]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 11
+[2025.02.08-18.09.26:909][605]LogLoad: Game class is 'GM_Custom_C'
+[2025.02.08-18.09.26:970][605]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Level_Hub.Level_Hub up for play (max tick rate 0) at 2025.02.08-19.09.26
+[2025.02.08-18.09.26:971][605]LogWorld: Bringing up level for play took: 0.063145
+[2025.02.08-18.09.26:974][605]LogOnline: OSS: Created online subsystem instance for: :Context_16
+[2025.02.08-18.09.26:978][605]LogSkeletalMesh: USkeletalMeshComponent: Recreating Clothing Actors for 'CharacterMesh0' with 'SKM_DarkLady'
+[2025.02.08-18.09.26:984][605]LogTemp: Warning: BP_InteractionStone_WeaponMaster_C_1 Could not Access GameInstance or GameInstance Dictionary did not Contained its key
+[2025.02.08-18.09.26:984][605]LogTemp: Warning: BP_InteractionStone_WeaponMaster_C_2 Could not Access GameInstance or GameInstance Dictionary did not Contained its key
+[2025.02.08-18.09.26:984][605]LogTemp: Warning: BP_InteractionStone_WeaponMaster_C_4 Could not Access GameInstance or GameInstance Dictionary did not Contained its key
+[2025.02.08-18.09.26:985][605]LogTemp: Warning: BP_InteractionStone_WeaponMaster_C_5 Could not Access GameInstance or GameInstance Dictionary did not Contained its key
+[2025.02.08-18.09.26:985][605]LogTemp: Warning: BP_InteractionStone_WeaponMaster_C_6 Could not Access GameInstance or GameInstance Dictionary did not Contained its key
+[2025.02.08-18.09.26:985][605]LogTemp: Warning: Failed to get Equipped Weapon Class for Equipment: Weapon
+[2025.02.08-18.09.26:985][605]LogTemp: Warning: Failed to get Equipped Weapon Class for Equipment: Shield
+[2025.02.08-18.09.26:985][605]LogTemp: Warning: Failed to get Equipped Weapon Class for Equipment: Weapon
+[2025.02.08-18.09.26:985][605]LogTemp: Warning: Failed to get Equipped Weapon Class for Equipment: Shield
+[2025.02.08-18.09.26:987][605]PIE: Server logged in
+[2025.02.08-18.09.26:989][605]PIE: Play in editor total start time 0,219 seconds.
+[2025.02.08-18.09.27:406][619]LogTemp: Warning: Character Charges Attack
+[2025.02.08-18.09.27:969][642]LogTemp: Warning: Character Releases Attack
+[2025.02.08-18.09.41:366][185]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.02.08-18.09.41:366][185]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_Level_Hub
+[2025.02.08-18.09.41:367][185]LogWorld: UWorld::CleanupWorld for Level_Hub, bSessionEnded=true, bCleanupResources=true
+[2025.02.08-18.09.41:373][185]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.02.08-18.09.41:378][185]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2025.02.08-18.09.41:382][185]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.02.08-18.09.41:397][185]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.02.08-18.09.41:399][185]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 11
+[2025.02.08-18.09.41:399][185]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=11
+[2025.02.08-18.09.41:401][185]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=11
+[2025.02.08-18.09.41:432][185]LogUObjectHash: Compacting FUObjectHashTables data took   0.99ms
+[2025.02.08-18.09.41:568][186]LogPlayLevel: Display: Destroying online subsystem :Context_16
+[2025.02.08-18.14.30:327][367]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 2494.583740
+[2025.02.08-18.14.30:537][374]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2025.02.08-18.14.30:537][374]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 2494.758789, Update Interval: 323.225800
+[2025.02.08-18.19.38:163][174]LogUObjectHash: Compacting FUObjectHashTables data took   0.95ms
+[2025.02.08-18.19.38:166][174]LogFileHelpers: Editor autosave (incl. external actors) for '/Game/Levels/Level_Hub' took 0.016
+[2025.02.08-18.19.38:167][174]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/OldCathedral/Materials/MI_Landscape_Ground] ([1] browsable assets)...
+[2025.02.08-18.19.38:191][174]OBJ SavePackage:     Rendered thumbnail for [MaterialInstanceConstant /Game/OldCathedral/Materials/MI_Landscape_Ground.MI_Landscape_Ground]
+[2025.02.08-18.19.38:191][174]OBJ SavePackage: Finished generating thumbnails for package [/Game/OldCathedral/Materials/MI_Landscape_Ground]
+[2025.02.08-18.19.38:202][174]LogUObjectHash: Compacting FUObjectHashTables data took   0.40ms
+[2025.02.08-18.19.38:219][174]LogUObjectHash: Compacting FUObjectHashTables data took   0.48ms
+[2025.02.08-18.19.38:222][174]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/OldCathedral/Materials/MI_Landscape_Ground_Auto1
+[2025.02.08-18.19.38:222][174]LogSavePackage: Moving '../../../../../../Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Saved/MI_Landscape_Ground_Auto124B0EAD14DD2101137454497CB48FA67.tmp' to '../../../../../../Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Saved/Autosaves/Game/OldCathedral/Materials/MI_Landscape_Ground_Auto1.uasset'
+[2025.02.08-18.19.38:223][174]LogFileHelpers: Auto-saving content packages took 0.056
+[2025.02.08-18.20.44:141][504]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 2868.408936
+[2025.02.08-18.20.44:361][511]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2025.02.08-18.20.44:361][511]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 2868.592773, Update Interval: 339.509888
+[2025.02.08-18.27.14:995][224]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 3259.257080
+[2025.02.08-18.27.15:188][231]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2025.02.08-18.27.15:188][231]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 3259.424316, Update Interval: 350.978119
+[2025.02.08-18.31.39:811][549]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2025.02.08-18.31.39:828][549]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2025.02.08-18.31.39:828][549]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Level_Hub
+[2025.02.08-18.31.39:923][549]LogPlayLevel: PIE: StaticDuplicateObject took: (0.094910s)
+[2025.02.08-18.31.39:923][549]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Level_Hub.Level_Hub to /Game/Levels/UEDPIE_0_Level_Hub.Level_Hub (0.094972s)
+[2025.02.08-18.31.39:943][549]LogUObjectHash: Compacting FUObjectHashTables data took   1.47ms
+[2025.02.08-18.31.39:945][549]LogChaosDD: Creating Chaos Debug Draw Scene for world Level_Hub
+[2025.02.08-18.31.39:947][549]LogPlayLevel: PIE: World Init took: (0.002199s)
+[2025.02.08-18.31.39:949][549]LogAudio: Display: Creating Audio Device:                 Id: 12, Scope: Unique, Realtime: True
+[2025.02.08-18.31.39:949][549]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2025.02.08-18.31.39:949][549]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2025.02.08-18.31.39:950][549]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2025.02.08-18.31.39:950][549]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2025.02.08-18.31.39:950][549]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2025.02.08-18.31.39:950][549]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2025.02.08-18.31.39:950][549]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2025.02.08-18.31.39:951][549]LogAudio: Display: AudioDevice MaxSources: 32
+[2025.02.08-18.31.39:951][549]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2025.02.08-18.31.39:951][549]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2025.02.08-18.31.39:951][549]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2025.02.08-18.31.39:951][549]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2025.02.08-18.31.39:988][549]LogAudioMixer: Display: Using Audio Hardware Device Köpfhörer (Synaptics HD Audio)
+[2025.02.08-18.31.39:989][549]LogAudioMixer: Display: Initializing Sound Submixes...
+[2025.02.08-18.31.39:989][549]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2025.02.08-18.31.39:989][549]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2025.02.08-18.31.39:989][549]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=12
+[2025.02.08-18.31.39:990][549]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=12
+[2025.02.08-18.31.39:993][549]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=12
+[2025.02.08-18.31.39:993][549]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=12
+[2025.02.08-18.31.39:993][549]LogInit: FAudioDevice initialized with ID 12.
+[2025.02.08-18.31.39:994][549]LogAudio: Display: Audio Device (ID: 12) registered with world 'Level_Hub'.
+[2025.02.08-18.31.39:994][549]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 12
+[2025.02.08-18.31.39:998][549]LogLoad: Game class is 'GM_Custom_C'
+[2025.02.08-18.31.40:069][549]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Level_Hub.Level_Hub up for play (max tick rate 0) at 2025.02.08-19.31.40
+[2025.02.08-18.31.40:071][549]LogWorld: Bringing up level for play took: 0.072958
+[2025.02.08-18.31.40:074][549]LogOnline: OSS: Created online subsystem instance for: :Context_17
+[2025.02.08-18.31.40:078][549]LogSkeletalMesh: USkeletalMeshComponent: Recreating Clothing Actors for 'CharacterMesh0' with 'SKM_DarkLady'
+[2025.02.08-18.31.40:083][549]LogTemp: Warning: BP_InteractionStone_WeaponMaster_C_1 Could not Access GameInstance or GameInstance Dictionary did not Contained its key
+[2025.02.08-18.31.40:083][549]LogTemp: Warning: BP_InteractionStone_WeaponMaster_C_2 Could not Access GameInstance or GameInstance Dictionary did not Contained its key
+[2025.02.08-18.31.40:084][549]LogTemp: Warning: BP_InteractionStone_WeaponMaster_C_4 Could not Access GameInstance or GameInstance Dictionary did not Contained its key
+[2025.02.08-18.31.40:084][549]LogTemp: Warning: BP_InteractionStone_WeaponMaster_C_5 Could not Access GameInstance or GameInstance Dictionary did not Contained its key
+[2025.02.08-18.31.40:084][549]LogTemp: Warning: BP_InteractionStone_WeaponMaster_C_6 Could not Access GameInstance or GameInstance Dictionary did not Contained its key
+[2025.02.08-18.31.40:084][549]LogTemp: Warning: Failed to get Equipped Weapon Class for Equipment: Weapon
+[2025.02.08-18.31.40:084][549]LogTemp: Warning: Failed to get Equipped Weapon Class for Equipment: Shield
+[2025.02.08-18.31.40:085][549]LogTemp: Warning: Failed to get Equipped Weapon Class for Equipment: Weapon
+[2025.02.08-18.31.40:085][549]LogTemp: Warning: Failed to get Equipped Weapon Class for Equipment: Shield
+[2025.02.08-18.31.40:087][549]PIE: Server logged in
+[2025.02.08-18.31.40:089][549]PIE: Play in editor total start time 0,266 seconds.
+[2025.02.08-18.31.47:736][839]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.02.08-18.31.47:736][839]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_Level_Hub
+[2025.02.08-18.31.47:738][839]LogWorld: UWorld::CleanupWorld for Level_Hub, bSessionEnded=true, bCleanupResources=true
+[2025.02.08-18.31.47:756][839]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.02.08-18.31.47:764][839]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2025.02.08-18.31.47:771][839]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.02.08-18.31.47:786][839]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.02.08-18.31.47:788][839]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 12
+[2025.02.08-18.31.47:788][839]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=12
+[2025.02.08-18.31.47:791][839]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=12
+[2025.02.08-18.31.47:839][839]LogUObjectHash: Compacting FUObjectHashTables data took   1.75ms
+[2025.02.08-18.31.47:964][840]LogPlayLevel: Display: Destroying online subsystem :Context_17
+[2025.02.08-18.31.57:914][174]LogAssetEditorSubsystem: Opening Asset editor for LandscapeLayerInfoObject /Game/OldCathedral/Levels/SharedLevelAssets/GroundLeaf_02_LayerInfo.GroundLeaf_02_LayerInfo
+[2025.02.08-18.32.00:257][238]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.32.06:037][420]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.32.07:031][452]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.32.07:221][459]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.32.08:221][490]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.32.18:137][844]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.32.25:066][ 57]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.32.39:596][477]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.32.40:139][495]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.32.42:595][556]Cmd: TRANSACTION UNDO
+[2025.02.08-18.32.42:595][556]LogEditorTransaction: Undo Landscape Editing: Noise
+[2025.02.08-18.32.42:655][556]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_3 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.145824 MB), EncodeSpeed: Fast
+[2025.02.08-18.32.42:656][556]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_2 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.32.42:657][556]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_0 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.32.43:442][571]Cmd: TRANSACTION UNDO
+[2025.02.08-18.32.43:442][571]LogEditorTransaction: Undo Landscape Editing: Noise
+[2025.02.08-18.32.43:530][571]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_7 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.145824 MB), EncodeSpeed: Fast
+[2025.02.08-18.32.43:533][571]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_2 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.32.43:533][571]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_3 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.145824 MB), EncodeSpeed: Fast
+[2025.02.08-18.32.43:580][571]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_8 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.32.44:303][582]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.32.44:354][584]Cmd: TRANSACTION UNDO
+[2025.02.08-18.32.44:354][584]LogEditorTransaction: Undo Landscape Editing: Noise
+[2025.02.08-18.32.44:462][584]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_2 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.32.44:788][586]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.32.45:184][600]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.32.55:340][873]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.32.55:440][876]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.33.35:106][ 14]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.33.35:839][ 31]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.33.52:047][448]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.33.58:848][647]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.34.00:510][700]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.34.01:549][731]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.34.03:395][774]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 3667.665527
+[2025.02.08-18.34.03:607][780]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2025.02.08-18.34.03:607][780]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 3667.856201, Update Interval: 332.542480
+[2025.02.08-18.34.07:642][902]LogDerivedDataCache: C:/Users/Leon/AppData/Local/UnrealEngine/Common/DerivedDataCache: Maintenance finished in +00:00:00.001 and deleted 0 files with total size 0 MiB and 0 empty folders. Scanned 0 files in 1 folders with total size 0 MiB.
+[2025.02.08-18.34.11:263][ 15]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.34.15:751][137]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.34.18:108][200]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.34.19:873][246]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.34.25:386][410]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.34.39:217][799]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.34.39:220][799]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.34.40:506][837]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.35.15:008][857]LogUObjectHash: Compacting FUObjectHashTables data took   0.93ms
+[2025.02.08-18.35.15:023][857]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_0 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.35.15:026][857]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_10 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.35.15:028][857]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_14 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.35.15:030][857]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_19 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.35.15:031][857]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_2 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.35.15:033][857]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_25 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.35.15:035][857]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_28 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.35.15:036][857]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_30 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.35.15:038][857]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_32 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.35.15:039][857]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_4 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.35.15:040][857]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_8 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.35.15:041][857]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_66 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.35.15:043][857]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_62 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.35.15:044][857]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_34 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.35.15:045][857]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_56 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.35.15:046][857]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_57 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.35.15:047][857]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_59 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.35.15:048][857]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_18 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.35.15:049][857]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_16 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.35.15:384][857]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/Levels/Level_Hub_Auto2
+[2025.02.08-18.35.15:384][857]LogSavePackage: Moving '../../../../../../Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Saved/Level_Hub_Auto2E1DC249C4C2177B2B60E59AC8B08AA9C.tmp' to '../../../../../../Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Saved/Autosaves/Game/Levels/Level_Hub_Auto2.umap'
+[2025.02.08-18.35.15:386][857]LogFileHelpers: Editor autosave (incl. external actors) for '/Game/Levels/Level_Hub' took 0.412
+[2025.02.08-18.35.15:386][857]LogFileHelpers: Editor autosave (incl. sublevels & external actors) for all levels took 0.412
+[2025.02.08-18.35.15:387][857]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/OldCathedral/Materials/MI_Landscape_Ground] ([1] browsable assets)...
+[2025.02.08-18.35.15:387][857]OBJ SavePackage: Finished generating thumbnails for package [/Game/OldCathedral/Materials/MI_Landscape_Ground]
+[2025.02.08-18.35.15:399][857]LogUObjectHash: Compacting FUObjectHashTables data took   0.52ms
+[2025.02.08-18.35.15:414][857]LogUObjectHash: Compacting FUObjectHashTables data took   0.44ms
+[2025.02.08-18.35.15:417][857]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/OldCathedral/Materials/MI_Landscape_Ground_Auto2
+[2025.02.08-18.35.15:417][857]LogSavePackage: Moving '../../../../../../Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Saved/MI_Landscape_Ground_Auto249E0A0564D46316F30EA6BAF5839DAC1.tmp' to '../../../../../../Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Saved/Autosaves/Game/OldCathedral/Materials/MI_Landscape_Ground_Auto2.uasset'
+[2025.02.08-18.35.15:417][857]LogFileHelpers: Auto-saving content packages took 0.031
+[2025.02.08-18.35.31:667][356]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.36.13:161][508]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.36.13:346][515]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.36.22:062][756]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.36.28:755][945]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.36.29:516][970]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.36.29:516][970]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.36.56:437][778]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.36.56:686][785]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.36.58:447][838]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.36.58:448][838]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.37.13:288][261]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.37.13:657][268]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.37.31:295][839]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.37.32:127][856]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.38.50:344][  2]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.38.50:344][  2]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.38.54:654][138]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.38.55:634][166]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.38.55:759][170]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.38.56:076][184]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.39.01:386][348]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.39.09:801][579]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.39.16:521][765]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.39.16:521][765]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-18.39.22:240][947]LogUObjectHash: Compacting FUObjectHashTables data took   0.97ms
+[2025.02.08-18.39.23:487][947]LogSlate: Window 'Save Content' being destroyed
+[2025.02.08-18.39.23:501][947]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2025.02.08-18.39.23:563][947]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Levels/Level_Hub" FILE="../../../../../../Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Levels/Level_Hub.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2025.02.08-18.39.23:625][947]LogUObjectHash: Compacting FUObjectHashTables data took   0.93ms
+[2025.02.08-18.39.23:641][947]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_0 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.39.23:648][947]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_10 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.39.23:651][947]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_12 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.39.23:654][947]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_14 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.39.23:656][947]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_2 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.39.23:659][947]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_21 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.39.23:662][947]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_23 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.39.23:665][947]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_25 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.39.23:668][947]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_28 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.39.23:670][947]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_30 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.39.23:672][947]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_32 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.39.23:674][947]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_4 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.39.23:677][947]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_6 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.39.23:680][947]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_68 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.39.23:682][947]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_62 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.39.23:684][947]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_34 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.39.23:687][947]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_56 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.39.23:689][947]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_57 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.39.23:691][947]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_58 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.39.23:693][947]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_59 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.39.23:697][947]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_18 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.39.23:699][947]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_16 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.39.23:702][947]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_71 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.39.23:704][947]LogTexture: Display: Building textures: /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.Landscape_0.Weightmap_70 (BGRA8, 64x64 x1x1x1) (Required Memory Estimate: 1.140617 MB), EncodeSpeed: Fast
+[2025.02.08-18.39.24:096][947]LogSavePackage: Moving output files for package: /Game/Levels/Level_Hub
+[2025.02.08-18.39.24:097][947]LogSavePackage: Moving '../../../../../../Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Saved/Level_Hub7FD21EEB4983B548F2F9F4936BD9DA44.tmp' to '../../../../../../Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Levels/Level_Hub.umap'
+[2025.02.08-18.39.24:123][947]LogFileHelpers: Saving map 'Level_Hub' took 0.560
+[2025.02.08-18.39.24:123][947]OBJ SavePackage: Generating thumbnails for [0] asset(s) in package [/Game/OldCathedral/Materials/MI_Landscape_Ground] ([1] browsable assets)...
+[2025.02.08-18.39.24:123][947]OBJ SavePackage: Finished generating thumbnails for package [/Game/OldCathedral/Materials/MI_Landscape_Ground]
+[2025.02.08-18.39.24:137][947]LogUObjectHash: Compacting FUObjectHashTables data took   0.49ms
+[2025.02.08-18.39.24:163][947]LogUObjectHash: Compacting FUObjectHashTables data took   0.50ms
+[2025.02.08-18.39.24:167][947]LogSavePackage: Moving output files for package: /Game/OldCathedral/Materials/MI_Landscape_Ground
+[2025.02.08-18.39.24:167][947]LogSavePackage: Moving '../../../../../../Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Saved/MI_Landscape_Ground1A53E26F4F9171A4D1EE7FA9B950AD30.tmp' to '../../../../../../Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/OldCathedral/Materials/MI_Landscape_Ground.uasset'
+[2025.02.08-18.39.24:179][947]LogFileHelpers: InternalPromptForCheckoutAndSave took 677.520 ms (total: 6.69 sec)
+[2025.02.08-18.39.24:241][947]LogContentValidation: Display: Starting to validate 2 assets
+[2025.02.08-18.39.24:241][947]LogContentValidation: Enabled validators:
+[2025.02.08-18.39.24:241][947]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2025.02.08-18.39.24:241][947]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2025.02.08-18.39.24:241][947]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2025.02.08-18.39.24:241][947]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2025.02.08-18.39.24:241][947]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2025.02.08-18.39.24:241][947]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2025.02.08-18.39.24:242][947]AssetCheck: /Game/Levels/Level_Hub Validating asset
+[2025.02.08-18.39.24:243][947]AssetCheck: /Game/OldCathedral/Materials/MI_Landscape_Ground Validating asset
