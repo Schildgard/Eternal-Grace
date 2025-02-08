@@ -2047,3 +2047,338 @@ Script Stack (0 frames) :
 [2025.02.08-19.46.52:158][448]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
 [2025.02.08-19.46.52:158][448]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
 [2025.02.08-19.46.52:159][448]AssetCheck: /Game/Levels/Level_Hub Validating asset
+[2025.02.08-19.49.33:447][111]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 2046.929810
+[2025.02.08-19.49.34:449][114]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2025.02.08-19.49.34:449][114]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 2047.596558, Update Interval: 340.698273
+[2025.02.08-19.55.53:944][252]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 2427.424561
+[2025.02.08-19.55.54:946][255]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2025.02.08-19.55.54:946][255]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 2428.092529, Update Interval: 331.531738
+[2025.02.08-20.00.18:394][252]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-20.00.22:928][409]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-20.00.28:015][548]Cmd: DELETE
+[2025.02.08-20.00.28:015][548]Cmd: ACTOR DELETE
+[2025.02.08-20.00.28:116][548]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.02.08-20.00.28:134][548]LogUObjectHash: Compacting FUObjectHashTables data took   0.62ms
+[2025.02.08-20.00.28:138][548]LogEditorActor: Deleted 1 Actors (0.122 secs)
+[2025.02.08-20.00.55:965][337]Cmd: ELEMENT MIRROR Y=-1
+[2025.02.08-20.01.43:994][780]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2025.02.08-20.01.44:121][780]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Levels/Level_Hub" FILE="../../../../../../Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Levels/Level_Hub.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2025.02.08-20.01.44:177][780]LogUObjectHash: Compacting FUObjectHashTables data took   0.60ms
+[2025.02.08-20.01.44:910][780]LogSavePackage: Moving output files for package: /Game/Levels/Level_Hub
+[2025.02.08-20.01.44:911][780]LogSavePackage: Moving '../../../../../../Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Saved/Level_HubF5D0B1BE4AC73DC5EFB3FD9E3BE2A527.tmp' to '../../../../../../Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Levels/Level_Hub.umap'
+[2025.02.08-20.01.44:940][780]LogFileHelpers: Saving map 'Level_Hub' took 0.821
+[2025.02.08-20.01.44:970][780]LogFileHelpers: InternalPromptForCheckoutAndSave took 976.398 ms (total: 5.39 sec)
+[2025.02.08-20.01.45:036][780]LogContentValidation: Display: Starting to validate 1 assets
+[2025.02.08-20.01.45:036][780]LogContentValidation: Enabled validators:
+[2025.02.08-20.01.45:036][780]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2025.02.08-20.01.45:036][780]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2025.02.08-20.01.45:036][780]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2025.02.08-20.01.45:036][780]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2025.02.08-20.01.45:036][780]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2025.02.08-20.01.45:036][780]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2025.02.08-20.01.45:036][780]AssetCheck: /Game/Levels/Level_Hub Validating asset
+[2025.02.08-20.02.00:978][428]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 2794.468506
+[2025.02.08-20.02.01:163][438]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2025.02.08-20.02.01:163][438]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 2794.632812, Update Interval: 345.658752
+[2025.02.08-20.02.27:333][368]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-20.02.28:161][406]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-20.03.25:486][556]Cmd: TRANSACTION UNDO
+[2025.02.08-20.03.25:486][556]LogEditorTransaction: Undo Move Elements
+[2025.02.08-20.03.25:901][562]Cmd: TRANSACTION UNDO
+[2025.02.08-20.03.25:901][562]LogEditorTransaction: Undo Move Elements
+[2025.02.08-20.03.26:328][576]Cmd: TRANSACTION UNDO
+[2025.02.08-20.03.26:328][576]LogEditorTransaction: Undo Scale Elements
+[2025.02.08-20.03.26:752][592]Cmd: TRANSACTION UNDO
+[2025.02.08-20.03.26:752][592]LogEditorTransaction: Undo Move Elements
+[2025.02.08-20.03.27:203][608]Cmd: TRANSACTION UNDO
+[2025.02.08-20.03.27:203][608]LogEditorTransaction: Undo Move Elements
+[2025.02.08-20.03.27:628][625]Cmd: TRANSACTION UNDO
+[2025.02.08-20.03.27:628][625]LogEditorTransaction: Undo Clicking on Elements
+[2025.02.08-20.03.50:689][410]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2025.02.08-20.03.50:798][410]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Levels/Level_Hub" FILE="../../../../../../Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Levels/Level_Hub.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2025.02.08-20.03.50:900][410]LogUObjectHash: Compacting FUObjectHashTables data took   0.57ms
+[2025.02.08-20.03.51:731][410]LogSavePackage: Moving output files for package: /Game/Levels/Level_Hub
+[2025.02.08-20.03.51:732][410]LogSavePackage: Moving '../../../../../../Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Saved/Level_Hub37B45F914F41BAEF436A488C740FD907.tmp' to '../../../../../../Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Levels/Level_Hub.umap'
+[2025.02.08-20.03.51:762][410]LogFileHelpers: Saving map 'Level_Hub' took 0.966
+[2025.02.08-20.03.51:792][410]LogFileHelpers: InternalPromptForCheckoutAndSave took 1.10 sec (total: 6.49 sec)
+[2025.02.08-20.03.51:840][410]LogContentValidation: Display: Starting to validate 1 assets
+[2025.02.08-20.03.51:840][410]LogContentValidation: Enabled validators:
+[2025.02.08-20.03.51:840][410]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2025.02.08-20.03.51:840][410]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2025.02.08-20.03.51:840][410]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2025.02.08-20.03.51:840][410]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2025.02.08-20.03.51:840][410]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2025.02.08-20.03.51:840][410]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2025.02.08-20.03.51:841][410]AssetCheck: /Game/Levels/Level_Hub Validating asset
+[2025.02.08-20.07.08:224][534]Cmd: TRANSACTION UNDO
+[2025.02.08-20.07.08:224][534]LogEditorTransaction: Undo Move Elements
+[2025.02.08-20.07.08:780][539]Cmd: TRANSACTION UNDO
+[2025.02.08-20.07.08:780][539]LogEditorTransaction: Undo Move Elements
+[2025.02.08-20.07.09:314][557]Cmd: TRANSACTION UNDO
+[2025.02.08-20.07.09:314][557]LogEditorTransaction: Undo Group Selected
+[2025.02.08-20.07.20:997][940]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2025.02.08-20.07.21:109][940]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Levels/Level_Hub" FILE="../../../../../../Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Levels/Level_Hub.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2025.02.08-20.07.21:167][940]LogUObjectHash: Compacting FUObjectHashTables data took   0.66ms
+[2025.02.08-20.07.21:886][940]LogSavePackage: Moving output files for package: /Game/Levels/Level_Hub
+[2025.02.08-20.07.21:886][940]LogSavePackage: Moving '../../../../../../Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Saved/Level_HubEA1DF74943E779500140B58E55758CFC.tmp' to '../../../../../../Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Levels/Level_Hub.umap'
+[2025.02.08-20.07.21:919][940]LogFileHelpers: Saving map 'Level_Hub' took 0.811
+[2025.02.08-20.07.21:947][940]LogFileHelpers: InternalPromptForCheckoutAndSave took 948.802 ms (total: 7.44 sec)
+[2025.02.08-20.07.22:007][940]LogContentValidation: Display: Starting to validate 1 assets
+[2025.02.08-20.07.22:007][940]LogContentValidation: Enabled validators:
+[2025.02.08-20.07.22:008][940]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2025.02.08-20.07.22:008][940]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2025.02.08-20.07.22:008][940]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2025.02.08-20.07.22:008][940]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2025.02.08-20.07.22:008][940]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2025.02.08-20.07.22:008][940]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2025.02.08-20.07.22:008][940]AssetCheck: /Game/Levels/Level_Hub Validating asset
+[2025.02.08-20.07.31:891][247]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2025.02.08-20.07.31:903][247]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2025.02.08-20.07.31:904][247]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Level_Hub
+[2025.02.08-20.07.32:088][247]LogPlayLevel: PIE: StaticDuplicateObject took: (0.184981s)
+[2025.02.08-20.07.32:088][247]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Level_Hub.Level_Hub to /Game/Levels/UEDPIE_0_Level_Hub.Level_Hub (0.185023s)
+[2025.02.08-20.07.32:104][247]LogUObjectHash: Compacting FUObjectHashTables data took   1.23ms
+[2025.02.08-20.07.32:105][247]LogChaosDD: Creating Chaos Debug Draw Scene for world Level_Hub
+[2025.02.08-20.07.32:108][247]LogPlayLevel: PIE: World Init took: (0.003035s)
+[2025.02.08-20.07.32:110][247]LogAudio: Display: Creating Audio Device:                 Id: 4, Scope: Unique, Realtime: True
+[2025.02.08-20.07.32:110][247]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2025.02.08-20.07.32:110][247]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2025.02.08-20.07.32:110][247]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2025.02.08-20.07.32:110][247]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2025.02.08-20.07.32:110][247]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2025.02.08-20.07.32:110][247]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2025.02.08-20.07.32:110][247]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2025.02.08-20.07.32:110][247]LogAudio: Display: AudioDevice MaxSources: 32
+[2025.02.08-20.07.32:110][247]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2025.02.08-20.07.32:110][247]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2025.02.08-20.07.32:110][247]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2025.02.08-20.07.32:113][247]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2025.02.08-20.07.32:147][247]LogAudioMixer: Display: Using Audio Hardware Device Köpfhörer (Synaptics HD Audio)
+[2025.02.08-20.07.32:147][247]LogAudioMixer: Display: Initializing Sound Submixes...
+[2025.02.08-20.07.32:147][247]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2025.02.08-20.07.32:147][247]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2025.02.08-20.07.32:148][247]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=4
+[2025.02.08-20.07.32:148][247]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=4
+[2025.02.08-20.07.32:151][247]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=4
+[2025.02.08-20.07.32:152][247]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=4
+[2025.02.08-20.07.32:152][247]LogInit: FAudioDevice initialized with ID 4.
+[2025.02.08-20.07.32:152][247]LogAudio: Display: Audio Device (ID: 4) registered with world 'Level_Hub'.
+[2025.02.08-20.07.32:152][247]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 4
+[2025.02.08-20.07.32:155][247]LogLoad: Game class is 'GM_Custom_C'
+[2025.02.08-20.07.32:279][247]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Level_Hub.Level_Hub up for play (max tick rate 0) at 2025.02.08-21.07.32
+[2025.02.08-20.07.32:281][247]LogWorld: Bringing up level for play took: 0.125032
+[2025.02.08-20.07.32:284][247]LogOnline: OSS: Created online subsystem instance for: :Context_8
+[2025.02.08-20.07.32:288][247]LogSkeletalMesh: USkeletalMeshComponent: Recreating Clothing Actors for 'CharacterMesh0' with 'SKM_DarkLady'
+[2025.02.08-20.07.32:294][247]LogTemp: Warning: BP_InteractionStone_WeaponMaster_C_1 Could not Access GameInstance or GameInstance Dictionary did not Contained its key
+[2025.02.08-20.07.32:294][247]LogTemp: Warning: BP_InteractionStone_WeaponMaster_C_2 Could not Access GameInstance or GameInstance Dictionary did not Contained its key
+[2025.02.08-20.07.32:294][247]LogTemp: Warning: BP_InteractionStone_WeaponMaster_C_4 Could not Access GameInstance or GameInstance Dictionary did not Contained its key
+[2025.02.08-20.07.32:294][247]LogTemp: Warning: BP_InteractionStone_WeaponMaster_C_5 Could not Access GameInstance or GameInstance Dictionary did not Contained its key
+[2025.02.08-20.07.32:294][247]LogTemp: Warning: BP_InteractionStone_WeaponMaster_C_6 Could not Access GameInstance or GameInstance Dictionary did not Contained its key
+[2025.02.08-20.07.32:295][247]LogTemp: Warning: Failed to get Equipped Weapon Class for Equipment: Weapon
+[2025.02.08-20.07.32:295][247]LogTemp: Warning: Failed to get Equipped Weapon Class for Equipment: Shield
+[2025.02.08-20.07.32:295][247]LogTemp: Warning: Failed to get Equipped Weapon Class for Equipment: Weapon
+[2025.02.08-20.07.32:295][247]LogTemp: Warning: Failed to get Equipped Weapon Class for Equipment: Shield
+[2025.02.08-20.07.32:297][247]PIE: Server logged in
+[2025.02.08-20.07.32:298][247]PIE: Play in editor total start time 0,398 seconds.
+[2025.02.08-20.07.40:441][624]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-20.07.41:093][655]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-20.07.44:254][799]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-20.07.44:916][824]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-20.07.55:388][218]LogTemp: Warning: Character Charges Attack
+[2025.02.08-20.07.55:689][230]LogTemp: Warning: Character Releases Attack
+[2025.02.08-20.08.20:333][332]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-20.08.20:994][363]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-20.08.30:288][812]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 3183.781494
+[2025.02.08-20.08.30:501][822]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2025.02.08-20.08.30:501][822]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 3183.968994, Update Interval: 339.149139
+[2025.02.08-20.08.38:489][193]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-20.08.40:222][259]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-20.08.40:356][262]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.02.08-20.08.40:356][262]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_Level_Hub
+[2025.02.08-20.08.40:357][262]LogWorld: UWorld::CleanupWorld for Level_Hub, bSessionEnded=true, bCleanupResources=true
+[2025.02.08-20.08.40:365][262]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.02.08-20.08.40:371][262]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2025.02.08-20.08.40:376][262]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.02.08-20.08.40:392][262]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2025.02.08-20.08.40:392][262]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 4
+[2025.02.08-20.08.40:392][262]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=4
+[2025.02.08-20.08.40:395][262]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=4
+[2025.02.08-20.08.40:401][262]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.02.08-20.08.40:412][262]LogUObjectHash: Compacting FUObjectHashTables data took   1.05ms
+[2025.02.08-20.08.40:547][263]LogPlayLevel: Display: Destroying online subsystem :Context_8
+[2025.02.08-20.08.41:528][291]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-20.08.42:270][315]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-20.08.45:418][395]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2025.02.08-20.08.45:432][395]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2025.02.08-20.08.45:432][395]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_Level_Hub
+[2025.02.08-20.08.45:622][395]LogPlayLevel: PIE: StaticDuplicateObject took: (0.189906s)
+[2025.02.08-20.08.45:623][395]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/Level_Hub.Level_Hub to /Game/Levels/UEDPIE_0_Level_Hub.Level_Hub (0.189969s)
+[2025.02.08-20.08.45:640][395]LogUObjectHash: Compacting FUObjectHashTables data took   1.02ms
+[2025.02.08-20.08.45:642][395]LogChaosDD: Creating Chaos Debug Draw Scene for world Level_Hub
+[2025.02.08-20.08.45:644][395]LogPlayLevel: PIE: World Init took: (0.002323s)
+[2025.02.08-20.08.45:646][395]LogAudio: Display: Creating Audio Device:                 Id: 5, Scope: Unique, Realtime: True
+[2025.02.08-20.08.45:646][395]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2025.02.08-20.08.45:646][395]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2025.02.08-20.08.45:646][395]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2025.02.08-20.08.45:646][395]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2025.02.08-20.08.45:646][395]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2025.02.08-20.08.45:646][395]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2025.02.08-20.08.45:646][395]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2025.02.08-20.08.45:646][395]LogAudio: Display: AudioDevice MaxSources: 32
+[2025.02.08-20.08.45:647][395]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2025.02.08-20.08.45:647][395]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2025.02.08-20.08.45:647][395]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2025.02.08-20.08.45:650][395]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2025.02.08-20.08.45:687][395]LogAudioMixer: Display: Using Audio Hardware Device Köpfhörer (Synaptics HD Audio)
+[2025.02.08-20.08.45:687][395]LogAudioMixer: Display: Initializing Sound Submixes...
+[2025.02.08-20.08.45:688][395]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2025.02.08-20.08.45:688][395]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2025.02.08-20.08.45:688][395]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=5
+[2025.02.08-20.08.45:688][395]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=5
+[2025.02.08-20.08.45:691][395]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=5
+[2025.02.08-20.08.45:691][395]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=5
+[2025.02.08-20.08.45:691][395]LogInit: FAudioDevice initialized with ID 5.
+[2025.02.08-20.08.45:692][395]LogAudio: Display: Audio Device (ID: 5) registered with world 'Level_Hub'.
+[2025.02.08-20.08.45:692][395]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 5
+[2025.02.08-20.08.45:696][395]LogLoad: Game class is 'GM_Custom_C'
+[2025.02.08-20.08.45:836][395]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Level_Hub.Level_Hub up for play (max tick rate 0) at 2025.02.08-21.08.45
+[2025.02.08-20.08.45:838][395]LogWorld: Bringing up level for play took: 0.142089
+[2025.02.08-20.08.45:841][395]LogOnline: OSS: Created online subsystem instance for: :Context_9
+[2025.02.08-20.08.45:844][395]LogSkeletalMesh: USkeletalMeshComponent: Recreating Clothing Actors for 'CharacterMesh0' with 'SKM_DarkLady'
+[2025.02.08-20.08.45:850][395]LogTemp: Warning: BP_InteractionStone_WeaponMaster_C_1 Could not Access GameInstance or GameInstance Dictionary did not Contained its key
+[2025.02.08-20.08.45:850][395]LogTemp: Warning: BP_InteractionStone_WeaponMaster_C_2 Could not Access GameInstance or GameInstance Dictionary did not Contained its key
+[2025.02.08-20.08.45:850][395]LogTemp: Warning: BP_InteractionStone_WeaponMaster_C_4 Could not Access GameInstance or GameInstance Dictionary did not Contained its key
+[2025.02.08-20.08.45:851][395]LogTemp: Warning: BP_InteractionStone_WeaponMaster_C_5 Could not Access GameInstance or GameInstance Dictionary did not Contained its key
+[2025.02.08-20.08.45:851][395]LogTemp: Warning: BP_InteractionStone_WeaponMaster_C_6 Could not Access GameInstance or GameInstance Dictionary did not Contained its key
+[2025.02.08-20.08.45:851][395]LogTemp: Warning: Failed to get Equipped Weapon Class for Equipment: Weapon
+[2025.02.08-20.08.45:851][395]LogTemp: Warning: Failed to get Equipped Weapon Class for Equipment: Shield
+[2025.02.08-20.08.45:851][395]LogTemp: Warning: Failed to get Equipped Weapon Class for Equipment: Weapon
+[2025.02.08-20.08.45:851][395]LogTemp: Warning: Failed to get Equipped Weapon Class for Equipment: Shield
+[2025.02.08-20.08.45:853][395]PIE: Server logged in
+[2025.02.08-20.08.45:855][395]PIE: Play in editor total start time 0,426 seconds.
+[2025.02.08-20.08.45:959][396]LogCharacterMovement: Warning: GetSimulationTimeStep() - Max iterations 8 hit while remaining time 0.056123 > MaxSimulationTimeStep (0.050) for 'BP_Player_C_0', movement 'Walking'
+[2025.02.08-20.08.49:348][550]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-20.08.50:600][595]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.08-20.10.28:034][556]LogTemp: Warning: Character Charges Attack
+[2025.02.08-20.10.28:279][564]LogTemp: Warning: Character Releases Attack
+[2025.02.08-20.10.28:968][586]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.02.08-20.10.28:968][586]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_Level_Hub
+[2025.02.08-20.10.28:970][586]LogWorld: UWorld::CleanupWorld for Level_Hub, bSessionEnded=true, bCleanupResources=true
+[2025.02.08-20.10.28:985][586]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.02.08-20.10.28:991][586]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2025.02.08-20.10.28:996][586]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.02.08-20.10.29:016][586]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.02.08-20.10.29:019][586]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 5
+[2025.02.08-20.10.29:019][586]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=5
+[2025.02.08-20.10.29:021][586]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=5
+[2025.02.08-20.10.29:038][586]LogUObjectHash: Compacting FUObjectHashTables data took   1.33ms
+[2025.02.08-20.10.29:199][587]LogPlayLevel: Display: Destroying online subsystem :Context_9
+[2025.02.08-20.11.00:939][524]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/OldCathedral/Meshes/SM_SteelFence_curved.SM_SteelFence_curved
+[2025.02.08-20.11.00:939][524]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/OldCathedral/Meshes/SM_SteelFence_curved.SM_SteelFence_curved
+[2025.02.08-20.11.00:940][524]LogActorFactory: Actor Factory spawned StaticMesh /Game/OldCathedral/Meshes/SM_SteelFence_curved.SM_SteelFence_curved as actor: StaticMeshActor /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.StaticMeshActor_283
+[2025.02.08-20.11.01:508][541]LogUObjectHash: Compacting FUObjectHashTables data took   1.08ms
+[2025.02.08-20.11.01:511][541]LogEditorActor: Deleted 0 Actors (0.028 secs)
+[2025.02.08-20.11.01:530][541]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/OldCathedral/Meshes/SM_SteelFence_curved.SM_SteelFence_curved
+[2025.02.08-20.11.01:530][541]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/OldCathedral/Meshes/SM_SteelFence_curved.SM_SteelFence_curved
+[2025.02.08-20.11.01:532][541]LogActorFactory: Actor Factory spawned StaticMesh /Game/OldCathedral/Meshes/SM_SteelFence_curved.SM_SteelFence_curved as actor: StaticMeshActor /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.StaticMeshActor_287
+[2025.02.08-20.11.08:348][790]Cmd: DELETE
+[2025.02.08-20.11.08:348][790]Cmd: ACTOR DELETE
+[2025.02.08-20.11.08:452][790]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.02.08-20.11.08:468][790]LogUObjectHash: Compacting FUObjectHashTables data took   0.60ms
+[2025.02.08-20.11.08:471][790]LogEditorActor: Deleted 1 Actors (0.123 secs)
+[2025.02.08-20.11.10:084][834]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/OldCathedral/Meshes/SM_SteelFence_01.SM_SteelFence_01
+[2025.02.08-20.11.10:084][834]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/OldCathedral/Meshes/SM_SteelFence_01.SM_SteelFence_01
+[2025.02.08-20.11.10:085][834]LogActorFactory: Actor Factory spawned StaticMesh /Game/OldCathedral/Meshes/SM_SteelFence_01.SM_SteelFence_01 as actor: StaticMeshActor /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.StaticMeshActor_290
+[2025.02.08-20.11.11:024][864]LogUObjectHash: Compacting FUObjectHashTables data took   0.47ms
+[2025.02.08-20.11.11:027][864]LogEditorActor: Deleted 0 Actors (0.018 secs)
+[2025.02.08-20.11.11:044][864]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/OldCathedral/Meshes/SM_SteelFence_01.SM_SteelFence_01
+[2025.02.08-20.11.11:044][864]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/OldCathedral/Meshes/SM_SteelFence_01.SM_SteelFence_01
+[2025.02.08-20.11.11:047][864]LogActorFactory: Actor Factory spawned StaticMesh /Game/OldCathedral/Meshes/SM_SteelFence_01.SM_SteelFence_01 as actor: StaticMeshActor /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.StaticMeshActor_294
+[2025.02.08-20.11.35:211][647]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/OldCathedral/Meshes/SM_SteelFance_02.SM_SteelFance_02
+[2025.02.08-20.11.35:211][647]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/OldCathedral/Meshes/SM_SteelFance_02.SM_SteelFance_02
+[2025.02.08-20.11.35:211][647]LogActorFactory: Actor Factory spawned StaticMesh /Game/OldCathedral/Meshes/SM_SteelFance_02.SM_SteelFance_02 as actor: StaticMeshActor /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.StaticMeshActor_302
+[2025.02.08-20.11.35:755][666]LogUObjectHash: Compacting FUObjectHashTables data took   0.52ms
+[2025.02.08-20.11.35:757][666]LogEditorActor: Deleted 0 Actors (0.015 secs)
+[2025.02.08-20.11.35:773][666]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/OldCathedral/Meshes/SM_SteelFance_02.SM_SteelFance_02
+[2025.02.08-20.11.35:773][666]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/OldCathedral/Meshes/SM_SteelFance_02.SM_SteelFance_02
+[2025.02.08-20.11.35:775][666]LogActorFactory: Actor Factory spawned StaticMesh /Game/OldCathedral/Meshes/SM_SteelFance_02.SM_SteelFance_02 as actor: StaticMeshActor /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.StaticMeshActor_303
+[2025.02.08-20.12.36:316][852]Cmd: SELECT NONE
+[2025.02.08-20.12.41:328][ 33]Cmd: ELEMENT MIRROR X=-1
+[2025.02.08-20.12.43:343][112]Cmd: TRANSACTION UNDO
+[2025.02.08-20.12.43:344][112]LogEditorTransaction: Undo Mirroring Elements
+[2025.02.08-20.13.00:047][732]Cmd: ELEMENT MIRROR Y=-1
+[2025.02.08-20.14.02:187][ 58]Cmd: DELETE
+[2025.02.08-20.14.02:188][ 58]Cmd: ACTOR DELETE
+[2025.02.08-20.14.02:293][ 58]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.02.08-20.14.02:313][ 58]LogUObjectHash: Compacting FUObjectHashTables data took   0.93ms
+[2025.02.08-20.14.02:316][ 58]LogEditorActor: Deleted 1 Actors (0.130 secs)
+[2025.02.08-20.14.47:989][800]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 3561.488770
+[2025.02.08-20.14.48:219][809]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2025.02.08-20.14.48:219][809]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 3561.694092, Update Interval: 301.981262
+[2025.02.08-20.15.32:486][558]Cmd: ELEMENT MIRROR X=-1
+[2025.02.08-20.17.05:190][127]LogDerivedDataCache: C:/Users/Leon/AppData/Local/UnrealEngine/Common/DerivedDataCache: Maintenance finished in +00:00:00.000 and deleted 0 files with total size 0 MiB and 0 empty folders. Scanned 0 files in 1 folders with total size 0 MiB.
+[2025.02.08-20.17.48:212][659]Cmd: TRANSACTION UNDO
+[2025.02.08-20.17.48:212][659]LogEditorTransaction: Undo Move Elements
+[2025.02.08-20.18.35:763][608]Cmd: TRANSACTION UNDO
+[2025.02.08-20.18.35:764][608]LogEditorTransaction: Undo Move Elements
+[2025.02.08-20.18.39:668][746]Cmd: TRANSACTION UNDO
+[2025.02.08-20.18.39:668][746]LogEditorTransaction: Undo Move Elements
+[2025.02.08-20.19.22:965][427]Cmd: TRANSACTION UNDO
+[2025.02.08-20.19.22:965][427]LogEditorTransaction: Undo Clicking on Elements
+[2025.02.08-20.19.42:970][145]Cmd: DELETE
+[2025.02.08-20.19.42:970][145]Cmd: ACTOR DELETE
+[2025.02.08-20.19.43:055][145]LogEditorActor: Deleted Actor: StaticMeshActor
+[2025.02.08-20.19.43:074][145]LogUObjectHash: Compacting FUObjectHashTables data took   0.96ms
+[2025.02.08-20.19.43:077][145]LogEditorActor: Deleted 1 Actors (0.108 secs)
+[2025.02.08-20.19.48:110][312]Cmd: ELEMENT MIRROR Y=-1
+[2025.02.08-20.19.50:654][312]Cmd: TRANSACTION UNDO
+[2025.02.08-20.19.50:654][312]LogEditorTransaction: Undo Mirroring Elements
+[2025.02.08-20.19.58:874][539]Cmd: ELEMENT MIRROR Y=-1
+[2025.02.08-20.20.18:309][317]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/OldCathedral/Meshes/SM_SteelFance_02.SM_SteelFance_02
+[2025.02.08-20.20.18:309][317]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/OldCathedral/Meshes/SM_SteelFance_02.SM_SteelFance_02
+[2025.02.08-20.20.18:309][317]LogActorFactory: Actor Factory spawned StaticMesh /Game/OldCathedral/Meshes/SM_SteelFance_02.SM_SteelFance_02 as actor: StaticMeshActor /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.StaticMeshActor_414
+[2025.02.08-20.20.19:029][344]LogUObjectHash: Compacting FUObjectHashTables data took   0.90ms
+[2025.02.08-20.20.19:032][344]LogEditorActor: Deleted 0 Actors (0.020 secs)
+[2025.02.08-20.20.19:043][344]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/OldCathedral/Meshes/SM_SteelFance_02.SM_SteelFance_02
+[2025.02.08-20.20.19:043][344]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/OldCathedral/Meshes/SM_SteelFance_02.SM_SteelFance_02
+[2025.02.08-20.20.19:045][344]LogActorFactory: Actor Factory spawned StaticMesh /Game/OldCathedral/Meshes/SM_SteelFance_02.SM_SteelFance_02 as actor: StaticMeshActor /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.StaticMeshActor_415
+[2025.02.08-20.20.48:164][577]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 3921.661377
+[2025.02.08-20.20.48:445][583]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2025.02.08-20.20.48:445][584]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 3921.893311, Update Interval: 309.443024
+[2025.02.08-20.22.45:350][665]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/OldCathedral/Meshes/SM_SteelFence_01.SM_SteelFence_01
+[2025.02.08-20.22.45:350][665]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/OldCathedral/Meshes/SM_SteelFence_01.SM_SteelFence_01
+[2025.02.08-20.22.45:350][665]LogActorFactory: Actor Factory spawned StaticMesh /Game/OldCathedral/Meshes/SM_SteelFence_01.SM_SteelFence_01 as actor: StaticMeshActor /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.StaticMeshActor_417
+[2025.02.08-20.22.46:594][712]LogUObjectHash: Compacting FUObjectHashTables data took   1.22ms
+[2025.02.08-20.22.46:596][712]LogEditorActor: Deleted 0 Actors (0.022 secs)
+[2025.02.08-20.22.46:608][712]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/OldCathedral/Meshes/SM_SteelFence_01.SM_SteelFence_01
+[2025.02.08-20.22.46:608][712]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/OldCathedral/Meshes/SM_SteelFence_01.SM_SteelFence_01
+[2025.02.08-20.22.46:611][712]LogActorFactory: Actor Factory spawned StaticMesh /Game/OldCathedral/Meshes/SM_SteelFence_01.SM_SteelFence_01 as actor: StaticMeshActor /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.StaticMeshActor_419
+[2025.02.08-20.23.53:673][245]Cmd: TRANSACTION UNDO
+[2025.02.08-20.23.53:673][245]LogEditorTransaction: Undo Scale Elements
+[2025.02.08-20.24.46:465][ 94]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/OldCathedral/Meshes/SM_SteelFance_02.SM_SteelFance_02
+[2025.02.08-20.24.46:465][ 94]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/OldCathedral/Meshes/SM_SteelFance_02.SM_SteelFance_02
+[2025.02.08-20.24.46:466][ 94]LogActorFactory: Actor Factory spawned StaticMesh /Game/OldCathedral/Meshes/SM_SteelFance_02.SM_SteelFance_02 as actor: StaticMeshActor /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.StaticMeshActor_424
+[2025.02.08-20.24.47:139][120]LogUObjectHash: Compacting FUObjectHashTables data took   0.60ms
+[2025.02.08-20.24.47:142][120]LogEditorActor: Deleted 0 Actors (0.022 secs)
+[2025.02.08-20.24.47:161][120]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/OldCathedral/Meshes/SM_SteelFance_02.SM_SteelFance_02
+[2025.02.08-20.24.47:161][120]LogActorFactory: Actor Factory attempting to spawn StaticMesh /Game/OldCathedral/Meshes/SM_SteelFance_02.SM_SteelFance_02
+[2025.02.08-20.24.47:164][120]LogActorFactory: Actor Factory spawned StaticMesh /Game/OldCathedral/Meshes/SM_SteelFance_02.SM_SteelFance_02 as actor: StaticMeshActor /Game/Levels/Level_Hub.Level_Hub:PersistentLevel.StaticMeshActor_429
+[2025.02.08-20.26.33:161][220]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2025.02.08-20.26.33:300][220]Cmd: OBJ SAVEPACKAGE PACKAGE="/Game/Levels/Level_Hub" FILE="../../../../../../Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Levels/Level_Hub.umap" SILENT=true AUTOSAVING=false KEEPDIRTY=false
+[2025.02.08-20.26.33:357][220]LogUObjectHash: Compacting FUObjectHashTables data took   0.65ms
+[2025.02.08-20.26.34:194][220]LogSavePackage: Moving output files for package: /Game/Levels/Level_Hub
+[2025.02.08-20.26.34:195][220]LogSavePackage: Moving '../../../../../../Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Saved/Level_HubE62323924F6E0CE0818733840853AC6D.tmp' to '../../../../../../Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Levels/Level_Hub.umap'
+[2025.02.08-20.26.34:230][220]LogFileHelpers: Saving map 'Level_Hub' took 0.932
+[2025.02.08-20.26.34:262][220]LogFileHelpers: InternalPromptForCheckoutAndSave took 1.10 sec (total: 8.54 sec)
+[2025.02.08-20.26.34:330][220]LogContentValidation: Display: Starting to validate 1 assets
+[2025.02.08-20.26.34:330][220]LogContentValidation: Enabled validators:
+[2025.02.08-20.26.34:330][220]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2025.02.08-20.26.34:330][220]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2025.02.08-20.26.34:330][220]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2025.02.08-20.26.34:330][220]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2025.02.08-20.26.34:330][220]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2025.02.08-20.26.34:330][220]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2025.02.08-20.26.34:331][220]AssetCheck: /Game/Levels/Level_Hub Validating asset
+[2025.02.08-20.26.39:215][383]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 4272.716309
+[2025.02.08-20.26.39:461][390]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2025.02.08-20.26.39:462][390]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 4272.927246, Update Interval: 319.369476
