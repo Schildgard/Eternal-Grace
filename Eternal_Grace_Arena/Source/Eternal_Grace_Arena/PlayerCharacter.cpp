@@ -269,12 +269,12 @@ void APlayerCharacter::UpdateStatusEffectVisualization(float DeltaSeconds)
 	{
 		if (PoisonPostProcess->BlendWeight < 1.0f)
 		{
-	//		PoisonPostProcess->BlendWeight = FMath::Clamp(PoisonPostProcess->BlendWeight + (BlendSpeed * DeltaSeconds), 0.0f, 1.0f);
+			PoisonPostProcess->BlendWeight = FMath::Clamp(PoisonPostProcess->BlendWeight + (BlendSpeed * DeltaSeconds), 0.0f, 1.0f);
 		}
 	}
 	else if (PoisonPostProcess->BlendWeight > 0.0f)
 	{
-	//	PoisonPostProcess->BlendWeight =  FMath::Clamp(PoisonPostProcess->BlendWeight - (BlendSpeed * DeltaSeconds), 0.0f, 1.0f);
+		PoisonPostProcess->BlendWeight =  FMath::Clamp(PoisonPostProcess->BlendWeight - (BlendSpeed * DeltaSeconds), 0.0f, 1.0f);
 	}
 
 
