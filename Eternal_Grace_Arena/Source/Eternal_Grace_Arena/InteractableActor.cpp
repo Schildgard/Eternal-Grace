@@ -64,6 +64,7 @@ void AInteractableActor::UpdateStatus()
 		}
 		else
 		{
+			NiagaraEffect->Activate(false);
 			UE_LOG(LogTemp, Warning, TEXT("%s is not Active"), *GetName())
 		}
 	}
@@ -88,6 +89,15 @@ void AInteractableActor::BeginPlay()
 		//SET IS ACTIVE DEPENDING ON DICTIONARY OF GAME INSTANCE
 		ActiveGameInstance->OnObjectStateChange.AddDynamic(this, &AInteractableActor::UpdateStatus);
 		UpdateStatus();
+	}
+
+	if (!isActive)
+	{
+		NiagaraEffect->SetActive(false);
+	}
+	else
+	{
+		NiagaraEffect->SetActive(true);
 	}
 
 }
