@@ -5,6 +5,7 @@
 #include "CoreMinimal.h"
 #include "Eternal_Grace_ArenaEnemy.h"
 #include "I_Interactable.h"
+#include "DialogueWidget.h"
 #include "Eternal_Grace_ArenaNPC.generated.h"
 
 /**
@@ -36,9 +37,12 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (AllowPrivateAccess))
 	UAnimatedWidget* InteractInfoWidget;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Dialogues, meta = (AllowPrivateAccess))
-	UAnimatedWidget* DialogueWidget;
+	UDialogueWidget* DialogueWidget;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Dialogues, meta = (AllowPrivateAccess))
 	TArray<FText> DialogueTexts;
+
+	UPROPERTY()
+	int TextCounter;
 
 
 	virtual void BeginPlay()override;

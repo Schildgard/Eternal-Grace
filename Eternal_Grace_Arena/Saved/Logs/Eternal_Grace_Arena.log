@@ -1660,3 +1660,1049 @@ LogConfig: Set CVar [[r.VRS.ContrastAdaptiveShading:1]]
 [2025.02.11-11.40.41:620][  4]LogUObjectHash: Compacting FUObjectHashTables data took   2.67ms
 [2025.02.11-11.40.41:670][  5]LogPlayLevel: Display: Destroying online subsystem :Context_6
 [2025.02.11-11.40.44:896][194]LogDerivedDataCache: C:/Users/Leon/AppData/Local/UnrealEngine/Common/DerivedDataCache: Maintenance finished in +00:00:00.001 and deleted 0 files with total size 0 MiB and 0 empty folders. Scanned 0 files in 1 folders with total size 0 MiB.
+[2025.02.11-11.43.52:429][349]LogSlate: Window 'BP_NPC_Loretta' being destroyed
+[2025.02.11-11.43.52:438][349]LogSlate: Window 'BP_NPC_Loretta' being destroyed
+[2025.02.11-11.43.52:478][349]LogWorld: UWorld::CleanupWorld for World_4, bSessionEnded=true, bCleanupResources=true
+[2025.02.11-11.43.52:478][349]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.02.11-11.43.52:599][349]LogUObjectHash: Compacting FUObjectHashTables data took   2.36ms
+[2025.02.11-11.43.56:417][626]LogToolMenus: Warning: Menu item not found: 'Rename' for insert: 'BatchRenameObject'
+[2025.02.11-11.44.12:033][839]Running G:/Program Files/Epic Games/UE_5.5/Engine/Build/BatchFiles/Build.bat  -projectfiles -project="G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Eternal_Grace_Arena.uproject" -game -rocket -progress
+[2025.02.11-11.44.12:246][839]Using bundled DotNet SDK version: 8.0.300
+[2025.02.11-11.44.12:246][839]Running UnrealBuildTool: dotnet "..\..\Engine\Binaries\DotNET\UnrealBuildTool\UnrealBuildTool.dll" -projectfiles -project="G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Eternal_Grace_Arena.uproject" -game -rocket -progress
+[2025.02.11-11.44.14:062][839]Log file: C:\Users\Leon\AppData\Local\UnrealBuildTool\Log_GPF.txt
+[2025.02.11-11.44.14:566][839]
+[2025.02.11-11.44.14:566][839]Generating VisualStudio2022 project files:
+[2025.02.11-11.44.14:566][839]Discovering modules, targets and source code for project...
+[2025.02.11-11.44.22:656][839]Binding IntelliSense data...
+[2025.02.11-11.44.51:242][839]Binding IntelliSense data... 50%
+[2025.02.11-11.44.51:242][839]Warning: G:\Repository\Eternal-Grace-Arena\Eternal_Grace_Arena\Eternal_Grace_Arena.uproject does not list plugin 'GameplayAbilities' as a dependency, but module 'Eternal_Grace_Arena' depends on 'GameplayAbilities'.
+[2025.02.11-11.44.55:204][839]Binding IntelliSense data... 100%
+[2025.02.11-11.44.55:204][839]Writing project files...
+[2025.02.11-11.45.02:978][839]Writing project files... 100%
+[2025.02.11-11.45.02:978][839]
+[2025.02.11-11.45.02:978][839]Generating QueryTargets data for editor...
+[2025.02.11-11.45.02:978][839]Total execution time: 50.70 seconds
+[2025.02.11-11.45.03:616][839]LogStreaming: Display: FlushAsyncLoading(539): 1 QueuedPackages, 0 AsyncPackages
+[2025.02.11-11.45.03:662][839]Candidate modules for hot reload:
+[2025.02.11-11.45.03:663][839]  Eternal_Grace_Arena
+[2025.02.11-11.45.03:678][839]Launching UnrealBuildTool... [G:/Program Files/Epic Games/UE_5.5/Engine/Build/BatchFiles/Build.bat  -ModuleWithSuffix=Eternal_Grace_Arena,8307 Eternal_Grace_ArenaEditor Win64 Development -Project="G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Eternal_Grace_Arena.uproject" "G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Eternal_Grace_Arena.uproject"  -IgnoreJunk]
+[2025.02.11-11.45.29:449][839]CompilerResultsLog: Using bundled DotNet SDK version: 8.0.300
+[2025.02.11-11.45.29:449][839]CompilerResultsLog: Running UnrealBuildTool: dotnet "..\..\Engine\Binaries\DotNET\UnrealBuildTool\UnrealBuildTool.dll" -ModuleWithSuffix=Eternal_Grace_Arena,8307 Eternal_Grace_ArenaEditor Win64 Development -Project="G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Eternal_Grace_Arena.uproject" "G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Eternal_Grace_Arena.uproject"  -IgnoreJunk
+[2025.02.11-11.45.29:449][839]CompilerResultsLog: Log file: C:\Users\Leon\AppData\Local\UnrealBuildTool\Log.txt
+[2025.02.11-11.45.29:449][839]CompilerResultsLog: Using 'git status' to determine working set for adaptive non-unity build (G:\Repository\Eternal-Grace-Arena).
+[2025.02.11-11.45.29:449][839]CompilerResultsLog: Creating makefile for Eternal_Grace_ArenaEditor (command line arguments changed)
+[2025.02.11-11.45.29:449][839]CompilerResultsLog: Warning: G:\Repository\Eternal-Grace-Arena\Eternal_Grace_Arena\Eternal_Grace_Arena.uproject does not list plugin 'GameplayAbilities' as a dependency, but module 'Eternal_Grace_Arena' depends on 'GameplayAbilities'.
+[2025.02.11-11.45.29:449][839]CompilerResultsLog: Parsing headers for Eternal_Grace_ArenaEditor
+[2025.02.11-11.45.29:449][839]CompilerResultsLog:   Running Internal UnrealHeaderTool G:\Repository\Eternal-Grace-Arena\Eternal_Grace_Arena\Eternal_Grace_Arena.uproject G:\Repository\Eternal-Grace-Arena\Eternal_Grace_Arena\Intermediate\Build\Win64\Eternal_Grace_ArenaEditor\Development\Eternal_Grace_ArenaEditor.uhtmanifest -WarningsAsErrors -installed
+[2025.02.11-11.45.29:449][839]CompilerResultsLog: Total of 3 written
+[2025.02.11-11.45.29:449][839]CompilerResultsLog: Reflection code generated for Eternal_Grace_ArenaEditor in 5.0733547 seconds
+[2025.02.11-11.45.29:449][839]CompilerResultsLog: Building Eternal_Grace_ArenaEditor...
+[2025.02.11-11.45.29:449][839]CompilerResultsLog: Using Visual Studio 2022 14.38.33141 toolchain (G:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130) and Windows 10.0.22621.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+[2025.02.11-11.45.29:449][839]CompilerResultsLog: Determining max actions to execute in parallel (4 physical cores, 8 logical cores)
+[2025.02.11-11.45.29:449][839]CompilerResultsLog:   Executing up to 4 processes, one per physical core
+[2025.02.11-11.45.29:449][839]CompilerResultsLog: Using Unreal Build Accelerator local executor to run 6 action(s)
+[2025.02.11-11.45.29:449][839]CompilerResultsLog:   Storage capacity 40Gb
+[2025.02.11-11.45.29:450][839]CompilerResultsLog: ---- Starting trace: 250211_124513 ----
+[2025.02.11-11.45.29:450][839]CompilerResultsLog: UbaSessionServer - Disable remote execution (remote sessions will finish current processes)
+[2025.02.11-11.45.29:450][839]CompilerResultsLog: ------ Building 6 action(s) started ------
+[2025.02.11-11.45.29:450][839]CompilerResultsLog: [1/6] Compile [x64] Module.Eternal_Grace_Arena.2.cpp
+[2025.02.11-11.45.29:450][839]CompilerResultsLog: [2/6] Compile [x64] Module.Eternal_Grace_Arena.1.cpp
+[2025.02.11-11.45.29:450][839]CompilerResultsLog: [3/6] Compile [x64] Module.Eternal_Grace_Arena.3.cpp
+[2025.02.11-11.45.29:450][839]CompilerResultsLog: G:\Repository\Eternal-Grace-Arena\Eternal_Grace_Arena\Source\Eternal_Grace_Arena\AnimatedWidget.cpp(15): warning C4996: 'UUserWidget::RemoveFromViewport': RemoveFromViewport is deprecated. Use RemoveFromParent instead. Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+[2025.02.11-11.45.29:450][839]CompilerResultsLog: G:\Repository\Eternal-Grace-Arena\Eternal_Grace_Arena\Source\Eternal_Grace_Arena\CustomPlayerController.cpp(73): warning C4996: 'UUserWidget::RemoveFromViewport': RemoveFromViewport is deprecated. Use RemoveFromParent instead. Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+[2025.02.11-11.45.29:450][839]CompilerResultsLog: G:\Repository\Eternal-Grace-Arena\Eternal_Grace_Arena\Source\Eternal_Grace_Arena\Eternal_Grace_ArenaEnemy.cpp(33): warning C4996: 'UPawnSensingComponent': Pawn sensing is deprecated. AI Perception should be used instead. Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+[2025.02.11-11.45.29:450][839]CompilerResultsLog: G:\Repository\Eternal-Grace-Arena\Eternal_Grace_Arena\Source\Eternal_Grace_Arena\Eternal_Grace_ArenaEnemy.cpp(116): warning C4996: 'UPawnSensingComponent::OnSeePawn': Pawn sensing is deprecated. AI Perception should be used instead. Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+[2025.02.11-11.45.29:450][839]CompilerResultsLog: G:\Program Files\Epic Games\UE_5.5\Engine\Source\Runtime\CoreUObject\Public\UObject\Object.h(150): warning C4996: 'UPawnSensingComponent': Pawn sensing is deprecated. AI Perception should be used instead. Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+[2025.02.11-11.45.29:450][839]CompilerResultsLog: G:\Program Files\Epic Games\UE_5.5\Engine\Source\Runtime\CoreUObject\Public\UObject\Object.h(150): note: der Vorlageninstanziierungskontext (der ?lteste zuerst) ist
+[2025.02.11-11.45.29:450][839]CompilerResultsLog: G:\Repository\Eternal-Grace-Arena\Eternal_Grace_Arena\Source\Eternal_Grace_Arena\Eternal_Grace_ArenaEnemy.cpp(33): note: Siehe Verweis auf die gerade kompilierte Instanziierung "TReturnType *UObject::CreateDefaultSubobject<UPawnSensingComponent>(FName,bool)" der Funktions-Vorlage.
+[2025.02.11-11.45.29:450][839]CompilerResultsLog:         with
+[2025.02.11-11.45.29:450][839]CompilerResultsLog:         [
+[2025.02.11-11.45.29:450][839]CompilerResultsLog:             TReturnType=UPawnSensingComponent
+[2025.02.11-11.45.29:450][839]CompilerResultsLog:         ]
+[2025.02.11-11.45.29:450][839]CompilerResultsLog: G:\Program Files\Epic Games\UE_5.5\Engine\Source\Runtime\CoreUObject\Public\UObject\Object.h(150): warning C4996: 'UPawnSensingComponent::StaticClass': Pawn sensing is deprecated. AI Perception should be used instead. Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+[2025.02.11-11.45.29:450][839]CompilerResultsLog: [4/6] Link [x64] UnrealEditor-Eternal_Grace_Arena-8307.lib
+[2025.02.11-11.45.29:450][839]CompilerResultsLog:    Bibliothek "G:\Repository\Eternal-Grace-Arena\Eternal_Grace_Arena\Intermediate\Build\Win64\x64\UnrealEditor\Development\Eternal_Grace_Arena\UnrealEditor-Eternal_Grace_Arena-8307.lib" und Objekt "G:\Repository\Eternal-Grace-Arena\Eternal_Grace_Arena\Intermediate\Build\Win64\x64\UnrealEditor\Development\Eternal_Grace_Arena\UnrealEditor-Eternal_Grace_Arena-8307.exp" werden erstellt.
+[2025.02.11-11.45.29:450][839]CompilerResultsLog: [5/6] Link [x64] UnrealEditor-Eternal_Grace_Arena-8307.dll
+[2025.02.11-11.45.29:450][839]CompilerResultsLog:    Objekt G:\Repository\Eternal-Grace-Arena\Eternal_Grace_Arena\Binaries\Win64\UnrealEditor-Eternal_Grace_Arena-8307.exp wird erstellt
+[2025.02.11-11.45.29:450][839]CompilerResultsLog: [6/6] WriteMetadata Eternal_Grace_ArenaEditor.target (UBA disabled)
+[2025.02.11-11.45.29:450][839]CompilerResultsLog: Trace file written to C:/Users/Leon/AppData/Local/UnrealBuildTool/Log.uba with size 4.4kb
+[2025.02.11-11.45.29:450][839]CompilerResultsLog: Total time in Unreal Build Accelerator local executor: 15.66 seconds
+[2025.02.11-11.45.29:450][839]CompilerResultsLog: Total execution time: 25.30 seconds
+[2025.02.11-11.45.29:450][839]LogMainFrame: MainFrame: Module compiling took 25.833 seconds
+[2025.02.11-11.45.29:484][839]LogUObjectHash: Compacting FUObjectHashTables data took   2.24ms
+[2025.02.11-11.45.29:568][839]LogClass: UPackage /Script/Eternal_Grace_Arena Reload.
+[2025.02.11-11.45.29:590][839]LogClass: Could not find existing class DialogueWidget in package /Script/Eternal_Grace_Arena for reload, assuming new or modified class
+[2025.02.11-11.45.30:144][839]LogUObjectHash: Compacting FUObjectHashTables data took   2.07ms
+[2025.02.11-11.45.30:181][839]Display: HotReload took 26.6s.
+[2025.02.11-11.45.30:181][839]Display: Reload/Re-instancing Complete: 1 package changed, 1 class new, 60 classes unchanged, 1 enum unchanged, 3 scriptstructs unchanged, 112 functions remapped, 3 scriptstructs remapped
+[2025.02.11-11.45.30:182][839]Warning: HotReload operation took 26.6s.
+[2025.02.11-11.45.30:215][839]LogSlate: Window 'Add C++ Class' being destroyed
+[2025.02.11-11.45.32:557][839]LogVSAccessor: Warning: Couldn't goto line number '1' in 'G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Source/Eternal_Grace_Arena/DialogueWidget.h'.
+[2025.02.11-11.45.32:558][839]LogVSAccessor: Warning: Couldn't open file 'G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Source/Eternal_Grace_Arena/DialogueWidget.cpp'.
+[2025.02.11-11.45.32:560][839]LogHotReload: New module detected: UnrealEditor-Eternal_Grace_Arena-8307.dll
+[2025.02.11-11.45.32:616][839]LogHotReload: Starting Hot-Reload from IDE
+[2025.02.11-11.45.32:792][839]LogUObjectHash: Compacting FUObjectHashTables data took   2.95ms
+[2025.02.11-11.45.32:889][839]LogUObjectHash: Compacting FUObjectHashTables data took   4.18ms
+[2025.02.11-11.45.32:948][839]Display: HotReload took  0.3s.
+[2025.02.11-11.45.32:948][839]Display: Reload/Re-instancing Complete: 3 scriptstructs remapped
+[2025.02.11-11.45.33:900][840]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 397.901550
+[2025.02.11-11.45.34:917][844]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2025.02.11-11.45.34:917][844]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 398.585266, Update Interval: 310.391541
+[2025.02.11-11.49.24:051][531]LogHotReload: New module detected: UnrealEditor-Eternal_Grace_Arena-0003.dll
+[2025.02.11-11.49.25:723][536]LogHotReload: Starting Hot-Reload from IDE
+[2025.02.11-11.49.25:937][536]LogUObjectHash: Compacting FUObjectHashTables data took   2.67ms
+[2025.02.11-11.49.26:015][536]LogClass: UPackage /Script/Eternal_Grace_Arena Reload.
+[2025.02.11-11.49.26:015][536]LogClass: UClass DialogueWidget Reload.
+[2025.02.11-11.49.26:038][536]LogClass: Could not find existing class DialogueWidget in package /Script/Eternal_Grace_Arena for reload, assuming new or modified class
+[2025.02.11-11.49.26:038][536]LogClass: Function UpdateDialogueText is new or belongs to a modified class.
+[2025.02.11-11.49.26:349][536]Re-instancing DialogueWidget after reload.
+[2025.02.11-11.49.26:680][536]LogUObjectHash: Compacting FUObjectHashTables data took   2.16ms
+[2025.02.11-11.49.26:766][536]Display: HotReload took  1.0s.
+[2025.02.11-11.49.26:766][536]Display: Reload/Re-instancing Complete: 1 package changed, 1 class changed, 60 classes unchanged, 1 enum unchanged, 3 scriptstructs unchanged, 112 functions remapped, 3 scriptstructs remapped
+[2025.02.11-11.49.41:991][394]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_6
+[2025.02.11-11.49.42:032][395]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_7
+[2025.02.11-11.49.42:076][396]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_8
+[2025.02.11-11.49.54:436][251]LogAssetEditorSubsystem: Opening Asset editor for WidgetBlueprint /Game/Blueprints/UI_Blueprints/BP_DialogueWidget.BP_DialogueWidget
+[2025.02.11-11.49.54:438][251]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_9
+[2025.02.11-11.49.54:451][251]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_10
+[2025.02.11-11.49.54:464][251]LogSlate: Warning: The command 'UMGEditor.OpenAnimDrawer' has the same default chord as 'EditorViewport.Next' [Ctrl+Shift+Space Bar]
+[2025.02.11-11.49.55:302][251]LogSlateStyle: Warning: Missing Resource from 'CoreStyle' Style: 'Unable to find SlateColor 'Foreground'.'
+[2025.02.11-11.49.55:302][251]LogSlate: Took 0.000163 seconds to synchronously load lazily loaded font '../../../Engine/Content/Editor/Slate/Fonts/FontAwesome.ttf' (139K)
+[2025.02.11-11.50.04:395][710]LogUObjectHash: Compacting FUObjectHashTables data took   2.74ms
+[2025.02.11-11.50.05:897][799]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2025.02.11-11.50.05:953][799]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/Blueprints/UI_Blueprints/BP_DialogueWidget] ([2] browsable assets)...
+[2025.02.11-11.50.05:953][799]OBJ SavePackage: Finished generating thumbnails for package [/Game/Blueprints/UI_Blueprints/BP_DialogueWidget]
+[2025.02.11-11.50.05:965][799]LogSavePackage: Moving output files for package: /Game/Blueprints/UI_Blueprints/BP_DialogueWidget
+[2025.02.11-11.50.05:965][799]LogSavePackage: Moving '../../../../../../Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Saved/BP_DialogueWidgetFA30F36A493573962A17BD809C0E3B2D.tmp' to '../../../../../../Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Blueprints/UI_Blueprints/BP_DialogueWidget.uasset'
+[2025.02.11-11.50.05:980][799]LogFileHelpers: InternalPromptForCheckoutAndSave took 82.470 ms (total: 179.622 ms)
+[2025.02.11-11.50.06:038][799]LogContentValidation: Display: Starting to validate 1 assets
+[2025.02.11-11.50.06:038][799]LogContentValidation: Enabled validators:
+[2025.02.11-11.50.06:038][799]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2025.02.11-11.50.06:038][799]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2025.02.11-11.50.06:038][799]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2025.02.11-11.50.06:038][799]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2025.02.11-11.50.06:038][799]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2025.02.11-11.50.06:038][799]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2025.02.11-11.50.06:039][799]AssetCheck: /Game/Blueprints/UI_Blueprints/BP_DialogueWidget Validating asset
+[2025.02.11-11.50.13:306][173]LogUObjectHash: Compacting FUObjectHashTables data took   2.31ms
+[2025.02.11-11.50.14:981][268]LogEditorTransaction: Undo Remove Widget
+[2025.02.11-11.50.17:639][406]LogUObjectHash: Compacting FUObjectHashTables data took   2.23ms
+[2025.02.11-11.50.18:601][455]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2025.02.11-11.50.18:668][455]OBJ SavePackage: Generating thumbnails for [2] asset(s) in package [/Game/Blueprints/UI_Blueprints/BP_DialogueWidget] ([2] browsable assets)...
+[2025.02.11-11.50.18:676][455]OBJ SavePackage:     Rendered thumbnail for [WidgetBlueprint /Game/Blueprints/UI_Blueprints/BP_DialogueWidget.BP_DialogueWidget]
+[2025.02.11-11.50.18:676][455]OBJ SavePackage: Finished generating thumbnails for package [/Game/Blueprints/UI_Blueprints/BP_DialogueWidget]
+[2025.02.11-11.50.18:686][455]LogSavePackage: Moving output files for package: /Game/Blueprints/UI_Blueprints/BP_DialogueWidget
+[2025.02.11-11.50.18:686][455]LogSavePackage: Moving '../../../../../../Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Saved/BP_DialogueWidgetD9525A0C4EA874645B5DF9993722C853.tmp' to '../../../../../../Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Blueprints/UI_Blueprints/BP_DialogueWidget.uasset'
+[2025.02.11-11.50.18:700][455]LogFileHelpers: InternalPromptForCheckoutAndSave took 98.765 ms (total: 278.387 ms)
+[2025.02.11-11.50.18:767][455]LogContentValidation: Display: Starting to validate 1 assets
+[2025.02.11-11.50.18:767][455]LogContentValidation: Enabled validators:
+[2025.02.11-11.50.18:767][455]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2025.02.11-11.50.18:767][455]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2025.02.11-11.50.18:767][455]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2025.02.11-11.50.18:767][455]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2025.02.11-11.50.18:767][455]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2025.02.11-11.50.18:767][455]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2025.02.11-11.50.18:771][455]AssetCheck: /Game/Blueprints/UI_Blueprints/BP_DialogueWidget Validating asset
+[2025.02.11-11.50.47:522][644]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 711.523926
+[2025.02.11-11.50.47:737][654]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2025.02.11-11.50.47:737][654]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 711.691162, Update Interval: 358.745697
+[2025.02.11-11.51.30:321][687]LogBlueprint: Warning: Reparenting blueprint WidgetBlueprint /Game/Blueprints/UI_Blueprints/BP_DialogueWidget.BP_DialogueWidget from AnimatedWidget to DialogueWidget...
+[2025.02.11-11.51.30:464][687]LogUObjectHash: Compacting FUObjectHashTables data took   2.05ms
+[2025.02.11-11.51.33:605][853]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2025.02.11-11.51.33:665][853]OBJ SavePackage: Generating thumbnails for [2] asset(s) in package [/Game/Blueprints/UI_Blueprints/BP_DialogueWidget] ([2] browsable assets)...
+[2025.02.11-11.51.33:672][853]OBJ SavePackage:     Rendered thumbnail for [WidgetBlueprint /Game/Blueprints/UI_Blueprints/BP_DialogueWidget.BP_DialogueWidget]
+[2025.02.11-11.51.33:672][853]OBJ SavePackage: Finished generating thumbnails for package [/Game/Blueprints/UI_Blueprints/BP_DialogueWidget]
+[2025.02.11-11.51.33:682][853]LogSavePackage: Moving output files for package: /Game/Blueprints/UI_Blueprints/BP_DialogueWidget
+[2025.02.11-11.51.33:683][853]LogSavePackage: Moving '../../../../../../Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Saved/BP_DialogueWidgetF34BDB0D4722E9A2D00C05960C351A33.tmp' to '../../../../../../Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Blueprints/UI_Blueprints/BP_DialogueWidget.uasset'
+[2025.02.11-11.51.33:701][853]LogFileHelpers: InternalPromptForCheckoutAndSave took 95.523 ms (total: 373.911 ms)
+[2025.02.11-11.51.33:744][853]LogContentValidation: Display: Starting to validate 1 assets
+[2025.02.11-11.51.33:744][853]LogContentValidation: Enabled validators:
+[2025.02.11-11.51.33:744][853]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2025.02.11-11.51.33:744][853]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2025.02.11-11.51.33:744][853]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2025.02.11-11.51.33:744][853]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2025.02.11-11.51.33:744][853]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2025.02.11-11.51.33:744][853]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2025.02.11-11.51.33:745][853]AssetCheck: /Game/Blueprints/UI_Blueprints/BP_DialogueWidget Validating asset
+[2025.02.11-11.51.34:895][905]LogUObjectHash: Compacting FUObjectHashTables data took   2.24ms
+[2025.02.11-11.51.36:286][975]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2025.02.11-11.51.36:342][975]OBJ SavePackage: Generating thumbnails for [2] asset(s) in package [/Game/Blueprints/UI_Blueprints/BP_DialogueWidget] ([2] browsable assets)...
+[2025.02.11-11.51.36:344][975]OBJ SavePackage:     Rendered thumbnail for [WidgetBlueprint /Game/Blueprints/UI_Blueprints/BP_DialogueWidget.BP_DialogueWidget]
+[2025.02.11-11.51.36:345][975]OBJ SavePackage: Finished generating thumbnails for package [/Game/Blueprints/UI_Blueprints/BP_DialogueWidget]
+[2025.02.11-11.51.36:353][975]LogSavePackage: Moving output files for package: /Game/Blueprints/UI_Blueprints/BP_DialogueWidget
+[2025.02.11-11.51.36:354][975]LogSavePackage: Moving '../../../../../../Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Saved/BP_DialogueWidget0DF08B3243ABB94D5952ECA029AF09C1.tmp' to '../../../../../../Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Blueprints/UI_Blueprints/BP_DialogueWidget.uasset'
+[2025.02.11-11.51.36:363][975]LogFileHelpers: InternalPromptForCheckoutAndSave took 76.187 ms (total: 450.098 ms)
+[2025.02.11-11.51.36:408][975]LogContentValidation: Display: Starting to validate 1 assets
+[2025.02.11-11.51.36:408][975]LogContentValidation: Enabled validators:
+[2025.02.11-11.51.36:408][975]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2025.02.11-11.51.36:408][975]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2025.02.11-11.51.36:408][975]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2025.02.11-11.51.36:408][975]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2025.02.11-11.51.36:408][975]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2025.02.11-11.51.36:408][975]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2025.02.11-11.51.36:409][975]AssetCheck: /Game/Blueprints/UI_Blueprints/BP_DialogueWidget Validating asset
+[2025.02.11-11.51.46:200][465]LogSlate: Window 'BP_DialogueWidget' being destroyed
+[2025.02.11-11.51.46:205][465]LogSlate: Window 'BP_DialogueWidget' being destroyed
+[2025.02.11-11.51.46:215][465]LogWorld: UWorld::CleanupWorld for World_10, bSessionEnded=true, bCleanupResources=true
+[2025.02.11-11.51.46:215][465]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.02.11-11.51.46:224][465]LogWorld: UWorld::CleanupWorld for World_9, bSessionEnded=true, bCleanupResources=true
+[2025.02.11-11.51.46:224][465]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.02.11-11.51.46:320][465]LogUObjectHash: Compacting FUObjectHashTables data took   1.71ms
+[2025.02.11-11.51.47:953][599]LogAssetEditorSubsystem: Opening Asset editor for WidgetBlueprint /Game/Blueprints/UI_Blueprints/BP_DialogueWidget.BP_DialogueWidget
+[2025.02.11-11.51.47:954][599]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_15
+[2025.02.11-11.51.47:963][599]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_16
+[2025.02.11-11.54.18:434][580]LogSlate: Window 'BP_DialogueWidget' being destroyed
+[2025.02.11-11.54.18:439][580]LogSlate: Window 'BP_DialogueWidget' being destroyed
+[2025.02.11-11.54.18:448][580]LogWorld: UWorld::CleanupWorld for World_16, bSessionEnded=true, bCleanupResources=true
+[2025.02.11-11.54.18:448][580]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.02.11-11.54.18:461][580]LogWorld: UWorld::CleanupWorld for World_15, bSessionEnded=true, bCleanupResources=true
+[2025.02.11-11.54.18:461][580]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.02.11-11.54.18:564][580]LogUObjectHash: Compacting FUObjectHashTables data took   2.56ms
+[2025.02.11-11.54.30:182][615]LogAssetEditorSubsystem: Opening Asset editor for WidgetBlueprint /Game/Blueprints/UI_Blueprints/BP_DialogueWidget.BP_DialogueWidget
+[2025.02.11-11.54.30:182][615]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_17
+[2025.02.11-11.54.30:201][615]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_18
+[2025.02.11-11.54.58:315][262]LogUObjectHash: Compacting FUObjectHashTables data took   2.46ms
+[2025.02.11-11.55.00:592][418]LogEditorTransaction: Undo Remove Widget
+[2025.02.11-11.55.03:170][537]LogUObjectHash: Compacting FUObjectHashTables data took   1.70ms
+[2025.02.11-11.55.04:015][584]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2025.02.11-11.55.04:088][584]OBJ SavePackage: Generating thumbnails for [2] asset(s) in package [/Game/Blueprints/UI_Blueprints/BP_DialogueWidget] ([2] browsable assets)...
+[2025.02.11-11.55.04:094][584]OBJ SavePackage:     Rendered thumbnail for [WidgetBlueprint /Game/Blueprints/UI_Blueprints/BP_DialogueWidget.BP_DialogueWidget]
+[2025.02.11-11.55.04:094][584]OBJ SavePackage: Finished generating thumbnails for package [/Game/Blueprints/UI_Blueprints/BP_DialogueWidget]
+[2025.02.11-11.55.04:104][584]LogSavePackage: Moving output files for package: /Game/Blueprints/UI_Blueprints/BP_DialogueWidget
+[2025.02.11-11.55.04:105][584]LogSavePackage: Moving '../../../../../../Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Saved/BP_DialogueWidget60DA04724D4F3951659B13B5A923F274.tmp' to '../../../../../../Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Blueprints/UI_Blueprints/BP_DialogueWidget.uasset'
+[2025.02.11-11.55.04:121][584]LogFileHelpers: InternalPromptForCheckoutAndSave took 105.843 ms (total: 555.942 ms)
+[2025.02.11-11.55.04:184][584]LogContentValidation: Display: Starting to validate 1 assets
+[2025.02.11-11.55.04:184][584]LogContentValidation: Enabled validators:
+[2025.02.11-11.55.04:184][584]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2025.02.11-11.55.04:184][584]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2025.02.11-11.55.04:184][584]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2025.02.11-11.55.04:184][584]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2025.02.11-11.55.04:184][584]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2025.02.11-11.55.04:185][584]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2025.02.11-11.55.04:185][584]AssetCheck: /Game/Blueprints/UI_Blueprints/BP_DialogueWidget Validating asset
+[2025.02.11-11.55.20:333][475]LogSlate: Window 'BP_DialogueWidget' being destroyed
+[2025.02.11-11.55.20:339][475]LogSlate: Window 'BP_DialogueWidget' being destroyed
+[2025.02.11-11.55.20:353][475]LogWorld: UWorld::CleanupWorld for World_18, bSessionEnded=true, bCleanupResources=true
+[2025.02.11-11.55.20:353][475]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.02.11-11.55.20:364][475]LogWorld: UWorld::CleanupWorld for World_17, bSessionEnded=true, bCleanupResources=true
+[2025.02.11-11.55.20:364][475]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.02.11-11.55.20:435][475]LogUObjectHash: Compacting FUObjectHashTables data took   2.36ms
+[2025.02.11-11.56.52:958][845]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 1076.958862
+[2025.02.11-11.56.53:975][848]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2025.02.11-11.56.53:975][848]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 1077.623657, Update Interval: 314.712982
+[2025.02.11-12.01.06:826][606]LogHotReload: New module detected: UnrealEditor-Eternal_Grace_Arena-0006.dll
+[2025.02.11-12.01.07:499][608]LogHotReload: Starting Hot-Reload from IDE
+[2025.02.11-12.01.07:605][608]LogUObjectHash: Compacting FUObjectHashTables data took   3.29ms
+[2025.02.11-12.01.07:706][608]LogClass: UPackage /Script/Eternal_Grace_Arena Reload.
+[2025.02.11-12.01.07:706][608]LogClass: UClass DialogueWidget Reload.
+[2025.02.11-12.01.07:734][608]LogClass: Could not find existing class DialogueWidget in package /Script/Eternal_Grace_Arena for reload, assuming new or modified class
+[2025.02.11-12.01.07:734][608]LogClass: Function UpdateDialogueText is new or belongs to a modified class.
+[2025.02.11-12.01.08:009][608]Re-instancing DialogueWidget after reload.
+[2025.02.11-12.01.08:012][608]LogBlueprint: Error: [AssetLog] G:\Repository\Eternal-Grace-Arena\Eternal_Grace_Arena\Content\Blueprints\UI_Blueprints\BP_DialogueWidget.uasset: [Compiler] A required widget animation binding  /Script/Eternal_Grace_Arena.DialogueWidget:DisplayText  was not found.
+[2025.02.11-12.01.08:014][608]LogBlueprint: Error: [AssetLog] G:\Repository\Eternal-Grace-Arena\Eternal_Grace_Arena\Content\Blueprints\UI_Blueprints\BP_DialogueWidget.uasset: [Compiler] A required widget animation binding  /Script/Eternal_Grace_Arena.DialogueWidget:DisplayText  was not found.
+[2025.02.11-12.01.08:014][608]LogClass: Warning: Type mismatch in DisplayText of BP_DialogueWidget_C - Previous (TextProperty) Current(ObjectProperty) in package: FObjectReader
+[2025.02.11-12.01.08:519][608]LogUObjectHash: Compacting FUObjectHashTables data took   2.58ms
+[2025.02.11-12.01.08:600][608]Display: HotReload took  1.1s.
+[2025.02.11-12.01.08:600][608]Display: Reload/Re-instancing Complete: 1 package changed, 1 class changed, 60 classes unchanged, 1 enum unchanged, 3 scriptstructs unchanged, 112 functions remapped, 3 scriptstructs remapped
+[2025.02.11-12.01.12:930][766]LogAssetEditorSubsystem: Opening Asset editor for WidgetBlueprint /Game/Blueprints/UI_Blueprints/BP_DialogueWidget.BP_DialogueWidget
+[2025.02.11-12.01.12:930][766]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_20
+[2025.02.11-12.01.12:953][766]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_21
+[2025.02.11-12.01.53:873][557]LogBlueprint: Error: [AssetLog] G:\Repository\Eternal-Grace-Arena\Eternal_Grace_Arena\Content\Blueprints\UI_Blueprints\BP_DialogueWidget.uasset: [Compiler] A required widget animation binding  /Script/Eternal_Grace_Arena.DialogueWidget:DisplayText  was not found.
+[2025.02.11-12.01.53:879][557]LogBlueprint: Error: [AssetLog] G:\Repository\Eternal-Grace-Arena\Eternal_Grace_Arena\Content\Blueprints\UI_Blueprints\BP_DialogueWidget.uasset: [Compiler] A required widget animation binding  /Script/Eternal_Grace_Arena.DialogueWidget:DisplayText  was not found.
+[2025.02.11-12.01.54:108][557]LogUObjectHash: Compacting FUObjectHashTables data took   3.08ms
+[2025.02.11-12.02.21:693][728]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 1405.695923
+[2025.02.11-12.02.21:888][738]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2025.02.11-12.02.21:888][738]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 1405.870972, Update Interval: 334.628143
+[2025.02.11-12.02.24:851][882]LogBlueprint: Error: [AssetLog] G:\Repository\Eternal-Grace-Arena\Eternal_Grace_Arena\Content\Blueprints\UI_Blueprints\BP_DialogueWidget.uasset: [Compiler] A required widget animation binding  /Script/Eternal_Grace_Arena.DialogueWidget:DisplayText  was not found.
+[2025.02.11-12.02.53:199][157]LogUObjectHash: Compacting FUObjectHashTables data took   3.41ms
+[2025.02.11-12.02.53:205][157]LogFileHelpers: Editor autosave (incl. external actors) for '/Game/Levels/MainMenu' took 0.115
+[2025.02.11-12.02.53:205][157]OBJ SavePackage: Generating thumbnails for [2] asset(s) in package [/Game/Blueprints/UI_Blueprints/BP_DialogueWidget] ([2] browsable assets)...
+[2025.02.11-12.02.53:210][157]OBJ SavePackage:     Rendered thumbnail for [WidgetBlueprint /Game/Blueprints/UI_Blueprints/BP_DialogueWidget.BP_DialogueWidget]
+[2025.02.11-12.02.53:210][157]OBJ SavePackage: Finished generating thumbnails for package [/Game/Blueprints/UI_Blueprints/BP_DialogueWidget]
+[2025.02.11-12.02.53:219][157]LogSavePackage: Moving output files for package: /Temp/Autosaves/Game/Blueprints/UI_Blueprints/BP_DialogueWidget_Auto1
+[2025.02.11-12.02.53:219][157]LogSavePackage: Moving '../../../../../../Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Saved/BP_DialogueWidget_Auto1C46819754DE39ECD139BE48C46B53F24.tmp' to '../../../../../../Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Saved/Autosaves/Game/Blueprints/UI_Blueprints/BP_DialogueWidget_Auto1.uasset'
+[2025.02.11-12.02.53:219][157]LogFileHelpers: Auto-saving content packages took 0.015
+[2025.02.11-12.04.58:441][533]LogHotReload: New module detected: UnrealEditor-Eternal_Grace_Arena-0008.dll
+[2025.02.11-12.04.59:123][535]LogHotReload: Starting Hot-Reload from IDE
+[2025.02.11-12.04.59:206][535]LogUObjectHash: Compacting FUObjectHashTables data took   2.10ms
+[2025.02.11-12.04.59:309][535]LogClass: UPackage /Script/Eternal_Grace_Arena Reload.
+[2025.02.11-12.04.59:309][535]LogClass: UClass DialogueWidget Reload.
+[2025.02.11-12.04.59:339][535]LogClass: Could not find existing class DialogueWidget in package /Script/Eternal_Grace_Arena for reload, assuming new or modified class
+[2025.02.11-12.04.59:339][535]LogClass: Function UpdateDialogueText is new or belongs to a modified class.
+[2025.02.11-12.04.59:632][535]Re-instancing DialogueWidget after reload.
+[2025.02.11-12.04.59:634][535]LogBlueprint: Error: [AssetLog] G:\Repository\Eternal-Grace-Arena\Eternal_Grace_Arena\Content\Blueprints\UI_Blueprints\BP_DialogueWidget.uasset: [Compiler] A required widget binding "DisplayText" of type  Text  was not found.
+[2025.02.11-12.04.59:636][535]LogBlueprint: Error: [AssetLog] G:\Repository\Eternal-Grace-Arena\Eternal_Grace_Arena\Content\Blueprints\UI_Blueprints\BP_DialogueWidget.uasset: [Compiler] A required widget binding "DisplayText" of type  Text  was not found.
+[2025.02.11-12.05.00:598][535]LogUObjectHash: Compacting FUObjectHashTables data took   2.61ms
+[2025.02.11-12.05.00:682][535]Display: HotReload took  1.6s.
+[2025.02.11-12.05.00:682][535]Display: Reload/Re-instancing Complete: 1 package changed, 1 class changed, 60 classes unchanged, 1 enum unchanged, 3 scriptstructs unchanged, 112 functions remapped, 3 scriptstructs remapped
+[2025.02.11-12.05.19:073][229]LogUObjectHash: Compacting FUObjectHashTables data took   3.48ms
+[2025.02.11-12.05.20:489][279]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2025.02.11-12.05.20:539][279]OBJ SavePackage: Generating thumbnails for [2] asset(s) in package [/Game/Blueprints/UI_Blueprints/BP_DialogueWidget] ([2] browsable assets)...
+[2025.02.11-12.05.20:543][279]OBJ SavePackage:     Rendered thumbnail for [WidgetBlueprint /Game/Blueprints/UI_Blueprints/BP_DialogueWidget.BP_DialogueWidget]
+[2025.02.11-12.05.20:543][279]OBJ SavePackage: Finished generating thumbnails for package [/Game/Blueprints/UI_Blueprints/BP_DialogueWidget]
+[2025.02.11-12.05.20:553][279]LogSavePackage: Moving output files for package: /Game/Blueprints/UI_Blueprints/BP_DialogueWidget
+[2025.02.11-12.05.20:554][279]LogSavePackage: Moving '../../../../../../Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Saved/BP_DialogueWidget327A22B845CB816A31CFCD8B8C980599.tmp' to '../../../../../../Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Blueprints/UI_Blueprints/BP_DialogueWidget.uasset'
+[2025.02.11-12.05.20:564][279]LogFileHelpers: InternalPromptForCheckoutAndSave took 75.450 ms (total: 631.392 ms)
+[2025.02.11-12.05.20:624][279]LogContentValidation: Display: Starting to validate 1 assets
+[2025.02.11-12.05.20:624][279]LogContentValidation: Enabled validators:
+[2025.02.11-12.05.20:624][279]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2025.02.11-12.05.20:624][279]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2025.02.11-12.05.20:624][279]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2025.02.11-12.05.20:624][279]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2025.02.11-12.05.20:625][279]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2025.02.11-12.05.20:625][279]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2025.02.11-12.05.20:625][279]AssetCheck: /Game/Blueprints/UI_Blueprints/BP_DialogueWidget Validating asset
+[2025.02.11-12.05.28:810][623]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2025.02.11-12.05.28:867][623]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/Blueprints/UI_Blueprints/BP_DialogueWidget] ([2] browsable assets)...
+[2025.02.11-12.05.28:867][623]OBJ SavePackage: Finished generating thumbnails for package [/Game/Blueprints/UI_Blueprints/BP_DialogueWidget]
+[2025.02.11-12.05.28:879][623]LogSavePackage: Moving output files for package: /Game/Blueprints/UI_Blueprints/BP_DialogueWidget
+[2025.02.11-12.05.28:879][623]LogSavePackage: Moving '../../../../../../Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Saved/BP_DialogueWidgetE4C5CED24155908BA241079D908D0D91.tmp' to '../../../../../../Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Blueprints/UI_Blueprints/BP_DialogueWidget.uasset'
+[2025.02.11-12.05.28:895][623]LogFileHelpers: InternalPromptForCheckoutAndSave took 85.408 ms (total: 716.801 ms)
+[2025.02.11-12.05.28:964][623]LogContentValidation: Display: Starting to validate 1 assets
+[2025.02.11-12.05.28:965][623]LogContentValidation: Enabled validators:
+[2025.02.11-12.05.28:965][623]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2025.02.11-12.05.28:965][623]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2025.02.11-12.05.28:965][623]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2025.02.11-12.05.28:965][623]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2025.02.11-12.05.28:965][623]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2025.02.11-12.05.28:965][623]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2025.02.11-12.05.28:965][623]AssetCheck: /Game/Blueprints/UI_Blueprints/BP_DialogueWidget Validating asset
+[2025.02.11-12.06.31:345][998]LogHotReload: New module detected: UnrealEditor-Eternal_Grace_Arena-0010.dll
+[2025.02.11-12.06.33:028][  3]LogHotReload: Starting Hot-Reload from IDE
+[2025.02.11-12.06.33:177][  3]LogUObjectHash: Compacting FUObjectHashTables data took   3.59ms
+[2025.02.11-12.06.33:958][  3]LogUObjectHash: Compacting FUObjectHashTables data took   2.41ms
+[2025.02.11-12.06.34:031][  3]Display: HotReload took  1.0s.
+[2025.02.11-12.06.34:031][  3]Display: Reload/Re-instancing Complete: 1 package changed, 61 classes unchanged, 1 enum unchanged, 3 scriptstructs unchanged, 113 functions remapped, 3 scriptstructs remapped
+[2025.02.11-12.08.19:281][316]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2025.02.11-12.08.19:308][316]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2025.02.11-12.08.19:309][316]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_MainMenu
+[2025.02.11-12.08.19:310][316]LogPlayLevel: PIE: StaticDuplicateObject took: (0.001249s)
+[2025.02.11-12.08.19:310][316]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/MainMenu.MainMenu to /Game/Levels/UEDPIE_0_MainMenu.MainMenu (0.001311s)
+[2025.02.11-12.08.19:431][316]LogUObjectHash: Compacting FUObjectHashTables data took   2.34ms
+[2025.02.11-12.08.19:439][316]LogChaosDD: Creating Chaos Debug Draw Scene for world MainMenu
+[2025.02.11-12.08.19:441][316]LogPlayLevel: PIE: World Init took: (0.002293s)
+[2025.02.11-12.08.19:442][316]LogAudio: Display: Creating Audio Device:                 Id: 3, Scope: Unique, Realtime: True
+[2025.02.11-12.08.19:442][316]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2025.02.11-12.08.19:442][316]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2025.02.11-12.08.19:442][316]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2025.02.11-12.08.19:442][316]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2025.02.11-12.08.19:442][316]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2025.02.11-12.08.19:442][316]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2025.02.11-12.08.19:443][316]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2025.02.11-12.08.19:443][316]LogAudio: Display: AudioDevice MaxSources: 32
+[2025.02.11-12.08.19:443][316]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2025.02.11-12.08.19:443][316]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2025.02.11-12.08.19:443][316]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2025.02.11-12.08.19:446][316]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2025.02.11-12.08.19:476][316]LogAudioMixer: Display: Using Audio Hardware Device Köpfhörer (Synaptics HD Audio)
+[2025.02.11-12.08.19:476][316]LogAudioMixer: Display: Initializing Sound Submixes...
+[2025.02.11-12.08.19:476][316]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2025.02.11-12.08.19:476][316]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2025.02.11-12.08.19:477][316]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=3
+[2025.02.11-12.08.19:477][316]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=3
+[2025.02.11-12.08.19:481][316]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=3
+[2025.02.11-12.08.19:481][316]LogInit: FAudioDevice initialized with ID 3.
+[2025.02.11-12.08.19:481][316]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=3
+[2025.02.11-12.08.19:481][316]LogAudio: Display: Audio Device (ID: 3) registered with world 'MainMenu'.
+[2025.02.11-12.08.19:482][316]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 3
+[2025.02.11-12.08.19:489][316]LogLoad: Game class is 'BP_TitleScreenGameMode_C'
+[2025.02.11-12.08.19:489][316]LogWorld: Bringing World /Game/Levels/UEDPIE_0_MainMenu.MainMenu up for play (max tick rate 0) at 2025.02.11-13.08.19
+[2025.02.11-12.08.19:490][316]LogWorld: Bringing up level for play took: 0.000674
+[2025.02.11-12.08.19:494][316]LogOnline: OSS: Created online subsystem instance for: :Context_19
+[2025.02.11-12.08.19:496][316]LogViewport: Display: Player bShowMouseCursor Changed, False -> True
+[2025.02.11-12.08.19:497][316]PIE: Server logged in
+[2025.02.11-12.08.19:498][316]PIE: Play in editor total start time 0,208 seconds.
+[2025.02.11-12.08.19:923][326]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.11-12.08.19:924][326]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.11-12.08.20:981][369]LogTemp: Error: GameInstance: Failed to Cast Player On Map Leave Function
+[2025.02.11-12.08.20:981][369]LogTemp: Error: GOOD DOOL
+[2025.02.11-12.08.22:093][419]LogGlobalStatus: UEngine::Browse Started Browse: "/Game/Levels/Level_Hub"
+[2025.02.11-12.08.22:093][419]LogNet: Browse: /Game/Levels/Level_Hub
+[2025.02.11-12.08.22:093][419]LogLoad: LoadMap: /Game/Levels/Level_Hub
+[2025.02.11-12.08.22:093][419]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_MainMenu
+[2025.02.11-12.08.22:094][419]LogWorld: UWorld::CleanupWorld for MainMenu, bSessionEnded=true, bCleanupResources=true
+[2025.02.11-12.08.22:094][419]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.02.11-12.08.22:152][419]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2025.02.11-12.08.22:173][419]LogUObjectHash: Compacting FUObjectHashTables data took   2.21ms
+[2025.02.11-12.08.22:180][419]LogStreaming: Display: FlushAsyncLoading(542): 1 QueuedPackages, 0 AsyncPackages
+[2025.02.11-12.08.22:673][419]LogAudio: Display: Audio Device (ID: 3) registered with world 'Level_Hub'.
+[2025.02.11-12.08.22:673][419]LogChaosDD: Creating Chaos Debug Draw Scene for world Level_Hub
+[2025.02.11-12.08.22:676][419]LogPlayLevel: PIE: World Init took: (0.003214s)
+[2025.02.11-12.08.22:676][419]LogLoad: Game class is 'GM_Custom_C'
+[2025.02.11-12.08.22:871][419]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Level_Hub.Level_Hub up for play (max tick rate 0) at 2025.02.11-13.08.22
+[2025.02.11-12.08.22:873][419]LogWorld: Bringing up level for play took: 0.187816
+[2025.02.11-12.08.22:876][419]LogSkeletalMesh: USkeletalMeshComponent: Recreating Clothing Actors for 'CharacterMesh0' with 'SKM_DarkLady'
+[2025.02.11-12.08.22:886][419]LogTemp: Warning: BP_InteractionStone_WeaponMaster_C_1 Could not Access GameInstance or GameInstance Dictionary did not Contained its key
+[2025.02.11-12.08.22:886][419]LogTemp: Warning: BP_InteractionStone_WeaponMaster_C_3 Could not Access GameInstance or GameInstance Dictionary did not Contained its key
+[2025.02.11-12.08.22:887][419]LogTemp: Warning: BP_InteractionStone_WeaponMaster_C_4 Could not Access GameInstance or GameInstance Dictionary did not Contained its key
+[2025.02.11-12.08.22:887][419]LogTemp: Warning: Failed to get Equipped Weapon Class for Equipment: Weapon
+[2025.02.11-12.08.22:887][419]LogTemp: Warning: Failed to get Equipped Weapon Class for Equipment: Shield
+[2025.02.11-12.08.22:887][419]LogTemp: Warning: Failed to get Equipped Weapon Class for Equipment: Weapon
+[2025.02.11-12.08.22:887][419]LogTemp: Warning: Failed to get Equipped Weapon Class for Equipment: Shield
+[2025.02.11-12.08.22:887][419]LogTemp: Warning: Failed to get Equipped Weapon Class for Equipment: Weapon
+[2025.02.11-12.08.22:887][419]LogTemp: Warning: Failed to get Equipped Weapon Class for Equipment: Shield
+[2025.02.11-12.08.22:889][419]LogLoad: Took 0.796468 seconds to LoadMap(/Game/Levels/Level_Hub)
+[2025.02.11-12.08.22:889][419]LogGlobalStatus: UEngine::LoadMap Load map complete /Game/Levels/Level_Hub
+[2025.02.11-12.08.23:058][420]LogTemp: Warning: Enemy Spotted Player
+[2025.02.11-12.08.24:519][464]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 1768.520386
+[2025.02.11-12.08.24:760][472]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2025.02.11-12.08.24:760][472]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 1768.730835, Update Interval: 354.955292
+[2025.02.11-12.08.25:534][498]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.11-12.08.25:735][505]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.11-12.08.27:874][580]LogTemp: Warning: Trigger Overlap
+[2025.02.11-12.08.28:478][602]LogTemp: Warning:  Interactable BP_NPC_Loretta_C_1 
+[2025.02.11-12.08.28:478][602]LogTemp: Warning:  Interactabledoes implement interface 
+[2025.02.11-12.08.28:478][602]LogTemp: Warning: Trigger Talk
+[2025.02.11-12.08.29:645][645]LogTemp: Warning:  Interactable BP_NPC_Loretta_C_1 
+[2025.02.11-12.08.29:645][645]LogTemp: Warning:  Interactabledoes implement interface 
+[2025.02.11-12.08.29:645][645]LogTemp: Warning: Trigger Talk
+[2025.02.11-12.08.30:829][686]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.02.11-12.08.30:829][686]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_Level_Hub
+[2025.02.11-12.08.30:830][686]LogWorld: UWorld::CleanupWorld for Level_Hub, bSessionEnded=true, bCleanupResources=true
+[2025.02.11-12.08.30:843][686]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.02.11-12.08.30:849][686]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2025.02.11-12.08.30:857][686]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.02.11-12.08.30:895][686]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.02.11-12.08.30:895][686]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 3
+[2025.02.11-12.08.30:895][686]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=3
+[2025.02.11-12.08.30:899][686]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=3
+[2025.02.11-12.08.30:926][686]LogUObjectHash: Compacting FUObjectHashTables data took   2.76ms
+[2025.02.11-12.08.30:986][687]LogPlayLevel: Display: Destroying online subsystem :Context_19
+[2025.02.11-12.12.13:211][485]LogHotReload: New module detected: UnrealEditor-Eternal_Grace_Arena-0012.dll
+[2025.02.11-12.12.14:688][539]LogHotReload: Starting Hot-Reload from IDE
+[2025.02.11-12.12.14:775][539]LogUObjectHash: Compacting FUObjectHashTables data took   2.03ms
+[2025.02.11-12.12.14:860][539]LogClass: UPackage /Script/Eternal_Grace_Arena Reload.
+[2025.02.11-12.12.14:860][539]LogClass: UClass Eternal_Grace_ArenaNPC Reload.
+[2025.02.11-12.12.14:963][539]LogClass: Could not find existing class Eternal_Grace_ArenaNPC in package /Script/Eternal_Grace_Arena for reload, assuming new or modified class
+[2025.02.11-12.12.14:963][539]LogClass: Function OnBeginOverlap is new or belongs to a modified class.
+[2025.02.11-12.12.14:963][539]LogClass: Function OnOverlapEnd is new or belongs to a modified class.
+[2025.02.11-12.12.15:176][539]Re-instancing Eternal_Grace_ArenaNPC after reload.
+[2025.02.11-12.12.15:492][539]LogUObjectHash: Compacting FUObjectHashTables data took   2.06ms
+[2025.02.11-12.12.15:553][539]Display: HotReload took  0.9s.
+[2025.02.11-12.12.15:553][539]Display: Reload/Re-instancing Complete: 1 package changed, 1 class changed, 60 classes unchanged, 1 enum unchanged, 3 scriptstructs unchanged, 111 functions remapped, 3 scriptstructs remapped
+[2025.02.11-12.12.21:481][706]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/Blueprints/CharacterBlueprints/BP_NPC_Loretta.BP_NPC_Loretta
+[2025.02.11-12.12.21:481][706]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_24
+[2025.02.11-12.12.58:754][317]LogUObjectHash: Compacting FUObjectHashTables data took   2.84ms
+[2025.02.11-12.13.00:277][340]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2025.02.11-12.13.00:330][340]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/Blueprints/CharacterBlueprints/BP_NPC_Loretta] ([2] browsable assets)...
+[2025.02.11-12.13.00:359][340]OBJ SavePackage:     Rendered thumbnail for [Blueprint /Game/Blueprints/CharacterBlueprints/BP_NPC_Loretta.BP_NPC_Loretta]
+[2025.02.11-12.13.00:359][340]OBJ SavePackage: Finished generating thumbnails for package [/Game/Blueprints/CharacterBlueprints/BP_NPC_Loretta]
+[2025.02.11-12.13.00:366][340]LogSavePackage: Moving output files for package: /Game/Blueprints/CharacterBlueprints/BP_NPC_Loretta
+[2025.02.11-12.13.00:366][340]LogSavePackage: Moving '../../../../../../Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Saved/BP_NPC_LorettaAB1433A346467D6CD8E42D8B2D824961.tmp' to '../../../../../../Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Blueprints/CharacterBlueprints/BP_NPC_Loretta.uasset'
+[2025.02.11-12.13.00:378][340]LogFileHelpers: InternalPromptForCheckoutAndSave took 100.833 ms (total: 817.634 ms)
+[2025.02.11-12.13.00:446][340]LogContentValidation: Display: Starting to validate 1 assets
+[2025.02.11-12.13.00:446][340]LogContentValidation: Enabled validators:
+[2025.02.11-12.13.00:446][340]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2025.02.11-12.13.00:446][340]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2025.02.11-12.13.00:447][340]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2025.02.11-12.13.00:447][340]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2025.02.11-12.13.00:447][340]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2025.02.11-12.13.00:447][340]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2025.02.11-12.13.00:447][340]AssetCheck: /Game/Blueprints/CharacterBlueprints/BP_NPC_Loretta Validating asset
+[2025.02.11-12.13.02:219][409]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2025.02.11-12.13.02:234][409]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2025.02.11-12.13.02:235][409]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_MainMenu
+[2025.02.11-12.13.02:236][409]LogPlayLevel: PIE: StaticDuplicateObject took: (0.000882s)
+[2025.02.11-12.13.02:236][409]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/MainMenu.MainMenu to /Game/Levels/UEDPIE_0_MainMenu.MainMenu (0.000926s)
+[2025.02.11-12.13.02:282][409]LogUObjectHash: Compacting FUObjectHashTables data took   2.15ms
+[2025.02.11-12.13.02:284][409]LogChaosDD: Creating Chaos Debug Draw Scene for world MainMenu
+[2025.02.11-12.13.02:287][409]LogPlayLevel: PIE: World Init took: (0.002372s)
+[2025.02.11-12.13.02:288][409]LogAudio: Display: Creating Audio Device:                 Id: 4, Scope: Unique, Realtime: True
+[2025.02.11-12.13.02:288][409]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2025.02.11-12.13.02:288][409]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2025.02.11-12.13.02:288][409]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2025.02.11-12.13.02:288][409]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2025.02.11-12.13.02:288][409]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2025.02.11-12.13.02:288][409]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2025.02.11-12.13.02:288][409]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2025.02.11-12.13.02:288][409]LogAudio: Display: AudioDevice MaxSources: 32
+[2025.02.11-12.13.02:288][409]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2025.02.11-12.13.02:288][409]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2025.02.11-12.13.02:288][409]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2025.02.11-12.13.02:292][409]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2025.02.11-12.13.02:327][409]LogAudioMixer: Display: Using Audio Hardware Device Köpfhörer (Synaptics HD Audio)
+[2025.02.11-12.13.02:327][409]LogAudioMixer: Display: Initializing Sound Submixes...
+[2025.02.11-12.13.02:327][409]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2025.02.11-12.13.02:327][409]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2025.02.11-12.13.02:327][409]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=4
+[2025.02.11-12.13.02:327][409]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=4
+[2025.02.11-12.13.02:332][409]LogInit: FAudioDevice initialized with ID 4.
+[2025.02.11-12.13.02:332][409]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=4
+[2025.02.11-12.13.02:332][409]LogAudio: Display: Audio Device (ID: 4) registered with world 'MainMenu'.
+[2025.02.11-12.13.02:332][409]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=4
+[2025.02.11-12.13.02:332][409]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 4
+[2025.02.11-12.13.02:336][409]LogLoad: Game class is 'BP_TitleScreenGameMode_C'
+[2025.02.11-12.13.02:336][409]LogWorld: Bringing World /Game/Levels/UEDPIE_0_MainMenu.MainMenu up for play (max tick rate 0) at 2025.02.11-13.13.02
+[2025.02.11-12.13.02:336][409]LogWorld: Bringing up level for play took: 0.000476
+[2025.02.11-12.13.02:340][409]LogOnline: OSS: Created online subsystem instance for: :Context_21
+[2025.02.11-12.13.02:342][409]LogViewport: Display: Player bShowMouseCursor Changed, False -> True
+[2025.02.11-12.13.02:344][409]PIE: Server logged in
+[2025.02.11-12.13.02:345][409]PIE: Play in editor total start time 0,114 seconds.
+[2025.02.11-12.13.02:775][428]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.11-12.13.02:926][435]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.11-12.13.03:350][453]LogTemp: Error: GameInstance: Failed to Cast Player On Map Leave Function
+[2025.02.11-12.13.03:350][453]LogTemp: Error: GOOD DOOL
+[2025.02.11-12.13.04:486][504]LogGlobalStatus: UEngine::Browse Started Browse: "/Game/Levels/Level_Hub"
+[2025.02.11-12.13.04:486][504]LogNet: Browse: /Game/Levels/Level_Hub
+[2025.02.11-12.13.04:486][504]LogLoad: LoadMap: /Game/Levels/Level_Hub
+[2025.02.11-12.13.04:486][504]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_MainMenu
+[2025.02.11-12.13.04:487][504]LogWorld: UWorld::CleanupWorld for MainMenu, bSessionEnded=true, bCleanupResources=true
+[2025.02.11-12.13.04:487][504]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.02.11-12.13.04:535][504]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2025.02.11-12.13.04:537][504]LogUObjectHash: Compacting FUObjectHashTables data took   1.80ms
+[2025.02.11-12.13.04:541][504]LogStreaming: Display: FlushAsyncLoading(544): 1 QueuedPackages, 0 AsyncPackages
+[2025.02.11-12.13.05:068][504]LogAudio: Display: Audio Device (ID: 4) registered with world 'Level_Hub'.
+[2025.02.11-12.13.05:068][504]LogChaosDD: Creating Chaos Debug Draw Scene for world Level_Hub
+[2025.02.11-12.13.05:070][504]LogPlayLevel: PIE: World Init took: (0.002549s)
+[2025.02.11-12.13.05:070][504]LogLoad: Game class is 'GM_Custom_C'
+[2025.02.11-12.13.05:265][504]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Level_Hub.Level_Hub up for play (max tick rate 0) at 2025.02.11-13.13.05
+[2025.02.11-12.13.05:267][504]LogWorld: Bringing up level for play took: 0.181628
+[2025.02.11-12.13.05:271][504]LogSkeletalMesh: USkeletalMeshComponent: Recreating Clothing Actors for 'CharacterMesh0' with 'SKM_DarkLady'
+[2025.02.11-12.13.05:278][504]LogTemp: Warning: BP_InteractionStone_WeaponMaster_C_1 Could not Access GameInstance or GameInstance Dictionary did not Contained its key
+[2025.02.11-12.13.05:279][504]LogTemp: Warning: BP_InteractionStone_WeaponMaster_C_3 Could not Access GameInstance or GameInstance Dictionary did not Contained its key
+[2025.02.11-12.13.05:279][504]LogTemp: Warning: BP_InteractionStone_WeaponMaster_C_4 Could not Access GameInstance or GameInstance Dictionary did not Contained its key
+[2025.02.11-12.13.05:280][504]LogTemp: Warning: Failed to get Equipped Weapon Class for Equipment: Weapon
+[2025.02.11-12.13.05:280][504]LogTemp: Warning: Failed to get Equipped Weapon Class for Equipment: Shield
+[2025.02.11-12.13.05:280][504]LogTemp: Warning: Failed to get Equipped Weapon Class for Equipment: Weapon
+[2025.02.11-12.13.05:280][504]LogTemp: Warning: Failed to get Equipped Weapon Class for Equipment: Shield
+[2025.02.11-12.13.05:280][504]LogTemp: Warning: Failed to get Equipped Weapon Class for Equipment: Weapon
+[2025.02.11-12.13.05:280][504]LogTemp: Warning: Failed to get Equipped Weapon Class for Equipment: Shield
+[2025.02.11-12.13.05:282][504]LogLoad: Took 0.796157 seconds to LoadMap(/Game/Levels/Level_Hub)
+[2025.02.11-12.13.05:282][504]LogGlobalStatus: UEngine::LoadMap Load map complete /Game/Levels/Level_Hub
+[2025.02.11-12.13.07:071][552]LogTemp: Warning: Enemy Spotted Player
+[2025.02.11-12.13.08:228][590]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.11-12.13.08:419][597]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.11-12.13.11:309][698]LogTemp: Warning: Trigger Overlap
+[2025.02.11-12.13.12:594][739]LogTemp: Warning:  Interactable BP_NPC_Loretta_C_1 
+[2025.02.11-12.13.12:594][739]LogTemp: Warning:  Interactabledoes implement interface 
+[2025.02.11-12.13.12:594][739]LogTemp: Warning: Trigger Talk
+[2025.02.11-12.13.14:518][809]LogTemp: Warning:  Interactable BP_NPC_Loretta_C_1 
+[2025.02.11-12.13.14:518][809]LogTemp: Warning:  Interactabledoes implement interface 
+[2025.02.11-12.13.14:518][809]LogTemp: Warning: Trigger Talk
+[2025.02.11-12.13.17:068][901]LogTemp: Warning:  Interactable BP_NPC_Loretta_C_1 
+[2025.02.11-12.13.17:068][901]LogTemp: Warning:  Interactabledoes implement interface 
+[2025.02.11-12.13.17:068][901]LogTemp: Warning: Trigger Talk
+[2025.02.11-12.13.18:994][969]LogTemp: Warning: Trigger Overlap
+[2025.02.11-12.13.19:928][  0]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.11-12.13.20:826][ 31]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.11-12.13.22:273][ 82]LogTemp: Warning: Trigger Overlap
+[2025.02.11-12.13.24:525][162]LogTemp: Warning: Trigger Overlap
+[2025.02.11-12.13.24:912][175]LogTemp: Error: Hit Player
+[2025.02.11-12.13.24:942][176]LogTemp: Error: Hit Player
+[2025.02.11-12.13.24:942][176]LogTemp: Error: Hit Player
+[2025.02.11-12.13.24:942][176]LogTemp: Error: Hit Player
+[2025.02.11-12.13.24:942][176]LogTemp: Error: Hit Player
+[2025.02.11-12.13.24:942][176]LogTemp: Error: Hit Player
+[2025.02.11-12.13.24:972][177]LogTemp: Error: Hit Player
+[2025.02.11-12.13.25:863][208]LogTemp: Error: Hit Player
+[2025.02.11-12.13.25:891][209]LogTemp: Error: Hit Player
+[2025.02.11-12.13.25:920][210]LogTemp: Error: Hit Player
+[2025.02.11-12.13.25:920][210]LogTemp: Error: Hit Player
+[2025.02.11-12.13.25:920][210]LogTemp: Error: Hit Player
+[2025.02.11-12.13.25:920][210]LogTemp: Error: Hit Player
+[2025.02.11-12.13.25:920][210]LogTemp: Error: Hit Player
+[2025.02.11-12.13.25:950][211]LogTemp: Error: Hit Player
+[2025.02.11-12.13.25:950][211]LogTemp: Error: Hit Player
+[2025.02.11-12.13.28:378][294]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.02.11-12.13.28:378][294]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_Level_Hub
+[2025.02.11-12.13.28:379][294]LogWorld: UWorld::CleanupWorld for Level_Hub, bSessionEnded=true, bCleanupResources=true
+[2025.02.11-12.13.28:386][294]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.02.11-12.13.28:413][294]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2025.02.11-12.13.28:423][294]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.02.11-12.13.28:460][294]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.02.11-12.13.28:461][294]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 4
+[2025.02.11-12.13.28:461][294]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=4
+[2025.02.11-12.13.28:463][294]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=4
+[2025.02.11-12.13.28:487][294]LogUObjectHash: Compacting FUObjectHashTables data took   4.23ms
+[2025.02.11-12.13.28:554][295]LogPlayLevel: Display: Destroying online subsystem :Context_21
+[2025.02.11-12.13.52:099][509]LogSlate: Window 'BP_NPC_Loretta' being destroyed
+[2025.02.11-12.13.52:104][509]LogSlate: Window 'BP_NPC_Loretta' being destroyed
+[2025.02.11-12.13.52:157][509]LogWorld: UWorld::CleanupWorld for World_21, bSessionEnded=true, bCleanupResources=true
+[2025.02.11-12.13.52:158][509]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.02.11-12.13.52:168][509]LogWorld: UWorld::CleanupWorld for World_20, bSessionEnded=true, bCleanupResources=true
+[2025.02.11-12.13.52:169][509]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.02.11-12.13.52:226][509]LogWorld: UWorld::CleanupWorld for World_24, bSessionEnded=true, bCleanupResources=true
+[2025.02.11-12.13.52:227][509]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.02.11-12.13.52:372][509]LogUObjectHash: Compacting FUObjectHashTables data took   2.44ms
+[2025.02.11-12.14.58:797][633]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 2162.799072
+[2025.02.11-12.14.58:954][645]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2025.02.11-12.14.58:954][646]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 2162.942871, Update Interval: 332.524170
+[2025.02.11-12.21.07:848][529]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 2531.853760
+[2025.02.11-12.21.08:842][532]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2025.02.11-12.21.08:842][532]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 2532.514404, Update Interval: 309.058502
+[2025.02.11-12.24.00:630][ 47]LogHotReload: New module detected: UnrealEditor-Eternal_Grace_Arena-0015.dll
+[2025.02.11-12.24.01:634][ 50]LogHotReload: Starting Hot-Reload from IDE
+[2025.02.11-12.24.01:716][ 50]LogUObjectHash: Compacting FUObjectHashTables data took   2.13ms
+[2025.02.11-12.24.01:783][ 50]LogClass: UPackage /Script/Eternal_Grace_Arena Reload.
+[2025.02.11-12.24.01:783][ 50]LogClass: UClass DialogueWidget Reload.
+[2025.02.11-12.24.01:783][ 50]LogClass: UClass Eternal_Grace_ArenaNPC Reload.
+[2025.02.11-12.24.01:809][ 50]LogClass: Could not find existing class DialogueWidget in package /Script/Eternal_Grace_Arena for reload, assuming new or modified class
+[2025.02.11-12.24.01:809][ 50]LogClass: Function GetDisplayText is new or belongs to a modified class.
+[2025.02.11-12.24.01:810][ 50]LogClass: Function UpdateDialogueText is new or belongs to a modified class.
+[2025.02.11-12.24.01:884][ 50]LogClass: Could not find existing class Eternal_Grace_ArenaNPC in package /Script/Eternal_Grace_Arena for reload, assuming new or modified class
+[2025.02.11-12.24.01:884][ 50]LogClass: Function OnBeginOverlap is new or belongs to a modified class.
+[2025.02.11-12.24.01:884][ 50]LogClass: Function OnOverlapEnd is new or belongs to a modified class.
+[2025.02.11-12.24.02:160][ 50]Re-instancing DialogueWidget after reload.
+[2025.02.11-12.24.02:295][ 50]Re-instancing Eternal_Grace_ArenaNPC after reload.
+[2025.02.11-12.24.02:595][ 50]LogProperty: Warning: Serialized WidgetBlueprintGeneratedClass /Engine/Transient.REINST_BP_DialogueWidget_C_36 for a property of Class /Engine/Transient.HOTRELOAD_DialogueWidget_4. Reference will be nulled.
+    ReferencingObject = Package /Engine/Transient
+    Property = ObjectProperty /Engine/Transient.HOTRELOAD_Eternal_Grace_ArenaNPC_5:DialogueWidget
+    Item = REINST_BP_DialogueWidget_C_36 /Engine/Transient.BP_NPC_Loretta_C_1:BP_DialogueWidget_C_0
+[2025.02.11-12.24.02:730][ 50]LogUObjectHash: Compacting FUObjectHashTables data took   2.12ms
+[2025.02.11-12.24.02:791][ 50]Display: HotReload took  1.2s.
+[2025.02.11-12.24.02:791][ 50]Display: Reload/Re-instancing Complete: 1 package changed, 2 classes changed, 59 classes unchanged, 1 enum unchanged, 3 scriptstructs unchanged, 110 functions remapped, 3 scriptstructs remapped
+[2025.02.11-12.24.34:483][488]LogAssetEditorSubsystem: Opening Asset editor for Blueprint /Game/Blueprints/CharacterBlueprints/BP_NPC_Loretta.BP_NPC_Loretta
+[2025.02.11-12.24.34:484][488]LogChaosDD: Not creating Chaos Debug Draw Scene for world World_25
+[2025.02.11-12.25.26:834][820]LogUObjectHash: Compacting FUObjectHashTables data took   3.58ms
+[2025.02.11-12.25.28:349][845]LogFileHelpers: InternalPromptForCheckoutAndSave started...
+[2025.02.11-12.25.28:420][845]OBJ SavePackage: Generating thumbnails for [1] asset(s) in package [/Game/Blueprints/CharacterBlueprints/BP_NPC_Loretta] ([2] browsable assets)...
+[2025.02.11-12.25.28:444][845]OBJ SavePackage:     Rendered thumbnail for [Blueprint /Game/Blueprints/CharacterBlueprints/BP_NPC_Loretta.BP_NPC_Loretta]
+[2025.02.11-12.25.28:444][845]OBJ SavePackage: Finished generating thumbnails for package [/Game/Blueprints/CharacterBlueprints/BP_NPC_Loretta]
+[2025.02.11-12.25.28:451][845]LogSavePackage: Moving output files for package: /Game/Blueprints/CharacterBlueprints/BP_NPC_Loretta
+[2025.02.11-12.25.28:452][845]LogSavePackage: Moving '../../../../../../Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Saved/BP_NPC_LorettaFB7D02C647E5121718AF19BF0333A632.tmp' to '../../../../../../Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Blueprints/CharacterBlueprints/BP_NPC_Loretta.uasset'
+[2025.02.11-12.25.28:463][845]LogFileHelpers: InternalPromptForCheckoutAndSave took 113.767 ms (total: 931.401 ms)
+[2025.02.11-12.25.28:530][845]LogContentValidation: Display: Starting to validate 1 assets
+[2025.02.11-12.25.28:530][845]LogContentValidation: Enabled validators:
+[2025.02.11-12.25.28:530][845]LogContentValidation: 	/Script/DataValidation.EditorValidator_Material
+[2025.02.11-12.25.28:530][845]LogContentValidation: 	/Script/DataValidation.DirtyFilesChangelistValidator
+[2025.02.11-12.25.28:530][845]LogContentValidation: 	/Script/DataValidation.EditorValidator_Localization
+[2025.02.11-12.25.28:531][845]LogContentValidation: 	/Script/DataValidation.PackageFileValidator
+[2025.02.11-12.25.28:531][845]LogContentValidation: 	/Script/DataValidation.WorldPartitionChangelistValidator
+[2025.02.11-12.25.28:531][845]LogContentValidation: 	/Script/InputBlueprintNodes.EnhancedInputUserWidgetValidator
+[2025.02.11-12.25.28:531][845]AssetCheck: /Game/Blueprints/CharacterBlueprints/BP_NPC_Loretta Validating asset
+[2025.02.11-12.25.31:969][  6]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2025.02.11-12.25.31:981][  6]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2025.02.11-12.25.31:981][  6]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_MainMenu
+[2025.02.11-12.25.31:982][  6]LogPlayLevel: PIE: StaticDuplicateObject took: (0.001107s)
+[2025.02.11-12.25.31:982][  6]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/MainMenu.MainMenu to /Game/Levels/UEDPIE_0_MainMenu.MainMenu (0.001143s)
+[2025.02.11-12.25.32:069][  6]LogUObjectHash: Compacting FUObjectHashTables data took   2.42ms
+[2025.02.11-12.25.32:073][  6]LogChaosDD: Creating Chaos Debug Draw Scene for world MainMenu
+[2025.02.11-12.25.32:075][  6]LogPlayLevel: PIE: World Init took: (0.002135s)
+[2025.02.11-12.25.32:076][  6]LogAudio: Display: Creating Audio Device:                 Id: 5, Scope: Unique, Realtime: True
+[2025.02.11-12.25.32:076][  6]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2025.02.11-12.25.32:076][  6]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2025.02.11-12.25.32:076][  6]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2025.02.11-12.25.32:076][  6]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2025.02.11-12.25.32:076][  6]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2025.02.11-12.25.32:077][  6]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2025.02.11-12.25.32:077][  6]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2025.02.11-12.25.32:077][  6]LogAudio: Display: AudioDevice MaxSources: 32
+[2025.02.11-12.25.32:077][  6]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2025.02.11-12.25.32:077][  6]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2025.02.11-12.25.32:077][  6]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2025.02.11-12.25.32:081][  6]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2025.02.11-12.25.32:114][  6]LogAudioMixer: Display: Using Audio Hardware Device Köpfhörer (Synaptics HD Audio)
+[2025.02.11-12.25.32:114][  6]LogAudioMixer: Display: Initializing Sound Submixes...
+[2025.02.11-12.25.32:114][  6]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2025.02.11-12.25.32:114][  6]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2025.02.11-12.25.32:114][  6]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=5
+[2025.02.11-12.25.32:114][  6]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=5
+[2025.02.11-12.25.32:118][  6]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=5
+[2025.02.11-12.25.32:119][  6]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=5
+[2025.02.11-12.25.32:119][  6]LogInit: FAudioDevice initialized with ID 5.
+[2025.02.11-12.25.32:119][  6]LogAudio: Display: Audio Device (ID: 5) registered with world 'MainMenu'.
+[2025.02.11-12.25.32:119][  6]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 5
+[2025.02.11-12.25.32:124][  6]LogLoad: Game class is 'BP_TitleScreenGameMode_C'
+[2025.02.11-12.25.32:125][  6]LogWorld: Bringing World /Game/Levels/UEDPIE_0_MainMenu.MainMenu up for play (max tick rate 0) at 2025.02.11-13.25.32
+[2025.02.11-12.25.32:125][  6]LogWorld: Bringing up level for play took: 0.000600
+[2025.02.11-12.25.32:128][  6]LogOnline: OSS: Created online subsystem instance for: :Context_23
+[2025.02.11-12.25.32:130][  6]LogViewport: Display: Player bShowMouseCursor Changed, False -> True
+[2025.02.11-12.25.32:131][  6]PIE: Server logged in
+[2025.02.11-12.25.32:132][  6]PIE: Play in editor total start time 0,155 seconds.
+[2025.02.11-12.25.32:753][ 35]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.11-12.25.32:753][ 35]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.11-12.25.33:184][ 54]LogTemp: Error: GameInstance: Failed to Cast Player On Map Leave Function
+[2025.02.11-12.25.33:184][ 54]LogTemp: Error: GOOD DOOL
+[2025.02.11-12.25.34:293][111]LogGlobalStatus: UEngine::Browse Started Browse: "/Game/Levels/Level_Hub"
+[2025.02.11-12.25.34:294][111]LogNet: Browse: /Game/Levels/Level_Hub
+[2025.02.11-12.25.34:294][111]LogLoad: LoadMap: /Game/Levels/Level_Hub
+[2025.02.11-12.25.34:294][111]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_MainMenu
+[2025.02.11-12.25.34:295][111]LogWorld: UWorld::CleanupWorld for MainMenu, bSessionEnded=true, bCleanupResources=true
+[2025.02.11-12.25.34:295][111]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.02.11-12.25.34:343][111]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2025.02.11-12.25.34:347][111]LogUObjectHash: Compacting FUObjectHashTables data took   2.57ms
+[2025.02.11-12.25.34:353][111]LogStreaming: Display: FlushAsyncLoading(546): 1 QueuedPackages, 0 AsyncPackages
+[2025.02.11-12.25.34:858][111]LogAudio: Display: Audio Device (ID: 5) registered with world 'Level_Hub'.
+[2025.02.11-12.25.34:858][111]LogChaosDD: Creating Chaos Debug Draw Scene for world Level_Hub
+[2025.02.11-12.25.34:860][111]LogPlayLevel: PIE: World Init took: (0.002413s)
+[2025.02.11-12.25.34:860][111]LogLoad: Game class is 'GM_Custom_C'
+[2025.02.11-12.25.35:040][111]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Level_Hub.Level_Hub up for play (max tick rate 0) at 2025.02.11-13.25.35
+[2025.02.11-12.25.35:042][111]LogWorld: Bringing up level for play took: 0.170444
+[2025.02.11-12.25.35:045][111]LogSkeletalMesh: USkeletalMeshComponent: Recreating Clothing Actors for 'CharacterMesh0' with 'SKM_DarkLady'
+[2025.02.11-12.25.35:051][111]LogTemp: Warning: BP_InteractionStone_WeaponMaster_C_1 Could not Access GameInstance or GameInstance Dictionary did not Contained its key
+[2025.02.11-12.25.35:051][111]LogTemp: Warning: BP_InteractionStone_WeaponMaster_C_3 Could not Access GameInstance or GameInstance Dictionary did not Contained its key
+[2025.02.11-12.25.35:051][111]LogTemp: Warning: BP_InteractionStone_WeaponMaster_C_4 Could not Access GameInstance or GameInstance Dictionary did not Contained its key
+[2025.02.11-12.25.35:051][111]LogTemp: Warning: Failed to get Equipped Weapon Class for Equipment: Weapon
+[2025.02.11-12.25.35:052][111]LogTemp: Warning: Failed to get Equipped Weapon Class for Equipment: Shield
+[2025.02.11-12.25.35:052][111]LogTemp: Warning: Failed to get Equipped Weapon Class for Equipment: Weapon
+[2025.02.11-12.25.35:052][111]LogTemp: Warning: Failed to get Equipped Weapon Class for Equipment: Shield
+[2025.02.11-12.25.35:052][111]LogTemp: Warning: Failed to get Equipped Weapon Class for Equipment: Weapon
+[2025.02.11-12.25.35:052][111]LogTemp: Warning: Failed to get Equipped Weapon Class for Equipment: Shield
+[2025.02.11-12.25.35:053][111]LogLoad: Took 0.759796 seconds to LoadMap(/Game/Levels/Level_Hub)
+[2025.02.11-12.25.35:053][111]LogGlobalStatus: UEngine::LoadMap Load map complete /Game/Levels/Level_Hub
+[2025.02.11-12.25.35:200][112]LogTemp: Warning: Enemy Spotted Player
+[2025.02.11-12.25.35:738][128]LogTemp: Warning: Character Charges Attack
+[2025.02.11-12.25.35:918][135]LogTemp: Warning: Character Releases Attack
+[2025.02.11-12.25.36:631][161]LogTemp: Error: Hit Player
+[2025.02.11-12.25.37:481][190]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.11-12.25.37:670][197]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.11-12.25.41:768][359]LogTemp: Warning: Trigger Overlap
+[2025.02.11-12.25.42:772][401]LogTemp: Warning:  Interactable BP_NPC_Loretta_C_1 
+[2025.02.11-12.25.42:772][401]LogTemp: Warning:  Interactabledoes implement interface 
+[2025.02.11-12.25.42:772][401]LogTemp: Warning: Trigger Talk
+[2025.02.11-12.25.45:865][534]LogTemp: Warning:  Interactable BP_NPC_Loretta_C_1 
+[2025.02.11-12.25.45:865][534]LogTemp: Warning:  Interactabledoes implement interface 
+[2025.02.11-12.25.45:866][534]LogTemp: Warning: Trigger Talk
+[2025.02.11-12.25.48:365][635]LogTemp: Warning:  Interactable BP_NPC_Loretta_C_1 
+[2025.02.11-12.25.48:365][635]LogTemp: Warning:  Interactabledoes implement interface 
+[2025.02.11-12.25.48:365][635]LogTemp: Warning: Trigger Talk
+[2025.02.11-12.25.50:765][734]LogTemp: Warning:  Interactable BP_NPC_Loretta_C_1 
+[2025.02.11-12.25.50:765][734]LogTemp: Warning:  Interactabledoes implement interface 
+[2025.02.11-12.25.50:765][734]LogTemp: Warning: Trigger Talk
+[2025.02.11-12.25.51:908][780]LogTemp: Warning:  Interactable BP_NPC_Loretta_C_1 
+[2025.02.11-12.25.51:908][780]LogTemp: Warning:  Interactabledoes implement interface 
+[2025.02.11-12.25.51:908][780]LogTemp: Warning: Trigger Talk
+[2025.02.11-12.25.52:333][796]LogTemp: Warning:  Interactable BP_NPC_Loretta_C_1 
+[2025.02.11-12.25.52:333][796]LogTemp: Warning:  Interactabledoes implement interface 
+[2025.02.11-12.25.52:333][796]LogTemp: Warning: Trigger Talk
+[2025.02.11-12.25.52:775][814]LogTemp: Warning:  Interactable BP_NPC_Loretta_C_1 
+[2025.02.11-12.25.52:775][814]LogTemp: Warning:  Interactabledoes implement interface 
+[2025.02.11-12.25.52:775][814]LogTemp: Warning: Trigger Talk
+[2025.02.11-12.25.53:656][846]LogTemp: Warning:  Interactable BP_NPC_Loretta_C_1 
+[2025.02.11-12.25.53:656][846]LogTemp: Warning:  Interactabledoes implement interface 
+[2025.02.11-12.25.53:656][846]LogTemp: Warning: Trigger Talk
+[2025.02.11-12.25.54:362][875]LogTemp: Warning:  Interactable BP_NPC_Loretta_C_1 
+[2025.02.11-12.25.54:362][875]LogTemp: Warning:  Interactabledoes implement interface 
+[2025.02.11-12.25.54:362][875]LogTemp: Warning: Trigger Talk
+[2025.02.11-12.25.54:566][885]LogTemp: Warning:  Interactable BP_NPC_Loretta_C_1 
+[2025.02.11-12.25.54:566][885]LogTemp: Warning:  Interactabledoes implement interface 
+[2025.02.11-12.25.54:566][885]LogTemp: Warning: Trigger Talk
+[2025.02.11-12.25.54:782][894]LogTemp: Warning:  Interactable BP_NPC_Loretta_C_1 
+[2025.02.11-12.25.54:782][894]LogTemp: Warning:  Interactabledoes implement interface 
+[2025.02.11-12.25.54:782][894]LogTemp: Warning: Trigger Talk
+[2025.02.11-12.25.55:158][908]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.02.11-12.25.55:158][908]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_Level_Hub
+[2025.02.11-12.25.55:160][908]LogWorld: UWorld::CleanupWorld for Level_Hub, bSessionEnded=true, bCleanupResources=true
+[2025.02.11-12.25.55:170][908]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.02.11-12.25.55:176][908]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2025.02.11-12.25.55:186][908]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.02.11-12.25.55:225][908]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.02.11-12.25.55:225][908]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 5
+[2025.02.11-12.25.55:225][908]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=5
+[2025.02.11-12.25.55:227][908]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=5
+[2025.02.11-12.25.55:252][908]LogUObjectHash: Compacting FUObjectHashTables data took   2.83ms
+[2025.02.11-12.25.55:309][909]LogPlayLevel: Display: Destroying online subsystem :Context_23
+[2025.02.11-12.26.34:919][256]LogHotReload: New module detected: UnrealEditor-Eternal_Grace_Arena-0017.dll
+[2025.02.11-12.26.36:643][263]LogHotReload: Starting Hot-Reload from IDE
+[2025.02.11-12.26.36:713][263]LogUObjectHash: Compacting FUObjectHashTables data took   1.81ms
+[2025.02.11-12.26.37:324][263]LogUObjectHash: Compacting FUObjectHashTables data took   2.05ms
+[2025.02.11-12.26.37:381][263]Display: HotReload took  0.7s.
+[2025.02.11-12.26.37:381][263]Display: Reload/Re-instancing Complete: 1 package changed, 61 classes unchanged, 1 enum unchanged, 3 scriptstructs unchanged, 114 functions remapped, 3 scriptstructs remapped
+[2025.02.11-12.26.40:490][270]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2025.02.11-12.26.40:518][270]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2025.02.11-12.26.40:519][270]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_MainMenu
+[2025.02.11-12.26.40:519][270]LogPlayLevel: PIE: StaticDuplicateObject took: (0.000867s)
+[2025.02.11-12.26.40:519][270]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/MainMenu.MainMenu to /Game/Levels/UEDPIE_0_MainMenu.MainMenu (0.000904s)
+[2025.02.11-12.26.40:663][270]LogUObjectHash: Compacting FUObjectHashTables data took   3.27ms
+[2025.02.11-12.26.40:671][270]LogChaosDD: Creating Chaos Debug Draw Scene for world MainMenu
+[2025.02.11-12.26.40:674][270]LogPlayLevel: PIE: World Init took: (0.003221s)
+[2025.02.11-12.26.40:675][270]LogAudio: Display: Creating Audio Device:                 Id: 6, Scope: Unique, Realtime: True
+[2025.02.11-12.26.40:675][270]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2025.02.11-12.26.40:675][270]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2025.02.11-12.26.40:675][270]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2025.02.11-12.26.40:675][270]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2025.02.11-12.26.40:675][270]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2025.02.11-12.26.40:675][270]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2025.02.11-12.26.40:676][270]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2025.02.11-12.26.40:676][270]LogAudio: Display: AudioDevice MaxSources: 32
+[2025.02.11-12.26.40:676][270]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2025.02.11-12.26.40:676][270]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2025.02.11-12.26.40:676][270]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2025.02.11-12.26.40:680][270]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2025.02.11-12.26.40:727][270]LogAudioMixer: Display: Using Audio Hardware Device Köpfhörer (Synaptics HD Audio)
+[2025.02.11-12.26.40:727][270]LogAudioMixer: Display: Initializing Sound Submixes...
+[2025.02.11-12.26.40:728][270]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2025.02.11-12.26.40:728][270]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2025.02.11-12.26.40:728][270]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=6
+[2025.02.11-12.26.40:728][270]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=6
+[2025.02.11-12.26.40:732][270]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=6
+[2025.02.11-12.26.40:732][270]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=6
+[2025.02.11-12.26.40:733][270]LogInit: FAudioDevice initialized with ID 6.
+[2025.02.11-12.26.40:733][270]LogAudio: Display: Audio Device (ID: 6) registered with world 'MainMenu'.
+[2025.02.11-12.26.40:733][270]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 6
+[2025.02.11-12.26.40:737][270]LogLoad: Game class is 'BP_TitleScreenGameMode_C'
+[2025.02.11-12.26.40:738][270]LogWorld: Bringing World /Game/Levels/UEDPIE_0_MainMenu.MainMenu up for play (max tick rate 0) at 2025.02.11-13.26.40
+[2025.02.11-12.26.40:738][270]LogWorld: Bringing up level for play took: 0.000625
+[2025.02.11-12.26.40:743][270]LogOnline: OSS: Created online subsystem instance for: :Context_24
+[2025.02.11-12.26.40:745][270]LogViewport: Display: Player bShowMouseCursor Changed, False -> True
+[2025.02.11-12.26.40:746][270]PIE: Server logged in
+[2025.02.11-12.26.40:748][270]PIE: Play in editor total start time 0,237 seconds.
+[2025.02.11-12.26.40:963][279]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.11-12.26.40:969][279]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.11-12.26.40:998][280]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.11-12.26.41:744][313]LogTemp: Error: GameInstance: Failed to Cast Player On Map Leave Function
+[2025.02.11-12.26.41:744][313]LogTemp: Error: GOOD DOOL
+[2025.02.11-12.26.42:881][361]LogGlobalStatus: UEngine::Browse Started Browse: "/Game/Levels/Level_Hub"
+[2025.02.11-12.26.42:881][361]LogNet: Browse: /Game/Levels/Level_Hub
+[2025.02.11-12.26.42:881][361]LogLoad: LoadMap: /Game/Levels/Level_Hub
+[2025.02.11-12.26.42:881][361]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_MainMenu
+[2025.02.11-12.26.42:883][361]LogWorld: UWorld::CleanupWorld for MainMenu, bSessionEnded=true, bCleanupResources=true
+[2025.02.11-12.26.42:884][361]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.02.11-12.26.42:956][361]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2025.02.11-12.26.42:989][361]LogUObjectHash: Compacting FUObjectHashTables data took   3.24ms
+[2025.02.11-12.26.42:998][361]LogStreaming: Display: FlushAsyncLoading(548): 1 QueuedPackages, 0 AsyncPackages
+[2025.02.11-12.26.43:586][361]LogAudio: Display: Audio Device (ID: 6) registered with world 'Level_Hub'.
+[2025.02.11-12.26.43:586][361]LogChaosDD: Creating Chaos Debug Draw Scene for world Level_Hub
+[2025.02.11-12.26.43:588][361]LogPlayLevel: PIE: World Init took: (0.002207s)
+[2025.02.11-12.26.43:588][361]LogLoad: Game class is 'GM_Custom_C'
+[2025.02.11-12.26.43:756][361]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Level_Hub.Level_Hub up for play (max tick rate 0) at 2025.02.11-13.26.43
+[2025.02.11-12.26.43:758][361]LogWorld: Bringing up level for play took: 0.160536
+[2025.02.11-12.26.43:761][361]LogSkeletalMesh: USkeletalMeshComponent: Recreating Clothing Actors for 'CharacterMesh0' with 'SKM_DarkLady'
+[2025.02.11-12.26.43:767][361]LogTemp: Warning: BP_InteractionStone_WeaponMaster_C_1 Could not Access GameInstance or GameInstance Dictionary did not Contained its key
+[2025.02.11-12.26.43:768][361]LogTemp: Warning: BP_InteractionStone_WeaponMaster_C_3 Could not Access GameInstance or GameInstance Dictionary did not Contained its key
+[2025.02.11-12.26.43:768][361]LogTemp: Warning: BP_InteractionStone_WeaponMaster_C_4 Could not Access GameInstance or GameInstance Dictionary did not Contained its key
+[2025.02.11-12.26.43:768][361]LogTemp: Warning: Failed to get Equipped Weapon Class for Equipment: Weapon
+[2025.02.11-12.26.43:768][361]LogTemp: Warning: Failed to get Equipped Weapon Class for Equipment: Shield
+[2025.02.11-12.26.43:768][361]LogTemp: Warning: Failed to get Equipped Weapon Class for Equipment: Weapon
+[2025.02.11-12.26.43:769][361]LogTemp: Warning: Failed to get Equipped Weapon Class for Equipment: Shield
+[2025.02.11-12.26.43:769][361]LogTemp: Warning: Failed to get Equipped Weapon Class for Equipment: Weapon
+[2025.02.11-12.26.43:769][361]LogTemp: Warning: Failed to get Equipped Weapon Class for Equipment: Shield
+[2025.02.11-12.26.43:770][361]LogLoad: Took 0.889886 seconds to LoadMap(/Game/Levels/Level_Hub)
+[2025.02.11-12.26.43:770][361]LogGlobalStatus: UEngine::LoadMap Load map complete /Game/Levels/Level_Hub
+[2025.02.11-12.26.43:908][362]LogTemp: Warning: Enemy Spotted Player
+[2025.02.11-12.26.45:946][433]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.11-12.26.46:158][440]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.11-12.26.46:384][447]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.11-12.26.49:027][544]LogTemp: Warning: Trigger Overlap
+[2025.02.11-12.26.49:544][565]LogTemp: Warning:  Interactable BP_NPC_Loretta_C_1 
+[2025.02.11-12.26.49:544][565]LogTemp: Warning:  Interactabledoes implement interface 
+[2025.02.11-12.26.49:544][565]LogTemp: Warning: Trigger Talk
+[2025.02.11-12.26.50:772][614]LogTemp: Warning:  Interactable BP_NPC_Loretta_C_1 
+[2025.02.11-12.26.50:772][614]LogTemp: Warning:  Interactabledoes implement interface 
+[2025.02.11-12.26.50:772][614]LogTemp: Warning: Trigger Talk
+[2025.02.11-12.26.51:720][646]LogTemp: Warning:  Interactable BP_NPC_Loretta_C_1 
+[2025.02.11-12.26.51:720][646]LogTemp: Warning:  Interactabledoes implement interface 
+[2025.02.11-12.26.51:720][646]LogTemp: Warning: Trigger Talk
+[2025.02.11-12.26.52:927][689]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.11-12.26.52:930][689]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.11-12.26.52:933][689]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.11-12.26.53:438][709]LogTemp: Warning:  Interactable BP_NPC_Loretta_C_1 
+[2025.02.11-12.26.53:438][709]LogTemp: Warning:  Interactabledoes implement interface 
+[2025.02.11-12.26.53:439][709]LogTemp: Warning: Trigger Talk
+[2025.02.11-12.26.54:515][748]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.11-12.26.54:548][750]LogTemp: Warning:  Interactable BP_NPC_Loretta_C_1 
+[2025.02.11-12.26.54:548][750]LogTemp: Warning:  Interactabledoes implement interface 
+[2025.02.11-12.26.54:548][750]LogTemp: Warning: Trigger Talk
+[2025.02.11-12.26.55:038][769]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.11-12.26.55:217][776]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.11-12.26.55:598][792]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.02.11-12.26.55:598][792]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_Level_Hub
+[2025.02.11-12.26.55:599][792]LogWorld: UWorld::CleanupWorld for Level_Hub, bSessionEnded=true, bCleanupResources=true
+[2025.02.11-12.26.55:611][792]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.02.11-12.26.55:616][792]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2025.02.11-12.26.55:625][792]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.02.11-12.26.55:651][792]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.02.11-12.26.55:660][792]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 6
+[2025.02.11-12.26.55:660][792]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=6
+[2025.02.11-12.26.55:663][792]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=6
+[2025.02.11-12.26.55:692][792]LogUObjectHash: Compacting FUObjectHashTables data took   2.66ms
+[2025.02.11-12.26.55:764][793]LogPlayLevel: Display: Destroying online subsystem :Context_24
+[2025.02.11-12.26.57:801][890]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 2881.794434
+[2025.02.11-12.26.58:001][900]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2025.02.11-12.26.58:001][900]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 2881.971924, Update Interval: 330.740692
+[2025.02.11-12.33.09:007][752]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 3253.000488
+[2025.02.11-12.33.10:008][755]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2025.02.11-12.33.10:008][755]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 3253.666260, Update Interval: 305.841248
+[2025.02.11-12.34.37:686][ 18]LogHotReload: New module detected: UnrealEditor-Eternal_Grace_Arena-0019.dll
+[2025.02.11-12.34.39:042][ 22]LogHotReload: Starting Hot-Reload from IDE
+[2025.02.11-12.34.39:172][ 22]LogUObjectHash: Compacting FUObjectHashTables data took   2.83ms
+[2025.02.11-12.34.40:122][ 22]LogUObjectHash: Compacting FUObjectHashTables data took   2.84ms
+[2025.02.11-12.34.40:239][ 22]Display: HotReload took  1.2s.
+[2025.02.11-12.34.40:239][ 22]Display: Reload/Re-instancing Complete: 1 package changed, 61 classes unchanged, 1 enum unchanged, 3 scriptstructs unchanged, 114 functions remapped, 3 scriptstructs remapped
+[2025.02.11-12.34.45:628][ 40]LogDebuggerCommands: Repeating last play command: Selected Viewport
+[2025.02.11-12.34.45:641][ 40]LogPlayLevel: PlayLevel: No blueprints needed recompiling
+[2025.02.11-12.34.45:641][ 40]LogPlayLevel: Creating play world package: /Game/Levels/UEDPIE_0_MainMenu
+[2025.02.11-12.34.45:643][ 40]LogPlayLevel: PIE: StaticDuplicateObject took: (0.001404s)
+[2025.02.11-12.34.45:643][ 40]LogPlayLevel: PIE: Created PIE world by copying editor world from /Game/Levels/MainMenu.MainMenu to /Game/Levels/UEDPIE_0_MainMenu.MainMenu (0.001452s)
+[2025.02.11-12.34.45:806][ 40]LogUObjectHash: Compacting FUObjectHashTables data took   3.18ms
+[2025.02.11-12.34.45:813][ 40]LogChaosDD: Creating Chaos Debug Draw Scene for world MainMenu
+[2025.02.11-12.34.45:815][ 40]LogPlayLevel: PIE: World Init took: (0.002522s)
+[2025.02.11-12.34.45:817][ 40]LogAudio: Display: Creating Audio Device:                 Id: 7, Scope: Unique, Realtime: True
+[2025.02.11-12.34.45:817][ 40]LogAudioMixer: Display: Audio Mixer Platform Settings:
+[2025.02.11-12.34.45:818][ 40]LogAudioMixer: Display: 	Sample Rate:						  48000
+[2025.02.11-12.34.45:818][ 40]LogAudioMixer: Display: 	Callback Buffer Frame Size Requested: 1024
+[2025.02.11-12.34.45:818][ 40]LogAudioMixer: Display: 	Callback Buffer Frame Size To Use:	  1024
+[2025.02.11-12.34.45:818][ 40]LogAudioMixer: Display: 	Number of buffers to queue:			  1
+[2025.02.11-12.34.45:818][ 40]LogAudioMixer: Display: 	Max Channels (voices):				  32
+[2025.02.11-12.34.45:818][ 40]LogAudioMixer: Display: 	Number of Async Source Workers:		  4
+[2025.02.11-12.34.45:818][ 40]LogAudio: Display: AudioDevice MaxSources: 32
+[2025.02.11-12.34.45:818][ 40]LogAudio: Display: Audio Spatialization Plugin: None (built-in).
+[2025.02.11-12.34.45:818][ 40]LogAudio: Display: Audio Reverb Plugin: None (built-in).
+[2025.02.11-12.34.45:818][ 40]LogAudio: Display: Audio Occlusion Plugin: None (built-in).
+[2025.02.11-12.34.45:823][ 40]LogAudioMixer: Display: Initializing audio mixer using platform API: 'XAudio2'
+[2025.02.11-12.34.45:859][ 40]LogAudioMixer: Display: Using Audio Hardware Device Köpfhörer (Synaptics HD Audio)
+[2025.02.11-12.34.45:859][ 40]LogAudioMixer: Display: Initializing Sound Submixes...
+[2025.02.11-12.34.45:859][ 40]LogAudioMixer: Display: Creating Master Submix 'MasterSubmixDefault'
+[2025.02.11-12.34.45:859][ 40]LogAudioMixer: Display: Creating Master Submix 'MasterReverbSubmixDefault'
+[2025.02.11-12.34.45:861][ 40]LogAudioMixer: FMixerPlatformXAudio2::StartAudioStream() called. InstanceID=7
+[2025.02.11-12.34.45:861][ 40]LogAudioMixer: Display: Output buffers initialized: Frames=1024, Channels=2, Samples=2048, InstanceID=7
+[2025.02.11-12.34.45:864][ 40]LogAudioMixer: Display: Starting AudioMixerPlatformInterface::RunInternal(), InstanceID=7
+[2025.02.11-12.34.45:864][ 40]LogInit: FAudioDevice initialized with ID 7.
+[2025.02.11-12.34.45:864][ 40]LogAudioMixer: Display: FMixerPlatformXAudio2::SubmitBuffer() called for the first time. InstanceID=7
+[2025.02.11-12.34.45:865][ 40]LogAudio: Display: Audio Device (ID: 7) registered with world 'MainMenu'.
+[2025.02.11-12.34.45:865][ 40]LogAudioMixer: Initializing Audio Bus Subsystem for audio device with ID 7
+[2025.02.11-12.34.45:870][ 40]LogLoad: Game class is 'BP_TitleScreenGameMode_C'
+[2025.02.11-12.34.45:870][ 40]LogWorld: Bringing World /Game/Levels/UEDPIE_0_MainMenu.MainMenu up for play (max tick rate 0) at 2025.02.11-13.34.45
+[2025.02.11-12.34.45:871][ 40]LogWorld: Bringing up level for play took: 0.000516
+[2025.02.11-12.34.45:874][ 40]LogOnline: OSS: Created online subsystem instance for: :Context_25
+[2025.02.11-12.34.45:876][ 40]LogViewport: Display: Player bShowMouseCursor Changed, False -> True
+[2025.02.11-12.34.45:878][ 40]PIE: Server logged in
+[2025.02.11-12.34.45:880][ 40]PIE: Play in editor total start time 0,244 seconds.
+[2025.02.11-12.34.46:068][ 48]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.11-12.34.46:231][ 55]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.11-12.34.47:074][ 97]LogTemp: Error: GameInstance: Failed to Cast Player On Map Leave Function
+[2025.02.11-12.34.47:074][ 97]LogTemp: Error: GOOD DOOL
+[2025.02.11-12.34.48:190][147]LogGlobalStatus: UEngine::Browse Started Browse: "/Game/Levels/Level_Hub"
+[2025.02.11-12.34.48:190][147]LogNet: Browse: /Game/Levels/Level_Hub
+[2025.02.11-12.34.48:190][147]LogLoad: LoadMap: /Game/Levels/Level_Hub
+[2025.02.11-12.34.48:190][147]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_MainMenu
+[2025.02.11-12.34.48:191][147]LogWorld: UWorld::CleanupWorld for MainMenu, bSessionEnded=true, bCleanupResources=true
+[2025.02.11-12.34.48:191][147]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.02.11-12.34.48:266][147]LogAudio: Display: Audio Device unregistered from world 'None'.
+[2025.02.11-12.34.48:303][147]LogUObjectHash: Compacting FUObjectHashTables data took   3.30ms
+[2025.02.11-12.34.48:314][147]LogStreaming: Display: FlushAsyncLoading(550): 1 QueuedPackages, 0 AsyncPackages
+[2025.02.11-12.34.48:862][147]LogAudio: Display: Audio Device (ID: 7) registered with world 'Level_Hub'.
+[2025.02.11-12.34.48:862][147]LogChaosDD: Creating Chaos Debug Draw Scene for world Level_Hub
+[2025.02.11-12.34.48:864][147]LogPlayLevel: PIE: World Init took: (0.002674s)
+[2025.02.11-12.34.48:865][147]LogLoad: Game class is 'GM_Custom_C'
+[2025.02.11-12.34.49:105][147]LogWorld: Bringing World /Game/Levels/UEDPIE_0_Level_Hub.Level_Hub up for play (max tick rate 0) at 2025.02.11-13.34.49
+[2025.02.11-12.34.49:108][147]LogWorld: Bringing up level for play took: 0.227826
+[2025.02.11-12.34.49:111][147]LogSkeletalMesh: USkeletalMeshComponent: Recreating Clothing Actors for 'CharacterMesh0' with 'SKM_DarkLady'
+[2025.02.11-12.34.49:118][147]LogTemp: Warning: BP_InteractionStone_WeaponMaster_C_1 Could not Access GameInstance or GameInstance Dictionary did not Contained its key
+[2025.02.11-12.34.49:118][147]LogTemp: Warning: BP_InteractionStone_WeaponMaster_C_3 Could not Access GameInstance or GameInstance Dictionary did not Contained its key
+[2025.02.11-12.34.49:118][147]LogTemp: Warning: BP_InteractionStone_WeaponMaster_C_4 Could not Access GameInstance or GameInstance Dictionary did not Contained its key
+[2025.02.11-12.34.49:119][147]LogTemp: Warning: Failed to get Equipped Weapon Class for Equipment: Weapon
+[2025.02.11-12.34.49:119][147]LogTemp: Warning: Failed to get Equipped Weapon Class for Equipment: Shield
+[2025.02.11-12.34.49:119][147]LogTemp: Warning: Failed to get Equipped Weapon Class for Equipment: Weapon
+[2025.02.11-12.34.49:119][147]LogTemp: Warning: Failed to get Equipped Weapon Class for Equipment: Shield
+[2025.02.11-12.34.49:119][147]LogTemp: Warning: Failed to get Equipped Weapon Class for Equipment: Weapon
+[2025.02.11-12.34.49:119][147]LogTemp: Warning: Failed to get Equipped Weapon Class for Equipment: Shield
+[2025.02.11-12.34.49:121][147]LogLoad: Took 0.931172 seconds to LoadMap(/Game/Levels/Level_Hub)
+[2025.02.11-12.34.49:121][147]LogGlobalStatus: UEngine::LoadMap Load map complete /Game/Levels/Level_Hub
+[2025.02.11-12.34.50:397][180]LogTemp: Warning: Enemy Spotted Player
+[2025.02.11-12.34.51:840][233]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.11-12.34.52:001][240]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.11-12.35.07:244][915]LogTemp: Warning: Trigger Overlap
+[2025.02.11-12.35.07:856][942]LogTemp: Warning:  Interactable BP_NPC_Loretta_C_1 
+[2025.02.11-12.35.07:856][942]LogTemp: Warning:  Interactabledoes implement interface 
+[2025.02.11-12.35.07:856][942]LogTemp: Warning: Trigger Talk
+[2025.02.11-12.35.08:748][983]LogTemp: Warning:  Interactable BP_NPC_Loretta_C_1 
+[2025.02.11-12.35.08:748][983]LogTemp: Warning:  Interactabledoes implement interface 
+[2025.02.11-12.35.08:748][983]LogTemp: Warning: Trigger Talk
+[2025.02.11-12.35.09:720][ 25]LogTemp: Warning:  Interactable BP_NPC_Loretta_C_1 
+[2025.02.11-12.35.09:720][ 25]LogTemp: Warning:  Interactabledoes implement interface 
+[2025.02.11-12.35.09:721][ 25]LogTemp: Warning: Trigger Talk
+[2025.02.11-12.35.10:453][ 57]LogTemp: Warning:  Interactable BP_NPC_Loretta_C_1 
+[2025.02.11-12.35.10:453][ 57]LogTemp: Warning:  Interactabledoes implement interface 
+[2025.02.11-12.35.10:453][ 57]LogTemp: Warning: Trigger Talk
+[2025.02.11-12.35.10:995][ 80]LogTemp: Warning:  Interactable BP_NPC_Loretta_C_1 
+[2025.02.11-12.35.10:995][ 80]LogTemp: Warning:  Interactabledoes implement interface 
+[2025.02.11-12.35.10:995][ 80]LogTemp: Warning: Trigger Talk
+[2025.02.11-12.35.15:118][255]LogTemp: Warning: Trigger Overlap
+[2025.02.11-12.35.15:675][279]LogTemp: Warning:  Interactable BP_NPC_Loretta_C_1 
+[2025.02.11-12.35.15:675][279]LogTemp: Warning:  Interactabledoes implement interface 
+[2025.02.11-12.35.15:675][279]LogTemp: Warning: Trigger Talk
+[2025.02.11-12.35.16:432][312]LogTemp: Warning:  Interactable BP_NPC_Loretta_C_1 
+[2025.02.11-12.35.16:432][312]LogTemp: Warning:  Interactabledoes implement interface 
+[2025.02.11-12.35.16:432][312]LogTemp: Warning: Trigger Talk
+[2025.02.11-12.35.16:869][332]LogTemp: Warning:  Interactable BP_NPC_Loretta_C_1 
+[2025.02.11-12.35.16:869][332]LogTemp: Warning:  Interactabledoes implement interface 
+[2025.02.11-12.35.16:869][332]LogTemp: Warning: Trigger Talk
+[2025.02.11-12.35.17:229][348]LogTemp: Warning:  Interactable BP_NPC_Loretta_C_1 
+[2025.02.11-12.35.17:229][348]LogTemp: Warning:  Interactabledoes implement interface 
+[2025.02.11-12.35.17:229][348]LogTemp: Warning: Trigger Talk
+[2025.02.11-12.35.18:316][392]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.11-12.35.18:316][392]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.11-12.35.18:473][398]LogTemp: Warning:  Interactable BP_NPC_Loretta_C_1 
+[2025.02.11-12.35.18:473][398]LogTemp: Warning:  Interactabledoes implement interface 
+[2025.02.11-12.35.18:473][398]LogTemp: Warning: Trigger Talk
+[2025.02.11-12.35.18:843][413]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.11-12.35.19:738][452]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.11-12.35.19:900][458]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.11-12.35.20:259][473]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.11-12.35.21:653][532]LogTemp: Warning: Character Charges Attack
+[2025.02.11-12.35.21:802][538]LogTemp: Warning: Character Releases Attack
+[2025.02.11-12.35.25:218][678]LogTemp: Warning: Character Charges Attack
+[2025.02.11-12.35.25:340][683]LogTemp: Warning: Character Releases Attack
+[2025.02.11-12.35.26:780][743]LogTemp: Warning: Character Charges Attack
+[2025.02.11-12.35.26:909][749]LogTemp: Warning: Character Releases Attack
+[2025.02.11-12.35.30:128][891]LogTemp: Warning: Character Charges Attack
+[2025.02.11-12.35.30:297][900]LogTemp: Warning: Character Releases Attack
+[2025.02.11-12.35.32:432][  1]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.11-12.35.32:432][  1]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.11-12.35.32:432][  1]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.11-12.35.33:144][ 32]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.11-12.35.33:664][ 53]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.11-12.35.34:160][ 74]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.11-12.35.41:001][386]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.11-12.35.41:563][414]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.11-12.35.41:563][414]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.11-12.35.46:552][641]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.11-12.35.46:709][649]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.11-12.35.46:855][655]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.11-12.35.48:958][750]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.11-12.35.48:958][750]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.11-12.35.48:958][750]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.11-12.35.49:766][788]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.11-12.35.49:933][795]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.11-12.35.50:108][802]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.11-12.35.51:368][862]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.11-12.35.52:101][893]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.11-12.35.55:237][ 37]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.11-12.35.55:530][ 51]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.11-12.35.55:530][ 51]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.11-12.35.56:632][104]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.11-12.35.56:782][110]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.11-12.35.57:774][163]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.11-12.35.57:912][170]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.11-12.36.00:670][307]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.11-12.36.00:807][314]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.11-12.36.01:363][342]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.11-12.36.02:956][422]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.11-12.36.02:956][422]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.11-12.36.03:246][436]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.11-12.36.07:910][677]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.11-12.36.08:080][685]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.11-12.36.10:879][832]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.11-12.36.11:070][842]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.11-12.36.11:391][860]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.11-12.36.11:846][884]LogTemp: Warning: Character Charges Attack
+[2025.02.11-12.36.11:979][891]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.11-12.36.12:029][894]LogTemp: Warning: Character Releases Attack
+[2025.02.11-12.36.14:225][ 10]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.11-12.36.15:125][ 56]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.11-12.36.15:274][ 62]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.11-12.36.20:310][311]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.11-12.36.20:885][342]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.11-12.36.28:831][738]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.11-12.36.29:288][759]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.11-12.36.29:774][776]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.11-12.36.29:959][783]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.11-12.36.31:962][878]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.11-12.36.31:962][878]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.11-12.36.32:098][884]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.02.11-12.36.32:098][884]LogWorld: BeginTearingDown for /Game/Levels/UEDPIE_0_Level_Hub
+[2025.02.11-12.36.32:099][884]LogWorld: UWorld::CleanupWorld for Level_Hub, bSessionEnded=true, bCleanupResources=true
+[2025.02.11-12.36.32:114][884]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.02.11-12.36.32:121][884]LogPlayLevel: Display: Shutting down PIE online subsystems
+[2025.02.11-12.36.32:132][884]LogSlate: InvalidateAllWidgets triggered.  All widgets were invalidated
+[2025.02.11-12.36.32:161][884]LogSlate: Updating window title bar state: overlay mode, drag disabled, window buttons hidden, title bar hidden
+[2025.02.11-12.36.32:172][884]LogAudioMixer: Deinitializing Audio Bus Subsystem for audio device with ID 7
+[2025.02.11-12.36.32:172][884]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=7
+[2025.02.11-12.36.32:175][884]LogAudioMixer: FMixerPlatformXAudio2::StopAudioStream() called. InstanceID=7
+[2025.02.11-12.36.32:204][884]LogUObjectHash: Compacting FUObjectHashTables data took   3.94ms
+[2025.02.11-12.36.32:262][885]LogPlayLevel: Display: Destroying online subsystem :Context_25
+[2025.02.11-12.36.38:343][ 40]LogD3D12RHI: Display: Temp texture streaming buffer not large enough, needed 8388608 bytes
+[2025.02.11-12.38.53:029][728]LogEOSSDK: LogEOS: Updating Product SDK Config, Time: 3597.027832
+[2025.02.11-12.38.54:037][731]LogEOSSDK: LogEOS: SDK Config Product Update Request Completed - No Change
+[2025.02.11-12.38.54:037][731]LogEOSSDK: LogEOS: ScheduleNextSDKConfigDataUpdate - Time: 3597.695557, Update Interval: 300.831329

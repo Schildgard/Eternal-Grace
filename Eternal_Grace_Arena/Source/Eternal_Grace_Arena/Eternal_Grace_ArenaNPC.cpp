@@ -22,6 +22,8 @@ AEternal_Grace_ArenaNPC::AEternal_Grace_ArenaNPC()
 
 	InfoClass = nullptr;
 	InteractInfoWidget = nullptr;
+
+	TextCounter = 0;
 }
 
 void AEternal_Grace_ArenaNPC::OnBeginOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComponent, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
@@ -68,7 +70,6 @@ void AEternal_Grace_ArenaNPC::BeginPlay()
 void AEternal_Grace_ArenaNPC::Interact_Implementation()
 {
 	UE_LOG(LogTemp, Warning, TEXT("Trigger Talk"))
-
 		// DEACTIVATE INTERACT WIDGET IF ACTIVE
 		//ACTIVATE DIALOGUE WIDGET IF UNACTIVE
 		//IF DIALOGUE WIDGET IS ACTIVE, REPLACE TEXT WITH NEXT TEXT OF TEXT ARRAY AND MARK THIS TEXT AS LISTENED TO
@@ -81,12 +82,28 @@ void AEternal_Grace_ArenaNPC::Interact_Implementation()
 
 	if (!DialogueWidget->IsInViewport())
 	{
+		TextCounter = 0;
 		DialogueWidget->AddToViewport();
 		DialogueWidget->PlayAnimation(DialogueWidget->GetBlendInAnimation());
+
+		if (DialogueTexts.Num() >= 1)
+		{
+			DialogueWidget->UpdateDialogueText(DialogueTexts[TextCounter]);
+			TextCounter++;
+		}
 	}
 	else
 	{
-
+		if(TextCounter < DialogueTexts.Num())
+		{
+			DialogueWidget->UpdateDialogueText(DialogueTexts[TextCounter]);
+			TextCounter++;
+		}
+		else
+		{
+			DialogueWidget->PlayAnimation(DialogueWidget->GetBlendOutAnimation());
+			TextCounter = 0;
+		}
 	}
 
 
