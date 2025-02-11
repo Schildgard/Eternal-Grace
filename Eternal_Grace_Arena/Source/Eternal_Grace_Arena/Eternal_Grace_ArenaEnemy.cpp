@@ -138,10 +138,6 @@ void AEternal_Grace_ArenaEnemy::Tick(float DeltaSeconds)
 			UE_LOG(LogTemp, Warning, TEXT("Health Component is null"))
 		}
 	}
-	else
-	{
-		UE_LOG(LogTemp, Warning, TEXT("Healthbar widget is null"))
-	}
 
 
 

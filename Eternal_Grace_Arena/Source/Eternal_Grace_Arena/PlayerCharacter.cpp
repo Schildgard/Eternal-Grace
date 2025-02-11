@@ -15,6 +15,7 @@
 #include "WeaponComponent.h"
 #include "Components/PostProcessComponent.h"
 #include "StatusEffectComponent.h"
+#include "Eternal_Grace_ArenaNPC.h"
 
 
 
@@ -48,26 +49,27 @@ void APlayerCharacter::GuardCounterAttack()
 void APlayerCharacter::Interact()
 {
 	TSet<AActor*> OverlappingActors;
-	TSubclassOf<AInteractableActor> ViableActorClass;
-	GetOverlappingActors(OverlappingActors, ViableActorClass);
+	//TSubclassOf<AInteractableActor> ViableActorClass;
+	//GetOverlappingActors(OverlappingActors, ViableActorClass);
+	GetOverlappingActors(OverlappingActors);
 	//Cant Access Elements of TSets, thats why it is neccessary to iterate through it, even just to get one item
 	if (OverlappingActors.Num() >= 1)
 	{
 		for (AActor* Overlap : OverlappingActors)
 		{
+		UE_LOG(LogTemp, Warning, TEXT(" Interactable %s "), *Overlap->GetName())
 
-			AInteractableActor* Interactable = Cast<AInteractableActor>(Overlap);
-			if (Interactable)
+
+			if(Overlap->Implements<UI_Interactable>())
 			{
-				Interactable->Interact_Implementation();
-				break;
+				UE_LOG(LogTemp, Warning, TEXT(" Interactabledoes implement interface "))
+				II_Interactable::Execute_Interact(Overlap);
+				return;
 			}
 		}
+		return;
 	}
-	else
-	{
-		UE_LOG(LogTemp, Warning, TEXT("Nothing to Interact"))
-	}
+
 }
 
 void APlayerCharacter::IncreaseChargePower()
