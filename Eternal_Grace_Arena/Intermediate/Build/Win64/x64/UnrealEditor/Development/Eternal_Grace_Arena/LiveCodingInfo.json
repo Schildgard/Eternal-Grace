@@ -8,6 +8,8 @@
 			"CharacterAnimInstance.gen.cpp.obj",
 			"CustomPlayerController.gen.cpp.obj",
 			"Damage_Spells.gen.cpp.obj",
+			"Dialogue.gen.cpp.obj",
+			"DialogueComponent.gen.cpp.obj",
 			"DialogueWidget.gen.cpp.obj",
 			"Enemy_MageBoss.gen.cpp.obj",
 			"Enemy_MushroomKing.gen.cpp.obj",
@@ -26,11 +28,11 @@
 			"Eternal_Grace_ArenaEnemy.gen.cpp.obj",
 			"Eternal_Grace_ArenaEnemy_Caster.gen.cpp.obj",
 			"Eternal_Grace_ArenaGameMode.gen.cpp.obj",
-			"Eternal_Grace_ArenaNPC.gen.cpp.obj",
-			"Eternal_Grace_ProgressBar.gen.cpp.obj",
-			"HealthComponent.gen.cpp.obj"
+			"Eternal_Grace_ArenaNPC.gen.cpp.obj"
 		],
 		"Module.Eternal_Grace_Arena.2.cpp.obj": [
+			"Eternal_Grace_ProgressBar.gen.cpp.obj",
+			"HealthComponent.gen.cpp.obj",
 			"HitEffectData.gen.cpp.obj",
 			"InteractableActor.gen.cpp.obj",
 			"InteractableActor_SceneLoader.gen.cpp.obj",
@@ -60,10 +62,10 @@
 			"Spells_HomingProjectile.gen.cpp.obj",
 			"Spells_Projectile.gen.cpp.obj",
 			"Spell_Teleport.gen.cpp.obj",
-			"StaggerComponent.gen.cpp.obj",
-			"StaggeringType.gen.cpp.obj"
+			"StaggerComponent.gen.cpp.obj"
 		],
 		"Module.Eternal_Grace_Arena.3.cpp.obj": [
+			"StaggeringType.gen.cpp.obj",
 			"StaminaComponent.gen.cpp.obj",
 			"StatusEffectComponent.gen.cpp.obj",
 			"StatusWarningEffect.gen.cpp.obj",
@@ -77,6 +79,8 @@
 			"CharacterAnimInstance.cpp.obj",
 			"CustomPlayerController.cpp.obj",
 			"Damage_Spells.cpp.obj",
+			"Dialogue.cpp.obj",
+			"DialogueComponent.cpp.obj",
 			"DialogueWidget.cpp.obj",
 			"Enemy_MageBoss.cpp.obj",
 			"Enemy_MushroomKing.cpp.obj",

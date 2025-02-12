@@ -3,6 +3,7 @@
 
 #include "Eternal_Grace_ArenaNPC.h"
 #include "Components/SphereComponent.h"
+#include "DialogueComponent.h"
 
 
 AEternal_Grace_ArenaNPC::AEternal_Grace_ArenaNPC()
@@ -24,6 +25,8 @@ AEternal_Grace_ArenaNPC::AEternal_Grace_ArenaNPC()
 	InteractInfoWidget = nullptr;
 
 	TextCounter = 0;
+
+	DialogueComponent = CreateDefaultSubobject<UDialogueComponent>("Dialogue Component");
 }
 
 void AEternal_Grace_ArenaNPC::OnBeginOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComponent, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
@@ -65,6 +68,11 @@ void AEternal_Grace_ArenaNPC::BeginPlay()
 	Super::BeginPlay();
 	InteractionRadius->OnComponentBeginOverlap.AddDynamic(this, &AEternal_Grace_ArenaNPC::OnBeginOverlap);
 	InteractionRadius->OnComponentEndOverlap.AddDynamic(this, &AEternal_Grace_ArenaNPC::OnOverlapEnd);
+
+	if(!DialogueComponent)
+	{
+		UE_LOG(LogTemp, Error, TEXT("DialogueComponent is nullptr"))
+	}
 }
 
 void AEternal_Grace_ArenaNPC::Interact_Implementation()
@@ -80,31 +88,33 @@ void AEternal_Grace_ArenaNPC::Interact_Implementation()
 			InteractInfoWidget->PlayAnimation(InteractInfoWidget->GetBlendOutAnimation());
 		}
 
-	if (!DialogueWidget->IsInViewport())
-	{
-		TextCounter = 0;
-		DialogueWidget->AddToViewport();
-		DialogueWidget->PlayAnimation(DialogueWidget->GetBlendInAnimation());
+	DialogueComponent->PlayDialogue();
 
-		if (DialogueTexts.Num() >= 1)
-		{
-			DialogueWidget->UpdateDialogueText(DialogueTexts[TextCounter]);
-			TextCounter++;
-		}
-	}
-	else
-	{
-		if(TextCounter < DialogueTexts.Num())
-		{
-			DialogueWidget->UpdateDialogueText(DialogueTexts[TextCounter]);
-			TextCounter++;
-		}
-		else
-		{
-			DialogueWidget->PlayAnimation(DialogueWidget->GetBlendOutAnimation());
-			TextCounter = 0;
-		}
-	}
+//	if (!DialogueWidget->IsInViewport())
+//	{
+//		TextCounter = 0;
+//		DialogueWidget->AddToViewport();
+//		DialogueWidget->PlayAnimation(DialogueWidget->GetBlendInAnimation());
+//
+//		if (DialogueTexts.Num() >= 1)
+//		{
+//			DialogueWidget->UpdateDialogueText(DialogueTexts[TextCounter]);
+//			TextCounter++;
+//		}
+//	}
+//	else
+//	{
+//		if(TextCounter < DialogueTexts.Num())
+//		{
+//			DialogueWidget->UpdateDialogueText(DialogueTexts[TextCounter]);
+//			TextCounter++;
+//		}
+//		else
+//		{
+//			DialogueWidget->PlayAnimation(DialogueWidget->GetBlendOutAnimation());
+//			TextCounter = 0;
+//		}
+//	}
 
 
 }

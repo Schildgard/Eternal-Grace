@@ -9,7 +9,24 @@
 				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Blueprints/CharacterBlueprints/BP_NPC_Loretta.uasset",
 				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Levels/Level_Hub.umap",
 				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/StarterContent/Particles/Materials/M_Spark.uasset",
-				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Blueprints/UI_Blueprints/BP_DialogueWidget.uasset"
+				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Blueprints/UI_Blueprints/BP_DialogueWidget.uasset",
+				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Blueprints/CharacterBlueprints/BP_Player.uasset",
+				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Levels/MainMenu.umap",
+				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Blueprints/BP_TestWeapon5_ForPlayer.uasset",
+				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Animations/DarkLadyAnimations/Combat/Attacks/Test_MaceAttacks/GreatSword_Attack01_Root_RT_RT.uasset",
+				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Animations/DarkLadyAnimations/Combat/Attacks/Test_MaceAttacks/test_RT_RT.uasset",
+				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Audio/Dialogues/MS_Dialogue_Loretta_01.uasset",
+				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Audio/Dialogues/SC_Dialogue_Loretta_01.uasset",
+				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Audio/Dialogues/AudioFiles_Loretta/Greetings.uasset",
+				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Audio/Dialogues/AudioFiles_Loretta/Greetings_hall.uasset",
+				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Audio/Dialogues/AudioFiles_Loretta/laugh.uasset",
+				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Audio/Dialogues/AudioFiles_Loretta/laugh_hall.uasset",
+				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Audio/Dialogues/AudioFiles_Loretta/thou_art.uasset",
+				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Audio/Dialogues/AudioFiles_Loretta/thou_art_hall.uasset",
+				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Characters/Dark_Lady/Body_Armor/SKM_Loretta.uasset",
+				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Darklady/Materials/DarkLady_Skin4/Mat_DarkLady_Skin4_Armor.uasset",
+				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Darklady/Materials/DarkLady_Skin4/Mat_DarkLady_Skin4_Body.uasset",
+				"G:/Repository/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/DataTables/DT_Loretta_Dialogues.uasset"
 			]
 		}
 	]

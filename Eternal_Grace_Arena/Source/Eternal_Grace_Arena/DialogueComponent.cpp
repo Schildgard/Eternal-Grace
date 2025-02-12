@@ -1,0 +1,84 @@
+// Fill out your copyright notice in the Description page of Project Settings.
+
+
+#include "DialogueComponent.h"
+#include "Dialogue.h"
+#include "Kismet/GameplayStatics.h"
+#include "Components/AudioComponent.h"
+
+// Sets default values for this component's properties
+UDialogueComponent::UDialogueComponent()
+{
+	// Set this component to be initialized when the game starts, and to be ticked every frame.  You can turn these features
+	// off to improve performance if you don't need them.
+	PrimaryComponentTick.bCanEverTick = true;
+
+	// ...
+}
+
+
+// Called when the game starts
+void UDialogueComponent::BeginPlay()
+{
+	Super::BeginPlay();
+
+	// ...
+	
+}
+
+
+// Called every frame
+void UDialogueComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
+{
+	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
+
+	// ...
+}
+
+void UDialogueComponent::PlayDialogue()
+{
+	// CHECK IF DIALOGUE IS IN VIEWPORT
+	if (!DialogueWidget->IsInViewport())
+	{
+		CurrentLineIndex = 0;
+		//ADD TO VIEWPORT / BLEND IN
+		DialogueWidget->AddToViewport();
+		DialogueWidget->PlayAnimation(DialogueWidget->GetBlendInAnimation());
+		//SHOW TEXT AND PLAY VOICE LINE
+		DialogueWidget->UpdateDialogueText(Dialogues[CurrentDialogueIndex].DialogueTexts[CurrentLineIndex]);
+		UGameplayStatics::PlaySound2D(GetWorld(), Dialogues[CurrentDialogueIndex].DialogueVoices[CurrentLineIndex]);
+		//INCREMENT LINE INDEX
+		CurrentLineIndex++;
+
+
+	}
+	else
+	{
+		//CHECK IF ALL LINES OF DIALOGUE HAVE BEEN EXHAUSTED
+		if (CurrentLineIndex >= Dialogues[CurrentDialogueIndex].DialogueTexts.Num())
+		{
+			//ENABLE NEXT DIALOGUE
+			CurrentDialogueIndex++;
+			//REMOVE FROM VIEWPORT
+			DialogueWidget->PlayAnimation(DialogueWidget->GetBlendOutAnimation());
+			if (CurrentDialogueIndex >= Dialogues.Num())
+			{
+				//REPEAT LAST DIALOGUE
+				CurrentDialogueIndex = Dialogues.Num() - 1;
+			}
+		}
+		else
+		{
+			DialogueWidget->UpdateDialogueText(Dialogues[CurrentDialogueIndex].DialogueTexts[CurrentLineIndex]);
+			
+			//Check if Sound is Playing and End it if so
+
+			//UGameplayStatics::PlaySound2D(GetWorld(), Dialogues[CurrentDialogueIndex].DialogueVoices[CurrentLineIndex]);
+			UGameplayStatics::PlaySoundAtLocation(GetWorld(), Dialogues[CurrentDialogueIndex].DialogueVoices[CurrentLineIndex], GetOwner()->GetActorLocation());
+			//INCREMENT LINE INDEX
+			CurrentLineIndex++;
+		}
+	}
+	
+}
+
