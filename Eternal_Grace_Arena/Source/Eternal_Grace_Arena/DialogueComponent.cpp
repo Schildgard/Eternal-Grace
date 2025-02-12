@@ -46,7 +46,7 @@ void UDialogueComponent::PlayDialogue()
 		DialogueWidget->PlayAnimation(DialogueWidget->GetBlendInAnimation());
 		//SHOW TEXT AND PLAY VOICE LINE
 		DialogueWidget->UpdateDialogueText(Dialogues[CurrentDialogueIndex].DialogueTexts[CurrentLineIndex]);
-		UGameplayStatics::PlaySound2D(GetWorld(), Dialogues[CurrentDialogueIndex].DialogueVoices[CurrentLineIndex]);
+		UGameplayStatics::PlaySoundAtLocation(GetWorld(), Dialogues[CurrentDialogueIndex].DialogueVoices[CurrentLineIndex], GetOwner()->GetActorLocation(), 3.0f);
 		//INCREMENT LINE INDEX
 		CurrentLineIndex++;
 
@@ -74,7 +74,7 @@ void UDialogueComponent::PlayDialogue()
 			//Check if Sound is Playing and End it if so
 
 			//UGameplayStatics::PlaySound2D(GetWorld(), Dialogues[CurrentDialogueIndex].DialogueVoices[CurrentLineIndex]);
-			UGameplayStatics::PlaySoundAtLocation(GetWorld(), Dialogues[CurrentDialogueIndex].DialogueVoices[CurrentLineIndex], GetOwner()->GetActorLocation());
+			UGameplayStatics::PlaySoundAtLocation(GetWorld(), Dialogues[CurrentDialogueIndex].DialogueVoices[CurrentLineIndex], GetOwner()->GetActorLocation(), 3.0f);
 			//INCREMENT LINE INDEX
 			CurrentLineIndex++;
 		}
