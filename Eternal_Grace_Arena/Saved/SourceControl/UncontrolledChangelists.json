@@ -29,6 +29,10 @@
 				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Levels/Level_Main.umap",
 				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Blueprints/BP_TestWeapon.uasset",
 				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Blueprints/GameInstance_Blueprints/BP_EternalGrace_GameInstance.uasset",
+				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Blueprints/BP_InteractionStone_Statue.uasset",
+				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/DarkFantasyCastle/Materials/MI_NS1_Fire.uasset",
+				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/DarkFantasyCastle/Materials/MM_Fire.uasset",
+				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/DarkFantasyCastle/Particle/NS_NS1_Fire_Camp.uasset",
 				"D:/Leon/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Audio/Dialogues/MS_Dialogue_Loretta.uasset"
 			]
 		}

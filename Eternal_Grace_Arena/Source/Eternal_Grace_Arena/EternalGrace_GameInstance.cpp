@@ -74,12 +74,11 @@ void UEternalGrace_GameInstance::OnMapLeave()
 			LoadingScreen = CreateWidget<UBlendingWidget>(this, LoadingScreenClass);
 		if (LoadingScreen)
 		{
-			//ACTIVATE YOU DIED SCREEN TO VIEWPORT
+			//ACTIVATE LOADING SCREEN TO VIEWPORT
 			LoadingScreen->AddToViewport();
 			if (LoadingScreen->BlendingAnimation)
 			{
 				LoadingScreen->PlayAnimation(LoadingScreen->BlendingAnimation);
-				//NOW TRIGGER LOAD LEVEL WHEN LOADING SCREEN BLENDET IN
 				FWidgetAnimationDynamicEvent load;
 				load.BindDynamic(this, &UEternalGrace_GameInstance::LoadLevel);
 				LoadingScreen->BindToAnimationFinished(LoadingScreen->BlendingAnimation, load);

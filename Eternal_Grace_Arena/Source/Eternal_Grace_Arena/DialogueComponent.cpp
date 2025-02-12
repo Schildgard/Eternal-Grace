@@ -64,6 +64,7 @@ void UDialogueComponent::PlayDialogue()
 			//CurrentDialogueIndex++;
 			//REMOVE FROM VIEWPORT
 			DialogueWidget->PlayAnimation(DialogueWidget->GetBlendOutAnimation());
+			//CHECK IF THATS THE LAST DIALOGUE
 			if (CurrentDialogueIndex >= Dialogues.Num())
 			{
 				//REPEAT LAST DIALOGUE

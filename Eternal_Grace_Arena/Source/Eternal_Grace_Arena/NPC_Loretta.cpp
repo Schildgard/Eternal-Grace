@@ -37,29 +37,25 @@ void ANPC_Loretta::GetInfoFromGameInstance()
 
 void ANPC_Loretta::Interact_Implementation()
 {
-	Super::Interact_Implementation();
 
 	//CHECK IF LAST DIALOGUE IS TRIGGERED
 	if (DialogueComponent->GetCurrentDialogueIndex() == DialogueComponent->GetDialogueArraySize() - 1)
 	{
-		UE_LOG(LogTemp, Error, TEXT("Current Dialogue: %i of %i"), DialogueComponent->GetCurrentDialogueIndex(), DialogueComponent->GetDialogueArraySize() - 1)
-			// CHECK IF LAST LINE OF LAST DIALOGUE
-			UE_LOG(LogTemp, Error, TEXT("CHECK: Current Line %i of %i"), DialogueComponent->GetCurrentLineIndex(), DialogueComponent->GetLineArraySize() - 1)
-			if (DialogueComponent->GetCurrentLineIndex() >= DialogueComponent->GetLineArraySize()-1)
+		// CHECK IF LAST LINE OF LAST DIALOGUE
+		if (DialogueComponent->GetCurrentLineIndex() > DialogueComponent->GetLineArraySize() - 1)
+		{
+			UGameInstance* CurrentInstance = UGameplayStatics::GetGameInstance(GetWorld());
+			UEternalGrace_GameInstance* CustomGameInstance = Cast<UEternalGrace_GameInstance>(CurrentInstance);
+			if (CustomGameInstance)
 			{
-				UE_LOG(LogTemp, Error, TEXT("Current Line %i of %i"), DialogueComponent->GetCurrentLineIndex(), DialogueComponent->GetLineArraySize() - 1)
-					UE_LOG(LogTemp, Error, TEXT("Shoudl load Level"))
-
-					UGameInstance* CurrentInstance = UGameplayStatics::GetGameInstance(GetWorld());
-				UEternalGrace_GameInstance* CustomGameInstance = Cast<UEternalGrace_GameInstance>(CurrentInstance);
-				if (CustomGameInstance)
-				{
-					CustomGameInstance->SetLevelToLoad("Level_Ending");
-					CustomGameInstance->LoadLevel();
-				}
+				CustomGameInstance->SetLevelToLoad("Level_Ending");
+				CustomGameInstance->OnMapLeave();
+				//CustomGameInstance->LoadLevel();
 			}
+		}
 	}
 
+	Super::Interact_Implementation();
 
 
 }
