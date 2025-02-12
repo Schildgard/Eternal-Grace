@@ -23,7 +23,7 @@ void UDialogueComponent::BeginPlay()
 	Super::BeginPlay();
 
 	// ...
-	
+
 }
 
 
@@ -46,10 +46,13 @@ void UDialogueComponent::PlayDialogue()
 		DialogueWidget->PlayAnimation(DialogueWidget->GetBlendInAnimation());
 		//SHOW TEXT AND PLAY VOICE LINE
 		DialogueWidget->UpdateDialogueText(Dialogues[CurrentDialogueIndex].DialogueTexts[CurrentLineIndex]);
-		UGameplayStatics::PlaySoundAtLocation(GetWorld(), Dialogues[CurrentDialogueIndex].DialogueVoices[CurrentLineIndex], GetOwner()->GetActorLocation(), 3.0f);
+
+		if (Dialogues[CurrentDialogueIndex].DialogueVoices.Num() > CurrentLineIndex)
+		{
+			UGameplayStatics::PlaySoundAtLocation(GetWorld(), Dialogues[CurrentDialogueIndex].DialogueVoices[CurrentLineIndex], GetOwner()->GetActorLocation(), 3.0f);
+		}
 		//INCREMENT LINE INDEX
 		CurrentLineIndex++;
-
 
 	}
 	else
@@ -58,7 +61,7 @@ void UDialogueComponent::PlayDialogue()
 		if (CurrentLineIndex >= Dialogues[CurrentDialogueIndex].DialogueTexts.Num())
 		{
 			//ENABLE NEXT DIALOGUE
-			CurrentDialogueIndex++;
+			//CurrentDialogueIndex++;
 			//REMOVE FROM VIEWPORT
 			DialogueWidget->PlayAnimation(DialogueWidget->GetBlendOutAnimation());
 			if (CurrentDialogueIndex >= Dialogues.Num())
@@ -70,15 +73,42 @@ void UDialogueComponent::PlayDialogue()
 		else
 		{
 			DialogueWidget->UpdateDialogueText(Dialogues[CurrentDialogueIndex].DialogueTexts[CurrentLineIndex]);
-			
-			//Check if Sound is Playing and End it if so
 
-			//UGameplayStatics::PlaySound2D(GetWorld(), Dialogues[CurrentDialogueIndex].DialogueVoices[CurrentLineIndex]);
-			UGameplayStatics::PlaySoundAtLocation(GetWorld(), Dialogues[CurrentDialogueIndex].DialogueVoices[CurrentLineIndex], GetOwner()->GetActorLocation(), 3.0f);
+			if (Dialogues[CurrentDialogueIndex].DialogueVoices.Num() > CurrentLineIndex)
+			{
+				UGameplayStatics::PlaySoundAtLocation(GetWorld(), Dialogues[CurrentDialogueIndex].DialogueVoices[CurrentLineIndex], GetOwner()->GetActorLocation(), 3.0f);
+			}
 			//INCREMENT LINE INDEX
 			CurrentLineIndex++;
 		}
 	}
-	
+
 }
+
+void UDialogueComponent::SetCurrentDialogueIndex(int IndexNumber)
+{
+	CurrentDialogueIndex = IndexNumber;
+}
+
+int UDialogueComponent::GetCurrentDialogueIndex()
+{
+	return CurrentDialogueIndex;
+}
+
+int UDialogueComponent::GetDialogueArraySize()
+{
+	return Dialogues.Num();
+}
+
+int UDialogueComponent::GetCurrentLineIndex()
+{
+	return CurrentLineIndex;
+}
+
+int UDialogueComponent::GetLineArraySize()
+{
+	return Dialogues[CurrentDialogueIndex].DialogueTexts.Num();
+}
+
+
 

@@ -71,7 +71,6 @@ void UEternalGrace_GameInstance::OnMapLeave()
 
 	if (LoadingScreenClass)
 	{
-		UE_LOG(LogTemp, Error, TEXT("GOOD DOOL"))
 			LoadingScreen = CreateWidget<UBlendingWidget>(this, LoadingScreenClass);
 		if (LoadingScreen)
 		{
@@ -127,6 +126,7 @@ FName UEternalGrace_GameInstance::GetMainWorldName()
 
 void UEternalGrace_GameInstance::CheckWinConditionChange()
 {
+	UE_LOG(LogTemp, Error, TEXT("CHECK WIN CONDITION"))
 		//ITERATE THROUGH EVERY WIN CONDITION
 		for (const TPair<FName, bool>& Dependency : WinConditionDependencies)
 		{
@@ -179,6 +179,11 @@ void UEternalGrace_GameInstance::EnterLevel()
 	{
 		UE_LOG(LogTemp, Warning, TEXT("LoadLevel Function was called but LevelToLoad could not be getted."))
 	}
+}
+
+bool UEternalGrace_GameInstance::GetWinCondition()
+{
+	return WinCondition;
 }
 
 

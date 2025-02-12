@@ -25,10 +25,7 @@ public:
 
 
 
-
-
 protected:
-	// Called when the game starts
 	virtual void BeginPlay() override;
 	UPROPERTY()
 	int CurrentDialogueIndex;
@@ -41,6 +38,23 @@ public:
 
 	UFUNCTION()
 	void PlayDialogue();
+
+	UFUNCTION()
+	void SetCurrentDialogueIndex(int IndexNumber);
+
+	UFUNCTION()
+	int GetCurrentDialogueIndex();
+
+	UFUNCTION()
+	int GetDialogueArraySize();
+
+	UFUNCTION()
+	int GetCurrentLineIndex();
+
+	UFUNCTION()
+	int GetLineArraySize();
+
+
 
 		
 };

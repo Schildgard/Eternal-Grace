@@ -60,6 +60,10 @@ void AEternal_Grace_ArenaNPC::OnOverlapEnd(UPrimitiveComponent* OverlappedCompon
 	{
 		InteractInfoWidget->PlayAnimation(InteractInfoWidget->GetBlendOutAnimation());
 	}
+	if(DialogueComponent->DialogueWidget->IsInViewport())
+	{
+		DialogueComponent->DialogueWidget->PlayAnimation(DialogueComponent->DialogueWidget->GetBlendOutAnimation());
+	}
 }
 
 void AEternal_Grace_ArenaNPC::BeginPlay()
@@ -90,31 +94,7 @@ void AEternal_Grace_ArenaNPC::Interact_Implementation()
 
 	DialogueComponent->PlayDialogue();
 
-//	if (!DialogueWidget->IsInViewport())
-//	{
-//		TextCounter = 0;
-//		DialogueWidget->AddToViewport();
-//		DialogueWidget->PlayAnimation(DialogueWidget->GetBlendInAnimation());
-//
-//		if (DialogueTexts.Num() >= 1)
-//		{
-//			DialogueWidget->UpdateDialogueText(DialogueTexts[TextCounter]);
-//			TextCounter++;
-//		}
-//	}
-//	else
-//	{
-//		if(TextCounter < DialogueTexts.Num())
-//		{
-//			DialogueWidget->UpdateDialogueText(DialogueTexts[TextCounter]);
-//			TextCounter++;
-//		}
-//		else
-//		{
-//			DialogueWidget->PlayAnimation(DialogueWidget->GetBlendOutAnimation());
-//			TextCounter = 0;
-//		}
-//	}
+
 
 
 }

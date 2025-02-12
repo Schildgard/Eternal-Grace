@@ -73,6 +73,9 @@ public:
 	virtual void SendInfoToGameInstance();
 
 	UFUNCTION()
+	virtual void GetInfoFromGameInstance();
+
+	UFUNCTION()
 	bool CheckIfPlayerIsBehind();
 
 	UFUNCTION()

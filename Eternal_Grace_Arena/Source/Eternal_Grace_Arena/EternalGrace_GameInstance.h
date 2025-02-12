@@ -80,4 +80,7 @@ public:
 	void LoadLevel();
 	UFUNCTION()
 	void EnterLevel();
+
+	UFUNCTION()
+	bool GetWinCondition();
 };

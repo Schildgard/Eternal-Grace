@@ -220,6 +220,11 @@ void AEternal_Grace_ArenaEnemy::SendInfoToGameInstance()
 	}
 }
 
+void AEternal_Grace_ArenaEnemy::GetInfoFromGameInstance()
+{
+	//INSERT HERE IF THIS ENEMY RETREIVES ANY GAMEINSTANCE INFORMATION
+}
+
 bool AEternal_Grace_ArenaEnemy::CheckIfPlayerIsBehind()
 {
 	//	FColor DebugColor = FColor::Red;

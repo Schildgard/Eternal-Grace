@@ -259,6 +259,12 @@
     <ClCompile Include="..\..\Source\Eternal_Grace_Arena\LockOnSystem.h">
       <Filter>Source\Eternal_Grace_Arena</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\Eternal_Grace_Arena\NPC_Loretta.cpp">
+      <Filter>Source\Eternal_Grace_Arena</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Eternal_Grace_Arena\NPC_Loretta.h">
+      <Filter>Source\Eternal_Grace_Arena</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\Eternal_Grace_Arena\NS_CancelMontage.cpp">
       <Filter>Source\Eternal_Grace_Arena</Filter>
     </ClCompile>
