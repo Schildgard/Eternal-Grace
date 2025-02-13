@@ -14,7 +14,7 @@ void UEternalGrace_TitleScreen::NativeConstruct()
 
 	if (TitleMusic)
 	{
-		UGameplayStatics::PlaySound2D(GetWorld(), TitleMusic);
+		UGameplayStatics::PlaySound2D(GetWorld(), TitleMusic, 1.0f,1.0f,27.0f);
 	}
 
 	if (ScrollAnimation)

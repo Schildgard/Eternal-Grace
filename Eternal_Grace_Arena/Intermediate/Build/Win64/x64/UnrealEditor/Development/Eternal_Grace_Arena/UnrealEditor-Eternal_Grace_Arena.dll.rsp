@@ -21,7 +21,7 @@
 /ALTERNATENAME:__imp___std_init_once_complete=__imp_InitOnceComplete
 /DELAYLOAD:"d3d12.dll"
 /DELAYLOAD:"DBGHELP.DLL"
-/LIBPATH:"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\lib\x64"
+/LIBPATH:"G:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\lib\x64"
 /LIBPATH:"C:\Program Files (x86)\Windows Kits\10\lib\10.0.22621.0\ucrt\x64"
 /LIBPATH:"C:\Program Files (x86)\Windows Kits\10\lib\10.0.22621.0\um\x64"
 /NODEFAULTLIB:"LIBCMT"
@@ -37,14 +37,11 @@
 /FUNCTIONPADMIN:6
 /NOIMPLIB
 /NATVIS:"..\Plugins\FX\Niagara\Intermediate\Build\Win64\x64\UnrealEditor\Development\Niagara\Niagara.natvis"
-"D:\Leon\Eternal-Grace-Arena\Eternal_Grace_Arena\Intermediate\Build\Win64\x64\Eternal_Grace_ArenaEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h.obj"
-"D:\Leon\Eternal-Grace-Arena\Eternal_Grace_Arena\Intermediate\Build\Win64\x64\UnrealEditor\Development\Eternal_Grace_Arena\Module.Eternal_Grace_Arena.1.cpp.obj"
-"D:\Leon\Eternal-Grace-Arena\Eternal_Grace_Arena\Intermediate\Build\Win64\x64\UnrealEditor\Development\Eternal_Grace_Arena\Module.Eternal_Grace_Arena.2.cpp.obj"
-"D:\Leon\Eternal-Grace-Arena\Eternal_Grace_Arena\Intermediate\Build\Win64\x64\UnrealEditor\Development\Eternal_Grace_Arena\Module.Eternal_Grace_Arena.3.cpp.obj"
-"D:\Leon\Eternal-Grace-Arena\Eternal_Grace_Arena\Intermediate\Build\Win64\x64\UnrealEditor\Development\Eternal_Grace_Arena\DialogueComponent.cpp.obj"
-"D:\Leon\Eternal-Grace-Arena\Eternal_Grace_Arena\Intermediate\Build\Win64\x64\UnrealEditor\Development\Eternal_Grace_Arena\EternalGrace_GameInstance.cpp.obj"
-"D:\Leon\Eternal-Grace-Arena\Eternal_Grace_Arena\Intermediate\Build\Win64\x64\UnrealEditor\Development\Eternal_Grace_Arena\NPC_Loretta.cpp.obj"
-"D:\Leon\Eternal-Grace-Arena\Eternal_Grace_Arena\Intermediate\Build\Win64\x64\UnrealEditor\Development\Eternal_Grace_Arena\Default.rc2.res"
+"G:\Repository\Eternal-Grace-Arena\Eternal_Grace_Arena\Intermediate\Build\Win64\x64\Eternal_Grace_ArenaEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.Cpp20.h.obj"
+"G:\Repository\Eternal-Grace-Arena\Eternal_Grace_Arena\Intermediate\Build\Win64\x64\UnrealEditor\Development\Eternal_Grace_Arena\Module.Eternal_Grace_Arena.1.cpp.obj"
+"G:\Repository\Eternal-Grace-Arena\Eternal_Grace_Arena\Intermediate\Build\Win64\x64\UnrealEditor\Development\Eternal_Grace_Arena\Module.Eternal_Grace_Arena.2.cpp.obj"
+"G:\Repository\Eternal-Grace-Arena\Eternal_Grace_Arena\Intermediate\Build\Win64\x64\UnrealEditor\Development\Eternal_Grace_Arena\Module.Eternal_Grace_Arena.3.cpp.obj"
+"G:\Repository\Eternal-Grace-Arena\Eternal_Grace_Arena\Intermediate\Build\Win64\x64\UnrealEditor\Development\Eternal_Grace_Arena\Default.rc2.res"
 "..\Intermediate\Build\Win64\x64\UnrealEditor\Development\Engine\UnrealEditor-Engine.lib"
 "..\Plugins\Runtime\GameplayAbilities\Intermediate\Build\Win64\x64\UnrealEditor\Development\GameplayAbilities\UnrealEditor-GameplayAbilities.lib"
 "..\Intermediate\Build\Win64\x64\UnrealEditor\Development\UMG\UnrealEditor-UMG.lib"
@@ -80,6 +77,6 @@
 "synchronization.lib"
 "dwmapi.lib"
 "imm32.lib"
-/OUT:"D:\Leon\Eternal-Grace-Arena\Eternal_Grace_Arena\Binaries\Win64\UnrealEditor-Eternal_Grace_Arena.dll"
-/PDB:"D:\Leon\Eternal-Grace-Arena\Eternal_Grace_Arena\Binaries\Win64\UnrealEditor-Eternal_Grace_Arena.pdb"
+/OUT:"G:\Repository\Eternal-Grace-Arena\Eternal_Grace_Arena\Binaries\Win64\UnrealEditor-Eternal_Grace_Arena.dll"
+/PDB:"G:\Repository\Eternal-Grace-Arena\Eternal_Grace_Arena\Binaries\Win64\UnrealEditor-Eternal_Grace_Arena.pdb"
 /ignore:4078

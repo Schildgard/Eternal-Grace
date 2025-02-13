@@ -81,6 +81,7 @@
 			"CustomPlayerController.cpp.obj",
 			"Damage_Spells.cpp.obj",
 			"Dialogue.cpp.obj",
+			"DialogueComponent.cpp.obj",
 			"DialogueWidget.cpp.obj",
 			"Enemy_MageBoss.cpp.obj",
 			"Enemy_MushroomKing.cpp.obj",
@@ -88,6 +89,7 @@
 			"Enemy_WeaponMaster.cpp.obj",
 			"Equipment.cpp.obj",
 			"EternalGrace_BaseActor.cpp.obj",
+			"EternalGrace_GameInstance.cpp.obj",
 			"EternalGrace_GameMode.cpp.obj",
 			"EternalGrace_GameState.cpp.obj",
 			"EternalGrace_PlayerState.cpp.obj",
@@ -108,6 +110,7 @@
 			"I_Interactable.cpp.obj",
 			"I_Targetable.cpp.obj",
 			"LockOnSystem.cpp.obj",
+			"NPC_Loretta.cpp.obj",
 			"NS_CancelMontage.cpp.obj",
 			"NS_CastSpell.cpp.obj",
 			"NS_ChargedWeaponSwing.cpp.obj",
@@ -137,10 +140,7 @@
 			"StatusWarningEffect.cpp.obj",
 			"TitleScreenGameMode.cpp.obj",
 			"Weapon.cpp.obj",
-			"WeaponComponent.cpp.obj",
-			"DialogueComponent.cpp.obj",
-			"EternalGrace_GameInstance.cpp.obj",
-			"NPC_Loretta.cpp.obj"
+			"WeaponComponent.cpp.obj"
 		]
 	}
 }
