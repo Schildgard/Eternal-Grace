@@ -62,10 +62,10 @@
 			"Spells_EffectArea.gen.cpp.obj",
 			"Spells_HomingProjectile.gen.cpp.obj",
 			"Spells_Projectile.gen.cpp.obj",
-			"Spell_Teleport.gen.cpp.obj",
-			"StaggerComponent.gen.cpp.obj"
+			"Spell_Teleport.gen.cpp.obj"
 		],
 		"Module.Eternal_Grace_Arena.3.cpp.obj": [
+			"StaggerComponent.gen.cpp.obj",
 			"StaggeringType.gen.cpp.obj",
 			"StaminaComponent.gen.cpp.obj",
 			"StatusEffectComponent.gen.cpp.obj",

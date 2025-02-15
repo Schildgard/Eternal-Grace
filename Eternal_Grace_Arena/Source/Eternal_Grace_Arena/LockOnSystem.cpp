@@ -7,6 +7,7 @@
 #include "Kismet/GameplayStatics.h"
 #include "Camera/CameraComponent.h"
 #include "CharacterAnimInstance.h"
+#include "Blueprint//UserWidget.h"
 
 
 ULockOnSystem::ULockOnSystem()
@@ -18,13 +19,27 @@ ULockOnSystem::ULockOnSystem()
 
 	MinZOffset = 30.f;
 	MaxZDrop = 150.f;
+	VisualizerWidgetClass = nullptr;
+	Visualizer = nullptr;
 
 }
 
 void ULockOnSystem::LockOnTarget(AEternal_Grace_ArenaCharacter* NewTarget, AEternal_Grace_ArenaCharacter* LockingActor)
 {
-	//UE_LOG(LogTemp, Warning, TEXT("Locked on To : %s"), *NewTarget->GetName())
 	LockedOnTarget = NewTarget;
+
+	if (VisualizerWidgetClass)
+	{
+		if (!Visualizer)
+		{
+			Visualizer = CreateWidget<UUserWidget>(GetWorld()->GetFirstPlayerController(), VisualizerWidgetClass);
+		}
+		if (Visualizer)
+		{
+			Visualizer->AddToViewport();
+		}
+	}
+
 }
 
 void ULockOnSystem::UpdateLockOn(AEternal_Grace_ArenaCharacter* LockingActor, float DeltaSeconds)
@@ -58,11 +73,28 @@ void ULockOnSystem::UpdateLockOn(AEternal_Grace_ArenaCharacter* LockingActor, fl
 	FRotator UltimateRotation = FRotator(InterpolatedRotation.Pitch, InterpolatedRotation.Yaw, CurrentPlayerController->GetControlRotation().Roll);
 	CurrentPlayerController->SetControlRotation(UltimateRotation);
 
+
+	//UPDATE LOCK ON VISUALIZER POSITION
+	if (Visualizer && LockedOnTarget)
+	{
+		FVector TargetSocketLocation = LockedOnTarget->GetMesh()->GetSocketLocation(FName("Target"));
+		FVector2D ScreenPosition;
+		bool Projected = GetWorld()->GetFirstPlayerController()->ProjectWorldLocationToScreen(TargetSocketLocation, ScreenPosition);
+
+		if (Projected)
+		{
+			Visualizer->SetPositionInViewport(ScreenPosition, true);
+		}
+	}
 }
 
 void ULockOnSystem::UnlockTarget()
 {
 	LockedOnTarget = nullptr;
+	if (Visualizer)
+	{
+		Visualizer->RemoveFromViewport();
+	}
 }
 
 AEternal_Grace_ArenaCharacter* ULockOnSystem::GetLockedOnTarget()
