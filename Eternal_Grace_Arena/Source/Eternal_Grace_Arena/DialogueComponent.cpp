@@ -61,7 +61,7 @@ void UDialogueComponent::PlayDialogue()
 		if (CurrentLineIndex >= Dialogues[CurrentDialogueIndex].DialogueTexts.Num())
 		{
 			//ENABLE NEXT DIALOGUE
-			//CurrentDialogueIndex++;
+			CurrentDialogueIndex = 1; // TODO: CHANGE TO INCREMENT, BECAUSE THIS IS VERY SPECIFIC TO LORETTA
 			//REMOVE FROM VIEWPORT
 			DialogueWidget->PlayAnimation(DialogueWidget->GetBlendOutAnimation());
 			//CHECK IF THATS THE LAST DIALOGUE

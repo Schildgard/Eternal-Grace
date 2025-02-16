@@ -25,7 +25,7 @@ void ANPC_Loretta::GetInfoFromGameInstance()
 		bool isWinConditionMet = CustomGameInstance->GetWinCondition();
 		if (isWinConditionMet == true)
 		{
-			DialogueComponent->SetCurrentDialogueIndex(1);
+			DialogueComponent->SetCurrentDialogueIndex(2);
 			UE_LOG(LogTemp, Error, TEXT("Win Condition Set on loretta"))
 		}
 		else
@@ -48,8 +48,8 @@ void ANPC_Loretta::Interact_Implementation()
 			UEternalGrace_GameInstance* CustomGameInstance = Cast<UEternalGrace_GameInstance>(CurrentInstance);
 			if (CustomGameInstance)
 			{
-				CustomGameInstance->SetLevelToLoad("Level_Ending");
-				CustomGameInstance->OnMapLeave();
+			//	CustomGameInstance->SetLevelToLoad("Level_Ending");
+			//	CustomGameInstance->OnMapLeave();
 				//CustomGameInstance->LoadLevel();
 			}
 		}
