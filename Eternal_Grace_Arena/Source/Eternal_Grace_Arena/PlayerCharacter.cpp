@@ -16,6 +16,7 @@
 #include "Components/PostProcessComponent.h"
 #include "StatusEffectComponent.h"
 #include "Eternal_Grace_ArenaNPC.h"
+#include "StaggerComponent.h"
 
 
 
@@ -204,24 +205,37 @@ void APlayerCharacter::CancelSprint()
 
 void APlayerCharacter::LightAttack()
 {
+	Super::LightAttack();
 	if (StaminaComponent->CurrentStamina >= 1.0f)
 	{
-		if (!CharacterAnimationInstance->isAttacking && !GetMovementComponent()->IsFalling())
+		UE_LOG(LogTemp, Warning, TEXT("LIGHT ATTACK CALLED"))
+			UE_LOG(LogTemp, Warning, TEXT("Before: isAttacking = %s"), *FString(CharacterAnimationInstance->isAttacking ? TEXT("true") : TEXT("false")));
+
+		int AttackIndex = 0;
+		if (!CharacterAnimationInstance->isAttacking && !GetMovementComponent()->IsFalling() && !StaggerComponent->GetIsStaggered())
 		{
 			CharacterAnimationInstance->isAttacking = true;
+			UE_LOG(LogTemp, Warning, TEXT("After: isAttacking = %s"), *FString(CharacterAnimationInstance->isAttacking ? TEXT("true") : TEXT("false")));
 			//INTERUPT BLOCKING STATE IF BLOCKING
 			if (CharacterAnimationInstance->isGuarding)
 			{
-				CancelGuard(); // THIS IS NOT GOOD: BETWEEN ATTACK THERE IS A SMALL WINDOW WHERE GUARD IS ACTIVATED. NEED TO CHANGE THIS LATER
+				CancelGuard();
 			}
 
 			TArray<UAnimMontage*> Attacks = WeaponComponent->GetCurrentLightAttacks();
-			int AttackIndex = CharacterAnimationInstance->attackCount;
+			AttackIndex = CharacterAnimationInstance->attackCount;
 
 			if (AttackIndex <= Attacks.Num() - 1)
 			{
-				PlayAnimMontage(Attacks[AttackIndex], 1.0f);
+				PlayAnimMontage(Attacks[AttackIndex]);
 			}
+		}
+		else
+		{
+		//	UE_LOG(LogTemp, Error, TEXT("Attack Index: %i"), AttackIndex)
+			UE_LOG(LogTemp, Error, TEXT("Attack Status: %s"), *FString(CharacterAnimationInstance->isAttacking ? TEXT("true") : TEXT("false")))
+		//		UE_LOG(LogTemp, Error, TEXT("Staggered Status: %s"), *FString(StaggerComponent->GetIsStaggered() ? TEXT("true") : TEXT("false")))
+		//		UE_LOG(LogTemp, Error, TEXT("Falling Status: %s"), *FString(GetMovementComponent()->IsFalling() ? TEXT("true") : TEXT("false")))
 		}
 	}
 }

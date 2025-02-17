@@ -30,10 +30,7 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = State, meta = (AllowPrivateAccess))
 	bool isCharging;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = State, meta = (AllowPrivateAccess))
-	bool isStaggered;
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = State, meta = (AllowPrivateAccess))
 	bool isDodging;
-
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Animation, meta = (AllowPrivateAccess))
 	int attackCount;
 	//VALUE BETWEEN -180 AND 180 DEGREES, THAT INTERPOLATES BETWEEN STRAFE ANIMATIONS 

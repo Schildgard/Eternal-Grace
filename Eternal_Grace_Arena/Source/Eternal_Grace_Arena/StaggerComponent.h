@@ -33,6 +33,15 @@ protected:
 	float PoiseRegenerationRate;
 
 	UPROPERTY()
+	bool isStaggered;
+
+	UFUNCTION()
+	void EndStaggerCondition(UAnimMontage* AttackAnimation, bool Interrupted);
+
+	UFUNCTION()
+	void PlayStaggerAnimation(UAnimMontage* StaggerMontage);
+
+	UPROPERTY()
 	AEternal_Grace_ArenaCharacter* Owner;
 
 
@@ -40,6 +49,9 @@ protected:
 
 public:	
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
+
+	UFUNCTION()
+	bool GetIsStaggered();
 
 		
 };

@@ -62,7 +62,13 @@ class AEternal_Grace_ArenaCharacter : public ACharacter, public II_Damageable
 protected:
 	AEternal_Grace_ArenaCharacter();
 
+	
 public:
+
+	UPROPERTY()
+	bool canAttack;
+	UFUNCTION()
+	void SetAttackStatus(UAnimMontage* AttackAnimation);
 
 	//DEATH ANIMATIONS
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Animations, meta = (AllowPrivateAccess))
@@ -115,9 +121,6 @@ public:
 
 protected:
 
-	UFUNCTION()
-	void CheckActorStaggerAnimation(UAnimMontage* Montage);
-
 	//COMBAT ACTION FUNCTIONS
 	UFUNCTION(BlueprintCallable)
 	virtual void LightAttack();
@@ -133,6 +136,9 @@ public:
 	UFUNCTION()
 	void RotateTowardsTarget(AActor* Target);
 
+	UFUNCTION()
+	void QuitAttack();
+
 
 
 protected:
@@ -144,10 +150,10 @@ protected:
 	virtual void BeginPlay()override;
 	virtual void Tick(float DeltaSeconds) override;
 	void InitializeAnimationInstance();
-	
+
 
 public:
-	virtual FVector GetTargetLocation(AActor* Requestor = nullptr ) const override;
+	virtual FVector GetTargetLocation(AActor* Requestor = nullptr) const override;
 	/** Returns CameraBoom subobject **/
 	FORCEINLINE class USpringArmComponent* GetCameraBoom() const { return CameraBoom; }
 	/** Returns FollowCamera subobject **/

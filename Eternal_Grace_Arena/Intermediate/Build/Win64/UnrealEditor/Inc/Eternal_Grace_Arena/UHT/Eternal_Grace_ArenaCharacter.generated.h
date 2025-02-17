@@ -22,12 +22,13 @@ ETERNAL_GRACE_ARENA_API void FOnCharacterDeath_DelegateWrapper(const FMulticastS
 
 
 #define FID_Repository_Eternal_Grace_Arena_Eternal_Grace_Arena_Source_Eternal_Grace_Arena_Eternal_Grace_ArenaCharacter_h_29_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execQuitAttack); \
 	DECLARE_FUNCTION(execRotateTowardsTarget); \
 	DECLARE_FUNCTION(execGetStatusEffectComponent); \
 	DECLARE_FUNCTION(execCancelGuard); \
 	DECLARE_FUNCTION(execGuard); \
 	DECLARE_FUNCTION(execLightAttack); \
-	DECLARE_FUNCTION(execCheckActorStaggerAnimation);
+	DECLARE_FUNCTION(execSetAttackStatus);
 
 
 #define FID_Repository_Eternal_Grace_Arena_Eternal_Grace_Arena_Source_Eternal_Grace_Arena_Eternal_Grace_ArenaCharacter_h_29_INCLASS_NO_PURE_DECLS \

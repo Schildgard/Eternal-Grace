@@ -74,6 +74,13 @@ AEternal_Grace_ArenaCharacter::AEternal_Grace_ArenaCharacter()
 	ShieldComponent->SetupAttachment(GetMesh(), ShieldSocket);
 }
 
+void AEternal_Grace_ArenaCharacter::SetAttackStatus(UAnimMontage* AttackAnimation)
+{
+	CharacterAnimationInstance->isAttacking = true;
+	CharacterAnimationInstance->attackCount++;
+	UE_LOG(LogTemp, Warning, TEXT("Character Releases Attack"))
+}
+
 //////////////////////////////////////////////////////////////////////////
 // Input
 
@@ -245,29 +252,34 @@ void AEternal_Grace_ArenaCharacter::FellOutOfWorld(const UDamageType& dmgType)
 	Execute_Die(this);
 }
 
-void AEternal_Grace_ArenaCharacter::CheckActorStaggerAnimation(UAnimMontage* Montage)
+void AEternal_Grace_ArenaCharacter::LightAttack()
 {
-	if (Montage)
+	if(!canAttack)
 	{
-		PlayAnimMontage(Montage);
-	}
-	else
-	{
-		UE_LOG(LogTemp, Warning, TEXT("Stagger Animation is nullptr"))
-			return;
+		return;
 	}
 }
 
-void AEternal_Grace_ArenaCharacter::LightAttack()
+void AEternal_Grace_ArenaCharacter::QuitAttack()
 {
-	//OVERRIDE
+	if(CharacterAnimationInstance)
+	{
+		UE_LOG(LogTemp, Warning, TEXT("QUIT ATTACK CALLED"))
+			UE_LOG(LogTemp, Warning, TEXT("Before: isAttacking = %s"), *FString(CharacterAnimationInstance->isAttacking ? TEXT("true") : TEXT("false")));
+
+		CharacterAnimationInstance->isAttacking = false;
+		CharacterAnimationInstance->Montage_Stop(0.1f);
+
+		UE_LOG(LogTemp, Warning, TEXT("After: isAttacking = %s"), *FString(CharacterAnimationInstance->isAttacking ? TEXT("true") : TEXT("false")));
+	}
 }
+
 
 
 
 void AEternal_Grace_ArenaCharacter::Guard()
 {
-	if (!CharacterAnimationInstance->isAttacking && !CharacterAnimationInstance->isStaggered)
+	if (!CharacterAnimationInstance->isAttacking && !StaggerComponent->GetIsStaggered())
 	{
 		CharacterAnimationInstance->isGuarding = true;
 	}
