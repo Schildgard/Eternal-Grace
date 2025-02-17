@@ -216,9 +216,7 @@ void AEternal_Grace_ArenaCharacter::GetDamage_Implementation(float Damage, float
 		return;
 	}
 
-
 	HealthComponent->CurrentHealth -= Damage;
-	//UE_LOG(LogTemp, Warning, TEXT("%s got %f Damage"), *GetName(), Damage)
 
 		if (StaggerComponent)
 		{
@@ -237,6 +235,7 @@ void AEternal_Grace_ArenaCharacter::Die_Implementation()
 {
 	if (DeathAnimation)
 	{
+		CharacterAnimationInstance->StopAllMontages(0.1f);
 		PlayAnimMontage(DeathAnimation);
 		SetActorEnableCollision(false);
 	}

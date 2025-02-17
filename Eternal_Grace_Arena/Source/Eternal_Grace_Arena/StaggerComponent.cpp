@@ -29,7 +29,7 @@ void UStaggerComponent::GetStaggered(EStaggeringType StaggerType, float PoiseDam
 			//If Character is Attacking, interrupt his Attack Status.
 			Owner->QuitAttack();
 			isStaggered = true;
-			Owner->CharacterAnimationInstance->StopAllMontages(0.0f);
+			//Owner->CharacterAnimationInstance->StopAllMontages(0.0f);
 			//IF ATTACK COMES FROM BEHIND -> TRIGGER BACKSTAGGER
 			if (AttackAngle >= 135.0f && AttackAngle <= 180.0f)
 			{

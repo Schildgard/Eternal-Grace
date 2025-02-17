@@ -9,7 +9,11 @@
 				"D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Levels/Level_World.umap",
 				"D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Blueprints/CharacterBlueprints/BP_Player.uasset",
 				"D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/StarterContent/Particles/Materials/M_Spark.uasset",
-				"D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Blueprints/AnimationBlueprints/ABP_DarkLady_Jiggle.uasset"
+				"D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Blueprints/AnimationBlueprints/ABP_DarkLady_Jiggle.uasset",
+				"D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Blueprints/CharacterBlueprints/BP_DarkKnight.uasset",
+				"D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Levels/MainMenu.umap",
+				"D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Levels/Level_Hub.umap",
+				"D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/DarkFantasyChurch/Materials/MI/MI_Floor_Puddles.uasset"
 			]
 		}
 	]
