@@ -12,6 +12,9 @@
 #include "CharacterAnimInstance.h"
 #include "WeaponComponent.h"
 #include "CustomPlayerController.h"
+#include "Blueprint/AIBlueprintHelperLibrary.h"
+#include "AIController.h"
+#include "BehaviorTree/BlackboardComponent.h"
 
 
 AEternal_Grace_ArenaEnemy::AEternal_Grace_ArenaEnemy()
@@ -23,11 +26,11 @@ AEternal_Grace_ArenaEnemy::AEternal_Grace_ArenaEnemy()
 	AttackRange = 350.f;
 	HealthbarWidget = nullptr;
 	isAggro = false;
-//	HealthbarWidgetClass = nullptr;
+	//	HealthbarWidgetClass = nullptr;
 
-	//ChasingDistanceThreshold = 300.0f;
-	//ChasingCountDown = ChasingTimer;
-	//ReturningToStartPosition = false;
+		//ChasingDistanceThreshold = 300.0f;
+		//ChasingCountDown = ChasingTimer;
+		//ReturningToStartPosition = false;
 
 	BackDetection = -0.35f;
 	SensingComponent = CreateDefaultSubobject<UPawnSensingComponent>("Pawn Sensing");
@@ -167,6 +170,20 @@ void AEternal_Grace_ArenaEnemy::Die_Implementation()
 	HideHealthWidget();
 	Super::Die_Implementation();
 	SendInfoToGameInstance();
+
+	AAIController* EnemyAIController = UAIBlueprintHelperLibrary::GetAIController(this);
+	if (EnemyAIController)
+	{
+		UBlackboardComponent* EnemyBlackboard = EnemyAIController->GetBlackboardComponent();
+
+		if (EnemyBlackboard)
+		{
+			EnemyBlackboard->SetValueAsBool("isAlive", false);
+		}
+	}
+
+
+
 }
 
 void AEternal_Grace_ArenaEnemy::LightAttack()
@@ -199,6 +216,7 @@ void AEternal_Grace_ArenaEnemy::SpotPlayer(APawn* SpottedPawn)
 	if (!isAggro)
 	{
 		isAggro = true;
+
 		UE_LOG(LogTemp, Warning, TEXT("Enemy Spotted Player"))
 			//CHECK IF THERE COULD BE A PROBLEM WITH RACE CONDITION IN LINE 118, SINCE THE EVENT CALL ALSO SETS ISAGGRO
 	}
@@ -263,6 +281,10 @@ void AEternal_Grace_ArenaEnemy::ShowHealthWidget()
 {
 	if (HealthbarWidget)
 	{
+		if (HealthbarWidget->IsInViewport())
+		{
+			return;
+		}
 		HealthbarWidget->AddToViewport();
 		UWidgetAnimation* BlendInAnimation = HealthbarWidget->GetBlendInAnimation();
 		if (BlendInAnimation)
@@ -284,10 +306,10 @@ void AEternal_Grace_ArenaEnemy::ShowHealthWidget()
 
 void AEternal_Grace_ArenaEnemy::HideHealthWidget()
 {
-	if(HealthbarWidget)
+	if (HealthbarWidget)
 	{
 		UWidgetAnimation* BlendOutAnimation = HealthbarWidget->GetBlendOutAnimation();
-		if(BlendOutAnimation)
+		if (BlendOutAnimation)
 		{
 			HealthbarWidget->PlayAnimation(BlendOutAnimation);
 		}

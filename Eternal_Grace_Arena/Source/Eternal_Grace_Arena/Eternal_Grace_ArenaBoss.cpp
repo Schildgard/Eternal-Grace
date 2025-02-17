@@ -3,6 +3,9 @@
 
 #include "Eternal_Grace_ArenaBoss.h"
 #include "HealthComponent.h"
+#include "Blueprint/AIBlueprintHelperLibrary.h"
+#include "AIController.h"
+#include "BehaviorTree/BlackboardComponent.h"
 
 AEternal_Grace_ArenaBoss::AEternal_Grace_ArenaBoss()
 {
@@ -38,7 +41,19 @@ void AEternal_Grace_ArenaBoss::BeginPlay()
 	{
 		HealthbarWidget = CreateWidget<UEnemy_UI_Healthbar>(GetWorld(), HealthbarWidgetClass);
 	}
-	ShowHealthWidget();
+}
+
+void AEternal_Grace_ArenaBoss::SpotPlayer(APawn* SpottedPawn)
+{
+	Super::SpotPlayer(SpottedPawn);
+	AAIController* EnemyAIController = UAIBlueprintHelperLibrary::GetAIController(this);
+	UBlackboardComponent* EnemyBlackboard = EnemyAIController->GetBlackboardComponent();
+	bool isAlive = EnemyBlackboard->GetValueAsBool("isAlive");
+
+	if (isAlive)
+	{
+		ShowHealthWidget();
+	}
 
 }
 

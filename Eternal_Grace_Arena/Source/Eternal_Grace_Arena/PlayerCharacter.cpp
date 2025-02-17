@@ -50,10 +50,7 @@ void APlayerCharacter::GuardCounterAttack()
 void APlayerCharacter::Interact()
 {
 	TSet<AActor*> OverlappingActors;
-	//TSubclassOf<AInteractableActor> ViableActorClass;
-	//GetOverlappingActors(OverlappingActors, ViableActorClass);
 	GetOverlappingActors(OverlappingActors);
-	//Cant Access Elements of TSets, thats why it is neccessary to iterate through it, even just to get one item
 	if (OverlappingActors.Num() >= 1)
 	{
 		for (AActor* Overlap : OverlappingActors)
@@ -209,15 +206,10 @@ void APlayerCharacter::LightAttack()
 
 	if (StaminaComponent->CurrentStamina >= 1.0f)
 	{
-		UE_LOG(LogTemp, Warning, TEXT("LIGHT ATTACK CALLED"))
-			UE_LOG(LogTemp, Warning, TEXT("Before: isAttacking = %s"), *FString(CharacterAnimationInstance->isAttacking ? TEXT("true") : TEXT("false")));
-
 		int AttackIndex = 0;
 		if (!CharacterAnimationInstance->isAttacking && !GetMovementComponent()->IsFalling() && !StaggerComponent->GetIsStaggered())
 		{
 			CharacterAnimationInstance->isAttacking = true;
-			UE_LOG(LogTemp, Warning, TEXT("After: isAttacking = %s"), *FString(CharacterAnimationInstance->isAttacking ? TEXT("true") : TEXT("false")));
-
 
 			//INTERUPT BLOCKING STATE IF BLOCKING
 			if (CharacterAnimationInstance->isGuarding)
@@ -228,29 +220,17 @@ void APlayerCharacter::LightAttack()
 			TArray<UAnimMontage*> Attacks = WeaponComponent->GetCurrentLightAttacks();
 			AttackIndex = CharacterAnimationInstance->attackCount;
 
-			UE_LOG(LogTemp, Error, TEXT("Attack Index: %i"), AttackIndex)
 			if (AttackIndex <= Attacks.Num() - 1)
 			{
-				UE_LOG(LogTemp, Error, TEXT("ATTACK GETTING PERFORMED"))
 				PlayAnimMontage(Attacks[AttackIndex]);
 			}
-			else
-			{
-				AttackIndex = 0;
-			}
-		}
-		else
-		{
-			UE_LOG(LogTemp, Error, TEXT("Attack Status: %s"), *FString(CharacterAnimationInstance->isAttacking ? TEXT("true") : TEXT("false")))
-		//		UE_LOG(LogTemp, Error, TEXT("Staggered Status: %s"), *FString(StaggerComponent->GetIsStaggered() ? TEXT("true") : TEXT("false")))
-		//		UE_LOG(LogTemp, Error, TEXT("Falling Status: %s"), *FString(GetMovementComponent()->IsFalling() ? TEXT("true") : TEXT("false")))
 		}
 	}
 }
 
 void APlayerCharacter::ChargeHeavyAttack()
 {
-	if (StaminaComponent->CurrentStamina >= 1.0f && !GetMovementComponent()->IsFalling())
+	if (StaminaComponent->CurrentStamina >= 1.0f && !GetMovementComponent()->IsFalling() && !CharacterAnimationInstance->isAttacking && !StaggerComponent->GetIsStaggered())
 	{
 		//When Heavy Attack Button is first pressed, Player goes into Charge Stand
 		if (!CharacterAnimationInstance->isCharging && !CharacterAnimationInstance->isAttacking && !CharacterAnimationInstance->isInHeavyAttack)

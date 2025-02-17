@@ -37,6 +37,8 @@ public:
 	virtual void TriggerSecondPhase();
 	virtual void Tick(float DeltaSeconds)override;
 	virtual void BeginPlay()override;
+	virtual void SpotPlayer(APawn* SpottedPawn)override;
+
 
 protected:
 	UFUNCTION()

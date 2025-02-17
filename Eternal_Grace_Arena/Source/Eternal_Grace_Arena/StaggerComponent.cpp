@@ -29,7 +29,6 @@ void UStaggerComponent::GetStaggered(EStaggeringType StaggerType, float PoiseDam
 			//If Character is Attacking, interrupt his Attack Status.
 			Owner->QuitAttack();
 			isStaggered = true;
-			//Owner->CharacterAnimationInstance->StopAllMontages(0.0f);
 			//IF ATTACK COMES FROM BEHIND -> TRIGGER BACKSTAGGER
 			if (AttackAngle >= 135.0f && AttackAngle <= 180.0f)
 			{
@@ -58,14 +57,10 @@ void UStaggerComponent::GetStaggered(EStaggeringType StaggerType, float PoiseDam
 void UStaggerComponent::EndStaggerCondition(UAnimMontage* AttackAnimation, bool Interrupted)
 {
 	isStaggered = false;
-	Owner->QuitAttack();
 
-	// Sperre Attacken für 0.2 Sekunden nach Stagger
+	// Lock CanAttack for a few milliseconds
 	Owner->canAttack = false;
 	FTimerHandle AttackCooldownHandle;
-
-
-
 	Owner->GetWorldTimerManager().SetTimer(AttackCooldownHandle, [this]()
 		{
 			Owner->canAttack = true;
@@ -80,9 +75,7 @@ void UStaggerComponent::PlayStaggerAnimation(UAnimMontage* StaggerMontage)
 	Owner->PlayAnimMontage(StaggerMontage);
 
 	FOnMontageEnded EndDelegate;
-	//BlendoutDelegate.BindUObject(this, &UStaggerComponent::EndStaggerCondition);
 	EndDelegate.BindUObject(this, &UStaggerComponent::EndStaggerCondition);
-	//Owner->CharacterAnimationInstance->Montage_SetBlendingOutDelegate(BlendoutDelegate, StaggerMontage);
 	Owner->CharacterAnimationInstance->Montage_SetEndDelegate(EndDelegate, StaggerMontage);
 }
 

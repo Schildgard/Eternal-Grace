@@ -263,13 +263,8 @@ void AEternal_Grace_ArenaCharacter::QuitAttack()
 {
 	if(CharacterAnimationInstance)
 	{
-		UE_LOG(LogTemp, Warning, TEXT("QUIT ATTACK CALLED"))
-			UE_LOG(LogTemp, Warning, TEXT("Before: isAttacking = %s"), *FString(CharacterAnimationInstance->isAttacking ? TEXT("true") : TEXT("false")));
-
 		CharacterAnimationInstance->isAttacking = false;
 		CharacterAnimationInstance->Montage_Stop(0.1f);
-
-		UE_LOG(LogTemp, Warning, TEXT("After: isAttacking = %s"), *FString(CharacterAnimationInstance->isAttacking ? TEXT("true") : TEXT("false")));
 	}
 }
 
