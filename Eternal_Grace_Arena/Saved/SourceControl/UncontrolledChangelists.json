@@ -6,26 +6,16 @@
 			"description": "Default Uncontrolled Changelist",
 			"files": [
 				"D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/StarterContent/Architecture/Floor_400x400.uasset",
-				"D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Levels/Level_World.umap",
-				"D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Blueprints/CharacterBlueprints/BP_Player.uasset",
-				"D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/StarterContent/Particles/Materials/M_Spark.uasset",
+				"D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Input/IMC_Player.uasset",
+				"D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Levels/Untitled.umap",
 				"D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Blueprints/AnimationBlueprints/ABP_DarkLady_Jiggle.uasset",
-				"D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Blueprints/CharacterBlueprints/BP_DarkKnight.uasset",
-				"D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Levels/MainMenu.umap",
-				"D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Levels/Level_Hub.umap",
-				"D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/DarkFantasyChurch/Materials/MI/MI_Floor_Puddles.uasset",
-				"D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Blueprints/AnimationBlueprints/ABP_DarkKnight.uasset",
-				"D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Animations/CasterAnimation/MageBoss_Animations/AM_MageBoss_Fireball.uasset",
-				"D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/StarterContent/Materials/M_Ground_Grass.uasset",
-				"D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Blueprints/CharacterBlueprints/BP_MushroomKing.uasset",
+				"D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/StarterContent/Particles/Materials/M_Spark.uasset",
 				"D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Levels/Level_Main.umap",
-				"D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Levels/Level_Dungeon.umap",
-				"D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Animations/DarkLadyAnimations/Combat/Attacks/Test_MaceAttacks/Test_2.uasset",
-				"D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Animations/DarkLadyAnimations/Combat/Attacks/Test_MaceAttacks/GreatMace_Attack_01.uasset",
-				"D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Animations/DarkLadyAnimations/Combat/Attacks/Test_MaceAttacks/GreatMace_Attack_02.uasset",
-				"D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Animations/DarkLadyAnimations/Combat/Attacks/Test_MaceAttacks/GreatMace_Attack_03.uasset",
-				"D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Animations/DarkLadyAnimations/Combat/Attacks/Test_MaceAttacks/GreatMace_Atatck_01.uasset",
-				"D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Blueprints/BP_TestWeapon5_ForPlayer.uasset"
+				"D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Animations/DarkLadyAnimations/Combat/Attacks/AS_DarkLady_Attack_Heavy1_RT.uasset",
+				"D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Blueprints/CharacterBlueprints/BP_Player.uasset",
+				"D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Material/M_Vignette_Normal.uasset",
+				"D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Animations/DarkLadyAnimations/Combat/Attacks/AS_DarkLady_UE_Attack_Heavy2_RT_RT.uasset",
+				"D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/StarterContent/Materials/M_Ground_Grass.uasset"
 			]
 		}
 	]

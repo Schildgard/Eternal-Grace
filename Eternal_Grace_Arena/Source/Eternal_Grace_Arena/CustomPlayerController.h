@@ -32,11 +32,6 @@ public:
 	UPROPERTY()
 	UPlayer_UI_Bars* HUDWidget;
 
-//	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = PostProcessing, meta = (AllowPrivateAccess))
-//	UPostProcessComponent* ScreenEffectComponent;
-
-
-
 	UPROPERTY()
 	APlayerCharacter* PlayerCharacter;
 
@@ -61,8 +56,6 @@ protected:
 	//LOCKON SYSTEM
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = LockOn, meta = (AllowPrivateAccess))
 	ULockOnSystem* LockOnSystem;
-	UFUNCTION(BlueprintCallable, Category = "LockOn")
-	void ToggleLockOn();
 	UPROPERTY()
 	UEternalGrace_GameInstance* ActiveGameInstance;
 
@@ -90,8 +83,8 @@ protected:
 
 
 public:
-	//UFUNCTION()
-	//void ApplyPoisonEffectOnScreen();
-	//UFUNCTION()
-	//void RemovePoisonEffectFromScreen();
+	UFUNCTION()
+	ULockOnSystem* GetLockOnSystem();
+	UFUNCTION(BlueprintCallable, Category = "LockOn")
+	void ToggleLockOn();
 };

@@ -15,7 +15,7 @@
 #include "Blueprint/AIBlueprintHelperLibrary.h"
 #include "AIController.h"
 #include "BehaviorTree/BlackboardComponent.h"
-
+#include "LockOnSystem.h"
 
 AEternal_Grace_ArenaEnemy::AEternal_Grace_ArenaEnemy()
 {
@@ -179,6 +179,16 @@ void AEternal_Grace_ArenaEnemy::Die_Implementation()
 		if (EnemyBlackboard)
 		{
 			EnemyBlackboard->SetValueAsBool("isAlive", false);
+		}
+	}
+
+	ACustomPlayerController* PlayerController = Cast<ACustomPlayerController>(UGameplayStatics::GetPlayerController(GetWorld(), 0));
+	if(PlayerController)
+	{
+		AEternal_Grace_ArenaCharacter* LockedOnTarget = PlayerController->GetLockOnSystem()->GetLockedOnTarget();
+		if(LockedOnTarget && LockedOnTarget == this)
+		{
+			PlayerController->ToggleLockOn();
 		}
 	}
 

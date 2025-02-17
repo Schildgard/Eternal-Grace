@@ -214,3 +214,8 @@ void ACustomPlayerController::ReloadLevel()
 	FInputModeGameOnly InputMode;
 	SetInputMode(InputMode);
 }
+
+ULockOnSystem* ACustomPlayerController::GetLockOnSystem()
+{
+	return LockOnSystem;
+}

@@ -237,14 +237,13 @@ void APlayerCharacter::ChargeHeavyAttack()
 		{
 			CharacterAnimationInstance->isCharging = true;
 			PlayAnimMontage(ChargeAttack, 1.0f);
-			UE_LOG(LogTemp, Warning, TEXT("Character Charges Attack"))
 		}
 	}
 }
 
 void APlayerCharacter::HeavyAttack()
 {
-	if (StaminaComponent->CurrentStamina >= 1.0f && !CharacterAnimationInstance->isInHeavyAttack)
+	if (StaminaComponent->CurrentStamina >= 1.0f && !CharacterAnimationInstance->isInHeavyAttack && !CharacterAnimationInstance->isAttacking)
 	{
 		TArray<UAnimMontage*> HeavyAttacks = WeaponComponent->GetCurrentHeavyAttacks();
 		//When Heavy Attack Button is released from charge Position the Player Character unleashes his Heavy Attack 
@@ -253,7 +252,6 @@ void APlayerCharacter::HeavyAttack()
 			CharacterAnimationInstance->isCharging = false; //LEAVE CHARGING STATE
 			CharacterAnimationInstance->isAttacking = true; //SET PLAYER IN ATTACK STATE, SO THE ANIMATION CAN NOT BE INTERUPTED BY A LIGHT ATTACK COMMAND
 			CharacterAnimationInstance->isInHeavyAttack = true; // SET PLAYER IN HEAVY ATTACK STATE, SO ANOTHER HEAVY ATTACK COMMAND TRIGGERS THE SECOND ATTACK ANIM
-			UE_LOG(LogTemp, Warning, TEXT("Character Releases Attack"))
 				PlayAnimMontage(HeavyAttacks[0], 1.0f);
 		}
 		//	else if (CharacterAnimationInstance->isInHeavyAttack)
