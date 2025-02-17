@@ -19,7 +19,13 @@
 				"D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/StarterContent/Materials/M_Ground_Grass.uasset",
 				"D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Blueprints/CharacterBlueprints/BP_MushroomKing.uasset",
 				"D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Levels/Level_Main.umap",
-				"D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Levels/Level_Dungeon.umap"
+				"D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Levels/Level_Dungeon.umap",
+				"D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Animations/DarkLadyAnimations/Combat/Attacks/Test_MaceAttacks/Test_2.uasset",
+				"D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Animations/DarkLadyAnimations/Combat/Attacks/Test_MaceAttacks/GreatMace_Attack_01.uasset",
+				"D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Animations/DarkLadyAnimations/Combat/Attacks/Test_MaceAttacks/GreatMace_Attack_02.uasset",
+				"D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Animations/DarkLadyAnimations/Combat/Attacks/Test_MaceAttacks/GreatMace_Attack_03.uasset",
+				"D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Animations/DarkLadyAnimations/Combat/Attacks/Test_MaceAttacks/GreatMace_Atatck_01.uasset",
+				"D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Blueprints/BP_TestWeapon5_ForPlayer.uasset"
 			]
 		}
 	]
