@@ -63,6 +63,9 @@ void UStaggerComponent::EndStaggerCondition(UAnimMontage* AttackAnimation, bool 
 	// Sperre Attacken für 0.2 Sekunden nach Stagger
 	Owner->canAttack = false;
 	FTimerHandle AttackCooldownHandle;
+
+
+
 	Owner->GetWorldTimerManager().SetTimer(AttackCooldownHandle, [this]()
 		{
 			Owner->canAttack = true;
@@ -75,8 +78,7 @@ void UStaggerComponent::PlayStaggerAnimation(UAnimMontage* StaggerMontage)
 {
 	//PLAY ANIMATION
 	Owner->PlayAnimMontage(StaggerMontage);
-	//SET BLENDOUT / INTERUPT DELEGATE
-//	FOnMontageEnded BlendoutDelegate;
+
 	FOnMontageEnded EndDelegate;
 	//BlendoutDelegate.BindUObject(this, &UStaggerComponent::EndStaggerCondition);
 	EndDelegate.BindUObject(this, &UStaggerComponent::EndStaggerCondition);

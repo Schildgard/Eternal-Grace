@@ -206,6 +206,7 @@ void APlayerCharacter::CancelSprint()
 void APlayerCharacter::LightAttack()
 {
 	Super::LightAttack();
+
 	if (StaminaComponent->CurrentStamina >= 1.0f)
 	{
 		UE_LOG(LogTemp, Warning, TEXT("LIGHT ATTACK CALLED"))
@@ -216,6 +217,8 @@ void APlayerCharacter::LightAttack()
 		{
 			CharacterAnimationInstance->isAttacking = true;
 			UE_LOG(LogTemp, Warning, TEXT("After: isAttacking = %s"), *FString(CharacterAnimationInstance->isAttacking ? TEXT("true") : TEXT("false")));
+
+
 			//INTERUPT BLOCKING STATE IF BLOCKING
 			if (CharacterAnimationInstance->isGuarding)
 			{
@@ -225,14 +228,19 @@ void APlayerCharacter::LightAttack()
 			TArray<UAnimMontage*> Attacks = WeaponComponent->GetCurrentLightAttacks();
 			AttackIndex = CharacterAnimationInstance->attackCount;
 
+			UE_LOG(LogTemp, Error, TEXT("Attack Index: %i"), AttackIndex)
 			if (AttackIndex <= Attacks.Num() - 1)
 			{
+				UE_LOG(LogTemp, Error, TEXT("ATTACK GETTING PERFORMED"))
 				PlayAnimMontage(Attacks[AttackIndex]);
+			}
+			else
+			{
+				AttackIndex = 0;
 			}
 		}
 		else
 		{
-		//	UE_LOG(LogTemp, Error, TEXT("Attack Index: %i"), AttackIndex)
 			UE_LOG(LogTemp, Error, TEXT("Attack Status: %s"), *FString(CharacterAnimationInstance->isAttacking ? TEXT("true") : TEXT("false")))
 		//		UE_LOG(LogTemp, Error, TEXT("Staggered Status: %s"), *FString(StaggerComponent->GetIsStaggered() ? TEXT("true") : TEXT("false")))
 		//		UE_LOG(LogTemp, Error, TEXT("Falling Status: %s"), *FString(GetMovementComponent()->IsFalling() ? TEXT("true") : TEXT("false")))

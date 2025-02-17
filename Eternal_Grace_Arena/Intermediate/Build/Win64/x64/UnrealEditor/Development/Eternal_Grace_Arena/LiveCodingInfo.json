@@ -27,10 +27,10 @@
 			"Eternal_Grace_ArenaCharacter.gen.cpp.obj",
 			"Eternal_Grace_ArenaEnemy.gen.cpp.obj",
 			"Eternal_Grace_ArenaEnemy_Caster.gen.cpp.obj",
-			"Eternal_Grace_ArenaGameMode.gen.cpp.obj"
+			"Eternal_Grace_ArenaGameMode.gen.cpp.obj",
+			"Eternal_Grace_ArenaNPC.gen.cpp.obj"
 		],
 		"Module.Eternal_Grace_Arena.2.cpp.obj": [
-			"Eternal_Grace_ArenaNPC.gen.cpp.obj",
 			"Eternal_Grace_ProgressBar.gen.cpp.obj",
 			"HealthComponent.gen.cpp.obj",
 			"HitEffectData.gen.cpp.obj",
@@ -58,13 +58,13 @@
 			"SpawnPoint.gen.cpp.obj",
 			"Spell.gen.cpp.obj",
 			"SpellComponent.gen.cpp.obj",
-			"Spells_EffectArea.gen.cpp.obj"
-		],
-		"Module.Eternal_Grace_Arena.3.cpp.obj": [
+			"Spells_EffectArea.gen.cpp.obj",
 			"Spells_HomingProjectile.gen.cpp.obj",
 			"Spells_Projectile.gen.cpp.obj",
 			"Spell_Teleport.gen.cpp.obj",
-			"StaggerComponent.gen.cpp.obj",
+			"StaggerComponent.gen.cpp.obj"
+		],
+		"Module.Eternal_Grace_Arena.3.cpp.obj": [
 			"StaggeringType.gen.cpp.obj",
 			"StaminaComponent.gen.cpp.obj",
 			"StatusEffectComponent.gen.cpp.obj",
