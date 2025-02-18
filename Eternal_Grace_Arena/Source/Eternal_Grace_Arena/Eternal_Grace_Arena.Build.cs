@@ -9,7 +9,8 @@ public class Eternal_Grace_Arena : ModuleRules
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 
 		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "EnhancedInput", "Niagara", "PhysicsCore", "UMG", "AIModule" });
-		//ICH SOLLTE NOCHMAL RECHERCHIEREN WIESO ICH DAS HIER EINFÜGEN MUSS
-		PrivateDependencyModuleNames.AddRange(new string[] {});
+        DynamicallyLoadedModuleNames.Add("OnlineSubsystemSteam");
+
+        PrivateDependencyModuleNames.AddRange(new string[] {});
 	}
 }

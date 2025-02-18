@@ -207,7 +207,7 @@ void APlayerCharacter::LightAttack()
 	if (StaminaComponent->CurrentStamina >= 1.0f)
 	{
 		int AttackIndex = 0;
-		if (!CharacterAnimationInstance->isAttacking && !GetMovementComponent()->IsFalling() && !StaggerComponent->GetIsStaggered())
+		if (!CharacterAnimationInstance->isAttacking && !GetMovementComponent()->IsFalling() && !StaggerComponent->GetIsStaggered() && !CharacterAnimationInstance->isCharging)
 		{
 			CharacterAnimationInstance->isAttacking = true;
 

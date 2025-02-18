@@ -263,6 +263,8 @@ void AEternal_Grace_ArenaCharacter::QuitAttack()
 	if(CharacterAnimationInstance)
 	{
 		CharacterAnimationInstance->isAttacking = false;
+		CharacterAnimationInstance->isInHeavyAttack = false;
+		CharacterAnimationInstance->isCharging = false;
 		CharacterAnimationInstance->Montage_Stop(0.1f);
 	}
 }

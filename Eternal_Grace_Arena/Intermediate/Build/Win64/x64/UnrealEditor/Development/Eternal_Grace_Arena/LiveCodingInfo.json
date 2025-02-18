@@ -58,10 +58,10 @@
 			"SpawnPoint.gen.cpp.obj",
 			"Spell.gen.cpp.obj",
 			"SpellComponent.gen.cpp.obj",
-			"Spells_EffectArea.gen.cpp.obj"
+			"Spells_EffectArea.gen.cpp.obj",
+			"Spells_HomingProjectile.gen.cpp.obj"
 		],
 		"Module.Eternal_Grace_Arena.3.cpp.obj": [
-			"Spells_HomingProjectile.gen.cpp.obj",
 			"Spells_Projectile.gen.cpp.obj",
 			"Spell_Teleport.gen.cpp.obj",
 			"StaggerComponent.gen.cpp.obj",
