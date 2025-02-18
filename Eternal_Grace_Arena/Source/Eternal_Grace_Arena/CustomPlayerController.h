@@ -78,6 +78,13 @@ protected:
 	virtual void BeginPlay()override;
 	virtual void Tick(float DeltaSeconds)override;
 
+	virtual void AddYawInput(float Val) override;
+	virtual void AddRollInput(float Val) override;
+	virtual void AddPitchInput(float Val) override;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Camera", meta = (AllowPrivateAccess))
+	float Sensitivity;
+
 	UFUNCTION()
 	void ReloadLevel();
 

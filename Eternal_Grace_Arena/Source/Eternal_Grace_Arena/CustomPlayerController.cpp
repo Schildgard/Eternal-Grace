@@ -16,6 +16,7 @@
 #include "EnhancedInputSubsystems.h"
 #include "Kismet/KismetMathLibrary.h"
 #include "Components/PostProcessComponent.h"
+#include "GameFramework/InputSettings.h"
 
 ACustomPlayerController::ACustomPlayerController()
 {
@@ -28,6 +29,8 @@ ACustomPlayerController::ACustomPlayerController()
 
 
 	LockOnSystem = CreateDefaultSubobject<ULockOnSystem>(TEXT("LockOnSystem"));
+
+	Sensitivity = 1.0f;
 
 
 	//	ScreenEffectComponent = CreateDefaultSubobject<UPostProcessComponent>("Post Processing");
@@ -204,6 +207,25 @@ void ACustomPlayerController::Tick(float DeltaSeconds)
 	{
 		LockOnSystem->UpdateLockOn(PlayerCharacter, DeltaSeconds);
 	}
+}
+
+void ACustomPlayerController::AddYawInput(float Val)
+{
+	Val *= Sensitivity;
+	Super::AddYawInput(Val);
+	
+}
+
+void ACustomPlayerController::AddRollInput(float Val)
+{
+	Val = Val * Sensitivity;
+	Super::AddRollInput(Val);
+}
+
+void ACustomPlayerController::AddPitchInput(float Val)
+{
+	Val *= Sensitivity;
+	Super::AddPitchInput(Val);
 }
 
 void ACustomPlayerController::ReloadLevel()

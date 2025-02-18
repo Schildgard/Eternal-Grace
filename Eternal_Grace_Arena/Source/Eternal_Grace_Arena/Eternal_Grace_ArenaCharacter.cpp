@@ -195,7 +195,6 @@ void AEternal_Grace_ArenaCharacter::Move(const FInputActionValue& Value)
 
 void AEternal_Grace_ArenaCharacter::Look(const FInputActionValue& Value)
 {
-	// input is a Vector2D
 	FVector2D LookAxisVector = Value.Get<FVector2D>();
 
 	if (Controller != nullptr)
