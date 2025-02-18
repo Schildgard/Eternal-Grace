@@ -29,6 +29,9 @@ protected:
 
 	UPROPERTY()
 	bool WinCondition;
+	//ACHIEVEMENT RELATED
+	UPROPERTY()
+	bool PlayerGotDamage;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (AllowPrivateAccess))
 	TMap<FName, bool> WinConditionDependencies;
@@ -83,4 +86,10 @@ public:
 
 	UFUNCTION()
 	bool GetWinCondition();
+
+	UFUNCTION()
+	void DisablePlayerGotDamageAchievement();
+
+	UFUNCTION(BlueprintCallable)
+	bool GetNoDamageAchievement();
 };

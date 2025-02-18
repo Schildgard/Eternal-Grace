@@ -18,6 +18,7 @@ UEternalGrace_GameInstance::UEternalGrace_GameInstance()
 	MainWorldName = FName("Level_Hub");
 	WinCondition = false;
 	LoadingScreen = nullptr;
+	PlayerGotDamage = false;
 }
 
 void UEternalGrace_GameInstance::UploadHealthInfo(float HealthFromPlayer)
@@ -183,6 +184,17 @@ void UEternalGrace_GameInstance::EnterLevel()
 bool UEternalGrace_GameInstance::GetWinCondition()
 {
 	return WinCondition;
+}
+
+void UEternalGrace_GameInstance::DisablePlayerGotDamageAchievement()
+{
+
+	PlayerGotDamage = true;
+}
+
+bool UEternalGrace_GameInstance::GetNoDamageAchievement()
+{
+	return PlayerGotDamage;
 }
 
 
