@@ -4,7 +4,6 @@
 #include "EternalGrace_GameInstance.h"
 #include "CustomPlayerController.h"
 #include "PlayerCharacter.h"
-#include "EternalGrace_PlayerState.h"
 #include "Kismet/GameplayStatics.h"
 #include "Kismet/KismetSystemLibrary.h"
 #include "HealthComponent.h"

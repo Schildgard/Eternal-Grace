@@ -5,7 +5,6 @@
 
 FHitEffectData::FHitEffectData()
 {
-	PhysicalMaterial = nullptr;
 	NiagaraEffect = nullptr;
 	HitSound = nullptr;
 }

@@ -12,9 +12,6 @@ USTRUCT(BlueprintType)
 struct FHitEffectData : public FTableRowBase
 {
     GENERATED_BODY()
-
-   UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Hit Effect")
-   UPhysicalMaterial* PhysicalMaterial;
  
    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Hit Effect")
    USoundBase* HitSound;

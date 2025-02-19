@@ -45,12 +45,6 @@
     <ClCompile Include="..\..\Source\Eternal_Grace_Arena\AnimatedWidget.h">
       <Filter>Source\Eternal_Grace_Arena</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\Eternal_Grace_Arena\AnimNotify_PlayRandomSound.cpp">
-      <Filter>Source\Eternal_Grace_Arena</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\Eternal_Grace_Arena\AnimNotify_PlayRandomSound.h">
-      <Filter>Source\Eternal_Grace_Arena</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\Source\Eternal_Grace_Arena\BlendingWidget.cpp">
       <Filter>Source\Eternal_Grace_Arena</Filter>
     </ClCompile>
@@ -123,12 +117,6 @@
     <ClCompile Include="..\..\Source\Eternal_Grace_Arena\Equipment.h">
       <Filter>Source\Eternal_Grace_Arena</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\Eternal_Grace_Arena\EternalGrace_BaseActor.cpp">
-      <Filter>Source\Eternal_Grace_Arena</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\Eternal_Grace_Arena\EternalGrace_BaseActor.h">
-      <Filter>Source\Eternal_Grace_Arena</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\Source\Eternal_Grace_Arena\EternalGrace_GameInstance.cpp">
       <Filter>Source\Eternal_Grace_Arena</Filter>
     </ClCompile>
@@ -139,18 +127,6 @@
       <Filter>Source\Eternal_Grace_Arena</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\Eternal_Grace_Arena\EternalGrace_GameMode.h">
-      <Filter>Source\Eternal_Grace_Arena</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\Eternal_Grace_Arena\EternalGrace_GameState.cpp">
-      <Filter>Source\Eternal_Grace_Arena</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\Eternal_Grace_Arena\EternalGrace_GameState.h">
-      <Filter>Source\Eternal_Grace_Arena</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\Eternal_Grace_Arena\EternalGrace_PlayerState.cpp">
-      <Filter>Source\Eternal_Grace_Arena</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\Eternal_Grace_Arena\EternalGrace_PlayerState.h">
       <Filter>Source\Eternal_Grace_Arena</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\Eternal_Grace_Arena\EternalGrace_TitleScreen.cpp">
@@ -412,12 +388,6 @@
       <Filter>Source\Eternal_Grace_Arena</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\Eternal_Grace_Arena\StatusEffectComponent.h">
-      <Filter>Source\Eternal_Grace_Arena</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\Eternal_Grace_Arena\StatusWarningEffect.cpp">
-      <Filter>Source\Eternal_Grace_Arena</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\Eternal_Grace_Arena\StatusWarningEffect.h">
       <Filter>Source\Eternal_Grace_Arena</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\Eternal_Grace_Arena\TitleScreenGameMode.cpp">

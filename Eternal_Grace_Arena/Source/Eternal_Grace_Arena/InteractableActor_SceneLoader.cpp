@@ -6,7 +6,6 @@
 #include "Engine/StreamableManager.h"
 #include "Engine/AssetManager.h"
 #include "Blueprint/UserWidget.h"
-#include "EternalGrace_GameState.h"
 #include "EternalGrace_GameInstance.h"
 #include "AnimatedWidget.h"
 
