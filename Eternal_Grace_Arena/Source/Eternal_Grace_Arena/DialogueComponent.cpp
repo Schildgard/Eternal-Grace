@@ -9,34 +9,19 @@
 // Sets default values for this component's properties
 UDialogueComponent::UDialogueComponent()
 {
-	// Set this component to be initialized when the game starts, and to be ticked every frame.  You can turn these features
-	// off to improve performance if you don't need them.
-	PrimaryComponentTick.bCanEverTick = true;
 
-	// ...
+	PrimaryComponentTick.bCanEverTick = false;
+	CurrentDialogueIndex = 0;
+	CurrentLineIndex = 0;
+	DialogueWidget = nullptr;
+
+	AudioComponent = CreateDefaultSubobject<UAudioComponent>("AudioComponent");
 }
 
-
-// Called when the game starts
-void UDialogueComponent::BeginPlay()
-{
-	Super::BeginPlay();
-
-	// ...
-
-}
-
-
-// Called every frame
-void UDialogueComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
-{
-	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
-
-	// ...
-}
 
 void UDialogueComponent::PlayDialogue()
 {
+
 	// CHECK IF DIALOGUE IS IN VIEWPORT
 	if (!DialogueWidget->IsInViewport())
 	{
@@ -49,7 +34,8 @@ void UDialogueComponent::PlayDialogue()
 
 		if (Dialogues[CurrentDialogueIndex].DialogueVoices.Num() > CurrentLineIndex)
 		{
-			UGameplayStatics::PlaySoundAtLocation(GetWorld(), Dialogues[CurrentDialogueIndex].DialogueVoices[CurrentLineIndex], GetOwner()->GetActorLocation(), 3.0f);
+			AudioComponent->SetSound(Dialogues[CurrentDialogueIndex].DialogueVoices[CurrentLineIndex]);
+			AudioComponent->Play();
 		}
 		//INCREMENT LINE INDEX
 		CurrentLineIndex++;
@@ -77,7 +63,8 @@ void UDialogueComponent::PlayDialogue()
 
 			if (Dialogues[CurrentDialogueIndex].DialogueVoices.Num() > CurrentLineIndex)
 			{
-				UGameplayStatics::PlaySoundAtLocation(GetWorld(), Dialogues[CurrentDialogueIndex].DialogueVoices[CurrentLineIndex], GetOwner()->GetActorLocation(), 3.0f);
+				AudioComponent->SetSound(Dialogues[CurrentDialogueIndex].DialogueVoices[CurrentLineIndex]);
+				AudioComponent->Play();
 			}
 			//INCREMENT LINE INDEX
 			CurrentLineIndex++;

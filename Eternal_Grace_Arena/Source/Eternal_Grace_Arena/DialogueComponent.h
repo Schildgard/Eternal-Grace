@@ -23,18 +23,19 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Dialogues, meta = (AllowPrivateAccess))
 	TArray<FDialogue> Dialogues;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Audio, meta = (AllowPrivateAccess))
+	UAudioComponent* AudioComponent;
+
+
 
 
 protected:
-	virtual void BeginPlay() override;
 	UPROPERTY()
 	int CurrentDialogueIndex;
 	UPROPERTY()
 	int CurrentLineIndex;
 
 public:	
-	// Called every frame
-	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
 	UFUNCTION()
 	void PlayDialogue();

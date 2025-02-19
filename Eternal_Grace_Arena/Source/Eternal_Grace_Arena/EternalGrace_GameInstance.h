@@ -10,6 +10,7 @@
  *
  */
  //WORLD UPDATE MEANS WHEN SOMETHING HAPPENES THAT CHANGES THINGS IN THE WORLD, LIKE DEFEATING A BOSS WHICH CHANGES oBJECTSTATES 
+class UAudioComponent;
 class UBlendingWidget;
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FOnWorldUpdate);
 
@@ -43,6 +44,9 @@ protected:
 	UBlendingWidget* LoadingScreen;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Scene Loading", meta = (AllowPrivateAccess))
 	FName LevelNameToLoad;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Audio", meta = (AllowPrivateAccess))
+	UAudioComponent* AudioManager;
 
 
 

@@ -10,6 +10,7 @@
 #include "BlendingWidget.h"
 #include "Engine/StreamableManager.h"
 #include "Engine/AssetManager.h"
+#include "Components/AudioComponent.h"
 
 UEternalGrace_GameInstance::UEternalGrace_GameInstance()
 {

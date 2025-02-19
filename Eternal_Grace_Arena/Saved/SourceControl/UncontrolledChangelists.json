@@ -6,14 +6,10 @@
 			"description": "Default Uncontrolled Changelist",
 			"files": [
 				"D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/StarterContent/Architecture/Floor_400x400.uasset",
-				"D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Weapons_StaticMeshes/Tim_Dragonslayer/blade_low.uasset",
 				"D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Weapons_StaticMeshes/Tim_Dragonslayer/dragonslayer_001_low_standardSurface1_BaseColor.uasset",
 				"D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Weapons_StaticMeshes/Tim_Dragonslayer/dragonslayer_001_low_standardSurface1_Normal.uasset",
 				"D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Weapons_StaticMeshes/Tim_Dragonslayer/dragonslayer_001_low_standardSurface1_OcclusionRoughnessMetallic.uasset",
-				"D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Weapons_StaticMeshes/Tim_Dragonslayer/grip_low.uasset",
-				"D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Weapons_StaticMeshes/Tim_Dragonslayer/idk_low.uasset",
 				"D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/StarterContent/Particles/Materials/M_Spark.uasset",
-				"D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Weapons_StaticMeshes/Tim_Dragonslayer/pommel_low.uasset",
 				"D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Weapons_StaticMeshes/Tim_Dragonslayer/standardSurface1.uasset",
 				"D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Weapons_StaticMeshes/Tim_Dragonslayer/Guts_Sword.uasset",
 				"D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Weapons_StaticMeshes/Tim_Dragonslayer/M_Dragonslayer.uasset",
@@ -28,7 +24,16 @@
 				"D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Blueprints/WeaponBlueprints/BP_TestWeapon5.uasset",
 				"D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Blueprints/CharacterBlueprints/BP_Player.uasset",
 				"D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Blueprints/CharacterBlueprints/BP_DarkKnight.uasset",
-				"D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Blueprints/UI_Blueprints/BP_EternalGrace_TitleScreen.uasset"
+				"D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Blueprints/UI_Blueprints/BP_EternalGrace_TitleScreen.uasset",
+				"D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/StarterContent/Materials/M_Ground_Grass.uasset",
+				"D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Blueprints/CharacterBlueprints/BP_NPC_Loretta.uasset",
+				"D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Audio/PlaceholderMusic/Pause_Menu__no_Drums_.uasset",
+				"D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Audio/PlaceholderMusic/Slow_Jam.uasset",
+				"D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Audio/PlaceholderMusic/Layer_1___Calm_Ambient.uasset",
+				"D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Weapons_StaticMeshes/Tim_Dragonslayer/blade_low.uasset",
+				"D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Weapons_StaticMeshes/Tim_Dragonslayer/grip_low.uasset",
+				"D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Weapons_StaticMeshes/Tim_Dragonslayer/idk_low.uasset",
+				"D:/Programming/Leonard/Eternal-Grace-Arena/Eternal_Grace_Arena/Content/Weapons_StaticMeshes/Tim_Dragonslayer/pommel_low.uasset"
 			]
 		}
 	]
