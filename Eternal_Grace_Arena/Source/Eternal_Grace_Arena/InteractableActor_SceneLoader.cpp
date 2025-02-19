@@ -67,7 +67,7 @@ void AInteractableActor_SceneLoader::LoadLevel()
 
 void AInteractableActor_SceneLoader::OnBeginOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComponent, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
 {
-	if (InteractInfoWidget && !InteractInfoWidget->IsInViewport())
+	if (isActive && InteractInfoWidget && !InteractInfoWidget->IsInViewport())
 	{
 		InteractInfoWidget->AddToViewport();
 		if (InteractInfoWidget->GetBlendInAnimation())

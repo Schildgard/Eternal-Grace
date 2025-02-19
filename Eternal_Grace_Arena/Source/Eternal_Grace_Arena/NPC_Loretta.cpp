@@ -48,9 +48,8 @@ void ANPC_Loretta::Interact_Implementation()
 			UEternalGrace_GameInstance* CustomGameInstance = Cast<UEternalGrace_GameInstance>(CurrentInstance);
 			if (CustomGameInstance)
 			{
-			//	CustomGameInstance->SetLevelToLoad("Level_Ending");
-			//	CustomGameInstance->OnMapLeave();
-				//CustomGameInstance->LoadLevel();
+				CustomGameInstance->SetLevelToLoad("Level_Ending");
+				CustomGameInstance->OnMapLeave();
 			}
 		}
 	}
