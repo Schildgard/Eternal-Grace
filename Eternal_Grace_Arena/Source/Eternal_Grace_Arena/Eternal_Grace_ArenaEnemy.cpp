@@ -19,10 +19,7 @@
 
 AEternal_Grace_ArenaEnemy::AEternal_Grace_ArenaEnemy()
 {
-	//HPBarComponent = CreateDefaultSubobject<UWidgetComponent>(TEXT("HP Bar"));
-	//HPBarComponent->SetupAttachment(RootComponent);
-	//HPBarComponent->SetWidgetSpace(EWidgetSpace::Screen);
-	//HPBarComponent->SetRelativeLocation(FVector(0, 0, 163.0f));
+
 	AttackRange = 350.f;
 	HealthbarWidget = nullptr;
 	isAggro = false;
@@ -228,7 +225,6 @@ void AEternal_Grace_ArenaEnemy::SpotPlayer(APawn* SpottedPawn)
 		isAggro = true;
 
 		UE_LOG(LogTemp, Warning, TEXT("Enemy Spotted Player"))
-			//CHECK IF THERE COULD BE A PROBLEM WITH RACE CONDITION IN LINE 118, SINCE THE EVENT CALL ALSO SETS ISAGGRO
 	}
 }
 

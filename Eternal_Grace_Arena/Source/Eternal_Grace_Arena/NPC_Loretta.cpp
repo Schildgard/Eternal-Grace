@@ -11,7 +11,7 @@ void ANPC_Loretta::BeginPlay()
 {
 	Super::BeginPlay();
 	GetInfoFromGameInstance();
-	UE_LOG(LogTemp, Error, TEXT("Loretta Check WinCondition"))
+	FinalDialogueIndex = 2;
 }
 
 void ANPC_Loretta::GetInfoFromGameInstance()
@@ -25,12 +25,8 @@ void ANPC_Loretta::GetInfoFromGameInstance()
 		bool isWinConditionMet = CustomGameInstance->GetWinCondition();
 		if (isWinConditionMet == true)
 		{
-			DialogueComponent->SetCurrentDialogueIndex(2);
+			DialogueComponent->SetCurrentDialogueIndex(FinalDialogueIndex); // HARD CODED, 
 			UE_LOG(LogTemp, Error, TEXT("Win Condition Set on loretta"))
-		}
-		else
-		{
-			UE_LOG(LogTemp, Error, TEXT("Win Condition is false on loretta"))
 		}
 	}
 }

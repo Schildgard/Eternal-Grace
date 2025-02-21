@@ -33,7 +33,7 @@ void AEnemy_WeaponMaster::GetOffMeMove()
 	{
 		CharacterAnimationInstance->isAttacking = true;
 
-		//TEMPORARY
+		//TEMPORARY DISABLING COLLIDER, SO THIS MOVES ALLOWS HIM TO TRAVERSE THROUGH THE PLAYER
 		UCapsuleComponent* ActorCollisionCapsule = GetCapsuleComponent();
 		ActorCollisionCapsule->SetCollisionResponseToChannel(ECollisionChannel::ECC_Pawn, ECollisionResponse::ECR_Ignore);
 

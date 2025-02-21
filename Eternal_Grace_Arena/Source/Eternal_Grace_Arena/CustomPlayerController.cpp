@@ -32,14 +32,6 @@ ACustomPlayerController::ACustomPlayerController()
 
 	Sensitivity = 1.0f;
 
-
-	//	ScreenEffectComponent = CreateDefaultSubobject<UPostProcessComponent>("Post Processing");
-	//	ScreenEffectComponent->Settings.bOverride_VignetteIntensity = true;
-	//	ScreenEffectComponent->Settings.bOverride_ColorSaturation = true;
-	//	ScreenEffectComponent->bUnbound = true;
-	//	ScreenEffectComponent->Settings.VignetteIntensity = 1.0f;
-	//	ScreenEffectComponent->BlendWeight = 1.0f;
-		//ScreenEffectComponent->SetupAttachment(RootComponent);
 }
 void ACustomPlayerController::ShowYouDiedScreen()
 {

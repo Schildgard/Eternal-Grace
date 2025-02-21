@@ -36,7 +36,7 @@ AInteractableActor::AInteractableActor()
 
 void AInteractableActor::Interact_Implementation()
 {
-	//NOT SURE IF THIS ACTUALLY WORKS OR DOES ANYTHING
+
 }
 
 void AInteractableActor::OnBeginOverlap(UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComponent, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult)
@@ -74,7 +74,7 @@ void AInteractableActor::UpdateStatus()
 	}
 }
 
-// Called when the game starts or when spawned
+
 void AInteractableActor::BeginPlay()
 {
 	Super::BeginPlay();
@@ -102,7 +102,6 @@ void AInteractableActor::BeginPlay()
 
 }
 
-// Called every frame
 void AInteractableActor::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);

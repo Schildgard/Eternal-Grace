@@ -15,7 +15,6 @@ void UCharacterAnimInstance::InterruptAttack(UAnimMontage* AttackAnimation, bool
 			isAttacking = false;
 		}
 	}
-		// RESET BOOL ON BLEND OUT LEADS TO WEIRD RETRIGGERING OF ATTACKS SOMETIMES
 }
 
 void UCharacterAnimInstance::OnAttackEnd(UAnimMontage* AttackAnimation, bool Interrupted)
