@@ -2,12 +2,12 @@
 <div align="center">
 <img src="https://github.com/user-attachments/assets/aae29348-8c69-40fa-977a-e76bf4f3752b" alt="EternalGrace_Titlescreen" width="500"/>  
  </div>
+Gameplay Video: https://youtu.be/dwP9lMNThy0  
 
 # About
 You are Sister Ingrid. Inquisitor of the good Church.  
 On behalf of all that is good and righteous you are tasked to hunt down heretics who committed vile crimes.  
 Prove yourself in 1v1 Arena Battles against three different Bosses and restore order!  
-Gameplay Video: https://youtu.be/dwP9lMNThy0  
 
 - Dark Fantasy Aesthetics
  <div align="center">
